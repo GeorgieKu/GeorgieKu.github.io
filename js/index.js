@@ -202,7 +202,7 @@ const swiper4 = new Swiper('.swiper-container-4', {
         1650: {
             slidesPerGroup: 3,
             slidesPerView: 3,
-            spaceBetween: 10,
+            spaceBetween: 20,
         },
         1530: {
             slidesPerGroup: 2,
@@ -224,6 +224,10 @@ const swiper4 = new Swiper('.swiper-container-4', {
             slidesPerView: 2,
             slidesPerGroup: 2,
             spaceBetween: 38,
+        },
+        700: {
+            slidesPerGroup: 1,
+            slidesPerView: 1,
         },
         320: {
             slidesPerView: 1,
@@ -288,3 +292,18 @@ ymaps.ready(function() {
         .add(myPlacemark)
         .add(myPlacemarkWithContent);
 });
+
+tippy('#tooltip', {
+    content: 'Пример современных тенденций - современная методология разработки ',
+    interactive: true,
+  });
+
+  tippy('#tooltip-2', {
+    content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции  ',
+    interactive: true,
+  });
+
+  tippy('#tooltip-3', {
+    content: 'В стремлении повысить качество ',
+    interactive: true,
+  });
