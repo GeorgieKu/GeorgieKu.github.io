@@ -184,10 +184,10 @@ const swiper3 = new Swiper('.swiper-container-3', {
 });
 
 const swiper4 = new Swiper('.swiper-container-4', {
-    loop: true,
+    loop: false,
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.gallery-button-next',
+        prevEl: '.gallery-button-prev',
     },
     pagination: {
         el: ".gallery-pagination",
