@@ -53,6 +53,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 new Accordion('.accordion-container');
 
+
+var selector = document.getElementById("tel");
+
+var im = new Inputmask("99-9999999");
+im.mask(selector);
+
+
+var selector = document.querySelector("input[type='tel']");
+var im = new Inputmask("+7 (999)-999-99-99");
+
+im.mask(selector);
+
 const validate = new window.JustValidate('#form');
 
 const validation = new JustValidate('#form');
@@ -73,6 +85,10 @@ validation
     value: /^([а-яА-Я])/,
     errorMessage: 'Недопустимый формат'
     },
+    {
+        rule: 'required',
+        errorMessage: 'Обязательное поле',
+    },
   ])
   .addField('#tel', [
     {
@@ -83,12 +99,12 @@ validation
     {
         rule: 'required',
         errorMessage: 'Обязательное поле',
-    },
-    {
-        rule: 'customRegexp',
-        value: /^([0-9]( |-)?)?(\(?[0-9]{3}\)?|[0-9]{3})( |-)?([0-9]{3}( |-)?[0-9]{4}|)$/,
-        errorMessage: 'Недопустимый формат'
-        },
+        required: true,
+            function: (name, value) => {
+                const phone = selector.inputmask.unmaskedvalue()
+                return Number(phone) && phone.length === 10
+            }
+    },  
   ]);
 
 const swiper = new Swiper('.swiper-container', {
@@ -307,3 +323,5 @@ tippy('#tooltip', {
     content: 'В стремлении повысить качество ',
     interactive: true,
   });
+
+ 
