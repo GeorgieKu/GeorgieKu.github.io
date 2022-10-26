@@ -110,7 +110,7 @@ validation
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     loop: true,
-    spaceBetween: 100,
+    spaceBetween: 0,
     breakpoints: {
         768: {
             pagination: {
