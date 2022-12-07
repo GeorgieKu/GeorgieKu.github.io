@@ -1,327 +1,55 @@
-const select1 = new CustomSelect('#select-1');
+gsap.from(".hero__title", {
+    y: 100,
+    opacity: 0,
+    duration: 1
+})
 
-let tabsBtn = document.querySelectorAll('.tabs-nav__btn');
-let tabsItem = document.querySelectorAll('.tabs-item');
+gsap.from(".hero__descr", {
+    opacity: 0,
+    duration: 1,
+    delay: 1,
+})
 
-tabsBtn.forEach(function(element) {
-    element.addEventListener('click', function(e) {
-        const path = e.currentTarget.dataset.path;
+gsap.from(".hero__btn", {
+    y: 100,
+    opacity: 0,
+    duration: 1
+})
 
-        tabsBtn.forEach(function(btn) { btn.classList.remove('tabs-nav__btn--active') });
-        e.currentTarget.classList.add('tabs-nav__btn--active');
+gsap.from(".photos-wrap-img-1", {
+    opacity: 0,
+    duration: 1,
+    delay: 1,
+})
 
-        tabsItem.forEach(function(element) { element.classList.remove('tabs-item--active') });
-        document.querySelector(`[data-target="${path}"]`).classList.add('tabs-item--active');
-    });
+gsap.from(".photos-wrap-img-2", {
+    opacity: 0,
+    duration: 1,
+    delay: 1.3,
+})
+
+gsap.from(".photos-wrap-img-3", {
+    opacity: 0,
+    duration: 1,
+    delay: 1.7,
+})
+
+gsap.from(".photos__author", {
+    opacity: 0,
+    duration: 1,
+    delay: 2,
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll(".list__btn").forEach(item => {
-    item.addEventListener("click", function() {
-      let btn = this;
-      let dropdown = this.parentElement.querySelector(".dropdown");
-      
-      document.querySelectorAll(".list__btn").forEach(el => {
-        if (el != btn) {
-          el.classList.remove("active-btn");
-        }
-      });
-      
-      document.querySelectorAll(".dropdown").forEach(el => {
-        if (el != dropdown) {
-          el.classList.remove("active-dropdown");
-        }
-      })
-      dropdown.classList.toggle("active-dropdown");
-      btn.classList.toggle("active-btn")
-    })
-  })
-  
-  document.addEventListener("click", function(e) {
-    let target = e.target;
-    if (!target.closest(".list")) {
-      document.querySelectorAll(".dropdown").forEach(el => {
-          el.classList.remove("active-dropdown");
-      })
-       document.querySelectorAll(".list__btn").forEach(el => {
-          el.classList.remove("active-btn");
-      });
-    }
-  })
-  });
+let tl = gsap.timeline({ paused: true })
+tl.fromTo(".menu", { display: "none", y: 100, opacity: 0, }, { display: "block", y: 0, opacity: 1, duration: 2, ease: "circle" }, '-=0.5');
+tl.from(".menu__top", { delay: 0.5, opacity: 0, y: -50, duration: 0.5, ease: "circle" },
+    '-=0.5');
+tl.from(".nav__list", { delay: 0.4, opacity: 0, y: 25, duration: 0.5, ease: "circle" },
+    '-=0.5')
+tl.from(".social, .menu__right, .sub-menu", { delay: 0.7, y: 25, opacity: 0, duration: 0.5, ease: "circle" },
+    '-=0.5');
 
-
-new Accordion('.accordion-container');
-
-
-var selector = document.getElementById("tel");
-
-var im = new Inputmask("99-9999999");
-im.mask(selector);
-
-
-var selector = document.querySelector("input[type='tel']");
-var im = new Inputmask("+7 (999)-999-99-99");
-
-im.mask(selector);
-
-const validate = new window.JustValidate('#form');
-
-const validation = new JustValidate('#form');
-
-validation
-  .addField('#name', [
-    {
-        rule: 'minLength',
-        value: 2,
-        errorMessage: 'Минимум 2 символа',
-    },
-    {
-      rule: 'maxLength',
-      value: 30,
-    },
-    {
-    rule: 'customRegexp',
-    value: /^([а-яА-Я])/,
-    errorMessage: 'Недопустимый формат'
-    },
-    {
-        rule: 'required',
-        errorMessage: 'Обязательное поле',
-    },
-  ])
-  .addField('#tel', [
-    {
-        rule: 'minLength',
-        value: 11,
-        errorMessage: 'Минимум 11 символов',
-    },
-    {
-        rule: 'required',
-        errorMessage: 'Обязательное поле',
-        required: true,
-            function: (name, value) => {
-                const phone = selector.inputmask.unmaskedvalue()
-                return Number(phone) && phone.length === 10
-            }
-    },  
-  ]);
-
-const swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    loop: true,
-    spaceBetween: 0,
-    breakpoints: {
-        768: {
-            pagination: {
-                enabled: false,
-            },
-        },
-    },
-});
-
-const swiper2 = new Swiper('.swiper-container-2', {
-    slidesPerView: 3,
-    loop: false,
-    navigation: {
-        nextEl: '.swiper-button-events-next',
-        prevEl: '.swiper-button-events-prev',
-    },
-    pagination: {
-        el: '.events-pagination',
-        type: 'bullets',
-        clickable: true, 
-    },
-    breakpoints: {
-        1920: {
-            slidesPerView: 3,
-            slidesPerGroup: 1,
-            spaceBetween: 50,
-        },
-        1024: {
-            spaceBetween: 25,
-            slidesPerView: 3,
-            slidesPerGroup: 3,
-        },
-        950: {
-            slidesPerGroup: 2,
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 34,
-        },
-        650: {
-            slidesPerGroup: 1,
-            slidesPerView: 1,
-        },
-        320: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-        }
-    },
-    spaceBetween: 50,
-});
-
-const swiper3 = new Swiper('.swiper-container-3', {
-    slidesPerView: 3,
-    loop: false,
-    navigation: {
-        nextEl: '.projects-button-next',
-        prevEl: '.projects-button-prev',
-    },
-    breakpoints: {
-        1920: {
-            spaceBetween: 50,
-            slidesPerView: 3,
-        },
-        1650: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        1024: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 33,
-        },
-        650: {
-            slidesPerView: 1,
-        },
-        320: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 20,
-        }
-    },
-    spaceBetween: 50,
-});
-
-const swiper4 = new Swiper('.swiper-container-4', {
-    loop: false,
-    navigation: {
-        nextEl: '.gallery-button-next',
-        prevEl: '.gallery-button-prev',
-    },
-    pagination: {
-        el: ".gallery-pagination",
-        type: "fraction",
-    },
-    breakpoints: {
-        1920: {
-            slidesPerGroup: 3,
-            slidesPerView: 3,
-            spaceBetween: 50,
-        },
-        1650: {
-            slidesPerGroup: 3,
-            slidesPerView: 3,
-            spaceBetween: 20,
-        },
-        1530: {
-            slidesPerGroup: 2,
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        1350: {
-            slidesPerGroup: 2,
-            slidesPerView: 2,
-            spaceBetween: 20,
-        },
-        1024: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 34,
-            loop: true,
-        },
-        768: {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 38,
-        },
-        700: {
-            slidesPerGroup: 1,
-            slidesPerView: 1,
-        },
-        320: {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-        },
-    },
-});
-
-ymaps.ready(function() {
-    var myMap = new ymaps.Map('map', {
-            center: [55.758468, 37.601088],
-            zoom: 16
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-        
-
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
-
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Собственный значок метки',
-            balloonContent: 'Это красивая метка'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: 'img/map.svg',
-            // Размеры метки.
-            iconImageSize: [30, 42],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
-        }),
-
-        myPlacemarkWithContent = new ymaps.Placemark([48.872185, 2.354224], {
-            hintContent: 'Собственный значок метки с контентом',
-            balloonContent: 'А эта — новогодняя',
-            iconContent: '12'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#imageWithContent',
-            // Своё изображение иконки метки.
-            iconImageHref: 'IMG/1.svg',
-            // Размеры метки.
-            iconImageSize: [48, 48],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            iconImageOffset: [-24, -24],
-            // Смещение слоя с содержимым относительно слоя с картинкой.
-            iconContentOffset: [15, 15],
-            // Макет содержимого.
-            iconContentLayout: MyIconContentLayout
-        });
-        myMap.behaviors.disable('scrollZoom');
-
-    myMap.geoObjects
-        .add(myPlacemark)
-        .add(myPlacemarkWithContent);
-});
-
-tippy('#tooltip', {
-    content: 'Пример современных тенденций - современная методология разработки ',
-    interactive: true,
-  });
-
-  tippy('#tooltip-2', {
-    content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции  ',
-    interactive: true,
-  });
-
-  tippy('#tooltip-3', {
-    content: 'В стремлении повысить качество ',
-    interactive: true,
-  });
-
- 
+let open = document.querySelector('.burger')
+let close = document.querySelector('.close')
+open.addEventListener("click", () => tl.play())
+close.addEventListener("click", () => tl.reverse());
