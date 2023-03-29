@@ -1,127 +1,286 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Капсула — шоурум</title>
+    <link rel="stylesheet" href="./css/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Poppins&display=swap" rel="stylesheet">
+
 </head>
-
 <body>
-    <div class="site">
-        <div class="menu toggle">
-            <div class="menu__top">
-                <div class="container">
-                    <button class="close btn-reset" aria-label="Закрыть меню"></button>
-                </div>
-            </div>
-            <div class="container menu__container">
-                <div class="menu__left">
-                    <nav class="nav menu__nav" title="Главное меню">
-                        <ul class="nav__list list-reset">
-                            <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Портфолио</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Создание стратегии</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Фотосъёмка</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Ретушь</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Аренда студии</a></li>
-                            <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-                        </ul>
-                    </nav>
-                    <ul class="social list-reset">
-                        <li class="social__item">
-                            <a href="#" class="social__link social__link--vk" aria-label="Перейти во Вконтакте"></a>
-                        </li>
-                        <li class="social__item">
-                            <a href="#" class="social__link social__link--insta" aria-label="Перейти в Инстаграм"></a>
-                        </li>
-                        <li class="social__item">
-                            <a href="#" class="social__link social__link--fb" aria-label="Перейти в Фейсбук"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="menu__right">
-                    <div class="sub-menu">
-                        <h3 class="sub-menu__title">Кейсы</h3>
-                        <ul class="sub-menu__list list-reset">
-                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Уста к устам</a></li>
-                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Zara</a></li>
-                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">New Balance</a></li>
-                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Levi`s</a></li>
-                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Rains</a></li>
-                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Abercrombie & Fitch</a></li>
-                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Massimo Dutti</a></li>
-                        </ul>
-                    </div>
-                    <div class="sub-menu">
-                        <h3 class="sub-menu__title">Партнёрам</h3>
-                        <ul class="sub-menu__list list-reset">
-                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Условия партнёрства</a></li>
-                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">Статистика</a></li>
-                            <li class="sub-menu__item"><a href="#" class="sub-menu__link">О нас</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <a href="#" class="header__item header__item_active">Капсула</a>
+                <a href="#" class="header__item">Направления</a>
+                <a href="#" class="header__item">Вид</a>
+                <a href="#" class="header__item">Оснащения</a>
+                <a href="#" class="header__item">Тарифы</a>
+            </nav>
         </div>
-        <header class="header">
-            <div class="container header__container">
-                <button class="btn-reset burger" aria-label="Открыть меню">
-          <span class="burger__line line1"></span>
-          <span class="burger__line line2"></span>
-          <span class="burger__line line3"></span>
-        </button>
+        <div class="burger-menu">
+            <input id="menu__toggle" type="checkbox">
+            <label class="menu-btn" for="menu__toggle">
+              <span></span>
+            </label>
+            
+            <ul class="menu-box list-reset">
+                <li class="hero-list-nav-item"><a href="#" class="header__item">Капсула</a></li>
+                <li class="hero-list-nav-item"><a href="#" class="header__item">Направления</a></li>
+                <li class="hero-list-nav-item"><a href="#" class="header__item">Вид</a></li>
+                <li class="hero-list-nav-item"><a href="#" class="header__item">Оснащения</a></li>
+                <li class="hero-list-nav-item"><a href="#" class="header__item">Тарифы</a></li>
+            </ul>
+           
+        </div>
 
-                <a class="logo">
-                    <img src="img/logo.png" alt="Логотип 12:21">
-                </a>
-                <nav class="header__nav nav" title="Мини-меню">
-                    <a href="#" class="nav__link">Вход</a>
-                    <a href="#" class="nav__link nav__link--arrow">Услуги</a>
-                </nav>
+    </header>
+<main class="main">
+    <section class="hero">
+        <div class="container">
+            <div class="hero__container">
+                <div class="hero__text">
+                    <h1 class="hero__title">Капсула — шоурум</h1>
+                    <p class="hero__descr">Размещение информации о вашем продукте 
+                    или образцов на витрине в капсуле —
+                    это гарантированный результат!</p>
+                    <button class="hero__btn btn-reset">Хочу!</button>
+                </div>
+                <div class="hero__picture">
+                    <img class="hero__img" src="./img/hero.png" alt="img">
+                </div>
+
             </div>
-        </header>
-        <main class="main">
-            <section class="hero">
-                <div class="container hero__container">
-                    <h1 class="visually-hidden">12:21 - Выбери свой look!</h1>
-                    <div class="hero__left">
-                        <h2 class="hero__title">
-                            Создадим имидж вашему бренду
-                        </h2>
-                        <p class="hero__descr">
-                            Все этапы создания контента. От&nbsp;фотосессии до&nbsp;пре-пресса.
-                        </p>
-                        <button class="btn reset hero__btn">Ознакомиться</button>
+            <img class="hero__background" src="./img/left-elipse.svg" alt="">
+           <img class="hero__background-2" src="./img/right-elipse.svg" alt="">
+        </div>
+    </section>
+    <section class="directions">
+        <div class="container">
+            <h2 class="directions__title title">Три основных направления</h2>
+                <ul class="directions__list list-reset">
+                    <li class="directions__item">
+                        <img class="directions__img" src="./img/icon1.svg" alt="icon">
+                        <h3 class="directions__list-title">Software</h3>
+                        <p class="directions__descr">Cервисы и приложения, fin tech, ed tech, food tech, ecology решения, web 3.0</p>
+
+                    </li>
+                    <li class="directions__item">
+                        <img class="directions__img" src="./img/icon2.svg" alt="icon">
+                        <h3 class="directions__list-title">GameDev/GameFi/NFT</h3>
+                        <p class="directions__descr">Yовинки и разработки из сферы игр, технологий блокчейн, NFT и искусства</p>
+
+                    </li>
+                    <li class="directions__item">
+                        <img class="directions__img" src="./img/icon3.svg" alt="icon">
+                        <h3 class="directions__list-title">HardWare</h3>
+                        <p class="directions__descr">Различные высокотехнологичные устройства, изобретения, оборудование, гаджеты</p>
+
+                    </li>
+                </ul>
+                <h3 class="directions__sub-title">Стартап</h3>
+                <p class="directions__text directions__text_margin">Разместить информацию о себе в формате видеоролика или MVP</p>
+                <h3 class="directions__sub-title">Продукт</h3>
+                <p class="directions__text">Размещение информации о вашем продукте или образцов на витрине в капсуле</p>
+                <div class="directions__footer">
+                    <div class="directions__footer-item">
+                        <span class="directions__number">3 000+ </span>
+                        <span class="directions__texts">разрабочиков</span>
                     </div>
-                    <div class="hero__photos photos">
-                        <div class="photos__shape">
-                            <div class="photos__author">
-                                Автор фото: Сергей Журавлёв. <a href="">Портфолио автора</a>
-                            </div>
-                            <div class="photos__head">
-                                <img src="img/12_21.png" aria-hidden="true" alt="">
-                                <img src="img/social.png" aria-hidden="true" alt="">
-                            </div>
-                            <div class="photos-wrap">
-                                <img class="photos-wrap-img-1" src="img/1.jpg" alt="Изображение 1">
-                                <img class="photos-wrap-img-2" src="img/2.jpg" alt="Изображение 2">
-                                <img class="photos-wrap-img-3" src="img/3.jpg" alt="Изображение 3">
-                            </div>
-                        </div>
-                        <div class="photos__shape"></div>
-                        <div class="photos__shape"></div>
-                        <div class="photos__shape"></div>
-                        <div class="photos__shape"></div>
+                    <div class="directions__footer-item">
+                        <span class="directions__number">1 000+ </span>
+                        <span class="directions__texts">инвесторов</span>
+                    </div>
+                    <div class="directions__footer-item">
+                        <span class="directions__number">100+ </span>
+                        <span class="directions__texts">крупных компаний</span>
                     </div>
                 </div>
-            </section>
-        </main>
-    </div>
-    <script src="./js/gsap.min.js"></script>
-    <script src="./js/index.js"></script>
-</body>
+                <img class="directions__bg" src="./img/background-dir.svg" alt="">
+                <img class="directions__bag" src="./img/bag.svg" alt="">
+        </div>
 
+    </section>
+    <section class="how-it-looks">
+        <h2 class="title how-it-looks__title">Как это выглядит</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                    <div class="how-it-looks__img">
+                        <img src="./img/photo_2023-03-29_18-58-55.jpg" alt="photo">
+                    </div>
+                </div>
+              <div class="swiper-slide"> 
+                <div class="how-it-looks__img">
+                    <img src="./img/photo_2023-03-29_18-59-06.jpg" alt="photo">
+                </div>
+                </div>
+              <div class="swiper-slide"> 
+                <div class="how-it-looks__img">
+                    <img src="./img/photo_2023-03-29_18-59-10.jpg" alt="photo">
+                </div>
+            </div>
+              <div class="swiper-slide"> 
+                <div class="how-it-looks__img">
+                    <img src="./img/photo_2023-03-29_18-59-15.jpg" alt="photo">
+                </div>
+            </div>
+              <div class="swiper-slide"> 
+                <div class="how-it-looks__img">
+                    <img src="./img/photo_2023-03-29_18-59-22.jpg" alt="photo">
+                </div>
+            </div>
+                
+              
+            </div>
+            
+          </div>
+          <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+    </section>
+    <section class="capsule">
+        <div class="container">
+            <h2 class="title capsule__title">Капсула оснащена:</h2>
+            <ul class="capsule__list list-reset">
+                <li class="capsule__item">
+                    <span class="capsule__text">10 экранов диагональю 
+                        55 дюймов</span>
+                </li>
+                <li class="capsule__item">
+                    <span class="capsule__text">Стенды для размещения
+                        Вашей продукции</span>
+                </li>
+                <li class="capsule__item">
+                    <span class="capsule__text">Стойки для размещения 
+                        раздаточных материаолов</span>
+                </li>
+                <li class="capsule__item">
+                    <span class="capsule__text">Акустическая система 
+                        нового поколения</span>
+                </li>
+                <li class="capsule__item">
+                    <span class="capsule__text">Система «Умный дом» 
+                        с голосовым управлением</span>
+                </li>
+                <li class="capsule__item">
+                    <span class="capsule__text">Инновационное 
+                        оборудование</span>
+                </li>
+                <li class="capsule__item">
+                    <span class="capsule__text">Проекторы</span>
+                </li>
+                <li class="capsule__item">
+                    <span class="capsule__text">VR шлемы</span>
+                </li>
+                <li class="capsule__item">
+                    <span class="capsule__text">Лаунж зона</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="rate">
+        <div class="container">
+            <h2 class="title rate__title">Тарифы</h2>
+            <div class="rate__list">
+                <div class="rate__item">
+                    <div class="rate__block">
+                        <span class="rate__name">Старт</span>
+                        <span class="rate__price">15 000₽<span class="rate__price-month">/месяц</span></span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Логотип</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Видеоролик</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Презентация</span>
+                        <button class="rate__button btn-reset">Выбрать</button>
+                        <span class="rate__line"></span>
+                    </div>
+                </div>
+                <div class="rate__item">
+                    <div class="rate__block rate__block_bg">
+                        <span class="rate__name">Люкс</span>
+                        <span class="rate__price">50 000₽<span class="rate__price-month">/месяц</span></span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Логотип</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Видеоролик</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Презентация</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Бреднирование</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Раздаточный материал</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Презентация в VR</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Презентация по сценарии от ИИ</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Образец продукции</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Размещение в  маркетплейсе</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Press Wall</span>
+                        <button class="rate__button btn-reset">Выбрать</button>
+                        <span class="rate__line"></span>
+                    </div>
+                </div>
+                <div class="rate__item">
+                    <div class="rate__block">
+                        <span class="rate__name">Партнер</span>
+                        <span class="rate__price">30 000₽<span class="rate__price-month">/месяц</span></span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Логотип</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Видеоролик</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Презентация</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Бреднирование</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Раздаточный материал</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Презентация в VR</span>
+                        <span class="rate__points"><img src="./img/gal.svg" alt="">Презентация по сценарии от ИИ</span>
+                        <button class="rate__button btn-reset">Выбрать</button>
+                        <span class="rate__line"></span>
+                    </div>
+                   
+                </div>
+            </div>
+            <div class="rate__sales">
+                <div class="rate__item-sale">
+                    <span class="rate__item-sale-text">Скидка 10%</span>
+                    <span class="rate__item-sale-dur">При оплате за 6 месяцев</span>
+                    <img src="./img/proc.svg" alt="">
+               </div>
+               <div class="rate__item-sale">
+                    <span class="rate__item-sale-text">Скидка 20%</span>
+                    <span class="rate__item-sale-dur">При оплате за 12 месяцев</span>
+                    <img src="./img/proc.svg" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <nav class="footer__nav">
+            <div>
+                <a href="" class="footer__link">Информация</a>
+                <a href="" class="footer__link footer__link_bold">Брендбук</a>
+            </div>
+            <div>
+                <a href="" class="footer__link">Справка</a>
+                <a href="" class="footer__link footer__link_bold">Контакты</a>
+            </div>
+            <div>
+                <a href="" class="footer__link">Медиа-пространство</a>  
+                <a href="" class="footer__link"> <img src="./img/tg.svg" alt=""><img src="./img/yt.svg" alt=""></a>
+            </div>
+            
+
+       
+        </nav>
+        <nav class="footer__icons list-reset">
+            <img class="footer__icon" src="./img/Instagram.png" alt="">
+            <img class="footer__icon" src="./img/Facebook.png" alt="">
+            <img class="footer__icon" src="./img/TwitterSquared.png" alt="">
+        </nav>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="./js/index.js"></script>
+</body>
 </html>

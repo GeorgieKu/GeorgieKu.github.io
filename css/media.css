@@ -1,0 +1,280 @@
+@media (max-width: 1024px) {
+    .hero__title {
+        font-size: 65px;
+    }
+    .hero__descr {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .rate__line {
+        display: none;
+    }
+    .rate__item-sale img {
+        display: none;
+    }
+    .hero__img {
+        max-width: 370px;
+        max-height: 370px;
+    }
+    .directions__number {
+        font-size: 50px;
+    }
+    .capsule__text {
+        font-size: 20px;
+    }
+    .directions__list-title {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero__img {
+        max-width: 280px;
+        max-height: 280px;
+    }
+    .hero__title {
+        font-size: 45px;
+        margin-bottom: 10px;
+       
+    }
+    .title {
+        font-size: 45px;
+    }
+
+    .directions__list-title {
+        font-size: 20px;
+    }
+    .directions__descr {
+        font-size: 14px;
+    }
+    .directions__number {
+        font-size: 25px;
+    }
+    .directions__texts {
+        font-size: 18px;
+    }
+    .capsule__text {
+        font-size: 16px;
+    }
+    .rate__list {
+        flex-direction: column;
+    }
+    .rate__item {
+        width: unset;
+    }
+    .rate__item-sale {
+        width: calc(50% - 20px);
+    }
+    .directions__footer-item {
+        padding: 10px 15px;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        top: 107%;
+        left: 35%;
+    }
+    
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        top: 107%;
+        right: 35%;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        top: 106%;
+    }    
+    .swiper-slide-active {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero__container {
+        flex-direction: column;
+    }
+    .hero__btn {
+        margin-bottom: 20px;
+    }
+    .hero__img {
+        max-width: 100%;
+        max-height: unset;
+    }
+    .hero__text {
+        max-width: unset;
+    }
+    .header {
+        padding-bottom: 20px;
+    }
+    .hero {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .directions {
+        padding-top: 20px;
+    }
+    .directions__list {
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .directions__item {
+        max-width: unset;
+    }
+    .directions__bag {
+        display: none;
+    }
+    .capsule__list {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .rate__item-sale-text {
+        font-size: 20px;
+    }
+    .rate__item-sale-dur {
+        font-size: 15px;
+    }
+    .footer__link {
+        font-size: 20px;
+    }
+    .directions__footer {
+        padding-top: 30px;
+        flex-direction: column;
+    }
+    .directions__footer-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .directions__footer-item {
+        border: 5px solid #6248FF;
+    }
+    .footer__nav {
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+    .directions__item:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    .rate__item-sale {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    .hero__img {
+        border: 5px solid #9685FF;
+    }
+    .burger-menu {
+        display: block;
+        padding-top: 25px;
+        padding-left: 20px;
+    }
+    .header-nav-item-768 {
+        display: none;
+    }
+    #menu__toggle {
+        opacity: 0;
+        display: none;
+    }
+    #menu__toggle:checked~.menu-btn>span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked~.menu-btn>span::before {
+        top: 0;
+        transform: rotate(0);
+        width: 25px;
+    }
+    #menu__toggle:checked~.menu-btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+        width: 25px;
+    }
+    #menu__toggle:checked~.menu-box {
+        visibility: visible;
+        left: 0.1px;
+        z-index: 2;
+    }
+    #menu__toggle:checked body {
+        overflow: hidden;
+    }
+    .menu-btn {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .menu-btn>span,
+    .menu-btn>span::before,
+    .menu-btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #A65CF0;
+        transition-duration: 0.25s;
+        border-radius: 4px;
+    }
+    .menu-btn>span {
+        width: 24px;
+        height: 3px;
+    }
+    .burger-menu-576 {
+        display: none;
+    }
+    .menu-btn>span::before {
+        content: "";
+        top: -11px;
+        width: 24px;
+        height: 3px;
+    }
+    .menu-btn>span::after {
+        content: "";
+        top: 11px;
+        width: 24px;
+        height: 3px;
+    }
+    .menu-box {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        position: absolute;
+        visibility: hidden;
+        top: 59px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 90px 70px 0;
+        list-style: none;
+        background: black;
+        opacity: 0.95;
+        transition-duration: 0.25s;
+        z-index: 1;
+        border-top: 1px solid #D9D9D9;
+    }
+    .header__nav {
+        display: none;
+    }
+    .title {
+        font-size: 27px;
+        line-height: 35px;
+    }
+    .capsule__list {
+        gap: 10px;
+    }
+    .rate__item-sale {
+        width: calc(50% - 5px);
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+        top: 107%;
+        left: 23%;
+    }
+    
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+        top: 107%;
+        right: 23%;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        top: 105%;
+    }    
+    .swiper-slide-active {
+        width: 300px;
+        height: 300px;
+    }
+}
