@@ -10,7 +10,7 @@ const swiper = new Swiper('.promotion__swiper', {
 });
 
 const swiper2 = new Swiper('.specialist__swiper', {
-    slidesPerView: 6,
+    slidesPerView: 5,
     loop: true,
     spaceBetween: 100,
     navigation: {
