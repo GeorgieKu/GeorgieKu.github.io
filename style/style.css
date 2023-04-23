@@ -274,10 +274,20 @@ line-height: 120.5%;
 }
 
 .promotion {
-    background-color: #FBF7EE;
-    z-index: -3;
+
     position: relative;
     padding-top: 500px;
+}
+
+.promotion::after {
+    content: "";
+    background-color: #FBF7EE;
+    z-index: -3;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .promotion__swiper {
@@ -908,17 +918,29 @@ color: #693E16;
 }
 
 .specialist {
-    background-color: #FBF7EE;
+  
     margin-top: -100px;
     padding-bottom: 300px;
-    z-index: -3;
+   
     position: relative;
+}
+
+.specialist::after {
+    content: "";
+    background-color: #FBF7EE;
+    z-index: -3;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: block;
+    height: 100%;
 }
 
 .services-content {
     padding: 60px 80px;
     background: #FBF7EE;
 box-shadow: 0px 7.9125px 29.6719px rgba(105, 62, 22, 0.29);
+min-height: 615px ;
 }
 
 .services__swiper {
@@ -965,11 +987,18 @@ color: #693E16;
 .services-slider {
     position: relative;
     padding-top: 300px;
-    padding-bottom: 300px;
+    padding-bottom: 463px;
 }
 
-.services-slider {
-    position: relative;
+
+.services-button-prev {
+    left: 8%;
+    right: auto;
+}
+
+.services-button-next {
+    right: 8%;
+
 }
 
 .services-slider::before {
@@ -979,7 +1008,7 @@ color: #693E16;
     position: absolute;
     height: 100%;
     width: 100%;
-    top: -51px;
+    top: 0px;
     left: 314px;
     display: block;
 }
@@ -989,7 +1018,7 @@ color: #693E16;
     background-repeat: no-repeat;
     position: absolute;
     display: block;
-    top: -130px;
+    top: -68px;
     z-index: -2;
     width: 100%;
     background-color: #FBF7EE;
@@ -997,9 +1026,19 @@ color: #693E16;
 }
 
 .review {
+
+    position: relative;
+}
+
+.review::after {
+    content: "";
+    top: 0;
     background-color: #FBF7EE;
     z-index: -3;
-    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .review__title {
@@ -1007,6 +1046,7 @@ color: #693E16;
 font-size: 94.95px;
 line-height: 137px;
 color: #975C28;
+margin-left: 100px;
 }
 
 .review-content {
@@ -1069,6 +1109,10 @@ color: #975C28;
 margin-bottom: 62px;
 max-width: 580px;
 display: block;
+}
+
+.review__slide {
+    max-width: 814px;
 }
 
 .review__btn {

@@ -1,6 +1,6 @@
 const swiper = new Swiper('.promotion__swiper', {
     slidesPerView: 1,
-    loop: true,
+    loop: false,
     spaceBetween: 100,
     navigation: {
         nextEl: '.promotion-button-next',
