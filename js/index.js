@@ -28,6 +28,17 @@ const swiper3 = new Swiper('.services__swiper', {
         nextEl: '.services-button-next',
         prevEl: '.services-button-prev',
     },
+    breakpoints: {
+        // when window width is >= 320px
+        2000: {
+          slidesPerView: 3,
+          spaceBetween: 80
+        },
+        1240: {
+            slidesPerView: 'auto',
+            spaceBetween: 30
+        }
+    }
     
 });
 
