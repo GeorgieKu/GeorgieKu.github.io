@@ -17,7 +17,15 @@
 @font-face {
     font-family: 'Saksonia';
     font-weight: 400;
-    src: url('../fonts/ofont.ru_Saksonia.ttf') format('ttf');
+    src: url('../fonts/Saksonia/saksonia.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Saksonia';
+    font-weight: 400;
+    src: url('../fonts/Saksonia/saksonia.woff2') format('woff2');
     font-style: normal;
     font-display: swap;
 }
@@ -73,6 +81,15 @@ h1,
 h2,
 h3 {
     margin: 0;
+}
+
+.title {
+    font-family: 'Saksonia';
+font-style: normal;
+font-weight: 400;
+font-size: 94.95px;
+line-height: 100%;
+color: #975C28;
 }
 
 .visually-hidden {
@@ -144,6 +161,7 @@ h3 {
 .services__slide {
     display: flex;
     height: auto;
+    flex-direction: column;
 }
 
 .header__logo {
@@ -179,16 +197,15 @@ color: #693E16;
 }
 
 .hero__block {
-padding: 300px 0;
-max-width: 1415px;
-    margin-left: auto;
+    padding: 300px 0px 300px 350px;
+
 }
 
 .hero__img {
     position: absolute;
     bottom: 0;
     left: 0;
-    max-width: 60%;
+    max-width: 50%;
     z-index: -1;
 }
 
@@ -221,7 +238,7 @@ margin-bottom: 38px;
 border-radius: 116.36px;
 font-weight: 400;
 font-size: 37.2353px;
-line-height: 42px;
+line-height: 100%;
 text-align: center;
 color: #FFFFFF;
 }
@@ -232,7 +249,7 @@ color: #FFFFFF;
     margin-right: auto;
 }
 
-.services__title {
+.services__title-1 {
     font-weight: 400;
 font-size: 94.95px;
 line-height: 137px;
@@ -380,6 +397,7 @@ margin-left: 72px;
 
 .promotion__btn {
     padding: 16px 57px;
+    display: inline-block;
 }
 
 .promotion__slide-flex {
@@ -409,7 +427,7 @@ margin-left: 72px;
 .about-us {
     position: relative;
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 146px;
 }
 
 .about-us__title {
@@ -421,7 +439,7 @@ color: #975C28;
 margin-bottom: 40px;
 }
 
-.about-us__decr {
+.about-us__descr {
     font-style: normal;
 font-weight: 400;
 font-size: 43.5187px;
@@ -439,6 +457,12 @@ font-size: 71.2125px;
 line-height: 118.09%;
 max-width: 1180px;
 color: #975C28;
+display: flex;
+flex-direction: column;
+}
+
+.about-us__text span {
+    margin-left: 100px;
 }
 
 .about-us__flex {
@@ -469,12 +493,12 @@ color: #975C28;
 
 .specialist-button-prev {
     top: 37%;
-    left: 10%;
+    left: 5%;
 }
 
 .specialist-button-next {
     top: 37%;
-    right: 10%;
+    right: 5%;
 }
 
 
@@ -608,6 +632,9 @@ display: block;
 .sales__dates-768 {
     display: none;
 }
+.masters {
+    padding-top: 115px;
+}
 
 .masters__block {
     display: grid;
@@ -637,24 +664,46 @@ display: block;
 color: #693E16;
 }
 
-.title {
-    font-family: 'Saksonia';
-font-style: normal;
-font-weight: 400;
-font-size: 94.95px;
-line-height: 100%;
-text-align: center;
-color: #975C28;
-}
+
 
 .masters__title {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .master__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.hair {
+    position: relative;
+    padding-top: 50px;
+}
+
+.hair__text:first-child {
+    margin-bottom: 50px;
+}
+
+.container-mini {
+    max-width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-mini-2 {
+    max-width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hair__name_mb {
+    margin-bottom: 50px;
+}
+
+.services__hairdresser-header {
+    background: #FFFFFF;
 }
 
 .hair__descr {
@@ -670,7 +719,10 @@ color: #975C28;
 .hair__main-block {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
+
+
 
 .hair__list {
     display: flex;
@@ -808,6 +860,7 @@ max-width: 75%;
 
 }
 
+
 .hair__texts-price-block {
     margin-bottom: 500px;
 }
@@ -933,6 +986,7 @@ margin-left: auto;
 }
 
 .specialist__name {
+    font-family: Garamond;
     font-weight: 400;
 font-size: 32px;
 line-height: 125.5%;
@@ -942,7 +996,13 @@ color: #693E16;
 }
 
 .specialist__descr {
-    font-size: 24px;
+    font-family: 'Garamond';
+font-style: normal;
+font-weight: 400;
+font-size: 35.6063px;
+line-height: 79.5%;
+text-align: center;
+color: #693E16;
 }
 
 .specialist {
@@ -981,9 +1041,11 @@ flex-grow: 1;
     margin-right: auto;
     margin-left: auto;
     display: block;
+    margin-bottom: 50px;
 }
 
 .services__title {
+    font-family: Garamond;
     font-weight: 700;
 font-size: 63.3px;
 line-height: 125.5%;
@@ -1018,17 +1080,17 @@ margin-top: auto;
 .services-slider {
     position: relative;
     padding-top: 300px;
-    padding-bottom: 463px;
+    padding-bottom: 406px;
 }
 
 
 .services-button-prev {
-    left: 8%;
+    left: 3%;
     right: auto;
 }
 
 .services-button-next {
-    right: 8%;
+    right: 3%;
 
 }
 
@@ -1089,7 +1151,7 @@ margin-top: auto;
 font-size: 94.95px;
 line-height: 137px;
 color: #975C28;
-margin-left: 100px;
+margin-bottom: 50px;
 }
 
 .review-content {
@@ -1103,6 +1165,7 @@ position: relative;
 }
 
 .review__name {
+    font-family: Garamond;
     font-style: normal;
 font-weight: 700;
 font-size: 43.5187px;
@@ -1150,7 +1213,6 @@ line-height: 103px;
 
 color: #975C28;
 margin-bottom: 62px;
-max-width: 580px;
 display: block;
 }
 
@@ -1190,6 +1252,7 @@ color: #693E16;
 
 .review__swiper {
     overflow: hidden;
+    margin-bottom: 400px;
 }
 
 .services-slider {
@@ -1225,6 +1288,9 @@ font-weight: 400;
 font-size: 81px;
 line-height: 96.5%;
 color: #975C28;
+display: flex;
+flex-direction: column;
+margin-left: 200px;
 }
 
 .contacts__title-2 {
@@ -1254,6 +1320,7 @@ margin-bottom: 100px;
 }
 
 .contacts__sub {
+    font-family: Garamond;
     font-style: normal;
 font-weight: 400;
 font-size: 64px;
@@ -1342,6 +1409,7 @@ margin-bottom: 47px;
     display: flex;
     align-items: center;
     margin-bottom: 60px;
+    margin-left: 100px;
 }
 
 .contatcs__adress {
