@@ -49,9 +49,13 @@ const swiper3 = new Swiper('.services__swiper', {
     },
     breakpoints: {
         // when window width is >= 320px
-        2000: {
+        1920: {
+            slidesPerView: 3,
+            spaceBetween: 80
+          },
+        1024: {
           slidesPerView: 3,
-          spaceBetween: 80
+          spaceBetween: 20
         },
         375: {
             slidesPerView: 'auto',
