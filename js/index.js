@@ -1,19 +1,63 @@
-const swiper = new Swiper('.reviews__swiper', {
-    slidesPerView: 'auto',
-    loop: true,
-    spaceBetween: 48,
-    
+document.addEventListener('DOMContentLoaded', () => {
+    const openButton = document.querySelector('.js-open-modal');
+    const modal = document.querySelector(openButton.dataset.target);
+
+    openButton.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+
+    modal.querySelector('.modal-dialog').addEventListener('click', event => {
+        event._isClickWithinModal = true;
+    });
+
+    modal.addEventListener('click', event => {
+        if (event._isClickWithinModal) return;
+        modal.style.display = 'none';
+    })
 });
 
-// Получить элементы input и span
-const input = document.getElementById("calculation__input");
-const span = document.getElementById("my-span");
-
-// Добавить обработчик события "input" на input
-input.addEventListener("input", function() {
-  // Получить значение input и умножить его на 4
-  const value = input.value * 4;
-  
-  // Вывести результат в span
-  span.textContent = value;
+  Fancybox.bind('[data-fancybox="phone1"]', {
+    //
 });
+Fancybox.bind('[data-fancybox="phone2"]', {
+    //
+});
+
+
+var openContact = document.querySelector('.open-modal');
+var modalContact = document.querySelector('.modal-contact');
+var overlay = document.querySelector('.overlay');
+
+
+if (modalContact) {
+  var formContact = modalContact.querySelector('.modal-contact__form');
+  var submitbtn = document.querySelector('.submit-btn');
+ 
+
+  openContact.addEventListener('click', function (event) {
+    event.preventDefault();
+    modalContact.classList.add('modal-contact--show');
+    overlay.classList.add('overlay--show');
+  });
+
+
+
+  overlay.addEventListener('click', function (event) {
+    modalContact.classList.remove('modal-contact--show');
+    overlay.classList.remove('overlay--show');
+  });
+
+  submitbtn.addEventListener('click', function (event)  {
+    modalContact.classList.remove('modal-contact--show');
+    overlay.classList.remove('overlay--show');
+  })
+
+  window.addEventListener('keydown', function (event) {
+    if (event.keyCode === 27) {
+      if (modalContact.classList.contains('modal-contact--show')) {
+        modalContact.classList.remove('modal-contact--show');
+        overlay.classList.remove('overlay--show');
+      }
+    }
+  });
+  };

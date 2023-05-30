@@ -1,196 +1,164 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/normalize.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="./style/style.css">
-        <link rel="stylesheet" href="./style/media.css">
-    <title>Луковка shop</title>
+    <link rel="stylesheet" href="./style/media.css">
+    <title>Document</title>
 </head>
+
 <body>
-    <header class="header">
-        
+    <section class="main">
         <div class="container">
-        <div class="header__block">
-            <img class="header__img" src="./img/logo.jpg" alt="logo">
-            <span class="header__tel">+7 999 123 56 44</span>
-        </div>
-    </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero__flexbox">
-                    <div class="hero__left-side">
-                    <h1 class="hero__title">Скобы садовые металлические
-                    </h1>
-                    <span class="hero__text">Надежная фиксация укрывного материала и простое использование </span>
-                    <button class="hero__btn btn-reset">Заказать </button>
-                    </div>
-                    <div class="hero__right-side">
-                        <img class="hero__img" src="./img/hero.png" alt="photo">
-                    </div>
+            <h1 class="main_title"><span class="main_title-first-word">Каталог </span>товары в наличии (на 29.05.2023)
+            </h1>
+            <span class="main_descr">на первый заказ действует скидка 15% (скидки не суммируются)</span>
+            <div class="main_big-card">
+                <div class="main_big-card-container">
+                    <div class="main-card_container">
+                        <div class="main-card_left">
+                            <div class="main-card_logo-title">
+                                <img class="main-card_logo" src="./img/Apple_logo_grey.svg" alt="logo">
+                            <h2 class="main-card_title">Iphone 12</h2>
+                            </div>
+                            <a href="./img/1.jpg" data-fancybox="phone1" class="card__image">
+                                <img src="./img/1.jpg" alt="">
+                            </a>
+                            <div style="display:none">
+                                <a data-fancybox="phone1" href="./img/2.jpg">
+                                    <img src="./img/2.jpg"/>
+                                </a>
+                                <a data-fancybox="phone1" href="./img/3.jpg">
+                                    <img src="./img/3.jpg"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="main-card_text">
+                            <div class="main-card_right">
+                                <span class="main-card_price">100$</span>
+                                <span class="main-card_old-price">200$</span>
+                            </div>
+                            <span class="main-card_descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                            <div class="main-card_btns">
+                                <button class="main-big-card_btn btn-reset trigger open-modal">Задать вопрос</button>
+                                <button class="main-big-card_btn2 btn-reset js-open-modal" data-target="#modal"">Подробнее</button>
+                            </div>
+                           
+                        </div>
+                        </div>
                 </div>
             </div>
-        </section>
-        <section class="advantages">
-            <div class="container">
-                <h2 class="advantages__title title">ПРЕИМУЩЕСТВА:</h2>
-                <div class="advantages__list">
-                    <div class="advantages__item">
-                        <img class="advantages__icon" src="./img/adv1.png" alt="icon">
-                        <div class="advantages__item-name-descr">
-                            <span class="advantages__name">Заводское цинкование </span>
-                            <span class="advantages__descr">(устойчивы к коррозии во влажной среде) 
-                            </span>
+            <div class="main_cards">
+                 <!-- Чтоб добавить новую карточку, надо скопировать все от сюда -->
+                <div class="main_card">
+                    <div class="main-card_container">
+                    <div class="main-card_left">
+                        <div class="main-card_logo-title">
+                            <img class="main-card_logo" src="./img/Apple_logo_grey.svg" alt="logo">
+                        <h2 class="main-card_title">Iphone 12</h2>
                         </div>
-                    </div>
-                    <div class="advantages__item">
-                        <img class="advantages__icon" src="./img/adv2.png" alt="icon">
-                        <div class="advantages__item-name-descr">
-                            <span class="advantages__name">усиленные 
-                                
-                         </span>
-                            <span class="advantages__descr">(изготовлены из стали 3 мм, выдерживают многократную установку)</span>
-                        </div>
-                    </div>
-                    <div class="advantages__item">
-                        <img class="advantages__icon" src="./img/adv3.png" alt="icon">
-                        <div class="advantages__item-name-descr">
-                            <span class="advantages__name">производство в России 
-                                 </span>
-                            <span class="advantages__descr">(качество без переплат и посредников)</span>
-                        </div>
-                    </div>
-                    <div class="advantages__item">
-                        <img class="advantages__icon" src="./img/adv4.png" alt="icon">
-                        <div class="advantages__item-name-descr">
-                            <span class="advantages__name">два размера 
-                              </span>
-                            <span class="advantages__descr"> (для твердой и рыхлой почвы)</span>
-                        </div>
-                    </div>
-                    <div class="advantages__item">
-                        <img class="advantages__icon" src="./img/adv5.png" alt="icon">
-                        <div class="advantages__item-name-descr">
-                            <span class="advantages__name">легкое применение
-                                 </span>
-                            <span class="advantages__descr"> (заостренный конец легко втыкать в землю)  </span>
-                        </div>
-                    </div>
-                    <div class="advantages__item">
-                        <img class="advantages__icon" src="./img/adv6.png" alt="icon">
-                        <div class="advantages__item-name-descr">
-                            <span class="advantages__name">ВЫГОДНО
-                                
-                                 </span>
-                            <span class="advantages__descr">В упаковках от 40 штук – дополнительны колышки в подарок</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="for-what">
-            <div class="container">
-                <div class="for-what__flexbox">
-                    <div class="for-what__item">
-                        <span class="for-what__text">Доступный многофункциональный помощник для сада и огорода, который легко использовать даже без инструмента.
-                        </span>
-                        <img class="for-what__img" src="./img/sec3.png" alt="photo">
-                    </div>
-                    <div class="for-what__item">
-                        <span class="for-what__text">Подходит для крепления геотекстиля, газона, капельной ленты, садовых шлангов, теплиц, палаток
-                        </span>
-                        <img class="for-what__img" src="./img/sec4.png" alt="photo">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="reviews">
-            <div class="container">
-                <h2 class="reviews__title title">ОТЗЫВЫ КЛИЕНТОВ</h2>
-            </div>
-            <div class="swiper-container reviews__swiper">
-
-                <div class="swiper-wrapper">
-
-
-                    <div class="swiper-slide reviews__slide">
-                            <img src="./img/re1.jpeg" alt="review">
+                        <a href="#" data-fancybox="phone1" class="main-card_img">
                      
-                    </div>
-                    <div class="swiper-slide reviews__slide">
-
-                        <img src="./img/re2.jpeg" alt="review">
-                    </div>
-                    <div class="swiper-slide reviews__slide">
-                        <img src="./img/re3.jpeg" alt="review">
-                    </div>
-                    <div class="swiper-slide reviews__slide">
-                        <img src="./img/re4.jpeg" alt="review">
-                    </div>
-
-                </div>
-            </div>
-            <div class="container">
-            <span class="review__link">Еще больше отзывов по ссылке: <a href="https://www.wildberries.ru/catalog/74721981/feedbacks?imtId=124785377&size=126061887">https://www.wildberries.ru /catalog/74721981 /feedbacks?imtId=124785377&size=126061887</a>
-            </span>
-
-            <span class="review__text">Поделитесь и Вы с нами впечатлениями о нашем товаре, а также вашими способами применения садовых скоб. Обязательно прикрепите фото или видео!  
-            </span>
-        </div>
-
-        </section>
-        <section class="calculation">
-            <div class="container">
-                <div class="calculation__flexbox">
-                    <div class="calculation__left">
-                        <h2 class="calculation__title title">СКОЛЬКО МНЕ НУЖНО СКОБ?</h2>
-                        <span class="calculation__descr">Рассчитайте необходимое количество скоб на м2 при помощи калькулятора 
-                        </span>
-                    </div>
-                    <div class="calculation__right">
-                        <form action="#">
-                            <input id="calculation__input" class="calculation__input" type="number" placeholder="Введите кол-во кв. метров">
-                            <button type="submit" class="calculation__btn btn-reset">Рассчитать</button>
-
-                            <span class="calculation__text">Вам понадобиться <span id="my-span">2</span> комплекта скоб, <a href="#" class="calculation__link">купить</a></span>
-                        </form>
-                    </div>
-                </div>
-                <div class="calculation__img-block">
-                    <div class="calculation__image-1">
-                    <img class="calculation__img"  src="./img/q.png" alt="photo">
-                    <span class="calculation__img-text">40<span>шт</span></span>
-                    <button class="calculation__btn-3 hero__btn btn-reset">Купить</button>
-                    </div>
-                    <div class="calculation__image-1">
-                    <img class="callculation__img-2" src="./img/q2.png" alt="photo">
-                    <span class="calculation__img-text">50<span>шт</span></span>
-                    <button class="calculation__btn-3 hero__btn btn-reset">Купить</button>
-                </div>
-                </div>
+                        </a>
+                        <div style="display: none;">
+                            <a href="./img/1.jpg" data-fancybox="phone1" >
+                                <img  src="./img/1.jpg" alt="photo">
+                            </a>
+                            <a href="./img/1.jpg" data-fancybox="phone1" >
+                                <img  src="./img/1.jpg" alt="photo">
+                            </a>
+                        </div>
+                       
              
-                
+                    </div>
+                    <div class="main-card_text">
+                        <div class="main-card_right">
+                            <span class="main-card_price">100$</span>
+                            <span class="main-card_old-price">200$</span>
+                        </div>
+                        <span class="main-card_descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        <div class="main-card_btns">
+                            <button class="main-card_btn btn-reset trigger open-modal">Заказать</button>
+                            <button class="main-card_btn2 btn-reset js-open-modal" data-target="#modal">Подробнее</button>
+                        </div>
+                       
+                    </div>
+                    </div>
+                    <!-- Если нужен нужен другой цвет уголка в карточке надо писать соответствующий класс.Для голубого: main-card_corner-blue.
+                        Для зеленого: main-card_corner-green.Для красного: main-card_corner-red.Ну и поменять текст на нужный -->
+                    <div class="main-card_corner main-card_corner-red">Хит</div>
+                </div>
+                     <!-- До сюда -->
+                <div class="main_card">
+                    <div class="main-card_container">
+                    <div class="main-card_left">
+                        <div class="main-card_logo-title">
+                            <img class="main-card_logo" src="./img/Apple_logo_grey.svg" alt="logo">
+                        <h2 class="main-card_title">Iphone 12</h2>
+                        </div>
+                        <a href="#" data-fancybox="phone1" class="main-card_img">
+                     
+                        </a>
+                        <div style="display: none;">
+                            <a href="./img/1.jpg" data-fancybox="phone1" >
+                                <img  src="./img/1.jpg" alt="photo">
+                            </a>
+                            <a href="./img/1.jpg" data-fancybox="phone1" >
+                                <img  src="./img/1.jpg" alt="photo">
+                            </a>
+                        </div>
+                       
+             
+                    </div>
+                    <div class="main-card_text">
+                        <div class="main-card_right">
+                            <span class="main-card_price">100$</span>
+                            <span class="main-card_old-price">200$</span>
+                        </div>
+                        <span class="main-card_descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        <div class="main-card_btns">
+                            <button class="main-card_btn btn-reset trigger open-modal">Заказать</button>
+                            <button class="main-card_btn2 btn-reset js-open-modal" data-target="#modal">Подробнее</button>
+                        </div>
+                       
+                    </div>
+                    </div>
+                    <!-- Если нужен нужен другой цвет уголка в карточке надо писать соответствующий класс.Для голубого: main-card_corner-blue.
+                        Для зеленого: main-card_corner-green.Для красного: main-card_corner-red.Ну и поменять текст на нужный -->
+                    <div class="main-card_corner main-card_corner-red">Хит</div>
+                </div>
             </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__flexbox">
-                <img src="./img/logo.png" alt="logo">
-                <span class="footer__adress">г Москва, проспект Вернадского 88, к1</span>
-                <div class="footer__contacts">
-                    <a href=”tel:+7(988)990-89-89” class="footer__tel">+7(988)990-89-89</a>
-                    <a href="scoby@mail.com" class="footer__email">scoby@mail.com</a>
+            <div class="overlay"></div>
+            <div class="modal-contact">
+                <form class="modal-contact__form">
+                  <input class="modal_input" type="text">
+                  <input class="modal_input" type="text">
+                  <input class="modal_input" type="text">
+                  <button id="submit-btn" type="submit">Отправить</button>
+                </form>
+              </div>
+            <div class="modal" id="modal">
+                <div class="modal-dialog">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro natus distinctio velit repellat error dolor voluptatem alias consequatur, necessitatibus nulla eius corrupti quidem dolorem, quos ad saepe quasi id asperiores.
                 </div>
             </div>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script defer src="./js/index.js"></script>
+        
+    </section>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
