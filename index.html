@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+            integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="main">
+        <div class="container">
+            <h1 class="main_title"><span class="main_title-first-word">Каталог </span>товары в наличии (на 29.05.2023)
+            </h1>
+            <span class="main_descr">на первый заказ действует скидка 15% (скидки не суммируются)</span>
+            <div class="main_big-card">
+                <div class="main_big-card-container">
+                    <div class="main-card_container">
+                        <div class="main-card_left">
+                            <div class="main-card_logo-title">
+                                <img class="main-card_logo" src="./img/Apple_logo_grey.svg" alt="logo">
+                            <h2 class="main-card_title">Iphone 12</h2>
+                            </div>
+                            <a href="./img/1.jpg" data-fancybox="phone1" class="card__image">
+                                <img src="./img/1.jpg" alt="">
+                            </a>
+                            <div style="display:none">
+                                <a data-fancybox="phone1" href="./img/2.jpg">
+                                    <img src="./img/2.jpg"/>
+                                </a>
+                                <a data-fancybox="phone1" href="./img/3.jpg">
+                                    <img src="./img/3.jpg"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="main-card_text">
+                            <div class="main-card_right">
+                                <span class="main-card_price">100$</span>
+                                <span class="main-card_old-price">200$</span>
+                            </div>
+                            <span class="main-card_descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                            <div class="main-card_btns">
+                                <button class="main-big-card_btn btn-reset trigger open-modal">Задать вопрос</button>
+                                <button class="main-big-card_btn2 btn-reset js-open-modal" data-target="#modal"">Подробнее</button>
+                            </div>
+                           
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <div class="main_cards">
+                 <!-- Чтоб добавить новую карточку, надо скопировать все от сюда -->
+                <div class="main_card">
+                    <div class="main-card_container">
+                    <div class="main-card_left">
+                        <div class="main-card_logo-title">
+                            <img class="main-card_logo" src="./img/Apple_logo_grey.svg" alt="logo">
+                        <h2 class="main-card_title">Iphone 12</h2>
+                        </div>
+                        <a href="#" data-fancybox="phone1" class="main-card_img">
+                     
+                        </a>
+                        <div style="display: none;">
+                            <a href="./img/1.jpg" data-fancybox="phone1" >
+                                <img  src="./img/1.jpg" alt="photo">
+                            </a>
+                            <a href="./img/1.jpg" data-fancybox="phone1" >
+                                <img  src="./img/1.jpg" alt="photo">
+                            </a>
+                        </div>
+                       
+             
+                    </div>
+                    <div class="main-card_text">
+                        <div class="main-card_right">
+                            <span class="main-card_price">100$</span>
+                            <span class="main-card_old-price">200$</span>
+                        </div>
+                        <span class="main-card_descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        <div class="main-card_btns">
+                            <button class="main-card_btn btn-reset trigger open-modal">Заказать</button>
+                            <button class="main-card_btn2 btn-reset js-open-modal" data-target="#modal">Подробнее</button>
+                        </div>
+                       
+                    </div>
+                    </div>
+                    <!-- Если нужен нужен другой цвет уголка в карточке надо писать соответствующий класс.Для голубого: main-card_corner-blue.
+                        Для зеленого: main-card_corner-green.Для красного: main-card_corner-red.Ну и поменять текст на нужный -->
+                    <div class="main-card_corner main-card_corner-red">Хит</div>
+                </div>
+                     <!-- До сюда -->
+                <div class="main_card">
+                    <div class="main-card_container">
+                    <div class="main-card_left">
+                        <div class="main-card_logo-title">
+                            <img class="main-card_logo" src="./img/Apple_logo_grey.svg" alt="logo">
+                        <h2 class="main-card_title">Iphone 12</h2>
+                        </div>
+                        <a href="#" data-fancybox="phone1" class="main-card_img">
+                     
+                        </a>
+                        <div style="display: none;">
+                            <a href="./img/1.jpg" data-fancybox="phone1" >
+                                <img  src="./img/1.jpg" alt="photo">
+                            </a>
+                            <a href="./img/1.jpg" data-fancybox="phone1" >
+                                <img  src="./img/1.jpg" alt="photo">
+                            </a>
+                        </div>
+                       
+             
+                    </div>
+                    <div class="main-card_text">
+                        <div class="main-card_right">
+                            <span class="main-card_price">100$</span>
+                            <span class="main-card_old-price">200$</span>
+                        </div>
+                        <span class="main-card_descr">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span>
+                        <div class="main-card_btns">
+                            <button class="main-card_btn btn-reset trigger open-modal">Заказать</button>
+                            <button class="main-card_btn2 btn-reset js-open-modal" data-target="#modal">Подробнее</button>
+                        </div>
+                       
+                    </div>
+                    </div>
+                    <!-- Если нужен нужен другой цвет уголка в карточке надо писать соответствующий класс.Для голубого: main-card_corner-blue.
+                        Для зеленого: main-card_corner-green.Для красного: main-card_corner-red.Ну и поменять текст на нужный -->
+                    <div class="main-card_corner main-card_corner-red">Хит</div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+            <div class="modal-contact">
+                <form class="modal-contact__form">
+                  <input class="modal_input" type="text">
+                  <input class="modal_input" type="text">
+                  <input class="modal_input" type="text">
+                  <button id="submit-btn" type="submit">Отправить</button>
+                </form>
+              </div>
+            <div class="modal" id="modal">
+                <div class="modal-dialog">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro natus distinctio velit repellat error dolor voluptatem alias consequatur, necessitatibus nulla eius corrupti quidem dolorem, quos ad saepe quasi id asperiores.
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
