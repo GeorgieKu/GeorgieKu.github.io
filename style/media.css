@@ -1,105 +1,221 @@
-@media (max-width: 1160px) {
-    .apple__flexbox-main {
+@media (max-width:1050px) {
+    .header__flexbox {
         flex-direction: column;
     }
-    .launches__flexboxes {
+    .price__flexbox {
         flex-direction: column;
-    }
-}
-
-@media (max-width: 978px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-    .seleers__btn {
-        width: 100%;
-    }
-    .header__form {
-        display: none;
-    }
-    .apple__flexboxes {
-        width: 100%;
-    }
-}
-
-@media (max-width: 640px) {
-    .container {
-        max-width: 630px;
-        padding: 0 5px;
-    }
-    .header__list {
         gap: 10px;
     }
-    .header__icon {
+    .price__card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width:900px) {
+    .advantages__img {
         display: none;
     }
-    .header {
-        padding: 20px 0;
+    .begin__flexbox {
+        flex-direction: column;
+        gap: 15px;
     }
-    .hero {
-        padding: 20px 0;
+    .begin__text {
+        max-width: unset;
     }
-    .header__top {
+    .begin__img {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .advantages__form {
         flex-direction: column;
         gap: 20px;
     }
-    .hero__user, .hero__right {
-        display: none;
+    .footer__flexbox3 {
+        flex-direction: column;
     }
-    .hero__title, .apple__bg, .purple__title, .title {
+}
+
+@media (max-width:768px) {
+    .title {
         font-size: 32px;
+        line-height: 100%;
     }
-    .title, .sellers__links, .launches__price {
-        margin-bottom: 20px;
-    }
-    .button {
-        font-size: 14px;
-    }
-    .hero__text, .purple__descr, .purple__link, .sellers__link {
-        font-size: 14px;
-    }
-    .apple__flexbox-img img {
-        width: 100px;
-    }
-    .purple__price {
-        font-size: 14px;
-    }
-    .purple__price span {
-        font-size: 14px;
-    }
-    .apple__flexbox-main {
-        gap: 20px;
-    }
-    .sellers {
-        padding: 30px 0 30px;
-    }
-    .sellers__link_active::after {
-        content: "";
-        position: absolute;
-        top: -18px;
-        left: -18px;
-        z-index: -1;
-        background-image: url(../img/Ellipse22.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        width: 133px;
-        height: 55px;
-        display: block;
-    }
-    .launches__flexbox img {
-        width: 100px;
-    }
-    .footer {
-        padding-top: 20px;
-    }
-    .footer__lists-flexbox {
-       width: 100%;
+    .advantages__title {
+        max-width: unset;
     }
     .footer__flexbox {
         flex-direction: column;
         gap: 20px;
     }
-    .footer_social-flexbox {
+    .footer__flexbox div {
+        margin-right: auto;
+        
+    }
+    .burger-menu {
+        display: block;
+        padding-top: 20px;
+    }
+    .header-nav-item-768 {
+        display: none;
+    }
+    #menu__toggle {
+        opacity: 0;
+        display: none;
+    }
+    #menu__toggle:checked~.menu-btn>span {
+        transform: rotate(45deg);
+    }
+    #menu__toggle:checked~.menu-btn>span::before {
+        top: 0;
+        transform: rotate(0);
+        width: 25px;
+    }
+    #menu__toggle:checked~.menu-btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+        width: 25px;
+    }
+    #menu__toggle:checked~.menu-box {
+        visibility: visible;
+        left: 0.1px;
+        z-index: 2;
+    }
+    #menu__toggle:checked body {
+        overflow: hidden;
+    }
+    .menu-btn {
+        display: flex;
+        position: absolute;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        z-index: 3;
+    }
+    .menu-btn>span,
+    .menu-btn>span::before,
+    .menu-btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #FF941F;;
+        transition-duration: 0.25s;
+        border-radius: 4px;
+    }
+    .menu-btn>span {
+        width: 24px;
+        height: 3px;
+    }
+    .burger-menu-576 {
+        display: none;
+    }
+    .menu-btn>span::before {
+        content: "";
+        top: -11px;
+        width: 24px;
+        height: 3px;
+    }
+    .menu-btn>span::after {
+        content: "";
+        top: 11px;
+        width: 24px;
+        height: 3px;
+    }
+    .menu-box {
+        display: flex;
         flex-direction: column;
+        flex-wrap: wrap;
+        position: absolute;
+        visibility: hidden;
+        top: 0px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 90px 70px 0;
+        list-style: none;
+        background: white;
+        opacity: 0.95;
+        transition-duration: 0.25s;
+        z-index: 1;
+        border-top: 1px solid #D9D9D9;
+        gap: 15px;
+    }
+    .header__list {
+        display: none;
+    }
+    .hero {
+        padding: 30px 0 20px;
+    }
+    .advantages__title {
+        margin-bottom: 20px;
+    }
+    .advantages__list {
+        margin-bottom: 30px;
+    }
+    .advantages__block {
+        padding: 20px 30px;
+        margin-bottom: 30px;
+    }
+    .begin__descr {
+        margin-bottom: 20px;
+    }
+    .begin, .quetions, .map {
+        padding-bottom: 20px;
+    }
+    .price {
+        margin-bottom: 30px;
+    }
+    .quetions__flexbox {
+        flex-direction: column;
+    }
+    .quetions__flexbox div {
+        width: 100%;
+    }
+    .quetions__title {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .footer__tel {
+        font-size: 24px;
+    }
+    .footer__flexbox2 {
+        width: 100%;
+    }
+    .footer__footer {
+        text-align: center;
+    }
+}
+
+@media (max-width:576px) {
+    .title {
+        font-size: 24px;
+    }
+    .header__btn {
+        padding: 10px 20px;
+        width: 100%;
+        margin-right: unset;
+    }
+    .header__tel {
+        font-size: 24px;
+    }
+    .header__flexbox {
+        gap: 10px;
+    }
+    .header__logo {
+        max-width: 30%;
+    }
+    .hero img {
+        display: none;
+    }
+    .advantages__input {
+        width: unset;
+    }
+    .header__flexbox3 {
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
