@@ -1,13 +1,29 @@
-function scrollNav() {
-    $('.link').click(function(){
-      $(".active").removeClass("active");     
-      $(this).addClass("active");
-      
-      $('html, body').stop().animate({
-        scrollTop: $($(this).attr('href')).offset().top - 160
-      }, 100);
-      return false;
-    });
-  }
-  scrollNav();
+var swiper = new Swiper('#js-carousel', {  
+    slidesPerView: 9,
+    spaceBetween: 88,
+    speed: 2000,
+    loop: true,
+    //allowTouchMove: false, // можно ещё отключить свайп
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false // или сделать так, чтобы восстанавливался autoplay после взаимодействия
+    }
+  });
 
+  var swiper2 = new Swiper(".offices__swiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+
+  });
+
+  var swiper3 = new Swiper('.benefit__swiper', {  
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    loop: false,
+  });
