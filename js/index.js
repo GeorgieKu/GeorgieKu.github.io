@@ -1,12 +1,10 @@
 var swiper = new Swiper('#js-carousel', {  
-    slidesPerView: 9,
+    slidesPerView: 'auto',
     spaceBetween: 88,
     speed: 2000,
     loop: true,
-    //allowTouchMove: false, // можно ещё отключить свайп
     autoplay: {
       delay: 0,
-      disableOnInteraction: false // или сделать так, чтобы восстанавливался autoplay после взаимодействия
     }
   });
 
