@@ -437,7 +437,7 @@ h3 {
 
 .offices__swiper {
   position: relative;
-  max-width: 839px;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -473,8 +473,29 @@ h3 {
   max-width: 50%;
 }
 
+.offices__block_abs {
+  position: absolute;
+  background-color: #003057;
+  padding: 1rem;
+  z-index: 2;
+  bottom: 0;
+  right: 0;
+}
+
+.offices__block_abs span {
+  font-family: 'Jeko-Bold';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  display: block;
+  max-width: 352px;
+  color: #FFFFFF;
+}
+
 .offices__descr {
   margin-left: 10%;
+  max-width: 50%;
 }
 
 .offices__text {
@@ -854,6 +875,7 @@ h3 {
   -webkit-box-align: unset;
       -ms-flex-align: unset;
           align-items: unset;
+  gap: 15px;
 }
 
 .place__text_bold {
@@ -916,6 +938,7 @@ h3 {
 
 .footer__line {
   background: #E84B03;
+  overflow-x: auto;
 }
 
 .footer__line-text {
@@ -924,11 +947,17 @@ h3 {
   font-weight: 400;
   font-size: 30px;
   line-height: 130%;
-  /* identical to box height, or 39px */
+  display: block;
+  width: 1920px;
+  text-wrap: nowrap;
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #003057;
+}
+
+.footer__line::-webkit-scrollbar {
+  width: 0;
 }
 
 .footer__block {

@@ -26,3 +26,10 @@ var swiper = new Swiper('.benefit__swiper', {
     spaceBetween: 30,
     loop: false,
   });
+
+  var swiper4 = new Swiper(".table__swiper", {
+    slidesPerView: "auto",
+    
+    });
+
+  
