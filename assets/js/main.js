@@ -189,6 +189,7 @@ showMoreBtn.addEventListener("click", function() {
   // Получаем ссылки на скрытые карточки
   var hiddenCards = document.querySelectorAll(".hidden-card");
 
+  showMoreBtn.style.display = "none"
   // Показываем каждую скрытую карточку
   for (var i = 0; i < hiddenCards.length; i++) {
     hiddenCards[i].classList.remove("hidden-card");
