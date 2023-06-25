@@ -1,26 +1,115 @@
-document.addEventListener('DOMContentLoaded', () => {
+const swiper = new Swiper('.slider__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 35,
+    loop: true,
+    
 
-    const followCursor = () => { // объявляем функцию followCursor
-      const el = document.querySelector('.follow-cursor') // ищем элемент, который будет следовать за курсором
-  
-      window.addEventListener('mousemove', e => { // при движении курсора
-        const target = e.target // определяем, где находится курсор
-        if (!target) return
-  
-        if (target.closest('a')) { // если курсор наведён на ссылку
-          el.classList.add('follow-cursor_active') // элементу добавляем активный класс
-        } else { // иначе
-          el.classList.remove('follow-cursor_active') // удаляем активный класс
+    navigation: {
+      nextEl: '.slider__button-next',
+      prevEl: '.slider__button-prev',
+    },
+    breakpoints: {
+        611: {
+            slidesPerView: 3,
+            spaceBetween: 35, 
         }
-  
-        el.style.left = e.pageX + 'px' // задаём элементу позиционирование слева
-        el.style.top = e.pageY + 'px' // задаём элементу позиционирование сверху
-      })
     }
   
-    followCursor() // вызываем функцию followCursor
+  });
 
-
+  const swiper2 = new Swiper('.new__slider-1', {
+    slidesPerView: 1,
+    spaceBetween: 15,
+    loop: true,
+    breakpoints: {
+        611: {
+            slidesPerView: 3,
+            spaceBetween: 35, 
+        }
     
+    }
+  });
+
+  const swiper3 = new Swiper('.slider__swiper-2', {
+    slidesPerView: 1,
+    spaceBetween: 35,
+    loop: true,
+    breakpoints: {
+        611: {
+            slidesPerView: 3,
+            spaceBetween: 35, 
+        }
+    
+    },
+    
+
+    navigation: {
+      nextEl: '.new__button-next-2',
+      prevEl: '.new__button-prev-2',
+    },
   
-  })
+  });
+
+  const swiper4 = new Swiper('.career__swiper', {
+    slidesPerView: 1,
+    spaceBetween: 35,
+    direction: 'vertical',
+    loop: true,
+    breakpoints: {
+        890: {
+            slidesPerView: 3,
+            spaceBetween: 35,
+            direction: 'horizontal',
+        },
+        611: {
+            direction: 'horizontal',
+            slidesPerView: 1,
+            spaceBetween: 35,
+        },
+        300: {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+        }
+    
+    },
+    
+
+    navigation: {
+      nextEl: '.career__button-next',
+      prevEl: '.career__button-prev',
+    },
+  
+  });
+
+  const swiper5 = new Swiper('.catalog__swiper-1', {
+    slidesPerView: 'auto',
+    spaceBetween: 35,
+    loop: true,
+    breakpoints: {
+    
+    
+    },
+  
+  });
+
+  const swiper6 = new Swiper('.catalog__swiper-2', {
+    slidesPerView: 'auto',
+    spaceBetween: 35,
+    loop: true,
+    breakpoints: {
+    
+    
+    },
+  
+  });
+
+  const swiper7 = new Swiper('.catalog__swiper-3', {
+    slidesPerView: 'auto',
+    spaceBetween: 35,
+    loop: true,
+    breakpoints: {
+    
+    
+    },
+  
+  });
