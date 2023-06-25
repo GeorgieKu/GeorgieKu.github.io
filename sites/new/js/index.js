@@ -69,6 +69,7 @@ const swiper = new Swiper('.slider__swiper', {
         300: {
             direction: 'vertical',
             slidesPerView: 'auto',
+            spaceBetween: 10,
         }
     
     },
