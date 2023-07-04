@@ -16,13 +16,21 @@
     .main {
         width: 100%;
     }
+    .projects__main-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
 @media (max-width: 768px) {
-    .header_title {
+    .header__title {
         font-size: 36px;
     }
-    .header_subtitle {
+    .header__subtitle {
         font-size: 18px;
+    }
+    .projects__main-list {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

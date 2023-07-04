@@ -107,7 +107,7 @@ body {
   top: 0;
 }
 
-.header_title {
+.header__title {
   font-size: 3rem;
   line-height: 1;
   color: #e2e8f0;
@@ -116,7 +116,7 @@ body {
   margin-bottom: 0.75rem;
 }
 
-.header_subtitle {
+.header__subtitle {
   font-size: 1.25rem;
   line-height: 1.75rem;
   color: #94a3b8;
@@ -125,13 +125,13 @@ body {
   margin-bottom: 1rem;
 }
 
-.header_descr {
+.header__descr {
   line-height: 1.5;
   max-width: 20rem;
   margin-bottom: 4rem;
 }
 
-.header_link {
+.header__link {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   -webkit-box-align: center;
@@ -142,23 +142,23 @@ body {
   display: flex;
 }
 
-.header_link:hover .header_line {
+.header__link:hover .header__line {
   width: 4rem;
   background-color: #e2e8f0;
 }
 
-.header_link:hover .header_link-text {
+.header__link:hover .header__link-text {
   color: #e2e8f0;
 }
 
-.header_line {
+.header__line {
   width: 2rem;
   background-color: #e2e8f0;
   height: 1px;
   margin-right: 1rem;
 }
 
-.header_link-text {
+.header__link-text {
   letter-spacing: .1em;
   text-transform: uppercase;
   font-weight: 700;
@@ -199,26 +199,104 @@ body {
   margin-bottom: 9rem;
 }
 
-.about_descr {
+.about__descr {
   margin-bottom: 1rem;
 }
 
 .expirience {
+  padding-bottom: 9rem;
+}
+
+.expirience__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  gap: 20px;
+}
+
+.expirience__item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.expirience__left {
+  margin-right: 0.5rem;
+  text-wrap: nowrap;
+  margin-bottom: 0.5rem;
+}
+
+.expirience__title {
+  color: #e2e8f0;
+  font-weight: 500;
+  line-height: 1.25;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.expirience__job {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.expirience__job_margin {
+  margin-bottom: 1rem;
+}
+
+.expirience__descr {
+  margin-bottom: 1rem;
+}
+
+.expirience__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.expirience__tech {
+  margin-right: 0.375rem;
+  color: #5eead4;
+  line-height: 1.25rem;
+  font-weight: 500;
+  font-size: .75rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: rgba(45, 212, 191, 0.1);
+  border-radius: 9999px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects {
   margin-bottom: 9rem;
 }
 
-.expirience_item {
+.projects__item {
   margin-bottom: 3rem;
 }
 
-.expirience_item {
+.projects__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
 
-.expirience_item::after {
+.projects__link-git {
+  position: absolute;
+  right: 0;
+}
+
+.projects__item::after {
   content: "";
   background-color: #e2e8f0;
   opacity: 0.1;
@@ -232,17 +310,17 @@ body {
   z-index: -1;
 }
 
-.expirience_item:hover:after {
+.projects__item:hover:after {
   visibility: visible;
 }
 
-.expirience_left {
+.projects__left {
   margin-right: 0.5rem;
   text-wrap: nowrap;
   margin-bottom: 0.5rem;
 }
 
-.expirience_title {
+.projects__title {
   color: #e2e8f0;
   font-weight: 500;
   line-height: 1.25;
@@ -251,18 +329,18 @@ body {
   margin-bottom: 0.25rem;
 }
 
-.expirience_job {
+.projects__job {
   display: block;
   margin-bottom: 0.25rem;
 }
 
-.expirience_descr {
+.projects__descr {
   line-height: 1.5;
   font-size: .875rem;
   margin-bottom: 0.5rem;
 }
 
-.expirience_list {
+.projects__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,7 +349,7 @@ body {
   gap: 5px;
 }
 
-.expirience_tech {
+.projects__tech {
   margin-right: 0.375rem;
   color: #5eead4;
   line-height: 1.25rem;
@@ -291,6 +369,10 @@ body {
   display: flex;
 }
 
+.projects__img {
+  max-width: 200px;
+}
+
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -298,11 +380,11 @@ body {
   gap: 1.25rem;
 }
 
-.social_link-tg path {
+.social__link-tg path {
   fill: #94a3b8;
 }
 
-.social_link {
+.social__link {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
@@ -310,15 +392,15 @@ body {
   transition: fill .3s ease-in-out;
 }
 
-.social_link:hover path {
+.social__link:hover path {
   fill: #e2e8f0;
 }
 
-.social_link-habr path {
+.social__link-habr path {
   fill: #94a3b8;
 }
 
-.project_img {
+.project__img {
   max-width: 200px;
 }
 
