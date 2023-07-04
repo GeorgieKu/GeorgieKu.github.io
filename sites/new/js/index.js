@@ -69,7 +69,6 @@ const swiper = new Swiper('.slider__swiper', {
         300: {
             direction: 'vertical',
             slidesPerView: 'auto',
-            spaceBetween: 10,
         }
     
     },
@@ -85,6 +84,7 @@ const swiper = new Swiper('.slider__swiper', {
   const swiper5 = new Swiper('.catalog__swiper-1', {
     slidesPerView: 'auto',
     spaceBetween: 35,
+    loop: true,
     breakpoints: {
     
     
@@ -95,6 +95,7 @@ const swiper = new Swiper('.slider__swiper', {
   const swiper6 = new Swiper('.catalog__swiper-2', {
     slidesPerView: 'auto',
     spaceBetween: 35,
+    loop: true,
     breakpoints: {
     
     
@@ -105,6 +106,7 @@ const swiper = new Swiper('.slider__swiper', {
   const swiper7 = new Swiper('.catalog__swiper-3', {
     slidesPerView: 'auto',
     spaceBetween: 35,
+    loop: true,
     breakpoints: {
     
     
