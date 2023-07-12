@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang='ru'>
+  <head>
+      <base href="" />
+      <meta charset="UTF-8" />
+      <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' />
+      <meta http-equiv='X-UA-Compatible' content='ie=edge' />
+      <title>Оплата</title> 
+      <link href="assets/template/styles/layout_4.css@v=1.1.2.css" rel="stylesheet"></head>
+  <body>
+    <!-- header -->
+    <header class='menu section-outer section-header'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-md-3 col-lg-2'>
+              <div class="logo">
+                <a>
+                  <img src='assets/template/images/logo.png' alt='logo' />
+                </a>
+              </div>
+            </div>
+            <div class='col-md-9 col-lg-10'>
+              
+            </div>
+          </div>
+        </div> 
+    </header>
+    <!-- / header -->
+
+    <!-- content -->
+    <section class='section-outer section-content'>
+        <div class="title">
+          <div class="container">
+            <h1>Оплата</h1>
+          </div>
+        </div>
+        <div class='container'>
+          <div class="wrapper">
+              <p>Для оплаты заказа используется кнопка «Оплатить» с последующим переходом на платёжный интерфейс <a href="https://oplata.tinkoff.ru/" rel="noopener noreferrer" target="_blank">Тинькофф банка</a>, где перечислены все способы оплаты.</p>
+<p><strong>Также оплату возможно произвести через платежный шлюз ПАО “СБЕРБАНК” по защищенному каналу SSL</strong></p>
+<p><strong>Банковские карты</strong></p>
+<table border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="100"><img src="https://www.moneta.ru/info/public/requirements/visa.png" alt="" />
+<p><img src="https://www.moneta.ru/info/public/requirements/mastercard.png" alt="" /></p>
+<p><img src="https://www.moneta.ru/info/public/requirements/mir.png" alt="" /></p>
+</td>
+<td valign="top">Oplata tinkoff или Сбербанк не передает данные вашей карты магазину и иным третьим лицам. Безопасность платежей с помощью банковских карт обеспечивается технологиями защищенного соединения HTTPS и двухфакторной аутентификации пользователя 3D Secure.</td>
+</tr>
+</tbody>
+</table>
+          </div>
+        </div>
+    </section>
+    <!-- / content -->
+    
+    <!-- footer-band -->
+    <footer class='menu section-outer section-footer-band section-footer-band--grey'>
+      <div class='section-inner'>
+        <div class='container'>
+          <div class="wrapper">
+            <div class="logo">
+              <a>
+                <img src='assets/template/images/logo.png' alt='logo' />
+              </a>
+            </div>
+            <div class="nav-wrap">
+              <ul class='nav-wrapper'>
+                
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- / footer-band -->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script src="https://www.googletagmanager.com/gtag/js?id=UA-165882189-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-165882189-1');
+</script>
+<script src="https://www.googleoptimize.com/optimize.js?id=OPT-5NQCM4L"></script>
+-->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+	(function (m, e, t, r, i, k, a) {
+		m[i] = m[i] || function () {
+			(m[i].a = m[i].a || []).push(arguments)
+		};
+		m[i].l = 1 * new Date();
+		k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+	})
+	(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	ym(56736205, "init", {
+		clickmap: true,
+		trackLinks: true,
+		accurateTrackBounce: true,
+		webvisor: true
+	});
+</script>
+<noscript>
+	<div><img src="https://mc.yandex.ru/watch/56736205" style="position:absolute; left:-9999px;" alt="" /></div>
+</noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script src="assets/template/scripts/layout_1.js"></script>
+<script src="assets/template/scripts/app-new.min.js"></script>
+<script>jQuery = $;</script>
+<script src="assets/template/scripts/jquery.maskedinput.min.js"></script>
+<script src="assets/template/lib/intl-tel/intlTelInput.js"></script>
+<script>
+    //$("input[name='phone']").mask("+7 (999) 999-9999");
+    
+    $(document).on("keypress", "[name='phone']", function (event) {
+      var regex = /^[\s\d)-\.(]*$/;
+      var key = String.fromCharCode(event.which);
+    
+      if (regex.test(key)) {
+        return true;
+      }
+    
+      return false;
+    });
+</script>
+<script>
+    $.fn.serializeControls = function() {
+        var data = {};
+    
+        function buildInputObject(arr, val) {
+            if (arr.length < 1)
+                return val;
+            var objkey = arr[0];
+            if (objkey.slice(-1) == "]") {
+                objkey = objkey.slice(0, -1);
+            }
+            var result = {};
+            if (arr.length == 1) {
+                result[objkey] = val;
+            } else {
+                arr.shift();
+                var nestedVal = buildInputObject(arr, val);
+                result[objkey] = nestedVal;
+            }
+            return result;
+        }
+    
+        $.each(this.serializeArray(), function() {
+            var val = this.value;
+            var c = this.name.split("[");
+            var a = buildInputObject(c, val);
+            $.extend(true, data, a);
+        });
+    
+        return data;
+    }
+    
+    function parse_query_string(query) {
+        var vars = query.split("&");
+        var query_string = {};
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            var key = decodeURIComponent(pair[0]);
+            var value = decodeURIComponent(pair[1]);
+            // If first entry with this name
+            if (typeof query_string[key] === "undefined") {
+                query_string[key] = decodeURIComponent(value);
+                // If second entry with this name
+            } else if (typeof query_string[key] === "string") {
+                var arr = [query_string[key], decodeURIComponent(value)];
+                query_string[key] = arr;
+                // If third or later entry with this name
+            } else {
+                query_string[key].push(decodeURIComponent(value));
+            }
+        }
+        return query_string;
+    }
+
+    let getFbpClientId  = () => {
+        let result = /_fbp=(fb\.1\.\d+\.\d+)/.exec(window.document.cookie);
+        if (!(result && result[1])) return '';
+        return result[1];
+    };
+    
+    let getFbcClientId  = () => {
+        let result = /_fbc=(fb\.1\.\d+\.\d+)/.exec(window.document.cookie);
+        if (!(result && result[1])) return '';
+        return result[1];
+    };
+    
+    $(document).ready(function(){
+        let eventId = sessionStorage.getItem('eventId');
+        if (!eventId) eventId = parseInt(Math.random() * 1000000000);
+        sessionStorage.setItem('eventId', eventId);
+        
+        $('#ga_event_id').val(eventId);
+
+        $('#user_agent').val(window.navigator.userAgent);
+
+        sessionStorage.setItem('eventId', eventId);
+
+        $.getJSON("https://jsonip.com?callback=?", function(data) {
+            $('#user_ip').val(data.ip);
+        });
+
+        ym('56736205', 'getClientID', (clientID) => {
+            $('#y_client_id').val(clientID);
+        });
+        // let tracker = ga.getAll()[0];
+        
+        $('#ga_client_id').val(sessionStorage.getItem('gaClientID'));
+        $('#fb_fbp').val(getFbpClientId());
+        $('#fb_fbc').val(getFbcClientId());
+        
+        
+        $("#phone").intlTelInput();
+    })
+</script>
+<script>
+    $('#delivery_form').submit(function(e) {
+        e.preventDefault();
+        
+        var data = $(e.currentTarget).serializeControls();
+        
+        $('#delivery_form').css('opacity', 0.5);
+        $('#delivery_form button[type="submit"]').prop('disabled', true);
+        
+        $.post(
+            '/assets/components/payment/thanks.php',
+            data,
+            (data) => {
+                
+                var data = JSON.parse(data);
+                
+                if (data.result) {
+                    
+                    $('#delivery_form').css('opacity', 1);
+                    
+                    if ('redirect' in data.result) {
+                        location.href = data.result.redirect;
+                    }
+                    else {
+                        $('#delivery_form').hide();
+                        $('#delivery_form').siblings('.title').html('Данные о доставке успешно отправлены!');
+                    }
+                    
+                    $('#delivery_form button[type="submit"]').prop('disabled', false);
+                }
+        });
+        
+    });
+
+
+    $('#order_form').submit(function(e) {
+        e.preventDefault();
+        $('.preloader').show();
+        
+        $('#order_form').css('opacity', 0.5);
+        $('#order_form button[type="submit"]').prop('disabled', true);
+        
+        let query = '';
+        if (location.href.split('?')[1]) {
+            query = location.href.split('?')[1].split('#')[0];
+        }
+        const product_id =  $('#product_id').val();
+        const product_cost =  $('#product_cost').val();
+        const utm = Object.entries(parse_query_string(query)).filter(([key]) => key.includes('utm')).reduce((acc, item) => { acc[item[0]] = item[1]; return acc; }, {});
+        const { name, phone, email, conversionData, utmData} = $(e.currentTarget).serializeControls();
+        
+        $.post(
+            '/assets/components/bitrixcrm/',
+            {name, phone, email, product_id, product_cost, conversionData, utm, utmData},
+            (data) => {
+                
+                $('#order_form').css('opacity', 1);
+                
+                var data = JSON.parse(data);
+                
+                if (data.result) {
+                    
+                    if ('redirect' in data) {
+                        location = data.redirect;
+                    }
+                    else {
+                        $('#order_form').hide();
+                        $('#order .title-box__title').html('Спасибо!');
+                        $('#order .description').html('Ваш заказ успешно отправлен');
+                    }
+                    
+                    $('.preloader').hide();
+                    $('#order_form button[type="submit"]').prop('disabled', false);
+                    
+                    //fbq('track', 'SubmitApplication');
+                    //fbq('track', 'Purchase', { value: 300.00, currency: 'RUB'});
+                }
+        });
+        
+    });
+</script>
+</html>
