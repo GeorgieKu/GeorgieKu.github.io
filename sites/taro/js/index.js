@@ -17,9 +17,23 @@ const swiper = new Swiper('.iren__swiper', {
     
   
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.iren__swiper-button-next',
+      prevEl: '.iren__swiper-button-prev',
     },
+  
+  });
+
+  const swiper3 = new Swiper('.program__swiper', {
+
+    direction: 'horizontal',
+    loop: false,
+    
+  
+    navigation: {
+      nextEl: '.program__swiper-button-next',
+      prevEl: '.program__swiper-button-prev',
+    },
+  
   
   });
 
