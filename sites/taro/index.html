@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/normalize.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
@@ -571,10 +572,11 @@
                     <span class="tariff__old-price"> 14 990 ₽</span>
                     <span class="tariff__text">Количество мест со скидкой: 40
                     </span>
-                    <a href="#tariff" class="tariff__btn btn-reset">Купить</a>
-                    <button class="tariff__btn tariff__btn_color btn-reset">Внести предоплату
+                    <a href="#tariff" class="tariff__btn btn-reset" data-toggle="modal" data-target="#exampleModal">Купить</a>
+                    <button class="tariff__btn tariff__btn_color btn-reset" data-toggle="modal" data-target="#exampleModal">Внести предоплату
                         1000 ₽</button>
                 </div>
+                
                 <div class="tariff__card tariff__card2">
                     <h3 class="tariff__subtitle">ТАРИФ<br>
 
@@ -630,8 +632,8 @@
                     <span class="tariff__old-price"> 19 990 ₽</span>
                     <span class="tariff__text">Количество мест со скидкой: 20
                     </span>
-                    <a href="#tariff" class="tariff__btn btn-reset">Купить</a>
-                    <button class="tariff__btn tariff__btn_color btn-reset">Внести предоплату 2000 ₽</button>
+                    <a href="#tariff" class="tariff__btn btn-reset" data-toggle="modal" data-target="#exampleModal">Купить</a>
+                    <button class="tariff__btn tariff__btn_color btn-reset" data-toggle="modal" data-target="#exampleModal">Внести предоплату 2000 ₽</button>
                 </div>
                 <div class="tariff__card tariff__card3">
                     <h3 class="tariff__subtitle tariff__subtitle_mb">ТАРИФ<br>
@@ -686,8 +688,8 @@
                     <span class="tariff__old-price"> 26 990 ₽</span>
                     <span class="tariff__text">Количество мест со скидкой: 10
                     </span>
-                    <a href="#tariff" class="tariff__btn btn-reset">Купить</a>
-                    <button class="tariff__btn tariff__btn_color btn-reset">Внести предоплату 3000 ₽</button>
+                    <a href="#tariff" class="tariff__btn btn-reset" data-toggle="modal" data-target="#exampleModal">Купить</a>
+                    <button class="tariff__btn tariff__btn_color btn-reset" data-toggle="modal" data-target="#exampleModal">Внести предоплату 3000 ₽</button>
                 </div>
             </div>
         </section>
@@ -704,11 +706,33 @@
             </div>
         </section>
     </main>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Заполните данные</h5>
+              <button type="button" class="close modal__close-btn" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"><img src="./img/svg/close.svg" alt=""></span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="modal__form">
+                    <input type="text" placeholder="Введите ваше имя" class="modal__input">
+                    <input id="phone" type="tel" class="modal__input" value="+7">
+                    <input type="text" placeholder="Введите ваш email" class="modal__input">
+                    <button class="modal__btn btn-reset" type="submit">Занять место</button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
     <footer class="footer">
         <a href="#" class="footer__link">ОБ ОРГАНИЗАЦИИ</a>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
