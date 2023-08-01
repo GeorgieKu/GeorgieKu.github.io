@@ -1,11 +1,26 @@
-const swiper = new Swiper('.taro__swiper', {
-  // Optional parameters
+const swiper = new Swiper('.iren__swiper', {
+
   direction: 'horizontal',
   loop: false,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+  
+
+  pagination: {
+    el: '.swiper-pagination',
   },
+
+});
+
+const swiper2 = new Swiper('.iren__swiper2', {
+
+  direction: 'horizontal',
+  loop: false,
+  
+
+  navigation: {
+    nextEl: '.iren__swiper-button-next',
+    prevEl: '.iren__swiper-button-prev',
+  },
+
 });
 
 var input = document.querySelector("#phone");
