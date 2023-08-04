@@ -1,3 +1,34 @@
+const swiper = new Swiper('.iren__swiper', {
+
+  direction: 'horizontal',
+  loop: false,
+  
+
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+});
+
+const swiper2 = new Swiper('.iren__swiper2', {
+
+  direction: 'horizontal',
+  loop: false,
+  
+
+  navigation: {
+    nextEl: '.iren__swiper-button-next',
+    prevEl: '.iren__swiper-button-prev',
+  },
+
+});
+
+var input = document.querySelector("#phone");
+window.intlTelInput(input, {
+
+  utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+});
+
 window.addEventListener('DOMContentLoaded', function() {
   var timerBlock = document.querySelector('.timer__block');
   var minuteSpan = timerBlock.querySelector('.timer__hour:first-child');
@@ -44,36 +75,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
   startTimer();
 });
-
-const swiper = new Swiper('.iren__swiper', {
-
-  direction: 'horizontal',
-  loop: false,
-  
-
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-});
-
-const swiper2 = new Swiper('.iren__swiper2', {
-
-  direction: 'horizontal',
-  loop: false,
-  
-
-  navigation: {
-    nextEl: '.iren__swiper-button-next',
-    prevEl: '.iren__swiper-button-prev',
-  },
-
-});
-
-
-
-
-
 
 
 
