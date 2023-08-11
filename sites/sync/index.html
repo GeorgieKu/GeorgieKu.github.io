@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
@@ -54,9 +55,9 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav header__nav">
-                      <a class="nav-link active header__link" aria-current="page" href="#adv">Наши работы</a>
-                      <a class="nav-link header__link" href="#news">Новости</a>
-                      <a class="nav-link header__link" href="#rules">Как с нами работать</a>
+                      <a class="nav-link active header__link" aria-current="page" href="./projects.html">Наши работы</a>
+                      <a class="nav-link header__link" href="./news-page.html">Новости</a>
+                      <a class="nav-link header__link" href="./work.html">Как с нами работать</a>
                     </div>
                   </div>
                 </div>
@@ -212,7 +213,7 @@
                         <h3 class="adv__subtitle">«Виола»   </h3>
                         <span class="adv__year">2022</span>
                     </a>
-                    <a href="#" class="adv__block adv__block_last">
+                    <a href="./adv.html" class="adv__block adv__block_last">
                         Посмотреть все работы
                         <svg width="126" height="38" viewBox="0 0 126 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 16.5C1.61929 16.5 0.5 17.6193 0.5 19C0.5 20.3807 1.61929 21.5 3 21.5V16.5ZM124.768 20.7678C125.744 19.7915 125.744 18.2085 124.768 17.2322L108.858 1.32233C107.882 0.34602 106.299 0.34602 105.322 1.32233C104.346 2.29864 104.346 3.88155 105.322 4.85786L119.464 19L105.322 33.1421C104.346 34.1184 104.346 35.7014 105.322 36.6777C106.299 37.654 107.882 37.654 108.858 36.6777L124.768 20.7678ZM3 21.5H123V16.5H3V21.5Z" fill="#1D1A31"/>
@@ -310,7 +311,7 @@
                                 <span class="movies__season">1 сезон</span>
                         <span class="adv__year">2022</span>
                     </a>
-                    <a href="#" class="adv__block adv__block_last">
+                    <a href="./film.html" class="adv__block adv__block_last">
                         Посмотреть все работы
                         <svg width="126" height="38" viewBox="0 0 126 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 16.5C1.61929 16.5 0.5 17.6193 0.5 19C0.5 20.3807 1.61929 21.5 3 21.5V16.5ZM124.768 20.7678C125.744 19.7915 125.744 18.2085 124.768 17.2322L108.858 1.32233C107.882 0.34602 106.299 0.34602 105.322 1.32233C104.346 2.29864 104.346 3.88155 105.322 4.85786L119.464 19L105.322 33.1421C104.346 34.1184 104.346 35.7014 105.322 36.6777C106.299 37.654 107.882 37.654 108.858 36.6777L124.768 20.7678ZM3 21.5H123V16.5H3V21.5Z" fill="#1D1A31"/>
@@ -574,16 +575,27 @@
           <button type="button" class="modal__close btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal__body">
-          <form class="modal__form" action="#">
-            <div>
-                <input type="text" class="modal__input" placeholder="Имя*">
-            <input type="text" class="modal__input" placeholder="E-mail*">
+          <form class="modal__form needs-validation" action="#" novalidate>
+            <div class="modal__flexbox">
+                <div class="input-group has-validation">
+                    <input type="text" class="modal__input form-control" placeholder="Имя*" required aria-describedby="inputGroupPrepend" id="validationCustomUsername">
+                    <div class="invalid-feedback">
+                        Заполните обязательное поле, пожалуйста
+                    </div>
+                </div>
+                <div class="input-group has-validation">
+                    <input type="text" class="modal__input form-control" placeholder="E-mail*" required aria-describedby="inputGroupPrepend" id="validationCustomUsername">
+                    <div class="invalid-feedback">
+                        Заполните обязательное поле, пожалуйста
+                    </div>
+                </div>
             <input type="text" class="modal__input" placeholder="Тема обращения">
             </div>
             <textarea class="modal__textarea modal__input" placeholder="Сообщение"></textarea>
-            
+            <button type="submit" class="modal__btn button btn-reset">Отправить</button>
           </form>
-          <button type="submit" class="modal__btn button btn-reset" data-bs-toggle="modal" data-bs-target="#formsend" data-bs-dismiss="modal" aria-label="Close">Отправить</button>
+          
+          
         </div>
       </div>
     </div>
@@ -611,20 +623,55 @@
         </div>
         <div class="modal__body">
             <span class="fonoteka__text">Пожалуйста, заполните все поля для получения доступа к фонотеке</span>
-          <form class="modal__form fonoteka__form" action="#">
+          <form class="modal__form fonoteka__form  needs-validation" action="#" novalidate>
             
-                <input type="text" class="modal__input" placeholder="Имя*">
-            <input type="text" class="modal__input" placeholder="Фамилия*">
-            <input type="text" class="modal__input" placeholder="Телефон*">
-            <input type="text" class="modal__input" placeholder="Компания*">
-            <input type="text" class="modal__input" placeholder="Род деятельности*">
-            <input type="text" class="modal__input" placeholder="Страна*">
-            <input type="text" class="modal__input" placeholder="Город*">
+            <div class="input-group has-validation">
+                <input type="text" class="modal__input form-control" placeholder="Имя*" required aria-describedby="inputGroupPrepend" id="validationCustomUsername">
+                <div class="invalid-feedback">
+                    Заполните обязательное поле, пожалуйста
+                </div>
+            </div>
+            <div class="input-group has-validation">
+                <input type="text" class="modal__input form-control" placeholder="Фамилия*" required aria-describedby="inputGroupPrepend" id="validationCustomUsername">
+                <div class="invalid-feedback">
+                    Заполните обязательное поле, пожалуйста
+                </div>
+            </div>
+            <div class="input-group has-validation">
+                <input type="text" class="modal__input form-control" placeholder="Телефон*" required aria-describedby="inputGroupPrepend" id="validationCustomUsername">
+                <div class="invalid-feedback">
+                    Заполните обязательное поле, пожалуйста
+                </div>
+            </div>
+            <div class="input-group has-validation">
+                <input type="text" class="modal__input form-control" placeholder="Компания*" required aria-describedby="inputGroupPrepend" id="validationCustomUsername">
+                <div class="invalid-feedback">
+                    Заполните обязательное поле, пожалуйста
+                </div>
+            </div>
+            <div class="input-group has-validation">
+                <input type="text" class="modal__input form-control" placeholder="Род деятельности*" required aria-describedby="inputGroupPrepend" id="validationCustomUsername">
+                <div class="invalid-feedback">
+                    Заполните обязательное поле, пожалуйста
+                </div>
+            </div>
+            <div class="input-group has-validation">
+                <input type="text" class="modal__input form-control" placeholder="Страна*" required aria-describedby="inputGroupPrepend" id="validationCustomUsername">
+                <div class="invalid-feedback">
+                    Заполните обязательное поле, пожалуйста
+                </div>
+            </div>
+            <div class="input-group has-validation">
+                <input type="text" class="modal__input form-control" placeholder="Город*" required aria-describedby="inputGroupPrepend" id="validationCustomUsername">
+                <div class="invalid-feedback">
+                    Заполните обязательное поле, пожалуйста
+                </div>
+            </div>
  
           
-            
+            <button type="submit" class="modal__btn button btn-reset" data-bs-toggle="modal" data-bs-target="#formsend" data-bs-dismiss="modal" aria-label="Close">Отправить</button>
           </form>
-          <button type="submit" class="modal__btn button btn-reset" data-bs-toggle="modal" data-bs-target="#formsend" data-bs-dismiss="modal" aria-label="Close">Отправить</button>
+          
         </div>
       </div>
     </div>
