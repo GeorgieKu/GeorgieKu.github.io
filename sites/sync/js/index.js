@@ -1,7 +1,7 @@
 const swiper = new Swiper('.hero__swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    loop: false,
 
     slidesPerView: 'auto',
   
