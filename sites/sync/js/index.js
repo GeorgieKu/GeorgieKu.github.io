@@ -1,11 +1,14 @@
 const swiper = new Swiper('.hero__swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: false,
+    loop: true,
+
+    slidesPerView: 'auto',
   
     // If we need pagination
     pagination: {
       el: '.hero__pagination',
+      clickable: true,
     },
   
     // Navigation arrows
@@ -59,3 +62,22 @@ const swiper = new Swiper('.hero__swiper', {
 
   });
 
+  document.addEventListener('DOMContentLoaded', function() {
+    var inputField = document.querySelector('.form-control');
+    var modalBtn = document.querySelector('.modal__btn');
+  
+    inputField.addEventListener('input', function() {
+      if (inputField.value.trim().length > 0) {
+        modalBtn.removeAttribute('disabled');
+        modalBtn.setAttribute('data-bs-toggle', 'modal');
+        modalBtn.setAttribute('data-bs-target', '#formsend');
+        modalBtn.setAttribute('aria-label', "Close");
+        modalBtn.setAttribute('data-bs-dismiss', "modal");
+        
+        
+      } else {
+        modalBtn.setAttribute('disabled', 'disabled');
+      }
+    });
+  });
+  
