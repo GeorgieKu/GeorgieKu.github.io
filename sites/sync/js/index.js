@@ -66,6 +66,7 @@ const swiper = new Swiper('.hero__swiper', {
     var inputField = document.querySelector('.form-control');
     var modalBtn = document.querySelector('.modal__btn');
   
+  
     inputField.addEventListener('input', function() {
       if (inputField.value.trim().length > 0) {
         modalBtn.removeAttribute('disabled');
@@ -81,3 +82,10 @@ const swiper = new Swiper('.hero__swiper', {
     });
   });
   
+  var formSendBtn = document.querySelector('formsend__btn');
+
+   
+  formSendBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  // Можно добавить свою логику обработки нажатия кнопки здесь
+});
