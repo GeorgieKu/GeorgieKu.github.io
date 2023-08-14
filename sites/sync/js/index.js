@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function() {
+
 const swiper = new Swiper('.hero__swiper', {
     // Optional parameters
     direction: 'horizontal',
@@ -62,7 +64,7 @@ const swiper = new Swiper('.hero__swiper', {
 
   });
 
-  document.addEventListener('DOMContentLoaded', function() {
+ 
     var inputField = document.querySelector('.form-control');
     var modalBtn = document.querySelector('.modal__btn');
   
