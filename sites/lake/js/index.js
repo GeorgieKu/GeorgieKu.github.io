@@ -6,45 +6,79 @@ new AirDatepicker('#datapicker', {
 const swiper = new Swiper('.hotel__swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    loop: false,
     spaceBetween: 20,
     slidesPerView: 'auto',
-    initialSlide: 1,
 
   });
 
   const swiper2 = new Swiper('.entertainment__swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
-    spaceBetween: 110,
+    loop: false,
+    spaceBetween: 30,
     slidesPerView: 'auto',
+    breakpoints: {
+      320: {
+        spaceBetween: 12,
+      },
+      720: {
+        spaceBetween: 30,
+      }
+    }
 
   });
 
-  const rooms = new Swiper('.rooms', {
+  const swiper4 = new Swiper('.rooms__swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: true,
+    loop: false,
     spaceBetween: 20,
-    slidesPerView: 1,
+    centeredSlides: true,
+    initialSlide: 0,
+    
+  
 
   });
 
-  const rooms2= new Swiper('.rooms-2', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 20,
-    slidesPerView: 'auto',
+  const hamb = document.querySelector("#hamb");
+const popup = document.querySelector("#popup");
+const menu = document.querySelector("#menu").cloneNode(1);
+const closeButton = document.querySelector("#close-btn");
+const body = document.body;
 
-  });
+hamb.addEventListener("click", hambHandler);
 
-  const rooms3 = new Swiper('.rooms-3', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 20,
-    slidesPerView: 'auto',
+function hambHandler(e) {
+  e.preventDefault();
+  popup.classList.toggle("open");
+  hamb.classList.toggle("active");
+  body.classList.toggle("noscroll");
+  renderPopup();
+}
 
-  });
+function renderPopup() {
+  popup.appendChild(menu);
+}
+
+closeButton.addEventListener('click', closeMenu);
+
+function closeMenu() {
+  popup.classList.remove('open');
+  hamb.classList.remove('active');
+  body.classList.remove('noscroll');
+}
+
+// Код для закрытия меню при нажатии на ссылку
+
+const links = Array.from(menu.children);
+
+links.forEach((link) => {
+  link.addEventListener("click", closeOnClick);
+});
+
+function closeOnClick() {
+  popup.classList.remove("open");
+  hamb.classList.remove("active");
+  body.classList.remove("noscroll");
+}
