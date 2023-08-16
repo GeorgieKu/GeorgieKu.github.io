@@ -53,7 +53,7 @@ function hambHandler(e) {
   e.preventDefault();
   popup.classList.toggle("open");
   hamb.classList.toggle("active");
-  body.classList.toggle("noscroll");
+
   renderPopup();
 }
 
@@ -66,7 +66,7 @@ closeButton.addEventListener('click', closeMenu);
 function closeMenu() {
   popup.classList.remove('open');
   hamb.classList.remove('active');
-  body.classList.remove('noscroll');
+
 }
 
 // Код для закрытия меню при нажатии на ссылку
