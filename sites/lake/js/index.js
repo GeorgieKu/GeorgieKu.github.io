@@ -262,6 +262,19 @@ const swiper24 = new Swiper('.wedding-new-swiper', {
 
 });
 
+const swiper25 = new Swiper('.news__bottom-swiper', {
+    
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  navigation: {
+    nextEl: '.news__bottom-next',
+    prevEl: '.news__bottom-prev',
+  },
+
+
+});
 
 
 
