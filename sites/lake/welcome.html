@@ -459,10 +459,10 @@
                     загородного клуба</h2>
                 <h3 class="infrastructure__subtitle subtitle">Для вашего отдыха</h3>
                 <span class="infrastructure__text text">На территории есть всё, что необходимо: элегантные интерьеры, высочайший уровень сервиса, изысканная кухня, спокойная атмосфера, пляж и чистейший воздух.</span>
-                <ul class="nav nav-pills infrastructure__pills" id="pills-tab" role="tablist">
+                <ul class="nav nav-pills infrastructure__pills welcome__pills" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link  infrastructure__pill infrastructure__pill_hidden" id="sevice-tab" data-bs-toggle="pill" data-bs-target="#sevice" type="button" role="tab" aria-controls="sevice" aria-selected="true">
-                          <picture>
+                          <picture class="welcome-pill-picture">
                              
                                   <source media="(max-width: 720px) " srcset="./img/welcome/pill-1-720.png">
                                   
@@ -473,7 +473,7 @@
                       </li>
                     <li class="nav-item" role="presentation">
                       <button class="nav-link  infrastructure__pill" id="sevice-tab" data-bs-toggle="pill" data-bs-target="#sevice" type="button" role="tab" aria-controls="sevice" aria-selected="true">
-                        <picture>
+                        <picture class="welcome-pill-picture">
                            
                                 <source media="(max-width: 720px) " srcset="./img/welcome/pill-1-720.png">
                                 
@@ -484,7 +484,7 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link infrastructure__pill active" id="enter-tab" data-bs-toggle="pill" data-bs-target="#enter" type="button" role="tab" aria-controls="enter" aria-selected="false">
-                            <picture>
+                            <picture class="welcome-pill-picture">
                            
                                 <source media="(max-width: 720px) " srcset="./img/welcome/pill-2-720.png">
                                 
@@ -504,9 +504,44 @@
                     </li>
                    
                   </ul>
+                <div class="welcome-pills-swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide welcome-pills-slide">
+                            <button class=" welcome-pill btn-reset" id="1">
+                                <picture class="welcome-pill-picture">
+                                   
+                                        <source media="(max-width: 720px) " srcset="./img/welcome/pill-1-720.png">
+                                        
+                                        <img class="pills-img" src="./img/welcome/pill-1.png" alt="photo">
+                                </picture>
+                                
+                                Услуги</button>
+                        </div>
+                        <div class="swiper-slide welcome-pills-slide">
+                            <button class=" welcome-pill active__tab btn-reset" id="2">
+                                <picture class="welcome-pill-picture">
+                               
+                                    <source media="(max-width: 720px) " srcset="./img/welcome/pill-2-720.png">
+                                    
+                                    <img class="pills-img" src="./img/welcome/pill-2.png" alt="photo">
+                            </picture>
+                                Развлечения</button>
+                        </div>
+                        <div class="swiper-slide welcome-pills-slide">
+                            <button class="welcome-pill btn-reset" id="3">
+                                <picture>
+                                   
+                                    <source media="(max-width: 720px) " srcset="./img/welcome/pill-3-720.png">
+                                    
+                                    <img class="pills-img" src="./img/welcome/pill-3.png" alt="photo">
+                            </picture>
+                                Рестораны</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-                  <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="sevice" role="tabpanel" aria-labelledby="sevice-tab">
+                  <div class="tab-content" >
+                    <div class="tab-pane fade show active" data-tab="1"> 
                         <div class="pills-service__swiper base-slider swiper">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper pills-service__wrapper base-slider__wrapper">
@@ -555,7 +590,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="enter" role="tabpanel" aria-labelledby="enter-tab">
+                    <div class="tab-pane fade" data-tab="2">
                         <div class="pills-service__swiper base-slider swiper">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper pills-service__wrapper base-slider__wrapper">
@@ -604,7 +639,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="rest" role="tabpanel" aria-labelledby="rest-tab">
+                    <div class="tab-pane fade" data-tab="3">
                         <div class="pills-service__swiper base-slider swiper">
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper pills-service__wrapper base-slider__wrapper">
@@ -941,6 +976,44 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
+    <script>
+        var tabButtons = document.querySelectorAll('.welcome-pill');
+        var tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var tabId = button.getAttribute('id');
+
+                // Добавить класс active__tab к активной кнопке таба
+                tabButtons.forEach(function (btn) {
+                    btn.classList.remove('active__tab');
+                });
+                button.classList.add('active__tab');
+
+                // Показать контент, соответствующий нажатой кнопке
+                tabContents.forEach(function (content) {
+                    var contentTabId = content.getAttribute('data-tab');
+
+                    if (contentTabId === tabId) {
+                        content.style.display = 'block';
+                    } else {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Проверить, есть ли кнопка с классом active__tab при загрузке страницы
+        var activeTabButton = document.querySelector('.sale-tab__btn.active__tab');
+
+        if (activeTabButton) {
+            var activeTabId = activeTabButton.getAttribute('id');
+            var activeTabContent = document.querySelector('.tab-content[data-tab="' + activeTabId + '"]');
+
+            activeTabContent.style.display = 'block';
+        }
+
+    </script>
 </body>
 
 </html>

@@ -155,8 +155,15 @@ const swiper13 = new Swiper('.bath-services__swiper', {
   loop: false,
   slidesPerView: 'auto',
   spaceBetween: 20,
+  navigation: {
+    nextEl: '.bath-button-next',
+    prevEl: '.bath-button-prev',
+  }
 
 });
+
+
+
 
 
 const swiper14 = new Swiper('.bath-accessories__swiper', {
@@ -172,7 +179,7 @@ const swiper15 = new Swiper('.bath__room-param-swiper', {
     
   direction: 'horizontal',
   loop: false,
-  slidesPerView: 'auto',
+  slidesPerView: 1,
   spaceBetween: 20,
 
 });
@@ -245,6 +252,7 @@ const swiper23 = new Swiper('.wedding-round-swiper-2', {
   loop: false,
   slidesPerView: 'auto',
 
+  
 
 });
 
@@ -276,7 +284,15 @@ const swiper25 = new Swiper('.news__bottom-swiper', {
 
 });
 
+const swiper26 = new Swiper('.welcome-pills-swiper ', {
+    
+  direction: 'horizontal',
+  loop: false,
+  slidesPerView: 'auto',
+  spaceBetween: 30,
 
+
+});
 
  
 
