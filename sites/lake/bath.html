@@ -269,7 +269,7 @@
 
 
 
-                            </div> 
+                            </div>
                         </div>
 
 
@@ -864,7 +864,7 @@
 <section class="bath-accessories wow fadeInUp">
    <div class="container-50">
     <h2 class="bath-accessories__title title">Банные</h2>
-    <h3 class="bath-accessories__subtitle subtitle">принадлежности</h3>
+    <img class="main-sub-image" src="./img/bath/sub.svg" alt="">
     <div class="bath-accessories__flexbox">
         <div>
             <picture>
@@ -1223,14 +1223,7 @@
     <script src="./js/index.js"></script>
     <script>
     var tabButtons = document.querySelectorAll('.sale-tab__btn');
-    var tabContents = document.querySelectorAll('.tab-content');
-    let ACTIVE_TAB_ID = 1
-
-    tabContents.forEach(el => {
-        if (el.classList.contains('tab_none')) {
-            el.style.display = 'none'
-        }
-    })
+var tabContents = document.querySelectorAll('.tab-content');
 
  tabButtons.forEach(function(button) {
    button.addEventListener('click', function() {
@@ -1243,20 +1236,15 @@
      button.classList.add('active__tab1');
 
      // Показать контент, соответствующий нажатой кнопке
+     tabContents.forEach(function(content) {
+       var contentTabId = content.getAttribute('data-tab');
 
-    tabContents.forEach(function(content) {
-        var contentTabId = content.getAttribute('data-tab');
-
-        if (contentTabId === tabId) {
-            content.classList.remove('tab_none')
-
-            setTimeout(() => content.style.display = 'block' , 300)
-        } else {
-            content.classList.add('tab_none')
-
-            setTimeout(() => content.style.display = 'none', 300)
-        }
-    });
+       if (contentTabId === tabId) {
+         content.style.display = 'block';
+       } else {
+         content.style.display = 'none';
+       }
+     });
    });
  });
 
@@ -1273,12 +1261,6 @@
  var tabButtons1 = document.querySelectorAll('.bath-accessories-tab__btn');
  var tabContents1 = document.querySelectorAll('.bath-accessories-tab-content');
 
- tabContents1.forEach(el => {
-    if (el.classList.contains('tab_none')) {
-        el.style.display = 'none'
-    }
- })
-
  tabButtons1.forEach(function(button) {
    button.addEventListener('click', function() {
      var tabId = button.getAttribute('id');
@@ -1294,13 +1276,9 @@
        var contentTabId = content.getAttribute('data-tab');
 
        if (contentTabId === tabId) {
-            content.classList.remove('tab_none')
-
-            setTimeout(() => content.style.display = 'block' , 300)
+         content.style.display = 'block';
        } else {
-            content.classList.add('tab_none')
-
-            setTimeout(() => content.style.display = 'none', 300)
+         content.style.display = 'none';
        }
      });
    });
