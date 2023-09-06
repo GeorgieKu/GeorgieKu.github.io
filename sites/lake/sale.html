@@ -1002,6 +1002,12 @@
      var tabButtons = document.querySelectorAll('.sale-tab__btn');
   var tabContents = document.querySelectorAll('.tab-content');
 
+  tabContents.forEach(el => {
+        if (el.classList.contains('tab_none')) {
+            el.style.display = 'none'
+        }
+    })
+
   tabButtons.forEach(function(button) {
     button.addEventListener('click', function() {
       var tabId = button.getAttribute('id');
@@ -1013,15 +1019,21 @@
       button.classList.add('active__tab1');
 
       // Показать контент, соответствующий нажатой кнопке
-      tabContents.forEach(function(content) {
-        var contentTabId = content.getAttribute('data-tab');
 
-        if (contentTabId === tabId) {
-          content.style.display = 'block';
-        } else {
-          content.style.display = 'none';
-        }
-      });
+        tabContents.forEach(function(content) {
+            var contentTabId = content.getAttribute('data-tab');
+
+            if (contentTabId === tabId) {
+            content.style.display = 'block'
+
+            setTimeout(() => content.classList.remove('tab_none'), 300)
+            } else {
+            content.classList.add('tab_none')
+
+            setTimeout(() => content.style.display = 'none', 300)
+
+            }
+        });
     });
   });
 

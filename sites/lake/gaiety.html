@@ -832,6 +832,12 @@
         var tabButtons = document.querySelectorAll('.sale-tab__btn');
      var tabContents = document.querySelectorAll('.tab-content');
    
+     tabContents.forEach(el => {
+        if (el.classList.contains('tab_none')) {
+            el.style.display = 'none'
+        }
+    })
+
      tabButtons.forEach(function(button) {
        button.addEventListener('click', function() {
          var tabId = button.getAttribute('id');
@@ -847,9 +853,14 @@
            var contentTabId = content.getAttribute('data-tab');
    
            if (contentTabId === tabId) {
-             content.style.display = 'block';
+            content.style.display = 'block'
+            
+            setTimeout(() => content.classList.remove('tab_none'), 300)
            } else {
-             content.style.display = 'none';
+            content.classList.add('tab_none')
+
+            setTimeout(() => content.style.display = 'none', 300)
+
            }
          });
        });
