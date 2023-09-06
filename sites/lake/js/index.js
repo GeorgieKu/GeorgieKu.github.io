@@ -294,6 +294,7 @@ const swiper26 = new Swiper('.welcome-pills-swiper ', {
 
 });
 
+new WOW().init();
  
 
   const hamb = document.querySelector("#hamb");

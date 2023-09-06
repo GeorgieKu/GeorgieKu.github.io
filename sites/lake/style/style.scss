@@ -246,9 +246,6 @@ font-weight: 700;
 line-height: 35px;
 letter-spacing: 0.1em;
 text-align: left;
-padding: 7.5px 0;
-max-width: 246px;
-width: 100%;
 background-color: #C19B5C;
 border-radius: 100px;
 text-align: center;
@@ -260,7 +257,12 @@ text-align: center;
     overflow: hidden;
     cursor:pointer;
     height: 50px;
-    padding: 7.5px;
+    padding: 7.5px 15px;
+width: 246px;
+  }
+
+  .header__btn-576 {
+    display: none;
   }
   
   .btn-text {
@@ -810,7 +812,7 @@ margin-bottom: 40px;
 }
 
 .events {
-    background-image: url(../img/main/events.png);
+    background-image: url(../img/main/events.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 200px 0 224px 90px;
@@ -1108,7 +1110,7 @@ align-items: center;
     z-index: 100;
     display: flex;
     transition: 0.3s;
-    max-height: 100vh;
+    height: 100vh;
     overflow-y: auto;
   }
   .popup.open {
@@ -1178,6 +1180,7 @@ align-items: center;
     position: absolute;
     top: 75px;
     left: 50px;
+    cursor: pointer;
   }
 
   #close-btn .bar:nth-child(1) {
@@ -1221,6 +1224,13 @@ align-items: center;
 
   // accommodation__block //
 
+  .accommodation__img {
+    transition: transform .3s ease-in-out;
+  }
+
+  .accommodation__img:hover {
+    transform: scale(1.1);
+  }
 
 .header-fixed-bottom {
     display: none;
@@ -1261,7 +1271,7 @@ align-items: center;
     margin-bottom: 50px;
   }
   .accommodation__block {
-    background-image: url(../img/accommodation/hero.png);
+    background-image: url(../img/accommodation/hero.jpg);
   }
 
   .accommodation__room {
@@ -1812,6 +1822,14 @@ letter-spacing: 0.48px;
     padding-bottom: 120px;
 }
 
+.restaurants__picture img {
+    transition: transform .3s ease-in-out;
+}
+
+.restaurants__picture img:hover {
+    transform: scale(1.01);
+}
+
 .restaurants__descr {
     color: #2C2A2A;
 text-align: center;
@@ -1975,6 +1993,14 @@ margin-left: auto;
     margin-bottom: 40px;
 }
 
+.sale__img img{
+    transition: transform .3s ease-in-out;
+}
+
+.sale__img img:hover{
+    transform: scale(1.01);
+}
+
 .sale-tab__btn {
     color: #B0AAA1;
 font-family: Manrope;
@@ -1986,19 +2012,39 @@ letter-spacing: 1.8px;
 text-transform: uppercase;
 }
 
-
+.tab-content {
+    transition: opacity .3s ease-in-out;
+}
 
 .tab_none {
     display: none;
 }
 
+
+
 .welcome-pills-swiper {
-    display: none
+    max-width: 875px;
+    margin-bottom: 50px;
 }
+.welcome-pills-slide {
+    max-width: max-content;
+}
+
+.welcome-pill {
+
+font-size: 18px;
+font-weight: 500;
+line-height: 28px;
+letter-spacing: 0.02em;
+text-align: left;
+
+}
+
 
 // 404 //
 .error {
    position: relative;
+   z-index: 5;
 }
 .error::after {
     content: "";
@@ -2013,6 +2059,7 @@ text-transform: uppercase;
     position: absolute;
     top: -150px;
     left: calc(50% - 316px);
+    z-index: -1;
 
 }
 .error-header {
@@ -2141,6 +2188,14 @@ line-height: 36px; /* 150% */
     justify-content: space-between;
   }
 
+  .base-detail__img-block img{
+    transition: transform .3s ease-in-out;
+  }
+
+  .base-detail__img-block img:hover {
+    transform: scale(1.01);
+  }
+
   .base-detail__img-block-2 {
     display: flex;
     justify-content: space-between;
@@ -2190,6 +2245,12 @@ max-width: 547px;
   .sale-detail__block-img {
     margin-bottom: 40px;
   }
+  .sale-detail__block-img img{
+transition: transform .3s ease-in-out;
+  }
+  .sale-detail__block-img img:hover{
+    transform: scale(1.01);
+      }
 .base-detail__swiper {
     display: none;
 }
@@ -2704,6 +2765,14 @@ text-transform: uppercase;
     flex-direction: column;
 }
 
+.gaiety__block {
+    transition: transform .3s ease-in-out;
+}
+
+.gaiety__block:hover {
+    transform: scale(1.01);
+}
+
 .gaiety__block-title {
     color: #B0AAA1;
     display: block;
@@ -2869,6 +2938,27 @@ margin-bottom: 30px;
     margin-bottom: 60px;
     max-width: 1220px;
 }
+.tab-content_hidden {
+    display: none;
+  }
+  
+  .tab-content_visible {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease; /* плавное появление за 0.3 секунды */
+    /* другие ваши стили для контента таба */
+  }
+  
+  .bath-accessories-tab-content_hidden {
+    display: none;
+  }
+  
+  .bath-accessories-tab-content_visible {
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease; /* плавное появление за 0.3 секунды */
+    /* другие ваши стили для контента таба */
+  }
 .bath__subtitle {
     z-index: 2;
     position: relative;
@@ -2976,6 +3066,22 @@ line-height: 0;
     justify-content: space-between;
     padding: 50px 0;
     border-top: 1px solid #B5B6B7;
+}
+
+.bath__room-img {
+    transition: transform .3s ease-in-out;
+}
+
+.bath__room-img:hover {
+    transform: scale(1.1);
+}
+
+.bath-accessories-image {
+    transition: transform .3s ease-in-out;
+}
+
+.bath-accessories-image:hover {
+    transform: scale(1.1);
 }
 
 .bath__room:last-child {
@@ -3705,6 +3811,18 @@ text-transform: uppercase;
     gap: 170px;
 }
 
+.alcove__block img {
+    transition: transform .3s ease-in-out;
+}
+
+.alcove__slide {
+    max-width: max-content;
+}
+
+.alcove__block img:hover {
+    transform: scale(1.1);
+}
+
 .alcove__grid {
     display: flex;
     flex-direction: column;
@@ -4420,6 +4538,10 @@ color: #616569;
     color: #C19B5C;
 }
 
+.active__tab1 {
+    color: #C19B5C;
+}
+
 //mero//
 .mero__grid {
     margin-bottom: 80px;
@@ -4610,10 +4732,42 @@ text-align: left;
     color: #2C2A2A;;
 }
 
+.room-comfort__link {
+    transition: all .3s ease-in-out;
+}
+
 .room-comfort__link:hover {
-    color: #fff;
+    color: #C19B5C;
+    background-color: #fff;
+    border: 1px solid #C19B5C;
 }
 
 .accommodation-hero-descr {
     color: #fff;
+}
+
+
+.nav-link:focus, .nav-link:hover {
+    color: #616569;
+}
+
+.welcome-pill {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 9px;
+    border: 1px solid transparent;
+}
+
+.active__tab2 {
+    color: #C19B5C;
+    border: 1px solid #C19B5C;
+    padding: 9px;
+    border-radius: 39px;
+}
+
+
+
+.pills-slide {
+    max-width: max-content;
 }

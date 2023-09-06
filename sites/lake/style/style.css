@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'WonderGarden';
   font-weight: 400;
@@ -260,9 +261,6 @@ h3 {
   line-height: 35px;
   letter-spacing: 0.1em;
   text-align: left;
-  padding: 7.5px 0;
-  max-width: 246px;
-  width: 100%;
   background-color: #C19B5C;
   border-radius: 100px;
   text-align: center;
@@ -273,7 +271,12 @@ h3 {
   overflow: hidden;
   cursor: pointer;
   height: 50px;
-  padding: 7.5px;
+  padding: 7.5px 15px;
+  width: 246px;
+}
+
+.header__btn-576 {
+  display: none;
 }
 
 .btn-text {
@@ -932,7 +935,7 @@ h3 {
 }
 
 .events {
-  background-image: url(../img/main/events.png);
+  background-image: url(../img/main/events.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 200px 0 224px 90px;
@@ -1269,7 +1272,7 @@ h3 {
   display: flex;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  max-height: 100vh;
+  height: 100vh;
   overflow-y: auto;
 }
 
@@ -1360,6 +1363,7 @@ body.noscroll {
   position: absolute;
   top: 75px;
   left: 50px;
+  cursor: pointer;
 }
 
 #close-btn .bar:nth-child(1) {
@@ -1406,6 +1410,18 @@ body.noscroll {
   margin-bottom: 55px;
 }
 
+.accommodation__img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.accommodation__img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .header-fixed-bottom {
   display: none;
 }
@@ -1442,7 +1458,7 @@ body.noscroll {
 }
 
 .accommodation__block {
-  background-image: url(../img/accommodation/hero.png);
+  background-image: url(../img/accommodation/hero.jpg);
 }
 
 .accommodation__room {
@@ -2052,6 +2068,18 @@ body.noscroll {
   padding-bottom: 120px;
 }
 
+.restaurants__picture img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.restaurants__picture img:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
 .restaurants__descr {
   color: #2C2A2A;
   text-align: center;
@@ -2240,6 +2268,18 @@ body.noscroll {
   margin-bottom: 40px;
 }
 
+.sale__img img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.sale__img img:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
 .sale-tab__btn {
   color: #B0AAA1;
   font-family: Manrope;
@@ -2251,16 +2291,37 @@ body.noscroll {
   text-transform: uppercase;
 }
 
+.tab-content {
+  -webkit-transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
+}
+
 .tab_none {
   display: none;
 }
 
 .welcome-pills-swiper {
-  display: none;
+  max-width: 875px;
+  margin-bottom: 50px;
+}
+
+.welcome-pills-slide {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.welcome-pill {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  text-align: left;
 }
 
 .error {
   position: relative;
+  z-index: 5;
 }
 
 .error::after {
@@ -2276,6 +2337,7 @@ body.noscroll {
   position: absolute;
   top: -150px;
   left: calc(50% - 316px);
+  z-index: -1;
 }
 
 .error-header {
@@ -2416,6 +2478,18 @@ body.noscroll {
           justify-content: space-between;
 }
 
+.base-detail__img-block img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.base-detail__img-block img:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
 .base-detail__img-block-2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2477,6 +2551,18 @@ body.noscroll {
 
 .sale-detail__block-img {
   margin-bottom: 40px;
+}
+
+.sale-detail__block-img img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.sale-detail__block-img img:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .base-detail__swiper {
@@ -3106,6 +3192,18 @@ body.noscroll {
           flex-direction: column;
 }
 
+.gaiety__block {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.gaiety__block:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
 .gaiety__block-title {
   color: #B0AAA1;
   display: block;
@@ -3273,6 +3371,32 @@ body.noscroll {
   max-width: 1220px;
 }
 
+.tab-content_hidden {
+  display: none;
+}
+
+.tab-content_visible {
+  display: block;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  /* плавное появление за 0.3 секунды */
+  /* другие ваши стили для контента таба */
+}
+
+.bath-accessories-tab-content_hidden {
+  display: none;
+}
+
+.bath-accessories-tab-content_visible {
+  display: block;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  /* плавное появление за 0.3 секунды */
+  /* другие ваши стили для контента таба */
+}
+
 .bath__subtitle {
   z-index: 2;
   position: relative;
@@ -3393,6 +3517,30 @@ body.noscroll {
           justify-content: space-between;
   padding: 50px 0;
   border-top: 1px solid #B5B6B7;
+}
+
+.bath__room-img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.bath__room-img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.bath-accessories-image {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.bath-accessories-image:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .bath__room:last-child {
@@ -4196,6 +4344,24 @@ body.noscroll {
   gap: 170px;
 }
 
+.alcove__block img {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.alcove__slide {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.alcove__block img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .alcove__grid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4994,6 +5160,10 @@ body.noscroll {
   color: #C19B5C;
 }
 
+.active__tab1 {
+  color: #C19B5C;
+}
+
 .mero__grid {
   margin-bottom: 80px;
 }
@@ -5205,11 +5375,47 @@ form input:hover {
   color: #2C2A2A;
 }
 
+.room-comfort__link {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
 .room-comfort__link:hover {
-  color: #fff;
+  color: #C19B5C;
+  background-color: #fff;
+  border: 1px solid #C19B5C;
 }
 
 .accommodation-hero-descr {
   color: #fff;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: #616569;
+}
+
+.welcome-pill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 9px;
+  border: 1px solid transparent;
+}
+
+.active__tab2 {
+  color: #C19B5C;
+  border: 1px solid #C19B5C;
+  padding: 9px;
+  border-radius: 39px;
+}
+
+.pills-slide {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 /*# sourceMappingURL=style.css.map */
