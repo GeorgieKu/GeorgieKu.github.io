@@ -21,6 +21,4 @@ document.addEventListener('DOMContentLoaded', () => {
     followCursor() // вызываем функцию followCursor
 
 
-    
-  
   })
