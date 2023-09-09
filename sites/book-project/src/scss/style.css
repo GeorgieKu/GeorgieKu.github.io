@@ -1,31 +1,27 @@
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-weight: normal;
   src: url("../fonts/UbuntuRegular.eot");
   src: url("../fonts/UbuntuRegular.eot") format("embedded-opentype"), url("../fonts/UbuntuRegular.woff2") format("woff2"), url("../fonts/UbuntuRegular.woff") format("woff"), url("../fonts/UbuntuRegular.ttf") format("truetype"), url("../fonts/UbuntuRegular.svg#UbuntuRegular") format("svg");
 }
-
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-weight: 700;
   src: url("../fonts/UbuntuBold.eot");
   src: url("../fonts/UbuntuBold.eot") format("embedded-opentype"), url("../fonts/UbuntuBold.woff2") format("woff2"), url("../fonts/UbuntuBold.woff") format("woff"), url("../fonts/UbuntuBold.ttf") format("truetype"), url("../fonts/UbuntuBold.svg#UbuntuBold") format("svg");
 }
-
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-weight: 500;
   src: url("../fonts/UbuntuMedium.eot");
   src: url("../fonts/UbuntuMedium.eot") format("embedded-opentype"), url("../fonts/UbuntuMedium.woff2") format("woff2"), url("../fonts/UbuntuMedium.woff") format("woff"), url("../fonts/UbuntuMedium.ttf") format("truetype"), url("../fonts/UbuntuMedium.svg#UbuntuMedium") format("svg");
 }
-
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-weight: 300;
   src: url("../fonts/UbuntuLight.eot");
   src: url("../fonts/UbuntuLight.eot") format("embedded-opentype"), url("../fonts/UbuntuLight.woff2") format("woff2"), url("../fonts/UbuntuLight.woff") format("woff"), url("../fonts/UbuntuLight.ttf") format("truetype"), url("../fonts/UbuntuLight.svg#UbuntuLight") format("svg");
 }
-
 h1 {
   font-size: 5.0520833333vw;
   font-size: 9.2592592593vh;
@@ -36,15 +32,13 @@ input {
 }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 ::after,
 ::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -97,8 +91,7 @@ li {
 a {
   color: #222;
   text-decoration: none;
-  -webkit-transition: color .6s ease;
-  transition: color .6s ease;
+  transition: color 0.6s ease;
 }
 
 button {
@@ -110,20 +103,13 @@ button {
 
 .wrapper {
   min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   overflow: hidden;
 }
 
 .wrapper > main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .wrapper > * {
@@ -133,7 +119,6 @@ button {
 .wrapper {
   position: relative;
 }
-
 .wrapper:after {
   content: "";
   display: block;
@@ -147,11 +132,9 @@ button {
   right: 0;
   opacity: 0.2;
   margin: 0 0 0 -80%;
-  -webkit-transform: rotate(-20deg);
-          transform: rotate(-20deg);
-  background: radial-gradient(ellipse 80% 50%, #008361 0%, #0b0d12 100%);
+  transform: rotate(-20deg);
+  background: radial-gradient(ellipse 80% 50%, rgb(0, 131, 97) 0%, rgb(11, 13, 18) 100%);
 }
-
 .wrapper.back_top:after {
   bottom: 600px;
 }
@@ -169,8 +152,7 @@ textarea::-webkit-input-placeholder {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
 }
 
@@ -188,7 +170,6 @@ textarea:-moz-placeholder {
   margin-top: 300px;
   height: 400px;
 }
-
 .main-link__link {
   color: #fff;
   font-size: 18px;
@@ -198,78 +179,60 @@ textarea:-moz-placeholder {
 .header {
   background: rgba(0, 0, 0, 0.8);
   border: 1px solid #000;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 5;
 }
-
 .header.search-active .nav-active:not(.vigorous) {
   display: none;
 }
-
 .header.search-active .header__search {
   display: block;
 }
-
 .header.search-active .header__search-btn {
   display: none;
 }
-
 .header__search-btn {
   margin-right: 50px;
 }
-
 .header__search-btn_hidden {
   display: none;
 }
-
 .header__wrap {
   height: 7.8rem;
   padding-top: 42px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-bottom: 41px;
 }
-
 .header__search {
   position: relative;
   width: 500px;
   display: none;
   margin-right: 30px;
 }
-
 .header__search-form {
   position: relative;
 }
-
 .header__search-submit {
   position: absolute;
   top: 10px;
   right: 20px;
   width: 20px;
 }
-
 .header__search-btn {
   width: 21px;
   height: 21px;
 }
-
 .header__input {
   width: 100%;
   height: 42px;
-  padding: .4375rem 3.625rem .4375rem 1.375rem;
+  padding: 0.4375rem 3.625rem 0.4375rem 1.375rem;
   border: 2px solid #fff;
   border-radius: 50px;
   background: rgba(0, 0, 0, 0);
@@ -278,164 +241,105 @@ textarea:-moz-placeholder {
   background-size: 1.3125rem;
   font-family: "Ubuntu";
   font-weight: 300;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
   text-overflow: ellipsis;
 }
-
 .header__navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
 }
-
 .header__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
 }
-
 .header__right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .header__active {
   padding-left: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .header__active-registration {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .nav__btn {
   font-family: "Ubuntu";
   font-weight: 700;
   font-size: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
   border: 1px solid #000;
   border-radius: 50px;
 }
-
 .nav__btn_enter {
   padding: 13px 25px;
   background: #ec8f32;
   border-radius: 50px;
 }
-
 .nav__btn_enter:hover {
   color: #000;
 }
-
 .nav__btn_registration {
   margin-right: 1.25rem;
-  padding: .625rem 1.9375rem;
+  padding: 0.625rem 1.9375rem;
   border: 2px solid #fff;
   border-radius: 50px;
 }
-
 .nav__btn_registration:hover {
   color: #ec8f32;
   border: 2px solid #ec8f32;
 }
-
 .nav__link {
   font-family: "Ubuntu";
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.125rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   -webkit-text-decoration-line: underline;
   -webkit-text-decoration: underline grey;
           text-decoration: underline grey;
   color: #fff;
-  transition: -webkit-text-decoration-line .6s ease;
-  -webkit-transition: -webkit-text-decoration-line .6s ease;
-  transition: text-decoration-line .6s ease;
-  transition: text-decoration-line .6s ease, -webkit-text-decoration-line .6s ease;
+  transition: text-decoration-line 0.6s ease;
 }
-
 .nav__link:hover {
-  -webkit-text-decoration-line: none;
   text-decoration-line: none;
 }
-
 .nav__menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   padding-left: 5px;
   padding-right: 5px;
 }
-
 .nav__menu li {
   margin-right: 50px;
 }
-
 .nav__menu li:last-child {
   margin-right: 0;
 }
-
 .nav-footer__link {
   font-family: "Ubuntu";
   font-weight: 300;
   font-size: 12px;
   line-height: 25px;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #adadad;
 }
@@ -445,42 +349,31 @@ textarea:-moz-placeholder {
   position: absolute;
   right: 32px;
   top: 53px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   cursor: pointer;
   z-index: 50;
   width: 25px;
   height: 16px;
 }
-
 .hamburger-span {
   display: block;
   height: 2.31px;
   width: 100%;
   background-color: #fff;
   margin-bottom: 4.54px;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .main {
   padding-top: 10.375rem;
   padding-bottom: 9.6875rem;
 }
-
 .main__wrap {
   padding-top: 119px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .main__title {
   max-width: 779px;
   font-family: "Ubuntu";
@@ -491,7 +384,6 @@ textarea:-moz-placeholder {
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
-
 .main__text {
   padding-top: 1rem;
   max-width: 34.25rem;
@@ -510,7 +402,6 @@ textarea:-moz-placeholder {
   bottom: 0;
   z-index: -1;
 }
-
 .slider-backgound-image img {
   width: 100%;
   height: 100%;
@@ -523,9 +414,7 @@ textarea:-moz-placeholder {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.75rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
   padding: 1.625rem 2rem;
@@ -533,23 +422,16 @@ textarea:-moz-placeholder {
   border-radius: 50px;
   display: inline-block;
 }
-
 .btn__book:hover {
   color: #000;
 }
 
 .swiper-menu {
   max-width: 74px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .dot {
@@ -561,14 +443,11 @@ textarea:-moz-placeholder {
   margin-bottom: 14px;
   display: inline-block;
   border-radius: 50%;
-  -webkit-transition: background-color .6s ease;
-  transition: background-color .6s ease;
+  transition: background-color 0.6s ease;
 }
-
 .dot:hover {
   background: #FF8C00;
 }
-
 .dot-active {
   width: 19px;
   height: 19px;
@@ -598,27 +477,17 @@ textarea:-moz-placeholder {
 }
 
 .audiobook__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-bottom: 37px;
 }
-
 .audiobook__wrap-tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-bottom: 39px;
   white-space: nowrap;
 }
-
 .audiobook__wrap-tabs_hidden {
   display: none;
 }
@@ -631,15 +500,11 @@ textarea:-moz-placeholder {
   -webkit-text-decoration-line: underline;
   color: #EC8F32;
 }
-
 .audiobook__title_active {
   color: #fff;
-  -webkit-text-decoration-line: none;
   text-decoration-line: none;
 }
-
 .audiobook__title_yellow {
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #ec8f32;
 }
@@ -647,17 +512,14 @@ textarea:-moz-placeholder {
 .btn__audiobook {
   font-family: "Ubuntu";
   font-weight: 700;
-  font-size: .75rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  font-size: 0.75rem;
+  align-items: center;
   text-align: center;
   color: #fff;
   padding: 12px 27px;
   background: #ec8f32;
   border-radius: 50px;
 }
-
 .btn__audiobook:hover {
   color: #000;
 }
@@ -665,32 +527,23 @@ textarea:-moz-placeholder {
 .card {
   position: relative;
 }
-
 .card__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
   margin: 0 -20px;
 }
-
 .card__item {
   width: 200px;
   padding-bottom: 60px;
   margin: 0 20px;
 }
-
 .card__description {
   padding-top: 21px;
   max-width: 200px;
 }
-
 .card__text {
   font-family: "Ubuntu";
   font-weight: 300;
@@ -703,7 +556,6 @@ textarea:-moz-placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .card__title {
   max-width: 198px;
   font-family: "Ubuntu";
@@ -714,40 +566,27 @@ textarea:-moz-placeholder {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .card__img {
   border: 1px solid #000;
   border-radius: 20px;
 }
-
 .card__element {
   display: inline-block;
 }
-
 .card__author {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .card__icons-btn path {
-  -webkit-transition: fill .3s;
-  transition: fill .3s;
+  transition: fill 0.3s;
 }
-
 .card__icons-btn:hover path {
   fill: #ec8f32;
   stroke: #ec8f32;
 }
-
 .card__icons path {
-  -webkit-transition: fill .3s;
-  transition: fill .3s;
+  transition: fill 0.3s;
 }
-
 .card__icons:hover path {
   fill: #ec8f32;
 }
@@ -770,8 +609,7 @@ textarea:-moz-placeholder {
   background-color: rgba(0, 0, 0, 0);
   outline: 0;
   cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
   z-index: 999;
 }
 
@@ -786,12 +624,10 @@ textarea:-moz-placeholder {
   background-image: url(../img/svg/slider-prev.svg);
   background-image: url(../img/svg/slider-prev.svg);
 }
-
 .slide-prev-popular {
   left: -36px;
   background-image: url(../img/svg/slider-prev.svg);
 }
-
 .slide-prev-edition {
   left: -36px;
   background-image: url(../img/svg/slider-prev.svg);
@@ -801,12 +637,10 @@ textarea:-moz-placeholder {
   right: -36px;
   background-image: url(../img/svg/slider-next.svg);
 }
-
 .slide-next-popular {
   right: -36px;
   background-image: url(../img/svg/slider-next.svg);
 }
-
 .slide-next-edition {
   right: -36px;
   background-image: url(../img/svg/slider-next.svg);
@@ -819,7 +653,6 @@ textarea:-moz-placeholder {
 .element {
   position: relative;
 }
-
 .element__18 {
   position: absolute;
   top: 5%;
@@ -830,11 +663,9 @@ textarea:-moz-placeholder {
   background-color: rgba(0, 0, 0, 0);
   outline: 0;
   cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
   background-image: url(../img/svg/btn-18.svg);
 }
-
 .element__button {
   position: absolute;
   top: 10px;
@@ -845,8 +676,7 @@ textarea:-moz-placeholder {
   background-color: rgba(0, 0, 0, 0);
   outline: 0;
   cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
   background-image: url(../img/svg/play.svg);
 }
 
@@ -857,11 +687,8 @@ textarea:-moz-placeholder {
 }
 
 .audiobook__choice {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .audiobook__choice button:nth-child(2) {
   padding-left: 33px;
   padding-right: 28px;
@@ -871,19 +698,11 @@ textarea:-moz-placeholder {
   padding-top: 58px;
   padding-bottom: 139px;
 }
-
 .compilations__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .compilations__card {
   width: 273px;
   height: 163px;
@@ -894,27 +713,21 @@ textarea:-moz-placeholder {
   background-size: cover;
   background-position: center;
 }
-
 .compilations__card:last-child {
   margin-right: 0;
 }
-
 .compilations__card_road {
   background: url(../img/img/compilations-1.jpg);
 }
-
 .compilations__card_relax {
   background: url(../img/img/compilations-2.jpg);
 }
-
 .compilations__card_stady {
   background: url(../img/img/compilations-3.jpg);
 }
-
 .compilations__card_work {
   background: url(../img/img/compilations-4.jpg);
 }
-
 .compilations__title {
   font-family: "Ubuntu";
   font-weight: 700;
@@ -924,7 +737,6 @@ textarea:-moz-placeholder {
   padding-top: 89px;
   padding-left: 30px;
 }
-
 .compilations__title-popular {
   font-family: "Ubuntu";
   font-style: normal;
@@ -936,37 +748,23 @@ textarea:-moz-placeholder {
 }
 
 .trend {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 30px;
 }
-
 .trend__item {
   width: 36.4375rem;
-  opacity: .6;
+  opacity: 0.6;
   border: 2.5px solid rgba(255, 255, 255, 0.3);
   border-radius: 25px;
 }
-
 .trend__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 34px 40px 38px 55px;
 }
-
 .trend__text {
   padding-left: 59px;
   max-width: 427px;
@@ -974,12 +772,8 @@ textarea:-moz-placeholder {
   font-weight: 500;
   font-size: 1.3125rem;
   line-height: 1.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
 }
 
@@ -987,17 +781,10 @@ textarea:-moz-placeholder {
   padding-top: 10.3125rem;
   padding-bottom: 169px;
 }
-
 .online-store__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
 }
 
@@ -1005,26 +792,17 @@ textarea:-moz-placeholder {
   padding-top: 12px;
   padding-bottom: 4.5625rem;
 }
-
 .advantages__wrap {
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 25px;
   position: relative;
 }
-
 .advantages__element {
   padding: 37px 46px 50px 309px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .advantages__title {
   font-family: "Ubuntu";
   font-style: normal;
@@ -1035,7 +813,6 @@ textarea:-moz-placeholder {
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
-
 .advantages__text {
   max-width: 33.375rem;
   font-family: "Ubuntu";
@@ -1044,24 +821,20 @@ textarea:-moz-placeholder {
   line-height: 120.9%;
   color: #fff;
 }
-
 .advantages__btn {
   padding-top: 23px;
 }
-
 .advantages__img {
   position: absolute;
   top: -27px;
   left: -4px;
 }
-
 .advantages__img img {
   width: 266px;
   height: 266px;
   background: #fff;
   border-radius: 25px;
 }
-
 .advantages__button {
   position: absolute;
   top: 33%;
@@ -1072,8 +845,7 @@ textarea:-moz-placeholder {
   background-color: rgba(0, 0, 0, 0);
   outline: 0;
   cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
   background-image: url(../img/svg/play-btn.svg);
   margin-left: auto;
   margin-right: auto;
@@ -1092,7 +864,6 @@ textarea:-moz-placeholder {
   background: #ec8f32;
   border-radius: 50px;
 }
-
 .btn__advantages:hover {
   color: #000;
 }
@@ -1100,45 +871,32 @@ textarea:-moz-placeholder {
 .swiper {
   height: 300px;
 }
-
 .swiper_main {
   height: 200px;
 }
-
 .swiper_compilations {
   height: 200px;
 }
-
 .swiper_tabs {
   width: 46.875rem;
   height: 77px;
 }
-
 .swiper-slide_tabs-1 {
   width: 10.3125rem;
 }
-
 .swiper-slide_tabs-2 {
   width: 13.5625rem;
 }
-
 .swiper-slide_tabs-3 {
   width: 6.25rem;
 }
-
 .swiper-slide_tabs-one {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-right: 10px;
 }
-
 .swiper-slide_tabs-two {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .swiper-container {
   height: 43.875rem;
 }
@@ -1151,7 +909,6 @@ textarea:-moz-placeholder {
   position: relative;
   overflow: hidden;
 }
-
 .slider-nav {
   position: absolute;
   top: 29.9375rem;
@@ -1162,26 +919,17 @@ textarea:-moz-placeholder {
 .footer {
   padding-top: 6.25rem;
 }
-
 .footer__line {
   margin: 0 0 37px 0;
   border: 1px solid #413c3c;
 }
-
 .footer__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding-bottom: 2.5625rem;
 }
-
 .footer__text {
   font-family: "Ubuntu";
   font-weight: 300;
@@ -1189,64 +937,43 @@ textarea:-moz-placeholder {
   line-height: 14px;
   color: #adadad;
 }
-
 .footer__text_padding {
   padding-right: 4.5625rem;
 }
-
 .footer__info-tel {
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .footer__tel {
   margin-right: 20px;
 }
-
 .footer__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .footer__element p:first-child {
   padding-right: 1.875rem;
 }
-
 .footer__element p:last-child {
   border-left: 1px solid;
   padding-left: 1.875rem;
 }
-
 .footer__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .footer__img img:first-child {
-  padding-right: .625rem;
+  padding-right: 0.625rem;
 }
-
 .footer__element {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 200px 234px 164px;
-      grid-template-columns: 1fr 200px 234px 164px;
-  -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-columns: 1fr 200px 234px 164px;
+  grid-template-rows: 1fr;
   grid-gap: 31px;
   padding-bottom: 75px;
 }
-
 .grid__title {
   font-family: "Ubuntu";
   font-weight: 700;
@@ -1272,43 +999,29 @@ textarea:-moz-placeholder {
 .book-offer {
   padding-top: 5.5rem;
 }
-
 .book-offer__img {
   border-radius: 20px;
 }
-
 .book-offer__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   gap: 30px;
 }
 
 .header__personal {
   padding-right: 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .header__personal span {
   font-family: "Ubuntu";
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
 }
-
 .header__personal img {
   padding-right: 12px;
 }
@@ -1325,7 +1038,6 @@ textarea:-moz-placeholder {
 }
 
 .item-description__text span {
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
 }
 
@@ -1340,19 +1052,13 @@ textarea:-moz-placeholder {
   background: #151516;
   border-radius: 20px;
 }
-
 .player__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background: #151516;
   border-radius: 20px;
   padding: 10px 28px 11px 4px;
 }
-
 .player__text {
   padding-left: 20px;
   padding-right: 7px;
@@ -1360,28 +1066,18 @@ textarea:-moz-placeholder {
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.125rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #adadad;
 }
 
 .critique__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .item-description__icons-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .item-description__icons-wrap-768 {
@@ -1391,46 +1087,32 @@ textarea:-moz-placeholder {
 .item-description {
   margin-top: -9px;
 }
-
 .item-description__wrap {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .item-description__icons-btn {
   cursor: pointer;
 }
-
 .item-description__icons-btn:hover path {
   stroke: #fff;
 }
-
 .item-description__icons {
   cursor: pointer;
 }
-
 .item-description__icons path {
-  -webkit-transition: fill .3s;
-  transition: fill .3s;
+  transition: fill 0.3s;
 }
-
 .item-description__icons:not(:last-child) {
   margin-right: 18px;
 }
-
 .item-description__elem {
   padding-top: 28px;
 }
-
 .item-description__elem-definition {
   padding-top: 20px;
 }
-
 .item-description__elem-text {
   font-family: "Ubuntu";
   font-weight: 300;
@@ -1438,23 +1120,19 @@ textarea:-moz-placeholder {
   line-height: 1.375rem;
   color: #fff;
 }
-
 .item-description__elem-text {
   max-width: 43.5625rem;
 }
-
 .item-description__elem-btn {
   margin-top: 15px;
   font-family: "Ubuntu";
   font-weight: 400;
   font-size: 12px;
   line-height: 0px;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #adadad;
   position: relative;
 }
-
 .item-description__elem-btn::after {
   color: #767676;
   content: url(../img/svg/icon-after.svg);
@@ -1462,13 +1140,9 @@ textarea:-moz-placeholder {
   top: 0px;
   left: 72px;
 }
-
 .item-description__elem-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .item-description__text {
   max-width: 31.8125rem;
   font-family: "Ubuntu";
@@ -1477,33 +1151,21 @@ textarea:-moz-placeholder {
   line-height: 1.5625rem;
   color: #adadad;
 }
-
 .item-description__rating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .item-description__elem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .item-description__span {
   font-family: "Ubuntu";
   font-weight: 700;
   font-size: 2.625rem;
   line-height: 3.25rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #ec8f32;
 }
-
 .item-description__span-text {
   margin-left: 10px;
   padding-top: 10px;
@@ -1512,35 +1174,22 @@ textarea:-moz-placeholder {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
 }
-
 .item-description__btn-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .elem-link {
   padding-top: 2.6875rem;
   padding-bottom: 2.875rem;
 }
-
 .elem-link__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .elem-link__link {
   padding-right: 15px;
 }
@@ -1554,31 +1203,25 @@ textarea:-moz-placeholder {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
 }
-
 .btn__item-description:hover {
   color: #000;
 }
 
 .btn__description {
-  padding: .75rem 2rem;
+  padding: 0.75rem 2rem;
   font-family: "Ubuntu";
   font-weight: 700;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 0px;
   color: #ec8f32;
   border: 2px solid #ec8f32;
   border-radius: 50px;
 }
-
 .btn__description:hover {
   color: #fff;
   border: 2px solid #fff;
@@ -1598,13 +1241,9 @@ textarea:-moz-placeholder {
 
 .card-materials__wrap {
   padding-top: 33px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   max-width: 48.375rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .card-materials__item {
@@ -1612,20 +1251,14 @@ textarea:-moz-placeholder {
   font-weight: 500;
   font-size: 1.3125rem;
   line-height: 1.5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
 }
-
 .card-materials__item p {
   margin-left: 23px;
   max-width: 209px;
 }
-
 .card-materials__item img {
   width: 112px;
   height: 112px;
@@ -1635,17 +1268,11 @@ textarea:-moz-placeholder {
 .content {
   padding-top: 6.0625rem;
 }
-
 .content__wrap {
   padding-bottom: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .content__text {
   font-family: "Ubuntu";
   font-weight: 400;
@@ -1654,46 +1281,31 @@ textarea:-moz-placeholder {
   text-align: right;
   color: #5c5e64;
 }
-
 .content-player {
   margin-top: 17px;
   background: #151516;
   border-radius: 20px;
 }
-
 .content-player__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background: #151516;
   border-radius: 20px;
   padding: 11px 25px 11px 33px;
 }
-
 .content-player__text {
   padding-left: 1.625rem;
   font-family: "Ubuntu";
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #adadad;
 }
-
 .content-player__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .content-player__btn-play img {
   width: 23.4px;
   height: 26px;
@@ -1708,51 +1320,33 @@ textarea:-moz-placeholder {
 }
 
 .critique {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   gap: 30px;
 }
-
 .critique__icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .critique__icon img {
   padding-left: 3px;
 }
-
 .critique__item-wrap {
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 12px;
 }
-
 .critique__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding-bottom: 16px;
 }
-
 .critique__wrap p {
   font-family: "Ubuntu";
   font-weight: 300;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1rem;
   color: #adadad;
 }
-
 .critique__text {
   max-width: 18.4375rem;
   font-family: "Ubuntu";
@@ -1761,28 +1355,20 @@ textarea:-moz-placeholder {
   line-height: 1.4375rem;
   color: #fff;
 }
-
 .critique__item-wrap {
   padding: 29px 31px 30px 30px;
 }
 
 .book-author__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .book-author {
   padding-top: 9rem;
   padding-bottom: 11.5625rem;
 }
-
 .book-author__title {
   font-family: "Ubuntu";
   font-weight: 700;
@@ -1792,7 +1378,6 @@ textarea:-moz-placeholder {
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
-
 .book-author__text {
   max-width: 60.4375rem;
   font-family: "Ubuntu";
@@ -1808,11 +1393,10 @@ textarea:-moz-placeholder {
 }
 
 .nav__btn_exit {
-  padding: .625rem 1.0625rem;
+  padding: 0.625rem 1.0625rem;
   border: 2px solid #ec8f32;
   border-radius: 50px;
 }
-
 .nav__btn_exit:hover {
   color: #ec8f32;
   border: 2px solid #fff;
@@ -1822,19 +1406,15 @@ textarea:-moz-placeholder {
   border-radius: 20px;
   min-width: 27.375rem;
 }
-
 .my-book__img-play {
   max-width: 211px;
   border-radius: 20px;
 }
 
 .my-book__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 4.1875rem;
 }
-
 .my-book__wrap_gap {
   gap: 10px;
 }
@@ -1849,62 +1429,47 @@ textarea:-moz-placeholder {
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
-
 .elem-detail__title_play {
   font-size: 2.25rem;
   line-height: 3.25rem;
 }
 
 .elem-detail__text span {
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
 }
 
 .elem-detail {
   margin-top: -9px;
 }
-
 .elem-detail__wrap {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .elem-detail__icons-btn {
   position: absolute;
   right: 2px;
   top: 15px;
   cursor: pointer;
 }
-
 .elem-detail__icons-btn:hover path {
   stroke: #fff;
 }
-
 .elem-detail__icons {
   position: absolute;
   right: 43px;
   top: 16px;
   cursor: pointer;
 }
-
 .elem-detail__icons path {
-  -webkit-transition: fill .3s;
-  transition: fill .3s;
+  transition: fill 0.3s;
 }
-
 .elem-detail__elem {
   padding-top: 28px;
 }
-
 .elem-detail__elem-definition {
   padding-top: 20px;
 }
-
 .elem-detail__elem-text {
   font-family: "Ubuntu";
   font-weight: 300;
@@ -1912,23 +1477,19 @@ textarea:-moz-placeholder {
   line-height: 1.375rem;
   color: #fff;
 }
-
 .elem-detail__elem-text {
   max-width: 43.5625rem;
 }
-
 .elem-detail__elem-btn {
   margin-top: 15px;
   font-family: "Ubuntu";
   font-weight: 400;
   font-size: 12px;
   line-height: 0px;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #adadad;
   position: relative;
 }
-
 .elem-detail__elem-btn::after {
   color: #767676;
   content: url(../img/svg/icon-after.svg);
@@ -1936,39 +1497,25 @@ textarea:-moz-placeholder {
   top: 0px;
   left: 72px;
 }
-
 .elem-detail__elem-link_play {
   padding-top: 2.6875rem;
   padding-bottom: 2.875rem;
 }
-
 .elem-detail__elem-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .elem-detail__elem_padding {
   padding-top: 15px;
 }
-
 .elem-detail__elem-link_play {
   padding-top: 21px;
   padding-bottom: 11px;
 }
-
 .elem-detail__elem-link_play {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .elem-detail__text {
   max-width: 31.8125rem;
   font-family: "Ubuntu";
@@ -1977,33 +1524,21 @@ textarea:-moz-placeholder {
   line-height: 1.5625rem;
   color: #adadad;
 }
-
 .elem-detail__rating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .elem-detail__elem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .elem-detail__span {
   font-family: "Ubuntu";
   font-weight: 700;
   font-size: 2.625rem;
   line-height: 3.25rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #ec8f32;
 }
-
 .elem-detail__span-text {
   margin-left: 10px;
   padding-top: 10px;
@@ -2012,42 +1547,26 @@ textarea:-moz-placeholder {
   font-weight: 500;
   font-size: 12px;
   line-height: 14px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
 }
-
 .elem-detail__span_red {
   color: red;
 }
-
 .elem-detail__btn-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .elem-detail_play {
   min-width: 59.8125rem;
 }
-
 .elem-detail__btn {
   padding-top: 15px;
 }
-
 .elem-detail__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .elem-detail__item a:nth-last-child(n+2) {
   padding-right: 15px;
 }
@@ -2061,31 +1580,25 @@ textarea:-moz-placeholder {
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 1.75rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
 }
-
 .btn__elem-detail:hover {
   color: #000;
 }
 
 .button__description {
-  padding: .75rem 2rem;
+  padding: 0.75rem 2rem;
   font-family: "Ubuntu";
   font-weight: 700;
-  font-size: .75rem;
+  font-size: 0.75rem;
   line-height: 0px;
   color: #ec8f32;
   border: 2px solid #ec8f32;
   border-radius: 50px;
 }
-
 .button__description:hover {
   color: #fff;
   border: 2px solid #fff;
@@ -2096,7 +1609,6 @@ textarea:-moz-placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #adadad;
 }
@@ -2120,85 +1632,54 @@ textarea:-moz-placeholder {
   background: #151516;
   border-radius: 20px;
 }
-
 .book-player__wrapper {
   padding-top: 7px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .book-player__wrap-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background: #151516;
   border-radius: 20px;
   padding: 23px 25px 20px 23px;
 }
-
 .book-player__text {
   padding-left: 26px;
   font-family: "Ubuntu";
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.125rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #adadad;
 }
-
 .book-player__btn-time {
   margin-left: 36px;
   margin-right: 37px;
 }
-
 .book-player__btn-time_hidden {
   display: none;
 }
-
 .book-player__btn-play {
   padding-left: 32px;
   padding-right: 32px;
 }
-
 .book-player__btn-bookmarks {
   padding-left: 31px;
   padding-right: 26px;
 }
-
 .book-player__wrap-tooltip {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
-
 .book-player__wrap-volume {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   position: relative;
 }
-
 .book-player__speed {
   width: 24px;
   height: 21px;
@@ -2206,63 +1687,42 @@ textarea:-moz-placeholder {
   font-weight: 500;
   font-size: 18px;
   line-height: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
 }
-
 .book-player__speed-elem {
   position: relative;
 }
-
 .book-player__btn-previous {
   margin-right: 24px;
 }
-
 .book-player__btn-previous path {
-  -webkit-transition: fill .3s;
-  transition: fill .3s;
+  transition: fill 0.3s;
 }
-
 .book-player__btn-previous:hover path {
   stroke: #fff;
 }
-
 .book-player__btn-subsequent {
   margin-left: 24px;
 }
-
 .book-player__btn-subsequent path {
-  -webkit-transition: fill .3s;
-  transition: fill .3s;
+  transition: fill 0.3s;
 }
-
 .book-player__active path {
   stroke: #fff;
 }
-
 .book-player__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
-
 .book-player__active-prev path {
   fill: #fff;
 }
-
 .book-player__volume-item {
   position: relative;
 }
-
 .book-player__time-item {
   position: relative;
 }
@@ -2274,14 +1734,11 @@ textarea:-moz-placeholder {
 .progress-bar {
   width: 100%;
   height: 8px;
-  background: -webkit-gradient(linear, left top, right top, from(#ec8f32), color-stop(47%, #ec8f32), color-stop(47%, #514f4f), to(#514f4f));
   background: linear-gradient(to right, #ec8f32 0%, #ec8f32 47%, #514f4f 47%, #514f4f 100%);
-  -webkit-transition: background 450ms ease-in;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
   border-radius: 5px;
 }
-
 .progress-bar::-webkit-slider-thumb {
   width: 15px;
   height: 15px;
@@ -2296,12 +1753,8 @@ textarea:-moz-placeholder {
 }
 
 .audio-progress__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .content-player__wrapper_active {
@@ -2339,51 +1792,39 @@ textarea:-moz-placeholder {
   position: absolute;
   left: -8px;
   bottom: 0px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   display: none;
   padding-bottom: 7px;
 }
-
 .volume-controls .slider {
   margin-top: 12px;
   margin-bottom: 12px;
   width: 6px;
   border-radius: 3px;
 }
-
 .volume-controls .slider .progress {
   bottom: 0;
   height: 100%;
   width: 6px;
 }
-
 .volume-controls .slider .progress .pin {
   left: -5px;
   top: -8px;
 }
 
 .slider {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   background-color: #d8d8d8;
   cursor: pointer;
   position: relative;
 }
-
 .slider .progress {
   background-color: #ec8f32;
   border-radius: inherit;
   position: absolute;
   pointer-events: none;
 }
-
 .slider .progress .pin {
   height: 16px;
   width: 16px;
@@ -2391,8 +1832,7 @@ textarea:-moz-placeholder {
   background-color: #ec8f32;
   position: absolute;
   pointer-events: all;
-  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
-          box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
 }
 
 .time-controls {
@@ -2403,13 +1843,8 @@ textarea:-moz-placeholder {
   position: absolute;
   left: 31px;
   bottom: 0px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   display: none;
   font-weight: 500;
   font-size: 12px;
@@ -2429,17 +1864,12 @@ textarea:-moz-placeholder {
   position: absolute;
   left: -3px;
   bottom: 0px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   display: none;
   font-family: "Ubuntu";
   font-weight: 500;
   font-size: 18px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
   padding-bottom: 7px;
 }
@@ -2447,14 +1877,11 @@ textarea:-moz-placeholder {
 .speed-menu {
   padding-top: 5px;
 }
-
 .speed-menu li {
   padding-top: 21px;
 }
 
 .open {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -2462,45 +1889,27 @@ textarea:-moz-placeholder {
   padding-top: 90px;
   padding-bottom: 142px;
 }
-
 .book-form__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
   position: relative;
 }
-
 .book-form__item-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   gap: 30px;
 }
-
 .book-form__item-wrap img {
   max-width: 211px;
   border-radius: 20px;
 }
-
 .book-form .book-form__item:nth-child(2n) {
   width: 100%;
 }
-
 .book-form__title {
   margin-top: -25px;
   padding-bottom: 10px;
@@ -2514,32 +1923,24 @@ textarea:-moz-placeholder {
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
-
 .book-form__elem-text p {
   font-weight: 400;
   font-size: 16px;
   line-height: 25px;
   color: #adadad;
 }
-
 .book-form__elem-text span {
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
 }
-
 .book-form__item-form {
   padding: 52px 43px 57px 48px;
   border: 2px solid #3c3d43;
   border-radius: 12px;
 }
-
 .book-form__form-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-bottom: 22px;
 }
-
 .book-form__form-img p {
   padding-left: 21px;
   max-width: 291px;
@@ -2549,7 +1950,6 @@ textarea:-moz-placeholder {
   line-height: 18px;
   color: #adadad;
 }
-
 .book-form__sum {
   padding-top: 26px;
   font-family: "Ubuntu";
@@ -2560,23 +1960,16 @@ textarea:-moz-placeholder {
 }
 
 .form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .form__button {
   margin-left: 22px;
   font-family: "Ubuntu";
   font-weight: 700;
   font-size: 12px;
   line-height: 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
   padding: 12px 27px;
@@ -2596,33 +1989,15 @@ textarea:-moz-placeholder {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
 }
-
-.input:-ms-input-placeholder {
+.input::-moz-placeholder {
   font-weight: 300;
   font-size: 12px;
   line-height: 24px;
   color: #adadad;
 }
-
-.input::-webkit-input-placeholder {
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 24px;
-  color: #adadad;
-}
-
-.input::-ms-input-placeholder {
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 24px;
-  color: #adadad;
-}
-
 .input::placeholder {
   font-weight: 300;
   font-size: 12px;
@@ -2631,15 +2006,9 @@ textarea:-moz-placeholder {
 }
 
 .book-paid__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-right: 26px;
   min-width: 76px;
   height: 78px;
@@ -2651,22 +2020,14 @@ textarea:-moz-placeholder {
   padding-top: 93px;
   padding-bottom: 11rem;
 }
-
 .book-paid__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   border: 3px solid #3c3d43;
   border-radius: 12px;
   padding: 2.3125rem 5.625rem 2.9375rem 3.1875rem;
 }
-
 .book-paid__title {
   max-width: 44.875rem;
   font-weight: 700;
@@ -2676,7 +2037,6 @@ textarea:-moz-placeholder {
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
-
 .book-paid__text {
   max-width: 44.875rem;
   font-weight: 300;
@@ -2684,15 +2044,12 @@ textarea:-moz-placeholder {
   line-height: 1.3125rem;
   color: #adadad;
 }
-
 .book-paid__button {
   font-family: "Ubuntu";
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
   padding: 1.5625rem 2.6875rem;
@@ -2701,15 +2058,9 @@ textarea:-moz-placeholder {
 }
 
 .book-not-paid__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   min-width: 76px;
   height: 78px;
   border-radius: 100%;
@@ -2720,26 +2071,17 @@ textarea:-moz-placeholder {
   padding-top: 93px;
   padding-bottom: 11rem;
 }
-
 .book-not-paid__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   border: 3px solid #3c3d43;
   border-radius: 12px;
   padding: 2.3125rem 4.6875rem 2.4375rem 3.1875rem;
 }
-
 .book-not-paid__description {
   margin-right: 90px;
 }
-
 .book-not-paid__title {
   max-width: 44.875rem;
   font-weight: 700;
@@ -2749,7 +2091,6 @@ textarea:-moz-placeholder {
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
 }
-
 .book-not-paid__text {
   max-width: 44.875rem;
   font-weight: 300;
@@ -2757,28 +2098,21 @@ textarea:-moz-placeholder {
   line-height: 1.3125rem;
   color: #adadad;
 }
-
 .book-not-paid__button {
   font-family: "Ubuntu";
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
   background: #ec8f32;
   border-radius: 50px;
   padding: 17px 37px;
 }
-
 .book-not-paid__button-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .book-not-paid__button-later {
   font-family: "Ubuntu";
   font-weight: 700;
@@ -2800,7 +2134,6 @@ textarea:-moz-placeholder {
   right: 0;
   bottom: 0;
 }
-
 .modal-wrapper {
   position: fixed;
   top: 50%;
@@ -2810,13 +2143,11 @@ textarea:-moz-placeholder {
   width: 100%;
   height: 240px;
   max-height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   padding: 48px 53px 27px 46px;
   background: #1f1b1c;
   border-radius: 35px;
 }
-
 .modal-bookmarks__wrapper {
   position: fixed;
   top: 50%;
@@ -2826,13 +2157,11 @@ textarea:-moz-placeholder {
   width: 100%;
   height: 285px;
   max-height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   padding: 48px 53px 27px 46px;
   background: #1f1b1c;
   border-radius: 35px;
 }
-
 .modal-slide__wrapper {
   position: fixed;
   top: 50%;
@@ -2842,23 +2171,19 @@ textarea:-moz-placeholder {
   width: 100%;
   height: 466px;
   max-height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   padding: 47px 26px 33px 26px;
   background: #1f1b1c;
   border-radius: 35px;
 }
-
 .modal-bookmarks__scroll {
   height: 334px;
   overflow-x: scroll;
   border-radius: 15px;
 }
-
 .modal-bookmarks__scroll::-webkit-scrollbar {
   width: 0;
 }
-
 .modal__title {
   margin-bottom: 28px;
   font-weight: 700;
@@ -2866,7 +2191,6 @@ textarea:-moz-placeholder {
   line-height: 24px;
   color: #fff;
 }
-
 .modal-bookmarks__title {
   margin-bottom: 28px;
   font-weight: 700;
@@ -2874,14 +2198,10 @@ textarea:-moz-placeholder {
   line-height: 24px;
   color: #fff;
 }
-
 .modal-buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 19px;
 }
-
 .modal__close {
   position: absolute;
   display: block;
@@ -2896,11 +2216,9 @@ textarea:-moz-placeholder {
   background-position: center;
   background-size: contain;
 }
-
 .modal__close:focus {
   outline: none;
 }
-
 .modal__input {
   width: 100%;
   height: 100%;
@@ -2910,63 +2228,38 @@ textarea:-moz-placeholder {
   font-weight: 300;
   font-size: 12px;
   line-height: 24px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 50px;
 }
-
-.modal__input:-ms-input-placeholder {
+.modal__input::-moz-placeholder {
   font-weight: 300;
   font-size: 12px;
   line-height: 24px;
   color: #adadad;
 }
-
-.modal__input::-webkit-input-placeholder {
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 24px;
-  color: #adadad;
-}
-
-.modal__input::-ms-input-placeholder {
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 24px;
-  color: #adadad;
-}
-
 .modal__input::placeholder {
   font-weight: 300;
   font-size: 12px;
   line-height: 24px;
   color: #adadad;
 }
-
 .modal__button {
   font-family: "Ubuntu";
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
   background: #ec8f32;
   border-radius: 50px;
   padding: 9px 25px;
 }
-
 .modal__button-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .modal__button-later {
   font-family: "Ubuntu";
   font-weight: 700;
@@ -2980,21 +2273,15 @@ textarea:-moz-placeholder {
   border: 2px solid #ec8f32;
   border-radius: 50px;
 }
-
 .modal__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .modal__btn-play {
   width: 31px;
 }
-
 .modal__btn-play img {
   width: 14px;
 }
-
 .modal__text h4 {
   max-width: 296px;
   font-weight: 500;
@@ -3002,45 +2289,35 @@ textarea:-moz-placeholder {
   line-height: 16px;
   color: #adadad;
 }
-
 .modal__text p {
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
   color: #adadad;
 }
-
 .modal__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background: #101010;
   border-radius: 12px;
   padding: 15px 35px 10px 21px;
   margin-bottom: 18px;
 }
-
 .modal-bookmarks__row {
   height: 164px;
   overflow-y: scroll;
   padding-right: 10px;
 }
-
 .modal-bookmarks__row::-webkit-scrollbar {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   width: 10px;
   max-height: 5px;
 }
-
 .modal-bookmarks__row::-webkit-scrollbar-thumb {
   background-color: #ec8f32;
   border-radius: 10px;
   height: 10px;
 }
-
 .modal-bookmarks__row-bookmarks__row {
   position: relative;
 }
@@ -3053,7 +2330,6 @@ textarea:-moz-placeholder {
   border: none;
   background-color: rgba(0, 0, 0, 0);
 }
-
 .close:focus {
   outline: none;
 }
@@ -3079,8 +2355,7 @@ textarea:-moz-placeholder {
   background-color: rgba(0, 0, 0, 0);
   outline: 0;
   cursor: pointer;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
   z-index: 999;
 }
 
@@ -3100,7 +2375,6 @@ textarea:-moz-placeholder {
   left: -28px;
   background-image: url(../img/svg/pop-img.svg);
 }
-
 .slid-prev:hover {
   background-image: url(../img/svg/pop-img-1.svg);
 }
@@ -3111,21 +2385,14 @@ textarea:-moz-placeholder {
   right: -25px;
   background-image: url(../img/svg/pop-img-next.svg);
 }
-
 .slid-next:hover {
   background-image: url(../img/svg/pop-img-next-1.svg);
 }
 
 .book-404__img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin-right: 26px;
   min-width: 142px;
   height: 142px;
@@ -3138,7 +2405,6 @@ textarea:-moz-placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #adadad;
 }
@@ -3156,16 +2422,10 @@ textarea:-moz-placeholder {
   padding-top: 86px;
   padding-bottom: 11rem;
 }
-
 .book-404__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
-
 .book-404__title {
   max-width: 44.875rem;
   font-weight: 500;
@@ -3173,11 +2433,9 @@ textarea:-moz-placeholder {
   line-height: 37px;
   color: #fff;
 }
-
 .book-404__title span {
   color: #ec8f32;
 }
-
 .book-404__text {
   padding-top: 13px;
   padding-bottom: 20px;
@@ -3187,15 +2445,12 @@ textarea:-moz-placeholder {
   line-height: 21px;
   color: #adadad;
 }
-
 .book-404__button {
   font-family: "Ubuntu";
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
   padding: 10px 32px;
@@ -3208,38 +2463,20 @@ textarea:-moz-placeholder {
   margin-top: 63px;
   background: #000;
 }
-
 .menu-footer__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 10px 27px 10px 27px;
 }
-
 .menu-footer__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .menu-footer__item p {
   padding-top: 10px;
   font-family: "Ubuntu";
@@ -3256,21 +2493,13 @@ textarea:-moz-placeholder {
 }
 
 .content-player__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .player__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 137px;
   max-width: 137px;
 }
@@ -3281,7 +2510,6 @@ textarea:-moz-placeholder {
 
 .active-link {
   color: #ec8f32;
-  -webkit-text-decoration-line: none;
   text-decoration-line: none;
 }
 
@@ -3292,40 +2520,26 @@ textarea:-moz-placeholder {
 .toast {
   margin-bottom: 20px;
 }
-
 .toast__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .toast__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px 25px 15px 20px;
   background: #f42323;
   border-radius: 12px;
 }
-
 .toast__wrapper_error {
   background: #b51a1a;
 }
-
 .toast__wrapper_success {
   background: #0b7c2b;
 }
-
 .toast__wrapper_time {
   background: #ec8f32;
 }
-
 .toast__text {
   margin-left: 18px;
   font-weight: 500;
@@ -3338,7 +2552,6 @@ textarea:-moz-placeholder {
   margin-top: 51px;
   margin-bottom: 34px;
 }
-
 .history__nav span {
   margin-left: 5px;
   margin-right: 5px;
@@ -3348,11 +2561,9 @@ textarea:-moz-placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #adadad;
 }
-
 .history__link-active {
   color: #555353;
 }
@@ -3360,47 +2571,28 @@ textarea:-moz-placeholder {
 .history-book {
   margin-top: 10px;
 }
-
 .history-book__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   border: 2px solid #222327;
   border-radius: 12px;
   background: #0b0d13;
   padding: 7px 35px 7px 13px;
   margin-bottom: 14px;
 }
-
 .history-book__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .history-book__elem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .history-book__img {
   width: 50px;
   border-radius: 10px;
 }
-
 .history-book__text {
   margin-left: 16px;
   font-weight: 500;
@@ -3408,32 +2600,22 @@ textarea:-moz-placeholder {
   line-height: 16px;
   color: #adadad;
 }
-
 .history-book__btn-next {
   width: 16px;
   height: 18px;
 }
-
 .history-book__progress {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .history-book__progress-bar {
   width: 100%;
   height: 6px;
-  background: -webkit-gradient(linear, left top, right top, from(#ec8f32), color-stop(75%, #ec8f32), color-stop(47%, #514f4f), to(#514f4f));
   background: linear-gradient(to right, #ec8f32 0%, #ec8f32 75%, #514f4f 47%, #514f4f 100%);
-  -webkit-transition: background 450ms ease-in;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
   border-radius: 5px;
 }
-
 .history-book__progress-bar::-webkit-slider-thumb {
   width: 0px;
   height: 0px;
@@ -3441,7 +2623,6 @@ textarea:-moz-placeholder {
   -webkit-appearance: none;
   cursor: ew-resize;
 }
-
 .history-book__progress span {
   padding-left: 13px;
   font-weight: 500;
@@ -3456,12 +2637,8 @@ textarea:-moz-placeholder {
 
 .feature-sub {
   min-width: 49.0625rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .history__specifications {
@@ -3469,20 +2646,14 @@ textarea:-moz-placeholder {
   font-size: 12px;
   line-height: 14px;
   color: #adadad;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 58.4375rem;
   position: relative;
 }
-
 .history__specifications-book {
   position: relative;
 }
-
 .history__specifications-book::before {
   color: #767676;
   content: url(../img/svg/unwrap-arrow.svg);
@@ -3492,12 +2663,10 @@ textarea:-moz-placeholder {
   width: 6px;
   height: 4px;
 }
-
 .history__specifications-track {
   position: relative;
   margin-right: 10.3125rem;
 }
-
 .history__specifications-track::before {
   color: #767676;
   content: url(../img/svg/unwrap-arrow.svg);
@@ -3507,11 +2676,9 @@ textarea:-moz-placeholder {
   width: 6px;
   height: 4px;
 }
-
 .history__specifications-time {
   position: relative;
 }
-
 .history__specifications-time::before {
   color: #767676;
   content: url(../img/svg/wrap-arrow.svg);
@@ -3568,22 +2735,17 @@ textarea:-moz-placeholder {
 .page {
   margin-top: 56px;
 }
-
 .page__link {
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #adadad;
 }
-
 .page__link-active {
   color: #555353;
-  -webkit-text-decoration-line: none;
   text-decoration-line: none;
 }
-
 .page span {
   margin-left: 5px;
   margin-right: 5px;
@@ -3604,25 +2766,15 @@ textarea:-moz-placeholder {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #adadad;
 }
 
 .book-purchase__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background: #0b0d13;
   padding: 21px 35px 22px 32px;
   margin-bottom: 14px;
@@ -3644,32 +2796,18 @@ textarea:-moz-placeholder {
 }
 
 .book-register__wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   max-width: 100%;
 }
-
 .book-register__wrap-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .book-register__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   max-width: 24.6875rem;
   margin-top: 10px;
 }
@@ -3682,37 +2820,19 @@ textarea:-moz-placeholder {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #ADADAD;
   border: 1px solid #fff;
   border-radius: 50px;
   padding: 7px 15px 7px 20px;
   margin-bottom: 16px;
 }
-
-.book-register__input:-ms-input-placeholder {
+.book-register__input::-moz-placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #ADADAD;
 }
-
-.book-register__input::-webkit-input-placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #ADADAD;
-}
-
-.book-register__input::-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #ADADAD;
-}
-
 .book-register__input::placeholder {
   font-weight: 400;
   font-size: 14px;
@@ -3725,9 +2845,7 @@ textarea:-moz-placeholder {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
   padding: 18px 27px;
@@ -3741,14 +2859,11 @@ textarea:-moz-placeholder {
   font-size: 26px;
   line-height: 60px;
   color: #fff;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #ec8f32;
 }
-
 .book-register__btn-active {
   color: #fff;
-  -webkit-text-decoration-line: none;
   text-decoration-line: none;
 }
 
@@ -3756,7 +2871,6 @@ textarea:-moz-placeholder {
   max-width: 33rem;
   margin-top: -39px;
 }
-
 .book-register__elem-title {
   font-weight: 700;
   font-size: 3rem;
@@ -3766,7 +2880,6 @@ textarea:-moz-placeholder {
   -webkit-text-fill-color: rgba(0, 0, 0, 0);
   background-clip: text;
 }
-
 .book-register__elem-text {
   padding-top: 10px;
   font-weight: 500;
@@ -3806,19 +2919,15 @@ textarea:-moz-placeholder {
 
 .book-text-check {
   font-weight: 400;
-  font-size: .875rem;
+  font-size: 0.875rem;
   line-height: 1rem;
   color: #fff;
   margin-bottom: 17px;
 }
 
 .book-detail-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
 }
 
@@ -3827,36 +2936,27 @@ textarea:-moz-placeholder {
 }
 
 .form-check {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 300px;
   margin-bottom: 16px;
 }
-
 .form-check__button {
   margin-left: 13px;
   font-weight: 700;
   font-size: 12px;
   line-height: 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
   background: #ec8f32;
   border-radius: 50px;
   padding: 18px 27px;
 }
-
 .form-check-btn {
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #fff;
 }
@@ -3868,9 +2968,7 @@ textarea:-moz-placeholder {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 50px;
@@ -3890,12 +2988,8 @@ textarea:-moz-placeholder {
 }
 
 .form-check-ok {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 464px;
   margin-bottom: 16px;
 }
@@ -3917,7 +3011,6 @@ textarea:-moz-placeholder {
   margin-top: 51px;
   margin-bottom: 34px;
 }
-
 .bookmark-book__nav span {
   margin-left: 5px;
   margin-right: 5px;
@@ -3927,17 +3020,13 @@ textarea:-moz-placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #adadad;
 }
-
 .bookmark-book__link-active {
-  -webkit-text-decoration-line: none;
   text-decoration-line: none;
   color: #555353;
 }
-
 .bookmark-book__link-btn {
   color: #fff;
   background-color: rgba(0, 0, 0, 0);
@@ -3954,99 +3043,60 @@ textarea:-moz-placeholder {
 .bookmark-book {
   margin-top: 10px;
 }
-
 .bookmark-book__wrap {
   padding-top: 39px;
 }
-
 .bookmark-book__wrap-del {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   min-width: 19.25rem;
 }
-
 .bookmark-book__wrapper {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border: 2px solid #222327;
   border-radius: 12px;
   background: #0b0d13;
   padding: 7px 23px 7px 13px;
   margin-bottom: 14px;
 }
-
 .bookmark-book__item-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .bookmark-book__name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 0px 20px 0px 0px;
 }
-
 .bookmark-book__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 11px 22px 11px 21px;
   background: #1f1d1d;
   border-radius: 12px;
   margin-top: 12px;
 }
-
 .bookmark-book__title {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   color: #adadad;
 }
-
 .bookmark-book__text-wrap {
   margin-left: 16px;
 }
-
 .bookmark-book__elem {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .bookmark-book__img {
   width: 50px;
   border-radius: 10px;
 }
-
 .bookmark-book__text {
   margin-left: 16px;
   font-weight: 500;
@@ -4054,41 +3104,29 @@ textarea:-moz-placeholder {
   line-height: 16px;
   color: #adadad;
 }
-
 .bookmark-book__text_item {
   margin-left: 0px;
 }
-
 .bookmark-book__btn-next {
   width: 16px;
   height: 18px;
 }
-
 .bookmark-book__btn img {
   width: 15px;
 }
-
 .bookmark-book__progress {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-right: 4.6875rem;
 }
-
 .bookmark-book__progress-bar {
   width: 100%;
   height: 6px;
-  background: -webkit-gradient(linear, left top, right top, from(#ec8f32), color-stop(75%, #ec8f32), color-stop(47%, #514f4f), to(#514f4f));
   background: linear-gradient(to right, #ec8f32 0%, #ec8f32 75%, #514f4f 47%, #514f4f 100%);
-  -webkit-transition: background 450ms ease-in;
   transition: background 450ms ease-in;
   -webkit-appearance: none;
   border-radius: 5px;
 }
-
 .bookmark-book__progress-bar::-webkit-slider-thumb {
   width: 0px;
   height: 0px;
@@ -4096,7 +3134,6 @@ textarea:-moz-placeholder {
   -webkit-appearance: none;
   cursor: ew-resize;
 }
-
 .bookmark-book__progress span {
   padding-left: 13px;
   font-weight: 500;
@@ -4104,31 +3141,23 @@ textarea:-moz-placeholder {
   line-height: 16px;
   color: #adadad;
 }
-
 .bookmark-book_active {
   margin-bottom: 14px;
   background-image: url(../img/svg/icon-up.svg);
 }
-
 .bookmark-book__specifications {
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
   color: #adadad;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 57.1875rem;
   position: relative;
 }
-
 .bookmark-book__specifications-book {
   position: relative;
 }
-
 .bookmark-book__specifications-book::before {
   color: #767676;
   content: url(../img/svg/unwrap-arrow.svg);
@@ -4138,12 +3167,10 @@ textarea:-moz-placeholder {
   width: 6px;
   height: 4px;
 }
-
 .bookmark-book__specifications-track {
   position: relative;
   margin-right: 10.3125rem;
 }
-
 .bookmark-book__specifications-track::before {
   color: #767676;
   content: url(../img/svg/unwrap-arrow.svg);
@@ -4153,11 +3180,9 @@ textarea:-moz-placeholder {
   width: 6px;
   height: 4px;
 }
-
 .bookmark-book__specifications-time {
   position: relative;
 }
-
 .bookmark-book__specifications-time::before {
   color: #767676;
   content: url(../img/svg/wrap-arrow.svg);
@@ -4173,20 +3198,12 @@ textarea:-moz-placeholder {
 }
 
 .book-data__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   max-width: 46.125rem;
   margin-top: 10px;
 }
-
 .book-data__form-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 15px;
 }
@@ -4207,37 +3224,19 @@ textarea:-moz-placeholder {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 50px;
   padding: 7px 15px 7px 27px;
   margin-bottom: 16px;
 }
-
-.book-data__input:-ms-input-placeholder {
+.book-data__input::-moz-placeholder {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #fff;
 }
-
-.book-data__input::-webkit-input-placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #fff;
-}
-
-.book-data__input::-ms-input-placeholder {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #fff;
-}
-
 .book-data__input::placeholder {
   font-weight: 400;
   font-size: 14px;
@@ -4250,9 +3249,7 @@ textarea:-moz-placeholder {
   font-weight: 700;
   font-size: 12px;
   line-height: 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #fff;
   padding: 20px 35px;
@@ -4264,18 +3261,13 @@ textarea:-moz-placeholder {
   font-weight: 500;
   font-size: 10px;
   line-height: 11px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
   padding: 6px 12px;
   background: #11a64c;
   border-radius: 5px;
 }
-
 .book-payments__btn_red {
   background: #ca0202;
 }
@@ -4290,7 +3282,6 @@ textarea:-moz-placeholder {
   margin-top: 51px;
   margin-bottom: 34px;
 }
-
 .book-payments__nav span {
   margin-left: 5px;
   margin-right: 5px;
@@ -4300,11 +3291,9 @@ textarea:-moz-placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
-  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #adadad;
 }
-
 .book-payments__link-active {
   color: #555353;
 }
@@ -4312,52 +3301,32 @@ textarea:-moz-placeholder {
 .book-payments {
   margin-top: 10px;
 }
-
 .book-payments__wrap {
   padding-top: 0px;
 }
-
 .book-payments__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   border: 2px solid #222327;
   border-radius: 12px;
   background: #0b0d13;
   padding: 7px 35px 7px 13px;
   margin-bottom: 14px;
 }
-
 .book-payments__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   min-width: 317px;
 }
-
 .book-payments__elem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .book-payments__img {
   width: 50px;
   border-radius: 10px;
 }
-
 .book-payments__text {
   margin-left: 16px;
   font-weight: 500;
@@ -4365,26 +3334,19 @@ textarea:-moz-placeholder {
   line-height: 16px;
   color: #adadad;
 }
-
 .book-payments__specifications {
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
   color: #adadad;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: relative;
   padding-right: 5.375rem;
 }
-
 .book-payments__specifications-book {
   position: relative;
 }
-
 .book-payments__specifications-book::before {
   color: #767676;
   content: url(../img/svg/unwrap-arrow.svg);
@@ -4394,11 +3356,9 @@ textarea:-moz-placeholder {
   width: 6px;
   height: 4px;
 }
-
 .book-payments__specifications-time {
   position: relative;
 }
-
 .book-payments__specifications-time::before {
   color: #767676;
   content: url(../img/svg/wrap-arrow.svg);
@@ -4408,7 +3368,6 @@ textarea:-moz-placeholder {
   width: 6px;
   height: 4px;
 }
-
 .book-payments__specifications-track::before {
   color: #767676;
   content: url(../img/svg/unwrap-arrow.svg);
@@ -4418,15 +3377,12 @@ textarea:-moz-placeholder {
   width: 6px;
   height: 4px;
 }
-
 .book-payments__btn_green {
-  margin-right: .875rem;
+  margin-right: 0.875rem;
 }
-
 .book-payments-margin {
   margin-left: 1.5rem;
 }
-
 .book-payments__span {
   display: none;
 }
@@ -4440,8 +3396,6 @@ textarea:-moz-placeholder {
 }
 
 .book-certificate__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 15px;
   max-width: 59.75rem;
@@ -4456,9 +3410,7 @@ textarea:-moz-placeholder {
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #fff;
   border: 1px solid #fff;
   border-radius: 50px;
@@ -4472,15 +3424,9 @@ textarea:-moz-placeholder {
   line-height: 0px;
   color: #fff;
   padding: 20px 45px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background: #ec8f32;
   border-radius: 50px;
@@ -4529,7 +3475,7 @@ textarea:-moz-placeholder {
 }
 
 .how-it-works-main-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -4538,7 +3484,7 @@ textarea:-moz-placeholder {
 }
 
 .how-it-works-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -4573,17 +3519,13 @@ textarea:-moz-placeholder {
 }
 
 .how-it-works-block-text {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #ADADAD;
   padding-top: 15px;
   padding-left: 34px;
@@ -4591,7 +3533,7 @@ textarea:-moz-placeholder {
 }
 
 .how-it-works-titles {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -4604,7 +3546,7 @@ textarea:-moz-placeholder {
 }
 
 .how-it-works-default-text {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -4624,13 +3566,9 @@ textarea:-moz-placeholder {
 }
 
 .how-it-works-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 69px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .how-it-works-list {
@@ -4673,7 +3611,7 @@ textarea:-moz-placeholder {
 }
 
 .connects-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -4682,7 +3620,7 @@ textarea:-moz-placeholder {
 }
 
 .connects-descr {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
@@ -4709,7 +3647,7 @@ textarea:-moz-placeholder {
 }
 
 .connects-btn {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -4720,24 +3658,17 @@ textarea:-moz-placeholder {
 }
 
 .connects-check {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   margin-bottom: 23px;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
   /* or 117% */
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #ADADAD;
 }
 
@@ -4794,7 +3725,7 @@ textarea:-moz-placeholder {
 }
 
 .errors-text {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -4816,7 +3747,7 @@ textarea:-moz-placeholder {
 }
 
 .history-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -4825,7 +3756,7 @@ textarea:-moz-placeholder {
 }
 
 .history-names {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -4836,12 +3767,8 @@ textarea:-moz-placeholder {
 }
 
 .history-cat-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 10px;
   max-width: 79%;
 }
@@ -4851,8 +3778,6 @@ textarea:-moz-placeholder {
 }
 
 .history-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 11px 23px 9px 11px;
 }
@@ -4860,12 +3785,8 @@ textarea:-moz-placeholder {
 .history-item {
   border: 2px solid #222327;
   border-radius: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .history-item:not(:last-child) {
@@ -4877,27 +3798,23 @@ textarea:-moz-placeholder {
 }
 
 .history-item-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   color: #ADADAD;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .history-item-name {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   color: #ADADAD;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .time-line {
@@ -4905,17 +3822,12 @@ textarea:-moz-placeholder {
 }
 
 .history-item-time {
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-self: center;
   display: flex;
 }
 
 .history-item-icon {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .books {
@@ -4927,7 +3839,7 @@ textarea:-moz-placeholder {
 }
 
 .books-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -4944,17 +3856,13 @@ textarea:-moz-placeholder {
 }
 
 .books-text {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #ADADAD;
 }
 
@@ -4968,7 +3876,7 @@ textarea:-moz-placeholder {
 }
 
 .buys-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -4985,22 +3893,14 @@ textarea:-moz-placeholder {
 }
 
 .profile-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .profile-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   max-width: 735px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .profile-input {
@@ -5012,33 +3912,25 @@ textarea:-moz-placeholder {
 }
 
 .profile-btn {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 0px;
   /* or 0% */
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
 }
 
 .payments-cat-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 
 .payment-status {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 10px;
@@ -5048,9 +3940,7 @@ textarea:-moz-placeholder {
   background-color: #CA0202;
   padding: 5px 20px;
   display: inline-block;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .status-payed {
@@ -5058,8 +3948,6 @@ textarea:-moz-placeholder {
 }
 
 .payment-img-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -5076,35 +3964,21 @@ textarea:-moz-placeholder {
 }
 
 .payment-name-768 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .payment-768 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .payment-item {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .payment-number {
-  -ms-flex-item-align: unset;
-      -ms-grid-row-align: unset;
-      align-self: unset;
+  align-self: unset;
 }
 
 .certificate {
@@ -5112,10 +3986,7 @@ textarea:-moz-placeholder {
 }
 
 .certificate-form {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   max-width: 960px;
   max-height: 40px;
   margin-bottom: 72px;
@@ -5126,16 +3997,12 @@ textarea:-moz-placeholder {
 }
 
 .certificate-btn {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   text-align: center;
   color: #FFFFFF;
   background-color: #EC8F32;
@@ -5145,7 +4012,7 @@ textarea:-moz-placeholder {
 }
 
 .cerificate-list {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -5155,24 +4022,18 @@ textarea:-moz-placeholder {
 }
 
 .certificate-cat-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 14px;
 }
 
 .certificate-author-name {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
   line-height: 14px;
-  -ms-flex-item-align: unset;
-      -ms-grid-row-align: unset;
-      align-self: unset;
+  align-self: unset;
   color: #ADADAD;
 }
 
@@ -5183,25 +4044,18 @@ textarea:-moz-placeholder {
 .harry {
   padding-top: 182px;
 }
-
 .harry-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-
 .harry-item:not(:last-child) {
   margin-bottom: 57px;
   padding-right: 10px;
 }
 
 .harry-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -5222,7 +4076,7 @@ textarea:-moz-placeholder {
   color: #fff;
   padding: 15px;
   border-radius: 50px;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -5232,30 +4086,20 @@ textarea:-moz-placeholder {
 }
 
 .pay-safe {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   background-color: #1F2428;
   border-radius: 15px;
   padding: 10px 5px 12px 21px;
 }
 
 .pay-safe-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .pay-safe-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -5264,7 +4108,7 @@ textarea:-moz-placeholder {
 }
 
 .pay-safe-descr {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 10px;
@@ -5274,24 +4118,18 @@ textarea:-moz-placeholder {
 }
 
 .pay-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 40px;
 }
 
 .pay-svg {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-right: 20px;
 }
 
 .pay-cards {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -5301,28 +4139,17 @@ textarea:-moz-placeholder {
 }
 
 .pay-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .pay-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .pay-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   border: 2px solid #222327;
   border-radius: 12px;
   padding: 18px 25px;
@@ -5330,24 +4157,17 @@ textarea:-moz-placeholder {
 }
 
 .pay-numbers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .pay-logo {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-right: 22px;
 }
 
 .pay-card-number {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -5356,7 +4176,7 @@ textarea:-moz-placeholder {
 }
 
 .pay-card-date {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -5369,7 +4189,7 @@ textarea:-moz-placeholder {
 }
 
 .popup-fade:before {
-  content: '';
+  content: "";
   background: #000;
   position: fixed;
   left: 0;
@@ -5394,7 +4214,7 @@ textarea:-moz-placeholder {
 }
 
 .popup-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
@@ -5408,19 +4228,13 @@ textarea:-moz-placeholder {
 }
 
 .popup-card-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 30px;
 }
 
 .popup-title-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-bottom: 26px;
 }
 
@@ -5430,25 +4244,19 @@ textarea:-moz-placeholder {
 }
 
 .select__toggle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 50px;
   cursor: pointer;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
   line-height: 24px;
   color: #ADADAD;
   padding: 0;
-  -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
-  -webkit-transition: background-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
   max-width: 92px;
   height: 36px;
@@ -5473,13 +4281,12 @@ textarea:-moz-placeholder {
   background-image: url("../img/svg/select-arrow.svg");
   height: 7px;
   width: 10px;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .select__option {
   padding: 16px 16px 11px 16px;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -5488,8 +4295,6 @@ textarea:-moz-placeholder {
 }
 
 .pay-btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -5501,7 +4306,7 @@ textarea:-moz-placeholder {
   padding: 20px;
   border: 2px solid #EC8F32;
   border-radius: 50px;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -5514,7 +4319,7 @@ textarea:-moz-placeholder {
 }
 
 .quetions-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
@@ -5541,7 +4346,7 @@ textarea:-moz-placeholder {
 .accordion dd,
 .accordion__panel {
   background-color: transparent;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
@@ -5568,25 +4373,19 @@ textarea:-moz-placeholder {
   background-color: transparent;
   border: 2px solid #222327;
   border-radius: 12px;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   color: #ADADAD;
   padding: 15px 27px 15px 27px;
   display: block;
   text-decoration: none;
-  -webkit-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
 }
-
 .accordionTitle:before,
 .accordion__Heading:before {
   content: "";
@@ -5596,21 +4395,16 @@ textarea:-moz-placeholder {
   width: 16px;
   height: 10px;
   float: right;
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .accordionTitleActive,
 .accordionTitle.is-expanded {
   background-color: transparent;
 }
-
 .accordionTitleActive:before,
 .accordionTitle.is-expanded:before {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 
 .accordionTitleActive,
@@ -5624,14 +4418,11 @@ textarea:-moz-placeholder {
   height: auto;
   overflow: hidden;
   max-height: 50em;
-  -webkit-transition: max-height 1s;
   transition: max-height 1s;
 }
-
 @media screen and (min-width: 48em) {
   .accordionItem {
     max-height: 15em;
-    -webkit-transition: max-height 0.5s;
     transition: max-height 0.5s;
   }
 }
@@ -5646,105 +4437,53 @@ textarea:-moz-placeholder {
 }
 
 .animateIn {
-  -webkit-animation: accordionIn 0.45s normal ease-in-out both 1;
-          animation: accordionIn 0.45s normal ease-in-out both 1;
+  animation: accordionIn 0.45s normal ease-in-out both 1;
 }
 
 .animateOut {
-  -webkit-animation: accordionOut 0.45s alternate ease-in-out both 1;
-          animation: accordionOut 0.45s alternate ease-in-out both 1;
-}
-
-@-webkit-keyframes accordionIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.9) rotateX(-60deg);
-            transform: scale(0.9) rotateX(-60deg);
-    -webkit-transform-origin: 50% 0;
-            transform-origin: 50% 0;
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
+  animation: accordionOut 0.45s alternate ease-in-out both 1;
 }
 
 @keyframes accordionIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.9) rotateX(-60deg);
-            transform: scale(0.9) rotateX(-60deg);
-    -webkit-transform-origin: 50% 0;
-            transform-origin: 50% 0;
+    transform: scale(0.9) rotateX(-60deg);
+    transform-origin: 50% 0;
   }
   100% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
-
-@-webkit-keyframes accordionOut {
-  0% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(0.9) rotateX(-60deg);
-            transform: scale(0.9) rotateX(-60deg);
-  }
-}
-
 @keyframes accordionOut {
   0% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(0.9) rotateX(-60deg);
-            transform: scale(0.9) rotateX(-60deg);
+    transform: scale(0.9) rotateX(-60deg);
   }
 }
-
 .bookmarks {
   padding-top: 183px;
 }
 
 .bookmark-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .bookmarks-acc-head {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   max-width: 830px;
 }
 
 .bookmarks-img-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .bookmarks-acc-img {
@@ -5759,7 +4498,7 @@ textarea:-moz-placeholder {
   max-width: unset;
   margin-bottom: 26px;
   background-color: transparent;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -5777,28 +4516,17 @@ textarea:-moz-placeholder {
 }
 
 .acc-hidden-left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .acc-hidden-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .acc-hidden {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 15px;
   background: #1F1D1D;
   border-radius: 12px;
@@ -5806,14 +4534,12 @@ textarea:-moz-placeholder {
 }
 
 .flag {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-right: 23px;
 }
 
 .acc-hidden-title {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -5822,24 +4548,16 @@ textarea:-moz-placeholder {
 }
 
 .garbage-icon {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
 }
 
 .acc-hidden-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .acc-hidden-time {
   margin-right: 173px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -5856,7 +4574,7 @@ textarea:-moz-placeholder {
 }
 
 .acc-history-track-name {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -5897,11 +4615,8 @@ textarea:-moz-placeholder {
 }
 
 .tabs__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
 }
@@ -5911,11 +4626,8 @@ textarea:-moz-placeholder {
   text-decoration: none;
   color: #ec8f32;
   text-align: center;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-shrink: 0;
+  flex-grow: 1;
   border: 1px solid transparent;
   cursor: pointer;
 }
@@ -5941,12 +4653,12 @@ textarea:-moz-placeholder {
 }
 
 .flag-icon:hover path {
-  stroke: #ec8f32;
+  stroke: rgb(236, 143, 50);
 }
 
 .flag-icon:active path {
-  fill: #ec8f32;
-  stroke: #ec8f32;
+  fill: rgb(236, 143, 50);
+  stroke: rgb(236, 143, 50);
 }
 
 .green {
@@ -6005,15 +4717,13 @@ textarea:-moz-placeholder {
 }
 
 .time-line {
-  -webkit-appearance: none;
-  /* Override default CSS styles */
+  -webkit-appearance: none; /* Override default CSS styles */
   -moz-appearance: none;
        appearance: none;
 }
 
 .time-line::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  /* Override default look */
+  -webkit-appearance: none; /* Override default look */
   appearance: none;
 }
 
@@ -6024,9 +4734,7 @@ textarea:-moz-placeholder {
   position: relative;
   height: 6px;
   display: block;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   margin-right: 13px;
 }
 
@@ -6041,13 +4749,10 @@ textarea:-moz-placeholder {
 
 .my-book__nav .active-link {
   color: #555353;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
 }
 
 .book-404__nav .active-link {
   color: #555353;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-}
-/*# sourceMappingURL=style.css.map */
+  text-decoration-line: none;
+}/*# sourceMappingURL=style.css.map */
