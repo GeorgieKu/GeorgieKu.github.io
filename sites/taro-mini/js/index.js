@@ -73,3 +73,29 @@ const swiper = new Swiper('.swiper-1', {
     },
 
   });
+
+  $("video").click(function() {
+
+    //console.log(this);
+
+    if (this.paused) {
+        $(this).parent().find('.play-btn').addClass('disabled')
+        this.play();
+
+    } else {
+        $(this).parent().find('.play-btn').removeClass('disabled')
+        this.pause();
+
+    }
+
+});
+$(".play-btn").click(function() {
+    if ($(this).parent().find('video').get(0).paused) {
+        $(this).addClass('disabled')
+        $(this).parent().find('video').get(0).play()
+    } else {
+        $(this).removeClass('disabled')
+        $(this).parent().find('video').get(0).pause()
+    }
+
+});

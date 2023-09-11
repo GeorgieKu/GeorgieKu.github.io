@@ -12,17 +12,157 @@
     <link rel="stylesheet" href="./style/normalize.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T25VCD5');</script>
+    <!-- End Google Tag Manager -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-165882189-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-165882189-1');
+</script>
+<style>
+    .preloader {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, .6);
+        z-index: 100000
+    }
+
+    .preloader_container {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transform: translateY(-50%);
+    }
+
+    .loader,
+    .loader:after {
+        overflow: hidden;
+        border-radius: 50%;
+        width: 10em;
+        height: 10em;
+    }
+
+    .loader {
+        margin: 60px auto;
+        font-size: 10px;
+        position: relative;
+        text-indent: -9999em;
+        border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+        border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+        border-left: 1.1em solid red;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation: load8 1.1s infinite linear;
+        animation: load8 1.1s infinite linear;
+    }
+
+    .form-politics {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .form-politics a {
+        text-decoration: underline;
+        text-underline-offset: 1px;
+    }
+
+    @-webkit-keyframes load8 {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes load8 {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    .btn-action {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px
+    }
+</style>
+<script>
+    let referrer_url = document.referrer;
+    let matches = referrer_url.match('www.google.com|yandex.ru')
+    if (matches) {
+        let utm = {
+            utm_source: matches[0],
+            utm_medium: matches[0],
+            utm_campaign: matches[0],
+            utm_content: matches[0],
+            utm_term: matches[0],
+        }
+        localStorage.setItem('utm', JSON.stringify(utm));
+    }
+</script>
     <title>Document</title>
 </head>
 
 <body>
+     <!-- Google Tag Manager (noscript) -->
+     <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T25VCD5"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="preloader">
+        <div class="preloader_container">
+            <div class="loader">loading</div>
+        </div>
+    </div>
     <header class="header">
-        <img src="./img/photo.jpg" alt="header">
+        <img src="./images/photo.jpg" alt="header">
     </header>
     <main>
         <section>
             <div class="container">
-                <img class="image-1" src="./img/head-1-1.jpg" alt="img">
+                <img class="image-1" src="./images/head-1-1.jpg" alt="img">
                 <h1 class="main-title">Невероятная история Натальи,
                     которая из бедной женщины превратилась в успешную и богатую предпринимательницу, покорила всю Россию
                 </h1>
@@ -36,7 +176,7 @@
                             Шокирующая история Натальи без цензуры только у нас на сайте:</span>
                     </div>
                     <figure class="figure">
-                        <img src="./img/photo-1.jpg" alt="photo">
+                        <img src="./images/photo-1.jpg" alt="photo">
                     <figcaption class="figcaption-gray">Наталья</figcaption>
                     </figure>
                 </div>
@@ -79,7 +219,7 @@
                             Конечно, сложно поверить, что браслет может решить все мои проблемы. </span>
                     </div>
                     <figure class="figure">
-                        <img src="./img/photo-2.jpg" alt="photo">
+                        <img src="./images/photo-2.jpg" alt="photo">
                     <figcaption class="figcaption-gray">Наталья и Татьяна</figcaption>
                     </figure>
                 </div>
@@ -111,7 +251,7 @@
                         </p>
                     </div>
                     <figure class="figure">
-                        <img src="./img/photo-3.jpg" alt="photo">
+                        <img src="./images/photo-3.jpg" alt="photo">
                         <figcaption class="figcaption-gray">Тибетский монах</figcaption>
                     </figure>
 
@@ -139,17 +279,17 @@
                             <span>на путь к изменениям</span> с помощью буддийского амулета.</p>
                     </div>
                     <figure class="figure">
-                        <img src="./img/photo-4.jpg" alt="photo">
+                        <img src="./images/photo-4.jpg" alt="photo">
                         <figcaption class="figcaption-gray">Амулет “Дхармачакра”</figcaption>
                     </figure>
                 </div>
                 <p class="italic-text flex"><span class="lh">“</span>История Натальи — это история о том, что независимо от жизненных испытаний, всегда есть надежда на лучшее. Каждый из нас может изменить свою судьбу и обрести счастье. Каждый заслуживает право быть счастливым. Монахи верят в это всем сердцем. И помогают достичь полной реализации во всех сферах жизни, использовав силу амулета «Дхармачакра».<span>”</span></p>
                 <a href="https://dharmamulet.com/" class="button btn-reset">подробнее об амулете</a>
-                <img class="mb-36" src="./img/photo-5.jpg" alt="photo">
+                <img class="mb-36" src="./images/photo-5.jpg" alt="photo">
                 <h2 class="main-title">Вот как говорит Наталья о свойствах амулета:</h2>
                 <span class="gray-text gray-line mb-65">Невероятная история Натальи, которая из бедной женщины превратилась в успешную и богатую предпринимательницу, покорила всю Россию</span>
                 <figure class="figure float">
-                    <img src="./img/photo-6.jpg" alt="photo">
+                    <img src="./images/photo-6.jpg" alt="photo">
                     <figcaption class="figcaption-gray">Амулет “Дхармачакра”</figcaption>
                 </figure>
                 <p class="black-text mb-36">
@@ -170,13 +310,13 @@
                     
                     <a href="https://dharmamulet.com/" class="button btn-reset">подробнее об амулете</a>
 
-                    <img class="mb-36" src="./img/photo-7.jpg" alt="photo">
+                    <img class="mb-36" src="./images/photo-7.jpg" alt="photo">
                     <h2 class="main-title">Мнение экстрасенса</h2>
                     <span class="gray-text gray-line mb-36">В чем секрет тайских амулетов? Мы решили взять комментарий 
                         у экстрасенса, чтобы узнать, действительно ли они помогают. 
                         </span>
                         <figure class="figure float">
-                            <img src="./img/photo-8.jpg" alt="photo">
+                            <img src="./images/photo-8.jpg" alt="photo">
                             <figcaption class="figcaption-gray">Эксперт-эзотерик<br>
                                 Александр Шепс</figcaption>
                         </figure>

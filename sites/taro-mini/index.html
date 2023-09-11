@@ -18,10 +18,153 @@
     <link rel="stylesheet" href="./style/normalize.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T25VCD5');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-165882189-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-165882189-1');
+    </script>
+    <style>
+        .preloader {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, .6);
+            z-index: 100000
+        }
+
+        .preloader_container {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            transform: translateY(-50%);
+        }
+
+        .loader,
+        .loader:after {
+            overflow: hidden;
+            border-radius: 50%;
+            width: 10em;
+            height: 10em;
+        }
+
+        .loader {
+            margin: 60px auto;
+            font-size: 10px;
+            position: relative;
+            text-indent: -9999em;
+            border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+            border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+            border-left: 1.1em solid red;
+            -webkit-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-animation: load8 1.1s infinite linear;
+            animation: load8 1.1s infinite linear;
+        }
+
+        .form-politics {
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .form-politics a {
+            text-decoration: underline;
+            text-underline-offset: 1px;
+        }
+
+        @-webkit-keyframes load8 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes load8 {
+            0% {
+                -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        .btn-action {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px
+        }
+    </style>
+    <script>
+        let referrer_url = document.referrer;
+        let matches = referrer_url.match('www.google.com|yandex.ru')
+        if (matches) {
+            let utm = {
+                utm_source: matches[0],
+                utm_medium: matches[0],
+                utm_campaign: matches[0],
+                utm_content: matches[0],
+                utm_term: matches[0],
+            }
+            localStorage.setItem('utm', JSON.stringify(utm));
+        }
+    </script>
+
     <title>Document</title>
 </head>
 
 <body>
+     <!-- Google Tag Manager (noscript) -->
+     <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T25VCD5"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="preloader">
+        <div class="preloader_container">
+            <div class="loader">loading</div>
+        </div>
+    </div>
     <header class="header mb-80">
         <img src="./images/1.jpg" alt="header">
     </header>
@@ -147,7 +290,6 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <span class="grey-text mt-73">Фото обладательниц амулета</span>
                     <div class="swiper-buttons">
                         <div class="swiper-button-next-1 button-next"><svg width="41" height="71" viewBox="0 0 41 71" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.21696 65.8109L35.6226 35.4053L5.21697 4.99968" stroke="#A4A4A4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
@@ -217,8 +359,14 @@
                     Можно сделать сразу несколько активаций и улучшить разные сферы жизни. Либо активировать <span>все
                         колесо</span>
                     и полностью <span>исцелить судьбу.</span> </p>
-                <figure class="mb-80 figure">
-                    <img src="./images/12.jpg" alt="photo">
+                <figure class="mb-80 figure figure_relative">
+                  
+                        <video class="about__video" controls width="320" height="500"
+                        src="./video/1.mp4">
+                    </video>
+                    <a href="javascript:void(0)" class="play-btn">
+                        
+                    </a>
                     <figcaption class="grey-text">Рассказ монаха</figcaption>
                 </figure>
                 <h2 class="main-title mb-60">Как получить амулет, не отправляясь в Тибет</h2>
@@ -363,6 +511,7 @@
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

@@ -1,6 +1,9 @@
 @media (max-width: 870px) {
   .flexbox {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .figcaption-gray {
     text-align: left;
@@ -13,12 +16,15 @@
   }
   .figure {
     margin-bottom: 15px;
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
   }
   .figcaption-gray {
     margin-top: unset;
   }
 }
+
 @media (max-width: 576px) {
   .main-title {
     font-size: 24px;
@@ -69,4 +75,5 @@
     display: block;
     margin-bottom: 20px;
   }
-}/*# sourceMappingURL=media.css.map */
+}
+/*# sourceMappingURL=media.css.map */
