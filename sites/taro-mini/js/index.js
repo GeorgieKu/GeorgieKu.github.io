@@ -10,10 +10,7 @@ const swiper = new Swiper('.swiper-1', {
         }
     },
   
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
+
   
     // Navigation arrows
     navigation: {
@@ -99,3 +96,13 @@ $(".play-btn").click(function() {
     }
 
 });
+
+
+
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  if (isSafari) {
+    var playBtns = document.getElementsByClassName("play-btn");
+    for (var i = 0; i < playBtns.length; i++) {
+      playBtns[i].style.display = "none";
+    }
+  }
