@@ -21,7 +21,7 @@
     <title>Пасторское озеро</title>
 </head>
 
-<body>
+<body class="welcome-page">
     <div class="white-header__block infrastructure-header__block">
         <header class="header white-header wow fadeInDown">
             <div class="container-50">
@@ -1003,72 +1003,7 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
         crossorigin="anonymous"></script>
     <script src="./js/index.js"></script>
-    <script>
-        var tabButtons = document.querySelectorAll('.sale-tab__btn');
-     var tabContents = document.querySelectorAll('.tab-content');
-   
-     tabButtons.forEach(function(button) {
-       button.addEventListener('click', function() {
-         var tabId = button.getAttribute('id');
-   
-         // Добавить класс active__tab к активной кнопке таба
-         tabButtons.forEach(function(btn) {
-           btn.classList.remove('active__tab2');
-         });
-         button.classList.add('active__tab2');
-   
-         // Показать контент, соответствующий нажатой кнопке
-         tabContents.forEach(function(content) {
-           var contentTabId = content.getAttribute('data-tab');
-   
-           if (contentTabId === tabId) {
-             content.style.display = 'block';
-           } else {
-             content.style.display = 'none';
-           }
-         });
-       });
-     });
-   
-     // Проверить, есть ли кнопка с классом active__tab при загрузке страницы
-     var activeTabButton = document.querySelector('.sale-tab__btn.active__tab2');
-   
-     if (activeTabButton) {
-       var activeTabId = activeTabButton.getAttribute('id');
-       var activeTabContent = document.querySelector('.tab-content[data-tab="' + activeTabId + '"]');
-   
-       activeTabContent.style.display = 'block';
-     }
-     
-   
-     function handleViewportChange(viewport) {
-     if (viewport.matches) {
-       // Ваш код для ширины экрана 576 пикселей или меньше
-       const swiper9 = new Swiper('.sale__swiper', {
-       
-       direction: 'horizontal',
-       loop: false,
-       slidesPerView: 'auto',
-       spaceBetween: 30,
-     
-     
-     
-     
-     });
-     
-       // Добавьте здесь вашу логику
-     }
-   }
-   
-   var viewport576 = window.matchMedia("(max-width: 576px)");
-   handleViewportChange(viewport576); // Обработка исходного положения окна просмотра
-   
-   // Добавление обработчика события для отслеживания изменений в окне просмотра
-   viewport576.addEventListener("change", handleViewportChange);
-       
-   
-    
-       </script>
+
 </body>
 
 </html>

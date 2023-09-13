@@ -21,7 +21,7 @@
     <title>Пасторское озеро</title>
 </head>
 
-<body>
+<body class="loyalty-page">
     <div class="white-header__block base-header-padding">
         <header class="header white-header loyalty-header wow fadeInDown">
             <div class="container-50">
@@ -980,48 +980,7 @@
        
       
     <script src="./js/index.js"></script>
-    <script>
-        var header = document.querySelector('.header');
-var table = document.getElementById('table');
-var fixedLogo = document.querySelector('.header-fixed-logo');
-var logo = document.querySelector('.header__logo-svg');
-var headerFlexbox = document.querySelector('.header__flexbox');
-var headerFixedMenu = document.querySelector('.header__fixed-menu');
 
-
-function handleScroll() {
-  var tableOffset = table.offsetTop;
-  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-  var windowWidth = window.innerWidth;
-
-  if (scrollPosition >= tableOffset && windowWidth >= 1240) {
-    header.style.position = 'fixed';
-    header.style.top = "0";
-    header.style.width = "100%";
-    header.style.backgroundColor = "#FFF";
-    header.style.padding = "25px 0 0";
-    headerFlexbox.style.borderBottom = "1px solid #B5B6B7";
-    headerFlexbox.style.padding = '0 0 25px'
-    headerFixedMenu.style.display = 'flex'
-    fixedLogo.style.display = "block"
-    logo.style.display = "none"
-  } else {
-    header.style.position = 'static';
-    header.style.top = "";
-    header.style.width = "";
-    header.style.backgroundColor = "";
-    header.style.padding = "";
-    headerFlexbox.style.borderBottom = "";
-    headerFlexbox.style.padding = ''
-    headerFixedMenu.style.display = ''
-    fixedLogo.style.display = ""
-    logo.style.display = ""
-  }
-}
-
-window.addEventListener('scroll', handleScroll);
-
-    </script>
 </body>
 
 </html>

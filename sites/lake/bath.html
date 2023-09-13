@@ -21,7 +21,7 @@
     <title>Пасторское озеро</title>
 </head>
 
-<body>
+<body class="bath-page">
     <div class="white-header__block base-header-padding">
         <header class="header white-header gaiety-header wow fadeInDown">
             <div class="container-50">
@@ -1221,83 +1221,7 @@
         crossorigin="anonymous"></script>
         <script src="./js/wow.min.js"></script>
     <script src="./js/index.js"></script>
-    <script>
-    var tabButtons = document.querySelectorAll('.sale-tab__btn');
-var tabContents = document.querySelectorAll('.tab-content');
-
- tabButtons.forEach(function(button) {
-   button.addEventListener('click', function() {
-     var tabId = button.getAttribute('id');
-
-     // Добавить класс active__tab к активной кнопке таба
-     tabButtons.forEach(function(btn) {
-       btn.classList.remove('active__tab1');
-     });
-     button.classList.add('active__tab1');
-
-     // Показать контент, соответствующий нажатой кнопке
-     tabContents.forEach(function(content) {
-       var contentTabId = content.getAttribute('data-tab');
-
-       if (contentTabId === tabId) {
-         content.style.display = 'block';
-       } else {
-         content.style.display = 'none';
-       }
-     });
-   });
- });
-
- // Проверить, есть ли кнопка с классом active__tab при загрузке страницы
- var activeTabButton = document.querySelector('.sale-tab__btn.active__tab1');
-
- if (activeTabButton) {
-   var activeTabId = activeTabButton.getAttribute('id');
-   var activeTabContent = document.querySelector('.tab-content[data-tab="' + activeTabId + '"]');
-
-   activeTabContent.style.display = 'block';
- };
-
- var tabButtons1 = document.querySelectorAll('.bath-accessories-tab__btn');
- var tabContents1 = document.querySelectorAll('.bath-accessories-tab-content');
-
- tabButtons1.forEach(function(button) {
-   button.addEventListener('click', function() {
-     var tabId = button.getAttribute('id');
-
-     // Добавить класс active__tab к активной кнопке таба
-     tabButtons1.forEach(function(btn) {
-       btn.classList.remove('active__tab1');
-     });
-     button.classList.add('active__tab1');
-
-     // Показать контент, соответствующий нажатой кнопке
-     tabContents1.forEach(function(content) {
-       var contentTabId = content.getAttribute('data-tab');
-
-       if (contentTabId === tabId) {
-         content.style.display = 'block';
-       } else {
-         content.style.display = 'none';
-       }
-     });
-   });
- });
-
- // Проверить, есть ли кнопка с классом active__tab при загрузке страницы
- var activeTabButton1 = document.querySelector('.bath-accessories-tab__btn.active__tab1');
-
- if (activeTabButton1) {
-   var activeTabId = activeTabButton.getAttribute('id');
-   var activeTabContent = document.querySelector('.tab-content[data-tab="' + activeTabId + '"]');
-
-   activeTabContent.style.display = 'block';
- }
-   
-
-   
-    
-       </script>
+ 
 </body>
 
 </html>
