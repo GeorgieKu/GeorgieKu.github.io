@@ -1,7 +1,6 @@
 $fc:rgb(226, 232, 240);
 $fc2:rgb(148, 163, 184);
-
-
+$bg: rgb(15, 23, 42);
 
 @font-face {
     font-family: Inter;
@@ -93,7 +92,7 @@ h3 {
 
 
 body {
-    background: rgb(15, 23, 42);
+    background: $bg;
     font-family: 'Inter', sans-serif;
     color: $fc2;
 }
@@ -479,9 +478,9 @@ body {
 }
 
 #toggles{
-    width:60px;
-    margin:50px auto;
-    text-align:center;
+    width:40px;
+  
+
     }
     .ios-toggle,.ios-toggle:active{
     position:absolute;
@@ -500,12 +499,12 @@ body {
     font-size:12px;
     line-height:16px;
     width:100%;
-    height:36px;
+    height:24px;
     /*border-radius*/
     -webkit-border-radius:18px;
        -moz-border-radius:18px;
             border-radius:18px;
-    background:#f8f8f8;
+    background:rgb(15, 23, 42);
     cursor:pointer;
     }
     .checkbox-label:before{
@@ -515,8 +514,8 @@ body {
     z-index:1;
     line-height:34px;
     text-indent:40px;
-    height:36px;
-    width:36px;
+    height:24px;
+    width:24px;
     /*border-radius*/
     -webkit-border-radius:100%;
        -moz-border-radius:100%;
@@ -526,9 +525,9 @@ body {
     right:auto;
     background:white;
     /*box-shadow*/
-    -webkit-box-shadow:0 3px 3px rgba(0,0,0,.2),0 0 0 2px #dddddd;
-       -moz-box-shadow:0 3px 3px rgba(0,0,0,.2),0 0 0 2px #dddddd;
-            box-shadow:0 3px 3px rgba(0,0,0,.2),0 0 0 2px #dddddd;
+    -webkit-box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+       -moz-box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+            box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
             -webkit-transition:.25s ease-in-out;
    -moz-transition:.25s ease-in-out;
      -o-transition:.25s ease-in-out;
@@ -541,7 +540,7 @@ outline:none;
     position:absolute;
     z-index:0;
     top:0;
-    left:-300px;
+    left:-159px;
     padding:10px;
     height:100%;
     width:300px;
@@ -556,12 +555,13 @@ outline:none;
     }
     .ios-toggle:checked + .checkbox-label{
     /*box-shadow*/
-    -webkit-box-shadow:inset 0 0 0 20px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
-       -moz-box-shadow:inset 0 0 0 20px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
-            box-shadow:inset 0 0 0 20px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
+    -webkit-box-shadow:inset 0 0 0 20px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
+       -moz-box-shadow:inset 0 0 0 20px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
+            box-shadow:inset 0 0 0 20px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
     }
+
     .ios-toggle:checked + .checkbox-label:before{
-    left:calc(100% - 36px);
+    left:calc(100% - 24px);
     /*box-shadow*/
     -webkit-box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
        -moz-box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
@@ -569,8 +569,8 @@ outline:none;
     }
     .ios-toggle:checked + .checkbox-label:after{
     content:attr(data-on);
-    left:60px;
-    width:36px;
+    left:40px;
+    width:24px;
     -webkit-transition:.25s ease-in-out;
    -moz-transition:.25s ease-in-out;
      -o-transition:.25s ease-in-out;
@@ -580,18 +580,18 @@ outline:none;
     
     #checkbox1 + .checkbox-label{
     /*box-shadow*/
-    -webkit-box-shadow:inset 0 0 0 0px rgba(19,191,17,1),0 0 0 2px #dddddd;
-       -moz-box-shadow:inset 0 0 0 0px rgba(19,191,17,1),0 0 0 2px #dddddd;
-            box-shadow:inset 0 0 0 0px rgba(19,191,17,1),0 0 0 2px #dddddd;
+    -webkit-box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+       -moz-box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+       box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
     }
     #checkbox1:checked + .checkbox-label{
     /*box-shadow*/
-    -webkit-box-shadow:inset 0 0 0 18px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
-       -moz-box-shadow:inset 0 0 0 18px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
-            box-shadow:inset 0 0 0 18px rgba(19,191,17,1),0 0 0 2px rgba(19,191,17,1);
+    -webkit-box-shadow:inset 0 0 0 18px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
+       -moz-box-shadow:inset 0 0 0 18px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
+            box-shadow:inset 0 0 0 18px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
     }
     #checkbox1:checked + .checkbox-label:after{
-    color:rgba(19,191,17,1);
+    color:rgba(226, 232, 240, 0.1);
     -webkit-transition:.25s ease-in-out;
    -moz-transition:.25s ease-in-out;
      -o-transition:.25s ease-in-out;

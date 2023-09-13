@@ -6,11 +6,11 @@ new AirDatepicker('#datapicker', {
 const swiper = new Swiper('.hotel__swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: false,
+    loop: true,
     spaceBetween: 20,
     slidesPerView: 'auto',
     centeredSlides: true,
-    initialSlide: 1,
+   
 
   });
 
@@ -35,10 +35,9 @@ const swiper = new Swiper('.hotel__swiper', {
   const swiper4 = new Swiper('.rooms__swiper', {
     // Optional parameters
     direction: 'horizontal',
-    loop: false,
+    loop: true,
     spaceBetween: 20,
     slidesPerView: 'auto',
-    initialSlide: 1,
     centeredSlides: true,
     breakpoints: {
       320: {
