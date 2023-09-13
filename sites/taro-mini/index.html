@@ -1,518 +1,197 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap" rel="stylesheet">
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/normalize.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
-
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start':
-                new Date().getTime(), event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-T25VCD5');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-165882189-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'UA-165882189-1');
-    </script>
-    <style>
-        .preloader {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            width: 100%;
-            height: 100vh;
-            background-color: rgba(0, 0, 0, .6);
-            z-index: 100000
-        }
-
-        .preloader_container {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            right: 0;
-            width: 100%;
-            transform: translateY(-50%);
-        }
-
-        .loader,
-        .loader:after {
-            overflow: hidden;
-            border-radius: 50%;
-            width: 10em;
-            height: 10em;
-        }
-
-        .loader {
-            margin: 60px auto;
-            font-size: 10px;
-            position: relative;
-            text-indent: -9999em;
-            border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-            border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-            border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-            border-left: 1.1em solid red;
-            -webkit-transform: translateZ(0);
-            -ms-transform: translateZ(0);
-            transform: translateZ(0);
-            -webkit-animation: load8 1.1s infinite linear;
-            animation: load8 1.1s infinite linear;
-        }
-
-        .form-politics {
-            font-size: 10px;
-            text-align: center;
-        }
-
-        .form-politics a {
-            text-decoration: underline;
-            text-underline-offset: 1px;
-        }
-
-        @-webkit-keyframes load8 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes load8 {
-            0% {
-                -webkit-transform: rotate(0deg);
-                transform: rotate(0deg);
-            }
-
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-
-        .btn-action {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px
-        }
-    </style>
-    <script>
-        let referrer_url = document.referrer;
-        let matches = referrer_url.match('www.google.com|yandex.ru')
-        if (matches) {
-            let utm = {
-                utm_source: matches[0],
-                utm_medium: matches[0],
-                utm_campaign: matches[0],
-                utm_content: matches[0],
-                utm_term: matches[0],
-            }
-            localStorage.setItem('utm', JSON.stringify(utm));
-        }
-    </script>
-
     <title>Document</title>
 </head>
-
 <body>
-     <!-- Google Tag Manager (noscript) -->
-     <noscript>
-        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T25VCD5"
-                height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <div class="preloader">
-        <div class="preloader_container">
-            <div class="loader">loading</div>
-        </div>
-    </div>
-    <header class="header mb-80">
-        <img src="./images/1.jpg" alt="header">
+    <header>
+        <svg class="logo" width="106" height="11" viewBox="0 0 106 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.97487 9.93434L7.76531 10.5818V10.804C5.9357 10.804 4.1061 10.804 2.27643 10.804V10.5818L4.08188 9.9289V1.04862H1.54305L0.318871 3.54296H0V0.190186C3.35229 0.190186 6.70446 0.190186 10.0567 0.190186V3.54296H9.73788L8.5137 1.04862H5.97487V9.93434Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2403 10.8041V10.5819L21.1511 10.0325L16.9693 0.114258H15.817L11.6596 10.0423L10.5898 10.582V10.8041C11.7697 10.8041 12.9497 10.8041 14.1296 10.8041V10.582L12.6929 10.0624L13.8839 7.2136H17.8566L19.0481 10.058L17.5994 10.582V10.8041C19.1464 10.8041 20.6934 10.8041 22.2403 10.8041V10.8041ZM14.2639 6.30468L15.8683 2.46697L17.4759 6.30468H14.2639Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.4805 0.208252V0.430425L24.8879 1.04249V9.89819L23.5323 10.582V10.8041C25.0758 10.8041 26.6192 10.8041 28.1626 10.8041V10.582L26.9381 9.95974V5.8973H28.0982L31.1768 10.8041C32.1954 10.8041 33.214 10.8041 34.2327 10.8041V10.582L33.1213 10.0173L30.0247 5.37973C30.9859 5.04986 32.2468 4.33133 32.2468 2.83137C32.2468 0.407689 29.4895 0.208313 29.4895 0.208313C27.4865 0.208313 25.4835 0.208313 23.4805 0.208313L23.4805 0.208252ZM26.9381 5.11355V1.09426H28.5225C28.5225 1.09426 30.1275 1.2962 30.1686 3.05342C30.2097 4.81064 28.3167 5.11355 28.3167 5.11355H26.9382H26.9381Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M70.249 10.8041V10.582L71.5892 9.90088C71.5892 6.97107 71.5892 4.04131 71.5892 1.11149L70.249 0.430425V0.208252C73.0826 0.208252 75.9162 0.208252 78.7498 0.208252V1.01388V2.95287H78.5235L77.3613 1.01388H73.5238V4.91424H76.2713L77.1187 3.50045H77.345C77.345 4.70832 77.345 5.91619 77.345 7.12405H77.1187L76.2771 5.71987H73.5238V9.99843H77.7805L78.9556 7.67909H79.182V9.99843V10.8041C76.2043 10.8041 73.2267 10.8041 70.249 10.8041V10.8041Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M81.0723 10.8041V10.582L82.4125 9.90088V1.11149L81.0723 0.430425V0.208252C82.0402 0.208252 83.0081 0.208252 83.976 0.208252L90.3342 7.62781V1.12139L88.4209 0.430548V0.208374C89.8414 0.208374 91.2621 0.208374 92.6826 0.208374V0.430548L91.3424 1.11161V10.8042H90.4586L83.6472 3.00904V9.97288L85.334 10.582V10.8042C83.9134 10.8042 82.4928 10.8042 81.0723 10.8042V10.8041Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M55.417 0.208252H53.4824V0.208313H52.042V0.430487L53.4824 1.16247V9.84991L52.042 10.5819V10.8041H53.4824H53.7092H55.1902H55.417H56.8574V10.5819L55.417 9.84991V1.16247L56.8574 0.430487V0.208313H55.417V0.208252Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M105.227 10.8041V10.5819L104.137 10.0325L99.9556 0.114258H98.8033L94.6459 10.0423L93.5762 10.582V10.8041C94.7561 10.8041 95.936 10.8041 97.1159 10.8041V10.582L95.6793 10.0624L96.8702 7.2136H100.843L102.034 10.058L100.586 10.582V10.8041C102.133 10.8041 103.68 10.8041 105.227 10.8041V10.8041ZM97.2503 6.30468L98.8546 2.46697L100.462 6.30468H97.2503Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M58.6661 0.208252V0.430425L60.0734 1.04249V9.89819L58.7179 10.582V10.8041C60.2613 10.8041 61.8047 10.8041 63.3481 10.8041V10.582L62.1237 9.95974V5.8973H63.2838L66.3623 10.8041C67.381 10.8041 68.3995 10.8041 69.4182 10.8041V10.582L68.3069 10.0173L65.2103 5.37973C66.1714 5.04986 67.4323 4.33133 67.4323 2.83137C67.4323 0.407689 64.6751 0.208313 64.6751 0.208313C62.6721 0.208313 60.669 0.208313 58.666 0.208313L58.6661 0.208252ZM62.1237 5.11355V1.09426H63.7081C63.7081 1.09426 65.313 1.2962 65.3542 3.05342C65.3953 4.81064 63.5023 5.11355 63.5023 5.11355H62.1237H62.1237Z" fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M40.5558 0C43.6522 0 46.1624 2.46243 46.1624 5.5C46.1624 8.53757 43.6522 11 40.5558 11C37.4594 11 34.9492 8.53757 34.9492 5.5C34.9492 2.46243 37.4594 0 40.5558 0ZM40.1649 0.791634C44.3461 0.314771 45.8626 9.98619 40.9294 10.2084C36.7245 10.3977 35.5609 1.31678 40.1649 0.791634V0.791634Z" fill="white"/>
+            </svg>
+            
     </header>
     <main>
-        <section>
+        <section class="first">
             <div class="container">
-                <h1 class="main-title mb-60">Необъяснимые чудеса тибетского храма: свидетельство очевидца</h1>
-                <p class="black-text mb-80"><span>Тибет — самое мистическое место на земле,</span> полное загадок и тайн,
-                    которые тщательно берегут от любопытных глаз тибетские монахи.<br><br>
-              Страна снегов богата на монастыри и храмы — центры духовной силы. Все храмы
-                    священны, но есть <span>один особенный.</span> О нем и его монахах давно ходят легенды. Находится он
-                    в Гьянгдзе — уезде городского округа Шигадзе. </p>
-                <figure class="figure mb-80">
-                    <img src="./images/2.jpg" alt="photo">
-                    <figcaption class="grey-text">Фото храма</figcaption>
-                </figure>
-                <p class="black-text mb-80">Он настолько древний, что у него даже нет названия. Но все знают, что он
-                    <span>самый мощный</span> и таинственный.<br><br>
+                <h1 class="title">Как Таро поможет именно вам?</h1>
+            <p class="text-1">С помощью теста вы узнаете, стоит ли
+                вам использовать Таро для решения
+                разных жизненных вопросов –
+                собственных и своих близких.</p>
+            <span class="text-2">Точность теста – 97%! </span>
+            <img src="./images/1.png" alt="photo">
+            <span class="text-3">Время прохождения ~ 5 минут.</span>
+            <p class="text-3">С помощью теста вы узнаете истинные причины неудач в разных сферах жизни, и как изучение Таро поможет решить ваши проблемы!</p>
+            <a class="button btn-reset" href="https://t.me/School_taroIrena_bot?start=taro_you">Пройти тест</a>
+        </div>
+        </section>
+        <section class="que">
+            <div class="container">
+                <div class="que-block">
+                    <ul class="list list-reset">
+                        <li>
+                            <span class="number colored-1">11 К+</span>
+                            <span class="list-text-2">женщин прошли этот тест</span>
+                        </li>
+                        <li>
+                            <span class="number colored-2">97%</span>
+                            <span class="list-text-2">подтвердили достоверность результатов</span>
+                        </li>
+                        <li>
+                            <span class="number colored-3">78%</span>
+                            <span class="list-text-2">нашли выход из ситуации благодаря Таро, применив рекомендации по результатам теста.</span>
+                        </li>
+                        
 
-            
-                 Считается, что возведение храма начал святой монах, который обладал особыми
-                    силами и <span> мог менять судьбы</span> людей одним прикосновением.<br><br>
-
-               
-              Говорят, что служители этого храма настолько духовно обогащены, что
-                    буквально могут решить любую проблему,
-                    с которой к ним обращаются прихожане. Но, как известно, простым людям <span>нет доступа</span> в эти
-                    места.</p>
-                <figure class="figure mb-80">
-                    <img src="./images/3.jpg" alt="photo">
-                    <figcaption class="grey-text">Монах в храме</figcaption>
-                </figure>
-                <p class="black-text mb-80">В священный храм не так просто попасть. Но все же нашему корреспонденту дали
-                    разрешение пройти в храм, пообщаться
-                    с монахами и <span> узнать их секреты.</span> И это не просто случайность. Монах-основатель этого
-                    храма еще в древности завещал один раз в год приоткрывать завесу тайны непосвященным. Цель —
-                    давать людям шанс узнать о возможностях, доступных тем, кто годами очищал свое сознание с помощью
-                    медитаций.<br><br>
-                Человек, которому доверялись тайны, предварительно просматривался монахами с
-                    помощью тибетской астрологии на наличие высоких душевных качеств и внутреннего благородства. Затем
-                    проходил <span>собеседование с монахом.</span>
-                    И только после этого был допущен к монашеским тайнам.<br><br>
-
-                
-                <span>Это уникальный материал.</span> И то, что вы в нем прочитаете, очень
-                    долго хранилось в секрете. Впереди вас ждет рассказ от первого лица и ответ, чем и как вам помогут
-                    тибетские монахи.</p>
-                <figure class="figure mb-80">
-                    <img src="./images/4.jpg" alt="photo">
-                    <figcaption class="grey-text">Тибетский монах</figcaption>
-                </figure>
-                <h2 class="main-title mb-60">Почему в тибетских храмах происходят чудеса</h2>
-                <p class="black-text mb-80">Храм находится в сердце Тибета и считается самым <span>закрытым.</span>
-                    Местные монахи являются хранителями древнейших знаний и ведут замкнутый и довольно размеренный образ
-                    жизни. По округе они слывут наиболее сильными и светлыми. <br><br>
-
-                    Часто, начиная свой духовный путь еще ребенком, они посвящают <span>всю свою жизнь</span> духовному
-                    развитию. Молятся
-                    и медитируют в храме практически беспрерывно, чтобы постоянно поддерживать высокий уровень вибраций.
-                    Это позволяет им совершать чудеса, неподвластные обычным людям.<br><br>
-
-                    Между молитвами монахи выполняют необходимую для существования монастыря работу и предаются
-                    медитациям, день за днем приближаясь к состоянию просветления. Говорят, что даже один монах,
-                    достигший просветления, меняет судьбу всего человечества. </p>
-                <figure class="mb-80 figure">
-                    <img src="./images/5.jpg" alt="photo">
-                    <figcaption class="grey-text">Тибетский монах</figcaption>
-                </figure>
-                <p class="black-text mb-80">На территории храма есть скрытые кельи, в которых некоторые монахи
-                    медитируют <span>по несколько месяцев</span> подряд ни с кем не общаясь, только принимая пищу,
-                    которую им передают через окошко. <br><br>
-
-                    Возле таких келий энергия настолько сильна, что просто находясь рядом и медитируя особым образом,
-                    можно исцелиться от различных недугов. В библиотеке храма хранится летопись, в которой указаны такие
-                    чудесные случаи исцеления.<br><br>
-
-                    Благодаря своему духовному состоянию, особым знаниям, тибетской астрологии и мантрам монахи помогают
-                    не только себе. Все, кто обращаются к ним за помощью, получают то, за чем пришли, их проблемы
-                    решаются легко и быстро. У монахов есть <span>особый дар:</span> менять судьбы людей в лучшую
-                    сторону.</p>
-                <figure class="mb-80 figure">
-                    <img src="./images/6.jpg" alt="photo">
-                    <figcaption class="grey-text">Медитирующий монах</figcaption>
-                </figure>
-                <h2 class="main-title mb-60">Секрет, который используют тибетские монахи</h2>
-                <p class="black-text mb-60">Мне удалось найти англоговорящего местного гида, который помог мне общаться
-                    с монахами. И они мне рассказали о том, что им помогает <span>колесо «Дхармачакра».</span> И о том,
-                    что это сильнейший и подтвержденный тысячелетней историей символ хороших перемен в жизни.  Работая с
-                    ним, монахи могут корректировать судьбу любого человека.<br><br>
-
-                    Этот символ монахи <span>активируют по запросу</span> и отправляют владельцу. Если носить его и
-                    соединить с личностью человека, то перемены, о которых просят люди, <span>сбываются.</span> <br><br>
-                    А чтобы людям удобно было его носить, монахи создали <span>браслет-амулет</span> с этим символом. 
-
-                    Этот браслет <span>притягивает</span> в жизнь своего владельца удачу
-                    во всех сферах жизни. Человеку начинает везти в денежных вопросах, любовных отношениях. Люди
-                    обретают предназначение и жизненную силу. У носителей амулета, наконец, заканчивается полоса
-                    неудач.<br><br>
-
-                    Меня заинтересовало то, за счет чего работает амулет. Ведь символ Дхармачакра достаточно популярен,
-                    и его можно легко найти в интернете. Неужели любое колесо Дхармы творит чудеса. Такой вопрос я задал
-                    своему тибетскому гиду. На что получил интересный ответ. <br><br>
-
-                    Оказывается, само по себе колесо — не главное чудо. Вся <span>сила в заряде</span> монахами.
-                    Каким-то образом они передают свою энергию амулету, и тот начинает менять жизни его владельцев. Как
-                    это происходит? Мне стало интересно,
-                    и я попросил гида обратиться к монаху, чтобы тот подробно рассказал, как проходит заряд и что это
-                    значит. Звучит это все как что-то фантастическое, но на самом деле — это реальность, с которой я
-                    лично столкнулся.</p>
-                <div class="swiper-1 swiper mb-60">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./images/7.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/8.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/9.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/10.jpg" alt="photo">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-buttons">
-                        <div class="swiper-button-next-1 button-next"><svg width="41" height="71" viewBox="0 0 41 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.21696 65.8109L35.6226 35.4053L5.21697 4.99968" stroke="#A4A4A4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </div>
-                        <div class="swiper-button-prev-1 button-prev"><svg width="41" height="71" viewBox="0 0 41 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.21696 65.8109L35.6226 35.4053L5.21697 4.99968" stroke="#A4A4A4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </div>
-                    </div>
-
+                    </ul>
+                    <img src="./images/2.avif" alt="photo">
+                    <span class="for-who">Кому стоит пройти тест?</span>
+                    <ul class="list list-reset">
+                        <li>
+                            <span class="number-mini">01</span>
+                            <span class="list-text">У вас есть проблемы в каких-либо сферах жизни и вы не понимаете, как найти выход;</span>
+                        </li>
+                        <li>
+                            <span class="number-mini">02</span>
+                            <span class="list-text">Вы хотите изменений: увеличить доход, найти любовь или наладить отношения, знать ответы на волнующие вопросы, никогда не ошибаться; </span>
+                        </li>
+                        <li>
+                            <span class="number-mini">03</span>
+                            <span class="list-text">Вас интересует Таро, но вы не уверены, что карты смогут дать ответы на ваши вопросы;
+                            </span>
+                        </li>
+                        <li>
+                            <span class="number-mini">04</span>
+                            <span class="list-text">У вас есть страх за будущее, тревожность, неуверенность в завтрашнем дне.
+                            </span>
+                        </li>
+                    </ul>
+                    <a class="button btn-reset" href="https://t.me/School_taroIrena_bot?start=taro_you">Пройти тест</a>
                 </div>
-                <h2 class="main-title mb-60">Как происходит заряд в храме</h2>
-                <p class="black-text mb-80">Монах поведал мне то, как именно они заряжают амулеты. Монахи проводят
-                    активацию спиц <span>индивидуально</span> для человека под его запрос. И активируют по его матрице,
-                    которую строят по тибетской астрологии. <br><br>
-
-                    Поэтому, чтобы монахам зарядить амулет, нужны данные: дата, время и место рождения человека. Затем
-                    монахи активируют спицы <span>секретными мантрами,</span> которые читают
-                    на каждую спицу. За счет этого амулет начинает работать. <br><br>
-
-                    Когда амулет оказывается на руке, происходит сонастройка. И судьба владельца с этого момента
-                    начинает меняться.<br><br>
-
-                    Монах рассказал, что особую роль в зарядке амулета имеет <span>священное пространство храма,</span>
-                    построенного на месте силы. В любом другом месте это было бы невозможно. </p>
-                <figure class="mb-80 figure">
-                    <img src="./images/11.jpg" alt="photo">
-                    <figcaption class="grey-text">Монах с амулетом “Дхармачакра”</figcaption>
-                </figure>
-                <p class="purple-text">Человеку, чтобы изменить судьбу, нужно всего лишь выбрать, какие спицы колеса
-                    активировать:
-
-                </p>
-                <ul class="list list-reset">
-                    <li class="list-item">
-
-                        <span>Активация 1-2 спиц «Защита Дхармы»</span> наполнит жизненной энергией, даст полную
-                        безопасность и защиту от негатива.
-
-
+            </div>
+        </section>
+        <section class="effect">
+            <div class="container">
+                <h2 class="effect-title">ПОЧЕМУ ТЕСТ “УРОВНИ ЭНЕРГИИ ЛЮБВИ” ТАК ЭФФЕКТИВЕН?</h2>
+                <ul class="effect-list list-reset">
+                    <li class="effect-item">Это авторский тест Ирэны Ивановой — таролога с 34-летним стажем.</li>
+                    <li class="effect-item">Она провела более 50 тысяч Таро-консультаций по всем сферам жизни и вопросам разной сложности.
                     </li>
-                    <li class="list-item">
-                        <span>Активация 3-4 спиц «Путь Духа»</span> даст быстрый духовный рост и самореализацию.
-
-
+                    <li class="effect-item">Опросник теста также сформирован Ирэной. Как профессиональный маг, она точно знает, какие вопросы помогают определить эффективность Таро в каждой конкретной ситуации.
                     </li>
-                    <li class="list-item">
-                        <span>Активация 5-6 спиц «Материальные блага»</span> изменит финансовый путь и приведет к
-                        материальному благополучию.
-
-
+                    <li class="effect-item">Как опытный наставник, Ирэна знает, как быстро разрешить любую проблему с помощью Таро.</li>
+                    <li class="effect-item">Поэтому под каждым результатом она делится своими рекомендациями, чтобы помочь выйти на новый уровень и улучшить свою жизнь в разы!</li>
+                </ul>
+            </div>
+        </section>
+        <section class="irena">
+            <div class="container">
+                <img src="./images/4.avif" alt="irena">
+                <h2 class="irena-title">АВТОРСКИЙ ТЕСТ ИРЭНЫ ИВАНОВОЙ!</h2>
+                <span class="irena-main">ГЛАВНОЕ ОБ ИРЭНЕ:</span>
+                <ul class="irena-list list-reset">
+                    <li class="irena-item">Таролог №1 в России</li>
+                    <li class="irena-item">Таро-диагност с 34-летним
+                        стажем</li>
+                    <li class="irena-item">Более 50 000 проведенных
+                        таро-консультаций</li>
+                    <li class="irena-item">Основательно уникальной школы TARO IRENA school, выпустившей более 4000 учеников.
                     </li>
-                    <li class="list-item">
-                        <span>Активация 7-8 спиц «Безусловная любовь»</span>  поможет обрести любовь.
-
-
+                    <li class="irena-item">Опытный эзотерик</li>
+                    <li class="irena-item">Создатель уникальных
+                        предметов силы</li>
+                </ul>
+                <a class="button btn-reset" href="https://t.me/School_taroIrena_bot?start=taro_you">Пройти тест</a>
+            </div>
+        </section> 
+        <section class="result">
+            <div class="container">
+                <h2 class="result-title">Результат теста:</h2>
+                <ul class="result-list list-reset">
+                    <li class="result-item">понимаете причины жизненных трудностей; </li>
+                    <li class="result-item">знаете, как Таро поможет их разрешить;</li>
+                    <li class="result-item">знаете, как воплотить в жизнь мечты с помощью карт Таро;</li>
+                    <li class="result-item">имеете четкий план действий по внедрению Таро в вашу жизнь!</li>
+                </ul>
+            </div>
+        </section>
+        <section class="mechanic">
+            <div class="container">
+                <h2 class="mechanic-title">Механика теста:</h2>
+                <span class="mechanic-text">На каждый вопрос
+                    дается 3 варианта
+                    ответа:</span>
+                    <ul class="circle-list list-reset">
+                        <li class="circle-item">
+                            <div class="circle circle-1"></div>
+                            <span class="circle-text">Часто</span>
+                        </li>
+                        <li class="circle-item">
+                            <div class="circle circle-2"></div>
+                            <span class="circle-text">Иногда</span>
+                        </li>
+                        <li class="circle-item">
+                            <div class="circle circle-3"></div>
+                            <span class="circle-text">Никогда</span>
+                        </li>
+                    </ul>
+                <span class="mechanic-text-2">Количество
+                    вопросов — 10</span>
+                    <a class="button btn-reset" href="https://t.me/School_taroIrena_bot?start=taro_you">Пройти тест<br> и узнать результат</a>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <h2 class="reviews-title">ОТЗЫВЫ О ТЕСТЕ</h2>
+                <ul class="reviews-list list-reset">
+                    <li class="reviews-item">
+                        <span class="name">Александра</span>
+                        <p class="review">У меня немного баллов. Я так и предполагала. Нет у меня веры в себя, очень сложно что-то менять. Чувствую себя одинокой, хоть и состою в отношениях. Удивительно, какой точный тест. Буду работать над собой. Теперь ведь есть для этого инструменты. Огромное вам спасибо!</p>
                     </li>
-                    <li class="list-item">
-                        <span>Активация всех спиц «Гармония и торжество духа»</span> приведет
-                        к полной реализации. Все сферы вашей жизни придут
-                        в гармонию: отношения, благополучие, финансы, психическое состояние и духовный путь.<br><br>
-
+                    <li class="reviews-item">
+                        <span class="name">Мария</span>
+                        <p class="review">Вот откуда это постоянное чувство недостаточности. Я уже проговариваю аффирмации))) Очень хочется поменять уже все в жизни. А теперь я вижу, как много могут дать Таро, как много вопросов решить.  Буду всем рекомендовать этот тест. У меня много знакомых, которым это точно необходимо!</p>
+                    </li>
+                    <li class="reviews-item">
+                        <span class="name">Светлана</span>
+                        <p class="review">Очень точно! Огромное спасибо вам за этот тест. У меня не такая уж плохая ситуация, но все же очень хочется теперь стремиться к самому высокому уровню жизни. Оказывается Таро - это то, что мне нужно, зря сомневалась. Особая благодарность за рекомендации! Уже выполняю!</p>
+                    </li>
+                    <li class="reviews-item">
+                        <span class="name">Кира</span>
+                        <p class="review">Благодарю сердечно за тест ❤️❤️❤️ Результатом не удивлена, так и чувствовала, прямо в точку! Теперь знаю, что делать дальше, чтобы изменить ситуацию. Мне очень помогли советы. Буду действовать! И всем рекомендую!</p>
+                    </li>
+                    <li class="reviews-item">
+                        <span class="name">Маргарита</span>
+                        <p class="review">Большое спасибо за тест!! Второй год думаю открыть свой бизнес но не решаюсь никак, нет поддержки и не на кого опереться. А тут увидела что Таро способны помочь во всех вопросах, которые меня тревожат и я могу исполнить свою мечту -  зарабатывать и сразу такая мотивация!! Как волшебный пинок от вселенной чтобы начать действовать!!
+                        </p>
+                    </li>
+                    <li class="reviews-item">
+                        <span class="name">Елена</span>
+                        <p class="review">Спасибо за точный тест Ирэне ❤️ Мне на самом деле всегда мешали внутренние страхи, всегда думала, что не справлюсь, не смогу, не потяну. В результате в 44 года живу на минимум, хотя столько всего было в планах и столько заработать! Спасибо, что напомнили, что я способна на большее ❤️
+                        </p>
                     </li>
                 </ul>
-                <p class="black-text mb-80">
-                    Можно сделать сразу несколько активаций и улучшить разные сферы жизни. Либо активировать <span>все
-                        колесо</span>
-                    и полностью <span>исцелить судьбу.</span> </p>
-                <figure class="mb-80 figure figure_relative">
-                  
-                        <video class="about__video" controls width="320" height="500" poster="./images/poster.jpg"
-                        src="./video/1.mp4">
-                    </video>
-                    <a href="javascript:void(0)" class="play-btn">
-                        
-                    </a>
-                    <figcaption class="grey-text">Рассказ монаха</figcaption>
-                </figure>
-                <h2 class="main-title mb-60">Как получить амулет, не отправляясь в Тибет</h2>
-                <p class="black-text mb-80">Спрос на амулеты огромен, а принять всех монахи не могут. Поэтому совсем
-                    недавно монахи решили, что смогут помогать людям на расстоянии и <span> отправлять уже заряженный
-                    </span> амулет
-                    в разные страны. Проект пока в разработке. Но одной
-                    из первых стран, которой открыли доступ к амулетам, стала Россия и страны СНГ.<br><br>
-                    В Тибете есть русский послушник — волонтер, который помог сделать отдельный сайт и организовать
-                    доставку напрямую  из Тибета. Поэтому вот уже буквально пару месяцев, как получить секретный амулет
-                    тибетских монахов можно,
-                    не отправляясь в Тибет.<br><br>
-
-                    Мне удалось выяснить настоящий сайт храма и монахов.
-                    Я его прикреплю, но будьте внимательны. В интернете могут быть мошенники. <span
-                        class="big-text">Единственный сайт, на котором можно заказать амулет «Дхармачакра»,
-                        этот:</span> </p>
-                <a class="button" href="https://dharmamulet.com/?utm_source=instagram&utm_medium=cpc&utm_campaign=dharma&utm_content=temple" target="_blank" rel="noopener noreferrer">подробнее об амулете</a>
-                <svg class="arrows" width="158" height="49" viewBox="0 0 158 49" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M79 0L70.3397 15L87.6603 15L79 0ZM80.5 49L80.5 13.5L77.5 13.5L77.5 49L80.5 49Z"
-                        fill="black" />
-                    <path d="M9 0L0.339745 15L17.6603 15L9 0ZM10.5 49L10.5 13.5L7.5 13.5L7.5 49L10.5 49Z"
-                        fill="black" />
-                    <path d="M149 0L140.34 15L157.66 15L149 0ZM150.5 49L150.5 13.5L147.5 13.5L147.5 49L150.5 49Z"
-                        fill="black" />
-                </svg>
-                <span class="black-bold-text mb-80">Если хотите узнать подробнее об амулете, переходите сюда.
-                </span>
-
-                <div class="swiper-2 swiper mb-60">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./images/13.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/14.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/15.jpg" alt="photo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/16.jpg" alt="photo">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <span class="grey-text mt-73">Фото обладательниц амулета</span>
-                    <div class="swiper-buttons">
-                        <div class="swiper-button-next-2 button-next"><svg width="41" height="71" viewBox="0 0 41 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.21696 65.8109L35.6226 35.4053L5.21697 4.99968" stroke="#A4A4A4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </div>
-                        <div class="swiper-button-prev-2 button-prev"><svg width="41" height="71" viewBox="0 0 41 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.21696 65.8109L35.6226 35.4053L5.21697 4.99968" stroke="#A4A4A4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </div>
-                    </div>
-
-                </div>
-                <h2 class="main-title mb-60">Реальные истории тех, кому удалось попробовать силу амулета  Дхармачакры
-                </h2>
-                <p class="black-text mb-80">Люди со всего мира приезжают в Тибет в поисках решения своих проблем. Поэтому
-                    информация о силе амулетов уже давно распространилась. И сразу же, как только открыли сайт,
-                    посыпались заказы. Первым счастливчикам уже удалось испытать на себе действие амулета. <span>И вот
-                        что они пишут:</span></p>
-                <div class="swiper-3 swiper mb-80">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./images/17.jpg" alt="photo">
-                            <span class="slides-text">Ирина, Владивосток</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/18.jpg" alt="photo">
-                            <span class="slides-text">Мадина, Алматы</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/19.jpg" alt="photo">
-                            <span class="slides-text">Валерия, Москва</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/20.jpg" alt="photo">
-                            <span class="slides-text">Анастасия, Новосибирск</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/21.jpg" alt="photo">
-                            <span class="slides-text">Татьяна, Пермь</span>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-buttons">
-                        <div class="swiper-button-next-3 button-next"><svg width="41" height="71" viewBox="0 0 41 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.21696 65.8109L35.6226 35.4053L5.21697 4.99968" stroke="#A4A4A4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </div>
-                        <div class="swiper-button-prev-3 button-prev"><svg width="41" height="71" viewBox="0 0 41 71" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.21696 65.8109L35.6226 35.4053L5.21697 4.99968" stroke="#A4A4A4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </div>
-                    </div>
-
-                </div>
-                <h2 class="main-title mb-60">Что говорят эксперты</h2>
-                <p class="black-text mb-80">То, что я вам рассказал, очень интересная история. Но вы знаете, что я
-                    скептически настроен и <span>всегда перепроверяю</span> информацию. Конечно же, я бы не стал писать
-                    вам то, в чем
-                    не был бы уверен. Потому я пошел к <span>экспертам-эзотерикам,</span> чтобы узнать их мнение о
-                    тибетском амулете.<br><br>
-                    «Тибет — священная страна со множеством тайн.
-                    И я наслышан о храме, в котором изготавливают особенные амулеты, которые <span>меняют жизни
-                        людей.</span> И неудивительно. Ведь монахи сутками медитируют, повышая уровень своих вибраций.
-                    Помимо этого, поле самого храма энергетически невероятно сильное. Добавьте к этому еще и тибетскую
-                    астрологию, активацию амулета точно под индивидуальный запрос человека. Конечно, <span>такие амулеты
-                        способны</span> творить чудеса».  </p>
-                <figure class="mb-80 figure">
-                    <img src="./images/22.jpg" alt="photo">
-                    <figcaption class="grey-text">Эксперт-эзотерик
-                        Александр Шепсs</figcaption>
-                </figure>
-                <h2 class="main-title mb-60">Впустите желаемые перемены в свою жизнь</h2>
-                <p class="black-text mb-80">Что ж, какое счастье, что есть такие места на земле, где монахи могут
-                    предоставить <span>возможность изменить жизнь </span>
-                    к лучшему. Спасибо им за этот шанс. А я желаю вам
-                    не прекращать верить в чудеса и достичь той жизни,
-                    о которой вы мечтаете.
-
-                    Браслет-амулет — это хорошее решение. И я, конечно же, сам заказал себе амулет с активацией на все
-                    спицы. На всякий случай напоминаю, что <span class="big-text">единственный сайт, на котором
-                        оригинальный амулет — только этот:</span></p>
-                        <a class="button" href="https://dharmamulet.com/?utm_source=instagram&utm_medium=cpc&utm_campaign=dharma&utm_content=temple" target="_blank" rel="noopener noreferrer">подробнее об амулете</a>
-                        <svg class="arrows" width="158" height="49" viewBox="0 0 158 49" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M79 0L70.3397 15L87.6603 15L79 0ZM80.5 49L80.5 13.5L77.5 13.5L77.5 49L80.5 49Z"
-                                fill="black" />
-                            <path d="M9 0L0.339745 15L17.6603 15L9 0ZM10.5 49L10.5 13.5L7.5 13.5L7.5 49L10.5 49Z"
-                                fill="black" />
-                            <path d="M149 0L140.34 15L157.66 15L149 0ZM150.5 49L150.5 13.5L147.5 13.5L147.5 49L150.5 49Z"
-                                fill="black" />
-                        </svg>
-                        <span class="black-bold-text mb-80">Если хотите узнать подробнее об амулете, переходите сюда.
-                        </span>
+                <a class="button btn-reset" href="https://t.me/School_taroIrena_bot?start=taro_you">Пройти тест</a>
             </div>
         </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
-
 </html>
