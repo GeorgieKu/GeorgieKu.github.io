@@ -66,11 +66,11 @@ const swiper = new Swiper('.hotel__swiper', {
   const swiper6 = new Swiper('.pills-service__swiper', {
     
     direction: 'horizontal',
-    loop: false,
+    loop: true,
     spaceBetween: 30,
     slidesPerView: 'auto',
     centeredSlides: true,
-    initialSlide: 1,
+ 
 
 
 });
@@ -89,11 +89,11 @@ const swiper7 = new Swiper('.round__swiper', {
 const swiper8 = new Swiper('.base-slider', {
     
   direction: 'horizontal',
-  loop: false,
+  loop: true,
   slidesPerView: 'auto',
   spaceBetween: 20,
   centeredSlides: true,
-  initialSlide: 1,
+  
 
 
 
