@@ -150,7 +150,6 @@ h3 {
   font-weight: 400;
   line-height: 120%; /* 120% */
   text-transform: uppercase;
-  font-size: clamp(4rem, 1vw, 1.5rem);
 }
 
 .text {
@@ -461,6 +460,7 @@ h3 {
 
 .adv-hero-title {
   margin-bottom: unset;
+  font-size: clamp(4rem, 1vw, 1.5rem);
 }
 
 .hero_relative {
@@ -2110,39 +2110,6 @@ body.noscroll {
   text-transform: uppercase;
 }
 
-.base-detail__text {
-  display: block;
-  color: #616569;
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 36px; /* 150% */
-  max-width: 1072px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.base-detail__text_mb {
-  margin-bottom: 40px;
-}
-
-.base-detail__text-colored {
-  display: block;
-  color: #C19B5C;
-  font-family: SangBleu Empire Trial;
-  font-size: 50px;
-  font-weight: 400;
-  line-height: 72px; /* 144% */
-  max-width: 1072px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.base-detail__list {
-  max-width: 1072px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
 .base-detail__item {
   display: flex;
   align-items: center;
@@ -2165,8 +2132,31 @@ body.noscroll {
 }
 
 .base-detail__img-block {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
+  text-align: center;
+}
+
+.text-block_mb120 {
+  margin-bottom: 120px;
+}
+
+.text-block h2 {
+  max-width: unset;
+  margin-bottom: 50px;
+  color: #2C2A2A;
+  text-align: center;
+  font-family: "SangBleu Empire Trial";
+  font-size: 100px;
+  max-width: 1195px;
+  margin-right: auto;
+  margin-left: auto;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 120% */
+  text-transform: uppercase;
+  font-size: clamp(4rem, 1vw, 1.5rem);
 }
 
 .base-detail__img-block img {
@@ -2907,11 +2897,71 @@ body.noscroll {
   margin-bottom: 100px;
 }
 
-.news__img {
+.image-block img {
   display: block;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 110px;
+}
+
+.text-block p {
+  display: block;
+  color: #616569;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+  max-width: 1072px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+}
+
+.text-block p span {
+  color: #C19B5C;
+}
+
+.text-block ul {
+  max-width: 1072px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.text-block ul li {
+  display: flex;
+  align-items: center;
+  color: #616569;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px; /* 150% */
+}
+
+.text-block ul li::before {
+  content: "";
+  background-image: url(../img/svg/sale-detail-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.text-block h4 {
+  display: block;
+  color: #C19B5C;
+  font-family: SangBleu Empire Trial;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 72px; /* 144% */
+  max-width: 1072px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 40px;
 }
 
 .news-slider {
@@ -2981,7 +3031,7 @@ body.noscroll {
   margin-bottom: 150px;
 }
 
-.bath__mini-title {
+.text-block h3 {
   color: #2C2A2A;
   font-family: SangBleu Empire Trial;
   font-size: 50px;
@@ -4185,11 +4235,6 @@ body.noscroll {
 .wedding-round-slide2-6 {
   position: absolute;
   left: 2500px;
-}
-
-.wedding-detail__title-2 {
-  max-width: unset;
-  margin-bottom: 50px;
 }
 
 .wedding-round {
