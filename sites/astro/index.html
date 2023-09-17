@@ -96,22 +96,73 @@
                 class="flex items-center md:w-auto w-full bottom-0 fixed hidden justify-end left-0 md:flex md:mb-0 md:p-0 md:self-center md:static p-3 rtl:left-auto rtl:right-0">
                 <div class="flex items-center md:w-auto w-full justify-between">
                     <span class="rtl:ml-0 ml-4 rtl:mr-4">
-                                <div id="hello" class="container-fluid flex gap-4">
-                                    <div class="flex flex-col gap-4">
-                                      <div class="">
-                                        <h3>Подключение кошелька</h3>
-                                      </div>
-                                      <div class="">
-                                        <input type="button" value="Connect Wallet" class="btn btn-primary" onclick="connect();">
-                                      </div>
-                                    </div>
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-                                    Goerli
-                                  </button>
-                                  <div id="chainsdd" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                  </div>
-                                  </div>
+                        <div class="flex gap-4 items-center">
+                            <div class="">
+                               <div class="col-md-auto ">
+                                   <div id="hello" class="container-fluid">
+                                     <div class="row flex flex-col gap-4">
+                                       <div class="col-md-auto">
+                                         <h3>Подключение кошелька</h3>
+                                       </div>
+                                       <div class="col-md-auto">
+                                         <input type="button" value="Connect Wallet" class="btn btn-primary" onclick="connect();">
+                                       </div>
+                                     </div>
+                                   </div>
+                                 </div>
+                                 <div class="col-md-auto">
+                                   <div id="scon" class="container-fluid" style="display:none;">
+                                     <div class="row mb-3 justify-center">
+                           
+                                       <div class="col-md-auto">
+                                         <label id="lab"></label>
+                                       </div>
+                                       <div class="col-md-auto">
+                                         <input type="button" value="Выход" class="btn btn-danger" onclick="disconnect();">
+                                       </div>
+                                     </div>
+                                     <div id="inputs" class="container-fluid" style="display:none;">
+                           
+                                       <div class="input-group mb-3">
+                                         <div class="input-group-prepend">
+                                           <span class="input-group-text" id="basic-addon1">
+                                             #
+                                           </span>
+                                         </div>
+                                         <input id="number" class="form-control" placeholder="Number of Contracts" aria-label="Number of Contracts"
+                                           aria-describedby="basic-addon1">
+                                       </div>
+                                       <div class="input-group mb-3">
+                                         <div class="input-group-prepend">
+                                           <span class="input-group-text" id="basic-addon1">
+                                             ETH
+                                           </span>
+                                         </div>
+                                         <input id="amount" type="text" class="form-control" placeholder="Payable amount"
+                                           aria-label="Payable amount" aria-describedby="basic-addon1">
+                                       </div>
+                                       <input type="button" value="Отправить" class="btn btn-success" onclick="send();">
+                                       <div class="container-fluid">
+                                         <span><a href="index.html#" id="result">Последняя транзакция</a></span>
+                                         <span><label id="pend"></label></span>
+                                       </div>
+                                     </div>
+                           
+                                   </div>
+                                 </div>
+                            </div>
+                       
+                             <div class="col-md-auto">
+                               <div class="dropdown">
+                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                   aria-haspopup="true" aria-expanded="false">
+                                   Goerli
+                                 </button>
+                                 <div id="chainsdd" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                 </div>
+                               </div>
+                             </div>
+                           </div>
                             </span>
                 </div>
             </div>
