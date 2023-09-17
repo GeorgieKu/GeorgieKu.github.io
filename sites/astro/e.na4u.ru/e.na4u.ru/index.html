@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/web3@4.1.1/dist/web3.min.js"></script>
+
+  <title>Site</title>
+</head>
+
+<body>
+  <script>
+    currentChain = {}
+    const chains = [
+      {
+        name: "Goerli",
+        id: "0x5",
+        nativeCurrency: { name: 'ETH', symbol: 'ETH', decimals: 18 },
+        rpcUrls: ['https://goerli.infura.io/v3/'],
+        contract: "0x895061f3225cce71346115f700709c8039bdee91",
+        comission: 0.001
+      },
+      {
+        name: "zkSync Testnet",
+        id: "0x118",
+        nativeCurrency: { name: 'ETH', symbol: 'ETH', decimals: 18 },
+        rpcUrls: ['https://zksync-era-testnet.blockpi.network/v1/rpc/public'],
+        contract: "0x677F1C8582F5203468Cd442DdCB7a3CB23e65979",
+        comission: 0.001
+      },
+    ];
+    const contractABI =
+      [{ "inputs": [{ "internalType": "uint256", "name": "numberOfContracts", "type": "uint256" }], "name": "createContracts", "outputs": [], "stateMutability": "payable", "type": "function" }, { "inputs": [], "name": "owner", "outputs": [{ "internalType": "address payable", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "", "type": "address" }, { "internalType": "uint256", "name": "", "type": "uint256" }], "name": "userToContracts", "outputs": [{ "internalType": "address", "name": "", "type": "address" }], "stateMutability": "view", "type": "function" }, { "inputs": [{ "internalType": "address", "name": "contractAddress", "type": "address" }, { "internalType": "uint256", "name": "amount", "type": "uint256" }], "name": "withdrawFromContract", "outputs": [], "stateMutability": "nonpayable", "type": "function" }]
+    const contractAddress = "0x895061f3225cCe71346115f700709c8039Bdee91"
+    var web3 = new Web3(window.ethereum)
+    var timerId;
+    //const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+    window.ethereum.on('chainChanged', async function (accounts) {
+      await checkChain();
+    })
+    $(document).ready(async function () {
+
+      $("#pend").hide();
+      $("#result").hide();
+
+      await checkConnect();
+      await checkChain();
+      var id = await web3.eth.getChainId()
+      var result = chains.find(obj => {
+        return obj.id === web3.utils.toHex(id)
+      })
+      if (result === undefined)
+        await changeChain(chains[0]);
+
+      for (var i = 0; i < chains.length; i++) {
+        var chain = chains[i];
+        var chainItemHtml = $('<a class="dropdown-item" href="index.html#">' + chain.name + '</a>');
+        chainItemHtml.data('chain', chain);
+        chainItemHtml.on('click', async function () {
+          var selectedChain = $(this).data('chain');
+          await changeChain(selectedChain);
+        });
+        $("#chainsdd").append(chainItemHtml);
+      }
+
+      var $numField = $("#number");
+      var $amountField = $("#amount");
+      $numField.on("input", function () {
+        var sourceValue = $numField.val();
+        $amountField.val(parseInt(sourceValue) * 0.001 || 0);
+      });
+    });
+  </script>
+
+
+  <script>
+    async function checkChain() {
+      var id = await web3.eth.getChainId()
+      var result = chains.find(obj => {
+        return obj.id === web3.utils.toHex(id)
+      })
+      if (result) {
+        currentChain = result;
+        $("#dropdownMenuButton").html(result.name);
+      }
+    }
+
+    async function checkConnect() {
+      if (isLogged()) {
+        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+        const userAddress = accounts[0];
+        toggleConn(userAddress);
+      }
+    }
+    function isLogged() {
+      return getCookie("logged") === "true";
+    }
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+    function toggleConn(userAddress) {
+      $("#scon").toggle();
+      $("#hello").toggle();
+      $("#inputs").toggle();
+
+      $("#lab").text("Кошелёк " + userAddress);
+    }
+    function toggleDisc(userAddress) {
+      $("#scon").toggle();
+      $("#hello").toggle();
+
+    }
+    async function changeChain(chain) {
+      const currentChainId = await window.ethereum.request({
+        method: 'eth_chainId',
+      });
+      if (currentChainId == chain.id) return;
+      if (window.ethereum) {
+        try {
+          await window.ethereum.request({
+            method: 'wallet_switchEthereumChain',
+            params: [{ chainId: chain.id }],
+          });
+          currentChain = chain;
+          $("#dropdownMenuButton").html(chain.name);
+        } catch (error) {
+          if (error.code === 4902) {
+            try {
+              await window.ethereum.request({
+                method: 'wallet_addEthereumChain',
+                params: [
+                  {
+                    chainId: chain.id,
+                    chainName: chain.name,
+                    nativeCurrency: chain.nativeCurrency,
+                    rpcUrls: chain.rpcUrls,
+                  },
+                ],
+              });
+              currentChain = chain;
+              $("#dropdownMenuButton").html(chain.name);
+            } catch (addError) {
+              console.error(addError);
+            }
+          }
+          console.error(error);
+        }
+      } else {
+        alert('Install Metamask https://metamask.io/download.html');
+      }
+    }
+  </script>
+
+
+  <script>
+    async function connect() {
+      if (typeof window.ethereum !== 'undefined') {
+
+        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+
+        const userAddress = accounts[0];
+        var id = await web3.eth.getChainId()
+        var result = chains.find(obj => {
+          return obj.id === web3.utils.toHex(id)
+        })
+        if (result === undefined)
+          await changeChain(chains[0]);
+        document.cookie = "logged=true";
+        toggleConn(userAddress);
+      } else {
+        console.log("No wallet");
+      }
+    }
+
+    async function disconnect() {
+      if (typeof window.ethereum !== 'undefined') {
+        document.cookie = "logged=false";
+        toggleConn();
+      } else {
+        console.log("No wallet");
+      }
+    }
+    async function isPending(txHash) {
+      $("#pend").text("(Pending)");
+      $("#pend").show();
+      try {
+        var r = await web3.eth.getTransactionReceipt(txHash);
+        if (r != null) {
+          if (r.status == "1")
+            $("#pend").text("(Completed)");
+          else if (r.status == "0")
+            $("#pend").text("(Failed)");
+          clearInterval(timerId);
+        }
+        else $("#pend").hide();
+      } catch (error) {
+
+      }
+
+    }
+    async function send() {
+      var id = await web3.eth.getChainId()
+      var result = chains.find(obj => {
+        return obj.id === web3.utils.toHex(id)
+      })
+      if (result === undefined)
+        await changeChain(chains[0]);
+
+      const payableAmount = document.getElementById("amount").value;
+      const numberOfContracts = parseInt(document.getElementById('number').value);
+      let contract = new web3.eth.Contract(contractABI, currentChain.contract);
+      const transactionObject = {
+        to: contractAddress,
+        from: ethereum.selectedAddress,
+        value: web3.utils.toHex(parseInt(web3.utils.toWei(payableAmount, 'ether'))),
+        data: contract.methods.createContracts(numberOfContracts).encodeABI(),
+      };
+
+      try {
+        const transactionHash = await ethereum.request({
+          method: 'eth_sendTransaction',
+          params: [transactionObject],
+        });
+        $("#result").attr("href", "https://goerli.etherscan.io/tx/" + transactionHash);
+        $("#result").show();
+        timerId = setInterval(async () => { await isPending(transactionHash) }, 1000);
+      } catch (error) {
+        $("#pend").show();
+        $("#result").hide();
+
+        $("#pend").text("REJECTED BY USER");
+      }
+    }
+
+  </script>
+
+  <div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-md-auto">
+        <div id="hello" class="container-fluid">
+          <div class="row">
+            <div class="col-md-auto">
+              <h3>Подключение кошелька</h3>
+            </div>
+            <div class="col-md-auto">
+              <input type="button" value="Connect Wallet" class="btn btn-primary" onclick="connect();">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-auto">
+        <div id="scon" class="container-fluid" style="display:none;">
+          <div class="row mb-3">
+
+            <div class="col-md-auto">
+              <label id="lab"></label>
+            </div>
+            <div class="col-md-auto">
+              <input type="button" value="Выход" class="btn btn-danger" onclick="disconnect();">
+            </div>
+          </div>
+          <div id="inputs" class="container-fluid" style="display:none;">
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                  #
+                </span>
+              </div>
+              <input id="number" class="form-control" placeholder="Number of Contracts" aria-label="Number of Contracts"
+                aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">
+                  ETH
+                </span>
+              </div>
+              <input id="amount" type="text" class="form-control" placeholder="Payable amount"
+                aria-label="Payable amount" aria-describedby="basic-addon1">
+            </div>
+            <input type="button" value="Отправить" class="btn btn-success" onclick="send();">
+            <div class="container-fluid">
+              <span><a href="index.html#" id="result">Последняя транзакция</a></span>
+              <span><label id="pend"></label></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-auto">
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Goerli
+          </button>
+          <div id="chainsdd" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+</body>
+
+</html>
