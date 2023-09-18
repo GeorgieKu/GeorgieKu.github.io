@@ -4,34 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width,initial-scale=1" name="viewport">
-    <style is:global>
-      :root {
-            --aw-font-sans: 'Inter Variable';
-            --aw-font-serif: var(--aw-font-sans);
-            --aw-font-heading: var(--aw-font-sans);
-            --aw-color-primary: rgb(30 64 175);
-            --aw-color-secondary: rgb(30 58 138);
-            --aw-color-accent: rgb(109 40 217);
-            --aw-color-text-heading: rgb(0 0 0);
-            --aw-color-text-default: rgb(229 236 246);
-            --aw-color-text-muted: rgb(229 236 246 / 66%);
-            --aw-color-bg-page: rgb(3 6 32);
 
-            
-        }
-        .dark {
-            --aw-font-sans: 'Inter Variable';
-            --aw-font-serif: var(--aw-font-sans);
-            --aw-font-heading: var(--aw-font-sans);
-            --aw-color-primary: rgb(30 64 175);
-            --aw-color-secondary: rgb(30 58 138);
-            --aw-color-accent: rgb(109 40 217);
-            --aw-color-text-heading: rgb(0 0 0);
-            --aw-color-text-default: rgb(229 236 246);
-            --aw-color-text-muted: rgb(229 236 246 / 66%);
-
-        }
-    </style>
 
     <title></title>
     <meta
@@ -40,10 +13,10 @@
 
 
     
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+      
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -56,6 +29,111 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/web3@4.1.1/dist/web3.min.js"></script>
     <link href="astro/click-through.ba9432d0.css" rel="stylesheet" />
+    <style is:global>
+        :root {
+              --aw-font-sans: 'Inter Variable';
+              --aw-font-serif: var(--aw-font-sans);
+              --aw-font-heading: var(--aw-font-sans);
+              --aw-color-primary: rgb(30 64 175);
+              --aw-color-secondary: rgb(30 58 138);
+              --aw-color-accent: rgb(109 40 217);
+              --aw-color-text-heading: rgb(0 0 0);
+              --aw-color-text-default: rgb(229 236 246);
+              --aw-color-text-muted: rgb(229 236 246 / 66%);
+              --aw-color-bg-page: rgb(3 6 32);
+  
+              
+          }
+          .dark {
+              --aw-font-sans: 'Inter Variable';
+              --aw-font-serif: var(--aw-font-sans);
+              --aw-font-heading: var(--aw-font-sans);
+              --aw-color-primary: rgb(30 64 175);
+              --aw-color-secondary: rgb(30 58 138);
+              --aw-color-accent: rgb(109 40 217);
+              --aw-color-text-heading: rgb(0 0 0);
+              --aw-color-text-default: rgb(229 236 246);
+              --aw-color-text-muted: rgb(229 236 246 / 66%);
+  
+          }
+  
+          .btn:hover {
+              background-color: unset;
+          }
+          .btn-secondary:hover {
+              background-color: unset;
+          }
+          .goerli-btn {
+            max-width: 180px;
+          }
+          .form-block {
+            padding: 2rem;
+            background-color: rgb(15, 23, 42);
+            border-radius: 10px;
+          }
+
+          .form-control {
+            background-color: transparent;
+            border: 1px solid rgb(55, 65, 81);
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+          }
+          .input-group-text {
+            background-color: transparent;
+            border: 1px solid rgb(55, 65, 81);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+          }
+          .btn-secondary:hover {
+            border-color: var(--aw-color-secondary);
+    background-color: var(--aw-color-secondary);
+          }
+          .form-control:focus {
+            background-color: transparent;
+            border: 1px solid rgb(55, 65, 81);
+            box-shadow: unset;
+          }
+          a {
+                          color: #e5e7eb;
+                        }
+                        a:hover {
+                          color: #FFf;
+                          text-decoration: unset;
+                        }
+                        .hide {
+                          visibility: hidden;
+                        }
+                        .btn-secondary:hover {
+                            background-color: unset;
+                        }
+                        button:focus {
+                            outline: unset;
+                        }
+                        .flex-basis {
+                          flex-basis: 55%;
+                        }
+                        .dropdown {
+                          margin-right: auto;
+                          margin-left: auto;
+                          max-width: max-content;
+                        }
+                        .dropdown-menu {
+                          background-color: transparent;
+                        }
+                        .dropdown-item {
+                          color: #fff;
+                          padding: 10px 0;
+                        }
+                        .dropdown-item:focus, .dropdown-item:hover {
+                          background-color: transparent;
+                          color: #fff;
+                        }
+                    
+      </style>
 </head>
 <script>
     currentChain = {}
@@ -103,7 +181,7 @@
 
       for (var i = 0; i < chains.length; i++) {
         var chain = chains[i];
-        var chainItemHtml = $('<a class="dropdown-item" href="index.html#">' + chain.name + '</a>');
+        var chainItemHtml = $('<a class="dropdown-item" href="app.html#">' + chain.name + '</a>');
         chainItemHtml.data('chain', chain);
         chainItemHtml.on('click', async function () {
           var selectedChain = $(this).data('chain');
@@ -285,52 +363,47 @@
 
   </script>
 <body class="antialiased bg-page text-default tracking-tight">
-    <header
-        class="mx-auto w-full border-b border-gray-50/0 ease-in-out flex-none sticky top-0 transition-[opacity] z-40"
-        id="header">
-        <div class="inset-0 absolute"></div>
-        <div class="relative mx-auto md:px-6 text-default max-w-7xl md:flex md:justify-between px-3 py-3 w-full">
-            <div class="flex justify-between"><a href="index.html" class="flex items-center"><span
-                        class="font-bold dark:text-white text-2xl md:text-xl ml-2 rtl:ml-0 rtl:mr-2 self-center text-gray-900 whitespace-nowrap">🚀
-                        AstroWind</span></a>
-                <div class="flex items-center md:hidden"><button
-                        class="flex justify-center items-center cursor-pointer flex-col group h-12 rounded w-12"
-                        aria-label="Toggle Menu" data-aw-toggle-menu><span class="sr-only">Toggle Menu</span><span
-                            class="transition duration-200 bg-black dark:bg-white ease h-0.5 my-1 opacity-80 rounded-full transform w-6 group-[.expanded]:rotate-45 group-[.expanded]:translate-y-2.5"
-                            aria-hidden="true"></span><span
-                            class="transition duration-200 bg-black dark:bg-white ease h-0.5 my-1 opacity-80 rounded-full transform w-6 group-[.expanded]:opacity-0"
-                            aria-hidden="true"></span><span
-                            class="transition duration-200 bg-black dark:bg-white ease h-0.5 my-1 opacity-80 rounded-full transform w-6 group-[.expanded]:-rotate-45 group-[.expanded]:-translate-y-2.5"
-                            aria-hidden="true"></span></button></div>
-            </div>
-            <nav aria-label="Main navigation"
-                class="items-center md:w-auto w-full hidden md:flex md:mx-5 md:overflow-x-auto md:overflow-y-visible overflow-x-hidden overflow-y-auto text-default">
-                <ul
-                    class="flex flex-col md:flex-row font-medium md:self-center md:text-[0.9375rem] md:w-auto text-xl tracking-[0.01rem] w-full">
-                    <li class="dropdown"><button
-                            class="flex items-center dark:hover:text-white hover:text-link px-4 py-3">
-                            <a href="./index.html">Main</a></button>
-                     
-                    </li>
-                    <li class="dropdown"><button
-                            class="flex items-center dark:hover:text-white hover:text-link px-4 py-3">
-                            <a href="./app.html">App</a>
-                        </button>
-                        
-                    </li>
+  <header
+  class="mx-auto w-full border-b border-gray-50/0 ease-in-out flex-none sticky top-0 transition-[opacity] z-40"
+  id="header">
+  <div class="inset-0 absolute"></div>
+  <div class="relative mx-auto md:px-6 text-default max-w-7xl md:flex md:justify-between px-3 py-3 w-full">
+      <div class="flex justify-between"><a href="index.html" class="flex items-center"><span
+                  class="font-bold dark:text-white text-2xl md:text-xl ml-2 rtl:ml-0 rtl:mr-2 self-center text-gray-900 whitespace-nowrap">🚀
+                  AstroWind</span></a>
+          <div class="flex items-center md:hidden"><button
+                  class="flex justify-center items-center cursor-pointer flex-col group h-12 rounded w-12"
+                  aria-label="Toggle Menu" data-aw-toggle-menu><span class="sr-only">Toggle Menu</span><span
+                      class="transition duration-200 bg-black dark:bg-white ease h-0.5 my-1 opacity-80 rounded-full transform w-6 group-[.expanded]:rotate-45 group-[.expanded]:translate-y-2.5"
+                      aria-hidden="true"></span><span
+                      class="transition duration-200 bg-black dark:bg-white ease h-0.5 my-1 opacity-80 rounded-full transform w-6 group-[.expanded]:opacity-0"
+                      aria-hidden="true"></span><span
+                      class="transition duration-200 bg-black dark:bg-white ease h-0.5 my-1 opacity-80 rounded-full transform w-6 group-[.expanded]:-rotate-45 group-[.expanded]:-translate-y-2.5"
+                      aria-hidden="true"></span></button></div>
+      </div>
+      <nav aria-label="Main navigation"
+          class="items-center flex-basis navigation md:w-auto w-full hidden md:flex md:mx-5 md:overflow-x-auto md:overflow-y-visible overflow-x-hidden overflow-y-auto text-default">
+
+              <button
+                      class="flex items-center dark:hover:text-white hover:text-link px-4 py-3">
+                      <a href="./index.html">Main</a></button>
+               
              
-              
-                   
-                </ul>
-            </nav>
-            <div
-                class="flex items-center md:w-auto w-full bottom-0 fixed hidden justify-end left-0 md:flex md:mb-0 md:p-0 md:self-center md:static p-3 rtl:left-auto rtl:right-0">
-                <div class="flex items-center md:w-auto w-full justify-between">
-                   
-                </div>
-            </div>
-        </div>
-    </header>
+              <button
+                      class="flex items-center dark:hover:text-white hover:text-link px-4 py-3">
+                      <a href="./app.html">App</a>
+                  </button>
+                  
+             
+       
+        
+             
+               
+      </nav>
+      
+  </div>
+</header>
+
     <main>
         <section class="relative not-prose md:-mt-[76px]">
             <div class="inset-0 absolute pointer-events-none" aria-hidden="true"></div>
@@ -358,7 +431,7 @@
                                                   <h3>Подключение кошелька</h3>
                                                 </div>
                                                 <div class="col-md-auto">
-                                                  <input type="button" value="Connect Wallet" class="btn btn-primary" onclick="connect();">
+                                                  <input type="button" value="Connect Wallet" class="w-full sm:mb-0 btn-primary" onclick="connect();">
                                                 </div>
                                               </div>
                                             </div>
@@ -371,30 +444,36 @@
                                                   <label id="lab"></label>
                                                 </div>
                                                 <div class="col-md-auto">
-                                                  <input type="button" value="Выход" class="btn btn-danger" onclick="disconnect();">
+                                                  <input type="button" value="Выход" class="btn w-full sm:mb-0 btn-primary" onclick="disconnect();">
                                                 </div>
                                               </div>
-                                              <div id="inputs" class="container-fluid" style="display:none;">
+                                              <div id="inputs" class="container-fluid form-block" style="display:none;">
                                     
-                                                <div class="input-group mb-3">
-                                                  <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">
-                                                      #
-                                                    </span>
+                                                <div class="input-group mb-3 input-new">
+                                                  <span class="block font-medium text-sm">Number of Contracts</span>
+                                                  <div class="flex w-full">
+                                                    <div class="input-group-prepend">
+                                                      <span class="input-group-text" id="basic-addon1">
+                                                        #
+                                                      </span>
+                                                    </div>
+                                                    <input id="number" class="form-control" aria-label="Number of Contracts"
+                                                      aria-describedby="basic-addon1">
                                                   </div>
-                                                  <input id="number" class="form-control" placeholder="Number of Contracts" aria-label="Number of Contracts"
-                                                    aria-describedby="basic-addon1">
                                                 </div>
                                                 <div class="input-group mb-3">
-                                                  <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">
-                                                      ETH
-                                                    </span>
+                                                  <span class="block font-medium text-sm">Payable amount</span>
+                                                  <div class="flex w-full">
+                                                    <div class="input-group-prepend">
+                                                      <span class="input-group-text" id="basic-addon1">
+                                                        ETH
+                                                      </span>
+                                                    </div>
+                                                    <input id="amount" type="text" class="form-control"
+                                                      aria-label="Payable amount" aria-describedby="basic-addon1">
                                                   </div>
-                                                  <input id="amount" type="text" class="form-control" placeholder="Payable amount"
-                                                    aria-label="Payable amount" aria-describedby="basic-addon1">
                                                 </div>
-                                                <input type="button" value="Отправить" class="btn btn-success" onclick="send();">
+                                                <input type="button" value="Отправить" class="btn w-full sm:mb-0 btn-primary" onclick="send();">
                                                 <div class="container-fluid">
                                                   <span><a href="index.html#" id="result">Последняя транзакция</a></span>
                                                   <span><label id="pend"></label></span>
@@ -407,7 +486,7 @@
                                 
                                       <div class="col-md-auto">
                                         <div class="dropdown">
-                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                          <button class="goerli-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                                             aria-haspopup="true" aria-expanded="false">
                                             Goerli
                                           </button>
@@ -425,6 +504,20 @@
                         </div>
                     </div>
                     <div>
+                      <script>
+                        // Получаем элементы кнопки и выпадающего меню
+var button = document.getElementById("dropdownMenuButton");
+var menu = document.getElementById("chainsdd");
+
+// Добавляем обработчики событий
+button.addEventListener("mouseover", function() {
+  menu.classList.add("show"); // Добавляем класс "show" для отображения выпадающего меню
+});
+
+menu.addEventListener("mouseleave", function() {
+  menu.classList.remove("show"); // Удаляем класс "show" для скрытия выпадающего меню
+});
+                      </script>
                         <div class="relative m-auto max-w-5xl"><img alt="AstroWind Hero Image" height="576"
                                 src="astro/hero.08a3a925.png" width="1024" class="mx-auto w-full rounded-md"
                                 decoding="async" loading="eager"

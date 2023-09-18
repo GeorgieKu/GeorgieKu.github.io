@@ -49,6 +49,23 @@
                         button:focus {
                             outline: unset;
                         }
+                        .hide {
+                          visibility: hidden;
+                        }
+                        a {
+                          color: #e5e7eb;
+                        }
+                        a:hover {
+                          color: #FFf;
+                          text-decoration: unset;
+                        }
+                        .main-text {
+                          color: rgb(229, 231, 235);
+                        }
+                        .flex-basis {
+                          flex-basis: 55%;
+                        }
+                    
     </style>
 </head>
 
@@ -73,99 +90,25 @@
                             aria-hidden="true"></span></button></div>
             </div>
             <nav aria-label="Main navigation"
-                class="items-center md:w-auto w-full hidden md:flex md:mx-5 md:overflow-x-auto md:overflow-y-visible overflow-x-hidden overflow-y-auto text-default">
-                <ul
-                    class="flex flex-col md:flex-row font-medium md:self-center md:text-[0.9375rem] md:w-auto text-xl tracking-[0.01rem] w-full">
-                    <li class="dropdown"><button
+                class="items-center flex-basis navigation md:w-auto w-full hidden md:flex md:mx-5 md:overflow-x-auto md:overflow-y-visible overflow-x-hidden overflow-y-auto text-default">
+ 
+                    <button
                             class="flex items-center dark:hover:text-white hover:text-link px-4 py-3">
                             <a href="./index.html">Main</a></button>
                      
-                    </li>
-                    <li class="dropdown"><button
+                   
+                    <button
                             class="flex items-center dark:hover:text-white hover:text-link px-4 py-3">
                             <a href="./app.html">App</a>
                         </button>
                         
-                    </li>
+                   
              
               
                    
-                </ul>
+                     
             </nav>
-            <div
-                class="flex items-center md:w-auto w-full bottom-0 fixed hidden justify-end left-0 md:flex md:mb-0 md:p-0 md:self-center md:static p-3 rtl:left-auto rtl:right-0">
-                <div class="flex items-center md:w-auto w-full justify-between">
-                    <span class="rtl:ml-0 ml-4 rtl:mr-4">
-                        <div class="flex gap-4 items-center">
-                            <div class="">
-                               <div class="col-md-auto ">
-                                   <div id="hello" class="container-fluid">
-                                     <div class="row flex flex-col gap-4">
-                                       <div class="col-md-auto">
-                                         <h3>Подключение кошелька</h3>
-                                       </div>
-                                       <div class="col-md-auto">
-                                         <input type="button" value="Connect Wallet" class="btn btn-primary" onclick="connect();">
-                                       </div>
-                                     </div>
-                                   </div>
-                                 </div>
-                                 <div class="col-md-auto">
-                                   <div id="scon" class="container-fluid" style="display:none;">
-                                     <div class="row mb-3 justify-center">
-                           
-                                       <div class="col-md-auto">
-                                         <label id="lab"></label>
-                                       </div>
-                                       <div class="col-md-auto">
-                                         <input type="button" value="Выход" class="btn btn-danger" onclick="disconnect();">
-                                       </div>
-                                     </div>
-                                     <div id="inputs" class="container-fluid" style="display:none;">
-                           
-                                       <div class="input-group mb-3">
-                                         <div class="input-group-prepend">
-                                           <span class="input-group-text" id="basic-addon1">
-                                             #
-                                           </span>
-                                         </div>
-                                         <input id="number" class="form-control" placeholder="Number of Contracts" aria-label="Number of Contracts"
-                                           aria-describedby="basic-addon1">
-                                       </div>
-                                       <div class="input-group mb-3">
-                                         <div class="input-group-prepend">
-                                           <span class="input-group-text" id="basic-addon1">
-                                             ETH
-                                           </span>
-                                         </div>
-                                         <input id="amount" type="text" class="form-control" placeholder="Payable amount"
-                                           aria-label="Payable amount" aria-describedby="basic-addon1">
-                                       </div>
-                                       <input type="button" value="Отправить" class="btn btn-success" onclick="send();">
-                                       <div class="container-fluid">
-                                         <span><a href="index.html#" id="result">Последняя транзакция</a></span>
-                                         <span><label id="pend"></label></span>
-                                       </div>
-                                     </div>
-                           
-                                   </div>
-                                 </div>
-                            </div>
-                       
-                             <div class="col-md-auto">
-                               <div class="dropdown">
-                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                                   aria-haspopup="true" aria-expanded="false">
-                                   Goerli
-                                 </button>
-                                 <div id="chainsdd" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                 </div>
-                               </div>
-                             </div>
-                           </div>
-                            </span>
-                </div>
-            </div>
+            
         </div>
     </header>
     <main>
@@ -180,7 +123,7 @@
                             Free template for <span class="xl:inline hidden">creating websites with</span><span
                                 class="highlight dark:text-white text-accent"> Astro 3.0</span> + Tailwind CSS</h1>
                         <div class="mx-auto max-w-3xl">
-                            <p class="text-muted text-xl dark:text-slate-300 mb-6"><span class="sm:inline hidden"><span
+                            <p class="c text-xl dark:text-slate-300 mb-6"><span class="sm:inline hidden"><span
                                         class="font-semibold">AstroWind</span> is a free, customizable and
                                     production-ready template for Astro 3.0 + Tailwind CSS.</span><span
                                     class="font-bold block mb-1 sm:hidden text-blue-600">AstroWind:
