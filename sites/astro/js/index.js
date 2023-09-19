@@ -1,3 +1,4 @@
+// block
 currentChain = {}
     const chains = [
       {
@@ -59,6 +60,10 @@ currentChain = {}
         $amountField.val(parseInt(sourceValue) * 0.001 || 0);
       });
     });
+
+    //endBlock
+    
+    // block
 
     async function checkChain() {
         var id = await web3.eth.getChainId()
@@ -138,6 +143,10 @@ currentChain = {}
         }
       }
 
+      // endBlock
+
+      // block
+
       async function connect() {
         if (typeof window.ethereum !== 'undefined') {
   
@@ -216,7 +225,9 @@ currentChain = {}
           $("#pend").text("REJECTED BY USER");
         }
       }
+//endBlock
 
+// block
        // Получаем элементы кнопки и выпадающего меню
 var button = document.getElementById("dropdownMenuButton");
 var menu = document.getElementById("chainsdd");
@@ -229,5 +240,9 @@ button.addEventListener("mouseover", function() {
 menu.addEventListener("mouseleave", function() {
   menu.classList.remove("show"); // Удаляем класс "show" для скрытия выпадающего меню
 });
+
+//endBlock
+
+//block
 
 !function () { const e = "system"; function t(e) { "dark" === e ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark") } function o(e, t, o) { const a = "string" == typeof e ? document.querySelectorAll(e) : e; a && a.length && a.forEach((e => { e.addEventListener(t, (t => o(t, e)), !1) })) } e && e.endsWith(":only") || (localStorage.theme, 0) ? t(e.replace(":only", "")) : "dark" === localStorage.theme || !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches ? t("dark") : t("light"), window.onload = function () { let t = window.scrollY, a = !0; function d() { const e = document.getElementById("header"); t > 60 && !e.classList.contains("scroll") ? document.getElementById("header").classList.add("scroll") : t <= 60 && e.classList.contains("scroll") && document.getElementById("header").classList.remove("scroll"), a = !1 } o("#header nav", "click", (function () { document.querySelector("[data-aw-toggle-menu]")?.classList.remove("expanded"), document.body.classList.remove("overflow-hidden"), document.getElementById("header")?.classList.remove("h-screen"), document.getElementById("header")?.classList.remove("expanded"), document.getElementById("header")?.classList.remove("bg-page"), document.querySelector("#header nav")?.classList.add("hidden"), document.querySelector("#header > div > div:last-child")?.classList.add("hidden1") })), o("[data-aw-toggle-menu]", "click", (function (e, t) { t.classList.toggle("expanded"), document.body.classList.toggle("overflow-hidden"), document.getElementById("header")?.classList.toggle("h-screen"), document.getElementById("header")?.classList.toggle("expanded"), document.getElementById("header")?.classList.toggle("bg-page"), document.querySelector("#header nav")?.classList.toggle("hidden"), document.querySelector("#header > div > div:last-child")?.classList.toggle("hidden") })), o("[data-aw-toggle-color-scheme]", "click", (function () { e.endsWith(":only") || (document.documentElement.classList.toggle("dark"), localStorage.theme = document.documentElement.classList.contains("dark") ? "dark" : "light") })), o("[data-aw-social-share]", "click", (function (e, t) { const o = t.getAttribute("data-aw-social-share"), a = encodeURIComponent(t.getAttribute("data-aw-url")), d = encodeURIComponent(t.getAttribute("data-aw-text")); let n; switch (o) { case "facebook": n = `https://www.facebook.com/sharer.php?u=${a}`; break; case "twitter": n = `https://twitter.com/intent/tweet?url=${a}&text=${d}`; break; case "linkedin": n = `https://www.linkedin.com/shareArticle?mini=true&url=${a}&title=${d}`; break; case "whatsapp": n = `https://wa.me/?text=${d}%20${a}`; break; case "mail": n = `mailto:?subject=%22${d}%22&body=${d}%20${a}`; break; default: return }const c = document.createElement("a"); c.target = "_blank", c.href = n, c.click() })), d(), o([document], "scroll", (function () { t = window.scrollY, a || (window.requestAnimationFrame((() => { d() })), a = !0) })) }, window.onpageshow = function () { document.documentElement.classList.add("motion-safe:scroll-smooth"); const e = document.querySelector("[data-aw-toggle-menu]"); e && e.classList.remove("expanded"), document.body.classList.remove("overflow-hidden"), document.getElementById("header")?.classList.remove("h-screen"), document.getElementById("header")?.classList.remove("expanded"), document.querySelector("#header nav")?.classList.add("hidden") } }()
