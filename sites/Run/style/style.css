@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "FuturaFuturisLightC";
   font-weight: 300;
@@ -51,6 +52,20 @@
   font-family: "League Gothic";
   font-weight: 400;
   src: url("../fonts/leaguegothic.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GothamPro";
+  font-weight: 400;
+  src: url("../fonts/GothamPro-Medium.woff") format("woff");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GothamPro";
+  font-weight: 400;
+  src: url("../fonts/GothamPro-Medium.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
 }
@@ -294,6 +309,22 @@ header {
   position: relative;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Стили при клике */
+.burg.clicked .navbar-icon::before {
+  display: none;
+}
+
+.burg.clicked .navbar-icon {
+  margin-top: 25px;
+  transform: rotate(45deg);
+}
+
+.burg.clicked .navbar-icon::after {
+  top: 0;
+  transform: rotate(90deg);
+  left: 1px;
 }
 
 .navbar-icon {
@@ -846,7 +877,7 @@ header {
 
 .btn-up {
   position: fixed;
-  top: 0;
+  top: 65px;
   right: 0;
   z-index: 999;
 }
@@ -973,6 +1004,11 @@ header {
   gap: 30px;
 }
 
+.way__block-img {
+  position: relative;
+  z-index: -1;
+}
+
 .way__block {
   display: flex;
   justify-content: space-between;
@@ -982,6 +1018,7 @@ header {
   border-radius: 8px;
   background-color: #FFFFFF;
   position: relative;
+  z-index: 3;
   height: 636px;
 }
 
@@ -992,6 +1029,7 @@ header {
   max-width: 1182px;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 .way__block img {
@@ -1315,7 +1353,7 @@ header {
 }
 
 .live__subtitle {
-  font-family: Work Sans;
+  font-family: GothamPro;
   font-size: 13px;
   font-weight: 400;
   line-height: 15px;
