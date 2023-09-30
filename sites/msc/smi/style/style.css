@@ -155,8 +155,46 @@ h3 {
   transition: background-color 0.3s ease-in-out;
 }
 
+.swiper {
+  margin-bottom: 100px;
+}
+
+.swiper-prev {
+  max-width: 250px;
+  width: 100%;
+}
+
+.swiper-next {
+  max-width: 250px;
+  width: 100%;
+}
+
+.prev-btn {
+  color: #929292;
+  font-family: "Moscow-Medium";
+  font-weight: 500;
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+
+.next-btn {
+  color: #929292;
+  font-family: "Moscow-Medium";
+  font-weight: 500;
+  background-color: #eaeaea;
+  border-radius: 10px;
+  max-width: 250px;
+  width: 100%;
+}
+
+.grey-button {
+  background-color: #393649;
+  border-radius: 10px;
+}
+
 .button:hover {
   background-color: #D00E46;
+  color: #fff;
 }
 
 .smi__title {
@@ -239,7 +277,7 @@ select {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px 30px;
+  gap: 30px 40px;
 }
 
 .flex {
@@ -266,6 +304,7 @@ select {
 
 .title {
   font-size: 20px;
+  color: #3c3849;
 }
 
 .swiper-buttons {
@@ -274,7 +313,7 @@ select {
   margin-right: auto;
   margin-left: auto;
   justify-content: space-between;
-  max-width: 80%;
+  max-width: 63%;
   position: relative;
 }
 
@@ -282,21 +321,21 @@ select {
   content: "";
   background-image: url(../img/svg/arrow_red_right_active.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   display: block;
-  width: 82px;
-  height: 150px;
+  width: 64px;
+  height: 118px;
 }
 
 .swiper-btn-prev:after {
   content: "";
   background-image: url(../img/svg/arrow_red_right_active.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   transform: rotate(180deg);
   display: block;
-  width: 82px;
-  height: 150px;
+  width: 64px;
+  height: 118px;
 }
 
 .swiper-button-disabled::after {
@@ -306,15 +345,15 @@ select {
 
 .swiper-btn-next {
   position: absolute;
-  right: 0;
-  top: -604px;
+  right: -135px;
+  top: -636px;
   cursor: pointer;
 }
 
 .swiper-btn-prev {
   position: absolute;
-  left: 0;
-  top: -604px;
+  left: -135px;
+  top: -636px;
   cursor: pointer;
 }
 
@@ -327,20 +366,6 @@ select {
   margin-bottom: 30px;
 }
 
-.buttons div {
-  max-width: 300px;
-  width: 100%;
-}
-
-.buttons button {
-  max-width: 300px;
-  width: 100%;
-}
-
-.grey-button {
-  background-color: #393649;
-}
-
 .swiper-pag {
   text-align: center;
 }
@@ -350,13 +375,19 @@ select {
   height: 20px;
   text-align: center;
   line-height: 20px;
-  font-size: 12px;
-  color: #000;
+  font-size: 16px;
+  color: #3c3849;
   opacity: 1;
   background: transparent;
+  font-family: "Moscow-Regular";
+  font-weight: 400;
 }
 
 .swiper-pagination-bullet-active {
   color: #fff;
   background: #D00E46;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 10px;
 }/*# sourceMappingURL=style.css.map */
