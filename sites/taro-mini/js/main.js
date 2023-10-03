@@ -64,52 +64,47 @@ const swiper = new Swiper('.needles__swiper', {
 
   });
 
-  function countdown() {
-    var hoursElement = document.getElementById("hours");
-    var minutesElement = document.getElementById("minutes");
+  window.addEventListener('DOMContentLoaded', function() {
+    var hoursSpan = document.getElementById('hours');
+    var minutesSpan = document.getElementById('minutes');
+    // Получаем текущее время и устанавливаем начальные значения таймера
+    var currentTime = new Date();
+    var endTime;
+    var remainingTime;
 
-    var hours = parseInt(hoursElement.textContent);
-    var minutes = parseInt(minutesElement.textContent);
-
-    if (minutes === 0) {
-        if (hours === 0) {
-            // Отсчет завершен
-            return;
-        } else {
-            hours--;
-            minutes = 59;
-        }
+    // Проверяем, есть ли значения в localStorage
+    if (localStorage.getItem('endTime')) {
+        endTime = new Date(localStorage.getItem('endTime'));
     } else {
-        minutes--;
+        endTime = new Date(currentTime.getTime() + 12 * 60 * 60 * 1000);
     }
 
-    hoursElement.textContent = hours.toString().padStart(2, "0");
-    minutesElement.textContent = minutes.toString().padStart(2, "0");
+    updateTimerDisplay();
 
-    // Сохраняем значения таймера в localStorage только при изменении
-    if (minutes !== parseInt(localStorage.getItem("timerMinutes"))) {
-        localStorage.setItem("timerHours", hours);
-        localStorage.setItem("timerMinutes", minutes);
+    // Функция обновления отображения таймера
+    function updateTimerDisplay() {
+        var currentTime = new Date();
+        remainingTime = Math.max(endTime.getTime() - currentTime.getTime(), 0);
+        var hours = Math.floor(remainingTime / (60 * 60 * 1000));
+        var minutes = Math.floor((remainingTime % (60 * 60 * 1000)) / (60 * 1000));
+        hoursSpan.textContent = hours;
+        minutesSpan.textContent = minutes.toString().padStart(2, '0');
     }
 
-    if (hours === 0 && minutes === 0) {
-        // Если достигнуто значение 00:00, останавливаем таймер
-        return;
+    // Функция запуска автоматического обратного отсчета
+    function startTimer() {
+        updateTimerDisplay();
+        setInterval(function() {
+            remainingTime = Math.max(remainingTime - 60000, 0);
+            updateTimerDisplay();
+        }, 60000);
     }
 
-    setTimeout(countdown, 60000); // Обновление каждую минуту (60 000 миллисекунд)
-}
+    startTimer();
 
-// Извлекаем значения таймера из localStorage при загрузке страницы
-var storedHours = localStorage.getItem("timerHours");
-var storedMinutes = localStorage.getItem("timerMinutes");
-
-if (storedHours !== null && storedMinutes !== null) {
-    document.getElementById("hours").textContent = storedHours;
-    document.getElementById("minutes").textContent = storedMinutes;
-}
-
-countdown();
+    // Сохраняем значение endTime в localStorage
+    localStorage.setItem('endTime', endTime);
+});
 
 if (window.innerWidth > 576) {
   var playBtn = document.querySelector('.play-btn');
