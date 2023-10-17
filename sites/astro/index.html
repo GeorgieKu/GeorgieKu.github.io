@@ -10,7 +10,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">    
 
 	<script type="text/javascript" src="https://polyfill.io/v3/polyfill.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/v2/min_ff.css@261702.css">
@@ -598,7 +598,7 @@
 		</div>
 	</div>
 </template>
-            <div class="main-background"><img class="main-bg" src="images/background/first-screen-bg-desktop.jpg"></div>
+            <div class="main-background"></div>
             <div class="wrapper">
                 <div class="exchange-form-outer">
 	<h1>Lightning cryptocurrency exchange</h1>
@@ -610,7 +610,7 @@
 					<div class="ccy-name" id="select_ccyname_from"></div>
 				</div>
                 <div class="relative">
-                    <input class="value-input" type="number" name="" id="" value="0.1">
+                    <input class="value-input" type="number" name="" id="" value="1" min="0">
                     <select class="js-example-basic-single" name="state">
                         <option  selected value="BTC" data-img="btc" data-network="BTC" data-shownetwork="0" data-coin="BTC" data-inactive="0" data-tag="">Bitcoin</option>
                         <option  value="ETH" data-img="eth" data-network="ETH" data-shownetwork="0" data-coin="ETH" data-inactive="0" data-tag="">Ethereum</option>
@@ -698,7 +698,7 @@
 				</div>
 				<div class="input-wabb toright">
                     <div class="relative">
-                        <input class="value-input" type="number" name="" id="" value="0.1">
+                        <input class="value-input" type="number" name="" id="" value="1" min="0" >
                         <select class="js-example-basic-single" name="state">
                             <option  value="BTC" data-img="btc" data-network="BTC" data-shownetwork="0" data-coin="BTC" data-inactive="0" data-tag="">Bitcoin</option>
 																		<option  selected value="ETH" data-img="eth" data-network="ETH" data-shownetwork="0" data-coin="ETH" data-inactive="0" data-tag="">Ethereum</option>
@@ -801,7 +801,12 @@
                 border-radius: 10px 0 0 10px;
                 border: 1px solid transparent;
                 transition: background-color .3s ease-in-out;
+                -moz-appearance: textfield;
             }
+
+                .value-input::-webkit-inner-spin-button { 
+                display: none;
+                }
             .value-input:focus {
                 background: #fff;
                 border: 1px solid #dfe4e8;
@@ -840,13 +845,13 @@
                 color: unset;
             }
             button.exchange-submit>span {
-                background-color: rgb(16, 208, 120);
+                background-color: #009ef7;
                 background-image: unset;
                 color: #fff;
                 transition: background-color .3s ease-in-out;
             }
             button.exchange-submit:hover>span {
-                background-color:   rgb(64, 217, 147);
+                background-color:   #0095e8;
             }
           
             .main-background {
@@ -859,7 +864,7 @@
                 padding-bottom: 5rem;
             }
             .center span {
-                color: #000;
+                color: #181C32;
             }
             .select-2:hover .select2-selection__arrow {
                 transform: scale(0.1);
@@ -886,7 +891,7 @@
 				</div>
 				<div class="field">
 					<textarea class="nonextra hidden" type="text" id="receive_wallet_hidden" autocomplete="off"></textarea>
-					<textarea class="nonextra" type="text" required id="receive_wallet" autocomplete="off"></textarea>
+					<textarea class="nonextra" type="text" required id="receive_wallet" autocomplete="off" placeholder="Input your adress"></textarea>
 					<span id="receive_wallet_error" class="hint error">Invalid adress</span>
 					
 					<div class="addresss-list-wrap"><div class="addresss-list" id="wallet_addressbook" data-emptylist="Избранный адрес пуст"></div></div>
@@ -908,10 +913,10 @@
 				<header>Order Type</header>
 				<div class="exchange-option-inner">
 					<label class="radioselect">
-						<input type="radio" name="select_type_from" value="fixed" id="fixed_type">
+						<input type="radio" name="select_type_from" id="fixed_type">
 						<span>Fixed rate (1.0%)</span>
 					</label><label class="radioselect">
-						<input type="radio" name="select_type_from" value="float" id="float_type" checked>
+						<input type="radio" name="select_type_from" id="float_type" checked>
 						<span>Float rate (0.5%)</span>
 					</label>
 				</div>
