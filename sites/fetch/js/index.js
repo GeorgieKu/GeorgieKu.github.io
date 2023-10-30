@@ -1,18 +1,15 @@
-const input = document.getElementById('form__input');
-const button = document.getElementById('form__btn');
-
-button.disabled = true;
-
-input.addEventListener('input', function() {
-  if (input.value.trim() === '') {
-    button.disabled = true;
-  } else {
-    button.disabled = false;
-  }
+const swiper = new Swiper('.taro__swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("burger").addEventListener("click", function() {
-        document.querySelector("header").classList.toggle("open")
-    })
-})
+var input = document.querySelector("#phone");
+window.intlTelInput(input, {
+
+  utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js",
+});
