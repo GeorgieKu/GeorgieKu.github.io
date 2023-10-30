@@ -450,7 +450,7 @@ transition: color .3s ease-in-out, background-color .3s ease-in-out, opacity .3s
     .footer__flex {
         display: flex;
         justify-content: space-between;
-        text-align: center;
+       align-items: center;
         max-width: 750px;
         margin-right: auto;
         margin-left: auto;
@@ -464,12 +464,16 @@ transition: color .3s ease-in-out, background-color .3s ease-in-out, opacity .3s
     }
 
     .footer__list {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         row-gap: 24px;
         column-gap: 120px;
         flex-wrap: wrap;
         max-height: 132px;
+    }
+
+    .footer__logo-576 {
+        display: none;
     }
 
     .footer__link {
@@ -597,3 +601,72 @@ transition: color .3s ease-in-out, background-color .3s ease-in-out, opacity .3s
     .page__title-576 {
         display: none;
     }
+
+    .header__burger-btn {
+        display: none;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: transparent;
+        z-index: 2;
+    }
+    
+    .header__burger-btn span {
+        position: absolute;
+        width: 30px;
+        height: 3px;
+        background-color: #D2DE32;
+        left: 5px;
+        transition: transform .5s, opacity .5s, background-color .5s;
+    }
+    
+    .header__burger-btn span:nth-child(1) {
+        transform: translateY(-10px);
+    }
+    
+    .header__burger-btn span:nth-child(3) {
+        transform: translateY(10px);
+    }
+    
+    .header.open .header__burger-btn span {
+        background-color: white;
+    }
+    
+    .header.open .header__burger-btn span:nth-child(1) {
+        transform: translateY(0) rotate(45deg);
+    }
+    
+    .header.open .header__burger-btn span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .header.open .header__burger-btn span:nth-child(3) {
+        transform: translateY(0) rotate(-45deg);
+    }
+    
+    .logo {
+        display: block;
+    }
+    
+    .logo__img {
+        width: 200px;
+    }
+    
+    .menu__list {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .menu__item:not(:last-child) {
+        margin-right: 20px;
+    }
+    
+    .menu__link {
+        font-size: 16px;
+    }
+    
+ 

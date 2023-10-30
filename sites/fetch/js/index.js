@@ -10,3 +10,9 @@ input.addEventListener('input', function() {
     button.disabled = false;
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("burger").addEventListener("click", function() {
+        document.querySelector("header").classList.toggle("open")
+    })
+})
