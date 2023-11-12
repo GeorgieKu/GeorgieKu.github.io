@@ -1,12 +1,3 @@
-const swiper = new Swiper('.review__swiper', {
-
-  // If we need pagination
-  pagination: {
-    el: '.review__pag',
-  },
-
-});
-
 var input = document.querySelector("#phone");
 window.intlTelInput(input, {
 
