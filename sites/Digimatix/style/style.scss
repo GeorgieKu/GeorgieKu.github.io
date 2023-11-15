@@ -81,8 +81,6 @@ h3 {
     background-image: url(../img/hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 100vh;
-
 }
 
 .header {
@@ -103,48 +101,51 @@ h3 {
 }
 
 .button {
-        color:#5101A6;
-        font-family: Roboto;
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 900;
-        line-height: 24px; /* 200% */
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        border-radius: 6px;
-        background: #FFF;
-        width: 100%;
-        transition: color .3s ease-in-out, background-color .3s ease-in-out;
+    color: #5101A6;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 24px;
+    /* 200% */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    background: #FFF;
+    width: 100%;
+    transition: color .3s ease-in-out, background-color .3s ease-in-out;
 
-        &:hover {
-            color: #FFF;
-            background-color: #5101A6;
-        }
+    &:hover {
+        color: #FFF;
+        background-color: #5101A6;
+    }
 }
 
 .hero {
-padding: 100px 0 0;
-position: relative;
+    padding: 100px 0 200px;
+    position: relative;
 
-&__title {
-    font-family: Montserrat;
-    color: #FFF;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 56px; /* 116.667% */
-    margin-bottom: 48px;
-}
+    &__title {
+        font-family: Montserrat;
+        color: #FFF;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 56px;
+        /* 116.667% */
+        margin-bottom: 48px;
+    }
 
     &__descr {
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px; /* 140% */
-    max-width: 547px;
-    margin-bottom: 48px;
+        color: #FFF;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        /* 140% */
+        max-width: 547px;
+        margin-bottom: 48px;
     }
 
     &__flexbox {
@@ -161,15 +162,39 @@ position: relative;
     &__play-btn {
         max-height: 48px;
     }
-    &__play-btn:hover svg path{
+
+    &__play-btn:hover svg path {
         fill: #fff;
         stroke: #5101A6;
+    }
+
+    &__relative {
+        position: relative;
+        z-index: 3;
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: -5px;
+        max-width: 50vw;
+        z-index: -1;
+        max-height: 640px;
+
     }
 
 }
 
 .with-us {
-    padding: 90px 0;
+    padding: 168px 0 90px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease, transform 2s ease;
+
+    &.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
 
     &__title {
         color: #200142;
@@ -178,21 +203,25 @@ position: relative;
         font-size: 40px;
         font-style: normal;
         font-weight: 700;
-        line-height: 48px; /* 120% */
+        line-height: 48px;
+        /* 120% */
         margin-bottom: 75px;
     }
+
     &__flex {
         display: flex;
         gap: 48px;
         margin-bottom: 32px;
     }
+
     &__button {
         color: #200142;
         font-family: Roboto;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
-        line-height: 24px; /* 150% */
+        line-height: 24px;
+        /* 150% */
         letter-spacing: 0.5px;
         padding-bottom: 10px;
         transition: color .3s ease-in-out;
@@ -206,47 +235,57 @@ position: relative;
         color: #5101A6;
         border-bottom: 2px solid #5101A6;
     }
+
     &__swiper {
         max-width: 100%;
     }
+
     &__img {
         margin-bottom: 24px;
     }
+
     &__subtitle {
         color: #5101A6;
         font-family: Montserrat;
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
-        line-height: 24px; /* 171.429% */
+        line-height: 24px;
+        /* 171.429% */
         letter-spacing: 0.14px;
         text-transform: uppercase;
         margin-bottom: 8px;
     }
+
     &__text {
         color: #000;
         font-family: Roboto;
         font-size: 13px;
         font-style: normal;
         font-weight: 400;
-        line-height: 20px; /* 153.846% */
+        line-height: 20px;
+        /* 153.846% */
     }
+
     &__flexbox {
         display: flex;
         justify-content: space-between;
     }
+
     &__buttons {
         display: none;
         gap: 16px;
         cursor: pointer;
     }
+
     &__buttons_active {
         display: flex;
-   
+
     }
-    &__button-next svg{
+
+    &__button-next svg {
         transform: rotate(180deg);
-    
+
     }
 
     &__button_hover:hover svg rect {
@@ -257,7 +296,7 @@ position: relative;
         stroke: #FFF;
     }
 
-    &__button-next-2 svg{
+    &__button-next-2 svg {
         transform: rotate(180deg);
 
     }
@@ -266,9 +305,11 @@ position: relative;
     &__wrapper {
         margin-bottom: 40px;
     }
+
     &__pagination {
         text-align: center;
     }
+
     &__pagination-2 {
         text-align: center;
     }
@@ -281,13 +322,25 @@ position: relative;
     background-size: cover;
     padding: 72px 0 0;
 
+
+    &__anim {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: opacity 2s ease, transform 2s ease;
+    }
+
+    &__anim.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
     &__title {
         color: #FFF;
         font-family: Montserrat;
         font-size: 32px;
         font-style: normal;
         font-weight: 700;
-        line-height: 40px; /* 125% */
+        line-height: 40px;
         text-align: center;
         margin-bottom: 32px;
     }
@@ -299,7 +352,7 @@ position: relative;
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
-        line-height: 28px; /* 140% */
+        line-height: 28px;
         max-width: 576px;
         margin-bottom: 48px;
         margin-right: auto;
@@ -319,7 +372,7 @@ position: relative;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
-        line-height: 24px; 
+        line-height: 24px;
         max-width: 256px;
         padding: 24px 0 24px 24px;
         width: 100%;
@@ -338,6 +391,7 @@ position: relative;
         background-repeat: no-repeat;
         background-size: contain;
     }
+
     &__input_tel:focus {
         background-image: url(../img/svg/inputTel.svg);
         background-repeat: no-repeat;
@@ -351,7 +405,8 @@ position: relative;
         font-size: 16px;
         font-style: normal;
         font-weight: 700;
-        line-height: 24px; /* 150% */
+        line-height: 24px;
+        /* 150% */
         text-transform: uppercase;
         background-color: #5101A6;
         max-width: 256px;
@@ -375,15 +430,48 @@ position: relative;
         text-align: center;
     }
 
+    &__input:focus+.placeholder-label {
+        top: -11px;
+        left: 22px;
+        font-size: 12px;
+    }
+
 }
+
+.browser-error {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .browser-error.browser-error-show {
+    display: flex;
+  }
+  .browser-error__body {
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+
 .input-container {
     position: relative;
     max-width: 256px;
     width: 100%;
-  }
+}
 
-  
-  .placeholder-label {
+
+.placeholder-label {
     position: absolute;
     top: 24px;
     left: 24px;
@@ -392,17 +480,13 @@ position: relative;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
+    /* 150% */
     pointer-events: none;
     transition: top 0.3s ease, font-size 0.3s ease;
-  }
-  
-  .footer__input:focus + .placeholder-label
-  {
-    top: -11px;
-    left: 22px;
-    font-size: 12px;
-  }
+}
+
+
 
 
 .swiper-slide {
@@ -420,18 +504,16 @@ position: relative;
 
 
 .tab-content {
-    opacity: 0; /* Начальное значение прозрачности */
-    transition: opacity 0.3s ease; /* Анимация перехода */
-    display: none; /* Скрываем все табы */
-  }
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: none;
+}
 
-  .tab-content.active {
-    opacity: 1; /* Значение прозрачности для активного таба */
-    display: block; /* Отображаем активный таб */
-  }
+.tab-content.active {
+    opacity: 1;
+    display: block;
+}
 
-  .input-container {
+.input-container {
     position: relative;
-  }
-
-  
+}
