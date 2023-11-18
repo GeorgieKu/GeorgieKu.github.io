@@ -92,6 +92,7 @@ clearBtn.addEventListener('click', () => {
 
     sportBtn.textContent = 'Вид спорта';
     sportBtn.style.color = '#000';
+    clearBtn.style.display = 'none'
 })
 
 
