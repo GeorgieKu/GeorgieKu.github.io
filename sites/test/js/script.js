@@ -206,13 +206,12 @@ secondScreenBtn2.addEventListener('click', function() {
     }, 1000);
   });
   document.addEventListener('DOMContentLoaded', function () {
-    thirdScreen.style.display = "block"
     secondScreen.style.display = "block"
     fourthScreen.style.display = 'block'
     setTimeout(function() {
       var preloader = document.getElementById('preloader');
       preloader.style.display = 'none';
-      thirdScreen.style.display = "none"
+    
       secondScreen.style.display = "none"
       fourthScreen.style.display = 'none'
     }, 5000)
