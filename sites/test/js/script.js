@@ -142,6 +142,8 @@ setTimeout(function() {
       secondScreen.style.display = "none";
       thirdScreen.style.display = "block"
       absoluteCircle.style.display = 'none'
+      thirdScreen.style.height = "unset"
+    thirdScreen.style.visibility = "unset"
   
     }, 1000);
 })
@@ -161,7 +163,8 @@ secondScreenBtn2.addEventListener('click', function() {
   }, 500);
   setTimeout(function() {
     secondScreen.style.display = "none";
-    thirdScreen.style.display = "block"
+    thirdScreen.style.height = "unset"
+    thirdScreen.style.visibility = "unset"
     absoluteCircle.style.display = 'none'
 
   }, 1000);
