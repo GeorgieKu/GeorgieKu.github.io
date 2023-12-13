@@ -292,21 +292,36 @@ fourthScreenBtns.forEach(btn => {
     });
   });
 
-  const li1 = document.getElementById('li1')
-  const sector1 = document.getElementById('sector1')
+  // const li1 = document.getElementById('li1')
+  // const sector1 = document.getElementById('sector1')
 
-  liIds.forEach(liId => {
-    const li = document.getElementById(liId);
-    const sector = document.getElementById(`sector${liId.slice(2)}`);
+  // liIds.forEach(liId => {
+  //   const li = document.getElementById(liId);
+  //   const sector = document.getElementById(`sector${liId.slice(2)}`);
+  //   const image = document.getElementById(`image${liId.slice(2)}`);
+  
+  //   li.addEventListener('mouseover', function() {
+  //     sector.classList.add(`sector-${liId.slice(2)}-hover`);
+  //   });
+  
+  //   li.addEventListener('mouseout', function() {
+  //     sector.classList.remove(`sector-${liId.slice(2)}-hover`);
+  //   });
+  // });
+
+
+  for (let i = 1; i <= 12; i++) {
+    const li = document.getElementById('li' + i);
+    const image = document.getElementById('image' + i);
   
     li.addEventListener('mouseover', function() {
-      sector.classList.add(`sector-${liId.slice(2)}-hover`);
+      image.src = `./img/krug-${i}-hover.svg`;
     });
   
     li.addEventListener('mouseout', function() {
-      sector.classList.remove(`sector-${liId.slice(2)}-hover`);
+      image.src = `./img/krug-${i}.svg`;
     });
-  });
+  }
   
   var swiper2 = new Swiper(".six-screen-first-2", {
     grabCursor: true,
@@ -338,3 +353,4 @@ slides.forEach(function(slide, index) {
     swiper.slideTo(index);
   });
 });
+
