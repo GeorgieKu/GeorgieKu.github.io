@@ -117,6 +117,10 @@ const heroBg = document.querySelector('.hero__bg')
 const heroBg2 = document.querySelector('.hero__bg-2')
 const heroBg3 = document.querySelector('.hero__bg-3')
 const absoluteCircle = document.querySelector('.absolute-circle')
+const fourthScreenBtns = document.querySelectorAll('.fourth-screen-btn')
+const fivthScreen = document.getElementById('fivth-screen');
+const sixScreen = document.getElementById('six-screen');
+
 
 
 
@@ -190,7 +194,7 @@ secondScreenBtn2.addEventListener('click', function() {
       heroBg.classList.add('circle-out-1');
       heroBg2.classList.add('circle-out-2');
       absoluteCircle.style.left = 'calc(50% - 220px)';
-      absoluteCircle.style.top = '-43.5%';
+      absoluteCircle.style.top = '-244px';
       
 
       
@@ -214,61 +218,123 @@ secondScreenBtn2.addEventListener('click', function() {
     
       secondScreen.style.display = "none"
       fourthScreen.style.display = 'none'
-    }, 5000)
+    }, 3000)
 });
 
-function addHoverEffect(liId, sectorId, imageSrc) {
-  const li = document.getElementById(liId);
-  const sector = document.getElementById(sectorId);
-  li.addEventListener('mouseover', function() {
-    sector.style.backgroundImage = `url(${imageSrc})`;
-  });
-  li.addEventListener('mouseout', function() {
-    sector.style.backgroundImage = '';
-  });
-}
+fourthScreenBtns.forEach(btn => {
+  btn.addEventListener('click', function() {
+    fourthScreen.classList.remove('show');
+    fourthScreen.classList.add('hide');
 
-function addClickEffect(clickedLiId, allLiIds) {
-  const clickedLi = document.getElementById(clickedLiId);
-  const allLi = allLiIds.map(liId => document.getElementById(liId));
-  clickedLi.addEventListener('click', function() {
-    allLi.forEach(li => {
-      if (li !== clickedLi) {
-        li.style.transition = "filter 1s ease";
-        li.style.backdropFilter = 'blur(1px)';
-      }
+    setTimeout(function() { 
+      fourthScreen.style.display = 'none'
+      fivthScreen.style.display = 'block'
+      fivthScreen.classList.add('show');
+    }, 500)
+
+    setTimeout(function() { 
+      fivthScreen.classList.remove('show');
+      fivthScreen.classList.add('hide');
+    }, 2500)
+    setTimeout(function() { 
+      fivthScreen.style.display = "none"
+      sixScreen.classList.add('show');
+      sixScreen.style.display = 'block'
+     
+    }, 3000)
+
+  
+  });
+});
+
+
+
+  
+  const liIds = ['li1', 'li2', 'li3', 'li4', 'li5', 'li6', 'li7', 'li8', 'li9', 'li10', 'li11', 'li12'];
+  
+
+
+
+
+
+
+
+
+  const liElements = liIds.map(liId => document.getElementById(liId));
+  
+  liElements.forEach((li) => {
+    li.addEventListener('click', function() {
+      setTimeout(function() {
+        round.style.animation = "fadeOut 0.5s ease-out"
+      }, 500);
+      setTimeout(function() {
+        fourthScreen.style.display = "block";
+        fourthScreen.classList.add('show');
+        thirdScreen.style.display = 'none';
+        round.style.display = "none"
+        absoluteCircle.style.top = '-244px';
+        absoluteCircle.style.animation = 'slideCircleIn 1s ease'
+        absoluteCircle.style.display = 'flex'
+        absoluteCircle.style.overflow = 'unset'
+        heroBg3.style.top = "8px"
+      }, 1000);
     });
   });
-}
 
-const liIds = ['li1', 'li2', 'li3', 'li4', 'li5', 'li6', 'li7', 'li8', 'li9', 'li10', 'li11', 'li12'];
-const sectorIds = ['sector1', 'sector2', 'sector3', 'sector4', 'sector5', 'sector6', 'sector7', 'sector8', 'sector9', 'sector10', 'sector11', 'sector12'];
+  liElements.forEach(function(li) {
+    li.addEventListener('click', function() {
+      liElements.forEach(function(element) {
+        if (element !== li) {
+          element.style.transition = "filter 1s ease";
+          element.style.backdropFilter = 'blur(1px)';
+        }
+      });
+    });
+  });
 
-liIds.forEach((liId, index) => {
-  const sectorId = sectorIds[index];
-  const imageSrc = `path/to/image${index}.png`;
-  addHoverEffect(liId, sectorId, imageSrc);
-});
+  const li1 = document.getElementById('li1')
+  const sector1 = document.getElementById('sector1')
 
-const allLiIds = liIds.slice(1);
-addClickEffect('li1', allLiIds);
+  liIds.forEach(liId => {
+    const li = document.getElementById(liId);
+    const sector = document.getElementById(`sector${liId.slice(2)}`);
+  
+    li.addEventListener('mouseover', function() {
+      sector.classList.add(`sector-${liId.slice(2)}-hover`);
+    });
+  
+    li.addEventListener('mouseout', function() {
+      sector.classList.remove(`sector-${liId.slice(2)}-hover`);
+    });
+  });
+  
+  var swiper2 = new Swiper(".six-screen-first-2", {
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    allowSlideNext: false,
+    allowSlidePrev: false,
+    controller: {
+      control: swiper, // Указываем экземпляр, с которым нужно синхронизироваться
+    },
+  });
 
-const liElements = liIds.map(liId => document.getElementById(liId));
-liElements.forEach((li) => {
-  li.addEventListener('click', function() {
-    setTimeout(function() {
-      round.style.animation = "fadeOut 0.5s ease-out"
-    }, 500);
-    setTimeout(function() {
-      fourthScreen.style.display = "block";
-      fourthScreen.classList.add('show');
-      thirdScreen.style.display = 'none';
-      round.style.display = "none"
-      absoluteCircle.style.top = '-44.5%';
-      absoluteCircle.style.animation = 'slideCircleIn 1s ease'
-      absoluteCircle.style.display = 'flex'
-      absoluteCircle.style.overflow = 'unset'
-      heroBg3.style.top = "8px"
-    }, 1000);
+  
+  var swiper = new Swiper(".six-screen-first", {
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    spaceBetween: 10,
+    initialSlide: 1,
+    controller: {
+      control: swiper2, // Указываем экземпляр, с которым нужно синхронизироваться
+    },
+  });
+
+  var slides = document.querySelectorAll('.swiper-slide');
+slides.forEach(function(slide, index) {
+  slide.addEventListener('click', function() {
+    swiper.slideTo(index);
   });
 });
