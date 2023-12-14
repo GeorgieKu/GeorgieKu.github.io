@@ -187,6 +187,9 @@ text-align: center;
    }
 }
 
+
+
+
 .absolute-circle {
   position: absolute;
   left: calc(50% - 440px);
@@ -243,13 +246,13 @@ background: linear-gradient(90deg, #E5A62A 0%, #F6D94F 57.81%, #E5A62A 100%);
 .hide {
   opacity: 0;
   pointer-events: none;
-  animation: fadeOut 0.5s ease-out;
+  animation: fadeOut 1.5s ease-out;
 }
 
 .hidden {
   opacity: 0;
   pointer-events: none;
-  animation: fadeOut 0.5s ease-out;
+  animation: fadeOut 1.5s ease-out;
 }
 
 .hero__text-2 {
@@ -264,7 +267,7 @@ background: linear-gradient(90deg, #E5A62A 0%, #F6D94F 57.81%, #E5A62A 100%);
 }
 .show {
 
-  animation: fadeIn 0.5s ease-out;
+  animation: fadeIn 1.5s ease-out;
 }
 
 .second-screen {
@@ -298,115 +301,53 @@ background: linear-gradient(90deg, #E5A62A 0%, #F6D94F 57.81%, #E5A62A 100%);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  justify-items: center;
 }
 
-/* .fourth-screen-btn-test {
+.fourth-screen-btn {
   padding: 10px 30px;
   border-radius: 10px;
 border: 1px solid #E5A62A;
 background: linear-gradient(180deg, rgba(92, 55, 178, 0.00) 0%, #5C37B2 100%);
 backdrop-filter: blur(2px);
 max-width: 189px;
+max-height: 138px;
 width: 100%;
 }
 
-.fourth-screen-btn-test svg {
-  margin-bottom: 20px;
-}
 
-.fourth-screen-btn-test:hover {
+.fourth-screen-btn:hover {
   background: linear-gradient(0deg, #E5A62A 0%, #EDCF41 49.9%, #E5A62A 100%);
   
 }
- */
+ 
+.fourth-screen-btn:hover svg path {
+  stroke: #1B1879;
+  stroke-width: 0.4px;
+}
+
+.fourth-screen-btn svg  {
+ height: 89px;
+}
 
 
-.fourth-screen-btn-test:hover .man {
+
+.fourth-screen-btn:hover .man {
   color: #1B1879;
   background: unset;
   transform: scale(1.5);
 }
 
-
-.fourth-screen-btn-1 {
-  background-image: url(../img/fourth-btn.webp);
-  background-repeat: no-repeat;
-  display: block;
-  max-width: 189px;
-  width: 100%;
-  height: 138px;
-  background-size: contain;
-  justify-self: center;
-backdrop-filter: blur(2px)
-}
-
-.fourth-screen-btn-1:hover {
-  background-image: url(../img/fourth-btn-hover.webp);
-}
-
-.fourth-screen-btn-2 {
-  background-image: url(../img/fourth-btn-2.webp);
-  background-repeat: no-repeat;
-  display: block;
-  max-width: 189px;
-  width: 100%;
-  height: 138px;
-  background-size: contain;
-  justify-self: center;
-backdrop-filter: blur(2px)
-}
-
-.fourth-screen-btn-2:hover {
-  background-image: url(../img/fourth-btn-hover-2.webp);
-}
-
-.fourth-screen-btn-3 {
-  background-image: url(../img/fourth-btn-3.webp);
-  background-repeat: no-repeat;
-  display: block;
-  max-width: 189px;
-  width: 100%;
-  height: 138px;
-  background-size: contain;
-    justify-self: center;
-  backdrop-filter: blur(2px)
-}
-
-.fourth-screen-btn-3:hover {
-  background-image: url(../img/fourth-btn-hover-3.webp);
-}
-
-.fourth-screen-btn-4 {
-  background-image: url(../img/fourth-btn-4.webp);
-  background-repeat: no-repeat;
-  display: block;
-  max-width: 189px;
-  width: 100%;
-  height: 138px;
-  background-size: contain;
-    justify-self: center;
-  backdrop-filter: blur(2px)
-}
-
-.fourth-screen-btn-4:hover {
-  background-image: url(../img/fourth-btn-hover-4.webp);
-}
-
 .fourth-screen-btn-5 {
-  background-image: url(../img/fourth-btn-5.webp);
-  background-repeat: no-repeat;
   display: block;
-  width: 100%;
-  height: 153px;
-  background-size: contain;
-  background-position: center;
-  margin-top: 10px;
-backdrop-filter: blur(2px)
+  max-width: 439px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
 }
 
-.fourth-screen-btn-5:hover {
-  background-image: url(../img/fourth-btn-hover-5.webp);
-}
+
+
 
 .third-screen {
   height: 0;
@@ -773,6 +714,9 @@ margin-left: auto;}
       top: 4px !important;
       left: 3px;
     }
+    .fourth-screen-btn {
+      padding: 10px;
+    }
     
     }
 
@@ -956,7 +900,7 @@ background: linear-gradient(90deg, #E5A62A 0%, #F6D94F 57.81%, #E5A62A 100%);
 }
 
 header {
-  animation: slideInFromTop 1s ease;
+  
   margin-bottom: 20px;
 }
 
@@ -988,7 +932,7 @@ header {
   } 
 
   .hero__bg {
-    animation: fadeInLeftBig 1s ease;
+    animation: fadeInLeftBig 2s ease;
     z-index: -1;
     transform: rotate(0.5deg);
   }
@@ -1005,7 +949,7 @@ header {
   
   .circle-out-1 {
     opacity: 0;
-    animation: fadeOutLeftBig 1s ease;
+    animation: fadeOutLeftBig 2s ease;
   }
 
   @keyframes fadeInRightBig {
@@ -1022,7 +966,7 @@ header {
     } 
   
     .hero__bg-2 {
-      animation: fadeInRightBig 1s ease;
+      animation: fadeInRightBig 2s ease;
       z-index: -1;
     }
 
@@ -1039,7 +983,7 @@ header {
     
     .circle-out-2 {
       opacity: 0;
-      animation: fadeOutRightBig 1s ease;
+      animation: fadeOutRightBig 2s ease;
     }
     @keyframes fadeInCircle {
       0% {opacity: 0;
@@ -1054,6 +998,7 @@ header {
     .hero__bg-3 {
       display: none;
       opacity: 0;
+      filter: blur(1px);
   
     }
     .show-circle {
@@ -1074,7 +1019,7 @@ header {
   }
 
   .hero .container, .org {
-    animation: fadeInUpBig 2s ease-in-out;
+    animation: fadeInUpBig 3s ease-in-out;
   }
   
   @keyframes slideCircleIn {
@@ -1101,8 +1046,9 @@ header {
 
  
 /* styles.css */
-#preloader {
+.preloader {
   position: fixed;
+  opacity: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -1114,6 +1060,7 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  backdrop-filter: blur(2px);
 }
  
 .spinner {
@@ -1123,7 +1070,7 @@ header {
   display: block;
   height: 50px;
   width: 59px;
-  animation: spin 1s linear infinite;
+  animation: spin 2s linear infinite;
 }
 
 
@@ -1556,3 +1503,15 @@ left: 12px;
     left: 16px;
     }
     }
+
+    @keyframes fadeOutDownBig {
+      0% {
+      opacity: 1;
+      }
+      100% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 2000px, 0);
+      transform: translate3d(0, 2000px, 0);
+      }
+      }
+    

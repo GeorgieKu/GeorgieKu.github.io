@@ -1,49 +1,11 @@
-// let winWidth,
-// block = document.querySelector('.links');
-// terms = document.querySelector('.terms');
-// policy = document.querySelector('.privacy');
-
-// function hide() {
-// 	winWidth = window.innerWidth;
-// 	console.log(winWidth);
-// 	if (winWidth > 430) {
-// 		block.classList.remove('hide');
-// 		terms.classList.add('hide');
-// 		policy.classList.add('hide');
-// 	}
-
-// 	else {
-// 		block.classList.add('hide');
-// 		terms.classList.remove('hide');
-// 		policy.classList.remove('hide');		
-// 	}
-// }
+function openUrl(){
+  window.location.href = offerUrl;
+}
 
 
-
-
-// hide();
-// window.addEventListener('scroll', hide);
-
-
-// function ibg() {
-
-// 	let ibg = document.querySelectorAll("._ibg");
-// 	for (var i = 0; i < ibg.length; i++) {
-// 		if (ibg[i].querySelector('img')) {
-// 			ibg[i].style.backgroundImage = 'url(' + ibg[i].querySelector('img').getAttribute('src') + ')';
-// 		}
-// 	}
-// }
-
-// ibg();
 
 let title = document.querySelector('.page__title');
 let titleText = title.innerHTML;
-// let date = new Date();
-// let dateYear = date.getFullYear();
-// let dateMonth = date.getMonth();
-// let dateDay = date.getDate();
 let monthArray = ['JANUARY', 'FEBRUARY', 'MARCH', 'APRIL', 'MAY', 'JUNE', 'JULY', 'AUGUST', 'SEPTEMBER', 'OCTOBER', 'NOVEMBER', 'DECEMBER'];
 
 var today = new Date();
@@ -52,38 +14,8 @@ var dayTomorrow = tomorrow.getDate();
 var monthTomorrow = tomorrow.getMonth(); //в js месяц отсчитывается с нуля
 var yearTomorrow = tomorrow.getFullYear(); 
 
-// console.log(dateYear);
-// console.log(dateMonth);
-// console.log(dateDay);
-// console.log(monthArray[dateMonth]);
-// console.log(`${monthArray[dateMonth]} ${dateDay + 1}, ${dateYear}`);
+
 title.innerHTML = `${titleText} ${monthArray[monthTomorrow]} ${dayTomorrow}`;
-// let min = 75;
-// let max = 92;
-// let percent = Math.floor(Math.random() * (max - min + 1) + min);
-// console.log(percent);
-// let claimed = document.querySelector('.claimed');
-// claimed.innerHTML = percent;
-// let progress = document.querySelector('.progress-bar-success');
-// progress.style.width = percent + '%';
-
-
-
-
-
-// let min = 75;
-// let max = 92;
-// let percent = Math.floor(Math.random() * (max - min + 1) + min);
-// console.log(percent);
-// let claimed = document.querySelector('.claimed');
-// claimed.innerHTML = percent;
-// let progress = document.querySelector('.progress-bar-success');
-// progress.style.width = percent + '%';
-
-
-
-
-
 
 function waitOn() {
     let text = "wait"
@@ -121,11 +53,7 @@ const fourthScreenBtns = document.querySelectorAll('.fourth-screen-btn')
 const fivthScreen = document.getElementById('fivth-screen');
 const sixScreen = document.getElementById('six-screen');
 
-
-
-
 secondScreenBtn1.addEventListener('click', function() {
-
 
     secondScreenBtn1.classList.add('circle-out-1');
     secondScreenBtn2.classList.add('circle-out-2');
@@ -181,8 +109,21 @@ secondScreenBtn2.addEventListener('click', function() {
     heroText.classList.add('hide');
     heroImg.classList.add('hide');
     heroBtn.classList.add('hidden');
+
+    setTimeout(function() {
+    
+      heroBg.style.animation = "fadeOutLeftBig 2s ease";
+      heroBg2.style.animation = "fadeOutRightBig 2s ease";
+
+      
+
+      
+
+    }, 1500);
     
     setTimeout(function() {
+    
+   
       heroTitle.style.display = "none";
       heroText.style.display = "none";
       heroImg.style.display = "none";
@@ -191,34 +132,39 @@ secondScreenBtn2.addEventListener('click', function() {
       heroText2.classList.add('show');
       secondScreen.style.display = "block";
       secondScreen.classList.add('show');
-      heroBg.classList.add('circle-out-1');
-      heroBg2.classList.add('circle-out-2');
       absoluteCircle.style.left = 'calc(50% - 220px)';
       absoluteCircle.style.top = '-244px';
       
 
       
 
-    }, 500);
+    }, 2000);
     
     setTimeout(function() {
       heroBg.style.display = "none";
       heroBg2.style.display = "none";
       heroBg3.style.display = 'block';
-      heroBg3.style.animation = 'fadeInCircle 1s ease forwards';
+      heroBg3.style.animation = 'fadeInCircle 2s ease forwards';
       heroBg3.classList.add('show-circle');
-    }, 1000);
+    }, 3000);
   });
+  const header = document.querySelector('.header');
   document.addEventListener('DOMContentLoaded', function () {
+    var preloader = document.querySelector('.preloader');
+
     secondScreen.style.display = "block"
     fourthScreen.style.display = 'block'
+
     setTimeout(function() {
-      var preloader = document.getElementById('preloader');
-      preloader.style.display = 'none';
-    
+
+      preloader.style.animation = 'fadeOutDownBig 2s ease forwards';
+      header.style.animation = 'slideInFromTop 2s ease';
       secondScreen.style.display = "none"
       fourthScreen.style.display = 'none'
-    }, 3000)
+      
+   
+    }, 2000)
+
 });
 
 fourthScreenBtns.forEach(btn => {
@@ -247,19 +193,8 @@ fourthScreenBtns.forEach(btn => {
   });
 });
 
-
-
-  
   const liIds = ['li1', 'li2', 'li3', 'li4', 'li5', 'li6', 'li7', 'li8', 'li9', 'li10', 'li11', 'li12'];
   
-
-
-
-
-
-
-
-
   const liElements = liIds.map(liId => document.getElementById(liId));
   
   liElements.forEach((li) => {
@@ -291,23 +226,6 @@ fourthScreenBtns.forEach(btn => {
       });
     });
   });
-
-  // const li1 = document.getElementById('li1')
-  // const sector1 = document.getElementById('sector1')
-
-  // liIds.forEach(liId => {
-  //   const li = document.getElementById(liId);
-  //   const sector = document.getElementById(`sector${liId.slice(2)}`);
-  //   const image = document.getElementById(`image${liId.slice(2)}`);
-  
-  //   li.addEventListener('mouseover', function() {
-  //     sector.classList.add(`sector-${liId.slice(2)}-hover`);
-  //   });
-  
-  //   li.addEventListener('mouseout', function() {
-  //     sector.classList.remove(`sector-${liId.slice(2)}-hover`);
-  //   });
-  // });
 
 
   for (let i = 1; i <= 12; i++) {
