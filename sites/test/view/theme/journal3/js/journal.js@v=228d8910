@@ -386,15 +386,24 @@
 		});
 	}
 
-	// Module Blocks
-	$(document).on('click', '.block-expand', function () {
-		$(this).closest('.expand-block').find('.expand-content').toggleClass('block-expanded');
-	});
 
-	$('.block-map iframe').on('load', function () {
-		$('.block-map .journal-loading').hide();
-	});
+document.addEventListener('DOMContentLoaded', function() {
+  var button = document.querySelector('.block-expand');
+  var elements = document.querySelectorAll('.flex');
 
+  button.addEventListener('click', function() {
+    elements.forEach(function(element) {
+      if (element.classList.contains('hide')) {
+        element.classList.remove('hide');
+        if (element.classList.contains('show')) {
+          element.classList.remove('show');
+        }
+      } else {
+        element.classList.add('hide');
+      }
+    });
+  });
+});
 	// ripple effect
 	if (Journal['rippleStatus'] && Journal['rippleSelectors']) {
 		Journal.lazy('ripple', Journal['rippleSelectors'], {
