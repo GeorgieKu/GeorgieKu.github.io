@@ -31681,7 +31681,7 @@ margin-top: 0;
                         <div class="block-content expand-content">
                           <div id="tab-specification">
                             <div class="table-responsive">
-                              <table class="table table-bordered">
+                              <table class="table table-bordered" id="myTable">
                                 <thead>
                                   <tr>
                                     <td colspan="2"><strong>Характеристики двигателя</strong></td>
@@ -31727,93 +31727,93 @@ margin-top: 0;
                                     <td>Максимальная мощность (кВА)</td>
                                     <td>19</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Мощность двигателя, кВт</td>
                                     <td>17.2</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Номинальная мощность, кВА</td>
                                     <td>18</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Нормы ЕС</td>
                                     <td>IIIA</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Обороты двигателя, об/мин</td>
                                     <td>1500</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Объём цилиндров, см³</td>
                                     <td>2197</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Охлаждение</td>
                                     <td>водяное</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Работа без дозаправки, часов</td>
                                     <td>18.4</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Расход топлива, л/час</td>
                                     <td>3.7</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Розетки</td>
                                     <td>1 розетка (16А), 1 розетка (32А) и 1 розетка 380 В (32А)</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Сила тока, А (при 230В)</td>
                                     <td>27</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Сила тока, А (при 400В)</td>
                                     <td>22</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Степень защиты оболочкой</td>
                                     <td>IP23</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Тип</td>
                                     <td>Дизельный</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Тип запуска</td>
                                     <td>Автоматический</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Тип исполнения</td>
                                     <td>Открытый, на раме</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Уровень шума</td>
                                     <td>75</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Частота тока</td>
                                     <td>50</td>
                                   </tr>
-                                  <tr>
+                                  <tr class="hidden-row">
                                     <td>Электронный регулятор скорости</td>
                                     <td>стандартное исполнение</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Напряжение, В</td>
                                     <td>400/230</td>
                                   </tr>
-                                  <tr>
+                                  <tr  class="hidden-row">
                                     <td>Выходная мощность</td>
                                     <td>20</td>
                                   </tr>
                                 </tbody>
-                                <thead>
+                                <thead  class="hidden-row">
                                   <tr>
                                     <td colspan="2"><strong>Оснастка</strong></td>
                                   </tr>
                                 </thead>
-                                <tbody>
+                                <tbody  class="hidden-row">
                                   <tr>
                                     <td>Мощность двигателя, л.с.</td>
                                     <td>30</td>
@@ -31838,7 +31838,37 @@ margin-top: 0;
                       padding: 10px;
                       margin-top: 20px;
                     }
+                    .hidden-row {
+  display: none;
+}
+.product_extra-276 .expand-content {
+    max-height: unset;
+    position: relative;
+}
                   </style>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+  // Получаем кнопку
+  var button = document.querySelector('.qwe');
+  
+  // Получаем таблицу и все ряды
+  var table = document.querySelector('#myTable');
+  var rows = table.querySelectorAll('tr');
+  
+  // Скрываем все дополнительные ряды
+  for (var i = 10; i < rows.length; i++) {
+    rows[i].classList.add('hidden-row');
+  }
+  
+  // Добавляем обработчик события клика на кнопку
+  button.addEventListener('click', function() {
+    // Переключаем класс hidden-row для всех дополнительных рядов
+    for (var i = 10; i < rows.length; i++) {
+      rows[i].classList.toggle('hidden-row');
+    }
+  });
+});
+                  </script>
                   <div class="product-extra-description product_extra-278 tab-pane" id="product_tabs-657f0e85d1fa3">
                     <div class="block-body expand-block">
                       <div class="block-wrapper">
@@ -34538,19 +34568,7 @@ margin-top: 0;
 
 
 
-  <script>
-    var blockExpand = document.querySelector('.qwe');
-var expandContent = document.querySelector('.block-content.expand-content');
 
-blockExpand.addEventListener('click', function() {
-  if (expandContent.style.maxHeight === 'unset') {
-    expandContent.style.maxHeight = '500px';
-  } else {
-    expandContent.style.maxHeight = 'unset';
-  }
-});
-
-  </script>
 
 </body>
 
