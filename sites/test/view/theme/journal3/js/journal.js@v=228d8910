@@ -387,9 +387,16 @@
 	}
 
 	// Module Blocks
-	$(document).on('click', '.block-expand', function () {
-		$(this).closest('.expand-block').find('.expand-content').toggleClass('block-expanded');
-	});
+var blockExpand = document.querySelector('.block-expand');
+var expandContent = document.querySelector('.block-content.expand-content');
+
+blockExpand.addEventListener('click', function() {
+  if (expandContent.classList.contains('block-expanded')) {
+    expandContent.classList.remove('block-expanded');
+  } else {
+    expandContent.classList.add('block-expanded');
+  }
+});
 
 	$('.block-map iframe').on('load', function () {
 		$('.block-map .journal-loading').hide();
