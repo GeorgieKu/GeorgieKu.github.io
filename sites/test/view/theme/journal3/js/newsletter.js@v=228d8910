@@ -1,0 +1,56 @@
+(function ($) {
+	function newsletter(el) {
+		const $el = $(el);
+		const $form = $el.find('form');
+
+		// submit
+		$el.on('click', '.btn-primary', function (e) {
+			e.preventDefault();
+
+			const $this = $(this);
+
+			function ajax(unsubscribe) {
+				$.ajax({
+					url: $form.attr('action') + (unsubscribe ? '&unsubscribe=1' : ''),
+					type: 'post',
+					dataType: 'json',
+					data: $form.serialize(),
+					beforeSend: function () {
+						$this.button('loading');
+					},
+					complete: function () {
+						$this.button('reset');
+					},
+					success: function (json) {
+						if (json.status === 'success') {
+							if (json.response.unsubscribe) {
+								if (confirm(json.response.message)) {
+									ajax(true);
+								}
+							} else {
+								show_message({
+									message: json.response.message,
+								});
+							}
+						} else {
+							show_message({
+								message: json.response,
+							});
+						}
+					},
+					error: function (xhr, ajaxOptions, thrownError) {
+						alert(thrownError + '\r\n' + xhr.statusText + '\r\n' + xhr.responseText);
+					}
+				})
+			}
+
+			ajax();
+		});
+	}
+
+	Journal.lazy('newsletter', '.module-newsletter', {
+		load: function (el) {
+			newsletter(el);
+		}
+	});
+})(jQuery);
