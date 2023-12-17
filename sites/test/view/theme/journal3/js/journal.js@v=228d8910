@@ -386,18 +386,16 @@
 		});
 	}
 
-	// Module Blocks
 var blockExpand = document.querySelector('.block-expand');
 var expandContent = document.querySelector('.block-content.expand-content');
 
 blockExpand.addEventListener('click', function() {
-  if (expandContent.classList.contains('block-expanded')) {
-    expandContent.classList.remove('block-expanded');
+  if (expandContent.style.maxHeight === 'unset') {
+    expandContent.style.maxHeight = '500px';
   } else {
-    expandContent.classList.add('block-expanded');
+    expandContent.style.maxHeight = 'unset';
   }
 });
-
 	$('.block-map iframe').on('load', function () {
 		$('.block-map .journal-loading').hide();
 	});
