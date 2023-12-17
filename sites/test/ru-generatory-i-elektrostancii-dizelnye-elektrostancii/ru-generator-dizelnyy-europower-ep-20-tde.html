@@ -31727,93 +31727,93 @@ margin-top: 0;
                                     <td>Максимальная мощность (кВА)</td>
                                     <td>19</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Мощность двигателя, кВт</td>
                                     <td>17.2</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Номинальная мощность, кВА</td>
                                     <td>18</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Нормы ЕС</td>
                                     <td>IIIA</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Обороты двигателя, об/мин</td>
                                     <td>1500</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Объём цилиндров, см³</td>
                                     <td>2197</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Охлаждение</td>
                                     <td>водяное</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Работа без дозаправки, часов</td>
                                     <td>18.4</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Расход топлива, л/час</td>
                                     <td>3.7</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Розетки</td>
                                     <td>1 розетка (16А), 1 розетка (32А) и 1 розетка 380 В (32А)</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Сила тока, А (при 230В)</td>
                                     <td>27</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Сила тока, А (при 400В)</td>
                                     <td>22</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Степень защиты оболочкой</td>
                                     <td>IP23</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Тип</td>
                                     <td>Дизельный</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Тип запуска</td>
                                     <td>Автоматический</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Тип исполнения</td>
                                     <td>Открытый, на раме</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Уровень шума</td>
                                     <td>75</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Частота тока</td>
                                     <td>50</td>
                                   </tr>
-                                  <tr class="hidden-row">
+                                  <tr class="test hidden-row">
                                     <td>Электронный регулятор скорости</td>
                                     <td>стандартное исполнение</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Напряжение, В</td>
                                     <td>400/230</td>
                                   </tr>
-                                  <tr  class="hidden-row">
+                                  <tr  class="test hidden-row">
                                     <td>Выходная мощность</td>
                                     <td>20</td>
                                   </tr>
                                 </tbody>
-                                <thead  class="hidden-row">
+                                <thead  class="test hidden-row">
                                   <tr>
                                     <td colspan="2"><strong>Оснастка</strong></td>
                                   </tr>
                                 </thead>
-                                <tbody  class="hidden-row">
+                                <tbody  class="test hidden-row">
                                   <tr>
                                     <td>Мощность двигателя, л.с.</td>
                                     <td>30</td>
@@ -31847,24 +31847,19 @@ margin-top: 0;
 }
                   </style>
                   <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-  // Получаем кнопку
+document.addEventListener('DOMContentLoaded', function() {
   var button = document.querySelector('.qwe');
-  
-  // Получаем таблицу и все ряды
-  var table = document.querySelector('#myTable');
-  var rows = table.querySelectorAll('tr');
-  
-  // Скрываем все дополнительные ряды
-  for (var i = 10; i < rows.length; i++) {
-    rows[i].classList.add('hidden-row');
-  }
-  
-  // Добавляем обработчик события клика на кнопку
+  var elements = document.querySelectorAll('.test');
+
   button.addEventListener('click', function() {
-    // Переключаем класс hidden-row для всех дополнительных рядов
-    for (var i = 10; i < rows.length; i++) {
-      rows[i].classList.toggle('hidden-row');
+    if (elements[0].classList.contains('hidden-row')) {
+      elements.forEach(function(element) {
+        element.classList.remove('hidden-row');
+      });
+    } else {
+      elements.forEach(function(element) {
+        element.classList.add('hidden-row');
+      });
     }
   });
 });
