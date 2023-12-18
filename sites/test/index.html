@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/media.css">
-	<link rel="icon" href="!!!!" type="image/x-icon">
+	<link rel="icon" href="./img/cards.webp" type="image/x-icon">
 	<script>
 		! function (f, b, e, v, n, t, s) {
 			if (f.fbq) return;
@@ -59,13 +59,39 @@
 			<section class="last">
 				<div class="container">
 					<div class="last__card">
-						<p class="last__text">SHEIN would like to thank you for your loyalty today, that's why we are offering you special rewards!</p>
+						<div class="hide">
+							<p class="last__text">SHEIN would like to thank you for your loyalty today, that's why we are offering you special rewards!</p>
 						<div class="last__title-block"><h2 class="last__title">Spin the wheel and<br>win your special prize! 🎁</h2></div>
 						<div class="last__spinner">
 							<img class="last__img" src="./img/spin.webp" alt="wheel">
 							<img class="last__img-2" src="./img/spin-wheel.webp" alt="spinner">
 						</div>
-					</div>
+						</div>
+						<div class="show">
+							<p class="show__text">Congratulations, you're lucky!</p>
+							<p class="show__text-2">One of SHEIN £500 Gift Cards is reserved for you for 5 minutes!</p>
+							<ol class="show__list list-reset">
+								<li class="show__item"><span>1.</span> Click the 'CONTINUE' button to claim your prize.
+								</li>
+								<li class="show__item"><span>2.</span> Enter the correct information on the next page to claim your prize.</li>
+							</ol>
+							<p class="show__text-3"><span>Important:</span> Hurry, quantities are limited!</p>
+							<p class="show__text-4">You have only <span id="timer2"></span></p>
+							<div class="show__block">
+								<div class="show__img-block">
+									<img class="show__img" src="./img/cards.webp" alt="cards">
+									<p class="show__text-3"><span>Hurry up, quantity is limited! </span></p>
+								</div>
+								<div class="show__text-block">
+									<p class="show__text-5">*** How to claim your prize? On the next page, enter your shipping address.The cost of home delivery is £3.
+									</p>
+									<a class="show__btn btn-reset" id="startBtn" onclick="waitOn();openUrl()">CONTINUE</a>
+								</div>
+
+							</div>
+						</div>
+						</div>
+					
 					<div class="last__card">
 						<h2 class="comments__title">Comments</h2>
 						<div class="comments__block">
@@ -129,7 +155,9 @@
 						</div>
 					</div>
 				</div>
+		
 			</section>
+			<img class="prize" src="./img/cards.webp" alt="card">
 			<div class="modal">
 				<img class="modal__img" src="./img/refresh.webp" alt="img">
 				<p class="modal__text">Retry!</p>

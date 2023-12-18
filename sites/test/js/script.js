@@ -3,7 +3,7 @@ function openUrl(){
 }
 
 function waitOn() {
-    let text = "wait"
+    let text = "Wait"
     let pointCount = 0
     var i = setInterval(function () {
         var newText = text
@@ -12,7 +12,7 @@ function waitOn() {
         }
         document.getElementById("startBtn").text = newText;
         pointCount++
-        if (pointCount > 3) {
+        if (pointCount > 2) {
             pointCount = 0
         }
     }, 200);

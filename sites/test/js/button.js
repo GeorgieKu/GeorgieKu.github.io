@@ -152,7 +152,11 @@ question7btns.forEach(function(quetion7btn) {
 });
 
 let spinner = document.querySelector('.last__img')
-let modal =document.querySelector('.modal')
+let modal = document.querySelector('.modal')
+let modalbtn = document.querySelector('.modal__btn')
+let prize = document.querySelector('.prize')
+let hide = document.querySelector('.hide')
+let show = document.querySelector('.show')
 
 spinner.addEventListener('click', function() {
     spinner.style.animation = 'spin 5s ease forwards'
@@ -161,6 +165,34 @@ spinner.addEventListener('click', function() {
         modal.style.display = "block"
 
     }, 5000)
+
+
+})
+
+modalbtn.addEventListener('click', function() {
+    modal.style.animation = 'fadeOut 1s ease-in-out forwards'
+    setTimeout(function() {
+        spinner.style.animation = 'spin2 5s ease forwards'
+
+    }, 1000)
+    setTimeout(function() {
+        prize.style.display = 'block'
+
+
+    }, 6000)
+    setTimeout(function() {
+
+        prize.style.animation = 'rotate 1s ease forwards'
+
+    }, 6300)
+    setTimeout(function() {
+
+        prize.style.display = 'none'
+        hide.style.display = 'none'
+        show.style.display = 'block'
+        countdown2()
+
+    }, 7300)
 
 })
 
@@ -194,6 +226,8 @@ commentDates.forEach(function(commentDate) {
 
 
 
+
+
 function countdown() {
     var seconds = 120; // Время в секундах (2 минуты)
     var timerElement = document.getElementById("timer");
@@ -217,4 +251,30 @@ function countdown() {
       }
     }, 1000);
   }
+
+  function countdown2() {
+    var seconds = 300; // Время в секундах (2 минуты)
+    var timerElement = document.getElementById("timer2");
+    
+    var countdownInterval = setInterval(function() {
+      var minutes = Math.floor(seconds / 60);
+      var remainingSeconds = seconds % 60;
+      
+      // Добавляем ведущий ноль, если секунды меньше 10
+      if (remainingSeconds < 10) {
+        remainingSeconds = "0" + remainingSeconds;
+      }
+      
+      timerElement.textContent = minutes + " Minutes " + remainingSeconds + " Seconds";
+      
+      if (seconds === 0) {
+        clearInterval(countdownInterval);
+        timerElement.textContent = "0 Minutes 00 Seconds";
+      } else {
+        seconds--;
+      }
+    }, 1000);
+  }
+  
+
   
