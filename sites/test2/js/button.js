@@ -135,8 +135,11 @@ question7btns.forEach(function(quetion7btn) {
         aside.style.animation = 'fadeOut 1s ease-in-out forwards'
        
         setTimeout(function() {
+            main.style.display = "none"
+            aside.style.display = "none"
             loader.style.animation = 'fadeIn 1s ease-in-out'
             loader.style.display = 'block'
+            
         }, 1200)
         setTimeout(function() {
             loaderItem1.style.animation = 'fadeIn 1s ease-in-out'
