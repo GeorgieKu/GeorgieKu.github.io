@@ -36,6 +36,7 @@ question1btns.forEach(function(quetion1btn) {
         question1.style.animation = 'fadeOut 1s ease-in-out forwards'
        
         setTimeout(function() {
+            question1.style.display = 'none'
             question2.style.display = 'block'
             question2.style.animation = 'fadeIn 1s ease-in-out'
            
@@ -50,6 +51,7 @@ question2btns.forEach(function(quetion2btn) {
         question2.style.animation = 'fadeOut 1s ease-in-out forwards'
        
         setTimeout(function() {
+            question2.style.display = 'none'
             question3.style.display = 'block'
             question3.style.animation = 'fadeIn 1s ease-in-out'
           
@@ -64,6 +66,7 @@ question3btns.forEach(function(quetion3btn) {
         question3.style.animation = 'fadeOut 1s ease-in-out forwards'
        
         setTimeout(function() {
+            question3.style.display = 'none'
             question4.style.display = 'block'
             question4.style.animation = 'fadeIn 1s ease-in-out'
  
@@ -78,6 +81,7 @@ question4btns.forEach(function(quetion4btn) {
         question4.style.animation = 'fadeOut 1s ease-in-out forwards'
        
         setTimeout(function() {
+            question4.style.display = 'none'
             question5.style.display = 'block'
             question5.style.animation = 'fadeIn 1s ease-in-out'
          
@@ -92,6 +96,7 @@ question5btns.forEach(function(quetion5btn) {
         question5.style.animation = 'fadeOut 1s ease-in-out forwards'
        
         setTimeout(function() {
+            question5.style.display = 'none'
             question6.style.display = 'block'
             question6.style.animation = 'fadeIn 1s ease-in-out'
       
@@ -106,6 +111,7 @@ question6btns.forEach(function(quetion6btn) {
         question6.style.animation = 'fadeOut 1s ease-in-out forwards'
        
         setTimeout(function() {
+            question6.style.display = 'none'
             question7.style.display = 'block'
             question7.style.animation = 'fadeIn 1s ease-in-out'
        
