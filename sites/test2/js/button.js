@@ -155,13 +155,13 @@ question7btns.forEach(function(quetion7btn) {
             loaderItem3.style.display = 'block'
         }, 7500)
         setTimeout(function() {
-            loader.style.animation = 'fadeOut 1s ease-in-out forwards'
+            loader.style.animation = 'fadeOut 3s ease-in-out forwards'
         }, 8000)
         setTimeout(function() {
             loader.style.display = "none"
             last.style.display = "block"
             last.style.animation = 'slideInFromDown 1s ease'
-        }, 8200)
+        }, 11000)
     
     });
     
@@ -199,12 +199,12 @@ modalbtn.addEventListener('click', function() {
         prize.style.display = 'block'
 
 
-    }, 6000)
+    }, 7000)
     setTimeout(function() {
 
         prize.style.animation = 'rotate 1s ease forwards'
 
-    }, 6300)
+    }, 7300)
     setTimeout(function() {
 
         prize.style.display = 'none'
@@ -212,7 +212,7 @@ modalbtn.addEventListener('click', function() {
         show.style.display = 'block'
         countdown2()
 
-    }, 8000)
+    }, 9000)
 
 })
 
@@ -301,3 +301,41 @@ function countdown() {
     }, 1000);
   }
   
+
+  let cardsAmount = document.getElementById('cardsAmount');
+  let interval;
+  
+  function decreaseCardsAmount() {
+    let currentAmount = parseInt(localStorage.getItem('cardsAmount')) || 0;
+    if (currentAmount > 0) {
+      currentAmount--;
+      localStorage.setItem('cardsAmount', currentAmount);
+      cardsAmount.textContent = currentAmount;
+    } else {
+      clearInterval(interval);
+    }
+  }
+  
+  function startCountdown() {
+    interval = setInterval(decreaseCardsAmount, 5000);
+    setTimeout(function() {
+      clearInterval(interval);
+      interval = setInterval(decreaseCardsAmount, 2000);
+    }, 5000);
+    setTimeout(function() {
+      clearInterval(interval);
+      interval = setInterval(decreaseCardsAmount, 5000);
+    }, 7000);
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    let storedAmount = localStorage.getItem('cardsAmount');
+    if (storedAmount) {
+      cardsAmount.textContent = storedAmount;
+      startCountdown();
+    } else {
+      localStorage.setItem('cardsAmount', 146); // Начальное значение cardsAmount
+      cardsAmount.textContent = 146;
+      startCountdown();
+    }
+  });
