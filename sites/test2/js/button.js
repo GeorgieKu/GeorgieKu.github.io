@@ -196,6 +196,7 @@ modalbtn.addEventListener('click', function() {
 
     }, 1000)
     setTimeout(function() {
+        prize.style.animation = 'fadeIn 1s ease forwards'
         prize.style.display = 'block'
 
 
