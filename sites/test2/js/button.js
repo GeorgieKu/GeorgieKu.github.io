@@ -4,15 +4,16 @@ let quetions = document.getElementById('quetions')
 
 startTimer.addEventListener('click', function() {
     
-    timer.style.display = "block"
-    countdown();
+    timer.style.opacity = "1"
     startTimer.style.animation = 'fadeOut 1s ease-in-out forwards'
+    countdown();
 
 
     setTimeout(function() {
-        quetions.style.animation = 'fadeIn 1s ease-in-out'
-        quetions.style.display = 'block '
-    }, 1200)
+        quetions.style.height = '0'
+        quetions.style.display = 'block'
+        quetions.style.animation = 'fadeInFirst 1s ease forwards'
+    }, 1000)
 
 })
 let question1 = document.querySelector('.quetion-1');
@@ -159,7 +160,7 @@ question7btns.forEach(function(quetion7btn) {
         setTimeout(function() {
             loader.style.display = "none"
             last.style.display = "block"
-            last.style.animation = 'fadeIn 1s ease-in-out'
+            last.style.animation = 'slideInFromDown 1s ease'
         }, 8200)
     
     });
@@ -167,19 +168,22 @@ question7btns.forEach(function(quetion7btn) {
 });
 
 let spinner = document.querySelector('.last__img')
+let spinner2 = document.querySelector('.last__spinner')
 let modal = document.querySelector('.modal')
 let modalbtn = document.querySelector('.modal__btn')
 let prize = document.querySelector('.prize')
 let hide = document.querySelector('.hide')
 let show = document.querySelector('.show')
+let body = document.querySelector('body')
 
-spinner.addEventListener('click', function() {
+spinner2.addEventListener('click', function() {
     spinner.style.animation = 'spin 5s ease forwards'
     setTimeout(function() {
         modal.style.animation = 'fadeIn 1s ease-in-out'
         modal.style.display = "block"
+        body.style.overflow = 'hidden'
 
-    }, 5000)
+    }, 5500)
 
 
 })
@@ -188,6 +192,7 @@ modalbtn.addEventListener('click', function() {
     modal.style.animation = 'fadeOut 1s ease-in-out forwards'
     setTimeout(function() {
         spinner.style.animation = 'spin2 5s ease forwards'
+        body.style.overflow = 'unset'
 
     }, 1000)
     setTimeout(function() {
@@ -207,38 +212,43 @@ modalbtn.addEventListener('click', function() {
         show.style.display = 'block'
         countdown2()
 
-    }, 7300)
+    }, 8000)
 
 })
 
 
 
-// Получаем все элементы с классом "comments__date"
-let commentDates = document.querySelectorAll(".comments__date");
 
-// Функция для форматирования даты в формат "дд.мм.гггг"
+let commentDates = document.querySelectorAll(".comments__date, .comments__date-2, .comments__date-3");
+
 function formatDate(date) {
   let day = date.getDate();
   let month = date.getMonth() + 1;
   let year = date.getFullYear();
-  
-  // Добавляем ведущий ноль, если число меньше 10
   if (day < 10) {
     day = "0" + day;
   }
   if (month < 10) {
     month = "0" + month;
   }
-  
   return day + "." + month + "." + year;
 }
 
-// Перебираем все элементы с классом "comments__date" и устанавливаем в них сегодняшнюю дату
 commentDates.forEach(function(commentDate) {
   let today = new Date();
-  commentDate.textContent = formatDate(today);
+  let commentDateClass = commentDate.classList;
+  if (commentDateClass.contains("comments__date")) {
+    commentDate.textContent = formatDate(today);
+  } else if (commentDateClass.contains("comments__date-2")) {
+    let yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    commentDate.textContent = formatDate(yesterday);
+  } else if (commentDateClass.contains("comments__date-3")) {
+    let twoDaysAgo = new Date(today);
+    twoDaysAgo.setDate(today.getDate() - 2);
+    commentDate.textContent = formatDate(twoDaysAgo);
+  }
 });
-
 
 
 
@@ -290,6 +300,4 @@ function countdown() {
       }
     }, 1000);
   }
-  
-
   
