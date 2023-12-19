@@ -321,11 +321,11 @@ function countdown() {
     setTimeout(function() {
       clearInterval(interval);
       interval = setInterval(decreaseCardsAmount, 2000);
+      setTimeout(function() {
+        clearInterval(interval);
+        interval = setInterval(decreaseCardsAmount, 5000);
+      }, 8000);
     }, 5000);
-    setTimeout(function() {
-      clearInterval(interval);
-      interval = setInterval(decreaseCardsAmount, 5000);
-    }, 7000);
   }
   
   document.addEventListener('DOMContentLoaded', function() {
