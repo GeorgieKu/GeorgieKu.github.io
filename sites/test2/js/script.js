@@ -153,6 +153,25 @@ faqItems.forEach(item => {
 });
 
 const scrollToTopButton = document.querySelector('.scrollToTop');
+const commentBlock = document.querySelector('.comment-block');
+
+// Функция для проверки положения прокрутки страницы
+function checkScrollPosition() {
+  const scrollPosition = window.scrollY;
+  const commentBlockPosition = commentBlock.offsetTop;
+
+  if (scrollPosition >= commentBlockPosition) {
+    scrollToTopButton.style.display = 'block';
+  } else {
+    scrollToTopButton.style.display = 'none';
+  }
+}
+
+// Обработчик события прокрутки страницы
+window.addEventListener('scroll', checkScrollPosition);
+
+// Проверяем положение прокрутки страницы при загрузке страницы
+checkScrollPosition();
 
 
 scrollToTopButton.addEventListener('click', () => {
