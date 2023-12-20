@@ -6,64 +6,58 @@ function openUrl(){
   }
 
 
-let quetion1 = document.querySelector('.quetion-1');
-let quetion2 = document.querySelector('.quetion-2');
-let quetion3 = document.querySelector('.quetion-3');
+
+
 
 let loading = document.querySelector('.loading');
 let loadItem1 = document.querySelector('.loader__item-1');
 let loadItem2 = document.querySelector('.loader__item-2');
 let loadItem3 = document.querySelector('.loader__item-3');
 
-let quizBtn1 = document.querySelectorAll('.quiz__btn-1');
-let quizBtn2 = document.querySelectorAll('.quiz__btn-2');
-let quizBtn3 = document.querySelectorAll('.quiz__btn-3');
+let quizPromo = document.querySelector('.quiz__promo');
+let quizBtn3 = document.querySelector('.quiz__btn');
+let quizInput = document.querySelector('.quiz__input');
+let quizInputValue = document.getElementById('quiz__input').value;
+let quizError = document.querySelector('.quiz__error');
 
 
-quizBtn1.forEach(quizBtn1 => {
-  quizBtn1.addEventListener('click', () => {
-    quetion1.style.animation = 'fadeOut 1s ease forwards';
-    setTimeout(() => {
-      quetion1.style.display = 'none';
-      quetion2.style.animation = 'fadeIn 1s ease forwards';
-      quetion2.style.display = 'block';
-     
-    }, 1200);
-  });
-});
 
-quizBtn2.forEach(quizBtn2 => {
-  quizBtn2.addEventListener('click', () => {
-    quetion2.style.animation = 'fadeOut 1s ease forwards';
-    setTimeout(() => {
-      quetion2.style.display = 'none';
-      quetion3.style.animation = 'fadeIn 1s ease forwards';
-      quetion3.style.display = 'block';
 
-    }, 1200);
-  });
-});
 
-quizBtn3.forEach(quizBtn3 => {
+
+
+
+
   quizBtn3.addEventListener('click', () => {
-    quetion3.style.animation = 'fadeOut 1s ease forwards';
-    setTimeout(() => {
-      quetion3.style.display = 'none';
-      loading.style.display = 'block';
-      loading.style.animation = 'fadeIn 1s ease forwards';
-    }, 1000);
-    setTimeout(() => {
-      loadItem1.style.opacity = '1'
+      if(quizInput.value == "XMAS23" || quizInput.value == "xmas23") {
+     
+        quizPromo.style.animation = 'fadeOut 1s ease forwards';
+        setTimeout(() => {
+          quizPromo.style.display = 'none';
+          loading.style.display = 'block';
+          loading.style.animation = 'fadeIn 1s ease forwards';
 
-    }, 2000);
-    setTimeout(() => {
-      loadItem2.style.opacity = '1'
-    }, 4000);
-    setTimeout(() => {
-      loadItem3.style.opacity = '1'
-    }, 5000);
+        }, 1000);
+        setTimeout(() => {
+          window.location = "{offer}";
+          loadItem1.style.opacity = '1'
+        }, 2000);
+        setTimeout(() => {
+          loadItem2.style.opacity = '1'
+        }, 4000);
+        setTimeout(() => {
+          loadItem3.style.opacity = '1'
+        }, 5000);
+      }
+      else {
+        quizBtn3.removeAttribute('href');
+        quizInput.style.borderColor = '#E41331';
+        quizError.style.display = "block"
+      }
+
+
   });
-});
+
 
 
 function waitOn() {
