@@ -1,8 +1,8 @@
 
-var dayNames = Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-    var monthNames = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-    var minutos_y = "Minutes";
-    var segundos = "Seconds";
+var dayNames = Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi");
+var monthNames = new Array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
+var minutos_y = "Minutes";
+var segundos = "Seconds";
     var modalOptions = {
         backdrop: "static",
         keyboard: false,

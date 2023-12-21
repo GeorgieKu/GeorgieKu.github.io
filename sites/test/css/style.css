@@ -86,10 +86,36 @@ h3 {
   margin-left: auto;
 }
 
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromDown {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
 .header {
   padding: 10px 0;
   border-bottom: 1px solid #ccc;
   margin-bottom: 20px;
+  animation: slideInFromTop 1s ease;
 }
 
 .header__logo {
@@ -103,10 +129,14 @@ h3 {
 display: flex;
 justify-content: space-between;
 gap: 20px;
+animation: slideInFromDown 1s ease;
 }
 
 .main__img {
-  max-width: 777px;
+  max-width: 70%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 20px;
 }
 
@@ -148,8 +178,11 @@ gap: 20px;
 }
 
 #timer {
+  display: block;
   color: #c82311;
   font-weight: 700;
+  height: 17px;
+  opacity: 0;
 }
 
 @keyframes fadeOut {
@@ -171,13 +204,26 @@ gap: 20px;
   }   
 }
 
+@keyframes fadeInFirst {
+  0% {
+    opacity: 0;
+    height: 0;
+
+  }
+  100% {
+    opacity: 1;
+    height: 190px;
+
+  }   
+}
+
 
 .quetions {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  display: none;
   height: 175px;
+  display: none;
 }
 
 .quetion-counter {
@@ -289,6 +335,7 @@ gap: 20px;
   margin-right: auto;
   margin-left: auto;
   transform: rotate(2921deg);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .last__title-block {
@@ -296,7 +343,7 @@ gap: 20px;
   background-color: #000000;
   padding-bottom: 10px;
   padding-top: 5px;
-  width: 90%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
@@ -330,6 +377,8 @@ gap: 20px;
 .last__spinner {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .last__img-2 {
@@ -349,7 +398,7 @@ gap: 20px;
 
 .comments__block {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 
@@ -360,6 +409,11 @@ gap: 20px;
 .comments__img {
   max-width: 50px;
   border-radius: 50%;
+}
+
+.comments__flex {
+  display: flex;
+  gap: 20px;
 }
 
 .comments__name {
