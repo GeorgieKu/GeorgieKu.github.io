@@ -1,321 +1,41 @@
 <!DOCTYPE html>
-<html lang="fr">
-
+<html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<title>NEW ANNUAL CONTEST | SEPHORA</title>
-	<meta name="description" content="SEPHORA">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./css/media.css">
-	<link rel="icon" href="./img/cards.webp" type="image/x-icon">
-	<script>
-		! function (f, b, e, v, n, t, s) {
-			if (f.fbq) return;
-			n = f.fbq = function () {
-				n.callMethod ?
-					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-			};
-			if (!f._fbq) f._fbq = n;
-			n.push = n;
-			n.loaded = !0;
-			n.version = '2.0';
-			n.queue = [];
-			t = b.createElement(e);
-			t.async = !0;
-			t.src = v;
-			s = b.getElementsByTagName(e)[0];
-			s.parentNode.insertBefore(t, s)
-		}(window, document, 'script',
-			'https://connect.facebook.net/en_US/fbevents.js');
-		fbq('init', '{pixel}');
-		fbq('track', 'PageView');
-	</script>
-	<noscript><img height="1" width="1" style="display:none"
-			src="https://www.facebook.com/tr?id={pixel}&ev=PageView&noscript=1"></noscript>
-	<!-- End Meta Pixel Code -->
-	<meta name="facebook-domain-verification" content="nr5ejn8ylg1f4rqg3w4w55pbbau66f">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AX1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <title>AX1</title>
 </head>
-
 <body>
-	<header class="header" style="z-index: 1000000;">
-		<div class="container">
-			<img class="header__logo" src="./img/logo.webp" alt="logo">
-		</div>
-	</header>
-	<div class="container">
-		<div class="wrapper">
-			<section class="loader">
-				<div class="container">
-					<h2 class="loader__title">Attendez, nous vérifions vos réponses...</h2>
-					<div class="loader__spinner"></div>
-					<ul class="loader__list list-reset">
-						<li class="loader__item loader__item-1">Vous avez déjà répondu à 7 questions sur 7!</li>
-						<li class="loader__item loader__item-2">Aucun pré-sondage sur votre adresse IP.</li>
-						<li class="loader__item loader__item-3">Il reste encore des cadeaux disponibles!</li>
-					</ul>
-				</div>
-			</section>
-			<section class="last">
-				<div class="container">
-					<div class="last__card">
-						<div class="hide">
-							<p class="last__text">Sephora tient à vous remercier pour votre fidélité aujourd'hui, c'est pourquoi nous vous offrons des récompenses spéciales !</p>
-						<div class="last__title-block"><h2 class="last__title">Faites tourner la roue<br> et gagnez votre prix spécial!🎁</h2></div>
-						<div class="last__spinner">
-							<img class="last__img" src="./img/spin.webp" alt="wheel">
-							<img class="last__img-2" src="./img/spin-wheel.webp" alt="spinner">
-						</div>
-						</div>
-						<div class="show">
-							<p class="show__text">Félicitations, vous avez de la chance!</p>
-							<p class="show__text-2">Un des calendriers de l'Avent de Sephora vous est réservé pendant 5 minutes!</p>
-							<ol class="show__list list-reset">
-								<li class="show__item"><span>1.</span> Cliquez sur le bouton 'CONTINUER' pour réclamer votre prix.
-								</li>
-								<li class="show__item"><span>2.</span> Saisissez les informations correctes sur la page suivante pour réclamer votre prix.</li>
-							</ol>
-							<p class="show__text-3"><span>Important:</span> Dépêchez-vous, les quantités sont limitées !</p>
-							<p class="show__text-4">Vous avez seulement <span id="timer2"></span></p>
-							<div class="show__block">
-								<div class="show__img-block">
-									<img class="show__img" src="./img/cards.webp" alt="cards">
-									<p class="show__text-3"><span>Dépêchez-vous, la quantité est limitée!</span></p>
-								</div>
-								<div class="show__text-block">
-									<p class="show__text-5">*** Comment réclamer votre prix ? Sur la page suivante, saisissez votre adresse de livraison. Les frais de livraison à domicile s'élèvent à 1.93 CHF.
-									</p>
-									<a class="show__btn btn-reset" id="startBtn" onclick="waitOn();openUrl()">CONTINUER</a>
-								</div>
-
-							</div>
-						</div>
-						</div>
-					
-					<div class="last__card">
-						<h2 class="comments__title">Commentaires</h2>
-						<div class="comments__block">
-							<img class="comments__img" src="./img/1.webp" alt="user">
-							<div class="comments__texts">
-								<div class="comments__flex">
-									<p class="comments__name">Élisabeth Dubois</p>
-									<p class="comments__date"></p>
-								</div>
-								<p class="comments__comment">Je viens de faire la meilleure trouvaille chez Sephora ! 🛍 Mon maquillage est officiellement au top, grâce à leur incroyable gamme. Qui aurait pensé que faire du shopping en ligne pour des produits de beauté serait aussi addictif?</p>
-							</div>
-						</div>
-						<div class="comments__block">
-							<img class="comments__img" src="./img/2.webp" alt="user">
-							<div class="comments__texts">
-								<div class="comments__flex">
-									<p class="comments__name">Camille Lefevre	</p>
-									<p class="comments__date"></p>
-								</div>
-							
-								<p class="comments__comment">Je viens de plonger dans le calendrier de l'Avent de Sephora, c'est vraiment révolutionnaire! 🌟 Je l'ai ouvert, et les ensembles à l'intérieur rendent mon mois de décembre absolument magique. Qui a besoin d'un calendrier ordinaire quand on peut découvrir des trésors de beauté chaque jour?</p>
-							</div>
-						</div>
-						<div class="comments__block">
-							<img class="comments__img" src="./img/3.webp" alt="user">
-							<div class="comments__texts">
-								<div class="comments__flex">
-									<p class="comments__name">Juliette Martin	</p>
-									<p class="comments__date"></p>
-								</div>
-								
-								
-								<p class="comments__comment">Je me sens comme une reine de beauté qui a décroché le jackpot - j'ai gagné la boîte surprise de Sephora! 🎁 Je l'ai ouverte aujourd'hui, et les ensembles de beauté sont un rêve devenu réalité. Décembre vient de devenir beaucoup plus glamour!</p>
-							</div>
-						</div>
-						<div class="comments__block">
-							<img class="comments__img" src="./img/4.webp" alt="user">
-							<div class="comments__texts">
-								<div class="comments__flex">	
-									<p class="comments__name">Amélie Renault	</p>
-									<p class="comments__date-2"></p>
-								</div>
-								
-							
-								<p class="comments__comment">J'ai tenté ma chance avec la boîte surprise beauté de Sephora après le buzz, et c'est une victoire ! Je viens de recevoir la mienne, et les surprises en maquillage et en soins de la peau transforment ma routine quotidienne en une aventure festive. Le butin beauté le plus chanceux jamais réalisé!</p>
-							</div>
-						</div>
-						<div class="comments__block">
-							<img class="comments__img" src="./img/5.webp" alt="user">
-							<div class="comments__texts">
-								<div class="comments__flex">
-									<p class="comments__name">Isabelle Leroux	</p>
-									<p class="comments__date-2"></p>
-								</div>
-						
-								
-								<p class="comments__comment">Obsédée par le calendrier de l'Avent beauté de Sephora! 🌈 Déballer le meilleur du maquillage et des soins de la peau semble être une célébration quotidienne. Qui aurait pensé que le décompte jusqu'à la beauté pouvait être aussi amusant?
-								</p>
-							</div>
-						</div>
-						<div class="comments__block">
-							<img class="comments__img" src="./img/6.webp" alt="user">
-							<div class="comments__texts">
-								<div class="comments__flex">
-									<p class="comments__name">Charlotte Bernard	</p>
-									<p class="comments__date-3"></p>
-								</div>
-							
-								
-								<p class="comments__comment">J'ai participé au tirage au sort du calendrier de l'Avent de Sephora, pas de chance cette fois-ci, mais pas de regrets! 💋🎄 Je l'ai acheté quand même, et les ensembles en valent chaque centime.
-								</p>
-							</div>
-						</div>
-						<div class="comments__block">
-							<img class="comments__img" src="./img/7.webp" alt="user">
-							<div class="comments__texts">
-								<div class="comments__flex">
-									<p class="comments__name">Éva Fontaine	</p>
-									<p class="comments__date-3"></p>
-								</div>
-							
-								
-								<p class="comments__comment">C'est la meilleure stratégie marketing que je connaisse. Le calendrier de l'Avent beauté de Sephora est un incontournable pour tous les passionnés de beauté!
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-		
-			</section>
-			<img class="prize" src="./img/cards.webp" alt="card">
-			<div class="modal">
-				<img class="modal__img" src="./img/refresh.webp" alt="img">
-				<p class="modal__text">Réessayez !</p>
-				<p class="modal__text-2">S'il vous plaît, essayez à nouveau. Vous avez une dernière chance!</p>
-				<button class="modal__btn btn-reset">C'est parti!</button>
-			</div>
-			<main class="main">
-				<img class="main__img" src="./img/hero.webp" alt="photo">
-				<p id="timerwrap">
-			
-						<span id="timer"></span>
-
-				</p>
-				<p class="main__text-1">
-					Dépêchez-vous, il ne reste que <span id="cardsAmount">146</span> calendriers de l'Avent Sephora sur 1000 disponibles !</p>
-				<button class="main__btn btn-reset survey_button startform1" data-bq="1" id="starttimer">COMMENCEZ</button>
-				<div class="quetions" id="quetions">
-					<div class="quetion-1">
-						<p class="quetion-counter">Question 1 sur 7</p>
-						<p class="quetion__text">
-							Êtes-vous résident permanent en Suisse?
-						</p>
-						<button class="quetion__btn btn-reset">Oui</button>
-						<button class="quetion__btn btn-reset">Non</button>
-					</div>
-					<div class="quetion-2">
-						<p class="quetion-counter">Question 2 sur 7</p>
-						<p class="quetion__text">
-							Avez-vous plus de 18 ans?               
-						</p>
-						<button class="quetion__btn btn-reset">Oui</button>
-						<button class="quetion__btn btn-reset">Non</button>
-					</div>
-					<div class="quetion-3">
-						<p class="quetion-counter">Question 3 sur 7</p>
-						<p class="quetion__text">
-							
-							Avez-vous acheté des produits cosmétiques sur la boutique en ligne de Sephora?
-                                                
-						</p>
-						<button class="quetion__btn btn-reset">Oui</button>
-						<button class="quetion__btn btn-reset">Non</button>
-					</div>
-					<div class="quetion-4">
-						<p class="quetion-counter">Question 4 sur 7</p>
-						<p class="quetion__text">
-							
-							
-							Le site web de notre boutique en ligne est-il confortable pour vous?
-                                
-                                                
-						</p>
-						<button class="quetion__btn btn-reset">Oui</button>
-						<button class="quetion__btn btn-reset">Non</button>
-					</div>
-					<div class="quetion-5">
-						<p class="quetion-counter">Question 5 sur 7</p>
-						<p class="quetion__text">
-							
-							
-							
-							Avez-vous installé notre application mobile sur votre téléphone?
-                                
-                                
-                                                
-						</p>
-						<button class="quetion__btn btn-reset">Oui</button>
-						<button class="quetion__btn btn-reset">Non</button>
-					</div>
-					<div class="quetion-6">
-						<p class="quetion-counter">Question 6 sur 7</p>
-						<p class="quetion__text">
-							
-							
-							
-							
-							Avez-vous reçu le calendrier de l'Avent de Sephora les années précédentes ?
-                                
-                                
-                                
-                                                
-						</p>
-						<button class="quetion__btn btn-reset">Oui</button>
-						<button class="quetion__btn btn-reset">Non</button>
-					</div>
-					<div class="quetion-7">
-						<p class="quetion-counter">Question 7 sur 7</p>
-						<p class="quetion__text">
-							
-							
-							
-							
-							
-							Vos amis effectuent-ils des achats sur notre boutique en ligne?
-                                
-                                
-                                
-                                
-                                                
-						</p>
-						<button class="quetion__btn btn-reset">Oui</button>
-						<button class="quetion__btn btn-reset">Non</button>
-					</div>
-				</div>
-
-			</main>
-			<aside class="aside">
-				<h1 class="aside__title">
-					Préparez-vous à célébrer Noël avec le calendrier de l'Avent de Sephora.
-				</h1>
-				<p class="aside__text-1">
-					Répondez à 7 questions et gagnez le calendrier de l'Avent beauté de Sephora!
-				</p>
-				<p class="aside__text-1">
-					Pour attirer de nouveaux utilisateurs de Nouvelle-Zélande, nous avons lancé notre promotion annuelle ! Seuls les 1000 premiers participants chanceux auront la possibilité de gagner un calendrier de l'Avent beauté de Sephora avec 24 surprises de maquillage, de soins de la peau, de bain et d'accessoires.
-				</p>
-				<p class="aside__text-1">
-					Aujourd'hui, le <span class="p_var-dia"></span> <span class="p_var-mes_nombre"></span>  2023,  vous êtes invité(e) à participer à ce concours.
-				</p>
-				<p class="aside__text-1">
-					Voici ce que vous devez faire : Répondez à 7 questions simples et tentez de gagner le calendrier de l'Avent beauté de Sephora.
-				</p>
-				<p class="aside__text-2">
-					Vous n'aurez que 2 minutes pour remplir le sondage !
-				</p>
-			</aside>
-		</div>
-	</div>
-
-
-	<script src="./js/jquery-3.6.0.min.js"></script>
-	<script src="./js/date.js"></script>
-	<script src="./js/script.js" defer></script>
+<main>
+    <img src="./img/text-1.svg" class="main__title">
+    <img class="main__img" src="./img/img.webp" alt="img">
+    <div class="marquee">
+        <img src="./img/text-3.svg" class="main__text">
+      </div>
+    
+    <span class="main__text-2"><span>26</span><br>2023 ДЕК</span>
+    <img src="./img/text-2.svg" class="main__text-3">
+    <span class="main__text-4">Киборг-гибрид,<br> стоящий во главе<br> элитного<br> подразделения<br> полиции, идет<br>по следу хакера</span>
+    <span class="main__text-5">/imagine prompt<br> Девушка уверенно держит<br> пистолет руками, целится<br>c решительным<br> выражением лица,<br> вдохновлен призраком<br> в доспехах<br> и эстетикой старого аниме</span>
+    <img class="main__img2" src="./img/img2.webp" alt="img">
+    <img class="main__img3" src="./img/img3.webp" alt="img">
+   
+   
+</main>
+<footer>
+    <div class="marquee2">
+        <span class="main__text-6">/imagine prompt 2D-преступник, стоящий спиной и держащий в одной руке пистолет, вдохновленный призраком в доспехах и эстетикой старого аниме, полный вид --v 6.0</span>
+      </div>
+</footer>
+    <script src="./js/index.js"></script>
+    
 </body>
-
 </html>
