@@ -13,9 +13,14 @@ function isElementInViewport(el) {
   }
   
   var img2 = document.querySelector(".main__img2");
+  var img3 = document.querySelector(".main__img3");
+
   
   window.addEventListener("scroll", function () {
     if (isElementInViewport(img2)) {
       fadeInElement(img2);
+    }
+    if (isElementInViewport(img3)) {
+      fadeInElement(img3);
     }
   });
