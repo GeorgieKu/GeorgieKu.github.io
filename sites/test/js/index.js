@@ -1,7 +1,7 @@
 //tabs
 
 function openTab(evt, tabName) {
-    var i, tabContent, tabLinks;
+    let i, tabContent, tabLinks;
   
     tabContent = document.getElementsByClassName("tab-content");
     for (i = 0; i < tabContent.length; i++) {
@@ -33,7 +33,7 @@ function openTab(evt, tabName) {
   }
   
   window.onclick = function (event) {
-    var modal = document.getElementById("myModal");
+    let modal = document.getElementById("myModal");
     if (event.target == modal) {
       modal.style.display = "none";
     }
@@ -48,7 +48,7 @@ function openTab(evt, tabName) {
   }
   
   window.onclick = function (event) {
-    var modal = document.getElementById("myModal2");
+    let modal = document.getElementById("myModal2");
     if (event.target == modal) {
       modal.style.display = "none";
     }
@@ -63,8 +63,217 @@ function openTab(evt, tabName) {
   }
   
   window.onclick = function (event) {
-    var modal = document.getElementById("myModal3");
+    let modal = document.getElementById("myModal3");
     if (event.target == modal) {
       modal.style.display = "none";
     }
   };
+
+  //server
+// Создаем функцию для получения данных с сервера
+let requestURL = 'http://109.68.213.235:81';
+function getDataFromServer() {
+
+  let myHeaders = new Headers();
+  myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMTA5LjY4LjIxMy4yMzU6ODA4MS9tYWluIiwiaXNzIjoiaHR0cDovLzEwOS42OC4yMTMuMjM1OjgwODEvIiwidXNlcm5hbWUiOiJBZG1pbiJ9.RKhoZD4NqvKv6RY6VieLWbDXP_QMQ89rWE4YRAMnn-M");
+  let requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+
+  // Отправляем запрос на сервер
+  fetch(requestURL + "/buyer", requestOptions)
+    .then(response => response.json())
+    .then(data => {
+      // Получаем данные с сервера и создаем таблицу
+      createTable(data);
+    })
+    .catch(error => console.log('error', error));
+}
+
+// Создаем функцию для создания таблицы
+function createTable(data) {
+  let table = document.createElement('table');
+  let tbody = document.createElement('tbody');
+
+  // Создаем заголовок таблицы
+  let headerRow = document.createElement('tr');
+  let headers = ['Id', 'Tag', 'Name', 'E-mail', 'Tg', '', ''];
+  headers.forEach(function(header) {
+    let th = document.createElement('th');
+    th.textContent = header;
+    headerRow.appendChild(th);
+  });
+  tbody.appendChild(headerRow);
+
+  // Создаем строки таблицы с данными
+  data.forEach(function(rowData) {
+    let row = document.createElement('tr');
+
+    // Создаем ячейки и вставляем значения
+    let idCell = document.createElement('td');
+    idCell.textContent = rowData.id;
+    row.appendChild(idCell);
+
+    let tagCell = document.createElement('td');
+    tagCell.textContent = rowData.tag;
+    row.appendChild(tagCell);
+
+    let nameCell = document.createElement('td');
+    nameCell.textContent = rowData.name;
+    row.appendChild(nameCell);
+
+    let emailCell = document.createElement('td');
+    emailCell.textContent = rowData.email;
+    row.appendChild(emailCell);
+
+    let tgCell = document.createElement('td');
+    tgCell.textContent = rowData.tg;
+    row.appendChild(tgCell);
+
+    let penCell = document.createElement('td');
+    penCell.classList.add('pen');
+    row.appendChild(penCell);
+
+    let deleteCell = document.createElement('td');
+    deleteCell.classList.add('delete');
+    row.appendChild(deleteCell);
+
+    tbody.appendChild(row);
+  });
+
+  table.appendChild(tbody);
+
+  // Находим элемент в DOM, куда нужно вставить таблицу
+  let tableContainer = document.getElementById('table-container');
+  tableContainer.appendChild(table);
+}
+
+// Вызываем функцию для получения данных с сервера и создания таблицы
+getDataFromServer();
+
+function getCreatorDataFromServer() {
+  let myHeaders = new Headers();
+  myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMTA5LjY4LjIxMy4yMzU6ODA4MS9tYWluIiwiaXNzIjoiaHR0cDovLzEwOS42OC4yMTMuMjM1OjgwODEvIiwidXNlcm5hbWUiOiJBZG1pbiJ9.RKhoZD4NqvKv6RY6VieLWbDXP_QMQ89rWE4YRAMnn-M");
+  let requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+  };
+
+// Отправляем запрос на сервер
+fetch(requestURL + "/creator", requestOptions)
+.then(response => response.json())
+.then(data => {
+  // Получаем данные с сервера и создаем таблицу
+  createCreatorTable(data);
+})
+.catch(error => console.log('error', error));
+}
+
+// Создаем функцию для создания таблицы для /creator
+function createCreatorTable(data) {
+let table = document.createElement('table');
+let tbody = document.createElement('tbody');
+// Создаем заголовок таблицы
+let headerRow = document.createElement('tr');
+let headers = ['Id', 'Name', '', ''];
+headers.forEach(function(header) {
+let th = document.createElement('th');
+th.textContent = header;
+headerRow.appendChild(th);
+});
+tbody.appendChild(headerRow);
+// Создаем строки таблицы с данными
+data.forEach(function(rowData) {
+let row = document.createElement('tr');
+// Создаем ячейки и вставляем значения
+let idCell = document.createElement('td');
+idCell.textContent = rowData.id;
+row.appendChild(idCell);
+let nameCell = document.createElement('td');
+nameCell.textContent = rowData.name;
+row.appendChild(nameCell);
+let penCell = document.createElement('td');
+penCell.classList.add('pen');
+row.appendChild(penCell);
+let deleteCell = document.createElement('td');
+deleteCell.classList.add('delete');
+row.appendChild(deleteCell);
+tbody.appendChild(row);
+});
+table.appendChild(tbody);
+// Находим элемент в DOM, куда нужно вставить таблицу
+let tableContainer = document.getElementById('table-container2');
+tableContainer.appendChild(table);
+}
+
+// Вызываем функции для получения данных с сервера и создания таблиц
+
+getCreatorDataFromServer();
+
+function getFbAppsDataFromServer() {
+  let myHeaders = new Headers();
+  myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJodHRwOi8vMTA5LjY4LjIxMy4yMzU6ODA4MS9tYWluIiwiaXNzIjoiaHR0cDovLzEwOS42OC4yMTMuMjM1OjgwODEvIiwidXNlcm5hbWUiOiJBZG1pbiJ9.RKhoZD4NqvKv6RY6VieLWbDXP_QMQ89rWE4YRAMnn-M");
+  let requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    redirect: 'follow'
+};
+
+// Отправляем запрос на сервер
+fetch(requestURL + "/fbapps", requestOptions)
+.then(response => response.json())
+.then(data => {
+  // Получаем данные с сервера и создаем таблицу
+  createCreatorTable(data);
+})
+.catch(error => console.log('error', error));
+}
+
+// Создаем функцию для создания таблицы для /creator
+function createCreatorTable(data) {
+  let table = document.createElement('table');
+  let tbody = document.createElement('tbody');
+  // Создаем заголовок таблицы
+  let headerRow = document.createElement('tr');
+  let headers = ['Id', 'Name', 'Business Manager ID', 'Token', 'Secret', '', ''];
+  headers.forEach(function(header) {
+  let th = document.createElement('th');
+  th.textContent = header;
+  headerRow.appendChild(th);
+  });
+  tbody.appendChild(headerRow);
+  // Создаем строки таблицы с данными
+  data.forEach(function(rowData) {
+  let row = document.createElement('tr');
+  // Создаем ячейки и вставляем значения
+  let idCell = document.createElement('td');
+  idCell.textContent = rowData.id;
+  row.appendChild(idCell);
+  let nameCell = document.createElement('td');
+  nameCell.textContent = rowData.name;
+  row.appendChild(nameCell);
+  let BusinessManagerIDCell = document.createElement('td');
+  BusinessManagerIDCell.textContent = rowData.BusinessManagerID;
+  row.appendChild(BusinessManagerIDCell);
+  let tokenCell = document.createElement('td');
+  tokenCell.textContent = rowData.token;
+  row.appendChild(tokenCell);
+  let secretCell = document.createElement('td');
+  secretCell.textContent = rowData.secret;
+  row.appendChild(secretCell);
+  let penCell = document.createElement('td');
+  penCell.classList.add('pen');
+  row.appendChild(penCell);
+  let deleteCell = document.createElement('td');
+  deleteCell.classList.add('delete');
+  row.appendChild(deleteCell);
+  tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+  // Находим элемент в DOM, куда нужно вставить таблицу
+  let tableContainer = document.getElementById('table-container3');
+  tableContainer.appendChild(table);
+  }
