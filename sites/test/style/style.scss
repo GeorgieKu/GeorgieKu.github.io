@@ -870,6 +870,10 @@ margin-bottom: 10px;
     height: 40px;
     max-width: 229px;
     width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('../img/select.svg') no-repeat 95% center;
 }
 
 .modal__btn {
@@ -880,6 +884,10 @@ margin-bottom: 10px;
 
 .practicePage__header a {
     color: #000;
+}
+
+.practicePage__header .header__btn {
+    color: #fff;
 }
 
 .practicePage__header {
@@ -930,6 +938,10 @@ text-align: left;
     padding-left: 21px;
     max-width: 351px;
     width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('../img/select.svg') no-repeat 95% center;
 }
 
 .practicePage__list {
@@ -1092,6 +1104,47 @@ margin-bottom: 30px;
     gap: 40px;
 }
 
+input[type='radio'],
+label {
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  position: relative;
+  height: 22px;
+  width: 22px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 0.5px solid #ED1E24;
+}
+
+input[type='radio']:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ED1E24;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+}
+
 .label__flex {
     display: flex;
     align-items: center;
@@ -1139,6 +1192,11 @@ text-align: left;
     height: 40px;
     border: 0.5px solid #DCDCDCDC;
     border-radius: 12px;
+    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('../img/select.svg') no-repeat 95% center;
+    
 }
 
 .calc__btn {
