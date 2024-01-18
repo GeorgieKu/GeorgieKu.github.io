@@ -163,17 +163,20 @@
                 </div>
                 <div class="create__flex-2">
                     <p class="create__name">Шрифт</p>
-                    <select class="create__select" name="" id="select">
-                        <option value="Roboto">Roboto</option>
-                        <option value="Montserrat">Montserrat</option>
-                        <option value="EuclidSquare-Regular">Euclid Square</option>
-                    </select>
+                    <div class="select__relative">
+                        <select class="create__select" name="" id="select">
+                            <option value="Roboto">Roboto</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="EuclidSquare-Regular">Euclid Square</option>
+                        </select>
+                        <img class="select__arrow" src="./img/select.svg" alt="arrow">
+                    </div>
                 </div>
                 <div class="create__flex-2">
                     <p class="create__name">Карточка товара</p>
                     <div class="create__flex-3">
                         <button class="create__btn create__btn_active btn-reset" id="grid">
-                            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="create__btn-svg" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 1C0 0.447715 0.447715 0 1 0H5C5.55228 0 6 0.447715 6 1V5C6 5.55228 5.55228 6 5 6H1C0.447715 6 0 5.55228 0 5V1Z" fill="#0B0B0B"/>
                                 <path d="M0 8C0 7.44772 0.447715 7 1 7H5C5.55228 7 6 7.44772 6 8V12C6 12.5523 5.55228 13 5 13H1C0.447715 13 0 12.5523 0 12V8Z" fill="#0B0B0B"/>
                                 <path d="M7 8C7 7.44772 7.44772 7 8 7H12C12.5523 7 13 7.44772 13 8V12C13 12.5523 12.5523 13 12 13H8C7.44772 13 7 12.5523 7 12V8Z" fill="#0B0B0B"/>
@@ -182,7 +185,7 @@
                                 
                         </button>
                         <button class="create__btn btn-reset" id="list">
-                            <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="create__btn-svg-2" width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0 1C0 0.447715 0.447715 0 1 0H2C2.55228 0 3 0.447715 3 1V2C3 2.55228 2.55228 3 2 3H1C0.447715 3 0 2.55228 0 2V1Z" fill="#CDCDCD"/>
                                 <path d="M0 6C0 5.44772 0.447715 5 1 5H2C2.55228 5 3 5.44772 3 6V7C3 7.55228 2.55228 8 2 8H1C0.447715 8 0 7.55228 0 7V6Z" fill="#CDCDCD"/>
                                 <path d="M0 11C0 10.4477 0.447715 10 1 10H2C2.55228 10 3 10.4477 3 11V12C3 12.5523 2.55228 13 2 13H1C0.447715 13 0 12.5523 0 12V11Z" fill="#CDCDCD"/>
@@ -208,6 +211,7 @@
                     <p class="create__name">Cкругление</p>
                     <div class="create__radius">
                         <input class="create__input" type="number" value="12" min="0">
+                        <div class="create__radius-show"></div>
                     </div>
                 </div>
             </div>

@@ -124,10 +124,6 @@ h3 {
   max-width: 324px;
 }
 
-.section__slide {
-  max-width: 325px;
-}
-
 .section__buttons {
   display: flex;
   gap: 5px;
@@ -258,7 +254,6 @@ h3 {
   border: 1px solid rgba(221, 221, 221, 0.2);
   border-radius: 100px;
   color: #CDCDCD;
-  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 16px; /* 133.333% */
@@ -279,6 +274,24 @@ h3 {
   background-color: transparent;
   color: #CDCDCD;
   text-align: center;
+}
+
+.select__relative {
+  position: relative;
+  width: 100%;
+  max-width: 196px;
+}
+
+.select__arrow {
+  position: absolute;
+  top: 18.5px;
+  right: 18.5px;
+}
+
+.create__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .create__color-btn {
@@ -317,8 +330,7 @@ h3 {
   position: relative;
 }
 
-.create__radius::after {
-  content: "";
+.create__radius-show {
   max-width: 135px;
   width: 100%;
   height: 32px;
@@ -339,6 +351,13 @@ h3 {
   text-align: right;
   color: #CDCDCD;
   padding-right: 16px;
+}
+
+.create__input::-webkit-outer-spin-button,
+.create__input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .create__block {
@@ -475,7 +494,7 @@ h3 {
   display: flex;
   font-family: Inter;
   gap: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .phone__cell {
