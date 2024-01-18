@@ -1,119 +1,115 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("burger").addEventListener("click", function() {
-        document.querySelector("header").classList.toggle("open")
-    })
-    const swiper = new Swiper('.services__swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        
-      
-      
-        // Navigation arrows
-        navigation: {
-          nextEl: '.services-swiper-button-next',
-          prevEl: '.services-swiper-button-prev',
-        },
-        breakpoints: {
-          320: {
-            spaceBetween: 20,
+const swiper = new Swiper('.section__swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    breakpoints: {
+        320: {
             slidesPerView: 1,
-          },
-          577: {
+        },
+        577: {
+            slidesPerView: 'auto',
             spaceBetween: 20,
-            slidesPerView: 'auto',
-          },
-          1024: {
-            spaceBetween: 50,
-            slidesPerView: 'auto',
-           
-          }
         }
-      
-      });
-      const swiper2 = new Swiper('.practice__swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        pagination: {
-            el: '.practice-pagination',
-          },
-      });
-      const swiper3 = new Swiper('.reviews__swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        navigation: {
-            nextEl: '.reviews__btn-next',
-            prevEl: '.reviews__btn-prev',
-          },
-          pagination: {
-            el: '.reviews-pagination',
-          },
-          breakpoints: {
-            320: {
-              spaceBetween: 20,
-              slidesPerView: 'auto',
-            },
-            576: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            1024: {
-              spaceBetween: 50,
-              slidesPerView: 4,
-            }
-          }
-          
-      
-    
-      
-      });
-      const swiper4 = new Swiper('.video__swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 3,
-        spaceBetween: 50,
-        navigation: {
-            nextEl: '.video__btn-next',
-            prevEl: '.video__btn-prev',
-          },
-          breakpoints: {
-            320: {
-              spaceBetween: 20,
-              slidesPerView: 'auto',
-            },
-            576: {
-              spaceBetween: 20,
-              slidesPerView: 3,
-            },
-            1024: {
-              spaceBetween: 50,
-            }
-          } 
-      
-    
-      
-      });
+    },
+  
+    // If we need pagination
+    pagination: {
+      el: '.section-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.section-button-next',
+      prevEl: '.section-button-prev',
+    },
+  
+  });
 
-      let heroBtn = document.getElementById('hero__btn')
-      let modal = document.getElementById('modal')
-      let overlay = document.querySelector('.overlay')
-      let modalClose = document.querySelector('.modal__close')
+  let white = document.getElementById('white');
+  let gray = document.getElementById('gray');
+  let orange = document.getElementById('orange');
+  let blue = document.getElementById('blue');
+  let purple = document.getElementById('purple');
+  
+  let createBlock = document.querySelector('.create__block');
+  
+  // Функция для удаления класса active у всех элементов
+  function removeActiveClass() {
+    white.classList.remove('create__color-btn_active');
+    gray.classList.remove('create__color-btn_active');
+    orange.classList.remove('create__color-btn_active');
+    blue.classList.remove('create__color-btn_active');
+    purple.classList.remove('create__color-btn_active');
+  }
+  
+  white.addEventListener('click', function() {
+    createBlock.style.backgroundColor = '#fff';
+    removeActiveClass();
+    white.classList.add('create__color-btn_active');
+  });
+  
+  gray.addEventListener('click', function() {
+    createBlock.style.backgroundColor = '#D0CDC0';
+    removeActiveClass();
+    gray.classList.add('create__color-btn_active');
+  });
+  
+  orange.addEventListener('click', function() {
+    createBlock.style.backgroundColor = '#FF9800';
+    removeActiveClass();
+    orange.classList.add('create__color-btn_active');
+  });
+  
+  blue.addEventListener('click', function() {
+    createBlock.style.backgroundColor = '#0691F2';
+    removeActiveClass();
+    blue.classList.add('create__color-btn_active');
+  });
+  
+  purple.addEventListener('click', function() {
+    createBlock.style.backgroundColor = '#A7A1F1';
+    removeActiveClass();
+    purple.classList.add('create__color-btn_active');
+  });
 
-      heroBtn.addEventListener('click', function() {
-        modal.style.display = 'block'
-        overlay.style.display = 'block'
-      })
-
-      modalClose.addEventListener('click', function(){
-        modal.style.display = 'none'
-        overlay.style.display = 'none'
-      })
+  let select = document.getElementById('select');
+    let phoneText = document.querySelector('.phone__text');
+    let phoneText2 = document.querySelector('.phone__text-2');
+    let phoneText3 = document.querySelector('.phone__text-3');
+    let phoneCoins = document.querySelector('.phone__coins')
+    let phoneBtns = document.querySelector('.phone__buttons')
+    let phoneCards = document.querySelector('.phone__cards')
+    let phoneCells = document.querySelector('.phone__cells')
 
 
+select.addEventListener('change', function() {
+  // Получаем выбранное значение
+  let selectedFont = select.value;
 
-})
+  // Изменяем шрифт элемента phone__text
+  phoneText.style.fontFamily = selectedFont;
+  phoneText2.style.fontFamily = selectedFont;
+  phoneText3.style.fontFamily = selectedFont;
+  phoneCoins.style.fontFamily = selectedFont;
+  phoneBtns.style.fontFamily = selectedFont;
+  phoneCards.style.fontFamily = selectedFont;
+  phoneCells.style.fontFamily = selectedFont;
+});
+
+let inputNumber = document.querySelector('.create__input');
+let phoneCard = document.querySelector('.phone__card');
+let phoneCard2 = document.querySelector('.phone__card-2');
+let phoneImgs = document.querySelectorAll('.phone__img');
+
+inputNumber.addEventListener('input', function() {
+  // Получаем значение из инпута
+  let borderRadiusValue = inputNumber.value + 'px';
+
+phoneCard.style.borderRadius = borderRadiusValue;
+phoneCard2.style.borderTopLeftRadius = borderRadiusValue;
+phoneCard2.style.borderBottomLeftRadius = borderRadiusValue;
+
+phoneImgs.forEach(function(img) {
+    img.style.borderRadius = borderRadiusValue;
+  });
+
+});
