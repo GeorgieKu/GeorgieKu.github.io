@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -115,7 +116,8 @@ h3 {
 }
 
 .header__btn:hover {
-  opacity: 0.9;
+  background-color: rgb(44, 106, 80);
+  color: rgb(255, 255, 255);
 }
 
 .hero {
@@ -741,7 +743,7 @@ h3 {
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
-  padding: 13.4px 0 1.6px;
+  padding: 10px 0;
   border-bottom: 1px solid #EFF0F7;
 }
 
@@ -910,8 +912,8 @@ h3 {
 
 .faq__block {
   display: flex;
-  gap: 30px;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
   padding: 16px 0 16px 24px;
   border-radius: 5px;
   background: #FFF;
@@ -925,6 +927,53 @@ h3 {
   font-style: normal;
   font-weight: 700;
   line-height: 28px; /* 140% */
+}
+
+.faq__header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.faq__plus {
+  transition: transform 0.3s ease-in-out;
+}
+
+.faq__text {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  padding-top: 0; /* Убираем изначальный отступ сверху */
+  opacity: 0; /* Изначально скрываем ответ */
+}
+
+.accordion__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease-out;
+}
+
+.accordion__item_show .faq__plus,
+.accordion__item_slidedown .faq__plus {
+  transform: rotate(-180deg);
+}
+
+.accordion__content {
+  padding: 0.75rem 1rem;
+  background: #fff;
+}
+
+.accordion__item:not(.accordion__item_show) .accordion__body {
+  display: none;
 }
 
 .questions {
