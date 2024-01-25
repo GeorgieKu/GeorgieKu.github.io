@@ -1300,8 +1300,9 @@ h3 {
 }
 
 .main {
-  max-width: 604px;
+  max-width: 694px;
   width: 100%;
+  padding-left: 90px;
 }
 
 .wrapper {
@@ -1525,6 +1526,19 @@ input[type=radio]:checked::after {
 .date__label {
   display: block;
   margin-bottom: 30px;
+}
+
+.date__input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 .gift-email__label {
