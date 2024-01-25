@@ -7,14 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Nectarix">
     <link rel="shortcut icon" href="./img/fav.webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Poppins:wght@400;600;700&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="./style/normalize.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
+    <link rel="preload" fetchpriority="high" as="image" href="./img/hero_bg.svg" type="image/webp">
     <title>Nectarix</title>
 </head>
 
@@ -42,7 +38,10 @@
                             <p class="hero__text">Excellent | Trusted by 1,000+ customers</p>
                         </div>
                     </div>
-                    <img class="hero__img" src="./img/hero.webp" alt="books">
+                    <picture>
+                        <source media="(max-width: 577px)" srcset="./img/hero-576.webp">
+                        <img class="hero__img" src="./img/hero.webp" alt="books">
+                    </picture>
                 </div>
             </div>
         </section>
@@ -128,7 +127,10 @@
                 <p class="share__descr descr">share your story</p>
                 <h2 class="share__title title__line title">With those you Care About</h2>
                 <div class="share__flex">
-                    <img class="share__img" src="./img/share-img.webp" alt="photo">
+                    <picture>
+                        <source media="(max-width: 577px)" srcset="./img/share-img-576.webp">
+                        <img class="share__img" src="./img/share-img.webp" alt="photo">
+                    </picture>
                     <div class="share__block">
                         <h3 class="share__subtitle">Full service at <span>$99 for life</span></h3>
                         <p class="share__text text">We will write a book together and bring it to you printed on
@@ -507,9 +509,19 @@
                     </div>
                 </div>
                 <div class="quality__imgs">
-                    <img class="quality__img" src="./img/quality1.webp" alt="book-photo">
-                    <img class="quality__img" src="./img/quality2.webp" alt="book-photo">
-                    <img class="quality__img" src="./img/quality3.webp" alt="book-photo">
+                    <picture>
+                        <source media="(max-width: 430px)" srcset="./img/quality1-576.webp">
+                        <img class="quality__img" src="./img/quality1.webp" alt="book-photo">
+                    </picture>
+                    <picture>
+                        <source media="(max-width: 430px)" srcset="./img/quality2-576.webp">
+                        <img class="quality__img" src="./img/quality2.webp" alt="book-photo">
+                    </picture>
+                    <picture>
+                        <source media="(max-width: 430px)" srcset="./img/quality3-576.webp">
+                        <img class="quality__img" src="./img/quality3.webp" alt="book-photo">
+                    </picture>
+                 
                 </div>
             </div>
         </section>
@@ -547,7 +559,7 @@
                             support@nectarix.com</a>
                     </li>
                     <li class="footer__item">
-                        <img src="./img/footer.webp" alt="cards">
+                        <img class="footer__cards" src="./img/footer.webp" alt="cards">
                     </li>
                 </ul>
                 <form class="footer__form" action="#">
@@ -560,7 +572,7 @@
         </div>
     </footer>
 
-    <script src="./js/index.js"></script>
+    <script defer src="./js/index.js"></script>
 
 </body>
 

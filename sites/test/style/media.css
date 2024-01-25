@@ -28,9 +28,6 @@
   .quality__left {
     max-width: 50%;
   }
-  .hero__img {
-    max-width: 50%;
-  }
 }
 @media (max-width: 978px) {
   .header {
@@ -41,6 +38,15 @@
   }
   .hero {
     padding: 25px 0;
+    position: relative;
+    z-index: 1;
+  }
+  .hero__img {
+    position: absolute;
+    right: 15px;
+    max-width: 40%;
+    top: 20px;
+    z-index: -1;
   }
   .hero__title {
     font-size: 40px;
@@ -48,6 +54,7 @@
   }
   .works {
     padding: 25px 0;
+    overflow: hidden;
   }
   .works__descr {
     max-width: unset;
@@ -226,6 +233,8 @@
     max-width: 50%;
     position: absolute;
     right: 15px;
+    bottom: 56px;
+    top: unset;
   }
   .hero__text {
     font-size: 16px;
@@ -332,8 +341,14 @@
   .hero__title {
     max-width: unset;
   }
+  .hero__rating img {
+    width: 91px;
+    height: 14px;
+  }
   .hero__img {
     z-index: -1;
+    width: 187px;
+    height: 170px;
   }
   .hero__descr {
     max-width: 73%;
@@ -347,6 +362,45 @@
   }
   .works__subtitle {
     font-size: 20px;
+  }
+  .works__img-1 {
+    width: 147px;
+    height: 100px;
+  }
+  .works__img-2 {
+    width: 137px;
+    height: 79px;
+  }
+  .works__img-3 {
+    width: 133px;
+    height: 83px;
+  }
+  .title__line::after {
+    width: 200px;
+  }
+  .pros__logo {
+    width: 150px;
+    height: 46px;
+  }
+  .reviews__stars {
+    width: 142px;
+    height: 27px;
+  }
+  .faq__plus {
+    width: 18px;
+    height: 18px;
+  }
+  .footer__logo img {
+    width: 190px;
+    height: 58px;
+  }
+  .footer__link img {
+    width: 14px;
+    height: 10px;
+  }
+  .footer__cards {
+    width: 213px;
+    height: 28px;
   }
   .ai__subtitle {
     font-size: 20px;
