@@ -25,11 +25,13 @@
     <div class="wrapper">
         <main class="main">
             <div class="writer__container">
-                <h1 class="writer__title">Purchase Nectarix Lifetime Service</h1>
+                <a class="back-link" href="./index.html"><img src="./img/arrow.svg" alt="back to main">Back to main</a>
+                <h1 class="writer__title">
+                    Purchase Nectarix Lifetime Service</h1>
                 <form class="purchase__form" action="#">
                     <label class="quantity__label" for="quantity">
                         <span class="purchase__label">Quantity:</span>
-                            <input class="purchase__input" type="number" min="0" max="1000" oninput="updatePrice(this)">
+                            <input class="purchase__input" placeholder="Enter quantity of books" id="quantity" type="number" min="0" max="1000" oninput="updatePrice(this)">
                     </label>
                     <span class="purchase__price-text">Your price is: <span class="purchase__price"></span></span>
                     <label class="name__label" for="name">
@@ -38,7 +40,7 @@
                     </label>
                     <label class="email__label" for="email">
                         <span class="purchase__label">Your email address:</span>
-                        <input class="purchase__input email__input" type="email" id="name" placeholder="example@example.com">
+                        <input class="purchase__input email__input" type="email" id="email" placeholder="example@example.com">
                     </label>
                     <span class="purchase__label">Express checkout:</span>
                     <button class="purchase__btn share__btn btn-reset">
@@ -51,7 +53,7 @@
                         <input class="purchase__input purchase__input_right purchase__no-border" type="text" placeholder="MM/YY CVC">
                     </div>
                     <div class="line"></div>
-                    <button href="/buy/" class="purchase__btn-2 share__btn-2 btn-reset green-btn">
+                    <button class="purchase__btn-2 share__btn-2 btn-reset green-btn">
                         <img src="./img/card.svg" alt="card">
                         Debit or credit card
                     </button>
