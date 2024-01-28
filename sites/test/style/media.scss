@@ -50,7 +50,7 @@
     }
 
     .hero {
-        padding: 25px 0;
+        padding: 35px 0;
         position: relative;
         z-index: 1;
     }
@@ -69,7 +69,7 @@
     }
 
     .works {
-        padding: 25px 0;
+        padding: 35px 0;
         overflow: hidden;
     }
 
@@ -116,7 +116,7 @@
     }
 
     .ai {
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
     .ai__title {
@@ -173,11 +173,11 @@
     }
 
     .share {
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
     .pros {
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
     .pros__title {
@@ -197,7 +197,7 @@
     }
 
     .reviews {
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
     .reviews__title {
@@ -209,7 +209,7 @@
     }
 
     .faq {
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
     .faq__title {
@@ -225,7 +225,7 @@
     }
 
     .questions {
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
     .questions__title {
@@ -248,7 +248,7 @@
 
     .quality {
         z-index: 2;
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
     .quality__title {
@@ -273,11 +273,14 @@
 
     .footer__flex {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
         gap: 20px;
     }
 
     .footer__logo {
-        grid-area: 1 / 1 / 2 / 2;
+        grid-area: 1 / 1 / 2 / 3;
+        justify-content: center;
     }
 
     .footer__list-1 {
@@ -285,17 +288,19 @@
     }
 
     .footer__list-2 {
-        grid-area: 1/2/2/3;
+        grid-area: 3 / 1 / 4 / 3;
+        align-items: center;    
     }
 
     .footer__list-3 {
-        grid-area: 2/2/3/3;
+        grid-area: 2 / 2 / 3 / 3;
+ 
         text-align: right;
     }
 
     //best
     .best {
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
     .best__flex {
@@ -327,6 +332,7 @@
     //features
     .features__block {
         flex-direction: column;
+        gap: 25px;
     }
 
     .features__img {
@@ -478,6 +484,10 @@
         gap: 10px;
     }
 
+    .ai__btn {
+        max-width: unset;
+    }
+
     .ai__text-green {
         min-height: 300px;
     }
@@ -598,7 +608,7 @@
     }
 
     .features__flex {
-        gap: 20px;
+        gap: 25px;
     }
 
     .features__title {
@@ -612,7 +622,7 @@
     }
 
     .features {
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
     .features__img {
@@ -647,6 +657,7 @@
     .hero {
         z-index: 1;
         position: relative;
+        background-image: unset;
     }
 
     .header__block {
@@ -735,6 +746,10 @@
         height: 46px;
     }
 
+    .pros__bg {
+        display: none;
+    }
+
     .reviews__stars {
         width: 142px;
         height: 27px;
@@ -744,16 +759,15 @@
         width: 18px;
         height: 18px;
     }
+    .faq__bg {
+        display: none;
+    }
 
     .footer__link img {
         width: 14px;
         height: 10px;
     }
 
-    .footer__cards {
-        width: 213px;
-        height: 28px;
-    }
 
     .ai__subtitle {
         font-size: 20px;
@@ -803,7 +817,7 @@
 
     //subscribe
     .subscribe {
-        padding: 25px 0;
+        padding: 35px 0;
     }
 
     .subscribe__title {
@@ -819,6 +833,13 @@
     .pluses__text {
         font-size: 16px;
         line-height: 120%;
+    }
+    //footer
+    .footer {
+        padding: 0;
+    }
+    .footer__logo {
+        place-self: center;
     }
 
     //burger
