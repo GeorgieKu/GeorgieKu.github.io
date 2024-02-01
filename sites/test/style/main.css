@@ -131,7 +131,7 @@ a.claim { color: rgb(255, 255, 255); text-decoration: none; }
 @media only screen and (max-width: 400px)
  {
 	#spinner { width: 345px!important;
-		margin-left: -14px;
+
 	 
 	 }
 }
@@ -150,13 +150,27 @@ a.claim { color: rgb(255, 255, 255); text-decoration: none; }
 @media(min-width:360px) {
 	#win, #win2, #win3, #winP, #winP1, #winP2 { width: 90px }
 }
-@media only screen and (max-width: 350px)
+@media only screen and (max-width: 360px)
  {
-	#spinner { width: 311px!important;
-	 margin-left: -18px;
-	 }
-	 #spin { width: 295px; }
-	 #spinBG { width: 311px; }
+	#win, #win2, #win3, #winP, #winP1, #winP2 {
+		position: absolute;
+		z-index: 3;
+		width: 65px;
+		left: 40%;
+		top: 39%;
+	}
+	 #spin {
+		z-index: 2;
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		width: 95%;
+	}
+	#spinner {
+		width: 100% !important;
+		margin-left: unset;
+	}
+	 #spinBG { width: 100%; }
 }
 #win2, #win3, #winP, #winP1, #winP2 { display: none }
 .spinAround { -webkit-animation: spin 6.6s; -moz-animation: spin 6.6s; -o-animation: spin 6.6s; animation: spin 6.6s; -webkit-animation-timing-function: ease; -moz-animation-timing-function: ease; -o-animation-timing-function: ease; animation-timing-function: ease; -webkit-animation-iteration-count: 1; -moz-animation-iteration-count: 1; -o-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-direction: normal; -moz-animation-direction: normal; -o-animation-direction: normal; animation-direction: normal; -webkit-animation-fill-mode: forwards; -moz-animation-fill-mode: forwards; -o-animation-fill-mode: forwards; animation-fill-mode: forwards }
