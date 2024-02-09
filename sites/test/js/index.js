@@ -41,3 +41,4 @@ const swiper = new Swiper('.help__swiper', {
     })
   }
 
+  new WOW().init();
