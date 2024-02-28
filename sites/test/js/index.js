@@ -1,44 +1,99 @@
-const swiper = new Swiper('.help__swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 'auto',
-    spaceBetween: 40,
+// Получаем кнопки и блоки
+const cityBtn = document.querySelector('.filter-city__btn');
+const cityFlex = document.querySelector('.filter__city-flex');
+const sportBtn = document.querySelector('.filter-sport__btn');
+const sportFlex = document.querySelector('.filter__sport-flex');
+const typeBtn = document.querySelector('.filter-type__btn');
+const typeFlex = document.querySelector('.filter__type-flex');
+const clearBtn = document.querySelector('.filter-btn-clear');
 
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.help-button-next',
-      prevEl: '.help-button-prev',
-    },
+// Обработчики событий для кнопок
+cityBtn.addEventListener('click', () => {
+  // Показываем блок filter__city-flex
+  cityFlex.style.display = 'flex';
+  // Скрываем остальные блоки
+  sportFlex.style.display = 'none';
+  typeFlex.style.display = 'none';
 
+});
+
+sportBtn.addEventListener('click', () => {
+  // Показываем блок filter__sport-flex
+  sportFlex.style.display = 'flex';
+  // Скрываем остальные блоки
+  cityFlex.style.display = 'none';
+  typeFlex.style.display = 'none';
+
+});
+
+typeBtn.addEventListener('click', () => {
+  // Показываем блок filter__type-flex
+  typeFlex.style.display = 'flex';
+  // Скрываем остальные блоки
+  cityFlex.style.display = 'none';
+  sportFlex.style.display = 'none';
+
+});
+
+// Обработчики событий для кнопок внутри блока filter__city-flex
+const cityButtons = document.querySelectorAll('.filter__city');
+cityButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Получаем текст кнопки
+    const buttonText = button.textContent;
+    // Перемещаем текст кнопки в filter-city__btn
+    cityBtn.textContent = buttonText;
+    // Изменяем цвет кнопки на #8F8E00
+    cityBtn.style.color = '#8F8E00';
+    // Скрываем блок filter__city-flex
+    cityFlex.style.display = 'none';
+      clearBtn.style.display = 'flex'
   });
+});
 
-  let destructionCards = document.querySelectorAll('.destruction__card');
-  destructionCards.forEach(function(destructionCard) {
-      let destructionText = destructionCard.querySelector('.destruction__text');
-      let originalText = destructionText.textContent;
-      destructionCard.addEventListener('mouseover', function() {
-          destructionText.textContent = 'Оставить заявку';
-          destructionText.style.background = 'linear-gradient(180deg, #FF8E54 0%, #FE7027 100%), radial-gradient(66.01% 56.87% at 50.05% 0%, #FFAF86 0%, rgba(244, 223, 198, 0) 100%)';
-          destructionText.style.color = '#252525';
-      });
-      destructionCard.addEventListener('mouseout', function() {
-          destructionText.textContent = originalText;
-          destructionText.style.background = 'linear-gradient(98.25deg, #373737 0%, #2F2E2E 100%), linear-gradient(0deg, #616161, #616161)';
-          destructionText.style.color = '#FFF';
-      });
+// Обработчики событий для кнопок внутри блока filter__city-flex
+const typeButtons = document.querySelectorAll('.filter__type');
+typeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Получаем текст кнопки
+    const buttonText = button.textContent;
+    // Перемещаем текст кнопки в filter-type__btn
+    typeBtn.textContent = buttonText;
+    // Изменяем цвет кнопки на #8F8E00
+    typeBtn.style.color = '#8F8E00';
+    // Скрываем блок filter__type-flex
+    typeFlex.style.display = 'none';
+      clearBtn.style.display = 'flex'
   });
+});
 
-  function openModal() {
-    let modal = document.querySelector('.modal')
-    let overlay = document.querySelector('.overlay')
-    modal.style.display = 'block';
-    overlay.style.display = 'block';
-    overlay.addEventListener('click', function() {
-        modal.style.display = 'none';
-        overlay.style.display = 'none';
-    })
-  }
+// Обработчики событий для кнопок внутри блока filter__city-flex
+const sportButtons = document.querySelectorAll('.filter__sport');
+sportButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Получаем текст кнопки
+    const buttonText = button.textContent;
+    // Перемещаем текст кнопки в filter-sport__btn
+    sportBtn.textContent = buttonText;
+    // Изменяем цвет кнопки на #8F8E00
+    sportBtn.style.color = '#8F8E00';
+    // Скрываем блок filter__sport-flex
+    sportFlex.style.display = 'none';
+      clearBtn.style.display = 'flex'
+  });
+});
 
-  new WOW().init();
+clearBtn.addEventListener('click', () => {
+    cityBtn.textContent = 'Город';
+    cityBtn.style.color = '#000';
+
+    typeBtn.textContent = 'Тип соревнования';
+    typeBtn.style.color = '#000';
+
+    sportBtn.textContent = 'Вид спорта';
+    sportBtn.style.color = '#000';
+    clearBtn.style.display = 'none'
+})
+
+
+
