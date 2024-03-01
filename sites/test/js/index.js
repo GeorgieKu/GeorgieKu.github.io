@@ -1,162 +1,99 @@
+// Получаем кнопки и блоки
+const cityBtn = document.querySelector('.filter-city__btn');
+const cityFlex = document.querySelector('.filter__city-flex');
+const sportBtn = document.querySelector('.filter-sport__btn');
+const sportFlex = document.querySelector('.filter__sport-flex');
+const typeBtn = document.querySelector('.filter-type__btn');
+const typeFlex = document.querySelector('.filter__type-flex');
+const clearBtn = document.querySelector('.filter-btn-clear');
 
-  let cardsAmount = document.getElementById('cardsAmount');
+// Обработчики событий для кнопок
+cityBtn.addEventListener('click', () => {
+  // Показываем блок filter__city-flex
+  cityFlex.style.display = 'flex';
+  // Скрываем остальные блоки
+  sportFlex.style.display = 'none';
+  typeFlex.style.display = 'none';
 
-  function decreaseCardsAmount() {
-    let currentAmount = parseInt(localStorage.getItem('cardsAmount')) || 0;
-    if (currentAmount > 0) {
-      currentAmount--;
-      localStorage.setItem('cardsAmount', currentAmount);
-      cardsAmount.textContent = currentAmount;
-    }
-  }
-  
-  function startCountdown() {
-    setInterval(decreaseCardsAmount, 7000);
-  }
-  
-  document.addEventListener('DOMContentLoaded', function() {
-    let storedAmount = localStorage.getItem('cardsAmount');
-    if (storedAmount) {
-      cardsAmount.textContent = storedAmount;
-    } else {
-      localStorage.setItem('cardsAmount', 36); // Начальное значение cardsAmount
-      cardsAmount.textContent = 36;
-    }
-    
-    startCountdown();
-  });
-
-  document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("burger").addEventListener("click", function() {
-        document.querySelector("header").classList.toggle("open")
-    })
-})
-
-function openAcc(toggleButton, content, toggleArrow) {
-    toggleButton.addEventListener('click', function() {
-        content.classList.toggle('open');
-        toggleArrow.classList.toggle('rotate');
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    let toggleButtons = document.querySelectorAll('.deatails__btn');
-    let contents = document.querySelectorAll('.content');
-    let toggleArrows = document.querySelectorAll('.deatails__btn img');
-    
-    toggleButtons.forEach((toggleButton, index) => {
-        openAcc(toggleButton, contents[index], toggleArrows[index]);
-    });
 });
 
-// Получаем информацию о стране пользователя
-fetch('https://ipapi.co/json/')
-  .then(response => response.json())
-  .then(data => {
-    // Получаем код страны пользователя
-    const countryCode = data.country_code.toUpperCase();
-    console.log(countryCode)
-    
-    // Создаем элемент img для отображения флага
-    const flagImg = document.getElementById('flag');
-    flagImg.src = `https://flagsapi.com/${countryCode}/flat/64.png`;
-    
- 
-  })
-  .catch(error => {
-    console.error('Ошибка получения информации о стране:', error);
-  });
-  
-  // Получаем информацию о стране пользователя
-fetch('https://ipapi.co/json/')
-  .then(response => response.json())
-  .then(data => {
-    // Получаем код страны пользователя
-    const countryCode = data.country_code.toUpperCase();
-    console.log(countryCode)
-    
-    // Создаем элемент img для отображения флага
-    const flagImg = document.getElementById('flag2');
-    flagImg.src = `https://flagsapi.com/${countryCode}/flat/64.png`;
-    
- 
-  })
-  .catch(error => {
-    console.error('Ошибка получения информации о стране:', error);
-  });
+sportBtn.addEventListener('click', () => {
+  // Показываем блок filter__sport-flex
+  sportFlex.style.display = 'flex';
+  // Скрываем остальные блоки
+  cityFlex.style.display = 'none';
+  typeFlex.style.display = 'none';
 
-  const swiper = new Swiper('.reviews__swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    spaceBetween: 50,
-    slidesPerView: 'auto',
-    // autoHeight: true,
-    loop: true,
-  
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navigation arrows
-    navigation: {
-      nextEl: '.reviews-button-next',
-      prevEl: '.reviews-button-prev',
-    },
-  
+});
+
+typeBtn.addEventListener('click', () => {
+  // Показываем блок filter__type-flex
+  typeFlex.style.display = 'flex';
+  // Скрываем остальные блоки
+  cityFlex.style.display = 'none';
+  sportFlex.style.display = 'none';
+
+});
+
+// Обработчики событий для кнопок внутри блока filter__city-flex
+const cityButtons = document.querySelectorAll('.filter__city');
+cityButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Получаем текст кнопки
+    const buttonText = button.textContent;
+    // Перемещаем текст кнопки в filter-city__btn
+    cityBtn.textContent = buttonText;
+    // Изменяем цвет кнопки на #8F8E00
+    cityBtn.style.color = '#8F8E00';
+    // Скрываем блок filter__city-flex
+    cityFlex.style.display = 'none';
+      clearBtn.style.display = 'flex'
   });
+});
 
-let openCartModalBtn = document.getElementById('openCartModal')
-let cartmodal = document.getElementById('cartModal')
-let body = document.querySelector('body')
-let closeBtn = document.getElementById('close')
+// Обработчики событий для кнопок внутри блока filter__city-flex
+const typeButtons = document.querySelectorAll('.filter__type');
+typeButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Получаем текст кнопки
+    const buttonText = button.textContent;
+    // Перемещаем текст кнопки в filter-type__btn
+    typeBtn.textContent = buttonText;
+    // Изменяем цвет кнопки на #8F8E00
+    typeBtn.style.color = '#8F8E00';
+    // Скрываем блок filter__type-flex
+    typeFlex.style.display = 'none';
+      clearBtn.style.display = 'flex'
+  });
+});
 
-openCartModalBtn.addEventListener('click', function() {
-    body.style.overflow = 'hidden'
-    cartmodal.style.display = 'block'
+// Обработчики событий для кнопок внутри блока filter__city-flex
+const sportButtons = document.querySelectorAll('.filter__sport');
+sportButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Получаем текст кнопки
+    const buttonText = button.textContent;
+    // Перемещаем текст кнопки в filter-sport__btn
+    sportBtn.textContent = buttonText;
+    // Изменяем цвет кнопки на #8F8E00
+    sportBtn.style.color = '#8F8E00';
+    // Скрываем блок filter__sport-flex
+    sportFlex.style.display = 'none';
+      clearBtn.style.display = 'flex'
+  });
+});
+
+clearBtn.addEventListener('click', () => {
+    cityBtn.textContent = 'Город';
+    cityBtn.style.color = '#000';
+
+    typeBtn.textContent = 'Тип соревнования';
+    typeBtn.style.color = '#000';
+
+    sportBtn.textContent = 'Вид спорта';
+    sportBtn.style.color = '#000';
+    clearBtn.style.display = 'none'
 })
 
 
-function closeModal() {
-    body.style.overflow = 'auto'
-    cartmodal.style.display = 'none'
-}
 
-function waitOn() {
-  let text = "Wait"
-  let pointCount = 0
-  var i = setInterval(function () {
-      var newText = text
-      for (let i = 0; i <= pointCount; i++) {
-          newText += "."
-      }
-      document.getElementById("startBtn").text = newText;
-      pointCount++
-      if (pointCount > 3) {
-          pointCount = 0
-      }
-  }, 200);
-}
-
-let notification = document.querySelector('.notification');
-let notificationClose = document.querySelector('.notification__closeIcon')
-
-window.addEventListener('load', function() {
-  setTimeout(() => {
-    notification.style.display = 'block'
-    notification.style.animation = 'fadeIn 1s ease'
-   
-  }, 5000);
-  setTimeout(() => {
-    notification.style.animation = 'fadeOut 1s ease'
-   
-  }, 10000);
-  setTimeout(() => {
-    notification.style.display = 'none'
-   
-  }, 11000);
-  notificationClose.addEventListener('click', function() {
-    notification.style.display = 'none'
-
-  })
-})
