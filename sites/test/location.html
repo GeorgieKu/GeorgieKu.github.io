@@ -131,12 +131,14 @@
 
             </nav>
             <div class="header__right">
-                <svg class="login-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                <button class="login__btn btn-reset" id="modalOpen" aria-label="login">
+                    <svg class="login-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                     fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M8.13337 3.2C7.13926 3.2 6.33337 4.00589 6.33337 5C6.33337 5.99411 7.13926 6.8 8.13337 6.8C9.12749 6.8 9.93337 5.99411 9.93337 5C9.93337 4.00589 9.12749 3.2 8.13337 3.2ZM5.13337 5C5.13337 3.34315 6.47652 2 8.13337 2C9.79023 2 11.1334 3.34315 11.1334 5C11.1334 6.65685 9.79023 8 8.13337 8C6.47652 8 5.13337 6.65685 5.13337 5ZM4.58315 12.8H11.6836C11.398 11.0974 9.91717 9.8 8.13337 9.8C6.34958 9.8 4.8688 11.0974 4.58315 12.8ZM3.33337 13.4C3.33337 10.749 5.48241 8.6 8.13337 8.6C10.7843 8.6 12.9334 10.749 12.9334 13.4C12.9334 13.7314 12.6647 14 12.3334 14H3.93337C3.602 14 3.33337 13.7314 3.33337 13.4Z"
                         fill="black" />
                 </svg>
+                </button>
                 <div class="social">
                     <a href="#" aria-label="telegram">
                         <svg class="tg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
@@ -162,6 +164,83 @@
             </div>
         </div>
     </header>
+    <div class="login-overflow" id="loginOverflow">
+        <div class="login__modal" id="loginModal">
+            <div class="modal__flex">
+                <button class="modal__btn modal__btn_active btn-reset" id="enterBtn">Вход</button>
+                <button class="modal__btn btn-reset" id="registrBtn">Регистрация</button>
+            </div>
+            <form action="#" class="modal__form modalLogin__form" id="modalLoginForm">
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Логин"><i>*</i>
+           
+                </div>
+                <div class="modal__flexbox">
+                    <input type="email" class="modal__input" placeholder="Пароль"><i>*</i>
+                
+                </div>
+                <div class="modal__checkbox">
+                    <input type="checkbox" name="" class="modal__check" id="modalCheck">
+                    <span class="modal__text">Запомнить</span>
+                </div>
+                <div class="modal__flex-2">
+                    <a href="#" class="modal__link">
+                        <img src="./img/location/vk.svg" alt="вконтакте">
+                        войти через вк
+                    </a>
+                    <button href="#"  class="modal__link-2 btn-reset" id="resetBtn">
+                        Восстановить пароль
+                    </button>
+                </div>
+                <span class="big-error" id="bigError"></span>
+                <button class="modal__btn-2 btn-reset" id="loginBtn">Войти</button>
+                <button class="modal__btn-3 btn-reset">Отменить</button>
+            </form>
+            <form action="#" class="modal__form modal__register-form" id="modalRegisterForm">
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Фамилия"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Имя"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="tel" class="modal__input" placeholder="Телефон"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="email" class="modal__input" placeholder="E-mail"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Пароль"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Повторите пароль"><i>*</i>
+                </div>
+                <div class="modal__checkbox">
+                    <input type="checkbox" name="" class="modal__check" id="modalCheck">
+                    <span class="modal__text">Я ознакомлен и согласен <a href="#">с политикой конфиденциальности</a></span>
+                </div>
+                <span class="modal__text">Нажимая на кнопку «Зарегистрироваться», вы соглашаетесь с условиями <a href="#">пользовательского соглашения</a></span>
+                <span class="big-error" id="bigError-2"></span>
+                <div class="modal__flex-3">
+                    <button class="modal__btn-3 btn-reset">Отменить</button>
+                    <button class="modal__btn-2 modal__btn-2_mb btn-reset" id="registrationBtn">зарегистрироваться</button>
+                </div>
+            </form>
+        </div>
+        <div class="login__modal" id="passwodResetModal">
+            <h2 class="password__title">Восстановление пароля</h2>
+            <p class="password__text">Введите почту, которую вы указывали при регистрации</p>
+            <form id="passwordResetForm" class="needs-validation" novalidate>
+                <div class="modal__flexbox">
+                    <input type="email" class="modal__input form-control" id="email" placeholder="Email" required>
+                    <span class="invalid-feedback">Пожалуйста, введите действительный адрес электронной почты.</span>
+                    <button type="submit" class="modal__btn-2 btn-reset" id="passwordResetBtn">восстановить пароль</button>
+                    <button class="modal__btn-3 btn-reset" id="cancel">Отменить</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
     <main>
       <section class="location-hero">
         <div class="container">
@@ -1046,6 +1125,7 @@
     </script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/location.js"></script>
+    <script src="./js/login.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
