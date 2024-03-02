@@ -29,7 +29,7 @@ var swiper2 = new Swiper(".member__swiper", {
       320: {
         spaceBetween: 8,
       },
-      576: {
+      575: {
         spaceBetween: 48,
       },
       
@@ -54,7 +54,7 @@ var swiper2 = new Swiper(".member__swiper", {
       320: {
         spaceBetween: 16,
       },
-      576: {
+      575: {
         spaceBetween: 100,
       },
       
@@ -75,7 +75,7 @@ var swiper2 = new Swiper(".member__swiper", {
           enabled: false,
         },
       },
-      576: {
+      575: {
         direction: 'horizontal',
         spaceBetween: 48,
       },
@@ -105,6 +105,6 @@ var swiper2 = new Swiper(".member__swiper", {
     evt.currentTarget.classList.add("tab-btn-active");
 }
 
-// По умолчанию открыть первый таб при загрузке страницы
-document.getElementById("tab3").style.display = "block";
-document.getElementsByClassName("tab-btn")[2].classList.add("tab-btn-active");
+// // По умолчанию открыть первый таб при загрузке страницы
+// document.getElementById("tab3").style.display = "block";
+// document.getElementsByClassName("tab-btn")[2].classList.add("tab-btn-active");
