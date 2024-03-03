@@ -161,6 +161,94 @@
             </div>
         </div>
     </header>
+    <div class="login-overflow" id="loginOverflow">
+        <div class="login__modal" id="loginModal">
+            <div class="modal__flex">
+                <button class="modal__btn modal__btn_active btn-reset" id="enterBtn">Вход</button>
+                <button class="modal__btn btn-reset" id="registrBtn">Регистрация</button>
+            </div>
+            <form action="#" class="modal__form modalLogin__form" id="modalLoginForm">
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Логин"><i>*</i>
+           
+                </div>
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Пароль"><i>*</i>
+                
+                </div>
+                <div class="modal__checkbox">
+                    <input type="checkbox" name="" class="modal__check" id="modalCheck">
+                    <span class="modal__text">Запомнить</span>
+                </div>
+                <div class="modal__flex-2">
+                    <a href="#" class="modal__link">
+                        <img src="./img/location/vk.svg" alt="вконтакте">
+                        войти через вк
+                    </a>
+                    <button href="#"  class="modal__link-2 btn-reset" id="resetBtn">
+                        Восстановить пароль
+                    </button>
+                </div>
+                <span class="big-error" id="bigError"></span>
+                <button class="modal__btn-2 btn-reset" id="loginBtn">Войти</button>
+                <button class="modal__btn-3 btn-reset" >Отменить</button>
+            </form>
+            <form action="" class="modal__form modalRegiserForm" id="modalRegisterForm" onsubmit="return false">
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Фамилия"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Имя"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="tel" class="modal__input" placeholder="Телефон"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="email" class="modal__input" placeholder="E-mail"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" id="modalInputRegistrPassword" placeholder="Пароль"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" id="modalInputRegistrPasswordRepeat" placeholder="Повторите пароль"><i>*</i>
+                </div>
+                <div class="modal__checkbox">
+                    <label for="modalCheck" class="checkbox__label">
+                        <input type="checkbox" name="modalCheck" class="modal__check" id="modalCheck-2">
+                        <span class="modal__text">Я ознакомлен и согласен <a href="#">с политикой конфиденциальности</a></span>
+                    </label>
+                </div>
+                <span class="modal__text">Нажимая на кнопку «Зарегистрироваться», вы соглашаетесь с условиями <a href="#">пользовательского соглашения</a></span>
+                <span class="big-error" id="bigError-2"></span>
+                <span class="big-error" id="bigError-3"></span>
+                <span class="big-error" id="bigError-4"></span>
+                <div class="modal__flex-3">
+                    <button class="modal__btn-3 btn-reset">Отменить</button>
+                    <button class="modal__btn-2 modal__btn-2_mb btn-reset" id="modalRegistrBtn">зарегистрироваться</button>
+                </div>
+            </form>
+        </div>
+        <div class="login__modal" id="passwodResetModal">
+            <h2 class="password__title">Восстановление пароля</h2>
+            <p class="password__text">Введите почту, которую вы указывали при регистрации</p>
+            <form class="needs-validation" novalidate>
+                <div class="modal__flexbox">
+                    <input type="email" class="modal__input form-control" id="email" placeholder="Email" required>
+                    <span class="invalid-feedback">Пожалуйста, введите действительный адрес электронной почты.</span>
+                    <button type="submit" class="modal__btn-2 btn-reset" id="passwordResetBtn">восстановить пароль</button>
+                    <button class="modal__btn-3 btn-reset" id="cancelBtn">Отменить</button>
+                </div>
+            </form>
+            
+        </div>
+        <div class="succsess__modal" id="succsessModal">
+            <p class="success__text">Ура! Вы успешно зарегистрировались. Чтобы продолжить оформление слота, авторизуйтесь со своим логином и паролем.</p>
+            <div class="success__btns">
+                <button class="modal__btn-3 succsess__btn-1 btn-reset" id="cancelBtn-2">Отменить</button>
+                <button class="succsess__btn-2 btn-reset" id="succsessModalBtn">авторизоваться</button>
+            </div>
+        </div>
+    </div>
     <main class="calendar-main">
         <section class="filter">
             <div class="container">
@@ -2167,6 +2255,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
-    <script src="./js/index.js"></script>
+    <script src="./js/calendar.js"></script>
     </body>
     </html>
