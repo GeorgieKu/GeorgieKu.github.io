@@ -10,6 +10,16 @@
 	<link type="text/css" href="./style/order_me.min.css" rel="stylesheet" media="all">
 	<link href="./style/sweetalert.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="./style/main.css">
+	<script>
+         // Проверяем, есть ли параметр в URL, указывающий на предыдущую страницу
+		 const urlParams = new URLSearchParams(window.location.search);
+        const fromPage = urlParams.get('fromPage');
+
+        // Если предыдущая страница - не page.html, то перенаправляем на page.html
+        if (fromPage !== 'page.html') {
+            window.location.href = "page.html";
+        }
+    </script>
 	<title>Congratulations!</title>
 </head>
 
