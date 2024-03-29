@@ -1,35 +1,65 @@
+//Раскрытие меню
+function openAcc(toggleButton, asideContents) {
+    toggleButton.addEventListener('click', function() {
+        asideContents.classList.toggle('open');
+        
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    let toggleButtons = document.querySelectorAll('.aside__btn');
+    let asideContents = document.querySelectorAll('.aside__content');
+    
+    toggleButtons.forEach((toggleButton, index) => {
+        openAcc(toggleButton, asideContents[index]);
+    });
+});
+
+
+//Раскрытие меню на мобиле
+let mobileCatalogNav = document.querySelector('.mobile__nav');
+let mobileCatalogLink = document.querySelector('.mobile__catalog-link');
+let mobileMenu = document.querySelector('.mobile-menu');
+let close = document.querySelector('.mobile-nav__close');
+
+mobileCatalogLink.addEventListener('click', function() {
+    let body = document.querySelector('body');
+    body.style.overflow = 'hidden';
+    mobileCatalogNav.style.animation =  'fadeFromDown 1s';
+    mobileCatalogNav.style.display = 'block'; 
+
+
+    setTimeout(function() {
+        mobileMenu.style.backgroundColor = '#F6F6F6';
+        mobileCatalogNav.classList.add('visible');
+    }, 100);
+});
+
+close.addEventListener('click', function() {
+    let body = document.querySelector('body');
+    body.style.overflow = 'auto';
+    mobileMenu.style.backgroundColor = '#FFFFFF';
+    mobileCatalogNav.classList.remove('visible'); 
+    mobileCatalogNav.style.animation =  'fadeToDown 1s';
+ 
+    setTimeout(function() {
+        mobileCatalogNav.style.display = 'none';
+    }, 1000); 
+});
+
+// Свайпер в hero
 const swiper = new Swiper('.hero__swiper', {
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
-    spaceBetween: 40,
+    spaceBetween: 30,
+    autoplay: {
+        delay: 5000, 
+        disableOnInteraction: false, 
+    },
     slidesPerView: 'auto',
-
-  });
-
-  const middleSizeSwiper = new Swiper('.middle-size-swiper__swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 40,
-    slidesPerView: 'auto',
-
-  });
-
-  const doubleSizeSwiper = new Swiper('.double-size-swiper__swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 40,
-    slidesPerView: 'auto',
-
-  });
-
-  const doubleSizeSwiper2 = new Swiper('.double-size-swiper__swiper-2', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 40,
-    slidesPerView: 'auto',
+    pagination: {
+      el: '.hero__swiper-pagination',
+    },
+  
 
   });
