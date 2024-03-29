@@ -63,3 +63,13 @@ const swiper = new Swiper('.hero__swiper', {
   
 
   });
+
+  function toggleDropdown() {
+    var dropdownOptions = document.querySelector('.dropdown-options');
+    dropdownOptions.style.display = dropdownOptions.style.display === 'flex' ? 'none' : 'flex';
+}
+
+function selectOption(option) {
+    document.querySelector('.dropdown-header-text').textContent = option;
+    document.querySelector('.dropdown-options').style.display = 'none';
+}
