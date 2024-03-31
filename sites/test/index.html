@@ -15,6 +15,93 @@
 </head>
 
 <body>
+    <div class="overlay"></div>
+    <div class="cart__modal">
+        <div class="cart__flex">
+            <h2 class="cart__title">Корзина</h2>
+            <button class="cart__close btn-reset" aria-label=" Корзина">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z"
+                        fill="#231F20" />
+                </svg>
+            </button>
+
+        </div>
+        <p class="cart__text">Заказанный товар должен быть оплачен в течении двух банковских дней. В случае нарушения
+            срока оплаты Продавец не гарантирует резерв заказанного товара. По всем возникшим проблемам с оплатой заказа
+            просьба информировать менеджера компании.</p>
+        <div class="cart__grid">
+            <span class="grid__title">Информация по товару</span>
+            <span class="grid__title">Количество</span>
+            <span class="grid__title">Итого € </span>
+            <span class="grid__title"></span>
+            <div class="grid__info">
+                <img class="cart__img" src="./img/cart.webp" alt="">
+                <div class="grid__block">
+                    <span class="cart__text-2">Код товара: 1111111</span>
+                    <p class="cart__text-3">Домкрат автомобильный Ромбический</p>
+                    <div class="cart__block">
+                        <span class="cart__price">200 €</span>
+                        <div class="product__field input__field">
+                            <button class="cart__minus products__minus fa-solid fa-minus down btn-reset"
+                                aria-label="меньше">-</button>
+                            <input class="cart__input goods__input products__input" type="number" value="1" min="0"
+                                aria-label="Количество товара">
+                            <button class="cart__plus products__plus fa-solid fa-plus up btn-reset"
+                                aria-label="больше">+</button>
+                            <span>шт.</span>
+                        </div>
+                    </div>
+                    <span class="cart__text-4">В наличии на складе</span>
+                    <div class="cart__flex cart__flex_ga">
+                        <span class="cart__text-5">Всего товаров в заказе:</span>
+                        <span class="cart__text-6">1 шт</span>
+                    </div>
+                    <div class="cart__flex cart__flex_ga-2">
+                        <span class="cart__text-5">Общая сумма:</span>
+                        <span class="cart__text-6">200 €</span>
+                    </div>
+                    <a href="./order.html" class="cart__btn red-btn" aria-label="Перейти к оформлению">Перейти к
+                        оформлению</a>
+                </div>
+            </div>
+            <div class="grid__amount">
+                <span class="card__text-7">1 <span>шт</span></span>
+            </div>
+            <div class="grid__price">
+                <span class="card__text-7">200 €</span>
+            </div>
+            <div class="grid__delete">
+                <button class="cart__delete-btn btn-reset" aria-label="Удалить">
+                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_73_10356)">
+                            <path
+                                d="M9.09998 13H3.83498C2.76248 13 1.91748 12.1225 1.91748 11.0825V5.2C1.91748 5.005 2.04748 4.875 2.24248 4.875C2.43748 4.875 2.56748 5.005 2.56748 5.2V11.0825C2.56748 11.7975 3.15248 12.35 3.83498 12.35H9.09998C9.81498 12.35 10.3675 11.765 10.3675 11.0825V5.2C10.3675 5.005 10.4975 4.875 10.6925 4.875C10.8875 4.875 11.0175 5.005 11.0175 5.2V11.0825C11.0175 12.1225 10.14 13 9.09998 13Z"
+                                fill="#918F8F" />
+                            <path
+                                d="M10.8225 1.5925H8.35253C8.19003 0.6825 7.41003 0 6.46753 0C5.52503 0 4.74503 0.6825 4.58253 1.5925H2.11253C1.36503 1.5925 0.780029 2.1775 0.780029 2.925C0.780029 3.6725 1.36503 4.225 2.11253 4.225H10.855C11.6025 4.225 12.1875 3.64 12.1875 2.8925C12.1875 2.145 11.57 1.5925 10.8225 1.5925ZM6.46753 0.65C7.05253 0.65 7.54003 1.04 7.67003 1.5925H5.23253C5.39503 1.04 5.88253 0.65 6.46753 0.65ZM10.8225 3.575H2.11253C1.75503 3.575 1.43003 3.2825 1.43003 2.8925C1.43003 2.535 1.72253 2.21 2.11253 2.21H10.855C11.2125 2.21 11.5375 2.5025 11.5375 2.8925C11.505 3.2825 11.2125 3.575 10.8225 3.575Z"
+                                fill="#918F8F" />
+                            <path
+                                d="M4.19243 11.4076C3.99743 11.4076 3.86743 11.2776 3.86743 11.0826V5.65508C3.86743 5.46008 3.99743 5.33008 4.19243 5.33008C4.38743 5.33008 4.51743 5.46008 4.51743 5.65508V11.0826C4.51743 11.2451 4.35493 11.4076 4.19243 11.4076Z"
+                                fill="#918F8F" />
+                            <path
+                                d="M8.74248 11.4076C8.54748 11.4076 8.41748 11.2776 8.41748 11.0826V5.65508C8.41748 5.46008 8.54748 5.33008 8.74248 5.33008C8.93748 5.33008 9.06748 5.46008 9.06748 5.65508V11.0826C9.06748 11.2451 8.90498 11.4076 8.74248 11.4076Z"
+                                fill="#918F8F" />
+                            <path
+                                d="M6.46758 11.4076C6.27258 11.4076 6.14258 11.2776 6.14258 11.0826V5.65508C6.14258 5.46008 6.27258 5.33008 6.46758 5.33008C6.66258 5.33008 6.79258 5.46008 6.79258 5.65508V11.0826C6.79258 11.2451 6.63008 11.4076 6.46758 11.4076Z"
+                                fill="#918F8F" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_73_10356">
+                                <rect width="13" height="13" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </button>
+            </div>
+        </div>
+    </div>
     <header class="header">
         <div class="container">
             <div class="header__flexbox">
@@ -122,52 +209,7 @@
         </nav>
      
     </div>
-    <nav class="aside__nav mobile__nav">
-        <div class="mobile-nav__flex">
-            <h3 class="mobile__nav-title">Каталог товаров</h3>
-            <button class="mobile-nav__close btn-reset" aria-label="Закрыть меню каталога">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" fill="#231F20"/>
-                    </svg>                        
-            </button>
-        </div>
-        <ul class="aside__list list-reset">
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Автотовары">Автотовары</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Носители информации и
-                периферия, Музыкальные записи">Носители информации и
-                    периферия, Музыкальные записи</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Подарки и украшения">Подарки и украшения</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Галантерея">Галантерея</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Канцелярские товары">Канцелярские товары</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Косметика и средства по
-                уходу за телом">Косметика и средства по
-                    уходу за телом</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Товары для дома и
-                гигиены">Товары для дома и
-                    гигиены</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Еда">Еда</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Часы, батарейки и лампы">Часы, батарейки и лампы</a>
-            </li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Ювелирные изделия и
-                аксессуары">Ювелирные изделия и
-                    аксессуары</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Духи">Духи</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Курительные принадлежности и
-                газ">Курительные принадлежности и
-                    газ</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Сумки, чемоданы и
-                аксессуары">Сумки, чемоданы и
-                    аксессуары</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Бытовая техника">Бытовая техника</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Медицинские товары">Медицинские товары</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Товары для гигиены">Товары для гигиены</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Украшения и аксессуары для
-                волос">Украшения и аксессуары для
-                    волос</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Игрушки">Игрушки</a></li>
-            <li class="aside__item"><a href="#" class="aside__link" aria-label="Музыкальные записи">Музыкальные записи</a></li>
-        </ul>
-    </nav>
+
     <div class="wrapper">
         <div class="container">
             <div class="wrapper__flex">
@@ -181,37 +223,45 @@
                     <div class="aside__content open">
                         <div class="text-wrapper">
                             <nav class="aside__nav">
+                                <div class="mobile-nav__flex">
+                                    <h3 class="mobile__nav-title">Каталог товаров</h3>
+                                    <button class="mobile-nav__close btn-reset" aria-label="Закрыть меню каталога">
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" fill="#231F20"/>
+                                            </svg>                        
+                                    </button>
+                                </div>
                                 <ul class="aside__list list-reset">
                                     <li class="aside__item"><a href="#" class="aside__link" aria-label="Автотовары">Автотовары</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Носители информации и
+                                    <li class="aside__item"><a href="./info.html" class="aside__link" aria-label="Носители информации и
                                         периферия, Музыкальные записи">Носители информации и
                                             периферия, Музыкальные записи</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Подарки и украшения">Подарки и украшения</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Галантерея">Галантерея</a></li>
+                                    <li class="aside__item"><a href="./presents.html" class="aside__link" aria-label="Подарки и украшения">Подарки и украшения</a></li>
+                                    <li class="aside__item"><a href="./galant.html" class="aside__link" aria-label="Галантерея">Галантерея</a></li>
                                     <li class="aside__item"><a href="#" class="aside__link" aria-label="Канцелярские товары">Канцелярские товары</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Косметика и средства по
+                                    <li class="aside__item"><a href="./cosmetic.html" class="aside__link" aria-label="Косметика и средства по
                                         уходу за телом">Косметика и средства по
                                             уходу за телом</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Товары для дома и
+                                    <li class="aside__item"><a href="./home.html" class="aside__link" aria-label="Товары для дома и
                                         гигиены">Товары для дома и
                                             гигиены</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Еда">Еда</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Часы, батарейки и лампы">Часы, батарейки и лампы</a>
+                                    <li class="aside__item"><a href="./eat.html" class="aside__link" aria-label="Еда">Еда</a></li>
+                                    <li class="aside__item"><a href="./watch.html" class="aside__link" aria-label="Часы, батарейки и лампы">Часы, батарейки и лампы</a>
                                     </li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Ювелирные изделия и
+                                    <li class="aside__item"><a href="./accessories.html" class="aside__link" aria-label="Ювелирные изделия и
                                         аксессуары">Ювелирные изделия и
                                             аксессуары</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Духи">Духи</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Курительные принадлежности и
+                                    <li class="aside__item"><a href="./perfume.html" class="aside__link" aria-label="Духи">Духи</a></li>
+                                    <li class="aside__item"><a href="./smoke.html" class="aside__link" aria-label="Курительные принадлежности и
                                         газ">Курительные принадлежности и
                                             газ</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Сумки, чемоданы и
+                                    <li class="aside__item"><a href="./bags.html" class="aside__link" aria-label="Сумки, чемоданы и
                                         аксессуары">Сумки, чемоданы и
                                             аксессуары</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Бытовая техника">Бытовая техника</a></li>
+                                    <li class="aside__item"><a href="./appliances.html" class="aside__link" aria-label="Бытовая техника">Бытовая техника</a></li>
                                     <li class="aside__item"><a href="#" class="aside__link" aria-label="Медицинские товары">Медицинские товары</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Товары для гигиены">Товары для гигиены</a></li>
-                                    <li class="aside__item"><a href="#" class="aside__link" aria-label="Украшения и аксессуары для
+                                    <li class="aside__item"><a href="./hygiene.html" class="aside__link" aria-label="Товары для гигиены">Товары для гигиены</a></li>
+                                    <li class="aside__item"><a href="./decorations.html" class="aside__link" aria-label="Украшения и аксессуары для
                                         волос">Украшения и аксессуары для
                                             волос</a></li>
                                     <li class="aside__item"><a href="#" class="aside__link" aria-label="Игрушки">Игрушки</a></li>
@@ -221,7 +271,7 @@
                         </div>
                     </div>
                 </aside>
-                <section class="hero">
+                <section class="hero hero_max-width">
                     <div class="hero__flex">
                         <div class="hero__relative">
                             <input type="text" class="hero__input" placeholder="Поиск">
