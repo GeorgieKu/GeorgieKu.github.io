@@ -77,6 +77,30 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       
       });
+
+      const swiper5 = new Swiper('.clients-swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        
+        // Navigation arrows
+        navigation: {
+          nextEl: '.clients__swiper-btn-next',
+          prevEl: '.clients__swiper-btn-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                autoHeight: true,
+            },
+            576: {
+                slidesPerView: 'auto',
+            },
+        }
+      
+      });
 })
 
 
