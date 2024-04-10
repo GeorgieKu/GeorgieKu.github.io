@@ -783,218 +783,27 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  z-index: 2;
+  overflow: hidden;
 }
 
-@keyframes scale {
-  0% {
-    background-size: 100% auto;
-    background-position: center;
-  }
-  100% {
-    background-size: 110% auto;
-    background-position: center;
-  }
-}
-@keyframes scaleIn {
-  from {
-    background-size: 110% auto;
-    background-position: center;
-  }
-  to {
-    background-size: 100% auto;
-    background-position: center;
-  }
-}
-.works__link:hover {
-  animation: scale 0.3s forwards;
+.works__link:hover img {
+  transform: scale(1.2);
 }
 
-.works__link:not(:hover) {
-  animation: scaleIn 0.3s forwards;
+.works__link img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
 }
 
-.works__link-1 {
-  background-image: url(../img/works/CaseCard.webp);
-}
-
-.works__link-2 {
-  background-image: url(../img/works/CaseCard-1.webp);
-}
-
-.works__link-3 {
-  background-image: url(../img/works/CaseCard-3.webp);
-}
-
-.works__link-4 {
-  background-image: url(../img/works/CaseCard-4.webp);
-}
-
-.works__link-5 {
-  background-image: url(../img/works/CaseCard-2.webp);
-}
-
-.works__link-6 {
-  background-image: url(../img/works/CaseCard-5.webp);
-}
-
-.works__link-7 {
-  background-image: url(../img/works/CaseCard-6.webp);
-}
-
-.works__link-8 {
-  background-image: url(../img/works/completed/1.webp);
-}
-
-.works__link-9 {
-  background-image: url(../img/works/completed/2.webp);
-}
-
-.works__link-10 {
-  background-image: url(../img/works/completed/3.webp);
-}
-
-.works__link-11 {
-  background-image: url(../img/works/completed/4.webp);
-}
-
-.works__link-12 {
-  background-image: url(../img/works/completed/5.webp);
-}
-
-.works__link-13 {
-  background-image: url(../img/works/completed/6.webp);
-}
-
-.works__link-14 {
-  background-image: url(../img/works/completed/7.webp);
-}
-
-.works__link-15 {
-  background-image: url(../img/works/completed/8.webp);
-}
-
-.works__link-16 {
-  background-image: url(../img/works/completed/9.webp);
-}
-
-.works__link-17 {
-  background-image: url(../img/works/completed/10.webp);
-}
-
-.works__link-18 {
-  background-image: url(../img/works/completed/11.webp);
-}
-
-.works__link-19 {
-  background-image: url(../img/works/completed/12.webp);
-}
-
-.works__link-20 {
-  background-image: url(../img/works/completed/13.webp);
-}
-
-.works__link-21 {
-  background-image: url(../img/works/completed/14.webp);
-}
-
-.works__link-22 {
-  background-image: url(../img/works/completed/15.webp);
-}
-
-.works__link-23 {
-  background-image: url(../img/works/completed/16.webp);
-}
-
-.works__link-24 {
-  background-image: url(../img/works/completed/17.webp);
-}
-
-.works__link-25 {
-  background-image: url(../img/works/completed/18.webp);
-}
-
-.works__link-26 {
-  background-image: url(../img/works/completed/19.webp);
-}
-
-.works__link-27 {
-  background-image: url(../img/works/completed/20.webp);
-}
-
-.works__link-28 {
-  background-image: url(../img/works/completed/21.webp);
-}
-
-.works__link-29 {
-  background-image: url(../img/works/completed/22.webp);
-}
-
-.works__link-30 {
-  background-image: url(../img/works/completed/23.webp);
-}
-
-.works__link-31 {
-  background-image: url(../img/works/completed/24.webp);
-}
-
-.works__link-32 {
-  background-image: url(../img/works/completed/25.webp);
-}
-
-.works__link-33 {
-  background-image: url(../img/works/completed/26.webp);
-}
-
-.works__link-34 {
-  background-image: url(../img/works/completed/27.webp);
-}
-
-.works__link-35 {
-  background-image: url(../img/works/completed/28.webp);
-}
-
-.works__link-36 {
-  background-image: url(../img/works/completed/29.webp);
-}
-
-.works__link-37 {
-  background-image: url(../img/works/completed/30.webp);
-}
-
-.works__link-38 {
-  background-image: url(../img/works/completed/31.webp);
-}
-
-.works__link-39 {
-  background-image: url(../img/works/completed/32.webp);
-}
-
-.works__link-40 {
-  background-image: url(../img/works/completed/33.webp);
-}
-
-.works__link-41 {
-  background-image: url(../img/works/completed/34.webp);
-}
-
-.works__link-42 {
-  background-image: url(../img/works/completed/35.webp);
-}
-
-.works__link-43 {
-  background-image: url(../img/works/completed/36.webp);
-}
-
-.works__link-44 {
-  background-image: url(../img/works/completed/37.webp);
-}
-
-.works__link-45 {
-  background-image: url(../img/works/completed/38.webp);
-}
-
-.works__link-46 {
-  background-image: url(../img/works/completed/39.webp);
+.works__link span {
+  position: relative;
+  z-index: 2;
 }
 
 .works__link-big {
@@ -1103,12 +912,17 @@ button {
   text-align: center;
 }
 
+.cert__img:hover {
+  transform: scale(1.2);
+}
+
 .cert__card .text {
   text-align: center;
 }
 
 .cert__img {
   margin-bottom: 12px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .vac__text-2 {
