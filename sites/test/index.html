@@ -1,517 +1,799 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
+<!DOCTYPE html><html lang="ru"><head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="РК-сервис">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, user-scalable=0">
+    <title>РКСервис — проектирование и строительство</title>
+    <link href="images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/media.css" type="text/css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="//fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&amp;display=swap" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./style/normalize.min.css">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/media.css">
-    <title>РК-сервис</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&amp;display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__flex">
-                <a href="./index.html" class="logo" aria-label="На главную">
-                    <img class="logo__img" src="./img/logo.webp" alt="Логотип">
+
+    <!-- site BEGIN -->
+    <div id="site" class="site">
+
+        <!-- header BEGIN -->
+        <header class="header site__header">
+            <div class="container header__container">
+                <a href="/" class="logo header__logo">
+                    <picture class="logo__picture">
+                        <img src="images/logo.png" alt="Р&nbsp;КСЕ&nbsp;ВИС" class="logo__img">
+                    </picture>
                 </a>
-                <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
-                    <span></span><span></span><span></span>
+                <div class="header__dropdown">
+                    <nav class="nav header__nav" role="navigation">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="./about.html" class="nav__link">О нас</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="./services.html" class="nav__link">Услуги</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="./works.html" class="nav__link">Наши работы</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="./clients.html" class="nav__link">Клиентам</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="./news.html" class="nav__link">Новости</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="./vac-full.html" class="nav__link">Вакансии</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="./contatcs.html" class="nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="contact header__contact">
+                        <a href="tel:+74875321880" class="contact__tel">+7 (48753) 2-18-80</a>
+                        <p class="contact__location">Офис г.Алексин</p>
+                        <a href="tel:+74950980124" class="contact__tel">+7 (495) 098-01-24</a>
+                        <p class="contact__location">Офис г.Москва</p>
+                    </div>
+                </div>
+                <button type="button" class="js-header-nav-toggle header__toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
-                <nav class="menu">
-                    
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link" href="./about.html" aria-label="О нас">
-                                О нас
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./services.html" aria-label="Услуги">
-                                Услуги
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./lis.html" aria-label="Лицензии">
-                                Лицензии
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./works.html" aria-label="Наши работы">
-                                Наши работы
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./reviews.html" aria-label="Отзывы">
-                                Отзывы
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./news.html" aria-label="Новости">
-                                Новости
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./vac.html" aria-label="Вакансии">
-                                Вакансии
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./contatcs.html" aria-label="Контакты">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__block">
-                    <a class="header__tel-link" href="tel:+74875321880" aria-label="Позвонить +7 (48753) 2-18-80">
-                        +7 (48753) 2-18-80
-                        <span>Офис г.Алексин</span>
-                    </a>
-                    <a class="header__tel-link" href="tel:+74950980124" aria-label="Позвонить +7 (495) 098-01-24">
-                        +7 (495) 098-01-24
-                        <span>Офис г.Москва</span>
-                    </a>
-                </div>
             </div>
-        </div>
-    </header>
-    <main class="main">
-        <div class="container">
-            <section class="hero mb-30">
-                <h1 class="visually-hidden">РК-сервис</h1>
-                <div class="hero__swiper swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./img/hero.webp" alt="" class="hero__img"></div>
-                        <div class="swiper-slide"><img src="./img/hero.webp" alt="" class="hero__img"></div>
-                        <div class="swiper-slide"><img src="./img/hero.webp" alt="" class="hero__img"></div>
-                    </div>
-                    <div class="hero__swiper-btns">
-                        <button class="hero__swiper-btn hero-prev" aria-label="Предыдущий слайд"><svg width="20"
-                                height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <button class="hero__swiper-btn hero-next" aria-label="Следующий слайд"><svg width="20"
-                                height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="hero__block">
-                    <div class="hero__card"><span class="hero__text-1">19</span><span class="hero__text-2">Лет опыта на
-                            строительном рынке</span></div>
-                    <div class="hero__card"><span class="hero__text-1">30</span><span
-                            class="hero__text-2">Крупномасштабных проекта</span></div>
-                    <div class="hero__card"><span class="hero__text-1">240</span><span
-                            class="hero__text-2">Высококвалифицированных сотрудника</span></div>
-                    <div class="hero__card"><span class="hero__text-1">50+</span><span class="hero__text-2">Единиц
-                            техники и средств механизации</span></div>
-                </div>
-            </section>
-            <section class="services mb-30 card">
-                <div class="services__flexbox services__flexbox_mb">
-                    <h2 class="services__title title">Наши услуги</h2>
-                    <button class="services__btn btn" aria-label="Смотреть все наши услуги">Смотреть все наши услуги</button>
-                </div>
-                <ul class="services__list">
-                    <li class="services__item">
-                        <div class="services__flexbox services__flexbox_bb">
-                            <span class="services__count"></span>
-                            <a href="#" class="services__link" aria-label="Перейти на страницу услуг">
-                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8.57506 2.00032L8.08203 7.63565M8.57506 2.00032L2.93973 1.5073M8.57506 2.00032L1.42531 7.99967"
-                                        stroke="#F0F4F7" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+        </header>
+        <!-- header END -->
+        <!-- main BEGIN -->
+        <main class="site__main" role="main">
+            <!-- intro-section BEGIN -->
+            <section class="intro-section">
+                <div class="container intro-section__container">
+                    <h1 class="visually-hidden">Р&nbsp;КСервис проектирование и строительство</h1>
+                    <div class="row intro-section__row">
+                        <div class="row__col row__col--8 intro-section__col-slider">
+                            <div class="intro-section__slider">
+                                <div class="js-intro-slider-init intro-section__slider-el">
+                                    <div class="intro-slider-card intro-section__slider-slide">
+                                        <div class="intro-slider-card__inner">
+                                            <picture class="img-cover intro-slider-card__picture">
+                                                <img src="images/banner.jpg" alt="&nbsp;КСервис проектирование и строительство" class="intro-slider-card__img">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                    <div class="intro-slider-card intro-section__slider-slide">
+                                        <div class="intro-slider-card__inner">
+                                            <picture class="img-cover intro-slider-card__picture">
+                                                <img src="images/banner.jpg" alt="&nbsp;КСервис проектирование и строительство" class="intro-slider-card__img">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="js-intro-slider-control slider-control intro-slider__slider-control">
+                                    <button type="button" class="slider-btn slider-btn--size-md slider-btn--theme-accent-outline slider-btn--prev slider-control__btn">
+                                        <span class="slider-btn__inner">
+                                          <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M1.25 9L8.75 1.5M1.25 9L8.75 16.5M1.25 9L18.75 9" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                                </svg>
 
-                            </a>
-                        </div>
-                        <div class="services__block">
-                            <h3 class="services__subtitle">Строительные работы</h3>
-                            <p class="services__text text">Работы по строительству, реконструкции, капитальному ремонту,
-                                сносу объектов капитального строительства</p>
-                        </div>
-                    </li>
-                    <li class="services__item">
-                        <div class="services__flexbox services__flexbox_bb">
-                            <span class="services__count"></span>
-                            <a href="#" class="services__link" aria-label="Перейти на страницу проектов">
-                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8.57506 2.00032L8.08203 7.63565M8.57506 2.00032L2.93973 1.5073M8.57506 2.00032L1.42531 7.99967"
-                                        stroke="#F0F4F7" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
 
-                            </a>
-                        </div>
-                        <div class="services__block">
-                            <h3 class="services__subtitle">Проектирование</h3>
-                            <p class="services__text text">Подготовка проектной документации объектов капитального
-                                строительства</p>
-                        </div>
 
-                    </li>
-                    <li class="services__item">
-                        <div class="services__flexbox services__flexbox_bb">
-                            <span class="services__count"></span>
-                            <a href="#" class="services__link" aria-label="Перейти на страницу проектов">
-                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8.57506 2.00032L8.08203 7.63565M8.57506 2.00032L2.93973 1.5073M8.57506 2.00032L1.42531 7.99967"
-                                        stroke="#F0F4F7" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
+                                        </span>
+                                    </button>
+                                    <button type="button" class="slider-btn slider-btn--size-md slider-btn--theme-accent-outline slider-btn--next slider-control__btn">
+                                        <span class="slider-btn__inner">
+                                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
 
-                            </a>
-                        </div>
-                        <div class="services__block">
-                            <h3 class="services__subtitle">Функции технического заказчика </h3>
-                            <p class="services__text text">Полный комплекс проектных, монтажных работ, а также
-                                согласование
-                                и экспертиза</p>
-                        </div>
 
-                    </li>
-                    <li class="services__item">
-                        <div class="services__flexbox services__flexbox_bb">
-                            <span class="services__count"></span>
-                            <a href="#" class="services__link" aria-label="Перейти на страницу проектов">
-                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M8.57506 2.00032L8.08203 7.63565M8.57506 2.00032L2.93973 1.5073M8.57506 2.00032L1.42531 7.99967"
-                                        stroke="#F0F4F7" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </svg>
 
-                            </a>
-                        </div>
-                        <div class="services__block">
-                            <h3 class="services__subtitle">Авторский надзор </h3>
-                            <p class="services__text text">Обеспечение соответствия выполняемых работ, тем решениям,
-                                которые
-                                заложены в выполненном проекте</p>
-                        </div>
-
-                    </li>
-                </ul>
-            </section>
-            <section class="about mb-30 card">
-                <div class="about__card">
-                    <img loading="lazy" class="about__img" src="./img/about.webp" alt="">
-                    <div class="about__block">
-                        <h2 class="about__title title">О компании</h2>
-                        <p class="about__text text">ООО «РКСервис» является строительной организацией, осуществляющей
-                            полный комплекс строительных работ, от нулевого цикла до сдачи объекта «под ключ». Компания
-                            основана в 2004 году. За годы работы построено свыше 30 крупномасштабных объекта,
-                            спроектировано свыше 8 проектов</p>
-                        <p class="about__text text">ООО «РКСервис» вправе заключать договора по осуществлению
-                            организации работ по строительству, реконструкции, капитальному ремонту, сносу объектов
-                            капитального строительства, стоимость которых по одному договору не превышает 10 миллиардов
-                            рублей (четвертый уровень ответственности). Высокий профессиональный уровень управления
-                            строительством, опытный персонал и современная материально-техническая база обеспечили
-                            компании успех на региональном строительном рынке и за его пределами, а ее заказчикам –
-                            высокое качество строительных работ, с соблюдением установленных сроков и оптимизацией
-                            финансовых затрат. В 2011 году компания внедрила системы менеджмента качества по
-                            проектированию и строительству</p>
-                    </div>
-                </div>
-            </section>
-            <section class="we mb-30 card">
-                <h2 class="we__title title">Почему стоит выбрать нас? </h2>
-                <ul class="we__list">
-                    <li class="we__item">
-                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M13.1556 1C12.5175 1 12.0001 1.51734 12.0001 2.1555C12.0001 14.7646 16.7907 25.6104 24.0955 29.623V30.3767C16.7905 34.3894 12 45.2351 12 57.8444C12 58.4826 12.5174 59 13.1556 59H46.8441C47.4824 59 47.9997 58.4826 47.9997 57.8444C47.9997 45.1612 43.1281 34.3121 35.7554 30.3651V29.6347C43.1276 25.6873 47.9997 14.8381 47.9997 2.15538C47.9997 1.51728 47.4825 1 46.8444 1H13.1556ZM14.3776 3.31088H45.6226C45.3116 15.2388 40.2565 25.0188 34.0802 27.9107L33.4094 28.2239V31.7797L34.0803 32.0926C40.2563 34.9845 45.3111 44.7617 45.6226 56.6887H14.3776C14.6859 44.8285 19.6661 35.0358 25.7865 32.0849L26.4456 31.7681V28.2317L25.7865 27.9148C19.6664 24.9639 14.6858 15.1711 14.3776 3.31088ZM41.201 13.9625C33.9687 17.4019 25.5674 17.4056 18.909 14.4689C20.7487 20.7646 24.4099 25.2457 28.7173 25.9862C28.5163 26.2477 28.4074 26.5666 28.4072 26.8945C28.4072 27.7305 29.0962 28.4095 29.9451 28.4095C30.7941 28.4095 31.4831 27.7305 31.4831 26.8945C31.4831 26.5581 31.3692 26.2492 31.181 25.9979C35.6286 25.2706 39.4027 20.5473 41.201 13.9625ZM29.9451 30.2686C29.0962 30.2686 28.4072 30.9474 28.4072 31.7837C28.4072 32.6199 29.0962 33.2987 29.9451 33.2987C30.7941 33.2987 31.4831 32.6199 31.4831 31.7837C31.4831 30.9474 30.7941 30.2686 29.9451 30.2686ZM29.9451 35.1266C29.0962 35.1266 28.4072 35.8056 28.4072 36.6416C28.4072 37.4781 29.0962 38.1567 29.9451 38.1567C30.7941 38.1567 31.4831 37.4781 31.4831 36.6416C31.4831 35.8056 30.7941 35.1266 29.9451 35.1266ZM29.9451 40.0159C29.0962 40.0159 28.4072 40.6946 28.4072 41.5309C28.4072 42.367 29.0962 43.0459 29.9451 43.0459C30.7941 43.0459 31.4831 42.367 31.4831 41.5309C31.4831 40.6946 30.7941 40.0159 29.9451 40.0159ZM29.9608 44.9513C27.0469 44.9859 24.1619 48.1384 20.4429 54.3081H39.6513C35.8193 48.0003 32.8747 44.9167 29.9608 44.9513Z"
-                                fill="#003C6E" />
-                        </svg>
-                        <h3 class="we__subtitle">Сжатые сроки</h3>
-                        <p class="we__text text">Мы способны реализовать проект любой сложности тосно в срок.
-                            Использование современного оборудования, и оптимизация логистических цепочек позволяют нам
-                            выполнять работы в максимально сжатые сроки</p>
-                    </li>
-                    <li class="we__item">
-                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15 25H25" stroke="#003C6E" stroke-width="3.5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path
-                                d="M52.0825 27.5H45.5775C41.115 27.5 37.5 30.8575 37.5 35C37.5 39.1425 41.1175 42.5 45.575 42.5H52.0825C52.2925 42.5 52.395 42.5 52.4825 42.495C53.8325 42.4125 54.9075 41.415 54.995 40.1625C55 40.0825 55 39.985 55 39.7925V30.2075C55 30.015 55 29.9175 54.995 29.8375C54.905 28.585 53.8325 27.5875 52.4825 27.505C52.395 27.5 52.2925 27.5 52.0825 27.5Z"
-                                stroke="#003C6E" stroke-width="3.5" />
-                            <path
-                                d="M52.4125 27.5C52.2175 22.82 51.5925 19.95 49.57 17.93C46.6425 15 41.9275 15 32.5 15H25C15.5725 15 10.8575 15 7.93 17.93C5 20.8575 5 25.5725 5 35C5 44.4275 5 49.1425 7.93 52.07C10.8575 55 15.5725 55 25 55H32.5C41.9275 55 46.6425 55 49.57 52.07C51.5925 50.05 52.22 47.18 52.4125 42.5"
-                                stroke="#003C6E" stroke-width="3.5" />
-                            <path
-                                d="M15 15L24.3375 8.80747C25.6507 7.95332 27.1835 7.49866 28.75 7.49866C30.3165 7.49866 31.8493 7.95332 33.1625 8.80747L42.5 15"
-                                stroke="#003C6E" stroke-width="3.5" stroke-linecap="round" />
-                            <path d="M44.9766 35H45.0016" stroke="#003C6E" stroke-width="4" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                        <h3 class="we__subtitle">Конкурентные цены</h3>
-                        <p class="we__text text">Повышение эффективности технологических процессов, оптимизация
-                            логистики, надежные связи с поставщиками материалов и оборудования позволяют нам формировать
-                            весьма привлекательные цены на весь спектр услуг</p>
-                    </li>
-                    <li class="we__item">
-                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M30.574 12.8575C30.5251 12.7511 30.4466 12.6609 30.348 12.5977C30.2493 12.5345 30.1347 12.5009 30.0175 12.5009C29.9003 12.5009 29.7856 12.5345 29.687 12.5977C29.5884 12.6609 29.5099 12.7511 29.461 12.8575L26.955 18.293C26.911 18.3877 26.8435 18.4695 26.759 18.5308C26.6744 18.592 26.5757 18.6307 26.472 18.643L20.5255 19.35C20.4095 19.3641 20.3 19.411 20.2099 19.4852C20.1197 19.5594 20.0526 19.6579 20.0166 19.769C19.9805 19.8801 19.977 19.9992 20.0064 20.1122C20.0358 20.2253 20.0969 20.3276 20.1825 20.407L24.5785 24.4705C24.6558 24.5417 24.7134 24.6316 24.7459 24.7315C24.7784 24.8314 24.7846 24.938 24.764 25.041L23.595 30.9105C23.5721 31.0253 23.5826 31.1442 23.6251 31.2532C23.6677 31.3623 23.7407 31.4568 23.8353 31.5256C23.9299 31.5945 24.0423 31.6348 24.1591 31.6418C24.276 31.6488 24.3923 31.6221 24.4945 31.565L29.72 28.6425C29.811 28.592 29.9134 28.5654 30.0175 28.5654C30.1216 28.5654 30.224 28.592 30.315 28.6425L35.5405 31.565C35.9955 31.8205 36.5415 31.425 36.44 30.9105L35.2745 25.041C35.2539 24.938 35.2601 24.8314 35.2926 24.7315C35.3251 24.6316 35.3827 24.5417 35.46 24.4705L39.8525 20.407C39.9381 20.3276 39.9992 20.2253 40.0286 20.1122C40.058 19.9992 40.0545 19.8801 40.0184 19.769C39.9824 19.6579 39.9153 19.5594 39.8251 19.4852C39.735 19.411 39.6254 19.3641 39.5095 19.35L33.5665 18.643C33.4622 18.6312 33.3627 18.5929 33.2775 18.5316C33.1923 18.4703 33.1243 18.3881 33.08 18.293L30.574 12.8575ZM51 23.0005C51.0032 25.9556 50.3812 28.8779 49.1748 31.5755C47.9683 34.2731 46.2048 36.6849 44 38.6525V56.2506C43.9999 56.557 43.9193 56.8581 43.7663 57.1236C43.6133 57.3892 43.3933 57.6099 43.1282 57.7637C42.8632 57.9175 42.5624 57.999 42.2559 58C41.9494 58.001 41.6481 57.9216 41.382 57.7696L30 51.2666L18.618 57.7696C18.3519 57.9216 18.0505 58.001 17.7441 58C17.4376 57.999 17.1368 57.9175 16.8718 57.7637C16.6067 57.6099 16.3866 57.3892 16.2337 57.1236C16.0807 56.8581 16.0001 56.557 16 56.2506V38.6525C13.3891 36.3172 11.4038 33.3659 10.2249 30.0672C9.04604 26.7686 8.71106 23.2275 9.25047 19.7663C9.78988 16.3051 11.1865 13.0339 13.3133 10.2504C15.44 7.46691 18.2292 5.25966 21.427 3.82962C24.6248 2.39958 28.1295 1.79218 31.6219 2.06273C35.1144 2.33329 38.4838 3.4732 41.4231 5.37866C44.3625 7.28413 46.7785 9.89462 48.4512 12.9724C50.1239 16.0502 51.0001 19.4976 51 23.0005ZM30 44.0005C26.3134 44.0059 22.691 43.0363 19.5 41.19V53.2371L29.132 47.7315C29.3964 47.5805 29.6955 47.5011 30 47.5011C30.3044 47.5011 30.6036 47.5805 30.868 47.7315L40.5 53.2406V41.1935C37.3087 43.0387 33.6863 44.0071 30 44.0005ZM30 40.5005C34.6413 40.5005 39.0925 38.6568 42.3744 35.3749C45.6562 32.093 47.5 27.6418 47.5 23.0005C47.5 18.3592 45.6562 13.908 42.3744 10.6261C39.0925 7.34423 34.6413 5.50049 30 5.50049C25.3587 5.50049 20.9075 7.34423 17.6256 10.6261C14.3437 13.908 12.5 18.3592 12.5 23.0005C12.5 27.6418 14.3437 32.093 17.6256 35.3749C20.9075 38.6568 25.3587 40.5005 30 40.5005Z"
-                                fill="#003C6E" />
-                        </svg>
-
-                        <h3 class="we__subtitle">Высокое качество</h3>
-                        <p class="we__text text">Высокая квалификация персонала, использование современных материалов и
-                            отлаженных технологических процессов, большой опыт работы в области строительства - залог
-                            высокого качества реализации проектов</p>
-                    </li>
-                    <li class="we__item">
-                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M4.98477 34.345C5.6771 34.345 6.16173 34.0681 6.43866 33.5142C6.71559 32.9604 6.71559 32.4065 6.43866 31.8526C6.16173 31.2988 5.6771 31.0218 4.98477 31.0218C4.29244 31.0218 3.80781 31.2988 3.53088 31.8526C3.25395 32.4065 3.25395 32.9604 3.53088 33.5142C3.80781 34.0681 4.29244 34.345 4.98477 34.345ZM43.2273 32.8392C43.0542 32.6142 42.721 32.1815 42.2277 31.5411C41.7345 30.9007 41.3753 30.4334 41.1503 30.1391C40.9253 29.8449 40.5964 29.4208 40.1637 28.867C39.731 28.3131 39.3632 27.8544 39.0603 27.491C38.7574 27.1275 38.4069 26.7207 38.0089 26.2707C37.6108 25.8207 37.2213 25.3967 36.8406 24.9986L33.5953 28.6333C32.1587 30.2603 30.3543 31.0565 28.1821 31.0218C26.0099 30.9872 24.2315 30.1391 22.8469 28.4775C21.8603 27.2833 21.3713 25.9159 21.38 24.3755C21.3886 22.835 21.8949 21.4764 22.8988 20.2994L27.4941 14.9512C27.1133 14.7608 26.672 14.618 26.17 14.5228C25.6681 14.4276 25.257 14.3757 24.9368 14.367C24.6166 14.3583 24.1277 14.3627 23.47 14.38C22.8122 14.3973 22.3882 14.4059 22.1978 14.4059C20.6054 14.4059 19.2381 14.9771 18.0957 16.1195L13.9937 20.2215H9.96954V34.345C10.0561 34.345 10.2378 34.3407 10.5147 34.332C10.7917 34.3234 10.9821 34.3234 11.0859 34.332C11.1898 34.3407 11.3585 34.358 11.5922 34.384C11.8258 34.4099 12.0033 34.4489 12.1244 34.5008C12.2456 34.5527 12.397 34.6263 12.5788 34.7215C12.7605 34.8167 12.9206 34.9335 13.0591 35.072L20.7699 42.653C22.7603 44.5742 24.7248 45.5348 26.6633 45.5348C28.0134 45.5348 29.0951 45.128 29.9086 44.3146C30.8952 44.6607 31.8688 44.5915 32.8294 44.1069C33.79 43.6222 34.4174 42.8866 34.7116 41.9001C35.9925 42.0039 37.0915 41.6231 38.0089 40.7577C38.355 40.4462 38.6666 40.0524 38.9435 39.5764C39.2204 39.1005 39.3416 38.6634 39.307 38.2653C39.4801 38.4384 39.8522 38.525 40.4234 38.525C41.1676 38.525 41.834 38.3432 42.4225 37.9797C43.0109 37.6163 43.4393 37.1576 43.7076 36.6037C43.9759 36.0499 44.0797 35.4311 44.0191 34.7474C43.9586 34.0638 43.6946 33.4277 43.2273 32.8392ZM47.3553 34.345H49.8477V21.0523H47.4332L43.3571 16.3791C42.2148 15.0637 40.7522 14.4059 38.9695 14.4059H34.6338C33.0933 14.4059 31.8298 14.9858 30.8433 16.1454L25.4171 22.4543C24.9325 23.0254 24.6902 23.6745 24.6902 24.4014C24.6902 25.1284 24.9238 25.7774 25.3912 26.3486C26.1354 27.2313 27.0874 27.6814 28.247 27.6987C29.4067 27.716 30.3673 27.2919 31.1288 26.4265L36.1396 20.7667C36.5723 20.3686 37.0353 20.1826 37.5286 20.2085C38.0218 20.2345 38.4286 20.4681 38.7488 20.9095C39.069 21.3509 39.1425 21.8398 38.9695 22.3764C39.2464 22.7052 39.731 23.2504 40.4234 24.012C41.1157 24.7736 41.6349 25.362 41.9811 25.7774C42.483 26.4005 43.197 27.3136 44.123 28.5165C45.049 29.7194 45.6072 30.4507 45.7976 30.7103C46.6976 31.8526 47.2168 33.0642 47.3553 34.345ZM54.8325 34.345C55.5248 34.345 56.0094 34.0681 56.2863 33.5142C56.5633 32.9604 56.5633 32.4065 56.2863 31.8526C56.0094 31.2988 55.5248 31.0218 54.8325 31.0218C54.1401 31.0218 53.6555 31.2988 53.3786 31.8526C53.1016 32.4065 53.1016 32.9604 53.3786 33.5142C53.6555 34.0681 54.1401 34.345 54.8325 34.345ZM59.8172 19.3907V36.0066C59.8172 36.4566 59.6528 36.8461 59.3239 37.1749C58.9951 37.5038 58.6056 37.6682 58.1556 37.6682H46.888C46.4207 38.7932 45.711 39.7149 44.7591 40.4332C43.8071 41.1515 42.7253 41.5972 41.5138 41.7702C40.9426 42.601 40.2459 43.3064 39.4238 43.8862C38.6017 44.466 37.7146 44.8598 36.7627 45.0675C36.0357 45.9848 35.1314 46.6901 34.0496 47.1834C32.9678 47.6767 31.8558 47.8887 30.7134 47.8195C29.6749 48.408 28.5845 48.7498 27.4422 48.845C26.2998 48.9402 25.1964 48.819 24.132 48.4815C23.0675 48.144 22.055 47.681 21.0944 47.0925C20.1338 46.504 19.2381 45.8031 18.4073 44.9896L10.9561 37.6682H1.66159C1.21158 37.6682 0.822141 37.5038 0.493284 37.1749C0.164428 36.8461 0 36.4566 0 36.0066V18.5599C0 18.1099 0.164428 17.7205 0.493284 17.3916C0.822141 17.0628 1.21158 16.8983 1.66159 16.8983H12.5917C12.834 16.656 13.2408 16.2406 13.812 15.6521C14.3831 15.0637 14.7942 14.6483 15.0452 14.4059C15.2961 14.1636 15.6769 13.8175 16.1875 13.3674C16.6981 12.9174 17.1351 12.5929 17.4986 12.3939C17.8621 12.1948 18.3034 11.9741 18.8227 11.7318C19.3419 11.4895 19.8785 11.3208 20.4324 11.2256C20.9862 11.1304 21.5747 11.0828 22.1978 11.0828H25.2354C26.9489 11.0828 28.5153 11.5674 29.9346 12.5367C31.3538 11.5674 32.9202 11.0828 34.6338 11.0828H38.9695C39.5753 11.0828 40.1551 11.1347 40.7089 11.2385C41.2628 11.3424 41.7518 11.4679 42.1758 11.615C42.5999 11.7621 43.0456 11.9914 43.5129 12.303C43.9802 12.6145 44.3653 12.8828 44.6682 13.1078C44.9711 13.3328 45.3432 13.6747 45.7846 14.1333C46.2259 14.592 46.5634 14.9555 46.7971 15.2238C47.0308 15.492 47.3856 15.9074 47.8616 16.4699C48.3375 17.0325 48.6967 17.4522 48.939 17.7291H58.1556C58.6056 17.7291 58.9951 17.8936 59.3239 18.2224C59.6528 18.5513 59.8172 18.9407 59.8172 19.3907Z"
-                                fill="#003C6E" />
-                        </svg>
-
-                        <h3 class="we__subtitle">Индивидуальный подход </h3>
-                        <p class="we__text text">Основой нашего успеха является исключительная ориентация на потребности
-                            заказчика. Разработка проектной документации, подбор строительных и отделочных материалов -
-                            все ориентировано на удовлетворение пожеланий клиента</p>
-                    </li>
-                </ul>
-            </section>
-            <section class="partners mb-30 card">
-                <h1 class="partners__title title">Наши партнеры </h1>
-                <div class="partners__overflow">
-                    <div class="partners__logos">
-                        <img loading="lazy" src="./img/partners-1.webp" alt="">
-                        <img loading="lazy" src="./img/partners-2.webp" alt="">
-                        <img loading="lazy" src="./img/partners-3.webp" alt="">
-                        <img loading="lazy" src="./img/partners-4.webp" alt="">
-                        <img loading="lazy" src="./img/partners-5.webp" alt="">
-                        <img loading="lazy" src="./img/partners-6.webp" alt="">
-                        <img loading="lazy" src="./img/partners-7.webp" alt="">
-                    </div>
-                </div>
-            </section>
-            <section class="realized mb-30 card">
-                <div class="realized__flexbox flexbox">
-                    <h2 class="realized__title title">Реализованные проекты </h2>
-                    <div class="realized__block">
-                        <button class="realized__btn btn" aria-label="Смотреть Все объекты">Все объекты</button>
-                        <div class="realized__swiper-btns swiper-btns">
-                            <button
-                                class="realized__swiper-btn swiper-btn swiper-btn-prev realized__swiper-btn-prev" aria-label="Предыдущий слайд"><svg
-                                    width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                            <button class="realized__swiper-btn swiper-btn realized__swiper-btn-next" aria-label="Следующий слайд"><svg width="20"
-                                    height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="realized__swiper swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"> <img loading="lazy" class="realized__img" src="./img/img.webp"
-                                alt=""></div>
-                        <div class="swiper-slide"> <img loading="lazy" class="realized__img" src="./img/img.webp"
-                                alt=""></div>
-                        <div class="swiper-slide"> <img loading="lazy" class="realized__img" src="./img/img.webp"
-                                alt=""></div>
-                    </div>
-                </div>
-                <h3 class="realized__subtitle">АНО "Развитие Городских Технологий"</h3>
-                <p class="realized__text text">Капитальный ремонт здания ГБУЗ "Городская поликлиника № 46 Департамента
-                    здравоохранения города Москвы". Головное здание, расположенное по адресу: г. Москва, ЦАО, Таганский
-                    район, ул. рабочая, д.34, строение 1.</p>
-                <div class="realized__tags">
-                    <div class="realized__tag">Площадь застройки: <span>3305,5 м2</span></div>
-                    <div class="realized__tag">Этажность: <span>4</span></div>
-                </div>
-            </section>
-            <section class="licenses card mb-30">
-                <div class="licenses__flexbox flexbox">
-                    <h2 class="licenses__title title">Лицензии</h2>
-                    <div class="licenses__swiper-btns swiper-btns">
-                        <button class="licenses__swiper-btn swiper-btn swiper-btn-prev licenses__swiper-btn-prev" aria-label="Предыдущий слайд"><svg
-                                width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <button class="licenses__swiper-btn swiper-btn licenses__swiper-btn-next" aria-label="Следующий слайд"><svg width="20"
-                                height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="licenses-swiper swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./img/liscence-1.webp" alt="">
-                            <p class="licenses__text text">Лицензия на осуществение работ, связанных с использованием
-                                сведений, составляющей государственную тайну</p>
-                        </div>
-                        <div class="swiper-slide"><img src="./img/liscence-2.webp" alt="">
-                            <p class="licenses__text text">Лицензия на осуществление деятельности по монтажу,
-                                техническому обслуживанию и ремонту средств обеспечения пожарной безопасности зданий и
-                                сооруженийЛицензия на осуществление деятельности по монтажу, техническому обслуживанию и
-                                ремонту средств обеспечения пожарной безопасности зданий и сооружений, стр. 2</p>
-                        </div>
-                        <div class="swiper-slide"><img src="./img/liscence-3.webp" alt="">
-                            <p class="licenses__text text">Лицензия на осуществление деятельности по монтажу,
-                                техническому обслуживанию и ремонту средств обеспечения пожарной безопасности зданий и
-                                сооружений, стр. 2</p>
-                        </div>
-                        <div class="swiper-slide"><img src="./img/liscence-1.webp" alt="">
-                            <p class="licenses__text text">Лицензия на осуществение работ, связанных с использованием
-                                сведений, составляющей государственную тайну</p>
-                        </div>
-                        <div class="swiper-slide"><img src="./img/liscence-2.webp" alt="">
-                            <p class="licenses__text text">Лицензия на осуществление деятельности по монтажу,
-                                техническому обслуживанию и ремонту средств обеспечения пожарной безопасности зданий и
-                                сооруженийЛицензия на осуществление деятельности по монтажу, техническому обслуживанию и
-                                ремонту средств обеспечения пожарной безопасности зданий и сооружений, стр. 2</p>
-                        </div>
-                        <div class="swiper-slide"><img src="./img/liscence-3.webp" alt="">
-                            <p class="licenses__text text">Лицензия на осуществление деятельности по монтажу,
-                                техническому обслуживанию и ремонту средств обеспечения пожарной безопасности зданий и
-                                сооружений, стр. 2</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="news card">
-                <div class="news__flexbox flexbox">
-                    <h2 class="news__title title">Новости компании</h2>
-                    <div class="news__swiper-btns swiper-btns">
-                        <button class="news__swiper-btn swiper-btn swiper-btn-prev news__swiper-btn-prev" aria-label="Предыдущий слайд"><svg
-                                width="20" height="18" viewBox="0 0 20 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                        <button class="news__swiper-btn swiper-btn news__swiper-btn-next" aria-label="Следующий слайд"><svg width="20" height="18"
-                                viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div class="news-swiper swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./img/news-1.webp" alt="">
-                            <span class="news__date">11 октября 2023</span>
-                            <h3 class="news__subtitle">«Волны Готики» украсят парки и бульвары Москвы</h3>
-                            <p class="news__text text">В научно-производственной лаборатории фабрики «Готика» были
-                                разработаны новые плиты горизонтального мощения «Волны Готики» с художественными линиями
-                                на поверхности. </p>
-                        </div>
-                        <div class="swiper-slide"><img src="./img/news-2.webp" alt="">
-                            <span class="news__date">11 октября 2023</span>
-                            <h3 class="news__subtitle">Концерн «КРОСТ» выполнил работы по строительству Дома-картины MALEVICH на 80%</h3>
-                            <p class="news__text text">Концерн «КРОСТ» завершает строительство самого художественного объекта Дома-картины MALEVICH. </p>
-                        </div>
-                        <div class="swiper-slide"><img src="./img/news-3.webp" alt="">
-                            <span class="news__date">11 октября 2023</span>
-                            <h3 class="news__subtitle">Концерн «КРОСТ» получил премию PromMOSCOW Awards Правительства Москвы</h3>
-                                <p class="news__text text">Концерн «КРОСТ» признан лидером в категории «Крупнейший построенный промышленный объект» за высокоскоростное строительство индустриального парка «Руднево»</p>
-                        </div>
-                        <div class="swiper-slide"><img src="./img/news-1.webp" alt="">
-                            <span class="news__date">11 октября 2023</span>
-                            <h3 class="news__subtitle">«Волны Готики» украсят парки и бульвары Москвы</h3>
-                            <p class="news__text text">В научно-производственной лаборатории фабрики «Готика» были
-                                разработаны новые плиты горизонтального мощения «Волны Готики» с художественными линиями
-                                на поверхности. </p>
-                        </div>
-                        <div class="swiper-slide"><img src="./img/news-2.webp" alt="">
-                            <span class="news__date">11 октября 2023</span>
-                            <h3 class="news__subtitle">Концерн «КРОСТ» выполнил работы по строительству Дома-картины MALEVICH на 80%</h3>
-                            <p class="news__text text">Концерн «КРОСТ» завершает строительство самого художественного объекта Дома-картины MALEVICH. </p>
-                        </div>
-                        <div class="swiper-slide"><img src="./img/news-3.webp" alt="">
-                            <span class="news__date">11 октября 2023</span>
-                            <h3 class="news__subtitle">Концерн «КРОСТ» получил премию PromMOSCOW Awards Правительства Москвы</h3>
-                                <p class="news__text text">Концерн «КРОСТ» признан лидером в категории «Крупнейший построенный промышленный объект» за высокоскоростное строительство индустриального парка «Руднево»</p>
+                                        </span>
+                                    </button>
+                                </div>
                             </div>
-
-                    
+                        </div>
+                        <div class="row__col row__col--4 intro-section__col-list">
+                            <ul class="intro-section__list">
+                                <li class="intro-card intro-section__list-item">
+                                    <div class="intro-card__inner">
+                                        <h3 class="intro-card__title"><span class="intro-card__title-count" data-value="19">0</span></h3>
+                                        <div class="content intro-card__text">
+                                            <p>лет опыта на строительном&nbsp;рынке</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="intro-card intro-section__list-item">
+                                    <div class="intro-card__inner">
+                                        <h3 class="intro-card__title"><span class="intro-card__title-count" data-value="30">0</span></h3>
+                                        <div class="content intro-card__text">
+                                            <p>крупномасштабных<br>проекта</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="intro-card intro-section__list-item">
+                                    <div class="intro-card__inner">
+                                        <h3 class="intro-card__title"><span class="intro-card__title-count" data-value="240">0</span></h3>
+                                        <div class="content intro-card__text">
+                                            <p>Высококвалифицированных<br>сотрудника</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="intro-card intro-section__list-item">
+                                    <div class="intro-card__inner">
+                                        <h3 class="intro-card__title"><span class="intro-card__title-count" data-value="50">0</span>+</h3>
+                                        <div class="content intro-card__text">
+                                            <p>Единиц техники и средств&nbsp;механизации</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
-            <svg class="company-name" width="1260" height="180" viewBox="0 0 1260 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M56.2015 2.45231C78.8793 2.45231 95.3946 7.35695 105.748 17.1662C116.265 26.812 121.523 40.1362 121.523 57.139C121.523 64.8229 120.373 72.1798 118.072 79.2098C115.772 86.0763 111.91 92.2888 106.487 97.8474C101.228 103.243 94.2443 107.493 85.5347 110.599C76.8251 113.706 66.0614 115.259 53.2435 115.259H37.2212V177.548H0V2.45231H56.2015ZM54.2295 32.861H37.2212V84.8501H49.546C56.6123 84.8501 62.6926 83.951 67.7869 82.1526C72.8812 80.3542 76.8251 77.4932 79.6188 73.5695C82.4124 69.6458 83.8092 64.5777 83.8092 58.3651C83.8092 49.7003 81.4264 43.3243 76.6608 39.2371C71.8952 34.9864 64.4181 32.861 54.2295 32.861Z" fill="white"/>
-                <path d="M298.245 177.548H255.847L192.004 88.7738V177.548H154.783V2.45231H192.004V87.3025L255.108 2.45231H294.794L230.705 86.5668L298.245 177.548Z" fill="white"/>
-                <path d="M390.273 30.8992C383.207 30.8992 376.88 32.2888 371.293 35.0681C365.87 37.8474 361.269 41.8529 357.489 47.0845C353.709 52.1526 350.834 58.3651 348.862 65.7221C347.054 73.079 346.15 81.3352 346.15 90.4905C346.15 102.916 347.629 113.542 350.587 122.371C353.709 131.035 358.557 137.657 365.131 142.234C371.704 146.812 380.085 149.101 390.273 149.101C397.504 149.101 404.652 148.283 411.719 146.649C418.949 145.014 426.755 142.725 435.136 139.782V170.926C427.412 174.033 419.771 176.322 412.212 177.793C404.652 179.264 396.189 180 386.822 180C368.746 180 353.792 176.322 341.96 168.965C330.292 161.444 321.665 150.981 316.077 137.575C310.49 124.005 307.697 108.229 307.697 90.2452C307.697 77.0027 309.504 64.9046 313.119 53.951C316.735 42.8338 321.993 33.2698 328.895 25.2589C335.962 17.248 344.589 11.0354 354.778 6.62126C365.131 2.20709 376.962 0 390.273 0C398.983 0 407.692 1.14441 416.402 3.43324C425.276 5.55858 433.739 8.50136 441.791 12.2616L429.713 42.4251C423.14 39.3188 416.484 36.6213 409.747 34.3324C403.173 32.0436 396.682 30.8992 390.273 30.8992Z" fill="white"/>
-                <path d="M573.845 177.548H472.534V2.45231H573.845V32.861H509.755V71.3624H569.408V101.771H509.755V146.894H573.845V177.548Z" fill="white"/>
-                <path d="M666.668 2.45231C689.346 2.45231 705.862 7.35695 716.215 17.1662C726.732 26.812 731.99 40.1362 731.99 57.139C731.99 64.8229 730.84 72.1798 728.539 79.2098C726.239 86.0763 722.377 92.2888 716.954 97.8474C711.695 103.243 704.711 107.493 696.002 110.599C687.292 113.706 676.528 115.259 663.71 115.259H647.688V177.548H610.467V2.45231H666.668ZM664.696 32.861H647.688V84.8501H660.013C667.079 84.8501 673.16 83.951 678.254 82.1526C683.348 80.3542 687.292 77.4932 690.086 73.5695C692.879 69.6458 694.276 64.5777 694.276 58.3651C694.276 49.7003 691.893 43.3243 687.128 39.2371C682.362 34.9864 674.885 32.861 664.696 32.861Z" fill="white"/>
-                <path d="M819.973 2.45231C835.584 2.45231 848.649 3.9237 859.166 6.86648C869.847 9.64578 877.817 14.3052 883.076 20.8447C888.499 27.2207 891.211 35.8856 891.211 46.8392C891.211 53.3787 890.142 59.3461 888.006 64.7411C885.87 70.1362 882.747 74.5504 878.639 77.9837C874.695 81.4169 869.847 83.624 864.096 84.6049V85.8311C870.012 86.9755 875.352 89.0191 880.118 91.9619C884.884 94.9046 888.663 99.1553 891.457 104.714C894.251 110.272 895.648 117.629 895.648 126.785C895.648 137.411 893.018 146.567 887.76 154.251C882.665 161.771 875.27 167.575 865.575 171.662C855.879 175.586 844.376 177.548 831.065 177.548H765.25V2.45231H819.973ZM824.163 71.8529C835.009 71.8529 842.486 70.1362 846.594 66.703C850.867 63.2698 853.003 58.2834 853.003 51.7439C853.003 45.0409 850.538 40.218 845.608 37.2752C840.678 34.3324 832.873 32.861 822.191 32.861H802.471V71.8529H824.163ZM802.471 101.281V146.894H826.875C838.049 146.894 845.855 144.768 850.292 140.518C854.729 136.104 856.947 130.3 856.947 123.106C856.947 118.692 855.961 114.85 853.989 111.58C852.182 108.311 848.977 105.777 844.376 103.978C839.775 102.18 833.53 101.281 825.642 101.281H802.471Z" fill="white"/>
-                <path d="M930.866 2.45231H964.39V87.0572C964.39 91.1444 964.307 95.7221 964.143 100.79C963.979 105.858 963.814 110.845 963.65 115.749C963.486 120.49 963.321 124.659 963.157 128.256C962.993 131.689 962.828 134.06 962.664 135.368H963.404L1044.75 2.45231H1089.36V177.548H1056.09V93.4333C1056.09 89.0191 1056.17 84.1962 1056.33 78.9646C1056.5 73.5695 1056.66 68.4196 1056.83 63.515C1057.15 58.6104 1057.4 54.3597 1057.57 50.7629C1057.89 47.0027 1058.14 44.5504 1058.31 43.406H1057.32L975.728 177.548H930.866V2.45231Z" fill="white"/>
-                <path d="M1208.48 30.8992C1201.42 30.8992 1195.09 32.2888 1189.5 35.0681C1184.08 37.8474 1179.48 41.8529 1175.7 47.0845C1171.92 52.1526 1169.04 58.3651 1167.07 65.7221C1165.26 73.079 1164.36 81.3352 1164.36 90.4905C1164.36 102.916 1165.84 113.542 1168.8 122.371C1171.92 131.035 1176.77 137.657 1183.34 142.234C1189.91 146.812 1198.29 149.101 1208.48 149.101C1215.71 149.101 1222.86 148.283 1229.93 146.649C1237.16 145.014 1244.96 142.725 1253.34 139.782V170.926C1245.62 174.033 1237.98 176.322 1230.42 177.793C1222.86 179.264 1214.4 180 1205.03 180C1186.95 180 1172 176.322 1160.17 168.965C1148.5 161.444 1139.87 150.981 1134.29 137.575C1128.7 124.005 1125.91 108.229 1125.91 90.2452C1125.91 77.0027 1127.71 64.9046 1131.33 53.951C1134.94 42.8338 1140.2 33.2698 1147.1 25.2589C1154.17 17.248 1162.8 11.0354 1172.99 6.62126C1183.34 2.20709 1195.17 0 1208.48 0C1217.19 0 1225.9 1.14441 1234.61 3.43324C1243.48 5.55858 1251.95 8.50136 1260 12.2616L1247.92 42.4251C1241.35 39.3188 1234.69 36.6213 1227.96 34.3324C1221.38 32.0436 1214.89 30.8992 1208.48 30.8992Z" fill="white"/>
-                </svg>
-                
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__flexbox">
-                <div class="footer__block">
-                    <a class="footer__logo" href="./index.html" aria-label="На главную">
-                        <img loading="lazy" src="./img/logo.webp" alt="">
-                    </a>
-                    <p class="footer__text footer__text_mb">2004-2023 ООО "РКСервис"</p>
-                    <p class="footer__text">Использование материалов сайта<br> без разрешения запрещено</p>
+            <!-- intro-section END -->
+            <!-- services-section BEGIN -->
+            <section class="u-box services-section">
+                <div class="u-box__inner">
+                    <div class="container services-section__container">
+                        <div class="head services-section__head">
+                            <h2 class="head__title">Наши услуги</h2>
+                            <a href="#" class="btn head__btn btn--theme_default btn--size-md">Смотреть все наши услуги</a>
+                        </div>
+                        <div class="row services-section__row">
+                            <div class="row__col services-section__col row__col--6">
+                                <article class="services-card services-section__card">
+                                    <div class="services-card__head">
+                                        <h5 class="services-card__head-title">01</h5>
+                                            <div class="round">
+                                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8.57506 2.00032L8.08203 7.63565M8.57506 2.00032L2.93973 1.5073M8.57506 2.00032L1.42531 7.99967" stroke="#F0F4F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    
+                                            </div>
 
+
+
+
+
+                                     
+                                    </div>
+                                    <h3 class="sevices-card__title">Строительные работы</h3>
+                                    <div class="content sevices-card__text">
+                                        <p>Работы по строительству, реконструкции, капитальному ремонту, сносу объектов капитального строительства</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="row__col services-section__col row__col--6">
+                                <article class="services-card services-section__card">
+                                    <div class="services-card__head">
+                                        <h5 class="services-card__head-title">02</h5>
+                                    
+                                            <div class="round">
+                                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8.57506 2.00032L8.08203 7.63565M8.57506 2.00032L2.93973 1.5073M8.57506 2.00032L1.42531 7.99967" stroke="#F0F4F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    
+                                            </div>
+
+
+
+
+
+                                    </div>
+                                    <h3 class="sevices-card__title">Проектирование</h3>
+                                    <div class="content sevices-card__text">
+                                        <p>Подготовка проектной документации объектов капитального строительства</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="row__col services-section__col row__col--6">
+                                <article class="services-card services-section__card">
+                                    <div class="services-card__head">
+                                        <h5 class="services-card__head-title">03</h5>
+                                    
+                                            <div class="round">
+                                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8.57506 2.00032L8.08203 7.63565M8.57506 2.00032L2.93973 1.5073M8.57506 2.00032L1.42531 7.99967" stroke="#F0F4F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    
+                                            </div>
+
+
+
+
+
+                                    </div>
+                                    <h3 class="sevices-card__title">Функции технического заказчика </h3>
+                                    <div class="content sevices-card__text">
+                                        <p>Полный комплекс проектных, монтажных работ, а также согласование и экспертиза</p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="row__col services-section__col row__col--6">
+                                <article class="services-card services-section__card">
+                                    <div class="services-card__head">
+                                        <h5 class="services-card__head-title">04</h5>
+                                    
+                                            <div class="round">
+                                                <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M8.57506 2.00032L8.08203 7.63565M8.57506 2.00032L2.93973 1.5073M8.57506 2.00032L1.42531 7.99967" stroke="#F0F4F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    
+                                            </div>
+
+
+
+
+                                    </div>
+                                    <h3 class="sevices-card__title">Авторский надзор</h3>
+                                    <div class="content sevices-card__text">
+                                        <p>Обеспечение соответствия выполняемых работ, тем решениям, которые заложены в выполненном проекте</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <nav class="footer__nav">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="./about.html" class="footer__link" aria-label="О нас">О нас</a></li>
-                        <li class="footer__item"><a href="./reviews.html" class="footer__link" aria-label="Отзывы">Отзывы</a></li>
-                        <li class="footer__item"><a href="./services.html" class="footer__link" aria-label="Услуги">Услуги</a></li>
-                        <li class="footer__item"><a href="./news.html" class="footer__link" aria-label="Новости">Новости</a></li>
-                        <li class="footer__item"><a href="./lis.html" class="footer__link" aria-label="Лицензии">Лицензии </a></li>
-                        <li class="footer__item"><a href="./vac.html" class="footer__link" aria-label="Вакансии">Вакансии</a></li>
-                        <li class="footer__item"><a href="./works.html" class="footer__link" aria-label="Наши работы">Наши работы</a></li>
-                        <li class="footer__item"><a href="./contatcs.html" class="footer__link" aria-label="Контакты">Контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="footer__block-2">
-                    <a href="tel:+74875321880" class="footer__link-2" aria-label="Позвонить +7 (48753) 2-18-80">+7 (48753) 2-18-80</a>
-                    <a href="tel:+74950980124" class="footer__link-2 footer__link-2_mb" aria-label="Позвонить +7 (495) 098-01-24">+7 (495) 098-01-24</a>
-                    <span class="footer__text-2">РФ, 109004, г. Москва,<br> Тетеринский переулок, д18, стр. 2</span>
+            </section>
+            <!-- services-section END -->
+            <!-- about-section BEGIN -->
+            <section class="u-box about-section">
+                <div class="u-box__inner">
+                    <div class="container about-section__container">
+                        <div class="row about-section__row">
+                            <div class="row__col about-section__col-media row__col--5">
+                                <div class="about-section__media">
+                                    <picture class="img-cover about-section__picture">
+                                        <img src="images/banner-2.jpg" alt="О компании" class="about-section__img">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="row__col about-section__col-content row__col--6">
+                                <article class="about-article about-section__article">
+                                    <h2 class="about-article__title">О компании</h2>
+                                    <div class="content about-article__text">
+                                        <p>ООО «&nbsp;КСервис» является строительной организацией, осуществляющей полный комплекс строительных работ, от нулевого цикла до сдачи объекта «под ключ». Компания основана в 2004 году. За годы работы построено свыше 30 крупномасштабных объекта, спроектировано свыше 8 проектов</p>
+                                        <p>ООО «&nbsp;КСервис» вправе заключать договора по осуществлению организации работ по строительству, реконструкции, капитальному ремонту, сносу объектов капитального строительства, стоимость которых по одному договору не превышает 10 миллиардов рублей (четвертый уровень ответственности). Высокий профессиональный уровень управления строительством, опытный персонал и современная материально-техническая база обеспечили компании успех на региональном строительном рынке и за его пределами, а ее заказчикам – высокое качество строительных работ, с соблюдением установленных сроков и оптимизацией финансовых затрат. В 2011 году компания внедрила системы менеджмента качества по проектированию и строительству</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- about-section END -->
+            <!-- benefits-section BEGIN -->
+            <section class="u-box benefits-section">
+                <div class="u-box__inner">
+                    <div class="container benefits-section__container">
+                        <div class="head benefits-section__head">
+                            <h2 class="head__title">Почему стоит выбрать&nbsp;нас?</h2>
+                        </div>
+                        <div class="row benefits-section__row">
+                            <div class="row__col row__col--6 benefits-section__col">
+                                <div class="benefits-card benefits-section__card">
+                                    <div class="benefits-card__head">
+                                        <picture class="benefits-card__picture">
+                                            <img src="images/sands-of-time.svg" alt="Сжатые сроки" class="benefits-card__head-img">
+                                        </picture>
+                                    </div>
+                                    <h3 class="benefits-card__title">Сжатые сроки</h3>
+                                    <div class="content benefits-card__text">
+                                        <p>Мы способны реализовать проект любой сложности тосно в срок. Использование современного оборудования, и оптимизация логистических цепочек позволяют нам выполнять работы в максимально сжатые сроки</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row__col row__col--6 benefits-section__col">
+                                <div class="benefits-card benefits-section__card">
+                                    <div class="benefits-card__head">
+                                        <picture class="benefits-card__picture">
+                                            <img src="images/wallet.svg" alt="Конкурентные цены" class="benefits-card__head-img">
+                                        </picture>
+                                    </div>
+                                    <h3 class="benefits-card__title">Конкурентные цены</h3>
+                                    <div class="content benefits-card__text">
+                                        <p>Повышение эффективности технологических процессов, оптимизация логистики, надежные связи с поставщиками материалов и оборудования позволяют нам формировать весьма привлекательные цены на весь спектр услуг</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row__col row__col--6 benefits-section__col">
+                                <div class="benefits-card benefits-section__card">
+                                    <div class="benefits-card__head">
+                                        <picture class="benefits-card__picture">
+                                            <img src="images/star.svg" alt="Высокое качество" class="benefits-card__head-img">
+                                        </picture>
+                                    </div>
+                                    <h3 class="benefits-card__title">Высокое качество</h3>
+                                    <div class="content benefits-card__text">
+                                        <p>Высокая квалификация персонала, использование современных материалов и отлаженных технологических процессов, большой опыт работы в области строительства - залог высокого качества реализации проектов</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row__col row__col--6 benefits-section__col">
+                                <div class="benefits-card benefits-section__card">
+                                    <div class="benefits-card__head">
+                                        <picture class="benefits-card__picture">
+                                            <img src="images/handshake.svg" alt="Индивидуальный подход" class="benefits-card__head-img">
+                                        </picture>
+                                    </div>
+                                    <h3 class="benefits-card__title">Индивидуальный подход</h3>
+                                    <div class="content benefits-card__text">
+                                        <p>Основой нашего успеха является исключительная ориентация на потребности заказчика. &nbsp;азработка проектной документации, подбор строительных и отделочных материалов - все ориентировано на удовлетворение пожеланий клиента</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- benefits-section END -->
+            <!-- partners-section BEGIN -->
+            <section class="u-box partners-section">
+                <div class="u-box__inner">
+                    <div class="container partners-section__container">
+                        <div class="head partners__head">
+                            <h2 class="head__title">Наши партнеры</h2>
+                        </div>
+                        <div class="js-partners-slider-init partners-section__list">
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-1.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-2.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-3.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-4.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-5.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-6.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-1.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-2.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-3.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-4.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-5.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-6.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-1.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-2.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-3.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-4.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-5.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="partners-section__list-item">
+                                <picture class="partners-section__picture">
+                                    <img src="images/partners-logo-6.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- partners-section END -->
+            <!-- projects-section BEGIN -->
+            <section class="u-box projects-section">
+                <div class="u-box__inner">
+                    <div class="container projects-section__container">
+                        <div class="head projects-sectionf__head">
+                            <h2 class="head__title">&nbsp;еализованные проекты</h2>
+                            <a href="#" class="btn head__btn btn--theme_default btn--size-md">Все объекты</a>
+                            <div class="js-projects-slider-control slider-control head__slider-control">
+                                <button type="button" class="slider-btn slider-btn--size-md slider-btn--theme-accent-outline slider-btn--prev slider-control__btn">
+                                    <span class="slider-btn__inner">
+                                      <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.25 9L8.75 1.5M1.25 9L8.75 16.5M1.25 9L18.75 9" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                                    </span>
+                                </button>
+                                <button type="button" class="slider-btn slider-btn--size-md slider-btn--theme-accent-outline slider-btn--next slider-control__btn">
+                                    <span class="slider-btn__inner">
+                                       <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="js-projects-slider-init projects-section__slider">
+                            <div class="projects-slider-card projects-section__slider-slide">
+                                <div class="projects-slider-card__inner">
+                                    <div class="projects-slider-card__media">
+                                        <picture class="img-cover projects-slider-card__picture">
+                                            <img src="images/banner-3.jpg" alt="АНО &nbsp;азвитие Городских Технологий" class="projects-slider-card__img">
+                                        </picture>
+                                    </div>
+                                    <div class="projects-slider-card__content">
+                                        <h3 class="projects-slider-card__title">АНО "&nbsp;азвитие Городских Технологий"</h3>
+                                        <div class="content projects-slider-card__text">
+                                            <p>Капитальный ремонт здания ГБУЗ "Городская поликлиника № 46 Департамента здравоохранения города Москвы". Головное здание, расположенное по адресу: г. Москва, ЦАО, Таганский район, ул. рабочая, д.34, строение 1.</p>
+                                        </div>
+                                        <div class="projects-slider-card__wrap">
+                                            <div class="tick-info projects-slider-card__tick-info tick-info--theme_gray">
+                                                <div class="tick-info__text">Площадь застройки: <strong>3305,5 м2</strong></div>
+                                            </div>
+                                            <div class="tick-info projects-slider-card__tick-info tick-info--theme_gray">
+                                                <div class="tick-info__text">Этажность: <strong>4</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projects-slider-card projects-section__slider-slide">
+                                <div class="projects-slider-card__inner">
+                                    <div class="projects-slider-card__media">
+                                        <picture class="img-cover projects-slider-card__picture">
+                                            <img src="images/banner-3.jpg" alt="АНО &nbsp;азвитие Городских Технологий" class="projects-slider-card__img">
+                                        </picture>
+                                    </div>
+                                    <div class="projects-slider-card__content">
+                                        <h3 class="projects-slider-card__title">АНО "&nbsp;азвитие Городских Технологий"</h3>
+                                        <div class="content projects-slider-card__text">
+                                            <p>Капитальный ремонт здания ГБУЗ "Городская поликлиника № 46 Департамента здравоохранения города Москвы". Головное здание, расположенное по адресу: г. Москва, ЦАО, Таганский район, ул. рабочая, д.34, строение 1.</p>
+                                        </div>
+                                        <div class="projects-slider-card__wrap">
+                                            <div class="tick-info projects-slider-card__tick-info tick-info--theme_gray">
+                                                <div class="tick-info__text">Площадь застройки: <strong>3305,5 м2</strong></div>
+                                            </div>
+                                            <div class="tick-info projects-slider-card__tick-info tick-info--theme_gray">
+                                                <div class="tick-info__text">Этажность: <strong>4</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- projects-section END -->
+            <!-- license-section BEGIN -->
+            <section class="u-box license-section">
+                <div class="u-box__inner">
+                    <div class="container license-section__container">
+                        <div class="head license__head">
+                            <h2 class="head__title">Лицензии</h2>
+                            <div class="js-license-slider-control slider-control head__slider-control">
+                                <button type="button" class="slider-btn slider-btn--size-md slider-btn--theme-accent-outline slider-btn--prev slider-control__btn">
+                                    <span class="slider-btn__inner">
+                                      <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.25 9L8.75 1.5M1.25 9L8.75 16.5M1.25 9L18.75 9" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                                    </span>
+                                </button>
+                                <button type="button" class="slider-btn slider-btn--size-md slider-btn--theme-accent-outline slider-btn--next slider-control__btn">
+                                    <span class="slider-btn__inner">
+                                       <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="js-license-slider-init license-section__main-slider">
+                            <div class="license-slider-card license-section__main-slider-slide">
+                                <div class="license-slider-card__inner">
+                                    <a href="images/document-img-1.png" data-fancybox="" class="license-slider-card__media">
+                                        <picture class="img-cover license-slider-card__picture">
+                                            <img src="images/document-img-1.png" alt="Лицензия на осуществение работ, связанных с использованием сведений, составляющей государственную тайну" class="license-slider-card__img">
+                                        </picture>
+                                    </a>
+                                    <div class="content license-slider-card__text">
+                                        <p>Лицензия на осуществение работ, связанных с использованием сведений, составляющей государственную тайну</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="license-slider-card license-section__main-slider-slide">
+                                <div class="license-slider-card__inner">
+                                    <a href="images/document-img-2.png" data-fancybox="" class="license-slider-card__media">
+                                        <picture class="img-cover license-slider-card__picture">
+                                            <img src="images/document-img-2.png" alt="Лицензия на осуществение работ, связанных с использованием сведений, составляющей государственную тайну" class="license-slider-card__img">
+                                        </picture>
+                                    </a>
+                                    <div class="content license-slider-card__text">
+                                        <p>Лицензия на осуществление деятельности по монтажу, техническому обслуживанию и ремонту средств обеспечения пожарной безопасности зданий и сооружений</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="license-slider-card license-section__main-slider-slide">
+                                <div class="license-slider-card__inner">
+                                    <a href="images/document-img-3.png" data-fancybox="" class="license-slider-card__media">
+                                        <picture class="img-cover license-slider-card__picture">
+                                            <img src="images/document-img-3.png" alt="Лицензия на осуществение работ, связанных с использованием сведений, составляющей государственную тайну" class="license-slider-card__img">
+                                        </picture>
+                                    </a>
+                                    <div class="content license-slider-card__text">
+                                        <p>Лицензия на осуществление деятельности по монтажу, техническому обслуживанию и ремонту средств обеспечения пожарной безопасности зданий и сооружений, стр. 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="license-slider-card license-section__main-slider-slide">
+                                <div class="license-slider-card__inner">
+                                    <a href="images/document-img-3.png" data-fancybox="" class="license-slider-card__media">
+                                        <picture class="img-cover license-slider-card__picture">
+                                            <img src="images/document-img-3.png" alt="Лицензия на осуществение работ, связанных с использованием сведений, составляющей государственную тайну" class="license-slider-card__img">
+                                        </picture>
+                                    </a>
+                                    <div class="content license-slider-card__text">
+                                        <p>Лицензия на осуществление деятельности по монтажу, техническому обслуживанию и ремонту средств обеспечения пожарной безопасности зданий и сооружений, стр. 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- license-section END -->
+            <!-- news-section BEGIN -->
+            <section class="u-box news-section">
+                <div class="u-box__inner">
+                    <div class="container news-section__container">
+                        <div class="head news-section__head">
+                            <h2 class="head__title">Новости компании</h2>
+                            <div class="js-news-slider-control slider-control head__slider-control">
+                                <button type="button" class="slider-btn slider-btn--size-md slider-btn--theme-accent-outline slider-btn--prev slider-control__btn">
+                                    <span class="slider-btn__inner">
+                                      <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.25 9L8.75 1.5M1.25 9L8.75 16.5M1.25 9L18.75 9" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                                    </span>
+                                </button>
+                                <button type="button" class="slider-btn slider-btn--size-md slider-btn--theme-accent-outline slider-btn--next slider-control__btn">
+                                    <span class="slider-btn__inner">
+                                       <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.75 9L11.25 16.5M18.75 9L11.25 1.5M18.75 9H1.25" stroke="#003C6E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="js-news-slider-init news-section__main-slider">
+                            <div class="news-slider-card news-section__main-slider-slide">
+                                <div class="news-slider-card__inner">
+                                    <div class="news-slider-card__media">
+                                        <picture class="img-cover news-slider-card__picture">
+                                            <img src="images/card-img-1.png" alt="«Волны Готики» украсят парки и бульвары Москвы" class="news-slider-card__img">
+                                        </picture>
+                                    </div>
+                                    <div class="news-slider-card__content">
+                                        <time class="u-time news-slider-card__date" datetime="2023-10-11">11 октября 2023</time>
+                                        <h3 class="news-slider-card__title">
+                                            <a href="#">«Волны Готики» украсят парки и бульвары Москвы</a>
+                                        </h3>
+                                        <div class="content news-slider-card__text">
+                                            <p>В научно-производственной лаборатории фабрики «Готика» были разработаны новые плиты горизонтального мощения «Волны Готики» с художественными линиями на поверхности. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news-slider-card news-section__main-slider-slide">
+                                <div class="news-slider-card__inner">
+                                    <div class="news-slider-card__media">
+                                        <picture class="img-cover news-slider-card__picture">
+                                            <img src="images/card-img-2.png" alt="Концерн «К&nbsp;ОСТ» выполнил работы по строительству Дома-картины MALEVICH на 80%" class="news-slider-card__img">
+                                        </picture>
+                                    </div>
+                                    <div class="news-slider-card__content">
+                                        <time class="u-time news-slider-card__date" datetime="2023-10-11">11 октября 2023</time>
+                                        <h3 class="news-slider-card__title">
+                                            <a href="#">Концерн «К&nbsp;ОСТ» выполнил работы по строительству Дома-картины MALEVICH на 80%</a>
+                                        </h3>
+                                        <div class="content news-slider-card__text">
+                                            <p>Концерн «К&nbsp;ОСТ» завершает строительство самого художественного объекта Дома-картины MALEVICH.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news-slider-card news-section__main-slider-slide">
+                                <div class="news-slider-card__inner">
+                                    <div class="news-slider-card__media">
+                                        <picture class="img-cover news-slider-card__picture">
+                                            <img src="images/card-img-3.png" alt="Концерн «К&nbsp;ОСТ» получил премию PromMOSCOW Awards Правительства Москвы" class="news-slider-card__img">
+                                        </picture>
+                                    </div>
+                                    <div class="news-slider-card__content">
+                                        <time class="u-time news-slider-card__date" datetime="2023-10-11">11 октября 2023</time>
+                                        <h3 class="news-slider-card__title">
+                                            <a href="#">Концерн «К&nbsp;ОСТ» получил премию PromMOSCOW Awards Правительства Москвы</a>
+                                        </h3>
+                                        <div class="content news-slider-card__text">
+                                            <p>Концерн «К&nbsp;ОСТ» признан лидером в категории «Крупнейший построенный промышленный объект» за высокоскоростное строительство индустриального парка «&nbsp;уднево»</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="news-slider-card news-section__main-slider-slide">
+                                <div class="news-slider-card__inner">
+                                    <div class="news-slider-card__media">
+                                        <picture class="img-cover news-slider-card__picture">
+                                            <img src="images/card-img-3.png" alt="Концерн «К&nbsp;ОСТ» получил премию PromMOSCOW Awards Правительства Москвы" class="news-slider-card__img">
+                                        </picture>
+                                    </div>
+                                    <div class="news-slider-card__content">
+                                        <time class="u-time news-slider-card__date" datetime="2023-10-11">11 октября 2023</time>
+                                        <h3 class="news-slider-card__title">
+                                            <a href="#">Концерн «К&nbsp;ОСТ» получил премию PromMOSCOW Awards Правительства Москвы</a>
+                                        </h3>
+                                        <div class="content news-slider-card__text">
+                                            <p>Концерн «К&nbsp;ОСТ» признан лидером в категории «Крупнейший построенный промышленный объект» за высокоскоростное строительство индустриального парка «&nbsp;уднево»</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <picture class="news-section__figure-title">
+                            <img src="images/rkservis-title.svg" alt="&nbsp;Ксервис">
+                        </picture>
+                    </div>
+                </div>
+            </section>
+            <!-- news-section END -->
+        </main>
+        <!-- main END -->
+        <!-- footer BEGIN -->
+        <footer class="footer site__footer">
+            <div class="container footer__container">
+                <div class="row footer__row">
+                    <div class="row__col footer__col row__col--4">
+                        <a href="/" class="logo footer__logo">
+                            <picture class="logo__picture">
+                                <img src="images/logo.png" alt="&nbsp;КСЕ&nbsp;ВИС" class="logo__img">
+                            </picture>
+                        </a>
+                        <div class="content footer__text">
+                            <p>2004-2023 ООО "&nbsp;КСервис"</p>
+                            <p>Использование материалов сайта без&nbsp;разрешения запрещено</p>
+                        </div>
+                    </div>
+                    <div class="row__col footer__col row__col--4">
+                        <nav class="footer__nav" role="navigation">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item">
+                                    <a href="./about.html" class="footer__nav-link">О нас</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="./services.html" class="footer__nav-link">Услуги</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="./works.html" class="footer__nav-link">Наши работы</a>
+                                </li>
+                            </ul>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-item">
+                                    <a href="./clients.html" class="footer__nav-link">Клиентам</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="./news.html" class="footer__nav-link">Новости</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="./vac-full.html" class="footer__nav-link">Вакансии</a>
+                                </li>
+                                <li class="footer__nav-item">
+                                    <a href="./contatcs.html" class="footer__nav-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="row__col footer__col row__col--4">
+                        <div class="contact footer__contact">
+                            <div class="contact__el">
+                                <a href="tel:+74875321880" class="contact__tel">+7 (48753) 2-18-80</a>
+                                <a href="tel:+74950980124" class="contact__tel">+7 (495) 098-01-24</a>
+                            </div>
+                            <div class="contact__el">
+                                <p class="contact__address">&nbsp;Ф, 109004, г. Москва, Тетеринский переулок, д18, стр. 2</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/index.js"></script>
+        </footer>
+        <!-- footer END -->
 
-</body>
+    </div>
+    <!-- site END -->
 
-</html>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</body></html>

@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("burger").addEventListener("click", function() {
-        document.querySelector("header").classList.toggle("open")
-    })
+
 
     const swiper = new Swiper('.hero__swiper', {
         // Optional parameters
@@ -84,6 +82,9 @@ document.addEventListener("DOMContentLoaded", function() {
         loop: false,
         slidesPerView: 'auto',
         spaceBetween: 20,
+        autoplay: {
+          delay: 1000,
+        },
         
         // Navigation arrows
         navigation: {

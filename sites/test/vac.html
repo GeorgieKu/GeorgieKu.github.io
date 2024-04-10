@@ -6,81 +6,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="РК-сервис">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="//fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&amp;display=swap" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./css/media.css">
     <link rel="stylesheet" href="./style/media.css">
     <title>РК-сервис</title>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__flex">
-                <a href="./index.html" class="logo" aria-label="На главную">
-                    <img class="logo__img" src="./img/logo.webp" alt="Логотип">
-                </a>
-                <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
-                    <span></span><span></span><span></span>
-                </button>
-                <nav class="menu">
-
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link" href="./about.html" aria-label="О нас">
-                                О нас
-                            </a>
+    <header class="header site__header">
+        <div class="container header__container">
+            <a href="/" class="logo header__logo">
+                <picture class="logo__picture">
+                    <img src="images/logo.png" alt="Р&nbsp;КСЕ&nbsp;ВИС" class="logo__img">
+                </picture>
+            </a>
+            <div class="header__dropdown">
+                <nav class="nav header__nav" role="navigation">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="./about.html" class="nav__link">О нас</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./services.html" aria-label="Услуги">
-                                Услуги
-                            </a>
+                        <li class="nav__item">
+                            <a href="./services.html" class="nav__link">Услуги</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./lis.html" aria-label="Лицензии">
-                                Лицензии
-                            </a>
+                        <li class="nav__item">
+                            <a href="./works.html" class="nav__link">Наши работы</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./works.html" aria-label="Наши работы">
-                                Наши работы
-                            </a>
+                        <li class="nav__item">
+                            <a href="./clients.html" class="nav__link">Клиентам</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./reviews.html" aria-label="Отзывы">
-                                Отзывы
-                            </a>
+                        <li class="nav__item">
+                            <a href="./news.html" class="nav__link">Новости</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./news.html" aria-label="Новости">
-                                Новости
-                            </a>
+                        <li class="nav__item">
+                            <a href="./vac-full.html" class="nav__link">Вакансии</a>
                         </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./vac.html" aria-label="Вакансии">
-                                Вакансии
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="./contatcs.html" aria-label="Контакты">
-                                Контакты
-                            </a>
+                        <li class="nav__item">
+                            <a href="./contatcs.html" class="nav__link">Контакты</a>
                         </li>
                     </ul>
                 </nav>
-                <div class="header__block">
-                    <a class="header__tel-link" href="tel:+74875321880" aria-label="Позвонить +7 (48753) 2-18-80">
-                        +7 (48753) 2-18-80
-                        <span>Офис г.Алексин</span>
-                    </a>
-                    <a class="header__tel-link" href="tel:+74950980124" aria-label="Позвонить +7 (495) 098-01-24">
-                        +7 (495) 098-01-24
-                        <span>Офис г.Москва</span>
-                    </a>
+                <div class="contact header__contact">
+                    <a href="tel:+74875321880" class="contact__tel">+7 (48753) 2-18-80</a>
+                    <p class="contact__location">Офис г.Алексин</p>
+                    <a href="tel:+74950980124" class="contact__tel">+7 (495) 098-01-24</a>
+                    <p class="contact__location">Офис г.Москва</p>
                 </div>
             </div>
+            <button type="button" class="js-header-nav-toggle header__toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
     <main class="main">
@@ -130,47 +117,68 @@
 
         </div>
     </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__flexbox">
-                <div class="footer__block">
-                    <a class="footer__logo" href="./index.html" aria-label="На главную">
-                        <img loading="lazy" src="./img/logo.webp" alt="">
+    <footer class="footer site__footer">
+        <div class="container footer__container">
+            <div class="row footer__row">
+                <div class="row__col footer__col row__col--4">
+                    <a href="/" class="logo footer__logo">
+                        <picture class="logo__picture">
+                            <img src="images/logo.png" alt="&nbsp;КСЕ&nbsp;ВИС" class="logo__img">
+                        </picture>
                     </a>
-                    <p class="footer__text footer__text_mb">2004-2023 ООО "РКСервис"</p>
-                    <p class="footer__text">Использование материалов сайта<br> без разрешения запрещено</p>
-
+                    <div class="content footer__text">
+                        <p>2004-2023 ООО "&nbsp;КСервис"</p>
+                        <p>Использование материалов сайта без&nbsp;разрешения запрещено</p>
+                    </div>
                 </div>
-                <nav class="footer__nav">
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="./about.html" class="footer__link" aria-label="О нас">О
-                                нас</a></li>
-                        <li class="footer__item"><a href="./reviews.html" class="footer__link"
-                                aria-label="Отзывы">Отзывы</a></li>
-                        <li class="footer__item"><a href="./services.html" class="footer__link"
-                                aria-label="Услуги">Услуги</a></li>
-                        <li class="footer__item"><a href="./news.html" class="footer__link"
-                                aria-label="Новости">Новости</a></li>
-                        <li class="footer__item"><a href="./lis.html" class="footer__link"
-                                aria-label="Лицензии">Лицензии </a></li>
-                        <li class="footer__item"><a href="./vac.html" class="footer__link"
-                                aria-label="Вакансии">Вакансии</a></li>
-                        <li class="footer__item"><a href="./works.html" class="footer__link"
-                                aria-label="Наши работы">Наши работы</a></li>
-                        <li class="footer__item"><a href="./contatcs.html" class="footer__link"
-                                aria-label="Контакты">Контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="footer__block-2">
-                    <a href="tel:+74875321880" class="footer__link-2" aria-label="Позвонить +7 (48753) 2-18-80">+7
-                        (48753) 2-18-80</a>
-                    <a href="tel:+74950980124" class="footer__link-2 footer__link-2_mb"
-                        aria-label="Позвонить +7 (495) 098-01-24">+7 (495) 098-01-24</a>
-                    <span class="footer__text-2">РФ, 109004, г. Москва,<br> Тетеринский переулок, д18, стр. 2</span>
+                <div class="row__col footer__col row__col--4">
+                    <nav class="footer__nav" role="navigation">
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="./about.html" class="footer__nav-link">О нас</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./services.html" class="footer__nav-link">Услуги</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./works.html" class="footer__nav-link">Наши работы</a>
+                            </li>
+                        </ul>
+                        <ul class="footer__nav-list">
+                            <li class="footer__nav-item">
+                                <a href="./clients.html" class="footer__nav-link">Клиентам</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./news.html" class="footer__nav-link">Новости</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./vac-full.html" class="footer__nav-link">Вакансии</a>
+                            </li>
+                            <li class="footer__nav-item">
+                                <a href="./contatcs.html" class="footer__nav-link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="row__col footer__col row__col--4">
+                    <div class="contact footer__contact">
+                        <div class="contact__el">
+                            <a href="tel:+74875321880" class="contact__tel">+7 (48753) 2-18-80</a>
+                            <a href="tel:+74950980124" class="contact__tel">+7 (495) 098-01-24</a>
+                        </div>
+                        <div class="contact__el">
+                            <p class="contact__address">&nbsp;Ф, 109004, г. Москва, Тетеринский переулок, д18, стр. 2</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="./js/index.js"></script>
 
 </body>

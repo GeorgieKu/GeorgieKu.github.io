@@ -79,118 +79,7 @@ button {
     margin-left: auto;
 }
 
-.header {
-    background-color: #003C6E;
-    padding: 30px 0;
-    margin-bottom: 30px;
-}
 
-.header__flex {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    align-items: center;
-}
-
-.header__block {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.header__tel-link {
-    display: block;
-    color: #FFFFFF;
-    font-family: Noto Sans;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22.4px;
-    text-align: left;
-}
-
-.header__tel-link span {
-    display: block;
-    text-align: right;
-    font-size: 12px;
-    line-height: 16.8px;
-    text-align: left;
-    color: #A1A8B5;
-}
-
-.header__burger-btn {
-    display: none;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: transparent;
-    z-index: 1000;
-}
-
-.header__burger-btn span {
-    position: absolute;
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    left: 5px;
-    transition: transform .5s, opacity .5s, background-color .5s;
-}
-
-.header__burger-btn span:nth-child(1) {
-    transform: translateY(-10px);
-}
-
-.header__burger-btn span:nth-child(3) {
-    transform: translateY(10px);
-}
-
-.header.open .header__burger-btn span {
-    background-color: white;
-}
-
-.header.open .header__burger-btn span:nth-child(1) {
-    transform: translateY(0) rotate(45deg);
-}
-
-.header.open .header__burger-btn span:nth-child(2) {
-    opacity: 0;
-}
-
-.header.open .header__burger-btn span:nth-child(3) {
-    transform: translateY(0) rotate(-45deg);
-}
-
-.logo {
-    display: block;
-}
-
-.logo__img {
-    max-width: 180px;
-}
-
-.menu__list {
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu__item:not(:last-child) {
-    margin-right: 20px;
-}
-
-.menu__link {
-    font-size: 16px;
-    color: #ffffff;
-    line-height: 25.6px;
-    text-align: left;
-    transition: color .3s ease-in-out;
-}
-
-.menu__link:hover {
-    color: #121212;
-}
 
 
 .hero {
@@ -617,83 +506,14 @@ text-align: left;
     color: #121212;
 }
 
-.footer {
-    padding: 40px 0;
-    background-color: #003C6E;
-    position: relative;
 
-}
-.footer__flexbox {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
-}
-.footer__logo {
-    display: block;
-    margin-bottom: 30px;
-}
-.footer__text {
-    font-size: 16px;
-    line-height: 25.6px;
-    text-align: left;
-    color: #A1A8B5;
-}
-.footer__text_mb {
-    margin-bottom: 16px;
-}
-.footer__nav {
-    max-width: 340px;
-    width: 100%;
-}
-.footer__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-between;
-    row-gap: 20px;
-}
-.footer__link {
-    font-family: Noto Sans;
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22.4px;
-    text-align: left;
-    transition: color .3s ease-in-out;
-}
-
-.footer__link:hover {
-    color: #121212;
-}
-.footer__link-2 {
-    display: block;
-    font-family: Noto Sans;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22.4px;
-    text-align: right;
-    color: #FFFFFF;
-
-}
-.footer__link-2_mb {
-    margin-bottom: 20px;
-}
-.footer__text-2 {
-    display: block;
-    font-family: Noto Sans;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 22.4px;
-    text-align: right;
-
-    color: #FFFFFF;
-}
 .company-name {
     position: relative;
     bottom: -40px;
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
+    z-index: -1;
 }
 
 .services__text-2 {
@@ -820,11 +640,12 @@ text-align: left;
     line-height: 31.2px;
     text-align: left;
     color: #003C6E;
-    transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
 .about-us__link:hover {
-    background-color: #E7EEF3;
+    background-color: #003058;
+    color: #FFFFFF;
 }
 .about-us__link svg {
     transition: transform .3s ease-in-out;
@@ -1056,16 +877,25 @@ text-align: left;
     gap: 20px;
 }
 
+.clients-big-grid img {
+    transition: transform .3s ease-in-out;
+}
+
+.clients-big-grid img:hover {
+    transform: scale(1.1);
+}
+
 .clents__bg {
     display: block;
     background-color: #F0F4F7;
     border-radius: 20px;
     padding: 23px 22px;
     cursor: pointer;
+    transition: background-color .3s ease-in-out;
 }
 
 .clents__bg:hover {
-    background-color: #E7EEF3;
+    background-color: #003058;
 }
 
 .clients-swiper .swiper-slide {
