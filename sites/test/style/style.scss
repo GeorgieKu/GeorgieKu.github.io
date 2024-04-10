@@ -991,12 +991,46 @@ text-align: left;
     width: 100%;
 }
 
+.solo__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
 .solo-card {
     padding: 12px;
     display: flex;
     align-items: center;
     gap: 12px;
     transition: transform .3s ease-in-out;
+    border-radius: 20px;
+}
+
+.solo-card-bg {
+    position: relative;
+    color: #FFFFFF;
+}
+
+.solo-card-bg::after {
+    content: "";
+    color: #FFFFFF;
+    background: linear-gradient(357deg, rgba(0,0,0,0.8015581232492998) 0%, rgba(255,255,255,0) 42%, rgba(255,255,255,0) 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border-radius: 20px;
+}
+
+.solo-card-bg div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    position: relative;
+    z-index: 3;
 }
 
 .solo-card svg {
@@ -1005,4 +1039,36 @@ text-align: left;
 
 .solo-card:hover {
     transform: scale(1.05);
+}
+
+.solo-card-1 {
+    background-image: url(../img/solo-service/2.webp);
+    grid-row: span 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 411px;
+}
+
+.solo-card-2 {
+    background-image: url(../img/solo-service/3.webp);
+    grid-column: span 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 270px;
+}
+
+.solo-card-3 {
+    background-image: url(../img/solo-service/4.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 260px;
+}
+
+.solo-card-4 {
+    background-image: url(../img/solo-service/5.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 260px;
+
 }
