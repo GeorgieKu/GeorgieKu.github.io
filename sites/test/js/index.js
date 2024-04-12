@@ -104,4 +104,37 @@ document.addEventListener("DOMContentLoaded", function() {
       });
 })
 
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('imageModal');
+  const modalContent = document.querySelector('.modal-content');
+  const modalImage = document.getElementById('modalImage');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalBlock = document.getElementById('modalBlock')
+  const worksLinks = document.querySelectorAll('.works__link');
 
+  worksLinks.forEach(function(link) {
+      link.addEventListener('click', function(event) {
+          event.preventDefault(); // Предотвращаем стандартное действие ссылки
+
+          const imageUrl = this.querySelector('img').getAttribute('src');
+          const title = this.querySelector('span').textContent;
+          const block = this.querySelector('div').innerHTML;
+
+          modalImage.setAttribute('src', imageUrl);
+          modalTitle.textContent = title;
+          modalBlock.innerHTML = block;
+          modal.style.display = 'block';
+          modalContent.classList.add('fadeIn'); // Добавляем класс анимации появления
+      });
+  });
+
+  modal.addEventListener('click', function() {
+      modalContent.classList.remove('fadeIn'); // Удаляем класс анимации появления
+      modalContent.classList.add('fadeOut'); // Добавляем класс анимации закрытия
+
+      setTimeout(function() {
+          modal.style.display = 'none';
+          modalContent.classList.remove('fadeOut'); // Удаляем класс анимации закрытия
+      }, 300); // Время анимации в миллисекундах (300 мс для fadeIn/fadeOut)
+  });
+});

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -596,6 +597,10 @@ button {
   overflow: hidden;
 }
 
+.works__link p {
+  display: none;
+}
+
 .works__link:hover img {
   transform: scale(1.2);
 }
@@ -1076,4 +1081,68 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 260px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Анимация закрытия модального окна */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* Стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  animation: fadeIn 0.3s ease-in forwards; /* Анимация появления */
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+#modalTitle {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 19.6px;
+  color: #121212;
+  margin-bottom: 30px;
+}
+
+.status {
+  color: #003058;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
