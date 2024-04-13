@@ -16,3 +16,4 @@ document.addEventListener('DOMContentLoaded', function() {
         openAcc(toggleButton, contents[index], toggleArrow);
     });
 });
+

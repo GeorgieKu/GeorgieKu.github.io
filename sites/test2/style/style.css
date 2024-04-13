@@ -175,6 +175,27 @@ button {
   border-radius: 12px;
 }
 
+.postcard__video-block {
+  width: 320px;
+  height: 324px;
+  border-radius: 11px;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.postcard__video {
+  width: 100%;
+  height: auto;
+  border-radius: 11px;
+}
+
+.postcard__video::-webkit-media-controls-panel {
+  border-radius: 11px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
 .create {
   background-image: url(../img/bg.webp);
   background-repeat: no-repeat;
@@ -182,6 +203,25 @@ button {
   min-height: 742px;
   border-radius: 24px;
   position: relative;
+}
+
+.video {
+  position: absolute;
+  border-radius: 24px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Масштабирование видео для заполнения всей области */
+}
+
+.bg {
+  position: relative;
+  border-radius: 24px;
+  z-index: 2;
+  background-color: rgba(135, 153, 187, 0.9);
+  min-height: 742px;
 }
 
 .create .container {
@@ -342,6 +382,11 @@ button {
   border-radius: 12px;
 }
 
+.steps__block {
+  position: sticky;
+  top: 0;
+}
+
 .steps__block-2 {
   display: block;
   padding: 51px 54px;
@@ -466,6 +511,7 @@ button {
 }
 
 .tariff__card {
+  position: relative;
   max-width: 370px;
   padding: 40px;
 }
@@ -559,6 +605,7 @@ button {
 }
 
 .tariff__btn {
+  max-width: 219px;
   padding: 16px 0;
   background: linear-gradient(90deg, #6D87B7 0%, #8DA3CC 102.02%);
 }
@@ -581,6 +628,9 @@ button {
 
 .tariff__btn-2 {
   padding: 16px;
+  position: absolute;
+  bottom: 40px;
+  max-width: 232px;
 }
 
 .content {
