@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
+if (window.location.href === './index.html') {
+  document.addEventListener("DOMContentLoaded", function() {
 
 
     const swiper = new Swiper('.hero__swiper', {
@@ -75,66 +76,77 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       
       });
+    });
+}
 
-      const swiper5 = new Swiper('.clients-swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: false,
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-        autoplay: {
-          delay: 1000,
+
+
+  const swiper5 = new Swiper('.clients-swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    autoplay: {
+      delay: 1000,
+    },
+    
+    // Navigation arrows
+    navigation: {
+      nextEl: '.clients__swiper-btn-next',
+      prevEl: '.clients__swiper-btn-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            autoHeight: true,
         },
-        
-        // Navigation arrows
-        navigation: {
-          nextEl: '.clients__swiper-btn-next',
-          prevEl: '.clients__swiper-btn-prev',
+        576: {
+            slidesPerView: 'auto',
         },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
-                autoHeight: true,
-            },
-            576: {
-                slidesPerView: 'auto',
-            },
-        }
-      
-      });
-})
-
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById('imageModal');
-  const modalContent = document.querySelector('.modal-content');
-  const modalImage = document.getElementById('modalImage');
-  const modalTitle = document.getElementById('modalTitle');
-  const modalBlock = document.getElementById('modalBlock')
-  const worksLinks = document.querySelectorAll('.works__link');
-
-  worksLinks.forEach(function(link) {
-      link.addEventListener('click', function(event) {
-          event.preventDefault(); // Предотвращаем стандартное действие ссылки
-
-          const imageUrl = this.querySelector('img').getAttribute('src');
-          const title = this.querySelector('span').textContent;
-          const block = this.querySelector('div').innerHTML;
-
-          modalImage.setAttribute('src', imageUrl);
-          modalTitle.textContent = title;
-          modalBlock.innerHTML = block;
-          modal.style.display = 'block';
-          modalContent.classList.add('fadeIn'); // Добавляем класс анимации появления
-      });
+    }
+  
   });
 
-  modal.addEventListener('click', function() {
-      modalContent.classList.remove('fadeIn'); // Удаляем класс анимации появления
-      modalContent.classList.add('fadeOut'); // Добавляем класс анимации закрытия
 
-      setTimeout(function() {
-          modal.style.display = 'none';
-          modalContent.classList.remove('fadeOut'); // Удаляем класс анимации закрытия
-      }, 300); // Время анимации в миллисекундах (300 мс для fadeIn/fadeOut)
+
+    
+
+
+
+if (window.location.href === './works.html') {
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imageModal');
+    const modalContent = document.querySelector('.modal-content');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBlock = document.getElementById('modalBlock')
+    const worksLinks = document.querySelectorAll('.works__link');
+  
+    worksLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Предотвращаем стандартное действие ссылки
+  
+            const imageUrl = this.querySelector('img').getAttribute('src');
+            const title = this.querySelector('span').textContent;
+            const block = this.querySelector('div').innerHTML;
+  
+            modalImage.setAttribute('src', imageUrl);
+            modalTitle.textContent = title;
+            modalBlock.innerHTML = block;
+            modal.style.display = 'block';
+            modalContent.classList.add('fadeIn'); // Добавляем класс анимации появления
+        });
+    });
+  
+    modal.addEventListener('click', function() {
+        modalContent.classList.remove('fadeIn'); // Удаляем класс анимации появления
+        modalContent.classList.add('fadeOut'); // Добавляем класс анимации закрытия
+  
+        setTimeout(function() {
+            modal.style.display = 'none';
+            modalContent.classList.remove('fadeOut'); // Удаляем класс анимации закрытия
+        }, 300); // Время анимации в миллисекундах (300 мс для fadeIn/fadeOut)
+    });
   });
-});
+}
