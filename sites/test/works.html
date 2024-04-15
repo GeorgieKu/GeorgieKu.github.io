@@ -13,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="//fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&amp;display=swap" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/normalize.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./style/style.css">
@@ -442,7 +441,7 @@
                             <a href="tel:+74950980124" class="contact__tel">+7 (495) 098-01-24</a>
                         </div>
                         <div class="contact__el">
-                            <p class="contact__address">&nbsp;Ф, 109004, г. Москва, Тетеринский переулок, д18, стр. 2</p>
+                            <p class="contact__address">РФ, 109004, г. Москва, Тетеринский переулок, д18, стр. 2</p>
                         </div>
                     </div>
                 </div>
@@ -450,12 +449,46 @@
         </div>
     </footer>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/main.js"></script>
     <script src="./js/index.js"></script>
-
+<script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('imageModal');
+    const modalContent = document.querySelector('.modal-content');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalBlock = document.getElementById('modalBlock')
+    const worksLinks = document.querySelectorAll('.works__link');
+  
+    worksLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Предотвращаем стандартное действие ссылки
+  
+            const imageUrl = this.querySelector('img').getAttribute('src');
+            const title = this.querySelector('span').textContent;
+            const block = this.querySelector('div').innerHTML;
+  
+            modalImage.setAttribute('src', imageUrl);
+            modalTitle.textContent = title;
+            modalBlock.innerHTML = block;
+            modal.style.display = 'block';
+            modalContent.classList.add('fadeIn'); // Добавляем класс анимации появления
+        });
+    });
+  
+    modal.addEventListener('click', function() {
+        modalContent.classList.remove('fadeIn'); // Удаляем класс анимации появления
+        modalContent.classList.add('fadeOut'); // Добавляем класс анимации закрытия
+  
+        setTimeout(function() {
+            modal.style.display = 'none';
+            modalContent.classList.remove('fadeOut'); // Удаляем класс анимации закрытия
+        }, 300); // Время анимации в миллисекундах (300 мс для fadeIn/fadeOut)
+    });
+  });
+</script>
 </body>
 
 </html>

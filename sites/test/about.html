@@ -225,7 +225,7 @@
                                   <img class="map-img" src="./img/works/completed/26.webp" alt="">
         
                             </div>
-                            <div>
+                            <div class="map-text-container">
                                 <p class="status"> Объект выполнен</p>
                             <p>Площадь застройки:</p>
                             <p class="map__number number">943 м2</p>
@@ -510,41 +510,55 @@
                     <div class="clients-swiper swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a class="clents__bg">
+                                <a href="./img/clients/ReviewCard.webp" class="clents__bg" data-fancybox>
                                     <img src="./img/clients/ReviewCard.webp" alt="">
                                 </a>
 
                             </div>
                             <div class="swiper-slide">
-                                <a class="clents__bg"><img src="./img/clients/ReviewCard2.webp" alt="">
+                                <a href="./img/clients/ReviewCard2.webp" class="clents__bg" data-fancybox>
+                                    <img src="./img/clients/ReviewCard2.webp" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a class="clents__bg"><img src="./img/clients/ReviewCard3.webp" alt=""></a>
+                                <a href="./img/clients/ReviewCard3.webp" class="clents__bg" data-fancybox>
+                                    <img src="./img/clients/ReviewCard3.webp" alt="">
+                                </a>
 
                             </div>
                             <div class="swiper-slide">
-                                <a class="clents__bg"><img src="./img/clients/ReviewCard4.webp" alt=""></a>
+                                <a href="./img/clients/ReviewCard4.webp" class="clents__bg" data-fancybox>
+                                    <img src="./img/clients/ReviewCard4.webp" alt="">
+                                </a>
 
                             </div>
                             <div class="swiper-slide">
-                                <a class="clents__bg"><img src="./img/clients/ReviewCard.webp" alt=""></a>
+                                <a href="./img/clients/ReviewCard.webp" class="clents__bg" data-fancybox>
+                                    <img src="./img/clients/ReviewCard.webp" alt="">
+                                </a>
 
                             </div>
                             <div class="swiper-slide">
-                                <a class="clents__bg"><img src="./img/clients/ReviewCard2.webp" alt="">
+                                <a href="./img/clients/ReviewCard2.webp" class="clents__bg" data-fancybox>
+                                    <img src="./img/clients/ReviewCard2.webp" alt="">
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a class="clents__bg"><img src="./img/clients/ReviewCard3.webp" alt=""></a>
+                                <a href="./img/clients/ReviewCard3.webp" class="clents__bg" data-fancybox>
+                                    <img src="./img/clients/ReviewCard3.webp" alt="">
+                                </a>
 
                             </div>
                             <div class="swiper-slide">
-                                <a class="clents__bg"><img src="./img/clients/ReviewCard4.webp" alt=""></a>
+                                <a href="./img/clients/ReviewCard4.webp" class="clents__bg" data-fancybox>
+                                    <img src="./img/clients/ReviewCard4.webp" alt="">
+                                </a>
 
                             </div>
                             <div class="swiper-slide">
-                                <a class="clents__bg"><img src="./img/clients/ReviewCard.webp" alt=""></a>
+                                <a href="./img/clients/ReviewCard.webp" class="clents__bg" data-fancybox>
+                                    <img src="./img/clients/ReviewCard.webp" alt="">
+                                </a>
 
                             </div>
 
@@ -581,6 +595,7 @@
 
         </div>
     </main>
+    <div class="overlay"></div>
     <footer class="footer site__footer">
         <div class="container footer__container">
             <div class="row footer__row">
@@ -652,23 +667,36 @@
             $('.district').hide();
         }
     });    
-    $('.rf-map').on('click', '[data-code], .district-links div', function(){    
-        let id = $(this).attr('data-code');
-        if ($('#' + id).text() != '') {
-            $('.district').show();
-            $('.district span').html($(this).attr('data-title'));
-            $('[data-code]').addClass('dropfill'); 
-            $(this).addClass('mainfill'); 
-            $('.rf-map').addClass('open');
-            $('#' + id).fadeIn();
-        }
-    });
+    $('.rf-map').on('click', '[data-code], .district-links div', function() {
+    let id = $(this).attr('data-code');
+    if ($('#' + id).text() != '') {
+        $('.district').show();
+        $('.district span').html($(this).attr('data-title'));
+        $('[data-code]').addClass('dropfill'); 
+        $(this).addClass('mainfill'); 
+        $('.rf-map').addClass('open');
+        $('#' + id).fadeIn();
+        $('body').css('overflow', 'hidden'); 
+        $('.overlay').css('display', 'block')
+        $('.overlay').on('click', function() {
+            $('.rf-map').removeClass('open');
+            $('[data-code]').removeClass('dropfill');
+            $('[data-code]').removeClass('mainfill');
+            $('.district-text').hide();
+            $('.district').hide();
+            $('body').css('overflow', 'auto'); 
+            $('.overlay').css('display', 'none')
+        })
+    }
+});
     $('.close-district').click(function() {
         $('.rf-map').removeClass('open');
         $('[data-code]').removeClass('dropfill');
         $('[data-code]').removeClass('mainfill');
         $('.district-text').hide();
         $('.district').hide();
+        $('body').css('overflow', 'auto'); 
+        $('.overlay').css('display', 'none')
     });    
     $('[data-code]').each(function() {  
         let id = $(this).attr('data-code');
