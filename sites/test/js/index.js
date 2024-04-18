@@ -30,16 +30,16 @@ let buttons = document.querySelectorAll('.button');
 
 buttons.forEach(function(button) {
     button.addEventListener('click', function() {
-        // Проверяем, есть ли у элемента класс 'checked'
+        // Check if the element has the 'checked' class
         let isChecked = button.classList.contains('checked');
 
         if (!isChecked) {
-            // Если элемент не был отмечен, добавляем класс 'checked'
+            // If the element is not checked, add the 'checked' class
             button.classList.add('checked');
             let gal = button.querySelector('.gal');
             gal.style.display = 'block';
         } else {
-            // Если элемент был отмечен, удаляем класс 'checked'
+            // If the element is checked, remove the 'checked' class
             button.classList.remove('checked');
             let gal = button.querySelector('.gal');
             gal.style.display = 'none';
@@ -51,25 +51,24 @@ const swiper = new Swiper('.basic-swiper', {
     // Optional parameters
     direction: 'horizontal',
     spaceBetween: 12,
+});
 
-  });
-
-  document.addEventListener("DOMContentLoaded", function() {
-    // Находим все элементы с классом "tooltip-trigger"
+document.addEventListener("DOMContentLoaded", function() {
+    // Find all elements with the class "tooltip-trigger"
     const tooltipTriggers = document.querySelectorAll(".tooltip-trigger");
 
-    // Перебираем все найденные элементы
+    // Iterate over all found elements
     tooltipTriggers.forEach(function(trigger) {
-        // Находим элемент с классом "tooltip-text" (подсказка)
+        // Find the element with the class "tooltip-text" (tooltip)
         const tooltipText = trigger.nextElementSibling;
 
-        // Добавляем обработчик события наведения мыши на элемент
+        // Add event listener for mouseover event on the element
         trigger.addEventListener("mouseover", function() {
             tooltipText.style.visibility = "visible";
             tooltipText.style.opacity = "1";
         });
 
-        // Добавляем обработчик события ухода мыши с элемента
+        // Add event listener for mouseout event on the element
         trigger.addEventListener("mouseout", function() {
             tooltipText.style.visibility = "hidden";
             tooltipText.style.opacity = "0";
