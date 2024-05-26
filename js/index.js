@@ -25,4 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
 
+  function switchToEnglish() {
+    localStorage.setItem('language', 'en');
+    window.location.href = 'index-en.html';
+  }
 
+  function switchToRussian() {
+    localStorage.setItem('language', 'ru');
+    window.location.href = 'index.html';
+  }

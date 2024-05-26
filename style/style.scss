@@ -140,6 +140,7 @@ body {
         font-weight: 500;
         margin-bottom: 1rem;
     }
+
     &__nav {
         max-width: max-content;
     }
@@ -149,17 +150,20 @@ body {
         max-width: 20rem;
         margin-bottom: 4rem;
     }
+
     &__link {
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
         align-items: center;
         display: flex;
     }
+
     &__link:hover &__line {
         width: 4rem;
         background-color: $fc;
-        
+
     }
+
     &__link:hover &__link-text {
         color: $fc;
     }
@@ -170,6 +174,7 @@ body {
         height: 1px;
         margin-right: 1rem;
     }
+
     &__link-text {
         letter-spacing: .1em;
         text-transform: uppercase;
@@ -185,18 +190,22 @@ body {
     display: block;
     width: 500px;
     height: 500px;
-    background-color: rgba(59,130,246,.1);
+    background-color: rgba(59, 130, 246, .1);
     border: 1px solid #fff;
     border-radius: 50%;
-    transform: translateY(-50%) translateX(-50%); /* центрируем кружок */
+    transform: translateY(-50%) translateX(-50%);
+    /* центрируем кружок */
     filter: blur(100px);
-    position: absolute; /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
-    z-index: 999; /* чтобы элемент был над остальными элементами */
-    pointer-events: none; /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */
+    position: absolute;
+    /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
+    z-index: 999;
+    /* чтобы элемент был над остальными элементами */
+    pointer-events: none;
+    /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */
     transition: width 0.64s, height 0.64s, border-radius 0.64s, background 0.64s;
-  }
-  
-  /* Активный класс для кружка при наведении на ссылку */
+}
+
+/* Активный класс для кружка при наведении на ссылку */
 
 
 .main {
@@ -211,20 +220,23 @@ body {
     &__descr {
         margin-bottom: 1rem;
     }
+
     &__title {
         font-size: 2rem;
-    line-height: 1;
-    color: #e2e8f0;
-    letter-spacing: -.025em;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
+        line-height: 1;
+        color: #e2e8f0;
+        letter-spacing: -.025em;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
     }
+
     &__list {
         display: flex;
         flex-direction: column;
         gap: 5px;
         margin-bottom: 10px;
     }
+
     &__item {
         list-style-type: disc;
         list-style-position: inside;
@@ -234,80 +246,92 @@ body {
 .expirience {
     padding-bottom: 9rem;
     scroll-margin: 6rem;
-    
+
     &__item {
         display: flex;
         position: relative;
         gap: 20px
     }
+
     &__item:not(:last-child) {
         margin-bottom: 1rem;
     }
+
     &__left {
         margin-right: 0.5rem;
         text-wrap: nowrap;
         margin-bottom: 0.5rem;
     }
+
     &__title {
         color: #e2e8f0;
-    font-weight: 500;
-    line-height: 1.25;
-    font-size: 1rem;
-    display: block;
-    margin-bottom: 0.25rem;
+        font-weight: 500;
+        line-height: 1.25;
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 0.25rem;
     }
+
     &__job {
         display: block;
         margin-bottom: 0.25rem;
     }
+
     &__job_margin {
         margin-bottom: 1rem;
     }
+
     &__descr {
         margin-bottom: 1rem;
     }
+
     &__list {
         display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    gap: 5px;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 5px;
     }
+
     &__tech {
         margin-right: 0.375rem;
-    color: #5eead4;
-    line-height: 1.25rem;
-    font-weight: 500;
-    font-size: .75rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    background-color: rgba(45, 212, 191, 0.1);
-    border-radius: 9999px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+        color: #5eead4;
+        line-height: 1.25rem;
+        font-weight: 500;
+        font-size: .75rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        background-color: rgba(45, 212, 191, 0.1);
+        border-radius: 9999px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
     }
 }
 
 .projects {
     margin-bottom: 9rem;
     scroll-margin: 6rem;
+
     &__item {
         margin-bottom: 3rem;
     }
+
     &__item {
         display: flex;
         position: relative;
-        
+
     }
+
     &__link-git {
         position: absolute;
         right: 0;
     }
+
     &__item::after {
         content: "";
         background-color: $fc;
@@ -321,14 +345,17 @@ body {
         visibility: hidden;
         z-index: -1;
     }
-    &__item:hover:after{
-       visibility: visible;
+
+    &__item:hover:after {
+        visibility: visible;
     }
+
     &__left {
         margin-right: 0.5rem;
         text-wrap: nowrap;
         margin-bottom: 0.5rem;
     }
+
     &__title {
         color: $fc;
         font-weight: 500;
@@ -337,23 +364,27 @@ body {
         display: block;
         margin-bottom: 0.25rem;
     }
+
     &__job {
         display: block;
         margin-bottom: 0.25rem;
     }
+
     &__descr {
         line-height: 1.5;
         font-size: .875rem;
         margin-bottom: 0.5rem;
     }
+
     &__list {
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
     }
+
     &__tech {
         margin-right: 0.375rem;
-        color: rgb(94,234, 212);
+        color: rgb(94, 234, 212);
         line-height: 1.25rem;
         font-weight: 500;
         font-size: .75rem;
@@ -361,48 +392,49 @@ body {
         padding-bottom: 0.25rem;
         padding-left: 0.75rem;
         padding-right: 0.75rem;
-        background-color: rgba(45,212,191,.1);
+        background-color: rgba(45, 212, 191, .1);
         border-radius: 9999px;
         align-items: center;
         display: flex;
     }
+
     &__img {
         max-width: 200px;
     }
+}
+
+.social {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.social__link-tg path {
+    fill: $fc2;
+}
+
+.social__link {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: fill .3s ease-in-out;
+
+    &:hover path {
+        fill: $fc;
     }
 
-    .social {
-        display: flex;
-        gap: 1.25rem;
-    }
-
-    .social__link-tg path {
+    &-habr path {
         fill: $fc2;
     }
+}
 
-    .social__link {
-        display: block;
-        width: 1.5rem;
-        height: 1.5rem;
-        transition: fill .3s ease-in-out;
-
-        &:hover path{
-            fill: $fc;
-        }
-
-        &-habr path {
-            fill: $fc2;
-        }
-    }
-
-    .project__img {
-        max-width: 200px;
-    }
+.project__img {
+    max-width: 200px;
+}
 
 
 .transition-all {
     transition-property: all;
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     transition-duration: .15s;
 }
 
@@ -491,125 +523,155 @@ body {
     animation-name: fadeInUpBig
 }
 
-#toggles{
-    width:40px;
-  
+#toggles {
+    width: 40px;
 
-    }
-    .ios-toggle,.ios-toggle:active{
-    position:absolute;
-    top:-5000px;
-    height:0;
-    width:0;
-    opacity:0;
-    border:none;
-    outline:none;
-    }
-    .checkbox-label{
-    display:block;
-    position:relative;
-    padding:10px;
-    margin-bottom:20px;
-    font-size:12px;
-    line-height:16px;
-    width:100%;
-    height:24px;
+
+}
+
+.ios-toggle,
+.ios-toggle:active {
+    position: absolute;
+    top: -5000px;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    border: none;
+    outline: none;
+}
+
+.checkbox-label {
+    display: block;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    line-height: 16px;
+    width: 100%;
+    height: 24px;
     /*border-radius*/
-    -webkit-border-radius:18px;
-       -moz-border-radius:18px;
-            border-radius:18px;
-    background:rgb(15, 23, 42);
-    cursor:pointer;
-    }
-    .checkbox-label:before{
-    content:'';
-    display:block;
-    position:absolute;
-    z-index:1;
-    line-height:34px;
-    text-indent:40px;
-    height:24px;
-    width:24px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+    background: rgb(15, 23, 42);
+    cursor: pointer;
+}
+
+.checkbox-label:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    line-height: 34px;
+    text-indent: 40px;
+    height: 24px;
+    width: 24px;
     /*border-radius*/
-    -webkit-border-radius:100%;
-       -moz-border-radius:100%;
-            border-radius:100%;
-    top:0px;
-    left:0px;
-    right:auto;
-    background:white;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    top: 0px;
+    left: 0px;
+    right: auto;
+    background: white;
     /*box-shadow*/
     -webkit-box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
-       -moz-box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
-            box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
-            -webkit-transition:.25s ease-in-out;
-   -moz-transition:.25s ease-in-out;
-     -o-transition:.25s ease-in-out;
-        transition:.25s ease-in-out;
-outline:none;
-    }
-    .checkbox-label:after{
-    content:attr(data-off);
-    display:block;
-    position:absolute;
-    z-index:0;
-    top:0;
-    left:-159px;
-    padding:10px;
-    height:100%;
-    width:300px;
-    text-align:right;
-    color:#bfbfbf;
-    white-space:nowrap;
-    -webkit-transition:.25s ease-in-out;
-   -moz-transition:.25s ease-in-out;
-     -o-transition:.25s ease-in-out;
-        transition:.25s ease-in-out;
-outline:none;
-    }
-    .ios-toggle:checked + .checkbox-label{
-    /*box-shadow*/
-    -webkit-box-shadow:inset 0 0 0 20px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
-       -moz-box-shadow:inset 0 0 0 20px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
-            box-shadow:inset 0 0 0 20px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
-    }
+    -moz-box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+    box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    outline: none;
+}
 
-    .ios-toggle:checked + .checkbox-label:before{
-    left:calc(100% - 24px);
+.checkbox-label:after {
+    content: attr(data-off);
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: -159px;
+    padding: 10px;
+    height: 100%;
+    width: 300px;
+    text-align: right;
+    color: #bfbfbf;
+    white-space: nowrap;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    outline: none;
+}
+
+.ios-toggle:checked+.checkbox-label {
     /*box-shadow*/
-    -webkit-box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
-       -moz-box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
-            box-shadow:0 0 0 2px transparent,0 3px 3px rgba(0,0,0,.3);
-    }
-    .ios-toggle:checked + .checkbox-label:after{
-    content:attr(data-on);
-    left:40px;
-    width:24px;
-    -webkit-transition:.25s ease-in-out;
-   -moz-transition:.25s ease-in-out;
-     -o-transition:.25s ease-in-out;
-        transition:.25s ease-in-out;
-outline:none;
-    }
-    
-    #checkbox1 + .checkbox-label{
+    -webkit-box-shadow: inset 0 0 0 20px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+    -moz-box-shadow: inset 0 0 0 20px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+    box-shadow: inset 0 0 0 20px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+}
+
+.ios-toggle:checked+.checkbox-label:before {
+    left: calc(100% - 24px);
+    /*box-shadow*/
+    -webkit-box-shadow: 0 0 0 2px transparent, 0 3px 3px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 0 0 2px transparent, 0 3px 3px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 0 2px transparent, 0 3px 3px rgba(0, 0, 0, .3);
+}
+
+.ios-toggle:checked+.checkbox-label:after {
+    content: attr(data-on);
+    left: 40px;
+    width: 24px;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    outline: none;
+}
+
+#checkbox1+.checkbox-label {
     /*box-shadow*/
     -webkit-box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
-       -moz-box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
-       box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
-    }
-    #checkbox1:checked + .checkbox-label{
-    /*box-shadow*/
-    -webkit-box-shadow:inset 0 0 0 18px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
-       -moz-box-shadow:inset 0 0 0 18px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
-            box-shadow:inset 0 0 0 18px rgba(226, 232, 240, 0.1),0 0 0 2px rgba(226, 232, 240, 0.1);
-    }
-    #checkbox1:checked + .checkbox-label:after{
-    color:rgba(226, 232, 240, 0.1);
-    -webkit-transition:.25s ease-in-out;
-   -moz-transition:.25s ease-in-out;
-     -o-transition:.25s ease-in-out;
-        transition:.25s ease-in-out;
-outline:none;
-    }
+    -moz-box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+    box-shadow: inset 0 0 0 0px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+}
 
+#checkbox1:checked+.checkbox-label {
+    /*box-shadow*/
+    -webkit-box-shadow: inset 0 0 0 18px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+    -moz-box-shadow: inset 0 0 0 18px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+    box-shadow: inset 0 0 0 18px rgba(226, 232, 240, 0.1), 0 0 0 2px rgba(226, 232, 240, 0.1);
+}
+
+#checkbox1:checked+.checkbox-label:after {
+    color: rgba(226, 232, 240, 0.1);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+    outline: none;
+}
+
+
+.switch-lang-btn {
+    color: #5eead4;
+    line-height: 1.25rem;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    background-color: rgba(45, 212, 191, 0.1);
+    border-radius: 9999px;
+    align-items: center;
+    display: flex;
+    opacity: 0.3;
+    transition: opacity .3s ease;
+}
+
+.switch-lang-btn:hover {
+    opacity: 1;
+}
