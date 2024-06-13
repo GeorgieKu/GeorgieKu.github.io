@@ -72,33 +72,16 @@
       }
     
 
-      function handleSearchClick() {
-        if (window.matchMedia("(max-width: 992px)").matches) {
-            closeSearch.style.display = 'flex';
-            logo.style.display = 'none';
-            headerLink.style.display = 'none';
-            loginBtn.style.display = 'none';
-            headerInput.style.display = 'block';
-            headerInput.style.maxWidth = 'unset';
-            searchBtn.style.borderRight = 'unset';
-            filter.style.display = 'block';
-        }
-    }
-    
-    // Function to handle the close search button click
-    function handleCloseSearchClick() {
-        if (window.matchMedia("(max-width: 992px)").matches) {
-            closeSearch.style.display = 'none';
-            logo.style.display = 'block';
-            headerLink.style.display = 'flex';
-            loginBtn.style.display = 'flex';
-            headerInput.style.display = 'none';
-            headerInput.style.maxWidth = '';
-            searchBtn.style.borderRight = '';
-            filter.style.display = 'none';
-        }
-    }
-    
-    // Add event listeners
-    searchButton.addEventListener('click', handleSearchClick);
-    closeSearch.addEventListener('click', handleCloseSearchClick);
+    /* Search */
+const $searchElems = document.querySelectorAll(".search");
+$searchElems.forEach(($search) => {
+  const $toggle = $search.querySelector(".search__toggle");
+  $toggle?.addEventListener("click", () => {
+    $search.classList.toggle("search--active");
+  });
+
+  const $close = $search.querySelector(".search__btn--close");
+  $close?.addEventListener("click", () => {
+    $search.classList.remove("search--active");
+  });
+});
