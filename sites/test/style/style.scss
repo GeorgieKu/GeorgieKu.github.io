@@ -211,8 +211,15 @@ button {
     background-image: url(../img/hero-bg.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 110px 0 250px;
-    max-height: calc(100dvh - 64px);
+    min-height: calc(100dvh - 64px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10vh 0;
+    .container {
+        width: 100%;
+        padding: 0 50px;
+    }
     .flex {
         display: flex;
         align-items: center;
@@ -230,7 +237,6 @@ button {
         letter-spacing: 0.1em;
         text-align: left;
         color: rgba(235, 239, 248, 1);
-        margin-bottom: 70px; 
     }
     .hero__descr {
         text-transform: uppercase;
@@ -778,9 +784,6 @@ button {
     .header__login svg {
         max-width: 22px;
     }
-    .hero {
-        padding: 40px 0 190px;
-    }
     .hero .hero__text {
         font-size: 18px;
         margin-bottom: unset;
@@ -883,6 +886,11 @@ button {
         .footer .footer__grid {
             gap: 20px;
         }
+        .hero {
+            .container {
+                padding: 0 12px;
+            }
+        }
 } 
 
 
@@ -959,8 +967,7 @@ button {
         flex-direction: column;
     }
     .hero {
-        padding: 40px 0;
-        max-height: calc(100dvh - 46px);
+        min-height: calc(100dvh - 46px);
     }
     .hero .hero__text {
         margin-bottom: 35px;
@@ -1069,5 +1076,6 @@ button {
         font-size: 22px;
         line-height: 130%;
     }
+
     
 }
