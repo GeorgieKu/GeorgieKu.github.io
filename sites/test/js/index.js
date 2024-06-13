@@ -52,10 +52,6 @@
       closeBtn.addEventListener('click', function() {
         overlay.style.display = 'none';
         modal.style.animation = 'scalerOut .3s ease';
-        closeBtn.style.display = 'none';
-        subscribeBlock.style.display = 'none'
-        envelope.style.display = 'block'
-        envelope.play();
       })
     })
     

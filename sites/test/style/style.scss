@@ -212,6 +212,7 @@ button {
     background-repeat: no-repeat;
     background-size: cover;
     padding: 110px 0 250px;
+    max-height: calc(100dvh - 64px);
     .flex {
         display: flex;
         align-items: center;
@@ -391,7 +392,8 @@ button {
         background-image: url(../img/subscribe-bg.svg);
         background-repeat: no-repeat;
         background-size: cover;
-
+        display: flex;
+        justify-content: space-between;
     }
     .subscribe__block {
         display: flex;
@@ -434,9 +436,7 @@ button {
         text-transform: uppercase;
 
     }
-    .subscribe__envelope {
-        display: none;
-    }
+
 }
 
 .contacts {
@@ -757,6 +757,13 @@ button {
         padding: 21px 21px 21px 14px;
         background-color: #EBEFF8;
     }
+    .hero .hero__img {
+        max-width: 320px;
+    }
+    .hero .hero__title {
+        font-size: 32px;
+        line-height: 130%;
+    }
 
 }
 
@@ -776,7 +783,7 @@ button {
     }
     .hero .hero__text {
         font-size: 18px;
-        margin-bottom: 137px;
+        margin-bottom: unset;
     }
     .hero .hero__descr {
         font-size: 16px;
@@ -953,6 +960,7 @@ button {
     }
     .hero {
         padding: 40px 0;
+        max-height: calc(100dvh - 46px);
     }
     .hero .hero__text {
         margin-bottom: 35px;
@@ -1048,6 +1056,18 @@ button {
     }
     .contacts .contacts__grid {
         grid-template-columns: 1fr;
+    }
+    .subscribe .subscribe__card {
+        flex-direction: column;
+        background-image: url(../img/subscribe-bg-576.svg);
+    
+    }
+    .subscribe .subscribe__block {
+        min-height: unset;
+    }
+    .hero .hero__title {
+        font-size: 22px;
+        line-height: 130%;
     }
     
 }
