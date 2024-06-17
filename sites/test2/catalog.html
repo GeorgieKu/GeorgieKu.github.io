@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description">
+
+
+    <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header__container container">
+            <div class="header__flex">
+                <div class="logo header__logo">
+                    <a class="logo__link" href="./index.html" aria-label="На главную">
+                        <img class="logo__img" src="./img/logo.webp" alt="">
+                    </a>
+                    <span class="logo__text">Официальный
+                        поставщик в России</span>
+                </div>
+                <div class="header__flex-2">
+                    <div class="header__search">
+                        <input type="text" class="header__input" placeholder="Введите поисковый запрос">
+                        <svg class="header__search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_84_1949)">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.7294 13.1738C10.5651 14.0356 14.1855 10.3334 13.1552 11.7407C13.181 11.7387 13.1332 11.8167 12.973 12.0123C12.973 12.0123 15.7244 14.7451 17.075 16.1359C17.5439 16.6429 16.6979 17.6549 16.1232 17.1266C14.9001 15.94 12.0061 12.9909 12.0016 12.9861L11.7294 13.1738Z"
+                                    fill="#939393" />
+                                <path
+                                    d="M7.68652 14.5557C9.45683 14.5385 11.2093 13.8053 12.4695 12.5599C13.9661 11.0807 14.7368 8.89241 14.468 6.80309C14.0074 3.22294 11.0642 0.793312 7.64252 0.793312C5.04273 0.793312 2.51617 2.41959 1.40792 4.77772C0.559547 6.58309 0.557828 8.76281 1.40792 10.5713C2.50827 12.9129 4.99358 14.5306 7.59817 14.5557C7.62773 14.5557 7.6573 14.5557 7.68652 14.5557ZM7.60539 13.4086C4.96161 13.3832 2.49486 11.3385 2.00433 8.71709C1.65852 6.86909 2.3113 4.86916 3.67117 3.55672C5.25861 2.02394 7.75389 1.51072 9.82877 2.37937C11.685 3.15659 13.0745 4.96128 13.3305 6.94953C13.5499 8.65384 12.9383 10.44 11.7366 11.6702C10.6823 12.7496 9.20383 13.3938 7.6793 13.4086C7.65455 13.4086 7.63014 13.4086 7.60539 13.4086Z"
+                                    fill="#939393" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_84_1949">
+                                    <rect width="18" height="18" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </div>
+                    <button class="header__icon" aria-label="Добавить в избранное">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_45_149)">
+                                <path
+                                    d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z"
+                                    fill="#939393" />
+                            </g>
+                            <defs>
+                                <clipPath>
+                                    <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+
+                    </button>
+                    <button class="header__icon" aria-label="Корзина">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_45_165)">
+                                <path
+                                    d="M7.54589 0.541015C6.58495 0.731444 5.8496 1.39941 5.56249 2.35449C5.50389 2.55078 5.49804 2.64453 5.48339 3.78125L5.46581 4.99707L4.6455 5.01172C3.89843 5.02637 3.81054 5.03223 3.67577 5.08789C3.24218 5.2666 2.9287 5.65332 2.80272 6.16894C2.77929 6.26562 2.53905 8.10254 2.26952 10.25C1.80956 13.9004 1.78026 14.1699 1.80956 14.3486C1.90624 14.8994 2.34569 15.3535 2.89647 15.4678C3.1162 15.5146 12.8838 15.5146 13.1035 15.4678C13.6514 15.3535 14.0967 14.8965 14.1875 14.3516C14.2197 14.1729 14.1875 13.8975 13.7305 10.2529C13.4609 8.10254 13.2207 6.26562 13.1973 6.16894C13.0859 5.70605 12.7842 5.31055 12.4033 5.12305L12.2041 5.02637L11.3691 5.01172L10.5342 4.99707L10.5166 3.78125C10.5019 2.65039 10.4961 2.55078 10.4375 2.36035C10.3086 1.93262 10.1123 1.58984 9.82225 1.28223C9.51464 0.95996 9.04589 0.684569 8.61522 0.576171C8.35448 0.508788 7.8037 0.49121 7.54589 0.541015ZM8.28124 1.52832C8.86718 1.63672 9.34472 2.09668 9.47948 2.68262C9.51464 2.83496 9.52343 3.07226 9.51757 3.93359L9.50878 4.99707L7.9912 5.00586L6.47362 5.01172L6.48241 3.84863C6.49413 2.72949 6.49706 2.67676 6.55858 2.50976C6.82225 1.80078 7.54003 1.39355 8.28124 1.52832ZM5.48046 7.25879C5.48046 8.50391 5.48046 8.51269 5.54784 8.62988C5.73827 8.9668 6.24804 8.95508 6.41503 8.60644C6.47362 8.4834 6.47655 8.43945 6.47655 7.24414V6.00781H7.99999H9.52343V7.23828C9.52343 8.58887 9.52343 8.59473 9.69628 8.74121C9.89843 8.91113 10.1445 8.91113 10.3467 8.74121C10.5195 8.59473 10.5195 8.58887 10.5195 7.23828V6.00781H11.249H11.9785L12.0693 6.0957C12.1191 6.14551 12.1777 6.25391 12.2041 6.33887C12.2275 6.42383 12.4678 8.22266 12.7344 10.3408C13.209 14.123 13.2148 14.1904 13.165 14.2783C13.1357 14.3252 13.0742 14.3926 13.0303 14.4277L12.9482 14.4893L8.07909 14.498C5.40136 14.501 3.166 14.498 3.11327 14.4893C2.99608 14.4687 2.82616 14.3252 2.80272 14.2256C2.77929 14.1289 3.74022 6.50586 3.79882 6.32422C3.82518 6.24805 3.88085 6.14551 3.92772 6.0957L4.00975 6.00781H4.74511H5.48046V7.25879Z"
+                                    fill="#939393" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_45_165">
+                                    <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <span class="header__cart-counter">4</span>
+
+                    </button>
+                    <button class="header__icon" aria-label="Вход">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.34082 1.80371C6.01953 2.04688 4.87695 3.04883 4.44043 4.34961C4.26172 4.88281 4.20312 5.54492 4.29101 6.08105C4.42871 6.91895 4.91211 7.79492 5.51269 8.29297L5.67968 8.43359L5.2959 8.62109C3.46191 9.52637 2.20215 11.2109 1.8623 13.2119C1.80371 13.5518 1.79785 13.7949 1.84765 13.8916C2.02636 14.2402 2.51562 14.3691 2.82031 14.1436C2.94629 14.0498 3.04004 13.8242 3.0957 13.4814C3.41797 11.4131 4.97363 9.77539 7.05078 9.3125C7.30273 9.25684 7.42578 9.24805 8.01465 9.24805C8.60351 9.24805 8.72656 9.25684 8.99609 9.31543C11.0967 9.7666 12.6172 11.3838 12.9805 13.5488C13.0215 13.7949 13.0625 13.9033 13.1709 14.0293C13.4082 14.3135 13.8066 14.3076 14.0586 14.0205C14.2607 13.7949 14.2783 13.6338 14.1699 13.1123C13.9004 11.8496 13.3525 10.8184 12.4678 9.90723C11.9287 9.35352 11.3721 8.94922 10.6895 8.61523L10.3203 8.43359L10.4844 8.29297C10.9268 7.92969 11.334 7.32617 11.5391 6.74023C11.7002 6.28027 11.7353 6.04883 11.7324 5.46582C11.7295 4.97363 11.7236 4.91504 11.6387 4.58691C11.2695 3.18359 10.1006 2.09375 8.66504 1.81543C8.32812 1.75098 7.66308 1.74219 7.34082 1.80371ZM8.6123 3.08105C9.35937 3.27148 10.0127 3.83691 10.3086 4.55176C10.4492 4.88867 10.499 5.19629 10.4814 5.60938C10.4609 6.02832 10.4141 6.22168 10.2412 6.58496C9.9248 7.23535 9.39453 7.68652 8.68261 7.90332C8.4541 7.9707 8.37793 7.97949 8 7.97949C7.62207 7.97949 7.5459 7.9707 7.31738 7.90332C6.62011 7.68945 6.07812 7.23828 5.76172 6.60254C5.60058 6.28027 5.53613 6.01367 5.51855 5.60938C5.48633 4.8916 5.70605 4.29688 6.19531 3.78711C6.83105 3.12207 7.73633 2.8584 8.6123 3.08105Z"
+                                fill="#939393" />
+                        </svg>
+
+
+                    </button>
+                    <div class="header__contact">
+                        <a class="header__tel" href="tel:+79990000000" aria-label="Позвонить +79990000000">+7 (999) 000
+                            00 00</a>
+                        <a class="header__mail" href="mailto:support@dahua.com"
+                            aria-label="Написать support@dahua.com">support@dahua.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__line line"></div>
+        <div class="header__container container">
+            <nav class="header__nav" id="headerNav">
+                <button class="header__burger-btn" id="burger" aria-label="Меню">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item menu__item_mw">
+                            <a aria-label="ссылка" class="menu__link_red" href="#">
+                                Продукция
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_46_267)">
+                                        <path
+                                            d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath>
+                                            <rect width="10" height="10" fill="white"
+                                                transform="translate(10) rotate(90)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+
+                        </li>
+                        <li class="menu__dropdown dropdown">
+                            <ul>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">Все продукты</a></li>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">IP-видеокамеры</a></li>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">HDCVI-видеокамеры</a></li>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">Домофония</a></li>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">Тепловизоры</a></li>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">Контроль доступа</a></li>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">Сигнализация</a></li>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">Мониторы и видеостены</a></li>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">Пожарная сигнализация</a></li>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">Программное обеспечение</a></li>
+                                <li><a aria-label="ссылка" class="dropdown__link" href="#">Досмотровое оборудование</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu__item-2">
+                            <ul class="menu__list-2">
+                                <li class="menu__item">
+                                    <a aria-label="ссылка" class="menu__link" href="#">
+                                        Контакты
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a aria-label="ссылка" class="menu__link" href="#">
+                                        Оплата о доставка
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a aria-label="ссылка" class="menu__link" href="#">
+                                        Новости
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a aria-label="ссылка" class="menu__link menu__link_dropdown" href="#">
+                                        Технический раздел
+                                        <svg class="menu__arrow_black" width="10" height="10" viewBox="0 0 10 10"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_46_267)">
+                                                <path
+                                                    d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z"
+                                                    fill="white" />
+                                            </g>
+                                            <defs>
+                                                <clipPath>
+                                                    <rect width="10" height="10" fill="white"
+                                                        transform="translate(10) rotate(90)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                    </a>
+                                </li>
+                                <li class="menu__dropdown-2 dropdown">
+                                    <ul>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">Все продукты</a></li>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">IP-видеокамеры</a></li>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">HDCVI-видеокамеры</a></li>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">Домофония</a></li>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">Тепловизоры</a></li>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">Контроль доступа</a></li>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">Сигнализация</a></li>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">Мониторы и видеостены</a></li>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">Пожарная сигнализация</a></li>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">Программное обеспечение</a></li>
+                                        <li><a aria-label="ссылка" class="dropdown__link" href="#">Досмотровое оборудование</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu__item">
+                                    <a aria-label="ссылка" class="menu__link" href="#">
+                                        Парнерство
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="bread-crumbs">
+        <div class="container">
+            <div class="bread-crumbs__flex">
+                <a aria-label="ссылка" href="#" class="bread-crumbs__link">Главная</a>
+        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_72_575)">
+            <path d="M0.499973 4.3889L6.56119 4.38889L4.50281 6.44728C4.35094 6.59915 4.35094 6.84531 4.50281 6.99717C4.65467 7.14903 4.90093 7.14903 5.05279 6.99717L7.77501 4.27495C7.92688 4.12309 7.92688 3.87683 7.77501 3.72506L5.05279 1.00284C4.97686 0.926908 4.87731 0.888895 4.77775 0.888895C4.67829 0.888895 4.57874 0.926908 4.50281 1.00284C4.35094 1.1547 4.35094 1.40096 4.50281 1.55273L6.56119 3.61112L0.499973 3.61112C0.285306 3.61112 0.111084 3.78524 0.111084 4.00001C0.111084 4.21477 0.285209 4.3889 0.499973 4.3889Z" fill="#939393"/>
+            </g>
+            <defs>
+            <clipPath>
+            <rect width="8" height="8" fill="white" transform="translate(0 8) rotate(-90)"/>
+            </clipPath>
+            </defs>
+            </svg>
+        <a aria-label="ссылка" href="#" class="bread-crumbs__link">
+            Каталог продукции
+        </a>   
+            </div>
+        </div>
+    </div>
+
+   <div class="container">
+    <div class="wrapper">
+        <aside aria-label="ссылка" class="aside">
+            <div class="aside__flex">
+                <div class="dropdown">
+                    <span class="dropdown__text">Категория продукции</span>
+                    <button aria-label="кнопка" class="dropdown-btn">IP-Камеры <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_46_267)">
+                        <path d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button>
+                    <div class="dropdown-content">
+                        <a aria-label="ссылка" href="#">Option 1</a>
+                        <a aria-label="ссылка" href="#">Option 2</a>
+                        <a aria-label="ссылка" href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropdown__text">Серия</span>
+                    <button aria-label="кнопка" class="dropdown-btn">WizMind <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_46_267)">
+                        <path d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button>
+                    <div class="dropdown-content">
+                        <a aria-label="ссылка" href="#">Option 1</a>
+                        <a aria-label="ссылка" href="#">Option 2</a>
+                        <a aria-label="ссылка" href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropdown__text">Категория продукции</span>
+                    <button aria-label="кнопка" class="dropdown-btn">IP-Камеры <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_46_267)">
+                        <path d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button>
+                    <div class="dropdown-content">
+                        <a aria-label="ссылка" href="#">Option 1</a>
+                        <a aria-label="ссылка" href="#">Option 2</a>
+                        <a aria-label="ссылка" href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropdown__text">Категория продукции</span>
+                    <button aria-label="кнопка" class="dropdown-btn">IP-Камеры <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_46_267)">
+                        <path d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button>
+                    <div class="dropdown-content">
+                        <a aria-label="ссылка" href="#">Option 1</a>
+                        <a aria-label="ссылка" href="#">Option 2</a>
+                        <a aria-label="ссылка" href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropdown__text">Серия</span>
+                    <button aria-label="кнопка" class="dropdown-btn">WizMind <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_46_267)">
+                        <path d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button>
+                    <div class="dropdown-content">
+                        <a aria-label="ссылка" href="#">Option 1</a>
+                        <a aria-label="ссылка" href="#">Option 2</a>
+                        <a aria-label="ссылка" href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropdown__text">Категория продукции</span>
+                    <button aria-label="кнопка" class="dropdown-btn">IP-Камеры <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_46_267)">
+                        <path d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button>
+                    <div class="dropdown-content">
+                        <a aria-label="ссылка" href="#">Option 1</a>
+                        <a aria-label="ссылка" href="#">Option 2</a>
+                        <a aria-label="ссылка" href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropdown__text">Категория продукции</span>
+                    <button aria-label="кнопка" class="dropdown-btn">IP-Камеры <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_46_267)">
+                        <path d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button>
+                    <div class="dropdown-content">
+                        <a aria-label="ссылка" href="#">Option 1</a>
+                        <a aria-label="ссылка" href="#">Option 2</a>
+                        <a aria-label="ссылка" href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropdown__text">Серия</span>
+                    <button aria-label="кнопка" class="dropdown-btn">WizMind <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_46_267)">
+                        <path d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button>
+                    <div class="dropdown-content">
+                        <a aria-label="ссылка" href="#">Option 1</a>
+                        <a aria-label="ссылка" href="#">Option 2</a>
+                        <a aria-label="ссылка" href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropdown__text">Категория продукции</span>
+                    <button aria-label="кнопка" class="dropdown-btn">IP-Камеры <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_46_267)">
+                        <path d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button>
+                    <div class="dropdown-content">
+                        <a aria-label="ссылка" href="#">Option 1</a>
+                        <a aria-label="ссылка" href="#">Option 2</a>
+                        <a aria-label="ссылка" href="#">Option 3</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <span class="dropdown__text">Категория продукции</span>
+                    <button aria-label="кнопка" class="dropdown-btn">IP-Камеры <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_46_267)">
+                        <path d="M1.25 1.91666L5 5.75L8.83333 1.91666L10 3.08333L5 8.08333L-1.00467e-06 3.08333L1.25 1.91666Z" fill="white"/>
+                        </g>
+                        <defs>
+                        <clipPath>
+                        <rect width="10" height="10" fill="white" transform="translate(10) rotate(90)"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                        </button>
+                    <div class="dropdown-content">
+                        <a aria-label="ссылка" href="#">Option 1</a>
+                        <a aria-label="ссылка" href="#">Option 2</a>
+                        <a aria-label="ссылка" href="#">Option 3</a>
+                    </div>
+                </div>
+            </div>
+            <div class="aside__filter">
+                <input type="text" class="aside__input" placeholder="Фильтр">
+                <svg class="aside__icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_91_924)">
+                    <path d="M14.8998 0.0990146C14.8252 0.0240538 14.725 -0.00422688 14.6276 0.00497285H0.374463C0.277014 -0.00388615 0.17718 0.0243945 0.10256 0.0990146C0.0718942 0.12968 0.0497467 0.165457 0.0333916 0.203278C0.0132885 0.246892 0 0.294594 0 0.345704C0 0.445197 0.0439543 0.532765 0.1121 0.594778L5.11096 7.59305V14.6332C5.10824 14.685 5.11608 14.7368 5.1372 14.7852C5.18797 14.9092 5.30927 14.9968 5.4517 14.9968C5.55494 14.9968 5.64421 14.9484 5.7069 14.8762L9.78886 10.8034C9.86621 10.7261 9.89347 10.6218 9.8812 10.5213V7.59476L14.8998 0.58149C15.0334 0.448264 15.0334 0.23224 14.8998 0.0990146ZM9.2965 7.25368C9.22529 7.3249 9.19497 7.41894 9.19974 7.5123V10.4266L5.79243 13.826V7.5123C5.7972 7.41928 5.76687 7.3249 5.69566 7.25368L1.00482 0.686435H13.9962L9.2965 7.25368Z" fill="#939393"/>
+                    </g>
+                    <defs>
+                    <clipPath>
+                    <rect width="15" height="15" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    
+            </div>
+        </aside>
+        <main>
+            <section class="catalog">
+                <h1 class="catalog__title title">Каталог продукции</h1>
+                <div class="catalog__grid">
+                    <div class="hits__card card hit">
+                        <button class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits2.webp" alt="">
+                       </a>
+                        <div class="card__block">
+                            <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ35220S-IRA-N</a>
+                        <div class="card__prices">
+                            <span class="card__old-price">227 900 ₽</span>
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__price">227 900 ₽</span>
+                        </div>
+                        <a href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                        </div>
+                    </div>
+                    <div class="hits__card card new sale hit">
+                        <button class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits3.webp" alt="">
+                       </a>
+                        <div class="card__block">
+                        <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ12240-IRB-N</a>
+                        <div class="card__prices">
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__old-price">231 900 ₽</span>
+                        </div>
+                        <a href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                       </div>
+                    </div>
+                    <div class="hits__card card new sale">
+                        <button class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits1.webp" alt="">
+                       </a>
+                        
+                        <div class="card__block">
+                            <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ12240-IRB-N</a>
+                        <div class="card__prices">
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__old-price">231 900 ₽</span>
+                        </div>
+                        <a href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                        </div>
+                    </div>
+                    <div class="hits__card card hit">
+                        <button class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits2.webp" alt="">
+                       </a>
+                        <div class="card__block">
+                            <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ35220S-IRA-N</a>
+                        <div class="card__prices">
+                            <span class="card__old-price">227 900 ₽</span>
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__price">227 900 ₽</span>
+                        </div>
+                        <a href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                        </div>
+                    </div>
+                    <div class="hits__card card new sale hit">
+                        <button class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits3.webp" alt="">
+                       </a>
+                        <div class="card__block">
+                        <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ12240-IRB-N</a>
+                        <div class="card__prices">
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__old-price">231 900 ₽</span>
+                        </div>
+                        <a href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                       </div>
+                    </div>
+                    <div class="hits__card card new sale">
+                        <button class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits1.webp" alt="">
+                       </a>
+                        
+                        <div class="card__block">
+                            <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ12240-IRB-N</a>
+                        <div class="card__prices">
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__old-price">231 900 ₽</span>
+                        </div>
+                        <a href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                        </div>
+                    </div>
+                    <div class="hits__card card hit">
+                        <button  class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits2.webp" alt="">
+                       </a>
+                        <div class="card__block">
+                            <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ35220S-IRA-N</a>
+                        <div class="card__prices">
+                            <span class="card__old-price">227 900 ₽</span>
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__price">227 900 ₽</span>
+                        </div>
+                        <a  href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                        </div>
+                    </div>
+                    <div class="hits__card card new sale hit">
+                        <button class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits3.webp" alt="">
+                       </a>
+                        <div class="card__block">
+                        <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ12240-IRB-N</a>
+                        <div class="card__prices">
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__old-price">231 900 ₽</span>
+                        </div>
+                        <a  href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                       </div>
+                    </div>
+                    <div class="hits__card card new sale">
+                        <button  class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits1.webp" alt="">
+                       </a>
+                        
+                        <div class="card__block">
+                            <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ12240-IRB-N</a>
+                        <div class="card__prices">
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__old-price">231 900 ₽</span>
+                        </div>
+                        <a  href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                        </div>
+                    </div>
+                    <div class="hits__card card hit">
+                        <button  class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits2.webp" alt="">
+                       </a>
+                        <div class="card__block">
+                            <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ35220S-IRA-N</a>
+                        <div class="card__prices">
+                            <span class="card__old-price">227 900 ₽</span>
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__price">227 900 ₽</span>
+                        </div>
+                        <a  href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                        </div>
+                    </div>
+                    <div class="hits__card card new sale hit">
+                        <button  class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits3.webp" alt="">
+                       </a>
+                        <div class="card__block">
+                        <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ12240-IRB-N</a>
+                        <div class="card__prices">
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__old-price">231 900 ₽</span>
+                        </div>
+                        <a  href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                       </div>
+                    </div>
+                    <div class="hits__card card new sale">
+                        <button  class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits1.webp" alt="">
+                       </a>
+                        
+                        <div class="card__block">
+                            <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ12240-IRB-N</a>
+                        <div class="card__prices">
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__old-price">231 900 ₽</span>
+                        </div>
+                        <a href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                        </div>
+                    </div>
+                    <div class="hits__card card hit">
+                        <button  class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits2.webp" alt="">
+                       </a>
+                        <div class="card__block">
+                            <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ35220S-IRA-N</a>
+                        <div class="card__prices">
+                            <span class="card__old-price">227 900 ₽</span>
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__price">227 900 ₽</span>
+                        </div>
+                        <a href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                        </div>
+                    </div>
+                    <div class="hits__card card new sale hit">
+                        <button  class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits3.webp" alt="">
+                       </a>
+                        <div class="card__block">
+                        <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ12240-IRB-N</a>
+                        <div class="card__prices">
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__old-price">231 900 ₽</span>
+                        </div>
+                        <a href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                       </div>
+                    </div>
+                    <div class="hits__card card new sale">
+                        <button  class="card__favorites" aria-label="В избранное">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_149)">
+                                <path d="M4.37592 1.08887C3.38569 1.24121 2.50092 1.68652 1.80366 2.38965C0.625924 3.57031 0.236275 5.11133 0.690377 6.7959C1.02729 8.04395 1.9062 9.59961 3.01362 10.9121C3.57905 11.5801 4.42573 12.4121 5.63569 13.4873C6.23042 14.0176 6.91596 14.5508 7.26753 14.7588C7.6601 14.9932 8.25776 14.999 8.68549 14.7764C9.02241 14.6035 9.92768 13.959 10.5048 13.4814C11.9052 12.3242 13.4609 10.5313 14.372 9.02539C14.6181 8.6211 14.9785 7.87695 15.1162 7.48438C15.6933 5.8584 15.6113 4.39356 14.873 3.2041C14.2314 2.16699 13.206 1.44629 11.9667 1.15625C11.6445 1.08008 11.5712 1.07422 11.0175 1.07422C10.3701 1.07422 10.0771 1.11523 9.58198 1.2793C9.11909 1.43457 8.48628 1.78027 8.15229 2.06152C8.08198 2.12305 8.01167 2.16992 7.99409 2.16992C7.97944 2.16992 7.9062 2.11719 7.83003 2.05566C7.32026 1.63086 6.60542 1.29395 5.89643 1.1416C5.57124 1.07129 4.68354 1.04199 4.37592 1.08887ZM5.5976 2.24316C6.08979 2.33105 6.5937 2.54785 7.00092 2.84375C7.11518 2.92578 7.32905 3.12207 7.47846 3.28027C7.78315 3.59961 7.84174 3.64356 8.00288 3.64063C8.15815 3.6377 8.23725 3.58789 8.41596 3.38281C9.08979 2.60645 9.98921 2.19336 11.0175 2.19043C12.6523 2.1875 14.1025 3.39453 14.331 4.95313C14.3779 5.28418 14.3515 5.94336 14.2724 6.32129C13.9853 7.7041 13.121 9.13672 11.4248 11.0322C10.6162 11.9404 9.56733 12.8486 8.52729 13.5459C8.1435 13.8037 8.04096 13.8447 7.89155 13.792C7.67768 13.7188 6.97163 13.168 6.2392 12.5088C4.73628 11.1523 4.08881 10.4873 3.46772 9.66699C2.61811 8.54492 2.00874 7.37891 1.75385 6.38867C1.64838 5.98145 1.61323 5.375 1.66889 4.98535C1.7685 4.31152 2.12299 3.64942 2.65913 3.13379C3.456 2.36914 4.51655 2.0498 5.5976 2.24316Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white" transform="translate(0.5 0.5)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </button>
+                        <div class="card__banners">
+                            <span class="card__new">
+                                Новое
+                            </span>
+                            <span class="card__hit">
+                                Хит
+                            </span>
+                        </div>
+                        <a class="card__img" href="#">
+                        <img src="./img/hits1.webp" alt="">
+                       </a>
+                        
+                        <div class="card__block">
+                            <span class="card__text">IP-камеры</span>
+                        <a href="#" class="card__subtitle">IP-камера DAHUA DH-PTZ12240-IRB-N</a>
+                        <div class="card__prices">
+                            <span class="card__new-price">227 900 ₽</span>
+                            <span class="card__old-price">231 900 ₽</span>
+                        </div>
+                        <a href="#" class="card__link" aria-label="Подробнее">
+                            Подробнее 
+                            <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_53)">
+                                <path d="M11.354 0.647003L10.646 1.353L13.786 4.5H0V5.5H13.786L10.646 8.647L11.354 9.353L15.698 5L11.354 0.647003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15.698" height="8.706" fill="white" transform="translate(0 0.647003)"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </a>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="catalog__pagination">
+                    <button aria-label="кнопка"  class="catalog__page catalog__page_active">1</button>
+                    <button aria-label="кнопка" class="catalog__page">2</button>
+                    <button aria-label="кнопка" class="catalog__page">3</button>
+                    <button aria-label="кнопка" class="catalog__page">4</button>
+                    <button aria-label="кнопка" class="catalog__page">5</button>
+                </div>
+            </section>
+        </main>
+    </div>
+   </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__flex">
+                <nav class="footer__nav">
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">О компании</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Новости</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Партнерам</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Вакансии</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Политика конфиденциальности</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Персональные данные</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Правила продаж</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Правила пользования сайта</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Как оформить заказ</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Способы оплаты</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Кредиты</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Доставка</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Статус заказа</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Обмен, возврат, гарантия</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Проверка статуса ремонта</a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Юридическим лицам</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Проверка счета</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Корпоративные отделы</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Подарочные карты</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Бонусная программа</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Помощь</a>
+                        </li>
+                        <li class="footer__item">
+                            <a aria-label="ссылка" class="footer__link" href="#">Обратная связь</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__contacts">
+                    <a aria-label="ссылка" class="footer__tel" href="tel:+79990000000">+7 (999) 000 00 00</a>
+                    <a aria-label="ссылка" class="footer__mail" href="mailto:support@dahua.com">support@dahua.com</a>
+                    <div class="footer__socials">
+                        <a aria-label="ссылка" href="#">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="25" height="25" rx="12.5" fill="#27A6E5"/>
+                                <path d="M17.5 7.87639L15.6216 17.6827C15.6216 17.6827 15.3588 18.3626 14.6368 18.0365L10.3029 14.5954L10.2828 14.5852C10.8682 14.0409 15.4077 9.81416 15.6062 9.62258C15.9133 9.32585 15.7226 9.14921 15.366 9.37335L8.6605 13.7831L6.07352 12.8817C6.07352 12.8817 5.66641 12.7318 5.62725 12.4057C5.58756 12.0791 6.08692 11.9024 6.08692 11.9024L16.6332 7.61809C16.6332 7.61809 17.5 7.22371 17.5 7.87639Z" fill="#FEFEFE"/>
+                                </svg>
+                                
+                        </a>
+                        <a aria-label="ссылка" href="#">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="25" height="25" rx="12.5" fill="#0077FF"/>
+                                <path d="M13.1141 16.875C8.41622 16.875 5.73665 13.5905 5.625 8.125H7.97822C8.05551 12.1365 9.79037 13.8357 11.1645 14.1861V8.125H13.3803V11.5847C14.7373 11.4358 16.1629 9.85923 16.6439 8.125H18.8597C18.6785 9.02442 18.3172 9.87603 17.7985 10.6266C17.2798 11.3771 16.6148 12.0104 15.8452 12.4869C16.7043 12.9222 17.4631 13.5384 18.0716 14.2948C18.68 15.0512 19.1243 15.9306 19.375 16.875H16.9359C16.7108 16.0548 16.2534 15.3205 15.6209 14.7643C14.9884 14.208 14.209 13.8545 13.3803 13.7481V16.875H13.1141Z" fill="white"/>
+                                </svg>
+                                
+                                
+                        </a>
+                        <a aria-label="ссылка" href="#">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="25" height="25" rx="12.5" fill="#48C95F"/>
+                                <path d="M17.4543 7.53906C16.2195 6.30859 14.5732 5.625 12.8354 5.625C9.22256 5.625 6.29573 8.54167 6.29573 12.1419C6.29573 13.2812 6.61585 14.4206 7.16463 15.3776L6.25 18.75L9.72561 17.8385C10.686 18.3398 11.7378 18.6133 12.8354 18.6133C16.4482 18.6133 19.375 15.6966 19.375 12.0964C19.3293 10.4102 18.689 8.76953 17.4543 7.53906ZM15.9909 14.4661C15.8537 14.8307 15.2134 15.1953 14.8933 15.2409C14.6189 15.2865 14.253 15.2865 13.8872 15.1953C13.6585 15.1042 13.3384 15.013 12.9726 14.8307C11.3262 14.1471 10.2744 12.5065 10.1829 12.3698C10.0915 12.2786 9.49695 11.5039 9.49695 10.6836C9.49695 9.86328 9.90854 9.4987 10.0457 9.31641C10.1829 9.13411 10.3659 9.13411 10.503 9.13411C10.5945 9.13411 10.7317 9.13411 10.8232 9.13411C10.9146 9.13411 11.0518 9.08854 11.189 9.40755C11.3262 9.72656 11.6463 10.5469 11.6921 10.5924C11.7378 10.6836 11.7378 10.7747 11.6921 10.8659C11.6463 10.957 11.6006 11.0482 11.5091 11.1393C11.4177 11.2305 11.3262 11.3672 11.2805 11.4128C11.189 11.5039 11.0976 11.5951 11.189 11.7318C11.2805 11.9141 11.6006 12.4154 12.1037 12.8711C12.7439 13.418 13.247 13.6003 13.4299 13.6914C13.6128 13.7826 13.7043 13.737 13.7957 13.6458C13.8872 13.5547 14.2073 13.1901 14.2988 13.0078C14.3902 12.8255 14.5274 12.8711 14.6646 12.9167C14.8018 12.9622 15.625 13.3724 15.7622 13.4635C15.9451 13.5547 16.0366 13.6003 16.0823 13.6458C16.128 13.7826 16.128 14.1016 15.9909 14.4661Z" fill="white"/>
+                                </svg>
+                                
+                                
+                        </a>
+                    </div>
+                    <span class="footer__text">Следите за новинками и акциями:</span>
+                    <form action="#" class="footer__form">
+                        <div class="footer__relative">
+                            <input type="email" class="footer__input" placeholder="Ваш email">
+                            <svg class="footer__icon" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_45_234)">
+                                <path d="M13.6793 3.73019C13.6517 3.69316 13.6171 3.66194 13.5774 3.63831C13.5377 3.61468 13.4938 3.5991 13.4481 3.59246C13.4023 3.58582 13.3558 3.58826 13.311 3.59962C13.2662 3.61099 13.2242 3.63106 13.1871 3.6587L7.51644 7.89152C7.49616 7.90673 7.47149 7.91495 7.44613 7.91495C7.42077 7.91495 7.3961 7.90673 7.37582 7.89152L1.81644 3.63995C1.77974 3.61195 1.73788 3.59144 1.69325 3.57961C1.64862 3.56778 1.6021 3.56485 1.55634 3.571C1.51059 3.57715 1.46649 3.59225 1.42656 3.61544C1.38664 3.63863 1.35168 3.66946 1.32367 3.70616C1.29566 3.74287 1.27516 3.78473 1.26333 3.82936C1.25149 3.87398 1.24857 3.92051 1.25472 3.96626C1.26087 4.01202 1.27597 4.05612 1.29916 4.09604C1.32235 4.13597 1.35318 4.17093 1.38988 4.19894L5.76097 7.5423L1.43793 10.8001C1.40069 10.8279 1.36928 10.8627 1.3455 10.9026C1.32172 10.9426 1.30604 10.9868 1.29935 11.0327C1.29266 11.0787 1.29509 11.1256 1.3065 11.1706C1.31791 11.2156 1.33808 11.258 1.36586 11.2952C1.39363 11.3325 1.42848 11.3639 1.46839 11.3877C1.50831 11.4114 1.55251 11.4271 1.59849 11.4338C1.64447 11.4405 1.69131 11.4381 1.73635 11.4267C1.78138 11.4152 1.82373 11.3951 1.86097 11.3673L6.34105 7.98527L6.94808 8.45402C7.08963 8.56236 7.26261 8.62165 7.44085 8.62292C7.6191 8.62419 7.7929 8.56737 7.93597 8.46105L8.57347 7.98527L13.1063 11.3673C13.1433 11.3949 13.1854 11.415 13.2302 11.4263C13.2749 11.4377 13.3215 11.4401 13.3672 11.4335C13.4129 11.4269 13.4568 11.4113 13.4965 11.3877C13.5362 11.364 13.5709 11.3328 13.5985 11.2958C13.6261 11.2588 13.6462 11.2167 13.6575 11.1719C13.6689 11.1272 13.6713 11.0806 13.6647 11.0349C13.658 10.9892 13.6425 10.9453 13.6188 10.9056C13.5952 10.8659 13.564 10.8312 13.527 10.8036L9.16058 7.54113L13.6079 4.21886C13.6816 4.16316 13.7305 4.08065 13.7439 3.98919C13.7572 3.89773 13.7341 3.80468 13.6793 3.73019Z" fill="#939393"/>
+                                <path d="M13.2422 2.22656H1.75781C1.29161 2.22656 0.844505 2.41176 0.514851 2.74141C0.185198 3.07107 0 3.51817 0 3.98438L0 11.0156C0 11.4818 0.185198 11.9289 0.514851 12.2586C0.844505 12.5882 1.29161 12.7734 1.75781 12.7734H13.2422C13.7084 12.7734 14.1555 12.5882 14.4851 12.2586C14.8148 11.9289 15 11.4818 15 11.0156V3.98438C15 3.51817 14.8148 3.07107 14.4851 2.74141C14.1555 2.41176 13.7084 2.22656 13.2422 2.22656ZM14.2969 11.0156C14.2969 11.2953 14.1858 11.5636 13.988 11.7614C13.7902 11.9592 13.5219 12.0703 13.2422 12.0703H1.75781C1.47809 12.0703 1.20983 11.9592 1.01204 11.7614C0.814244 11.5636 0.703125 11.2953 0.703125 11.0156V3.98438C0.703125 3.70465 0.814244 3.43639 1.01204 3.2386C1.20983 3.04081 1.47809 2.92969 1.75781 2.92969H13.2422C13.5219 2.92969 13.7902 3.04081 13.988 3.2386C14.1858 3.43639 14.2969 3.70465 14.2969 3.98438V11.0156Z" fill="#939393"/>
+                                </g>
+                                <defs>
+                                <clipPath>
+                                <rect width="15" height="15" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </div>
+                        <button aria-label="кнопка" class="footer__btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer__down">
+            <div class="container">
+                <span class="footer__text-2">© 2002–2024 Компания Dahua. Администрация Сайта не несет ответственности за размещаемые Пользователями материалы (в т.ч. информацию и изображения), их содержание и качество.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
