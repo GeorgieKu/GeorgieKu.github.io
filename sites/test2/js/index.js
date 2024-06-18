@@ -140,4 +140,4 @@ var swiper3 = new Swiper(".product__swiper-2", {
     },
   });
 
-  
+  new SimpleBar(document.getElementById('myElement'));

@@ -114,6 +114,7 @@ button {
 
 .header {
   padding: 15px 0 0;
+  /* Стили для изменения размера бегунка */
 }
 .header__flex {
   display: flex;
@@ -335,13 +336,22 @@ button {
   padding: 13px 19px;
   max-height: 230px;
   overflow: auto;
-  scrollbar-color: red #EBEBEB; /* Цвет бегунка и дорожки */
 }
-.header .dropdown::-webkit-scrollbar-track {
-  background: #E60013;
+.header .menu__dropdown {
+  height: 250px; /* Высота бегунка для горизонтального скроллбара */
 }
-.header .dropdown::-webkit-scrollbar-thumb {
-  background: #E60013; /* Цвет бегунка */
+.header .simplebar-track.simplebar-vertical {
+  top: 23px;
+  bottom: 14px;
+  width: 2px;
+  right: 6px;
+}
+.header .simplebar-track {
+  background: #EBEBEB;
+}
+.header .simplebar-scrollbar {
+  background-color: #E60013;
+  max-height: 34px;
 }
 .header .dropdown__link {
   text-transform: uppercase;
