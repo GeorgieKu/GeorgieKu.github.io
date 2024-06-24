@@ -1,0 +1,212 @@
+@font-face {
+    font-family: 'Roboto-Light';
+    font-weight: 300;
+    src: url('../fonts/Roboto-Light.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto-Medium';
+    font-weight: 500;
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #FFFFFF;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 375px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+
+}
+
+:focus-visible {
+    outline: none;
+}
+
+p {
+    margin: 0;
+
+}
+
+img {
+    max-width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hero {
+    background-image: url('../img/hero-1920.webp'); 
+    background-size: 100% 100%; 
+    min-height: 100vh;
+}
+
+.title {
+    font-family: Roboto-Medium;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 93.75px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 12px;
+    padding-top: 57px;
+
+}
+
+.link {
+    display: block;
+    font-family: Roboto-Light;
+    font-size: 55px;
+    font-weight: 300;
+    line-height: 64.45px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
+.mobile {
+    display: none;
+}
+
+/* Медиа-запрос для Retina-дисплеев */
+@media only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi) {
+    .hero {
+        background-image: url('../img/mac/hero-1920.webp'); 
+    }
+}
+
+@media(max-width: 1728px) {
+    .title {
+        font-size: 70px;
+    }
+    .link {
+        font-size: 50px;
+    }
+    .hero {
+        background-image: url(../img/hero-1728.webp);
+    }
+}
+
+@media(max-width: 1512px) {
+    .title {
+        padding-top: 47px;
+        font-size: 62px;    
+        line-height: 100%;
+    }
+    .link {
+        font-size: 40px;
+    }
+    .hero {
+        background-image: url(../img/hero-1728.webp);
+    }
+}
+
+@media(max-width: 1280px) {
+    .title {
+        padding-top: 47px;
+        font-size: 49px;   
+        line-height: 100%; 
+    }
+    .hero {
+        background-image: url(../img/hero-1280.webp);
+    }
+}
+
+@media(max-width: 1024px) {
+    .title {
+        padding-top: 26px;
+        font-size: 45px;    
+        line-height: 100%;
+    }
+    .link{
+        font-size: 28px;    
+    }
+    .hero {
+        background-image: url(../img/hero-1024.webp);
+    }
+}
+
+@media(max-width: 576px) {
+    .hero {
+        background: linear-gradient(180deg, #015B4F 0%, rgba(2, 45, 36, 0.95) 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+        margin-top: auto;
+        margin-bottom: auto;
+        font-family: Roboto-Medium;
+        font-size: 45px;
+        font-weight: 500;
+        line-height: 52.73px;
+        text-align: left;
+        color: #FFFFFF;
+
+    }
+    .title {
+        display: none;
+    }
+    .link {
+        display: none;
+    }
+}
