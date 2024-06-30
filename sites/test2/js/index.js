@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   }
   
-  document.addEventListener('DOMContentLoaded', function() {
+
       let toggleButtons = document.querySelectorAll('.acc');
       let contents = document.querySelectorAll('.content');
       
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
           let toggleArrow = toggleButton.querySelector('.about__squad');
           openAcc(toggleButton, contents[index], toggleArrow);
       });
-  });
+  
 
     var swiper = new Swiper(".projects__swiper-2", {
         direction: 'vertical',
