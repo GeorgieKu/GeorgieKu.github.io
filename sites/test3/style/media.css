@@ -11,10 +11,19 @@
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .contacts__right {
+    max-width: unset;
+  }
 }
 @media (max-width: 768px) {
   .requisites__flex {
     flex-direction: column;
+  }
+  .requisites .left {
+    max-width: unset;
+  }
+  .requisites .right {
+    max-width: unset;
   }
 }
 @media (max-width: 576px) {
@@ -115,10 +124,18 @@
   .adress__links {
     flex-wrap: wrap;
   }
-  .search__input {
+  .header .search__input {
     margin-top: 40px;
     height: 34px;
-    font-size: 32px;
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .header .search__input::-moz-placeholder {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .header .search__input::placeholder {
+    font-size: 24px;
     line-height: 34px;
   }
 }/*# sourceMappingURL=media.css.map */
