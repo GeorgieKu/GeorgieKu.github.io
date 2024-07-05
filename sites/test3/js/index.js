@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const header = document.getElementById('header');
     const burger = document.getElementById('burger');
     const search = document.getElementById('search');
+    let lastScrollTop = 0;
 
     function toggleHeader() {
         console.log('toggleHeader triggered');
