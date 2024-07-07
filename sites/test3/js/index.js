@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const header = document.getElementById('header');
     const burger = document.getElementById('burger');
     const search = document.getElementById('search');
+    const openMenu = document.getElementById('openMenu');
     let lastScrollTop = 0;
 
     function toggleHeader() {
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     burger.addEventListener("click", toggleHeader);
+    openMenu.addEventListener("click", toggleHeader);
     search.addEventListener('click', function() {
         console.log('search click triggered');
         if (header.classList.contains('search-open')) {
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScrollTop = scrollTop;
     });
 
- 
+  
         function openAcc(toggleButton, content) {
             toggleButton.addEventListener('click', function() {
                 content.classList.toggle('open');
@@ -162,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 numberBlocksObserver.observe(numberBlocks[i]);
             }
             
-         
+          
             
             window.addEventListener('scroll', () => {
                 const scrollPosition = window.scrollY;
@@ -175,7 +177,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 spacerImg.style.transform = `scale(${scaleFactor})`;
             });
             
-    
+            
 
     
 })
