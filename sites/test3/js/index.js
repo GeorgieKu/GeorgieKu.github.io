@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScrollTop = scrollTop;
     });
 
-    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+ 
         function openAcc(toggleButton, content) {
             toggleButton.addEventListener('click', function() {
                 content.classList.toggle('open');
@@ -162,8 +162,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 numberBlocksObserver.observe(numberBlocks[i]);
             }
             
-            // Добавляем эффект масштабирования изображения при прокрутке
-            let lastScrollTop = 0;
+         
             
             window.addEventListener('scroll', () => {
                 const scrollPosition = window.scrollY;
@@ -176,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 spacerImg.style.transform = `scale(${scaleFactor})`;
             });
             
-    }
+    
 
     
 })
