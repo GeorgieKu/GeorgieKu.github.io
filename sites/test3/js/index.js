@@ -27,7 +27,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     burger.addEventListener("click", toggleHeader);
-    openMenu.addEventListener("click", toggleHeader);
+
+    if(openMenu) {
+        openMenu.addEventListener("click", toggleHeader);
+    }
+    
     search.addEventListener('click', function() {
         console.log('search click triggered');
         if (header.classList.contains('search-open')) {
@@ -78,25 +82,29 @@ document.addEventListener("DOMContentLoaded", function() {
             let overlay = document.getElementById('overlay');
             let closeBtn = document.getElementById('closeBtn');
             let video = document.querySelector('.modal video')
+
+            if(openModal) {
+                openModal.addEventListener('click', function() {
+                    modal.style.display = 'block'
+                    overlay.style.display = 'block'
+                    video.play()
+        
+                })
+        
+                closeBtn.addEventListener('click', function() {
+                    modal.style.display = 'none'
+                    overlay.style.display = 'none'
+                    video.pause()
+                })
+        
+                overlay.addEventListener('click', function() {
+                    modal.style.display = 'none'
+                    overlay.style.display = 'none'
+                    video.pause()
+                })
+            }
     
-            openModal.addEventListener('click', function() {
-                modal.style.display = 'block'
-                overlay.style.display = 'block'
-                video.play()
-    
-            })
-    
-            closeBtn.addEventListener('click', function() {
-                modal.style.display = 'none'
-                overlay.style.display = 'none'
-                video.pause()
-            })
-    
-            overlay.addEventListener('click', function() {
-                modal.style.display = 'none'
-                overlay.style.display = 'none'
-                video.pause()
-            })
+            
           
             const titles = document.querySelectorAll('.spacer__title');
             const texts = document.querySelectorAll('.spacer__text');
@@ -128,7 +136,9 @@ document.addEventListener("DOMContentLoaded", function() {
             });
             
             // Наблюдаем за .spacer
-            spacerObserver.observe(spacer);
+            if(spacer) {
+                spacerObserver.observe(spacer);
+            }
             
             // Наблюдатель для .spacer__text
             const numbersObserver = new IntersectionObserver((entries, observer) => {
@@ -143,8 +153,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 threshold: 0.5
             });
             
-            // Наблюдаем за .numbers
-            numbersObserver.observe(numbersBlock);
+            if(numbersBlock) {
+                numbersObserver.observe(numbersBlock);
+            }
+          
             
             // Наблюдаем каждый блок чисел в обратном порядке (снизу вверх)
             const numberBlocks = document.querySelectorAll('.numbers__block');
@@ -166,6 +178,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
           
             
+           if(spacer) {
             window.addEventListener('scroll', () => {
                 const scrollPosition = window.scrollY;
             
@@ -176,8 +189,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
                 spacerImg.style.transform = `scale(${scaleFactor})`;
             });
+           }
             
-            
+            document.addEventListener('click', function(e) {
+                var map = document.querySelector('#map-wrap iframe')
+                if(e.target.id === 'map-wrap') {
+                  map.style.pointerEvents = 'all'
+                } else {
+                  map.style.pointerEvents = 'none'
+                }
+              })
 
     
 })
