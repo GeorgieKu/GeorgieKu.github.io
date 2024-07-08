@@ -418,6 +418,10 @@ button {
   height: 29px;
 }
 
+.video {
+  width: 100%;
+}
+
 .video__bg {
   position: relative;
   z-index: 2;
@@ -1132,14 +1136,24 @@ button {
 }
 .news-page__link {
   display: block;
-  max-width: 582px;
   width: 100%;
 }
+.news-page__block {
+  padding-top: 125%;
+  width: 100%;
+  position: relative;
+  margin-bottom: 24px;
+}
 .news-page__img {
-  min-height: 727px;
   -o-object-fit: cover;
      object-fit: cover;
-  margin-bottom: 24px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 .news-page__subtitle {
   font-family: "SuisseIntl-Book";
@@ -1200,16 +1214,42 @@ button {
   align-items: baseline;
   gap: 20px;
 }
-.news-content__link {
-  text-decoration: underline;
+.news-content__text-block {
+  max-width: 72%;
 }
 .news-content__flex-2 {
   display: flex;
   align-items: center;
   gap: 40px;
 }
-.news-content__text-2 {
-  max-width: 72%;
+.news-content__flex-2 span {
+  display: block;
+  font-family: "SuisseIntl-Regular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.32px;
+}
+.news-content__flex-2 a {
+  display: block;
+  font-family: "SuisseIntl-Regular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.32px;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+.news-content__flex-2 a:hover {
+  color: #ee7300;
+}
+.news-content__flex-2 p {
+  display: block;
+  font-family: "SuisseIntl-Regular";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: -0.32px;
 }
 
 .pagintaion {

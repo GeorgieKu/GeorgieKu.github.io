@@ -447,6 +447,10 @@ button {
 
     // main 
 
+    .video {
+        width: 100%;
+    }
+
     .video__bg {
         position: relative;
         z-index: 2;
@@ -944,6 +948,7 @@ button {
         &__flex-2 {
             display: flex;
             align-items: center;
+           
         }
         &__link {
             display: block;
@@ -1174,13 +1179,23 @@ button {
         }
         &__link {
             display: block;
-            max-width: 582px;
             width: 100%;
         }
-        &__img {
-            min-height: 727px;
-            object-fit: cover;
+        &__block {
+            padding-top: 125%;
+            width: 100%;
+            position: relative;
             margin-bottom: 24px;
+        }
+        &__img {
+            object-fit: cover;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            position: absolute;
+            width: 100%;
+            height: 100%;
         }
         &__subtitle {
             font-family: 'SuisseIntl-Book';
@@ -1241,16 +1256,43 @@ button {
             align-items: baseline;
             gap: 20px;
         }
-        &__link {
-            text-decoration: underline;
+        &__text-block {
+            max-width: 72%;
         }
         &__flex-2 {
             display: flex;
             align-items: center;
             gap: 40px;
-        }
-        &__text-2 {
-            max-width: 72%;
+            span {
+                display: block;
+                font-family: "SuisseIntl-Regular";
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 140%;
+                letter-spacing: -0.32px;
+            }
+            a {
+                display: block;
+                font-family: "SuisseIntl-Regular";
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 140%;
+                letter-spacing: -0.32px;
+                transition: color 0.3s ease;
+                text-decoration: underline;
+            }
+            a:hover {
+                color: #ee7300;
+            }
+            
+            p {
+                display: block;
+                font-family: "SuisseIntl-Regular";
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 140%;
+                letter-spacing: -0.32px;
+            }
         }
     }
 

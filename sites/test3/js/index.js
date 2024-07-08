@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
     let lastScrollTop = 0;
 
     function toggleHeader() {
-        console.log('toggleHeader triggered');
+      
         header.classList.toggle("open");
     }
 
     function openSearch() {
-        console.log('openSearch triggered');
+
         header.classList.add("search-open");
         header.classList.remove("open");
         burger.removeEventListener('click', toggleHeader);
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function closeSearch() {
-        console.log('closeSearch triggered');
+  
         header.classList.remove("search-open");
         burger.removeEventListener('click', closeSearch);
         burger.addEventListener('click', toggleHeader);
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     search.addEventListener('click', function() {
-        console.log('search click triggered');
+    
         if (header.classList.contains('search-open')) {
             closeSearch();
         } else {
@@ -190,15 +190,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 spacerImg.style.transform = `scale(${scaleFactor})`;
             });
            }
+           var map = document.querySelector('#map-wrap iframe')
+            if (map) {
             
-            document.addEventListener('click', function(e) {
-                var map = document.querySelector('#map-wrap iframe')
-                if(e.target.id === 'map-wrap') {
-                  map.style.pointerEvents = 'all'
-                } else {
-                  map.style.pointerEvents = 'none'
-                }
-              })
+                document.addEventListener('click', function(e) {
+                   
+                    if(e.target.id === 'map-wrap') {
+                      map.style.pointerEvents = 'all'
+                    } else {
+                      map.style.pointerEvents = 'none'
+                    }
+                  })
+            }
 
     
 })
