@@ -58,12 +58,18 @@ document.addEventListener("DOMContentLoaded", function() {
         function openAcc(toggleButton, content) {
             toggleButton.addEventListener('click', function() {
                 content.classList.toggle('open');
+                let plusMinus = document.getElementById('plus-minus')
                 if (content.classList.contains('open')) {
-                    document.getElementById('plus-minus').textContent = '-'
+                    
+                    if (plusMinus) {
+                        plusMinus.textContent = '-'
+                    }
     
                 }
                 else {
-                    document.getElementById('plus-minus').textContent = '+'
+                    if (plusMinus) {
+                        plusMinus.textContent = '+'
+                    }
                 }
                 
             });
@@ -203,5 +209,39 @@ document.addEventListener("DOMContentLoaded", function() {
                   })
             }
 
-    
-})
+            let openInfoBtn = document.querySelectorAll('.open-content ul li');
+
+            openInfoBtn.forEach(function(li) {
+                li.addEventListener('click', function() {
+                    let info = this.querySelector('.open-info');
+                    if (info && !info.classList.contains('openInfo')) {
+                        info.classList.add('openInfo');
+                    }
+                });
+            });
+
+            let openInfoBtn2 = document.querySelectorAll('.open-content ul li');
+
+            openInfoBtn.forEach(function(li) {
+                li.addEventListener('click', function() {
+                    let info = this.querySelector('.open-info');
+                    if (info && !info.classList.contains('openInfo')) {
+                        info.classList.add('openInfo');
+                    }
+                });
+            });
+            
+            let closeIcons = document.querySelectorAll('.closeIcon');
+            
+            closeIcons.forEach(function(closeIcon) {
+                closeIcon.addEventListener('click', function(event) {
+
+                    event.stopPropagation();
+                    
+                    let info = this.closest('li').querySelector('.open-info');
+                    if (info) {
+                        info.classList.remove('openInfo');
+                    }
+                });
+            });
+        });
