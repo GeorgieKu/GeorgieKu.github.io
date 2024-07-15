@@ -95,7 +95,7 @@ modalBtn.addEventListener('click', function() {
     modal.style.display = 'none';
     minerText.textContent = '95%'
     minerText2.textContent = '95%'
-    minerTextCircle.style.backgroundImage = 'url(../img/status-2.svg)'
+    minerTextCircle.style.backgroundImage = 'url(./img/status-2.svg)'
     updateValue2();
     intervalId = setInterval(updateValue2, 1000);
     setTimeout(() => {
