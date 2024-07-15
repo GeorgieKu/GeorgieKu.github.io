@@ -15,11 +15,11 @@
     <section class="hero">
         <div class="container">
            <div class="hero__block">
-            <h1 class="hero__title">Хотите начать зарабатывать 80$в день?</h1>
+            <h1 class="hero__title" id="heroTitle">Хотите начать зарабатывать 80$в день?</h1>
             <img class="hero__img" src="./img/hero.webp" alt="">
             <div class="hero__btns">
-                <button aria-label='button' class="hero__btn" onclick='start()'>Да</button>
-                <button aria-label='button' class="hero__btn hero__btn_bg">Нет</button>
+                <button aria-label='button' class="hero__btn" onclick='start()' id="heroBtn">Да</button>
+                <button aria-label='button' class="hero__btn hero__btn_bg" id="heroBtn2">Нет</button>
             </div>
            </div>
 
@@ -28,7 +28,7 @@
     </section>
     <div class="loader">
         <div class="loader__block">
-            <span class="loader__text">Идет анализ<br> вашего устройства...</span>
+            <span class="loader__text" id="loaderText">Идет анализ<br> вашего устройства...</span>
         <span class="loader__procent" id="loaderProcent">0%</span>
         </div>
             <div id="animation">
@@ -44,10 +44,13 @@
             <div class="miner__block">
                 <div class="miner__card">
                     <div class="miner__flex">
-                        <span class="miner__text">77%</span>
+                        <div class="relative">
+                            <span class="miner__text" id="minerText">50%</span>
+                            <div class="miner__text-circle"></div>
+                        </div>
                         <div class="miner__card-block">
-                            <span class="miner__text-2">77%</span>
-                            <span class="miner__text-3">Мощность вашего телефона</span>
+                            <span class="miner__text-2" id="minerText2">50%</span>
+                            <span class="miner__text-3" id="minerText3">Мощность вашего телефона</span>
                         </div>
                     </div>
                 </div>
@@ -55,13 +58,13 @@
                     <div class="miner__flex">
                         <img loading="lazy" src="./img/bit.svg" alt="">
                         <div class="miner__card-block">
-                            <span class="miner__text-2" id="valuePerDay">0.000000024</span>
-                            <span class="miner__text-3">Доход в день</span>
+                            <span class="miner__text-2" id="valuePerDay">0.0000024</span>
+                            <span class="miner__text-3" id="minerText4">Доход в день</span>
                         </div>
                     </div>
                 </div>
                 <div class="miner__card">
-                    <span class="miner__text-4">Ваш майнер:</span>
+                    <span class="miner__text-4" id="minerText5">Ваш майнер:</span>
                     <h1 class="miner__title">Whatsminer M50S</h1>
                     <div id="animation2"></div>
                     <img loading="lazy" class="miner__img" id="minerImg" src="./img/miner.webp" alt="">
@@ -76,8 +79,8 @@
 <div class="modal" id="modal">
     <div class="modal__body">
         <img loading="lazy"  class="modal__img" src="./img/flash.webp" alt="">
-        <span class="modal__text">Вы можете улучшить майнер!</span>
-        <span class="modal__text-2">Ваш майнер готов к апгрейду, улучшите его, чтобы зарабатывать больше!</span>
+        <span class="modal__text" id="modalText">Вы можете улучшить майнер!</span>
+        <span class="modal__text-2" id="modalText2">Ваш майнер готов к апгрейду, улучшите его, чтобы зарабатывать больше!</span>
         <button aria-label='button' class="modal__btn" id="modalBtn">Улучшить майнер</button>
         <button aria-label='button' class="modal__btn modal__btn_bg" id="modalBtn2">Продолжить майнинг</button>
     </div>
@@ -85,11 +88,12 @@
 <div class="modal" id="modal2">
     <div class="modal__body">
         <img loading="lazy"  class="modal__img" src="./img/btc.webp" alt="">
-        <span class="modal__text">Вы заработали <span id="earnValue"></span> BTC</span>
-        <span class="modal__text-2">Заберите свой майнер прямо сейчас</span>
+        <span class="modal__text" id="modalText3">Вы заработали <span id="earnValue"></span> BTC</span>
+        <span class="modal__text-2" id="modalText4">Заберите свой майнер прямо сейчас</span>
         <button aria-label='button' class="modal__btn" id="modalBtn3">Забрать майнер</button>
     </div>
 </div>
+    <script src="./js/translate.js"></script>
     <script defer src="./js/lottie.js"></script>
     <script defer src="./js/index.js"></script>
     
