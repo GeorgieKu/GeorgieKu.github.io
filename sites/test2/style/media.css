@@ -83,8 +83,10 @@
   }
   .clinic__flex {
     flex-direction: column;
+    padding-left: unset;
   }
   .clinic__block {
+    padding-left: 15px;
     max-width: unset;
   }
   .treatment {
@@ -98,6 +100,9 @@
   }
 }
 @media (max-width: 576px) {
+  .header {
+    padding: 15px 0;
+  }
   .hero__block {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -145,7 +150,10 @@
     overflow-y: hidden;
   }
   .about__flex-2 a {
+    display: block;
     text-wrap: nowrap;
+    min-width: -moz-max-content;
+    min-width: max-content;
   }
   .cards__grid {
     gap: 18px;
