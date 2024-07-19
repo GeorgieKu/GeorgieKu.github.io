@@ -1,156 +1,116 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-  let overlay = document.getElementById('overlay');
-  let callbackBtn = document.getElementById('callBackBtn');
-  let callbackBtn2 = document.getElementById('callBackBtn2');
-  let modal = document.getElementById('modal');
-  let closeBtn = document.getElementById('close');
-  
-
-
     document.getElementById("burger").addEventListener("click", function() {
         document.querySelector("header").classList.toggle("open")
     })
 
-    function openAcc(toggleButton, content, toggleArrow) {
-      toggleButton.addEventListener('click', function() {
-          content.classList.toggle('open');
-          toggleArrow.classList.toggle('rotate');
-          
-      });
-  }
-  
 
-      let toggleButtons = document.querySelectorAll('.acc');
-      let contents = document.querySelectorAll('.content');
-      
-      toggleButtons.forEach((toggleButton, index) => {
-          let toggleArrow = toggleButton.querySelector('.about__squad');
-          openAcc(toggleButton, contents[index], toggleArrow);
-      });
-  
-
-    var swiper = new Swiper(".projects__swiper-2", {
-        direction: 'vertical',
-        spaceBetween: 10,
-        slidesPerView: 3,
-        freeMode: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-          320: {
-            direction: 'horizontal',
+    const swiper = new Swiper('.hero__swiper', {
+        direction: 'horizontal',
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
         },
-          576: {
-            direction: 'vertical',
-          }
-      }
-      });
-      var swiper2 = new Swiper(".projects__swiper-1", {
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next-1",
-          prevEl: ".swiper-button-prev-1",
-        },
-        thumbs: {
-          swiper: swiper,
-        },
+    });
 
-      });
+    const tabs = document.querySelectorAll('.treatment__btn');
+    const tabContents = document.querySelectorAll('.treatment__tab-1, .treatment__tab-2');
 
-      var swiper3 = new Swiper(".projects__swiper-4", {
-        direction: 'vertical',
-        spaceBetween: 10,
-        slidesPerView: 3,
-        freeMode: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-          320: {
-            direction: 'horizontal',
-        },
-          576: {
-            direction: 'vertical',
-          }
-      }
-      });
-      var swiper4 = new Swiper(".projects__swiper-3", {
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next-2",
-          prevEl: ".swiper-button-prev-2",
-        },
-        thumbs: {
-          swiper: swiper3,
-        },
-      });
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const target = tab.getAttribute('data-tab');
 
-      var swiper5 = new Swiper(".projects__swiper-6", {
-        direction: 'vertical',
-        spaceBetween: 10,
-        slidesPerView: 3,
-        freeMode: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-          320: {
-            direction: 'horizontal',
-        },
-          576: {
-            direction: 'vertical',
-          }
-      }
-      });
-      var swiper6 = new Swiper(".projects__swiper-5", {
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next-3",
-          prevEl: ".swiper-button-prev-3",
-        },
-        thumbs: {
-          swiper: swiper5,
-        },
-      });
+            tabs.forEach(btn => btn.classList.remove('treatment__btn_active'));
+            tab.classList.add('treatment__btn_active');
 
-      let formCheck = document.getElementById('formCheck')
-      let checkbox = document.getElementById('checkBox')
-  
-      formCheck.addEventListener('click', function() {
-          checkbox.classList.toggle('checked')
-      });
+            tabContents.forEach(content => {
+                if (content.classList.contains(`treatment__tab-${target}`)) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+        });
+    });
 
-      let formCheck2 = document.getElementById('formCheck2')
-      let checkbox2 = document.getElementById('checkBox2')
-  
-      formCheck2.addEventListener('click', function() {
-          checkbox2.classList.toggle('checked')
-      });
+    document.querySelectorAll('.checker').forEach(function(label) {
+        label.addEventListener('click', function() {
+            var checkbox = label.querySelector('.checkbox');
+            checkbox.classList.toggle('checked');
+        });
+    });
 
-      let formCheck3 = document.getElementById('formCheck3')
-      let checkbox3 = document.getElementById('checkBox3')
-  
-      formCheck3.addEventListener('click', function() {
-          checkbox3.classList.toggle('checked')
-      });
+    let drugBtn1 = document.getElementById('drugBtn1')
+    let drugBtn2 = document.getElementById('drugBtn2')
+    let drugBtn3 = document.getElementById('drugBtn3')
+    let firstRow = document.getElementById('firstRow')
+    let secondRow = document.getElementById('secondRow')
+    let thirdRow = document.getElementById('thirdRow')
+    let tabImage1 = document.getElementById('tabImage-1')
+    let tabImage2 = document.getElementById('tabImage-2')
+    let tabImage3 = document.getElementById('tabImage-3')
 
-    
-      callbackBtn.addEventListener('click', function() {
-        overlay.style.display = 'block';
-        modal.style.display = 'block';
-        modal.style.animation = 'fadeIn .3s ease'
-      })
+    drugBtn1.addEventListener('click', function() {
+        drugBtn1.classList.add('drug__btn_active')
+        drugBtn2.classList.remove('drug__btn_active')
+        drugBtn3.classList.remove('drug__btn_active')
 
-      callbackBtn2.addEventListener('click', function() {
-        overlay.style.display = 'block';
-        modal.style.display = 'block';
-        modal.style.animation = 'fadeIn .3s ease'
-      })
+        firstRow.classList.add('active-row')
+        secondRow.classList.remove('active-row')
+        thirdRow.classList.remove('active-row')
 
-      closeBtn.addEventListener('click', function() {
-        modal.style.animation = 'fadeOut .3s ease';
-        overlay.style.display = 'none';
-      
-        setTimeout(() => {
-            modal.style.display = 'none';
-        }, 300);
-      })
+        tabImage1.classList.add('active-img')
+        tabImage2.classList.remove('active-img')
+        tabImage3.classList.remove('active-img')
+    })
+
+    drugBtn2.addEventListener('click', function() {
+        drugBtn1.classList.remove('drug__btn_active')
+        drugBtn2.classList.add('drug__btn_active')
+        drugBtn3.classList.remove('drug__btn_active')
+
+        firstRow.classList.remove('active-row')
+        secondRow.classList.add('active-row')
+        thirdRow.classList.remove('active-row')
+
+        tabImage1.classList.remove('active-img')
+        tabImage2.classList.add('active-img')
+        tabImage3.classList.remove('active-img')
+    })
+
+    drugBtn3.addEventListener('click', function() {
+        drugBtn1.classList.remove('drug__btn_active')
+        drugBtn2.classList.remove('drug__btn_active')
+        drugBtn3.classList.add('drug__btn_active')
+
+        firstRow.classList.remove('active-row')
+        secondRow.classList.remove('active-row')
+        thirdRow.classList.add('active-row')
+
+        tabImage1.classList.remove('active-img')
+        tabImage2.classList.remove('active-img')
+        tabImage3.classList.add('active-img')
+    })
 
 
+    const drugTabs = document.querySelectorAll('.drug__btn-2');
+    const drugTabContents = document.querySelectorAll('.drug__tab');
+
+    drugTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const tabId = tab.getAttribute('data-tab');
+
+            drugTabs.forEach(t => t.classList.remove('drug__btn-2_active'));
+            tab.classList.add('drug__btn-2_active');
+
+            drugTabContents.forEach(content => {
+                if (content.id === tabId) {
+                    content.classList.add('active');
+                } else {
+                    console.log(content.id)
+                    console.log(tabId)
+                    content.classList.remove('active');
+                }
+            });
+        });
+    });
 })
