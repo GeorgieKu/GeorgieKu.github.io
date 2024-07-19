@@ -6,6 +6,7 @@
   --color-text-ac: #000000;
   --color-text-sc: #68686e;
   --color-base-ac: #007aff;
+  --color-base-hover-ac: #297fdb;
   --color-text-tr: #94949e;
   --color-separator-sc: #00000012;
   --color-bg-gray-pale: #f9f9fb;
@@ -203,6 +204,18 @@ h2 {
   color: var(--color-base-wh);
 }
 
+.menu__link {
+  transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.menu__link:hover {
+  color: var(--color-base-br);
+}
+
+.menu__link:active {
+  opacity: 0.7;
+}
+
 .menu__link_active {
   color: var(--color-base-br);
   position: relative;
@@ -279,6 +292,14 @@ h2 {
   max-width: 116px;
   width: 100%;
   padding: 15px 24px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.hero__btn:hover {
+  color: var(--color-base-br);
+  background-color: var(--color-button-ac-normal);
+}
+.hero__btn:hover .hero__icon {
+  border-left: 12px solid var(--color-base-br);
 }
 .hero__icon {
   width: 0;
@@ -286,6 +307,7 @@ h2 {
   border-top: 7px solid transparent;
   border-left: 12px solid var(--color-text-ac);
   border-bottom: 7px solid transparent;
+  transition: border-color 0.3s ease;
 }
 .hero .swiper-pagination-fraction {
   bottom: 30px;
@@ -338,6 +360,10 @@ h2 {
   text-align: left;
   color: var(--color-base-ac);
   text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.about__flex-2 a:hover {
+  color: var(--color-base-hover-ac);
 }
 .about__img {
   max-width: 607px;
@@ -375,6 +401,11 @@ h4 {
   padding: 10px 16px;
   background-color: var(--color-button-sc-normal);
   border-radius: var(--radiusdf);
+  transition: background-color 0.3s ease;
+}
+
+.gray-button:hover {
+  background-color: var(--color-base-br);
 }
 
 .cards {

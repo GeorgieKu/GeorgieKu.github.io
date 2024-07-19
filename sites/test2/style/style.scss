@@ -5,6 +5,7 @@
     --color-text-ac: #000000;
     --color-text-sc: #68686e;
     --color-base-ac: #007aff;
+    --color-base-hover-ac: #297fdb;
     --color-text-tr: #94949e;
     --color-separator-sc: #00000012;
     --color-bg-gray-pale: #f9f9fb;
@@ -12,6 +13,7 @@
 
     --color-button-sc-normal: #ececf1;
     --color-button-ac-normal: #000000;
+
 
 
     --font-family: 'MuseoSansRegular';
@@ -227,6 +229,15 @@ h2 {
     line-height: 100%;
     color: var(--color-base-wh);
 }
+.menu__link {
+    transition: color .3s ease, opacity .3s ease;
+}
+.menu__link:hover {
+    color: var(--color-base-br);
+}
+.menu__link:active {
+    opacity: 0.7;
+}
 .menu__link_active {
     color: var(--color-base-br);
     position: relative;
@@ -302,13 +313,23 @@ h2 {
         max-width: 116px;
         width: 100%;
         padding: 15px 24px;
+        transition: color .3s ease, background-color .3s ease;
     }
+    &__btn:hover {
+        color: var(--color-base-br);
+        background-color: var(--color-button-ac-normal);
+    }
+    &__btn:hover &__icon {
+        border-left: 12px solid var(--color-base-br);
+    }
+
     &__icon {
         width: 0;
         height: 0;
         border-top: 7px solid transparent;
         border-left: 12px solid var(--color-text-ac);
         border-bottom: 7px solid transparent;
+        transition: border-color .3s ease;
     }
     .swiper-pagination-fraction {
         bottom: 30px;
@@ -363,6 +384,10 @@ h2 {
             text-align: left;
             color: var(--color-base-ac);
             text-decoration: underline;
+            transition: color .3s ease;
+        }
+        a:hover {
+            color: var(--color-base-hover-ac);
         }
     }
     &__img {
@@ -403,6 +428,11 @@ h4 {
     padding: 10px 16px;
     background-color: var(--color-button-sc-normal);
     border-radius: var(--radiusdf);
+    transition: background-color .3s ease;
+}
+
+.gray-button:hover {
+    background-color: var(--color-base-br);
 }
 
 .cards {
