@@ -12,30 +12,25 @@ document.addEventListener("DOMContentLoaded", function() {
         },
     });
 
-    const tabs = document.querySelectorAll('.treatment__btn');
-    const tabContents = document.querySelectorAll('.treatment__tab-1, .treatment__tab-2');
-
-    tabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            const target = tab.getAttribute('data-tab');
-
-            tabs.forEach(btn => btn.classList.remove('treatment__btn_active'));
-            tab.classList.add('treatment__btn_active');
-
-            tabContents.forEach(content => {
-                if (content.classList.contains(`treatment__tab-${target}`)) {
-                    content.classList.add('active');
-                } else {
-                    content.classList.remove('active');
-                }
-            });
-        });
-    });
 
     document.querySelectorAll('.checker').forEach(function(label) {
-        label.addEventListener('click', function() {
-            var checkbox = label.querySelector('.checkbox');
-            checkbox.classList.toggle('checked');
+        label.addEventListener('click', function(event) {
+
+            event.preventDefault();
+            
+            
+            let hiddenCheckbox = label.querySelector('.hidden-checkbox');
+            hiddenCheckbox.checked = !hiddenCheckbox.checked;
+            
+  
+            let checkbox = label.querySelector('.checkbox');
+            if (hiddenCheckbox.checked) {
+                checkbox.classList.add('checked');
+                hiddenCheckbox.setAttribute('checked', 'checked')
+            } else {
+                checkbox.classList.remove('checked');
+                hiddenCheckbox.removeAttribute('checked', 'checked')
+            }
         });
     });
 
@@ -92,25 +87,5 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
 
-    const drugTabs = document.querySelectorAll('.drug__btn-2');
-    const drugTabContents = document.querySelectorAll('.drug__tab');
-
-    drugTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const tabId = tab.getAttribute('data-tab');
-
-            drugTabs.forEach(t => t.classList.remove('drug__btn-2_active'));
-            tab.classList.add('drug__btn-2_active');
-
-            drugTabContents.forEach(content => {
-                if (content.id === tabId) {
-                    content.classList.add('active');
-                } else {
-                    console.log(content.id)
-                    console.log(tabId)
-                    content.classList.remove('active');
-                }
-            });
-        });
-    });
+  
 })

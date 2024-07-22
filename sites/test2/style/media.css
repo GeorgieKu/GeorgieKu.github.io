@@ -11,6 +11,15 @@
   .clinic__flex {
     padding-left: 15px;
   }
+  .container-delete {
+    display: contents;
+  }
+  .menu__link_active::after {
+    display: none;
+  }
+  .tech h3 {
+    font-size: 23px;
+  }
 }
 @media (max-width: 992px) {
   .header__burger-btn {
@@ -18,13 +27,13 @@
   }
   .menu {
     position: absolute;
-    left: -100%;
-    top: 0;
+    top: -37%;
+    left: 0;
     width: 100%;
     background-color: var(--color-base-wh);
     padding: 75px 20px 20px 20px;
     z-index: 2;
-    transition: transform 0.5s;
+    transition: transform 0.25s;
   }
   .menu__list {
     display: block;
@@ -36,7 +45,7 @@
     padding: 10px 0;
   }
   .header.open .menu {
-    transform: translateX(100%);
+    transform: translateY(100%);
   }
   .hero__block {
     max-width: unset;
@@ -70,16 +79,19 @@
   .treatment__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .tech__grid {
+    grid-template-columns: 1fr;
+  }
+  .tech h3 {
+    font-size: 29px;
+  }
 }
 @media (max-width: 768px) {
-  .mb-108 {
+  .mb-bg {
     margin-bottom: 54px;
   }
   .cards__grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-  .tech__grid {
-    grid-template-columns: 1fr;
   }
   .clinic__flex {
     flex-direction: column;
@@ -194,5 +206,14 @@
   }
   .footer__grid {
     grid-template-columns: 1fr;
+  }
+  .company {
+    padding: var(--page-ver-md) 0;
+  }
+  .company p {
+    text-align: center;
+  }
+  .quetions__flex {
+    gap: var(--page-hor-md);
   }
 }/*# sourceMappingURL=media.css.map */
