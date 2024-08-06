@@ -1,35 +1,16 @@
-@media (max-width: 1072px) {
-  .about__flex {
-    flex-direction: column;
+@media (max-width: 1240px) {
+  .container {
+    padding: 0 45px;
   }
-  .about__block {
-    max-width: unset;
-  }
-  .about__img {
-    margin: 0 auto;
-  }
-  .clinic__flex {
-    padding-left: 15px;
-  }
-  .container-delete {
-    display: contents;
-  }
-  .menu__link_active::after {
-    display: none;
-  }
-  .tech h3 {
-    font-size: 23px;
-  }
-}
-@media (max-width: 992px) {
   .header__burger-btn {
     display: block;
   }
   .menu {
     position: absolute;
-    top: -37%;
+    top: -365px;
     left: 0;
     width: 100%;
+    min-height: 365px;
     background-color: var(--color-base-wh);
     padding: 75px 20px 20px 20px;
     z-index: 2;
@@ -47,46 +28,79 @@
   .header.open .menu {
     transform: translateY(100%);
   }
-  .hero__block {
-    max-width: unset;
-    margin-right: auto;
-  }
-  .drug__overflow {
-    overflow: auto;
-  }
-  .drug__table {
-    width: 1000px;
-  }
-  .drug__flex {
-    flex-direction: column-reverse;
-    gap: 24px;
-  }
-  .treatment__flex {
-    flex-direction: column;
-  }
   .company__overflow {
     overflow: auto;
-  }
-  .company__flex {
-    width: 1000px;
-  }
-  .quetions__flex {
-    flex-direction: column;
   }
   .quetions__block {
     max-width: unset;
   }
-  .treatment__grid {
+  .about__img {
+    width: 50%;
+  }
+  .menu__link_active::after {
+    display: none;
+  }
+}
+@media (max-width: 1072px) {
+  .about__flex {
+    flex-direction: column;
+  }
+  .about__block {
+    max-width: unset;
+  }
+  .about__img {
+    margin: 0 auto;
+  }
+  .clinic__flex {
+    padding-left: 15px;
+  }
+  .container-delete {
+    display: contents;
+  }
+  .company__flex {
+    width: 1000px;
+  }
+  .system__flex {
+    flex-direction: column;
+  }
+  .system__img {
+    margin-left: auto;
+  }
+  .system__grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
+  }
+  .system__card a {
+    text-align: center;
+  }
+  .system__card p {
+    text-align: center;
+  }
+  .system__card .btn {
+    margin: auto auto 0;
+  }
+  .info .container {
+    padding: 0 15px;
+  }
+  .info h2 {
+    font-size: 35px;
+    line-height: 110%;
+  }
+  .quetions__flex {
+    flex-direction: column;
+  }
+  .cards__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .tech__grid {
-    grid-template-columns: 1fr;
-  }
-  .tech h3 {
-    font-size: 29px;
+  .spices__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 768px) {
+  .container {
+    padding: 0 30px;
+  }
   .mb-bg {
     margin-bottom: 54px;
   }
@@ -101,17 +115,27 @@
     padding-left: 15px;
     max-width: unset;
   }
-  .treatment {
-    padding-top: unset;
-  }
   .quetions {
     margin-bottom: 100px;
   }
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .info__flex {
+    flex-direction: column;
+  }
+  .info__block {
+    max-width: 100%;
+    min-height: unset;
+  }
+  .about__img {
+    width: 100%;
+  }
 }
 @media (max-width: 576px) {
+  .container {
+    padding: 0 15px;
+  }
   .header {
     padding: 15px 0;
   }
@@ -168,22 +192,11 @@
     min-width: max-content;
   }
   .cards__grid {
+    grid-template-columns: 1fr;
     gap: 18px;
   }
   .cards {
     padding-bottom: 33px;
-  }
-  .drug {
-    padding-bottom: 24px;
-    margin-bottom: 24px;
-  }
-  .treatment__grid {
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-  .treatment__card {
-    min-height: unset;
-    gap: 16px;
   }
   .quetions__form {
     gap: 16px;
@@ -216,10 +229,24 @@
   .quetions__flex {
     gap: var(--page-hor-md);
   }
-  .menu {
-    top: -48%;
+  .promo__flex {
+    flex-direction: column;
   }
-  .header.open .menu {
-    transform: translateY(130%);
+  .spices__grid {
+    grid-template-columns: 1fr;
+  }
+  .system__grid {
+    grid-template-columns: 1fr;
+  }
+  .modal {
+    width: 100%;
+  }
+  .company__flex-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .tooltip:last-child {
+    grid-column: span 2;
   }
 }/*# sourceMappingURL=media.css.map */

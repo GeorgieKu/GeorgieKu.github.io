@@ -34,58 +34,68 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    let drugBtn1 = document.getElementById('drugBtn1')
-    let drugBtn2 = document.getElementById('drugBtn2')
-    let drugBtn3 = document.getElementById('drugBtn3')
-    let firstRow = document.getElementById('firstRow')
-    let secondRow = document.getElementById('secondRow')
-    let thirdRow = document.getElementById('thirdRow')
-    let tabImage1 = document.getElementById('tabImage-1')
-    let tabImage2 = document.getElementById('tabImage-2')
-    let tabImage3 = document.getElementById('tabImage-3')
-
-    drugBtn1.addEventListener('click', function() {
-        drugBtn1.classList.add('drug__btn_active')
-        drugBtn2.classList.remove('drug__btn_active')
-        drugBtn3.classList.remove('drug__btn_active')
-
-        firstRow.classList.add('active-row')
-        secondRow.classList.remove('active-row')
-        thirdRow.classList.remove('active-row')
-
-        tabImage1.classList.add('active-img')
-        tabImage2.classList.remove('active-img')
-        tabImage3.classList.remove('active-img')
-    })
-
-    drugBtn2.addEventListener('click', function() {
-        drugBtn1.classList.remove('drug__btn_active')
-        drugBtn2.classList.add('drug__btn_active')
-        drugBtn3.classList.remove('drug__btn_active')
-
-        firstRow.classList.remove('active-row')
-        secondRow.classList.add('active-row')
-        thirdRow.classList.remove('active-row')
-
-        tabImage1.classList.remove('active-img')
-        tabImage2.classList.add('active-img')
-        tabImage3.classList.remove('active-img')
-    })
-
-    drugBtn3.addEventListener('click', function() {
-        drugBtn1.classList.remove('drug__btn_active')
-        drugBtn2.classList.remove('drug__btn_active')
-        drugBtn3.classList.add('drug__btn_active')
-
-        firstRow.classList.remove('active-row')
-        secondRow.classList.remove('active-row')
-        thirdRow.classList.add('active-row')
-
-        tabImage1.classList.remove('active-img')
-        tabImage2.classList.remove('active-img')
-        tabImage3.classList.add('active-img')
-    })
 
 
+    const tooltips = document.querySelectorAll('.tooltip');
+    let activeTooltip = null;
+
+    tooltips.forEach(tooltip => {
+        const img = tooltip.querySelector('img');
+        const text = tooltip.querySelector('.tooltiptext');
+
+        img.addEventListener('click', function (event) {
+            event.stopPropagation();
+
+            if (activeTooltip && activeTooltip !== text) {
+                activeTooltip.classList.remove('visible');
+            }
+
+            text.classList.toggle('visible');
+            activeTooltip = text.classList.contains('visible') ? text : null;
+        });
+    });
+
+    document.addEventListener('click', function (event) {
+        if (activeTooltip && !event.target.closest('.tooltip')) {
+            activeTooltip.classList.remove('visible');
+            activeTooltip = null;
+        }
+    });
+
+        const modal = document.getElementById('myModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close');
+        const overlay = document.getElementById('overlay')
+
+
+        document.querySelectorAll('.company__cert').forEach(button => {
+            button.addEventListener('click', function() {
+                const largeSrc = button.getAttribute('data-large-src');
+                modalImg.src = largeSrc;
+
+                overlay.style.display = 'block';
+                modal.style.display = 'block';
+            });
+        });
+
+
+        closeBtn.onclick = function() {
+            overlay.style.display = 'none';
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                overlay.style.display = 'none';
+                modal.style.display = 'none';
+            }
+        }
+
+        window.onclick = function(event) {
+            if (event.target === overlay) {
+                overlay.style.display = 'none';
+                modal.style.display = 'none';
+            }
+        }
   
 })
