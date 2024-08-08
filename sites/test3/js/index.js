@@ -9,6 +9,9 @@ let overlay = document.getElementById('overlay');
 let modal = document.getElementById('modal')
 let modalClose = document.getElementById('modalClose');
 let btns = document.querySelectorAll('.btn')
+let modalBtn = document.querySelector('.modal__btn')
+let modalTitle = document.getElementById('modalTitle')
+let modalForm = document.querySelector('.modal__form')
 
 cityChose.addEventListener('click', function() {
     cityModal.style.display = 'block'
@@ -149,7 +152,15 @@ const swiper = new Swiper('.reviews__swiper', {
     setTimeout(() => {
         overlay.style.display = 'none';
         modal.style.display = 'none';
-           body.style.overflow = 'auto'
+        body.style.overflow = 'auto'
+
+         modalTitle.style.display = 'none'
+            modalForm.style.display = 'flex'
     }, 300);
 })
 
+modalBtn.addEventListener('click', function() {
+    event.preventDefault();
+    modalTitle.style.display = 'block'
+    modalForm.style.display = 'none'
+})
