@@ -12,6 +12,8 @@ let btns = document.querySelectorAll('.btn')
 let modalBtn = document.querySelector('.modal__btn')
 let modalTitle = document.getElementById('modalTitle')
 let modalForm = document.querySelector('.modal__form')
+let heroInput = document.querySelector('.hero__input').value
+let modalTextarea = document.querySelector('.modal__textarea')
 
 cityChose.addEventListener('click', function() {
     cityModal.style.display = 'block'
@@ -23,12 +25,12 @@ document.querySelectorAll('.city-modal__btn-2.district').forEach(button => {
     button.addEventListener('click', function() {
         const targetId = this.getAttribute('data-target');
         
-        // Скрываем все списки регионов
+   
         document.querySelectorAll('.modal__list > li > ul').forEach(ul => {
             ul.classList.remove('active');
         });
         
-        // Показываем нужный список регионов
+        
         const targetUl = document.getElementById(targetId);
         if (targetUl) {
             targetUl.classList.add('active');
@@ -40,12 +42,12 @@ document.querySelectorAll('.city-modal__btn-2.region1').forEach(button => {
     button.addEventListener('click', function() {
         const targetId = this.getAttribute('data-target');
         
-        // Скрываем все списки городов
+
         document.querySelectorAll('.cites').forEach(ul => {
             ul.classList.remove('active');
         });
         
-        // Показываем нужный список городов
+     
         const targetUl = document.getElementById(targetId);
         if (targetUl) {
             targetUl.classList.add('active');
@@ -56,24 +58,24 @@ document.querySelectorAll('.city-modal__btn-2.region1').forEach(button => {
 
 document.querySelectorAll('.district').forEach(function(district) {
     district.addEventListener('click', function() {
-        // Убираем класс active-district со всех элементов .district
+
         document.querySelectorAll('.district').forEach(function(el) {
             el.classList.remove('active-district');
         });
         
-        // Добавляем класс active-district к текущему элементу
+   
         this.classList.add('active-district');
     });
 });
 
 document.querySelectorAll('.region1').forEach(function(region1) {
     region1.addEventListener('click', function() {
-        // Убираем класс active-region1 со всех элементов .region1
+    
         document.querySelectorAll('.region1').forEach(function(el) {
             el.classList.remove('active-region1');
         });
         
-        // Добавляем класс active-region1 к текущему элементу
+   
         this.classList.add('active-region1');
     });
 });
@@ -115,6 +117,7 @@ const swiper = new Swiper('.reviews__swiper', {
     loop: true, 
     slideToClickedSlide: true, 
     spaceBetween: 36,
+    autoHeight: true,
 
     navigation: {
         nextEl: '.reviews__btn-next',
@@ -143,9 +146,14 @@ const swiper = new Swiper('.reviews__swiper', {
         overlay.style.display = 'block';
         modal.style.animation = 'scaler .25s ease'
         modal.style.display = 'block';
-           body.style.overflow = 'hidden'
+        body.style.overflow = 'hidden'
     })
   });
+
+  function transferValue() {
+    var heroInputValue = document.querySelector('.hero__input').value; 
+    document.querySelector('.modal__textarea').value = heroInputValue;
+}
 
   modalClose.addEventListener('click', function() {
     modal.style.animation = 'scalerReverse .25s ease forwards'
@@ -159,8 +167,36 @@ const swiper = new Swiper('.reviews__swiper', {
     }, 300);
 })
 
-modalBtn.addEventListener('click', function() {
-    event.preventDefault();
-    modalTitle.style.display = 'block'
-    modalForm.style.display = 'none'
-})
+
+
+function sendFormData(event) {
+    event.preventDefault(); 
+        modalTitle.style.display = 'block'
+        modalForm.style.display = 'none'
+
+    const userText = document.querySelector('.modal__textarea').value;
+    const userDate = document.querySelector('input[type="date"]').value;
+    const userPhone = document.querySelector('input[data="phone"]').value;
+
+    console.log('Phone:', userPhone);
+
+    const telegramToken = '7158661251:AAEx49clSzviscV7xTHMnqwRdthek0kz7OE'; 
+    const chatId = '469972293'; 
+
+    const telegramMessage = `Запрос: ${userText}\nДата: ${userDate}\nТелефон: ${userPhone}`;
+
+    fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            chat_id: chatId,
+            text: telegramMessage,
+        })
+    })
+    .then(response => response.json())
+    document.querySelector('.modal__textarea').value = '';
+    document.querySelector('input[type="date"]').value = '';
+    document.querySelector('input[name="phone"]').value = '';
+}

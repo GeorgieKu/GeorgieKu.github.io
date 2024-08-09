@@ -1243,7 +1243,7 @@
                 <h1>Порой каждому из нас нужен <strong>взрослый!</strong></h1>
                 <form action="#" class="hero__from">
                     <input class="hero__input" type="text" placeholder="Как подать счётчик за воду?">
-                    <button class="btn hero__form-btn" type="submit">
+                    <button class="btn hero__form-btn" type="submit" onclick="transferValue()">
                         Найти взрослого 
                         <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.5312 18.8438C21.1172 19.4688 21.1172 20.4453 20.5312 21.0703C19.9062 21.6562 18.9297 21.6562 18.3047 21.0703L13.6562 16.3828C12.0547 17.4375 10.1016 17.9844 7.99219 17.7109C4.39844 17.2031 1.50781 14.2734 1.03906 10.7188C0.375 5.40625 4.86719 0.914062 10.1797 1.57812C13.7344 2.04688 16.6641 4.9375 17.1719 8.53125C17.4453 10.6406 16.8984 12.5938 15.8438 14.1562L20.5312 18.8438ZM4.08594 9.625C4.08594 12.3984 6.3125 14.625 9.08594 14.625C11.8203 14.625 14.0859 12.3984 14.0859 9.625C14.0859 6.89062 11.8203 4.625 9.08594 4.625C6.3125 4.625 4.08594 6.89062 4.08594 9.625Z" fill="#FEF9F9"/>
@@ -1521,12 +1521,25 @@
         <button class="modal__close" id="modalClose">x</button>
         <div class="modal__body">
             <h2 id="modalTitle">Мы записали ваш запрос, взрослые уже приступили к изучению и скоро с вами свяжутся</h2>
-            <form action="#" class="modal__form">
-                <textarea class="modal__textarea" name="modal__textarea"  placeholder="Введите запрос"></textarea>
-                <input class="modal__input" type="date">
-                <input class="modal__input" type="text" placeholder="Контактный телефон">
-                <button class="btn modal__btn">Отправить</button>
+            <form action="#" class="modal__form" onsubmit="sendFormData(event)">
+                <label for="modal__textarea">
+                    <span>Введите запрос:</span>
+                    <textarea class="modal__textarea" name="modal__textarea" placeholder="Как подать счётчик за воду?" required></textarea>
+                </label>
+                <label for="modal__textarea">
+                    <span>Выберите срок:</span>
+                    <input class="modal__input" type="date" name="date" required placeholder="Введите дату">
+                </label>
+                <label for="modal__textarea">
+                    <span>Введите ваш номер:</span>
+                    <input class="modal__input" type="text" data="phone" name="phone" placeholder="+7 999 999 99 99" required>
+                </label>
+       
+                
+                <button class="btn modal__btn" type="submit">Отправить</button>
             </form>
+        
+            <div id="statusMessage" style="display:none; margin-top: 10px;"></div>
         </div>
     </div>
     <footer class="footer">

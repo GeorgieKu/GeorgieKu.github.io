@@ -275,6 +275,8 @@ h2 {
         max-width: 215px;
         width: 100%;
         background-color: rgba(255, 255, 255, 1);
+        border-radius: 7px;
+        color: rgb(30, 30, 30);
     }
     h2 {
         font-family: Onest;
@@ -521,7 +523,12 @@ h2 {
     p:not(:last-child) {
         margin-bottom: 20px;
     }
+    .swiper-wrapper {
+        align-items: stretch;
+    }
     .swiper-slide {
+        height: auto;
+        display: flex;
         max-width: 460px;
     }
     &__btns {
@@ -626,6 +633,7 @@ h2 {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        width: 100%;
     }
     
     &__textarea {
@@ -637,6 +645,7 @@ h2 {
         border-radius: 7px;
         border: unset;
         border: 1px solid #000;
+        resize: none;
     }
     
     &__input {
@@ -644,11 +653,15 @@ h2 {
         background-color: #fff;
         height: 50px;
         padding-left: 15px;
+        padding-right: 15px;
         border-radius: 7px;
         border: unset;
         border: 1px solid #000;
     }
-    
+    label span {
+        display: block;
+        margin-bottom: 5px;
+    }
 }
 
 @keyframes scaler {

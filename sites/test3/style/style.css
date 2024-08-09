@@ -270,6 +270,8 @@ h2 {
   max-width: 215px;
   width: 100%;
   background-color: rgb(255, 255, 255);
+  border-radius: 7px;
+  color: rgb(30, 30, 30);
 }
 .hero h2 {
   font-family: Onest;
@@ -507,7 +509,12 @@ h2 {
 .reviews p:not(:last-child) {
   margin-bottom: 20px;
 }
+.reviews .swiper-wrapper {
+  align-items: stretch;
+}
 .reviews .swiper-slide {
+  height: auto;
+  display: flex;
   max-width: 460px;
 }
 .reviews__btns {
@@ -609,6 +616,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
 }
 .modal__textarea {
   width: 100%;
@@ -619,15 +627,21 @@ h2 {
   border-radius: 7px;
   border: unset;
   border: 1px solid #000;
+  resize: none;
 }
 .modal__input {
   width: 100%;
   background-color: #fff;
   height: 50px;
   padding-left: 15px;
+  padding-right: 15px;
   border-radius: 7px;
   border: unset;
   border: 1px solid #000;
+}
+.modal label span {
+  display: block;
+  margin-bottom: 5px;
 }
 
 @keyframes scaler {
