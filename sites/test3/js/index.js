@@ -1,7 +1,6 @@
 let cityChose = document.getElementById('cityChose');
 let cityModal = document.getElementById('cityModal');
-let cityModalClose = document.getElementById('cityModalClose');
-let cityModalClose2 = document.getElementById('cityModalClose2');
+let modalClose2 = document.getElementById('modalClose2')
 let body = document.querySelector('body')
 
 
@@ -15,8 +14,12 @@ let modalForm = document.querySelector('.modal__form')
 let heroInput = document.querySelector('.hero__input').value
 let modalTextarea = document.querySelector('.modal__textarea')
 
+let heroBtns = document.querySelectorAll('.hero__btn')
+
 cityChose.addEventListener('click', function() {
+
     cityModal.style.display = 'block'
+    cityModal.style.animation = 'scaler .25s ease'
     overlay.style.display = 'block'
     body.style.overflow = 'hidden'
 })
@@ -84,10 +87,15 @@ let cites = document.querySelectorAll('.cites button')
 
 cites.forEach(function(city) {
     city.addEventListener('click', function() {
+        cityModal.style.animation = 'scalerReverse .25s ease forwards';
         cityChose.textContent = city.textContent;
-        cityModal.style.display = 'none'
-        overlay.style.display = 'none'
-           body.style.overflow = 'auto'
+        setTimeout(() => {
+            
+            cityModal.style.display = 'none'
+            overlay.style.display = 'none'
+            body.style.overflow = 'auto'
+        }, 300);
+
     })
 })
 
@@ -98,16 +106,16 @@ cityModalBtns.forEach(function(cityModalBtn) {
         cityChose.textContent = cityModalBtn.textContent;
         cityModal.style.display = 'none'
         overlay.style.display = 'none'
-           body.style.overflow = 'auto'
+        body.style.overflow = 'auto'
     })
 })
 
 modalClose2.addEventListener('click', function() {
-    modal.style.animation = 'scalerReverse .25s ease forwards'
+    cityModal.style.animation = 'scalerReverse .25s ease forwards'
     setTimeout(() => {
         overlay.style.display = 'none';
         cityModal.style.display = 'none';
-           body.style.overflow = 'auto'
+        body.style.overflow = 'auto'
     }, 300);
 })
 
@@ -136,11 +144,6 @@ const swiper = new Swiper('.reviews__swiper', {
       }
   });
 
- 
-
-
-
-
   btns.forEach(function(btn) {
     btn.addEventListener('click', function() {
         overlay.style.display = 'block';
@@ -149,6 +152,22 @@ const swiper = new Swiper('.reviews__swiper', {
         body.style.overflow = 'hidden'
     })
   });
+
+  heroBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+        overlay.style.display = 'block';
+        modal.style.animation = 'scaler .25s ease';
+        modal.style.display = 'block';
+        body.style.overflow = 'hidden';
+
+        
+        transferValue2(btn.textContent);
+    });
+});
+
+function transferValue2(text) {
+    document.querySelector('.modal__textarea').value = text;
+}
 
   function transferValue() {
     var heroInputValue = document.querySelector('.hero__input').value; 
@@ -167,6 +186,20 @@ const swiper = new Swiper('.reviews__swiper', {
     }, 300);
 })
 
+overlay.addEventListener('click', function() {
+    modal.style.animation = 'scalerReverse .25s ease forwards'
+    cityModal.style.animation = 'scalerReverse .25s ease forwards';
+    setTimeout(() => {
+        overlay.style.display = 'none';
+        modal.style.display = 'none';
+        body.style.overflow = 'auto'
+        cityModal.style.display = 'none';
+        modalTitle.style.display = 'none'
+        modalForm.style.display = 'flex'
+    }, 300);
+})
+
+
 
 
 function sendFormData(event) {
@@ -176,7 +209,7 @@ function sendFormData(event) {
 
     const userText = document.querySelector('.modal__textarea').value;
     const userDate = document.querySelector('input[type="date"]').value;
-    const userPhone = document.querySelector('input[data="phone"]').value;
+    const userPhone = document.querySelector('input[data-target="phone"]').value;
 
     console.log('Phone:', userPhone);
 
