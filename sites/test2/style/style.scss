@@ -15,6 +15,7 @@
     --color-text-link-visited: #a888b7;
 
     --color-button-sc-normal: #ececf1;
+    --color-button-sc-normal-hover: #c9c9c9;
 
 
 
@@ -116,6 +117,7 @@
     --color-base-sc-ondark: #FFFFFFB2;
     --color-text-br: var(--color-base-br);
     --color-button-ac-normal: var(--color-base-bl);
+    --color-button-ac-normal-hover: #dd9c04;
     --color-button-pr-normal: var(--color-base-br);
     --color-button-sc-disabled: #00000005;
     --color-button-sc-selected: #FDB813;
@@ -180,13 +182,9 @@
 }
 
 .btn_pr:hover {
-    color: var(--color-base-br);
-    background-color: var(--color-button-ac-normal);
+    background-color: var(--color-button-ac-normal-hover);
 }
 
-.btn_pr:hover .hero__icon {
-    border-left: 12px solid var(--color-base-br);
-}
 
 .btn_pr:focus-visible {
     border: 1px solid #000;
@@ -203,7 +201,7 @@
 }
 
 .btn_sc:hover {
-    background-color: var(--color-base-br);
+    background-color: var(--color-button-sc-normal-hover);
 }
 
 .input {
@@ -463,6 +461,18 @@ h2 {
 
 .hero {
     min-height: 760px;
+    position: relative;
+
+    &__video {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-height: 760px;
+        width: 100%;
+        z-index: 101;
+        object-fit: fill;
+    }
 
     .container {
         width: 100%;
@@ -525,20 +535,6 @@ h2 {
         }
     }
 
-    &__btn {
-        font-family: var(--font-family-bold);
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        background-color: var(--color-base-br);
-        color: var(--color-text-ac);
-        border-radius: var(--radiuslg);
-        max-width: 116px;
-        width: 100%;
-        padding: 15px 24px;
-        transition: color .25s ease, background-color .25s ease;
-    }
 
 
     &__icon {
@@ -580,6 +576,14 @@ h2 {
     .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
         margin: 0 1.5px;
     }
+}
+
+.close-video__btn {
+    display: none;
+    position: absolute;
+    top: -60px;
+    right: 20px;
+    z-index: 101;
 }
 
 .text-20 p {
@@ -627,9 +631,10 @@ h2 {
             line-height: 18px;
             text-align: left;
             color: var(--color-base-ac);
-            text-decoration: underline dotted;
             transition: color .25s ease;
+            border-bottom: 1px dotted var(--color-base-ac);
         }
+
 
         a:hover {
             color: var(--color-base-hover-ac);
@@ -747,7 +752,7 @@ h3 {
     background-image: url(../img/clinic-bg.svg);
     background-repeat: no-repeat;
     background-position: center center;
-    overflow: hidden;
+    position: relative;
 
     &__flex {
         display: flex;
@@ -778,8 +783,29 @@ h3 {
         max-height: 500px;
         height: 100%;
     }
+    #playBtn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 102;
+    }
+    #clinicVideo {
+        display: block;
+        position: relative;
+        width: 100%;
+        z-index: 101;
+        max-height: 432px;
+        width: 590px;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
+
+.relative {
+    position: relative;
+}
 .spices {
     h2 {
         margin-bottom: var(--page-ver-sm);
@@ -789,7 +815,7 @@ h3 {
         grid-template-columns: repeat(3, 1fr);
         justify-content: space-between;
         gap: 20px;
-        margin-bottom: var(--page-ver-lg);
+        margin-bottom: var(--page-ver-bg);
     }
     &__card {
         max-width: 383px;
@@ -852,12 +878,12 @@ h3 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-content: space-between;
-        gap: 10px;
+        gap: 40px;
     }
     &__card {
         display: flex;
         flex-direction: column;
-        gap: var(--page-ver-md);
+        gap: var(--page-ver-sm);
         max-width: 270px;
         min-height: 234px;
         a {
@@ -937,27 +963,39 @@ h3 {
 }
 
 .stories {
-    min-height: 648px;
-    background-image: url(../img/stories.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    .container {
-        min-height: 648px;
-        align-content: center;
+    position: relative;
+    max-width: 1366px;
+    margin: 0 auto var(--page-ver-bg);
+    &__bg {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        top: 0;
+        left: 0;
+        }
+        &__img-1 { grid-area: 1 / 1 / 3 / 3; }
+        &__img-2 { grid-area: 1 / 3 / 2 / 4; }
+        &__img-3 { grid-area: 2 / 3 / 3 / 4; }
+        &__img-4 { grid-area: 1 / 4 / 3 / 5; }
+    &__img {
+        object-fit: cover;
     }
-    .stories__block {
+    &__block {
         display: flex;
         flex-direction: column;
         gap: var(--page-hor-df);
         max-width: 539px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        left: 72px;
         h2 {
             color: var(--color-base-wh);
         }
         p {
             color: var(--color-base-sc-ondark);
         }
-    }
-    .text-20 {
     }
     .btn {
         display: flex;
@@ -972,10 +1010,6 @@ h3 {
         position: relative;
         clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
     
-    }
-    .btn_lg {
-    }
-    .btn_pr {
     }
 }
 
@@ -1056,12 +1090,12 @@ h3 {
         color: #fff;
         text-align: center;
         border-radius: 5px;
-        padding: 5px 0;
+        padding: 5px;
         position: absolute;
         z-index: 1;
-        bottom: 125%; /* Смещает тултип наверх */
+        bottom: 125%; 
         left: 50%;
-        margin-left: -60px; /* Центрирует тултип */
+        margin-left: -60px; 
         opacity: 0;
         transition: opacity 0.3s;
     }
@@ -1069,17 +1103,21 @@ h3 {
     .tooltip .tooltiptext::after {
         content: "";
         position: absolute;
-        top: 100%; /* Указывает на низ тултипа */
+        top: 100%; 
         left: 50%;
         margin-left: -5px;
         border-width: 5px;
         border-style: solid;
         border-color: black transparent transparent transparent;
+        margin-top: -1px;
     }
 
     .tooltip .tooltiptext.visible {
         visibility: visible;
         opacity: 1;
+    }
+    &__cert img {
+        box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -1092,14 +1130,12 @@ h3 {
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-content {
    box-shadow: rgba(0, 0, 0, 0.18) 0px 7px 18px 0px;
    background-color: #fff;
-   border-radius: 20px;
-   margin: 20px;
 }
 
 .modal {
@@ -1115,10 +1151,11 @@ h3 {
 
 .close {
     position: absolute;
-    top: -10px;
-    right: 0;
+    top: 10px;
+    right: 10px;
     color: #000;
     font-size: 35px;
+    line-height: 100%;
     font-weight: bold;
     cursor: pointer;
     transition: color .25s ease;
@@ -1131,6 +1168,9 @@ h3 {
     cursor: pointer;
 }
 
+#modalImage {
+    border-radius: var(--radiussm);
+}
 
 
 .quetions {

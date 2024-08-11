@@ -15,6 +15,7 @@
   --color-input-normal: #d0d0d4;
   --color-text-link-visited: #a888b7;
   --color-button-sc-normal: #ececf1;
+  --color-button-sc-normal-hover: #c9c9c9;
   --font-family-regular: "MuseoSansRegular", "Arial";
   --font-family-medium: "MuseoSansMedium", "Arial";
   --font-family-bold: "MuseoSansBold", "Arial";
@@ -108,6 +109,7 @@
   --color-base-sc-ondark: #FFFFFFB2;
   --color-text-br: var(--color-base-br);
   --color-button-ac-normal: var(--color-base-bl);
+  --color-button-ac-normal-hover: #dd9c04;
   --color-button-pr-normal: var(--color-base-br);
   --color-button-sc-disabled: #00000005;
   --color-button-sc-selected: #FDB813;
@@ -171,12 +173,7 @@
 }
 
 .btn_pr:hover {
-  color: var(--color-base-br);
-  background-color: var(--color-button-ac-normal);
-}
-
-.btn_pr:hover .hero__icon {
-  border-left: 12px solid var(--color-base-br);
+  background-color: var(--color-button-ac-normal-hover);
 }
 
 .btn_pr:focus-visible {
@@ -194,7 +191,7 @@
 }
 
 .btn_sc:hover {
-  background-color: var(--color-base-br);
+  background-color: var(--color-button-sc-normal-hover);
 }
 
 .input {
@@ -429,6 +426,18 @@ h2 {
 
 .hero {
   min-height: 760px;
+  position: relative;
+}
+.hero__video {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 760px;
+  width: 100%;
+  z-index: 101;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .hero .container {
   width: 100%;
@@ -482,20 +491,6 @@ h2 {
   text-align: left;
   max-width: 375px;
 }
-.hero__btn {
-  font-family: var(--font-family-bold);
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  background-color: var(--color-base-br);
-  color: var(--color-text-ac);
-  border-radius: var(--radiuslg);
-  max-width: 116px;
-  width: 100%;
-  padding: 15px 24px;
-  transition: color 0.25s ease, background-color 0.25s ease;
-}
 .hero__icon {
   width: 0;
   height: 0;
@@ -529,6 +524,14 @@ h2 {
 .hero .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .hero .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 1.5px;
+}
+
+.close-video__btn {
+  display: none;
+  position: absolute;
+  top: -60px;
+  right: 20px;
+  z-index: 101;
 }
 
 .text-20 p {
@@ -572,9 +575,8 @@ h2 {
   line-height: 18px;
   text-align: left;
   color: var(--color-base-ac);
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
   transition: color 0.25s ease;
+  border-bottom: 1px dotted var(--color-base-ac);
 }
 .about__flex-2 a:hover {
   color: var(--color-base-hover-ac);
@@ -673,7 +675,7 @@ h3 {
   background-image: url(../img/clinic-bg.svg);
   background-repeat: no-repeat;
   background-position: center center;
-  overflow: hidden;
+  position: relative;
 }
 .clinic__flex {
   display: flex;
@@ -701,6 +703,28 @@ h3 {
   max-height: 500px;
   height: 100%;
 }
+.clinic #playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 102;
+}
+.clinic #clinicVideo {
+  display: block;
+  position: relative;
+  width: 100%;
+  z-index: 101;
+  max-height: 432px;
+  width: 590px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.relative {
+  position: relative;
+}
 
 .spices h2 {
   margin-bottom: var(--page-ver-sm);
@@ -710,7 +734,7 @@ h3 {
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   gap: 20px;
-  margin-bottom: var(--page-ver-lg);
+  margin-bottom: var(--page-ver-bg);
 }
 .spices__card {
   max-width: 383px;
@@ -771,12 +795,12 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
-  gap: 10px;
+  gap: 40px;
 }
 .system__card {
   display: flex;
   flex-direction: column;
-  gap: var(--page-ver-md);
+  gap: var(--page-ver-sm);
   max-width: 270px;
   min-height: 234px;
 }
@@ -853,25 +877,48 @@ h3 {
 }
 
 .stories {
-  min-height: 648px;
-  background-image: url(../img/stories.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+  max-width: 1366px;
+  margin: 0 auto var(--page-ver-bg);
 }
-.stories .container {
-  min-height: 648px;
-  align-content: center;
+.stories__bg {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  top: 0;
+  left: 0;
 }
-.stories .stories__block {
+.stories__img-1 {
+  grid-area: 1/1/3/3;
+}
+.stories__img-2 {
+  grid-area: 1/3/2/4;
+}
+.stories__img-3 {
+  grid-area: 2/3/3/4;
+}
+.stories__img-4 {
+  grid-area: 1/4/3/5;
+}
+.stories__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.stories__block {
   display: flex;
   flex-direction: column;
   gap: var(--page-hor-df);
   max-width: 539px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+  left: 72px;
 }
-.stories .stories__block h2 {
+.stories__block h2 {
   color: var(--color-base-wh);
 }
-.stories .stories__block p {
+.stories__block p {
   color: var(--color-base-sc-ondark);
 }
 .stories .btn {
@@ -888,6 +935,7 @@ h3 {
   -webkit-clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
           clip-path: polygon(40% 0, 100% 0, 100% 100%, 0 100%, 0 40%);
 }
+
 .company {
   border-top: 1px solid var(--color-separator-sc);
   padding: var(--page-ver-df) 0;
@@ -949,28 +997,32 @@ h3 {
   color: #fff;
   text-align: center;
   border-radius: 5px;
-  padding: 5px 0;
+  padding: 5px;
   position: absolute;
   z-index: 1;
-  bottom: 125%; /* Смещает тултип наверх */
+  bottom: 125%;
   left: 50%;
-  margin-left: -60px; /* Центрирует тултип */
+  margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
 }
 .company .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
-  top: 100%; /* Указывает на низ тултипа */
+  top: 100%;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: black transparent transparent transparent;
+  margin-top: -1px;
 }
 .company .tooltip .tooltiptext.visible {
   visibility: visible;
   opacity: 1;
+}
+.company__cert img {
+  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.1);
 }
 
 #overlay {
@@ -982,14 +1034,12 @@ h3 {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .modal-content {
   box-shadow: rgba(0, 0, 0, 0.18) 0px 7px 18px 0px;
   background-color: #fff;
-  border-radius: 20px;
-  margin: 20px;
 }
 
 .modal {
@@ -1006,10 +1056,11 @@ h3 {
 
 .close {
   position: absolute;
-  top: -10px;
-  right: 0;
+  top: 10px;
+  right: 10px;
   color: #000;
   font-size: 35px;
+  line-height: 100%;
   font-weight: bold;
   cursor: pointer;
   transition: color 0.25s ease;
@@ -1020,6 +1071,10 @@ h3 {
   color: var(--color-base-br);
   text-decoration: none;
   cursor: pointer;
+}
+
+#modalImage {
+  border-radius: var(--radiussm);
 }
 
 .quetions__flex {

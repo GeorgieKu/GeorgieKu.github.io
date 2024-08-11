@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="description">
+    <link rel="shortcut icon" href="./img/fav.webp" type="image/x-icon">
     <link rel="stylesheet" href="./style/normalize.min.css">
     <link rel="stylesheet" href="./style/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/style.css">
@@ -94,7 +95,7 @@
                                 <p>REGENFLEX® — система профилактики и лечения заболеваний суставов на основе
                                     гиалуроновой кислоты с доказанной эффективностью</p>
                                 <div class="hero__flex">
-                                    <button class="btn btn_pr btn_lg">
+                                    <button class="btn btn_pr btn_lg hero__video__btn" id="heroVideoBtn">
                                         <i class="hero__icon"></i> Смотреть
                                     </button>
                                     <span>О клин. исследованиях, отличие от аналогов, мировой опыт и отзывы врачей</span>
@@ -109,7 +110,7 @@
                                 <p>REGENFLEX® — система профилактики и лечения заболеваний суставов на основе
                                     гиалуроновой кислоты с доказанной эффективностью</p>
                                 <div class="hero__flex">
-                                    <button class="hero__btn">
+                                    <button class="btn btn_pr btn_lg hero__video__btn" id="heroVideoBtn">
                                         <i class="hero__icon"></i> Смотреть
                                     </button>
                                     <span>О клин. исследованиях, отличие от аналогов, мировой опыт и отзывы врачей</span>
@@ -124,7 +125,7 @@
                                 <p>REGENFLEX® — система профилактики и лечения заболеваний суставов на основе
                                     гиалуроновой кислоты с доказанной эффективностью</p>
                                 <div class="hero__flex">
-                                    <button class="hero__btn">
+                                    <button class="btn btn_pr btn_lg hero__video__btn" id="heroVideoBtn">
                                         <i class="hero__icon"></i> Смотреть
                                     </button>
                                     <span>О клин. исследованиях, отличие от аналогов, мировой опыт и отзывы врачей</span>
@@ -135,7 +136,10 @@
                 </div>
                 <div class="hero__pagination swiper-pagination"></div>
             </div>
-
+            <video controls='' class="hero__video" id="heroVideo" src="./video/reg.mp4"></video>
+            <button class="close-video__btn" id="heroCloseVideo">
+                <img src="./img/svg/close-btn.svg" alt="">
+            </button>
         </section>
         <section class="about mb-bg">
             <div class="container">
@@ -201,13 +205,13 @@
                         <h2>BIORIVOLUMETRIA<br>
                             Преимущества уникальной технологии</h2>
                         <p>Инновационная запатентованная технология производства REGENYAL Laboratories S.r.l., в соответствии с регламентами которой производится препарат нового поколения — REGENFLEX® Bio-plus, не имеющий аналогов в мире. Препарат является монофазным гелем, полученным путем «мягкого сшивания» — длительного процесса низкотемпературной стабилизации гиалуроната натрия.</p>
-                        <button class="btn btn_df btn_sc" aria-label="Этапы технологии">Этапы технологии</button>
+                        <button class="btn btn_lg btn_sc" aria-label="Этапы технологии">Этапы технологии</button>
                     </div>
                     <img class="promo__img" src="./img/promo.webp" alt="">
                 </div>
             </div>
         </section>
-        <section class="clinic mb-lg">
+        <section class="clinic mb-bg">
 
             <div class="clinic__flex">
                 <div class="clinic__block text-20">
@@ -215,11 +219,17 @@
                         Laboratories</h2>
                     <p>REGENYAL Laboratories S.r.l. является европейским лидером по производству инъекционных форм гиалуронатов для ревмоортопедии, стоматологии и других областей медицины.</p>
                     <p>REGENYAL Laboratories S.r.l. — концерн полного цикла, располагающий тремя производственными зонами на территории Италии с производительностью свыше 3,5 млн шприцов в год.</p>
-                    <button class="btn btn_df btn_sc">производстве
-                        <img loading="lazy" class="clinic__icon" src="./img/clinic-icon.svg" alt="">
+                    <button class="btn btn_lg btn_sc">О производстве</button>
+                </div>
+                <div class="relative">
+                    <button id="playBtn" aria-label="Воспроизвести видео">
+                        <img src="./img/svg/play.svg" alt="">
+                    </button>
+                    <video id="clinicVideo" poster="./img/clinic.webp" src="./video/reg.mp4"></video>
+                    <button class="close-video__btn" id="ClinicCloseVideo">
+                        <img src="./img/svg/close-btn.svg" alt="">
                     </button>
                 </div>
-                <img loading="lazy" class="clinic__img" src="./img/clinic.webp" alt="">
             </div>
 
         </section>
@@ -341,7 +351,13 @@
                 </div>
             </div>
         </section>
-        <section class="stories mb-bg">
+        <section class="stories">
+            <div class="stories__bg">
+                <img class="stories__img stories__img-1" src="./img/stories.webp" alt="">
+                <img class="stories__img stories__img-2" src="./img/stories-2.webp" alt="">
+                <img class="stories__img stories__img-3" src="./img/stories-3.webp" alt="">
+                <img class="stories__img stories__img-4" src="./img/stories-4.webp" alt="">
+            </div>
             <div class="container">
                 <div class="stories__block text-20">
                     <h2>Истории
@@ -525,6 +541,7 @@
         </div>
     </footer>
     <script src="./js/swiper-bundle.min.js"></script>
+
     <script src="./js/index.js"></script>
 
 </body>

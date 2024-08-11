@@ -95,7 +95,63 @@ document.addEventListener("DOMContentLoaded", function() {
             if (event.target === overlay) {
                 overlay.style.display = 'none';
                 modal.style.display = 'none';
+                heroVideo.pause()
+                clinicVideo.pause()
+                ClinicCloseVideo.style.display = 'none'
+                heroCloseVideo.style.display = 'none'
+                playBtn.style.display = 'block'
             }
         }
   
+        let heroVideoBtns = document.querySelectorAll('.hero__video__btn');
+let heroVideo = document.getElementById('heroVideo');
+let heroCloseVideo = document.getElementById('heroCloseVideo')
+let playBtn = document.getElementById('playBtn')
+let clinicVideo = document.getElementById('clinicVideo')
+let ClinicCloseVideo = document.getElementById('ClinicCloseVideo')
+
+
+heroVideoBtns.forEach(function(heroVideoBtn) {
+    heroVideoBtn.addEventListener('click', function() {
+        heroVideo.style.display = 'block';
+        heroCloseVideo.style.display = 'block';
+        overlay.style.display = 'block'
+        heroVideo.play()
+    })
 })
+
+
+
+heroCloseVideo.addEventListener('click', function() {
+        heroVideo.style.display = 'none';
+        overlay.style.display = 'none'
+        heroCloseVideo.style.display = 'none';
+        heroVideo.pause()
+    })
+
+
+playBtn.addEventListener('click', function() {
+    playBtn.style.display = 'none'
+    ClinicCloseVideo.style.display = 'block';
+    overlay.style.display = 'block';
+    // clinicVideo.style.position = 'absolute';
+    // clinicVideo.style.top = '0';
+    // clinicVideo.style.left = "0"
+    // clinicVideo.style.width = "100%";
+    // clinicVideo.style.height = '100%'
+    clinicVideo.setAttribute('controls', '')
+    clinicVideo.play()
+})
+
+ClinicCloseVideo.addEventListener('click', function() {
+    playBtn.style.display = 'block'
+    overlay.style.display = 'none'
+    ClinicCloseVideo.style.display = 'none';
+    clinicVideo.pause()
+})
+
+
+
+
+})
+
