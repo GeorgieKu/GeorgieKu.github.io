@@ -712,6 +712,7 @@ h4 {
 
     .btn {
         margin-top: auto;
+        text-wrap: nowrap;
     }
 
 }
@@ -793,11 +794,10 @@ h3 {
     #clinicVideo {
         display: block;
         position: relative;
-        width: 100%;
         z-index: 101;
-        max-height: 432px;
-        width: 590px;
-        height: 100%;
+        max-width: 683px;
+        width: 100%;
+        height: 536px;
         object-fit: cover;
     }
 }
@@ -824,7 +824,7 @@ h3 {
         flex-direction: column;
         gap: var(--page-ver-sm);
         strong {
-            font-family: var(--font-family-medium);
+            font-family: var(--font-family-bold);
             font-size: 20px;
             font-weight: 500;
             line-height: 22.5px;
@@ -973,7 +973,10 @@ h3 {
         top: 0;
         left: 0;
         }
-        &__img-1 { grid-area: 1 / 1 / 3 / 3; }
+        &__block { grid-area: 1 / 1 / 3 / 3;
+        background-image: url(../img/stories.webp);
+    background-repeat: no-repeat;
+background-size: cover; }
         &__img-2 { grid-area: 1 / 3 / 2 / 4; }
         &__img-3 { grid-area: 2 / 3 / 3 / 4; }
         &__img-4 { grid-area: 1 / 4 / 3 / 5; }
@@ -984,12 +987,8 @@ h3 {
         display: flex;
         flex-direction: column;
         gap: var(--page-hor-df);
-        max-width: 539px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 9;
-        left: 72px;
+        justify-content: center;
+        padding-left: var(--page-hor-lg);
         h2 {
             color: var(--color-base-wh);
         }
@@ -1134,8 +1133,8 @@ h3 {
 }
 
 .modal-content {
-   box-shadow: rgba(0, 0, 0, 0.18) 0px 7px 18px 0px;
    background-color: #fff;
+   border-radius: var(--radius-df);
 }
 
 .modal {
@@ -1169,7 +1168,7 @@ h3 {
 }
 
 #modalImage {
-    border-radius: var(--radiussm);
+    border-radius: var(--radius-df);
 }
 
 

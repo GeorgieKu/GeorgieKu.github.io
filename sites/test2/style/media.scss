@@ -41,8 +41,9 @@
         display: none;
     }
     .stories__block {
-        left: 45px;
+        padding-left: 45px;
     }
+
 
 }
 
@@ -67,6 +68,7 @@
     }
     .system__flex {
         flex-direction: column-reverse;
+        gap: var(--page-ver-df);
     }
     .system__img {
         margin-left: auto;
@@ -94,6 +96,9 @@
     }
     .quetions__flex {
         flex-direction: column;
+    }
+    .quetions__flex {
+        gap: var(--page-ver-lg);
     }
     .cards__grid {
         grid-template-columns: repeat(2, 1fr);
@@ -142,9 +147,7 @@
         width: 100%;
     }
     .stories__block {
-        max-width: 50%;
-        left: 30px;
-        gap: var(--page-hor-tn);
+        padding-left: 30px;
     }
     .stories__bg {
         grid-template-columns: repeat(3, 1fr);
@@ -156,6 +159,10 @@
         .stories__img-3 { grid-area: 2 / 3 / 3 / 4; }
     .stories__img-4 {
         display: none;
+    }
+    .promo__flex {
+        flex-direction: column-reverse;
+        gap: var(--page-hor-sm);
     }
 }
 
@@ -217,7 +224,11 @@
     }
     .cards__grid {
         grid-template-columns: 1fr;
-        gap: var(--page-hor-md);
+        gap: var(--page-hor-lg);
+        min-height: unset;
+    }
+    .cards .btn {
+        margin-top: unset;
     }
     .cards {
         padding-bottom: 33px;
@@ -256,13 +267,9 @@
     .clinic  {
         padding-bottom: var(--page-ver-df);
     }
-    .promo__flex {
-        flex-direction: column-reverse;
-        gap: var(--page-hor-sm);
-    }
     .spices__grid {
         grid-template-columns: 1fr;
-        gap: var(--page-hor-md);;
+        gap: var(--page-hor-lg);;
     }
     .system__grid {
         grid-template-columns: 1fr;
@@ -288,7 +295,7 @@
         .stories__img-2 { display: none; }
         .stories__img-3 { display: none; }
         .stories__block {
-            max-width: unset;
+            padding: var(--page-ver-lg) 0 var(--page-ver-lg) 15px;
         }
         .info__flex {
             gap: var(--page-ver-lg);
@@ -306,6 +313,16 @@
         .system__flex {
             margin-bottom: var(--page-ver-df);
         }
+        .system__card {
+            gap: var(--page-ver-tn);
+            min-height: unset;
+        }
+        .system__grid {
+            gap: var(--page-ver-lg);
+        }
+        .system__card .btn {
+            margin-top: unset;
+        }
         .spices__grid {
             margin-bottom: var(--page-ver-df);
         }
@@ -313,6 +330,7 @@
             font-size: 15px;
             line-height: 110%;
         }
+      
         .quetions__form .btn {
             margin: 0 auto;
             max-width: unset;
