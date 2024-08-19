@@ -34,6 +34,13 @@
         </linearGradient>
         </defs>
     </symbol>
+    <symbol id="close">
+ 
+        <path class="close_bg" d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="black"/>
+        <path class="close_x" fill-rule="evenodd" clip-rule="evenodd" d="M20.1903 18.6667L18.6665 20.1905L22.554 23.9904L18.6665 27.8095L20.1903 29.3333L23.9902 25.4267L27.8093 29.3333L29.3331 27.8095L25.4265 23.9904L29.3331 20.1905L27.8093 18.6667L23.9902 22.5541L20.1903 18.6667Z" fill="white"/>
+         
+            
+    </symbol>
 </svg>
 
 <body>
@@ -501,7 +508,11 @@
     </main>
     <div id="overlay"></div>
     <div id="myModal" class="modal">
-        <span class="close">&times;</span>
+        <span class="close">
+            <svg class="close__icon">
+                <use xlink:href="#close"></use>
+            </svg>
+        </span>
         <div class="modal-content">
             <img id="modalImage" src="" alt="Modal Image">
         </div>
