@@ -1,235 +1,137 @@
-let cityChose = document.getElementById('cityChose');
-let cityModal = document.getElementById('cityModal');
-let modalClose2 = document.getElementById('modalClose2')
-let body = document.querySelector('body')
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("burger").addEventListener("click", function () {
+        document.querySelector("header").classList.toggle("open")
+    })
+
+    //Ниже все что связано с модалками и формами
+
+    let modal = document.getElementById('modal');
+
+    const nameInput = document.getElementById('nameInput');
+    const nameIcon = document.getElementById('nameIcon');
+    const phoneInput = document.getElementById('phoneInput');
+    let modal2Textarea = document.getElementById('modal2Textarea')
+    const nameInput2 = document.getElementById('nameInput2');
+    const nameIcon2 = document.getElementById('nameIcon2');
+    const phoneInput2 = document.getElementById('phoneInput2');
+    let heroPhone = document.getElementById('heroPhone');
+    let consultPhone = document.getElementById('consultPhone');
+    let formBtn = document.querySelector('.form-btn');
+    let formBtn2 = document.querySelector('.form-btn-2');
 
 
+
+    function openModal(images) {
+        let swiperWrapper = document.querySelector('.modal-wrapper');
+        swiperWrapper.innerHTML = '';
+
+
+        images.forEach(image => {
+            let slide = document.createElement('div');
+            slide.classList.add('swiper-slide');
+            slide.innerHTML = `<img src="${image}" alt="Zoomed Image">`;
+            swiperWrapper.appendChild(slide);
+        });
+
+
+        swiper.update();
+        swiper.slideTo(0);
+
+        modal.classList.add('show');
+    }
+
+
+
+
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+        }
+    });
+
+
+    let imgCards = document.querySelectorAll('.object__img-card');
+    imgCards.forEach(function (card) {
+        card.addEventListener('click', function () {
+            let images = JSON.parse(card.getAttribute('data-images'));
+            openModal(images);
+        });
+    });
+
+
+
+
+    nameInput.addEventListener('input', function (e) {
+        this.value = this.value.replace(/\d/g, '');
+
+
+        if (this.value.length > 2) {
+            nameIcon.style.display = 'block';
+            this.style.color = '';
+        } else {
+            nameIcon.style.display = 'none';
+            this.style.color = 'rgba(237, 0, 0, 1)';
+        }
+    });
+
+    nameInput2.addEventListener('input', function (e) {
+        this.value = this.value.replace(/\d/g, '');
+
+
+        if (this.value.length > 2) {
+            nameIcon2.style.display = 'block';
+            this.style.color = '';
+        } else {
+            nameIcon2.style.display = 'none';
+            this.style.color = 'rgba(237, 0, 0, 1)';
+        }
+    });
+
+    Inputmask({
+        mask: "+7 (999) 999-99-99"
+    }).mask(phoneInput);
+    Inputmask({
+        mask: "+7 (999) 999-99-99"
+    }).mask(phoneInput2);
+    Inputmask({
+        mask: "+7 (999) 999-99-99"
+    }).mask(heroPhone);
+    Inputmask({
+        mask: "+7 (999) 999-99-99"
+    }).mask(consultPhone);
+
+    formBtn.addEventListener('click', function () {
+        if (nameInput.value.length > 2 && phoneInput.value.length > 10 && modal2Textarea.value.length > 3) {
+            let modalBody = document.querySelector('.modal__body')
+            let modalSuccess = document.querySelector('.modal__success')
+            modalBody.style.display = 'none';
+            modalSuccess.style.display = 'block'
+        }
+
+    })
+
+    formBtn2.addEventListener('click', function () {
+        if (nameInput2.value.length > 2 && phoneInput2.value.length > 10) {
+            let modalBody2 = document.querySelector('.modal__body-2')
+            let modalSuccess2 = document.querySelector('.modal__success-2')
+            modalBody2.style.display = 'none';
+            modalSuccess2.style.display = 'block'
+            modal3.style.maxWidth = '410px'
+        }
+    })
+})
+let modal3 = document.getElementById('modal3');
 let overlay = document.getElementById('overlay');
-let modal = document.getElementById('modal')
-let modalClose = document.getElementById('modalClose');
-let btns = document.querySelectorAll('.btn')
-let modalBtn = document.querySelector('.modal__btn')
-let modalTitle = document.getElementById('modalTitle')
-let modalForm = document.querySelector('.modal__form')
-let heroInput = document.querySelector('.hero__input').value
-let modalTextarea = document.querySelector('.modal__textarea')
+let body = document.querySelector('body');
 
-let heroBtns = document.querySelectorAll('.hero__btn')
-
-cityChose.addEventListener('click', function() {
-
-    cityModal.style.display = 'block'
-    cityModal.style.animation = 'scaler .25s ease'
-    overlay.style.display = 'block'
+function openModal() {
+    modal3.style.display = 'block';
+    overlay.style.display = 'block';
     body.style.overflow = 'hidden'
-})
-
-document.querySelectorAll('.city-modal__btn-2.district').forEach(button => {
-    button.addEventListener('click', function() {
-        const targetId = this.getAttribute('data-target');
-        
-   
-        document.querySelectorAll('.modal__list > li > ul').forEach(ul => {
-            ul.classList.remove('active');
-        });
-        
-        
-        const targetUl = document.getElementById(targetId);
-        if (targetUl) {
-            targetUl.classList.add('active');
-        }
-    });
-});
-
-document.querySelectorAll('.city-modal__btn-2.region1').forEach(button => {
-    button.addEventListener('click', function() {
-        const targetId = this.getAttribute('data-target');
-        
-
-        document.querySelectorAll('.cites').forEach(ul => {
-            ul.classList.remove('active');
-        });
-        
-     
-        const targetUl = document.getElementById(targetId);
-        if (targetUl) {
-            targetUl.classList.add('active');
-        }
-    });
-});
-
-
-document.querySelectorAll('.district').forEach(function(district) {
-    district.addEventListener('click', function() {
-
-        document.querySelectorAll('.district').forEach(function(el) {
-            el.classList.remove('active-district');
-        });
-        
-   
-        this.classList.add('active-district');
-    });
-});
-
-document.querySelectorAll('.region1').forEach(function(region1) {
-    region1.addEventListener('click', function() {
-    
-        document.querySelectorAll('.region1').forEach(function(el) {
-            el.classList.remove('active-region1');
-        });
-        
-   
-        this.classList.add('active-region1');
-    });
-});
-
-let cites = document.querySelectorAll('.cites button')
-
-cites.forEach(function(city) {
-    city.addEventListener('click', function() {
-        cityModal.style.animation = 'scalerReverse .25s ease forwards';
-        cityChose.textContent = city.textContent;
-        setTimeout(() => {
-            
-            cityModal.style.display = 'none'
-            overlay.style.display = 'none'
-            body.style.overflow = 'auto'
-        }, 300);
-
-    })
-})
-
-let cityModalBtns = document.querySelectorAll('.city-modal__btn');
-
-cityModalBtns.forEach(function(cityModalBtn) {
-    cityModalBtn.addEventListener('click', function() {
-        cityChose.textContent = cityModalBtn.textContent;
-        cityModal.style.display = 'none'
-        overlay.style.display = 'none'
-        body.style.overflow = 'auto'
-    })
-})
-
-modalClose2.addEventListener('click', function() {
-    cityModal.style.animation = 'scalerReverse .25s ease forwards'
-    setTimeout(() => {
-        overlay.style.display = 'none';
-        cityModal.style.display = 'none';
-        body.style.overflow = 'auto'
-    }, 300);
-})
-
-const swiper = new Swiper('.reviews__swiper', {
-    slidesPerView: 5, 
-    centeredSlides: true, 
-    loop: true, 
-    slideToClickedSlide: true, 
-    spaceBetween: 36,
-    autoHeight: true,
-
-    navigation: {
-        nextEl: '.reviews__btn-next',
-        prevEl: '.reviews__btn-prev',
-      },
-      breakpoints: {
-        1500: {
-            slidesPerView: 5, 
-        },
-        992: {
-            slidesPerView: 3, 
-        },
-        320: {
-            slidesPerView: 'auto', 
-        }
-      }
-  });
-
-  btns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        overlay.style.display = 'block';
-        modal.style.animation = 'scaler .25s ease'
-        modal.style.display = 'block';
-        body.style.overflow = 'hidden'
-    })
-  });
-
-  heroBtns.forEach(function(btn) {
-    btn.addEventListener('click', function() {
-        overlay.style.display = 'block';
-        modal.style.animation = 'scaler .25s ease';
-        modal.style.display = 'block';
-        body.style.overflow = 'hidden';
-
-        
-        transferValue2(btn.textContent);
-    });
-});
-
-function transferValue2(text) {
-    document.querySelector('.modal__textarea').value = text;
 }
 
-  function transferValue() {
-    var heroInputValue = document.querySelector('.hero__input').value; 
-    document.querySelector('.modal__textarea').value = heroInputValue;
-}
-
-  modalClose.addEventListener('click', function() {
-    modal.style.animation = 'scalerReverse .25s ease forwards'
-    setTimeout(() => {
-        overlay.style.display = 'none';
-        modal.style.display = 'none';
-        body.style.overflow = 'auto'
-
-         modalTitle.style.display = 'none'
-            modalForm.style.display = 'flex'
-    }, 300);
+overlay.addEventListener('click', function () {
+    modal3.style.display = 'none';
+    overlay.style.display = 'none';
+    body.style.overflow = 'auto'
 })
-
-overlay.addEventListener('click', function() {
-    modal.style.animation = 'scalerReverse .25s ease forwards'
-    cityModal.style.animation = 'scalerReverse .25s ease forwards';
-    setTimeout(() => {
-        overlay.style.display = 'none';
-        modal.style.display = 'none';
-        body.style.overflow = 'auto'
-        cityModal.style.display = 'none';
-        modalTitle.style.display = 'none'
-        modalForm.style.display = 'flex'
-    }, 300);
-})
-
-
-
-
-function sendFormData(event) {
-    event.preventDefault(); 
-        modalTitle.style.display = 'block'
-        modalForm.style.display = 'none'
-
-    const userText = document.querySelector('.modal__textarea').value;
-    const userDate = document.querySelector('input[type="date"]').value;
-    const userPhone = document.querySelector('input[data-target="phone"]').value;
-
-    console.log('Phone:', userPhone);
-
-    const telegramToken = '7158661251:AAEx49clSzviscV7xTHMnqwRdthek0kz7OE'; 
-    const chatId = '469972293'; 
-
-    const telegramMessage = `Запрос: ${userText}\nДата: ${userDate}\nТелефон: ${userPhone}`;
-
-    fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            chat_id: chatId,
-            text: telegramMessage,
-        })
-    })
-    .then(response => response.json())
-    document.querySelector('.modal__textarea').value = '';
-    document.querySelector('input[type="date"]').value = '';
-    document.querySelector('input[name="phone"]').value = '';
-}
