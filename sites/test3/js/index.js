@@ -3,6 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("header").classList.toggle("open")
     })
 
+    let showBtn = document.querySelector('.show-btn');
+    showBtn.addEventListener('click' , function() {
+        let corpTags = document.querySelectorAll('.corp__tags span');
+        corpTags.forEach(function(corpTag) {
+            corpTag.style.display = 'block'
+        })
+        showBtn.style.display = 'none'
+    })
+
     //Ниже все что связано с модалками и формами
 
     let modal = document.getElementById('modal');
@@ -117,6 +126,8 @@ document.addEventListener("DOMContentLoaded", function () {
             modalBody2.style.display = 'none';
             modalSuccess2.style.display = 'block'
             modal3.style.maxWidth = '410px'
+            modal3.style.width = '90%'
+            modal3.style.padding = '40px 0'
         }
     })
 })
@@ -134,4 +145,16 @@ overlay.addEventListener('click', function () {
     modal3.style.display = 'none';
     overlay.style.display = 'none';
     body.style.overflow = 'auto'
+})
+
+let closes = document.querySelectorAll('.close');
+
+
+closes.forEach(function(close) {
+    close.addEventListener('click', function () {
+        modal3.style.display = 'none';
+        overlay.style.display = 'none';
+        body.style.overflow = 'auto'
+        modal.classList.remove('show')
+    })
 })

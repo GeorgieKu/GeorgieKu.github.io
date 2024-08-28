@@ -119,9 +119,6 @@
         </symbol>
     </svg>
     <header class="header">
-        <button aria-label='кнопка' class="header__burger-btn" id="burger">
-            <span></span><span></span><span></span>
-        </button>
         <div class="upper header__upper">
             <div class="container">
                 <div class="upper__flex">
@@ -187,6 +184,9 @@
         </div>
         <div class="bottom header__bottom">
             <div class="container">
+                <button aria-label='кнопка' class="header__burger-btn" id="burger">
+                    <span></span><span></span><span></span>
+                </button>
                 <nav class="menu">
                     <ul class="menu__list">
                         <li class="circle orange">
@@ -224,12 +224,81 @@
                                 Контакты
                             </a>
                         </li>
+                        <li class="hidden">
+                            <div class="medium__contacts">
+                                <div class="medium__socials">
+                                    <div class="medium__icon">
+                                        <a aria-label='ссылка' href="#">
+                                            <svg class="header__icon">
+                                                <use xlink:href="#wa"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="medium__icon">
+                                        <a aria-label='ссылка' href="#">
+                                            <svg class="header__icon">
+                                                <use xlink:href="#tg"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <a aria-label='ссылка' href="tel:+74954141999">+7 (495) 4141-999</a>
+                                </div>
+                                <a aria-label='ссылка' href="mailto:zakaz@steelcraft.ru">zakaz@steelcraft.ru</a>
+                                <button class="button green-btn hidden-576" onclick="openModal()">Перезвоните мне</button>
+                            </div>
+                        </li>
+                        <li class="hidden-768">
+                            <nav class="upper__nav">
+                                <ul>
+                                    <li>
+                                        <a aria-label='ссылка' href="#">О компании</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label='ссылка' href="#">Частным лицам</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label='ссылка' href="#">Корпоративным клиентам</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label='ссылка' href="#">Пресс-центр</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="hidden-576">
+                            <button aria-label='кнопка' class="upper__geo">
+                                <img src="./img/svg/geo.svg" alt="">
+                                Москва
+                            </button>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
     <main>
+        <div class="fixed-block hidden-576">
+            <div class="fixed__flex">
+               <div class="fixed__icons">
+                <div class="medium__icon">
+                    <a aria-label='ссылка' href="#">
+                        <svg class="header__icon">
+                            <use xlink:href="#wa"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="medium__icon">
+                    <a aria-label='ссылка' href="#">
+                        <svg class="header__icon">
+                            <use xlink:href="#tg"></use>
+                        </svg>
+                    </a>
+                </div>
+               </div>
+                <a aria-label='ссылка' href="tel:+74954141999">+7 (495) 4141-999</a>
+            </div>
+            <button class="button green-btn" onclick="openModal()">Перезвоните мне</button>
+        </div>
         <section class="hero">
             <div class="swiper hero__swiper">
                 <div class="swiper-wrapper">
@@ -258,6 +327,7 @@
                                     <span>*Нажимая на кнопку Вы соглашаетесь
                                         с Политикой конфиденциальности</span>
                                 </form>
+                                <img class="hero__img-576" src="./img/hero-576.webp" alt="">
                             </div>
                         </div>
                     </div>
@@ -279,12 +349,14 @@
                                     <h2>Уточните ваши задачи,
                                         и мы рассчитаем стоимость и сроки</h2>
                                     <input class="hero__input input" type="text" placeholder="Ваше имя*">
-                                    <input class="hero__input input" type="text" placeholder="+7 (___) ___ __ __*">
+                                    <input class="hero__input input" type="text" id="heroPhone"
+                                        placeholder="+7 (___) ___ __ __*">
                                     <button aria-label='кнопка' type="submit"
                                         class="hero__btn green-btn button">Получить расчет</button>
                                     <span>*Нажимая на кнопку Вы соглашаетесь
                                         с Политикой конфиденциальности</span>
                                 </form>
+                                <img class="hero__img-576" src="./img/hero-576.webp" alt="">
                             </div>
                         </div>
                     </div>
@@ -306,15 +378,17 @@
                                     <h2>Уточните ваши задачи,
                                         и мы рассчитаем стоимость и сроки</h2>
                                     <input class="hero__input input" type="text" placeholder="Ваше имя*">
-                                    <input class="hero__input input" type="text" placeholder="+7 (___) ___ __ __*">
+                                    <input class="hero__input input" type="text" id="heroPhone"
+                                        placeholder="+7 (___) ___ __ __*">
                                     <button aria-label='кнопка' type="submit"
                                         class="hero__btn green-btn button">Получить расчет</button>
                                     <span>*Нажимая на кнопку Вы соглашаетесь
                                         с Политикой конфиденциальности</span>
                                 </form>
+                                <img class="hero__img-576" src="./img/hero-576.webp" alt="">
                             </div>
                         </div>
-                    </div>s
+                    </div>
                 </div>
                 <div class="swiper__btns">
                     <button aria-label='кнопка' class="hero__prev swiper__btn">
@@ -463,6 +537,7 @@
                                 <span>сайдинг для фасадов</span>
                                 <span>сопутствующие товары для кровли и заборов</span>
                             </div>
+                            <button class="show-btn hidden-576">Смотреть все</button>
                             <button aria-label='кнопка' class="corp__btn green-btn button">О компании</button>
                         </div>
                     </div>
@@ -571,86 +646,88 @@
         <section class="objects">
             <div class="container">
                 <h2>гордимся каждым нашим объектом</h2>
-                <div class="objects__grid">
-                    <div class="objects__card">
-                        <div class="object__img-card" data-images='["./img/object-1x3.webp", "./img/object-2x3.webp"]'>
-                            <img loading='lazy' class="object__img object__img-sm" src="./img/object-1.webp" alt="">
-                            <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
-                                <svg class="object__icon">
-                                    <use xlink:href="#search"></use>
-                                </svg>
-                            </button>
-                            <span>г.Москва</span>
+                <div class="objects__overflow overflow">
+                    <div class="objects__grid">
+                        <div class="objects__card">
+                            <div class="object__img-card" data-images='["./img/object-1x3.webp", "./img/object-2x3.webp"]'>
+                                <img loading='lazy' class="object__img object__img-sm" src="./img/object-1.webp" alt="">
+                                <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
+                                    <svg class="object__icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                                <span>г.Москва</span>
+                            </div>
+                            <div class="objects__block">
+                                <h3>Профнастил</h3>
+                                <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                            </div>
+    
                         </div>
-                        <div class="objects__block">
-                            <h3>Профнастил</h3>
-                            <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                        <div class="objects__card">
+                            <div class="object__img-card" data-images='["./img/object-2x3.webp", "./img/object-3x3.webp"]'>
+                                <img loading='lazy' class="object__img object__img-sm" src="./img/object-2.webp" alt="">
+                                <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
+                                    <svg class="object__icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                                <span>г.Москва</span>
+                            </div>
+                            <div class="objects__block">
+                                <h3>Профнастил</h3>
+                                <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                            </div>
+    
                         </div>
-
-                    </div>
-                    <div class="objects__card">
-                        <div class="object__img-card" data-images='["./img/object-2x3.webp", "./img/object-3x3.webp"]'>
-                            <img loading='lazy' class="object__img object__img-sm" src="./img/object-2.webp" alt="">
-                            <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
-                                <svg class="object__icon">
-                                    <use xlink:href="#search"></use>
-                                </svg>
-                            </button>
-                            <span>г.Москва</span>
+                        <div class="objects__card">
+                            <div class="object__img-card" data-images='["./img/object-3x3.webp", "./img/object-4x3.webp"]'>
+                                <img loading='lazy' class="object__img object__img-sm" src="./img/object-3.webp" alt="">
+                                <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
+                                    <svg class="object__icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                                <span>г.Москва</span>
+                            </div>
+                            <div class="objects__block">
+                                <h3>Профнастил</h3>
+                                <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                            </div>
+    
                         </div>
-                        <div class="objects__block">
-                            <h3>Профнастил</h3>
-                            <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                        <div class="objects__card">
+                            <div class="object__img-card" data-images='["./img/object-4x3.webp", "./img/object-5x3.webp"]'>
+                                <img loading='lazy' class="object__img object__img-bg" src="./img/object-4.webp" alt="">
+                                <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
+                                    <svg class="object__icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                                <span>г.Москва</span>
+                            </div>
+                            <div class="objects__block">
+                                <h3>Профнастил</h3>
+                                <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                            </div>
+    
                         </div>
-
-                    </div>
-                    <div class="objects__card">
-                        <div class="object__img-card" data-images='["./img/object-3x3.webp", "./img/object-4x3.webp"]'>
-                            <img loading='lazy' class="object__img object__img-sm" src="./img/object-3.webp" alt="">
-                            <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
-                                <svg class="object__icon">
-                                    <use xlink:href="#search"></use>
-                                </svg>
-                            </button>
-                            <span>г.Москва</span>
+                        <div class="objects__card">
+                            <div class="object__img-card" data-images='["./img/object-5x3.webp", "./img/object-1x3.webp"]'>
+                                <img loading='lazy' class="object__img object__img-bg" src="./img/object-5.webp" alt="">
+                                <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
+                                    <svg class="object__icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                                <span>г.Москва</span>
+                            </div>
+                            <div class="objects__block">
+                                <h3>Профнастил</h3>
+                                <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                            </div>
+    
                         </div>
-                        <div class="objects__block">
-                            <h3>Профнастил</h3>
-                            <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
-                        </div>
-
-                    </div>
-                    <div class="objects__card">
-                        <div class="object__img-card" data-images='["./img/object-4x3.webp", "./img/object-5x3.webp"]'>
-                            <img loading='lazy' class="object__img object__img-bg" src="./img/object-4.webp" alt="">
-                            <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
-                                <svg class="object__icon">
-                                    <use xlink:href="#search"></use>
-                                </svg>
-                            </button>
-                            <span>г.Москва</span>
-                        </div>
-                        <div class="objects__block">
-                            <h3>Профнастил</h3>
-                            <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
-                        </div>
-
-                    </div>
-                    <div class="objects__card">
-                        <div class="object__img-card" data-images='["./img/object-5x3.webp", "./img/object-1x3.webp"]'>
-                            <img loading='lazy' class="object__img object__img-bg" src="./img/object-5.webp" alt="">
-                            <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
-                                <svg class="object__icon">
-                                    <use xlink:href="#search"></use>
-                                </svg>
-                            </button>
-                            <span>г.Москва</span>
-                        </div>
-                        <div class="objects__block">
-                            <h3>Профнастил</h3>
-                            <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
-                        </div>
-
                     </div>
                 </div>
                 <button aria-label='кнопка' class="objects__btn black-btn button">Перейти в портфолио</button>
@@ -681,7 +758,11 @@
                             </div>
                             <div class="install__banner banner">
                                 <div class="banner__block">
-                                    <img loading='lazy' class="banner__icon" src="./img/svg/install-2.svg" alt="">
+                                    <picture>
+                                        <source media="(max-width: 576px)" srcset="./img/svg/install-3-576.svg">
+                                        <img loading='lazy' class="banner__icon" src="./img/svg/install-2.svg" alt="">
+                                    </picture>
+                                    
                                     <h3>Обслуживание</h3>
                                 </div>
                                 <a aria-label='ссылка' href="#" class="install__arrow-btn white arrow-btn">
@@ -689,10 +770,19 @@
                                         <use xlink:href="#arrow-black"></use>
                                     </svg>
                                 </a>
+                                <a aria-label='ссылка' href="#" class="install__arrow-btn black arrow-btn hidden-576">
+                                    <svg class="install__arrow">
+                                        <use xlink:href="#arrow-white"></use>
+                                    </svg>
+                                </a>
                             </div>
                             <div class="install__banner banner">
                                 <div class="banner__block">
-                                    <img loading='lazy' class="banner__icon" src="./img/svg/install-3.svg" alt="">
+                                    <picture>
+                                        <source media="(max-width: 576px)" srcset="./img/svg/install-4-576.svg">
+                                        <img loading='lazy' class="banner__icon" src="./img/svg/install-3.svg" alt="">
+                                    </picture>
+                               
                                     <h3>Монтаж
                                         и установка</h3>
                                 </div>
@@ -875,30 +965,51 @@
                         <span>Адрес главного офиса</span>
                         <ul>
                             <li>
-                                <img loading="lazy" src="./img/svg/contacts-geo.svg" alt="">
+                                
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="./img/svg/contacts-geo-576.svg">
+                                    <img loading="lazy" src="./img/svg/contacts-geo.svg" alt="">
+                                </picture>
                                 <span>г. Мытищи, ул. Борисовка д. 20</span>
                             </li>
                             <li>
-                                <img loading="lazy" src="./img/svg/contacts-time.svg" alt="">
+
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="./img/svg/contacts-time-576.svg">
+                                    <img loading="lazy" src="./img/svg/contacts-time.svg" alt="">
+                                </picture>
                                 <span>Пн — пт: 09:00 — 18:00</span>
                             </li>
                         </ul>
                         <ul>
                             <li>
                                 <a href="tel:+74954141999">
+                                   
+                                    
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="./img/svg/contacts-phone-576.svg">
                                     <img loading="lazy" src="./img/svg/contacts-phone.svg" alt="">
+                                </picture>
                                     <span>+8 (495) 41 41 999</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="./index.html">
+                                         
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="./img/svg/contacts-globe-576.svg">
                                     <img loading="lazy" src="./img/svg/contacts-globe.svg" alt="">
+                                </picture>
                                     <span>steelcraft.ru</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="mailto:zakaz+3699180@steelcraft.ru">
-                                    <img loading="lazy" src="./img/svg/contacts-mail.svg" alt="">
+                              
+                                    <picture>
+                                        <source media="(max-width: 576px)" srcset="./img/svg/contacts-mail-576.svg">
+                                        <img loading="lazy" src="./img/svg/contacts-mail.svg" alt="">
+                                    </picture>
                                     <span>zakaz+3699180@steelcraft.ru</span>
                                 </a>
                             </li>
@@ -922,6 +1033,9 @@
         </section>
     </main>
     <div class="modal" id="modal">
+        <button class="close hidden-576">
+            <img src="./img/svg/close.svg" alt="">
+        </button>
         <div class="modal__content">
 
             <div class="swiper-container modal-container">
@@ -976,6 +1090,9 @@
     </div>
     <div class="modal-3" id="modal3">
         <div class="modal-2__content">
+            <button class="close hidden-576">
+                <img src="./img/svg/close.svg" alt="">
+            </button>
             <div class="modal__body-2">
                 <h2>Заказать обратный звонок</h2>
                 <span>Напишите нам и мы свяжемся с вами в ближайшее время</span>

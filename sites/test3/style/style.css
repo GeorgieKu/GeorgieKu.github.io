@@ -261,17 +261,17 @@ button {
 }
 .header__burger-btn span {
   position: absolute;
-  width: 30px;
-  height: 3px;
+  width: 14px;
+  height: 2px;
   background-color: black;
-  left: 5px;
   transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+  border-radius: 100px;
 }
 .header__burger-btn span:nth-child(1) {
-  transform: translateY(-10px);
+  transform: translateY(-6px);
 }
 .header__burger-btn span:nth-child(3) {
-  transform: translateY(10px);
+  transform: translateY(6px);
 }
 .header.open .header__burger-btn span {
   background-color: #000;
@@ -296,6 +296,9 @@ button {
 .hero__swiper {
   min-height: 780px;
   width: 100%;
+}
+.hero__img-576 {
+  display: none;
 }
 .hero__icon {
   max-width: 21px;
@@ -428,7 +431,8 @@ button {
   position: absolute;
   bottom: 95px;
   left: 50%;
-  transform: translateX(-7%);
+  transform: translateX(-50%);
+  max-width: 330px;
   z-index: 2;
 }
 .hero .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -1292,6 +1296,14 @@ button {
   flex-direction: column;
   gap: var(--ver-gap-xxs);
 }
+.consult__form span {
+  font-family: var(--main-font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  color: var(--black);
+}
 .consult .form__block {
   display: flex;
   align-items: center;
@@ -1688,7 +1700,8 @@ button {
 .modal-3 .modal-3__icon {
   display: none;
   position: absolute;
-  top: 28px;
+  top: 50%;
+  transform: translateY(-50%);
   right: 30px;
   width: 18px;
   height: 13px;
@@ -1723,7 +1736,7 @@ button {
 .contacts iframe {
   border: none;
 }
-.contacts .contacts__card {
+.contacts__card {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -1738,11 +1751,11 @@ button {
   border-radius: 40px;
   z-index: 2;
 }
-.contacts .contacts__card h2 {
+.contacts__card h2 {
   color: var(--white);
   margin-bottom: 40px;
 }
-.contacts .contacts__card span {
+.contacts__card span {
   display: block;
   color: var(--white);
   font-family: var(--main-font);
@@ -1752,23 +1765,23 @@ button {
   text-align: left;
   margin-bottom: 10px;
 }
-.contacts .contacts__card ul {
+.contacts__card ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 40px;
 }
-.contacts .contacts__card ul img {
+.contacts__card ul img {
   width: 20px;
   height: 20px;
 }
-.contacts .contacts__card li {
+.contacts__card li {
   display: flex;
   align-items: center;
   gap: 6px;
   color: var(--white);
 }
-.contacts .contacts__card li span {
+.contacts__card li span {
   font-family: var(--main-font);
   font-size: 18px;
   font-weight: 400;
@@ -1776,11 +1789,11 @@ button {
   text-align: left;
   margin-bottom: unset;
 }
-.contacts .contacts__card li a {
+.contacts__card li a {
   display: flex;
   align-items: center;
   gap: 6px;
 }
-.contacts .contacts__card .contacts__btn {
+.contacts__card__btn {
   max-width: 230px;
 }/*# sourceMappingURL=style.css.map */

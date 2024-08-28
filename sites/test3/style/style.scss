@@ -311,19 +311,19 @@ button {
     
     &__burger-btn span {
         position: absolute;
-        width: 30px;
-        height: 3px;
+        width: 14px;
+        height: 2px;
         background-color: black;
-        left: 5px;
         transition: transform .5s, opacity .5s, background-color .5s;
+        border-radius: 100px;
     }
     
     &__burger-btn span:nth-child(1) {
-        transform: translateY(-10px);
+        transform: translateY(-6px);
     }
     
     &__burger-btn span:nth-child(3) {
-        transform: translateY(10px);
+        transform: translateY(6px);
     }
     
     &.open &__burger-btn span {
@@ -359,6 +359,9 @@ button {
     &__swiper {
         min-height: 780px;
         width: 100%;
+    }
+    &__img-576 {
+        display: none;
     }
     
     &__icon {
@@ -507,7 +510,8 @@ button {
         position: absolute;
         bottom: 95px;
         left: 50%;
-        transform: translateX(-7%);
+        transform: translateX(-50%);
+        max-width: 330px;
         z-index: 2;
     }
     
@@ -1516,6 +1520,7 @@ button {
         display: flex;
         align-items: center;
         justify-content: space-between;
+ 
     }
 
     &__block {
@@ -1541,6 +1546,14 @@ button {
         display: flex;
         flex-direction: column;
         gap: var(--ver-gap-xxs);
+        span {
+            font-family: var(--main-font);
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            text-align: left;
+            color: var(--black);
+        } 
     }
 
     .form__block {
@@ -1990,7 +2003,8 @@ button {
     .modal-3__icon {
         display: none;
         position: absolute;
-        top: 28px;
+        top: 50%;
+        transform: translateY(-50%);
         right: 30px;
         width: 18px;
         height: 13px;
@@ -2029,7 +2043,7 @@ button {
         border: none;
     }
 
-    .contacts__card {
+    &__card {
         position: absolute;
         top: 20px;
         left: 20px;
@@ -2096,7 +2110,7 @@ button {
 
         }
 
-        .contacts__btn {
+        &__btn {
             max-width: 230px;
         }
     }
