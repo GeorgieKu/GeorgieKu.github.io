@@ -158,3 +158,28 @@ closes.forEach(function(close) {
         modal.classList.remove('show')
     })
 })
+
+let lastScrollY = window.pageYOffset;
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.pageYOffset;
+
+    if (currentScrollY === 0) {
+        // Если на самом верху страницы, всегда показываем header
+        header.classList.add('show');
+    } else if (currentScrollY < lastScrollY) {
+        // Если прокручиваем вверх, показываем header
+        header.classList.add('show');
+    } else {
+        // Если прокручиваем вниз, скрываем header
+        header.classList.remove('show');
+    }
+
+    lastScrollY = currentScrollY;
+});
+
+// Показать header при загрузке страницы, если пользователь на самом верху
+if (window.pageYOffset === 0) {
+    header.classList.add('show');
+}

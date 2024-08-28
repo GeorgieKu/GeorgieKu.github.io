@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -155,7 +156,7 @@ button {
   display: flex;
   align-items: center;
   gap: 40px;
-  flex-basis: 603px;
+  flex-basis: 591px;
 }
 .header .medium__contacts {
   display: flex;
@@ -315,7 +316,6 @@ button {
 }
 .hero__flex {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 .hero__block h1 {
@@ -522,10 +522,11 @@ button {
   background-image: url(../img/catalog-1.webp);
   background-repeat: no-repeat;
   width: 100%;
+  border-radius: 20px;
   min-height: 483px;
 }
 .catalog__img-2 {
-  background-image: url(../img/catalog-2.webp);
+  background-image: url(../img/catalog-1.webp);
 }
 .catalog__img-3 {
   background-image: url(../img/catalog-3.webp);
@@ -937,7 +938,7 @@ button {
 .objects__card {
   background-color: var(--grey);
   border-radius: 40px;
-  padding: 20px;
+  padding: 20px 20px 40px;
 }
 .objects__card:nth-child(1) {
   grid-area: 1/1/2/3;
@@ -1007,7 +1008,7 @@ button {
   margin: 0 auto;
 }
 .objects__block {
-  padding-left: 20px;
+  padding: 0 20px;
 }
 .objects__block h3 {
   font-family: var(--main-font);
@@ -1072,7 +1073,7 @@ button {
   padding: 40px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: end;
 }
 .install__banner h3 {
   font-family: var(--secondary-font);
@@ -1105,6 +1106,7 @@ button {
   display: flex;
   align-items: center;
   gap: 40px;
+  margin-top: auto;
 }
 .install .banner__block .banner__icon {
   width: 88px;
@@ -1163,7 +1165,8 @@ button {
 }
 .news__swiper .swiper-slide {
   max-width: 469px;
-  width: 100%;
+  width: calc((100% - 32px) / 3); /* Ширина каждого слайда, рассчитанная для 3 слайдов */
+  min-width: 100px; /* Минимальная ширина слайда */
 }
 .news__card {
   border-radius: 40px;
@@ -1171,7 +1174,6 @@ button {
   min-height: 522px;
   position: relative;
   max-width: 429px;
-  width: 100%;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -1197,21 +1199,32 @@ button {
   top: 32px;
   left: 20px;
 }
-.news__card:nth-child(1) {
+.swiper-slide:nth-child(1) .news__card {
   background-image: url(../img/news-1.webp);
 }
-.news__card:nth-child(2) {
+.swiper-slide:nth-child(2) .news__card {
   background-image: url(../img/news-2.webp);
 }
-.news__card:nth-child(3) {
+.swiper-slide:nth-child(3) .news__card {
+  background-image: url(../img/news-3.webp);
+}
+.swiper-slide:nth-child(4) .news__card {
+  background-image: url(../img/news-1.webp);
+}
+.swiper-slide:nth-child(5) .news__card {
+  background-image: url(../img/news-2.webp);
+}
+.swiper-slide:nth-child(6) .news__card {
   background-image: url(../img/news-3.webp);
 }
 .news__arrow {
-  width: 61px;
-  height: 61px;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 29px;
+  right: 29px;
+}
+.news__arrow.white::after {
+  top: -9px;
+  left: -9px;
 }
 .news__block {
   display: flex;
@@ -1295,6 +1308,8 @@ button {
   display: flex;
   flex-direction: column;
   gap: var(--ver-gap-xxs);
+  max-width: 712px;
+  width: 100%;
 }
 .consult__form span {
   font-family: var(--main-font);
@@ -1483,6 +1498,9 @@ button {
 }
 .footer__block-2 a:hover {
   color: var(--green);
+}
+.footer .footer__btn {
+  max-width: 244px;
 }
 
 .modal {
@@ -1735,6 +1753,7 @@ button {
 }
 .contacts iframe {
   border: none;
+  border-radius: 40px;
 }
 .contacts__card {
   position: absolute;
@@ -1796,4 +1815,18 @@ button {
 }
 .contacts__card__btn {
   max-width: 230px;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 10;
+  width: 100%;
+}
+
+header.show {
+  transform: translateY(0);
 }/*# sourceMappingURL=style.css.map */

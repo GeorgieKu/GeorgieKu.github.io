@@ -16,7 +16,6 @@ const swiper = new Swiper('.hero__swiper', {
   const swiper2 = new Swiper('.news__swiper', {
     loop: true,
     slidesPerView: 'auto',
-    slidePerGroup: 3,
     spaceBetween: 16,
   
 
