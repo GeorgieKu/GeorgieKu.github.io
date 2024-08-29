@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Получаем высоту блока hero__swiper
             const heroSwiperHeight = heroSwiper.offsetHeight;
             // Устанавливаем такую же высоту для .menu
-            menu.style.maxHeight = heroSwiperHeight + 'px';
+            menu.style.height = heroSwiperHeight + 'px';
         } else {
             // Если ширина больше 576px, сбрасываем высоту
             menu.style.height = 'auto';
