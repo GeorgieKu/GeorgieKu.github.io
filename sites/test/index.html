@@ -1,101 +1,1257 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="description">
+    <meta name="description" content="Металлопрофиль для ограждений, кровли и фасадов">
+    <link rel="preload" href="./fonts/DINPro-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+    <link rel="stylesheet" href="./style/variables.css">
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
-    <title>Document</title>
+    <title>Steelcraft</title>
 </head>
+
+
 <body>
-<main>
-    <section class="hero">
-        <div class="container">
-           <div class="hero__block">
-            <h1 class="hero__title" id="heroTitle">Хотите начать зарабатывать 80$в день?</h1>
-            <img class="hero__img" src="./img/hero.webp" alt="">
-            <div class="hero__btns">
-                <button aria-label='button' class="hero__btn" onclick='start()' id="heroBtn">Да</button>
-                <button aria-label='button' class="hero__btn hero__btn_bg" id="heroBtn2">Нет</button>
+    <svg class="visually-hidden">
+        <symbol id="arrow-next" width="20" height="21" viewBox="0 0 20 21" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 10.5C1 10.5 17.0714 10.5 17.7143 10.5" stroke="white" stroke-width="2" stroke-linecap="square"
+                stroke-linejoin="round" />
+            <path d="M10 1.5L19 10.5L10 19.5" stroke="white" stroke-width="2" stroke-linecap="square"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="arrow-black" width="16" height="16" viewBox="0 0 16 16" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M2.70711 14.4071L2 15.1142L0.585786 13.7L1.29289 12.9929L2.70711 14.4071ZM13.7439 0.541886C14.1344 0.151361 14.7676 0.151361 15.1581 0.541886C15.5486 0.93241 15.5486 1.56558 15.1581 1.9561L13.7439 0.541886ZM1.29289 12.9929L13.7439 0.541886L15.1581 1.9561L2.70711 14.4071L1.29289 12.9929Z"
+                fill="#1A1A1A" />
+            <path d="M14.701 13.451V1.00003H2.25" stroke="#1A1A1A" stroke-width="2" stroke-linecap="square"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="arrow-white" width="16" height="16" viewBox="0 0 16 16" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M1.29289 13.2929L0.585786 14L2 15.4142L2.70711 14.7071L1.29289 13.2929ZM15.1581 2.25613C15.5486 1.8656 15.5486 1.23244 15.1581 0.841912C14.7676 0.451387 14.1344 0.451387 13.7439 0.841912L15.1581 2.25613ZM2.70711 14.7071L15.1581 2.25613L13.7439 0.841912L1.29289 13.2929L2.70711 14.7071Z"
+                fill="white" />
+            <path d="M2.24805 1.29902H14.699V13.75" stroke="white" stroke-width="2" stroke-linecap="square"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="search" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M10.0833 17.4167C14.1334 17.4167 17.4167 14.1334 17.4167 10.0833C17.4167 6.03324 14.1334 2.75 10.0833 2.75C6.03324 2.75 2.75 6.03324 2.75 10.0833C2.75 14.1334 6.03324 17.4167 10.0833 17.4167Z"
+                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.2492 19.2502L15.2617 15.2627" stroke="black" stroke-width="2" stroke-linecap="square"
+                stroke-linejoin="round" class="lupa-bg" />
+        </symbol>
+        <symbol id="gal" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6.5L6.6 12L17 1" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </symbol>
+        <symbol id="vk" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="28" rx="14" fill="#00A54B" />
+            <path
+                d="M14.6885 18.8996C9.42695 18.8996 6.42583 15.2209 6.30078 9.09961H8.93638C9.02295 13.5925 10.966 15.4956 12.505 15.888V9.09961H14.9867V12.9745C16.5065 12.8077 18.1033 11.042 18.6419 9.09961H21.1236C20.9207 10.107 20.516 11.0608 19.9351 11.9014C19.3542 12.742 18.6094 13.4513 17.7474 13.9849C18.7096 14.4725 19.5595 15.1627 20.2409 16.0098C20.9224 16.857 21.42 17.8419 21.7008 18.8996H18.969C18.7169 17.9809 18.2046 17.1586 17.4962 16.5356C16.7878 15.9126 15.9148 15.5167 14.9867 15.3975V18.8996H14.6885Z"
+                fill="white" />
+        </symbol>
+        <symbol id="yt" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="28" rx="14" fill="#00A54B" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M7.88452 18.9398C7.60994 18.8585 7.3594 18.714 7.15405 18.5184C6.9487 18.3228 6.79456 18.0818 6.70464 17.8159C6.19083 16.4412 6.03858 10.7009 7.02816 9.56765C7.35751 9.19901 7.82251 8.97205 8.32222 8.93603C10.9769 8.65738 19.179 8.69453 20.121 9.02892C20.386 9.11283 20.628 9.25418 20.8291 9.44239C21.0301 9.63059 21.1849 9.86077 21.2819 10.1157C21.8433 11.5368 21.8623 16.7012 21.2057 18.0666C21.0316 18.4221 20.74 18.71 20.3779 18.884C19.3883 19.367 9.19762 19.3578 7.88452 18.9398ZM12.0997 16.2461L16.8573 13.8311L12.0997 11.3975V16.2461Z"
+                fill="white" />
+        </symbol>
+        <symbol id="inst" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="28" rx="14" fill="#00A54B" />
+            <path
+                d="M14 8.26506C15.8554 8.26506 16.1084 8.26506 16.8675 8.26506C17.5422 8.26506 17.8795 8.43374 18.1325 8.51807C18.4699 8.68675 18.7229 8.77109 18.9759 9.0241C19.2289 9.27711 19.3976 9.53012 19.4819 9.86747C19.5663 10.1205 19.6506 10.4578 19.7349 11.1325C19.7349 11.8916 19.7349 12.0602 19.7349 14C19.7349 15.9398 19.7349 16.1084 19.7349 16.8675C19.7349 17.5422 19.5663 17.8795 19.4819 18.1325C19.3133 18.4699 19.2289 18.7229 18.9759 18.9759C18.7229 19.2289 18.4699 19.3976 18.1325 19.4819C17.8795 19.5663 17.5422 19.6506 16.8675 19.7349C16.1084 19.7349 15.9398 19.7349 14 19.7349C12.0602 19.7349 11.8916 19.7349 11.1325 19.7349C10.4578 19.7349 10.1205 19.5663 9.86747 19.4819C9.53012 19.3133 9.27711 19.2289 9.0241 18.9759C8.77109 18.7229 8.60241 18.4699 8.51807 18.1325C8.43374 17.8795 8.3494 17.5422 8.26506 16.8675C8.26506 16.1084 8.26506 15.9398 8.26506 14C8.26506 12.0602 8.26506 11.8916 8.26506 11.1325C8.26506 10.4578 8.43374 10.1205 8.51807 9.86747C8.68675 9.53012 8.77109 9.27711 9.0241 9.0241C9.27711 8.77109 9.53012 8.60241 9.86747 8.51807C10.1205 8.43374 10.4578 8.3494 11.1325 8.26506C11.8916 8.26506 12.1446 8.26506 14 8.26506ZM14 7C12.0602 7 11.8916 7 11.1325 7C10.3735 7 9.86747 7.16868 9.44578 7.33735C9.0241 7.50602 8.60241 7.75904 8.18072 8.18072C7.75904 8.60241 7.59036 8.93976 7.33735 9.44578C7.16868 9.86747 7.08434 10.3735 7 11.1325C7 11.8916 7 12.1446 7 14C7 15.9398 7 16.1084 7 16.8675C7 17.6265 7.16868 18.1325 7.33735 18.5542C7.50602 18.9759 7.75904 19.3976 8.18072 19.8193C8.60241 20.241 8.93976 20.4096 9.44578 20.6627C9.86747 20.8313 10.3735 20.9157 11.1325 21C11.8916 21 12.1446 21 14 21C15.8554 21 16.1084 21 16.8675 21C17.6265 21 18.1325 20.8313 18.5542 20.6627C18.9759 20.494 19.3976 20.241 19.8193 19.8193C20.241 19.3976 20.4096 19.0602 20.6627 18.5542C20.8313 18.1325 20.9157 17.6265 21 16.8675C21 16.1084 21 15.8554 21 14C21 12.1446 21 11.8916 21 11.1325C21 10.3735 20.8313 9.86747 20.6627 9.44578C20.494 9.0241 20.241 8.60241 19.8193 8.18072C19.3976 7.75904 19.0602 7.59036 18.5542 7.33735C18.1325 7.16868 17.6265 7.08434 16.8675 7C16.1084 7 15.9398 7 14 7Z"
+                fill="white" />
+            <path
+                d="M14 10.3735C11.9759 10.3735 10.3735 11.9759 10.3735 14C10.3735 16.0241 11.9759 17.6265 14 17.6265C16.0241 17.6265 17.6265 16.0241 17.6265 14C17.6265 11.9759 16.0241 10.3735 14 10.3735ZM14 16.3614C12.7349 16.3614 11.6386 15.3494 11.6386 14C11.6386 12.7349 12.6506 11.6386 14 11.6386C15.2651 11.6386 16.3614 12.6506 16.3614 14C16.3614 15.2651 15.2651 16.3614 14 16.3614Z"
+                fill="white" />
+            <path
+                d="M17.7108 11.1325C18.1766 11.1325 18.5542 10.7549 18.5542 10.2892C18.5542 9.82338 18.1766 9.44578 17.7108 9.44578C17.2451 9.44578 16.8675 9.82338 16.8675 10.2892C16.8675 10.7549 17.2451 11.1325 17.7108 11.1325Z"
+                fill="white" />
+        </symbol>
+        <symbol id="dzen" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_73_1903)">
+                <mask id="mask0_73_1903" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="28"
+                    height="28">
+                    <path
+                        d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z"
+                        fill="black" />
+                </mask>
+                <g mask="url(#mask0_73_1903)">
+                    <path
+                        d="M0 14C0 6.26801 6.26801 0 14 0C21.732 0 28 6.26801 28 14C28 21.732 21.732 28 14 28C6.26801 28 0 21.732 0 14Z"
+                        fill="#00A54B" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M13.5805 0C13.51 5.67541 13.1226 8.86527 10.9939 10.9939C8.86527 13.1225 5.67541 13.51 0 13.5804V14.4195C5.67541 14.49 8.86529 14.8774 10.9939 17.0061C13.1226 19.1347 13.51 22.3246 13.5805 28H14.4195C14.49 22.3246 14.8775 19.1347 17.0061 17.0061C19.1347 14.8775 22.3246 14.49 28 14.4195V13.5804C22.3246 13.5099 19.1347 13.1225 17.0061 10.9939C14.8775 8.86527 14.49 5.67539 14.4195 0H13.5805Z"
+                        fill="white" />
+                </g>
+            </g>
+            <defs>
+                <clipPath id="clip0_73_1903">
+                    <rect width="28" height="28" fill="white" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol id="wa" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="0.5" width="30" height="30" rx="15" fill="#48C95F" />
+            <path
+                d="M20.9451 9.54687C19.4634 8.07031 17.4878 7.25 15.4024 7.25C11.0671 7.25 7.55488 10.75 7.55488 15.0703C7.55488 16.4375 7.93902 17.8047 8.59756 18.9531L7.5 23L11.6707 21.9062C12.8232 22.5078 14.0854 22.8359 15.4024 22.8359C19.7378 22.8359 23.25 19.3359 23.25 15.0156C23.1951 12.9922 22.4268 11.0234 20.9451 9.54687ZM19.189 17.8594C19.0244 18.2969 18.2561 18.7344 17.872 18.7891C17.5427 18.8437 17.1037 18.8438 16.6646 18.7344C16.3902 18.625 16.0061 18.5156 15.5671 18.2969C13.5915 17.4766 12.3293 15.5078 12.2195 15.3438C12.1098 15.2344 11.3963 14.3047 11.3963 13.3203C11.3963 12.3359 11.8902 11.8984 12.0549 11.6797C12.2195 11.4609 12.439 11.4609 12.6037 11.4609C12.7134 11.4609 12.878 11.4609 12.9878 11.4609C13.0976 11.4609 13.2622 11.4062 13.4268 11.7891C13.5915 12.1719 13.9756 13.1562 14.0305 13.2109C14.0854 13.3203 14.0854 13.4297 14.0305 13.5391C13.9756 13.6484 13.9207 13.7578 13.811 13.8672C13.7012 13.9766 13.5915 14.1406 13.5366 14.1953C13.4268 14.3047 13.3171 14.4141 13.4268 14.5781C13.5366 14.7969 13.9207 15.3984 14.5244 15.9453C15.2927 16.6016 15.8963 16.8203 16.1159 16.9297C16.3354 17.0391 16.4451 16.9844 16.5549 16.875C16.6646 16.7656 17.0488 16.3281 17.1585 16.1094C17.2683 15.8906 17.4329 15.9453 17.5976 16C17.7622 16.0547 18.75 16.5469 18.9146 16.6562C19.1341 16.7656 19.2439 16.8203 19.2988 16.875C19.3537 17.0391 19.3537 17.4219 19.189 17.8594Z"
+                fill="white" />
+        </symbol>
+        <symbol id="tg" width="30" height="31" viewBox="0 0 30 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="0.5" width="30" height="30" rx="15" fill="#27A6E5" />
+            <path
+                d="M21 9.95167L18.7459 21.7192C18.7459 21.7192 18.4306 22.5351 17.5642 22.1438L12.3634 18.0144L12.3393 18.0023C13.0418 17.349 18.4893 12.277 18.7274 12.0471C19.0959 11.691 18.8671 11.479 18.4392 11.748L10.3926 17.0397L7.28823 15.9581C7.28823 15.9581 6.79969 15.7781 6.75269 15.3868C6.70508 14.9949 7.30431 14.7829 7.30431 14.7829L19.9599 9.64171C19.9599 9.64171 21 9.16845 21 9.95167Z"
+                fill="#F6F6F6" />
+        </symbol>
+    </svg>
+    <!-- <header class="header" id="header">
+        <div class="upper header__upper">
+            <div class="container">
+                <div class="upper__flex">
+                    <button aria-label='кнопка' class="upper__geo">
+                        <img src="./img/svg/geo.svg" alt="">
+                        Москва
+                    </button>
+                    <nav class="upper__nav">
+                        <ul>
+                            <li>
+                                <a aria-label='ссылка' href="#">О компании</a>
+                            </li>
+                            <li>
+                                <a aria-label='ссылка' href="#">Частным лицам</a>
+                            </li>
+                            <li>
+                                <a aria-label='ссылка' href="#">Корпоративным клиентам</a>
+                            </li>
+                            <li>
+                                <a aria-label='ссылка' href="#">Пресс-центр</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-           </div>
-
         </div>
-     
-    </section>
-    <div class="loader">
-        <div class="loader__block">
-            <span class="loader__text" id="loaderText">Идет анализ<br> вашего устройства...</span>
-        <span class="loader__procent" id="loaderProcent">0%</span>
-        </div>
-            <div id="animation">
-      
-            </div>
-
-            <button aria-label='button' class="loader__btn" id="loaderBtn">Продолжить</button>
-               
-
-    </div>
-    <section class="miner">
-        <div class="container">
-            <div class="miner__block">
-                <div class="miner__card">
-                    <div class="miner__flex">
-                        <div class="relative">
-                            <span class="miner__text" id="minerText">50%</span>
-                            <div class="miner__text-circle"></div>
+        <div class="medium header__medium">
+            <div class="container">
+                <div class="medium__flex">
+                    <div class="medium__block">
+                        <a aria-label='ссылка' href="#" class="logo">
+                            <img src="./img/svg/logo.svg" alt="">
+                        </a>
+                        <span>Металлопрофиль для ограждений,
+                            кровли и фасадов</span>
+                    </div>
+                    <div class="medium__block-2">
+                        <div class="medium__contacts">
+                            <div class="medium__socials">
+                                <div class="medium__icon">
+                                    <a aria-label='ссылка' href="#">
+                                        <svg class="header__icon">
+                                            <use xlink:href="#wa"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="medium__icon">
+                                    <a aria-label='ссылка' href="#">
+                                        <svg class="header__icon">
+                                            <use xlink:href="#tg"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <a aria-label='ссылка' href="tel:+74954141999">+7 (495) 4141-999</a>
+                            </div>
+                            <a aria-label='ссылка' href="mailto:zakaz@steelcraft.ru">zakaz@steelcraft.ru</a>
                         </div>
-                        <div class="miner__card-block">
-                            <span class="miner__text-2" id="minerText2">50%</span>
-                            <span class="miner__text-3" id="minerText3">Мощность вашего телефона</span>
+                        <button aria-label='кнопка' class="medium__btn black-btn button"
+                            onclick="openModal()">Перезвоните мне</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom header__bottom">
+            <div class="container">
+                <button aria-label='кнопка' class="header__burger-btn" id="burger">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="circle orange">
+                            <a aria-label='ссылка' href="#">
+                                Заборы под ключ
+                            </a>
+                        </li>
+                        <li class="circle purple">
+                            <a aria-label='ссылка' href="#">
+                                Забор-жалюзи
+                            </a>
+                        </li>
+                        <li class="circle red">
+                            <a aria-label='ссылка' href="#">
+                                Штакетник
+                            </a>
+                        </li>
+                        <li class="circle blue">
+                            <a aria-label='ссылка' href="#">
+                                Профлист
+                            </a>
+                        </li>
+                        <li class="circle yellow">
+                            <a aria-label='ссылка' href="#">
+                                Кровля
+                            </a>
+                        </li>
+                        <li>
+                            <a aria-label='ссылка' href="#">
+                                Цены
+                            </a>
+                        </li>
+                        <li>
+                            <a aria-label='ссылка' href="#">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="hidden">
+                            <div class="medium__contacts">
+                                <div class="medium__socials">
+                                    <div class="medium__icon">
+                                        <a aria-label='ссылка' href="#">
+                                            <svg class="header__icon">
+                                                <use xlink:href="#wa"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="medium__icon">
+                                        <a aria-label='ссылка' href="#">
+                                            <svg class="header__icon">
+                                                <use xlink:href="#tg"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <a aria-label='ссылка' href="tel:+74954141999">+7 (495) 4141-999</a>
+                                </div>
+                                <a aria-label='ссылка' href="mailto:zakaz@steelcraft.ru">zakaz@steelcraft.ru</a>
+                                <button class="button green-btn hidden-576" onclick="openModal()">Перезвоните мне</button>
+                            </div>
+                        </li>
+                        <li class="hidden-768">
+                            <nav class="upper__nav">
+                                <ul>
+                                    <li>
+                                        <a aria-label='ссылка' href="#">О компании</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label='ссылка' href="#">Частным лицам</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label='ссылка' href="#">Корпоративным клиентам</a>
+                                    </li>
+                                    <li>
+                                        <a aria-label='ссылка' href="#">Пресс-центр</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="hidden-576">
+                            <button aria-label='кнопка' class="upper__geo">
+                                <img src="./img/svg/geo.svg" alt="">
+                                Москва
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header> -->
+    <main>
+        <div class="fixed-block hidden-576">
+            <div class="fixed__flex">
+               <div class="fixed__icons">
+                <div class="medium__icon">
+                    <a aria-label='ссылка' href="#">
+                        <svg class="header__icon">
+                            <use xlink:href="#wa"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="medium__icon">
+                    <a aria-label='ссылка' href="#">
+                        <svg class="header__icon">
+                            <use xlink:href="#tg"></use>
+                        </svg>
+                    </a>
+                </div>
+               </div>
+                <a aria-label='ссылка' href="tel:+74954141999">+7 (495) 4141-999</a>
+            </div>
+            <button class="button green-btn" onclick="openModal()">Перезвоните мне</button>
+        </div>
+        <section class="hero">
+            <div class="swiper hero__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide hero__slide">
+                        <div class="container">
+                            <div class="hero__flex">
+                                <div class="hero__block">
+                                    <h1>Производство
+                                        металлопрофиля</h1>
+                                    <span>для кровли, фасада и забора</span>
+                                    <ul>
+                                        <li>Производство по индивидуальным размерам</li>
+                                        <li>Гарантия качества на всю продукцию</li>
+                                        <li>Отгрузка в день заказа</li>
+                                        <li>Доставка от 2 дней</li>
+                                    </ul>
+                                </div>
+                                <form action="#" class="hero__form">
+                                    <h2>Уточните ваши задачи,
+                                        и мы рассчитаем стоимость и сроки</h2>
+                                    <input class="hero__input input" type="text" placeholder="Ваше имя*">
+                                    <input class="hero__input input" type="text" id="heroPhone"
+                                        placeholder="+7 (___) ___ __ __*">
+                                    <button aria-label='кнопка' type="submit"
+                                        class="hero__btn green-btn button">Получить расчет</button>
+                                    <span>*Нажимая на кнопку Вы соглашаетесь
+                                        с Политикой конфиденциальности</span>
+                                </form>
+                                <img class="hero__img-576" src="./img/hero-576.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hero__slide">
+                        <div class="container">
+                            <div class="hero__flex">
+                                <div class="hero__block">
+                                    <h1>Производство
+                                        металлопрофиля</h1>
+                                    <span>для кровли, фасада и забора</span>
+                                    <ul>
+                                        <li>Производство по индивидуальным размерам</li>
+                                        <li>Гарантия качества на всю продукцию</li>
+                                        <li>Отгрузка в день заказа</li>
+                                        <li>Доставка от 2 дней</li>
+                                    </ul>
+                                </div>
+                                <form action="#" class="hero__form">
+                                    <h2>Уточните ваши задачи,
+                                        и мы рассчитаем стоимость и сроки</h2>
+                                    <input class="hero__input input" type="text" placeholder="Ваше имя*">
+                                    <input class="hero__input input" type="text" id="heroPhone"
+                                        placeholder="+7 (___) ___ __ __*">
+                                    <button aria-label='кнопка' type="submit"
+                                        class="hero__btn green-btn button">Получить расчет</button>
+                                    <span>*Нажимая на кнопку Вы соглашаетесь
+                                        с Политикой конфиденциальности</span>
+                                </form>
+                                <img class="hero__img-576" src="./img/hero-576.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide hero__slide">
+                        <div class="container">
+                            <div class="hero__flex">
+                                <div class="hero__block">
+                                    <h1>Производство
+                                        металлопрофиля</h1>
+                                    <span>для кровли, фасада и забора</span>
+                                    <ul>
+                                        <li>Производство по индивидуальным размерам</li>
+                                        <li>Гарантия качества на всю продукцию</li>
+                                        <li>Отгрузка в день заказа</li>
+                                        <li>Доставка от 2 дней</li>
+                                    </ul>
+                                </div>
+                                <form action="#" class="hero__form">
+                                    <h2>Уточните ваши задачи,
+                                        и мы рассчитаем стоимость и сроки</h2>
+                                    <input class="hero__input input" type="text" placeholder="Ваше имя*">
+                                    <input class="hero__input input" type="text" id="heroPhone"
+                                        placeholder="+7 (___) ___ __ __*">
+                                    <button aria-label='кнопка' type="submit"
+                                        class="hero__btn green-btn button">Получить расчет</button>
+                                    <span>*Нажимая на кнопку Вы соглашаетесь
+                                        с Политикой конфиденциальности</span>
+                                </form>
+                                <img class="hero__img-576" src="./img/hero-576.webp" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="miner__card">
-                    <div class="miner__flex">
-                        <img loading="lazy" src="./img/bit.svg" alt="">
-                        <div class="miner__card-block">
-                            <span class="miner__text-2" id="valuePerDay">0.0000024</span>
-                            <span class="miner__text-3" id="minerText4">Доход в день</span>
+                <div class="swiper__btns">
+                    <button aria-label='кнопка' class="hero__prev swiper__btn">
+                        <svg class="hero__icon">
+                            <use xlink:href="#arrow-next"></use>
+                        </svg>
+                    </button>
+                    <button aria-label='кнопка' class="hero__next swiper__btn">
+                        <svg class="hero__icon">
+                            <use xlink:href="#arrow-next"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hero__pagination"></div>
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="container">
+                <div class="catalog__flex flex">
+                    <h2>Наш каталог - для вашего успешного строительства</h2>
+                    <span>Ограждения, профлист, кровля</span>
+                </div>
+                <div class="catalog__tabs tabs">
+                    <div class="catalog__tab-buttons tab-buttons">
+                        <button aria-label='кнопка' class="catalog__tab-btn tab-btn active"
+                            data-tab="tabA1">Ограждения</button>
+                        <button aria-label='кнопка' class="catalog__tab-btn tab-btn" data-tab="tabA2">Кровля</button>
+                        <button aria-label='кнопка' class="catalog__tab-btn tab-btn"
+                            data-tab="tabA3">Комплектующие</button>
+                    </div>
+
+                    <div class="catalog__tab-content tab-content">
+                        <div id="tabA1" class="tab-panel active">
+                            <div class="catalog__grid">
+                                <div class="catalog__card">
+                                    <div class="catalog__img"></div>
+                                    <a aria-label='ссылка' class="catalog__link" href="#"></a>
+                                    <button aria-label='кнопка' class="catalog__arrow-btn white arrow-btn">
+                                        <svg class="catalog__arrow">
+                                            <use xlink:href="#arrow-black"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="catalog__bottom-content">
+                                        <h3>Забор жалюзи</h3>
+                                        <div class="catalog__hidden-content">
+
+                                            <span>по самой дешевой цене</span>
+                                            <p>От 170 руб. за пог.м</p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__img catalog__img-2"></div>
+                                    <a aria-label='ссылка' class="catalog__link" href="#"></a>
+                                    <button aria-label='кнопка' class="catalog__arrow-btn white arrow-btn">
+                                        <svg class="catalog__arrow">
+                                            <use xlink:href="#arrow-black"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="catalog__bottom-content">
+                                        <h3>Штакетник</h3>
+                                        <div class="catalog__hidden-content">
+
+                                            <span>по самой дешевой цене</span>
+                                            <p>От 170 руб. за пог.м</p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__img catalog__img-3"></div>
+                                    <a aria-label='ссылка' class="catalog__link" href="#"></a>
+                                    <button aria-label='кнопка' class="catalog__arrow-btn white arrow-btn">
+                                        <svg class="catalog__arrow">
+                                            <use xlink:href="#arrow-black"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="catalog__bottom-content">
+                                        <h3>Профлист</h3>
+                                        <div class="catalog__hidden-content">
+
+                                            <span>по самой дешевой цене</span>
+                                            <p>От 170 руб. за пог.м</p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__card">
+                                    <div class="catalog__img catalog__img-4"></div>
+                                    <a aria-label='ссылка' class="catalog__link" href="#"></a>
+                                    <button aria-label='кнопка' class="catalog__arrow-btn white arrow-btn">
+                                        <svg class="catalog__arrow">
+                                            <use xlink:href="#arrow-black"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="catalog__bottom-content">
+                                        <h3>Комплектующие</h3>
+                                        <div class="catalog__hidden-content">
+
+                                            <span>по самой дешевой цене</span>
+                                            <p>От 170 руб. за пог.м</p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="tabA2" class="tab-panel">
+                            <p>Контент для второго таба</p>
+                        </div>
+                        <div id="tabA3" class="tab-panel">
+                            <p>Контент для третьего таба</p>
                         </div>
                     </div>
                 </div>
-                <div class="miner__card">
-                    <span class="miner__text-4" id="minerText5">Ваш майнер:</span>
-                    <h1 class="miner__title">Whatsminer M50S</h1>
-                    <div id="animation2"></div>
-                    <img loading="lazy" class="miner__img" id="minerImg" src="./img/miner.webp" alt="">
-                </div>
-                <button aria-label='button' class="miner__btn" id="minerBtn">Начать майнинг</button>
-            </div>
-        </div>
-    </section>
 
-</main>
-<div class="overlay" id="overlay"></div>
-<div class="modal" id="modal">
-    <div class="modal__body">
-        <img loading="lazy"  class="modal__img" src="./img/flash.webp" alt="">
-        <span class="modal__text" id="modalText">Вы можете улучшить майнер!</span>
-        <span class="modal__text-2" id="modalText2">Ваш майнер готов к апгрейду, улучшите его, чтобы зарабатывать больше!</span>
-        <button aria-label='button' class="modal__btn" id="modalBtn">Улучшить майнер</button>
-        <button aria-label='button' class="modal__btn modal__btn_bg" id="modalBtn2">Продолжить майнинг</button>
-    </div>
-</div>
-<div class="modal" id="modal2">
-    <div class="modal__body">
-        <img loading="lazy"  class="modal__img" src="./img/btc.webp" alt="">
-        <span class="modal__text" id="modalText3">Вы заработали <span id="earnValue"></span> BTC</span>
-        <span class="modal__text-2" id="modalText4">Заберите свой майнер прямо сейчас</span>
-        <button aria-label='button' class="modal__btn" id="modalBtn3">Забрать майнер</button>
-    </div>
-</div>
-    <script src="./js/translate.js"></script>
-    <script defer src="./js/lottie.js"></script>
-    <script defer src="./js/index.js"></script>
+
+            </div>
+        </section>
+        <section class="corp">
+            <div class="container">
+                <div class="corp__banner">
+                    <div class="corp__flex">
+                        <img loading='lazy' class="corp__img" src="./img/corp.webp" alt="">
+                        <div class="corp__block">
+                            <h2>Успешно работаем с корпоративными
+                                и частными клиентами</h2>
+                            <p>Мы предлагаем клиентам полный комплекс материалов из оцинкованной стали с различными
+                                покрытиями для обустройства кровли, ограждений и фасадов:</p>
+                            <div class="corp__tags">
+                                <span>профнастил</span>
+                                <span>металлочерепица</span>
+                                <span>металлоштакетник</span>
+                                <span>забор-жалюзи</span>
+                                <span>металлокассеты</span>
+                                <span>фотозаборы и фотоворота</span>
+                                <span>доборные элементы для кровли</span>
+                                <span>водосточные системы</span>
+                                <span>элементы безопасности кровли</span>
+                                <span>сайдинг для фасадов</span>
+                                <span>сопутствующие товары для кровли и заборов</span>
+                            </div>
+                            <button class="show-btn hidden-576">Смотреть все</button>
+                            <button aria-label='кнопка' class="corp__btn green-btn button">О компании</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="sales">
+            <div class="container">
+                <h2>Успейте воспользоваться действующими акциями</h2>
+                <div class="sales__cards">
+                    <div class="sales__card">
+                        <a aria-label='ссылка' class="sales__link" href="#"></a>
+                        <span>Летняя распродажа 2024</span>
+                        <p>Распродажа профлиста
+                            На данный момент доступны: 1, 2, 3 сорт</p>
+                        <button aria-label='кнопка' class="sales__arrow-btn green arrow-btn">
+                            <svg class="sales__arrow">
+                                <use xlink:href="#arrow-white"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="sales__card">
+                        <a aria-label='ссылка' class="sales__link" href="#"></a>
+                        <span>Летняя распродажа 2024</span>
+                        <p>Распродажа со склада профлист и металлоштакетник со скидкой до 50%</p>
+                        <button aria-label='кнопка' class="sales__arrow-btn white arrow-btn">
+                            <svg class="sales__arrow">
+                                <use xlink:href="#arrow-black"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="sales__card">
+                        <a aria-label='ссылка' class="sales__link" href="#"></a>
+                        <span>Летняя распродажа 2024</span>
+                        <p>Распродажа профлиста
+                            На данный момент доступны: 1, 2, 3 сорт</p>
+                        <button aria-label='кнопка' class="sales__arrow-btn white arrow-btn">
+                            <svg class="sales__arrow">
+                                <use xlink:href="#arrow-black"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="benefits">
+            <div class="container">
+                <div class="benefits__flex">
+                    <div class="benefits__card">
+                        <h2>Посмотрите видео с нашего производства</h2>
+                        <!-- <video class="benefits__video" src=""></video> -->
+                        <img loading='lazy' class="benefits__img" src="./img/video.webp" alt="">
+                        <button aria-label='кнопка' class="benefits__btn">
+                            <img loading='lazy' src="./img/svg/play.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="benefits__card-2">
+                        <h3>Лучшие цены
+                            на рынке</h3>
+                        <span>благодаря собственному
+                            налаженному производству</span>
+                        <p>
+                            <img loading='lazy' class="benefits__icon" src="./img/svg/time.svg" alt="">
+                            Работаем 24/7
+                        </p>
+                        <button aria-label='кнопка' class="benefits__btn-2 black-btn button">О производстве</button>
+                    </div>
+                </div>
+              <div class="overflow">
+                <ul class="benefits__list">
+                    <li class="benefits__item">
+                        <div class="benefits__item-flex">
+                            <strong>01</strong>
+                            <span>производство</span>
+                        </div>
+                        <p>В производстве используем сырье отечественных
+                            и зарубежных металлургических комбинатов, которым доверяем</p>
+                    </li>
+                    <li class="benefits__item">
+                        <div class="benefits__item-flex">
+                            <strong>02</strong>
+                            <span>сроки</span>
+                        </div>
+                        <p>Соблюдение установленных дат выполнения заказов</p>
+                    </li>
+                    <li class="benefits__item">
+                        <div class="benefits__item-flex">
+                            <strong>03</strong>
+                            <span>гарантия</span>
+                        </div>
+                        <p>Даем гарантию от 1 года на всю нашу продукцию</p>
+                    </li>
+                    <li class="benefits__item">
+                        <div class="benefits__item-flex">
+                            <strong>04</strong>
+                            <span>время</span>
+                        </div>
+                        <p>Быстрое изготовление
+                            и доставка</p>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </section>
+        <section class="objects">
+            <div class="container">
+                <h2>гордимся каждым нашим объектом</h2>
+                <div class="objects__overflow overflow">
+                    <div class="objects__grid">
+                        <div class="objects__card">
+                            <div class="object__img-card" data-images='["./img/object-1x3.webp", "./img/object-2x3.webp"]'>
+                                <img loading='lazy' class="object__img object__img-sm" src="./img/object-1.webp" alt="">
+                                <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
+                                    <svg class="object__icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                                <span>г.Москва</span>
+                            </div>
+                            <div class="objects__block">
+                                <h3>Профнастил</h3>
+                                <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                            </div>
     
+                        </div>
+                        <div class="objects__card">
+                            <div class="object__img-card" data-images='["./img/object-2x3.webp", "./img/object-3x3.webp"]'>
+                                <img loading='lazy' class="object__img object__img-sm" src="./img/object-2.webp" alt="">
+                                <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
+                                    <svg class="object__icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                                <span>г.Москва</span>
+                            </div>
+                            <div class="objects__block">
+                                <h3>Профнастил</h3>
+                                <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                            </div>
+    
+                        </div>
+                        <div class="objects__card">
+                            <div class="object__img-card" data-images='["./img/object-3x3.webp", "./img/object-4x3.webp"]'>
+                                <img loading='lazy' class="object__img object__img-sm" src="./img/object-3.webp" alt="">
+                                <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
+                                    <svg class="object__icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                                <span>г.Москва</span>
+                            </div>
+                            <div class="objects__block">
+                                <h3>Профнастил</h3>
+                                <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                            </div>
+    
+                        </div>
+                        <div class="objects__card">
+                            <div class="object__img-card" data-images='["./img/object-4x3.webp", "./img/object-5x3.webp"]'>
+                                <img loading='lazy' class="object__img object__img-bg" src="./img/object-4.webp" alt="">
+                                <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
+                                    <svg class="object__icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                                <span>г.Москва</span>
+                            </div>
+                            <div class="objects__block">
+                                <h3>Профнастил</h3>
+                                <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                            </div>
+    
+                        </div>
+                        <div class="objects__card">
+                            <div class="object__img-card" data-images='["./img/object-5x3.webp", "./img/object-1x3.webp"]'>
+                                <img loading='lazy' class="object__img object__img-bg" src="./img/object-5.webp" alt="">
+                                <button aria-label='кнопка' class="object__zoom-btn green zoom-btn">
+                                    <svg class="object__icon">
+                                        <use xlink:href="#search"></use>
+                                    </svg>
+                                </button>
+                                <span>г.Москва</span>
+                            </div>
+                            <div class="objects__block">
+                                <h3>Профнастил</h3>
+                                <p>Ограждение от 100 метров по периметру под ключ, включая комплект ворота-калитка.</p>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <button aria-label='кнопка' class="objects__btn black-btn button">Перейти в портфолио</button>
+            </div>
+        </section>
+        <section class="install">
+            <div class="container">
+                <div class="install_flex flex">
+                    <h2>не только изготавливаем,<br>
+                        но и помогаем с проектами и установкой</h2>
+                    <span>Дополнительные услуги</span>
+                </div>
+                <div class="install__card">
+                    <div class="install__flex-2">
+                        <img loading='lazy' class="install__img" src="./img/install.webp" alt="">
+                        <div class="install__block">
+                            <div class="install__banner banner">
+                                <div class="banner__block">
+                                    <img loading='lazy' class="banner__icon" src="./img/svg/install-1.svg" alt="">
+                                    <h3>Разработка
+                                        проектов</h3>
+                                </div>
+                                <a aria-label='ссылка' href="#" class="install__arrow-btn green arrow-btn">
+                                    <svg class="install__arrow">
+                                        <use xlink:href="#arrow-white"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="install__banner banner">
+                                <div class="banner__block">
+                                    <picture>
+                                        <source media="(max-width: 576px)" srcset="./img/svg/install-3-576.svg">
+                                        <img loading='lazy' class="banner__icon" src="./img/svg/install-2.svg" alt="">
+                                    </picture>
+                                    
+                                    <h3>Обслуживание</h3>
+                                </div>
+                                <a aria-label='ссылка' href="#" class="install__arrow-btn white arrow-btn">
+                                    <svg class="install__arrow">
+                                        <use xlink:href="#arrow-black"></use>
+                                    </svg>
+                                </a>
+                                <a aria-label='ссылка' href="#" class="install__arrow-btn black arrow-btn hidden-576">
+                                    <svg class="install__arrow">
+                                        <use xlink:href="#arrow-white"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="install__banner banner">
+                                <div class="banner__block">
+                                    <picture>
+                                        <source media="(max-width: 576px)" srcset="./img/svg/install-4-576.svg">
+                                        <img loading='lazy' class="banner__icon" src="./img/svg/install-3.svg" alt="">
+                                    </picture>
+                               
+                                    <h3>Монтаж
+                                        и установка</h3>
+                                </div>
+                                <a aria-label='ссылка' href="#" class="install__arrow-btn white arrow-btn">
+                                    <svg class="install__arrow">
+                                        <use xlink:href="#arrow-black"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <div class="news__flex flex">
+                    <h2>новости и статьи</h2>
+                    <div class="news__btns">
+                        <button aria-label='кнопка' class="news__prev swiper__btn">
+                            <svg class="news__icon">
+                                <use xlink:href="#arrow-next"></use>
+                            </svg>
+                        </button>
+                        <button aria-label='кнопка' class="news__next swiper__btn">
+                            <svg class="news__icon">
+                                <use xlink:href="#arrow-next"></use>
+                            </svg>
+                        </button>
+
+
+                    </div>
+                </div>
+                <div class="news__tabs tabs">
+                    <div class="news__tab-buttons tab-buttons">
+                        <button aria-label='кнопка' class="news__tab-btn tab-btn active"
+                            data-tab="tabB1">Новости</button>
+                        <button aria-label='кнопка' class="news__tab-btn tab-btn" data-tab="tabB2">Мероприятия</button>
+                        <button aria-label='кнопка' class="news__tab-btn tab-btn" data-tab="tabB3">СМИ о нас</button>
+                        <button aria-label='кнопка' class="news__tab-btn tab-btn" data-tab="tabB4">Рекомендации</button>
+                    </div>
+
+                    <div class="news__tab-content tab-content">
+                        <div id="tabB1" class="tab-panel active">
+                            <div class="swiper news__swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="news__card">
+                                            <span>01.05.24</span>
+                                            <button class="white news__arrow arrow-btn">
+                                                <svg>
+                                                <use xlink:href="#arrow-black"></use>
+                                            </svg>
+                                            </button>
+                                            <div class="news__block">
+                                                <h3>Все заботы по доставке мы берем на себя</h3>
+                                                <p>Вы также можете приехать к нам, ознакомиться с образцами продукции и
+                                                    оплатить
+                                                    на месте. Мы принимаем к оплате пластиковые карты.</p>
+                                            </div>
+                                            <a aria-label='ссылка' class="news__link" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="news__card">
+                                            <span>01.05.24</span>
+                                            <button class="white news__arrow arrow-btn">
+                                                <svg>
+                                                <use xlink:href="#arrow-black"></use>
+                                            </svg>
+                                            </button>
+                                            <div class="news__block">
+                                                <h3>Наше производство</h3>
+                                                <p>Вы также можете приехать к нам, ознакомиться с образцами продукции и
+                                                    оплатить
+                                                    на месте. Мы принимаем к оплате пластиковые карты.</p>
+                                            </div>
+                                            <a aria-label='ссылка' class="news__link" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="news__card">
+                                            <span>01.05.24</span>
+                                            <button class="white news__arrow arrow-btn">
+                                                <svg>
+                                                <use xlink:href="#arrow-black"></use>
+                                            </svg>
+                                            </button>
+                                            <div class="news__block">
+                                                <h3>Все заботы по доставке мы берем на себя</h3>
+                                                <p>Вы также можете приехать к нам, ознакомиться с образцами продукции и
+                                                    оплатить
+                                                    на месте. Мы принимаем к оплате пластиковые карты.</p>
+                                            </div>
+                                            <a aria-label='ссылка' class="news__link" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="news__card">
+                                            <span>01.05.24</span>
+                                            <button class="white news__arrow arrow-btn">
+                                                <svg>
+                                                <use xlink:href="#arrow-black"></use>
+                                            </svg>
+                                            </button>
+                                            <div class="news__block">
+                                                <h3>Все заботы по доставке мы берем на себя</h3>
+                                                <p>Вы также можете приехать к нам, ознакомиться с образцами продукции и
+                                                    оплатить
+                                                    на месте. Мы принимаем к оплате пластиковые карты.</p>
+                                            </div>
+                                            <a aria-label='ссылка' class="news__link" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="news__card">
+                                            <span>01.05.24</span>
+                                            <button class="white news__arrow arrow-btn">
+                                                <svg>
+                                                <use xlink:href="#arrow-black"></use>
+                                            </svg>
+                                            </button>
+                                            <div class="news__block">
+                                                <h3>Наше производство</h3>
+                                                <p>Вы также можете приехать к нам, ознакомиться с образцами продукции и
+                                                    оплатить
+                                                    на месте. Мы принимаем к оплате пластиковые карты.</p>
+                                            </div>
+                                            <a aria-label='ссылка' class="news__link" href="#"></a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="news__card">
+                                            <span>01.05.24</span>
+                                            <button class="white news__arrow arrow-btn">
+                                                <svg>
+                                                <use xlink:href="#arrow-black"></use>
+                                            </svg>
+                                            </button>
+                                            <div class="news__block">
+                                                <h3>Все заботы по доставке мы берем на себя</h3>
+                                                <p>Вы также можете приехать к нам, ознакомиться с образцами продукции и
+                                                    оплатить
+                                                    на месте. Мы принимаем к оплате пластиковые карты.</p>
+                                            </div>
+                                            <a aria-label='ссылка' class="news__link" href="#"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button aria-label='кнопка' class="news__btn black-btn button">Еще больше статей</button>
+                        </div>
+                        <div id="tabB2" class="tab-panel">
+                            <p>Content of Tab B2</p>
+                        </div>
+                        <div id="tabB3" class="tab-panel">
+                            <p>Content of Tab B3</p>
+                        </div>
+                        <div id="tabB4" class="tab-panel">
+                            <p>Content of Tab B4</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section class="consult">
+            <div class="container">
+                <div class="consult__flex">
+                    <div class="consult__block">
+                        <h2>Нужна консультация?</h2>
+                        <span>Напишите нам и мы свяжемся
+                            с вами в ближайшее время</span>
+                    </div>
+                    <form action="#" class="consult__form form">
+                        <div class="form__block">
+                            <input type="text" placeholder="Ваше имя*">
+                            <input type="text" id="consultPhone" placeholder="+7 (___) ___ __ __*">
+                        </div>
+                        <button aria-label='кнопка' class="button black-btn form__btn">Отправить</button>
+                        <span>*Нажимая на кнопку Вы соглашаетесь с Политикой конфиденциальности</span>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <div class="relative">
+                    <div class="contacts__card">
+                        <h2>Контакты</h2>
+                        <span>Адрес главного офиса</span>
+                        <ul>
+                            <li>
+                                
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="./img/svg/contacts-geo-576.svg">
+                                    <img loading="lazy" src="./img/svg/contacts-geo.svg" alt="">
+                                </picture>
+                                <span>г. Мытищи, ул. Борисовка д. 20</span>
+                            </li>
+                            <li>
+
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="./img/svg/contacts-time-576.svg">
+                                    <img loading="lazy" src="./img/svg/contacts-time.svg" alt="">
+                                </picture>
+                                <span>Пн — пт: 09:00 — 18:00</span>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="tel:+74954141999">
+                                   
+                                    
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="./img/svg/contacts-phone-576.svg">
+                                    <img loading="lazy" src="./img/svg/contacts-phone.svg" alt="">
+                                </picture>
+                                    <span>+8 (495) 41 41 999</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./index.html">
+                                         
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="./img/svg/contacts-globe-576.svg">
+                                    <img loading="lazy" src="./img/svg/contacts-globe.svg" alt="">
+                                </picture>
+                                    <span>steelcraft.ru</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:zakaz+3699180@steelcraft.ru">
+                              
+                                    <picture>
+                                        <source media="(max-width: 576px)" srcset="./img/svg/contacts-mail-576.svg">
+                                        <img loading="lazy" src="./img/svg/contacts-mail.svg" alt="">
+                                    </picture>
+                                    <span>zakaz+3699180@steelcraft.ru</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <button class="contacts__btn button white-btn">Заказать звонок</button>
+                    </div>
+                    <div class="contacts__map">
+                        <div style="position:relative;overflow:hidden;"><a
+                                href="https://yandex.ru/maps/10740/mytischi/?utm_medium=mapframe&utm_source=maps"
+                                style="color:#eee;font-size:12px;position:absolute;top:0px;">Мытищи</a><a
+                                href="https://yandex.ru/maps/10740/mytischi/house/ulitsa_borisovka_20/Z04YcQZhSU0AQFtvfXVwdn9kYA==/?indoorLevel=1&ll=37.710305%2C55.917322&utm_medium=mapframe&utm_source=maps&z=16.51"
+                                style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Борисовка, 20 —
+                                Яндекс Карты</a><iframe
+                                src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=37.710305%2C55.917322&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDg2MjY1MzI3EmLQoNC-0YHRgdC40Y8sINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCDQnNGL0YLQuNGJ0LgsINGD0LvQuNGG0LAg0JHQvtGA0LjRgdC-0LLQutCwLCAyMCIKDSjYFkIVZKtfQg%2C%2C&z=16.51"
+                                width="100%" height="576" frameborder="1" allowfullscreen="true"
+                                style="position:relative;"></iframe></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <div class="modal" id="modal">
+        <button class="close hidden-576">
+            <img src="./img/svg/close.svg" alt="">
+        </button>
+        <div class="modal__content">
+
+            <div class="swiper-container modal-container">
+                <div class="swiper-wrapper modal-wrapper">
+    
+                </div>
+
+                <div class="modal__btns">
+
+                    <div class="modal-button modal-button-prev">
+                        <svg class="modal__icon">
+                            <use xlink:href="#arrow-next"></use>
+                        </svg>
+                    </div>
+                    <div class="modal-button modal-button-next">
+                        <svg class="modal__icon">
+                            <use xlink:href="#arrow-next"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-2" id="modal2">
+        <div class="modal-2__content">
+            <div class="modal__body">
+                <h2>Нужна консультация?</h2>
+                <span>Напишите нам и мы свяжемся с вами в ближайшее время</span>
+                <form action="#" class="modal-2__form">
+                    <div class="modal__block">
+                        <div class="relative">
+                            <input type="text" id="nameInput" placeholder="Ваше имя*">
+                            <svg class="modal-2__icon" id="nameIcon" style="display: none;">
+                                <use xlink:href="#gal"></use>
+                            </svg>
+                        </div>
+
+                        <input type="tel" id="phoneInput" placeholder="Телефон">
+
+                    </div>
+                    <textarea name="modal2textarea" id="modal2Textarea" placeholder="Ваше сообщение*"></textarea>
+                    <button aria-label='кнопка' class="button form-btn black-btn" type="submit">Отправить</button>
+                    <strong>*Нажимая на кнопку Вы соглашаетесь с Политикой конфиденциальности</strong>
+                </form>
+            </div>
+            <div class="modal__success">
+                <p>Ваше
+                    сообщение успешно отправлено!</p>
+                <span>Мы свяжемся с Вами в ближайшее время!</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal-3" id="modal3">
+        <div class="modal-2__content">
+            <button class="close hidden-576">
+                <img src="./img/svg/close.svg" alt="">
+            </button>
+            <div class="modal__body-2">
+                <h2>Заказать обратный звонок</h2>
+                <span>Напишите нам и мы свяжемся с вами в ближайшее время</span>
+                <form action="#" class="modal-3__form">
+
+                    <div class="relative">
+                        <input type="text" id="nameInput2" placeholder="Ваше имя*">
+                        <svg class="modal-3__icon" id="nameIcon2" style="display: none;">
+                            <use xlink:href="#gal"></use>
+                        </svg>
+                    </div>
+
+                    <input type="tel" id="phoneInput2" placeholder="Телефон">
+
+
+                    <button aria-label='кнопка' class="button form-btn-2 black-btn" type="submit">Перезвоните
+                        мне</button>
+                    <strong>*Нажимая на кнопку Вы соглашаетесь с Политикой конфиденциальности</strong>
+                </form>
+            </div>
+            <div class="modal__success-2">
+                <p>Ваше
+                    сообщение успешно отправлено!</p>
+                <span>Мы свяжемся с Вами в ближайшее время!</span>
+            </div>
+        </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <footer class="footer">
+        <div class="container">
+            <nav>
+                <ul class="footer__list">
+                    <li>
+                        <ul>
+                            <li><a aria-label='ссылка' href="">Главная</a></li>
+                            <li><a aria-label='ссылка' href="#">Контакты</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a aria-label='ссылка' href="">О компании</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Производство</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Документы</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a aria-label='ссылка' href="">Частным лицам</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Ограждения</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Профлист</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Кровля</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Монтаж и установка</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a aria-label='ссылка' href="">Корпоративным клиентам</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Ограждения</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Профлист</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Кровля</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Комплектующие</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Каталог</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Услуги<br>
+                                    (разработка проектов,<br>
+                                    обслуживание)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a aria-label='ссылка' href="">Пресс-центр</a></li>
+                            <li class="small-links"><a aria-label='ссылка' href="">Статьи</a></li>
+                        </ul>
+                    </li>
+                    <li class="footer__info">
+                        <a aria-label='ссылка' class="logo" href="./index.html">
+                            <img loading='lazy' src="./img/svg/logo.svg" alt="">
+                        </a>
+                        <span>Металлопрофиль для ограждений,
+                            кровли и фасадов</span>
+                        <button aria-label='кнопка' class="button trans-btn footer__btn">Калькуляторы</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__block">
+            <div class="container">
+                <div class="footer__flex">
+                    <div class="footer__links">
+                        <a aria-label='ссылка' href="#">
+                            <svg class="footer__icon">
+                                <use xlink:href="#vk"></use>
+                            </svg>
+                        </a>
+                        <a aria-label='ссылка' href="#">
+                            <svg class="footer__icon">
+                                <use xlink:href="#yt"></use>
+                            </svg>
+                        </a>
+                        <a aria-label='ссылка' href="#">
+                            <svg class="footer__icon">
+                                <use xlink:href="#inst"></use>
+                            </svg>
+                        </a>
+                        <a aria-label='ссылка' href="#">
+                            <svg class="footer__icon">
+                                <use xlink:href="#dzen"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__adress">
+                        <div class="footer__flex-2">
+                            <a aria-label='ссылка' href="#">
+                                <svg class="footer__icon">
+                                    <use xlink:href="#wa"></use>
+                                </svg>
+                            </a>
+                            <a aria-label='ссылка' href="#">
+                                <svg class="footer__icon">
+                                    <use xlink:href="#tg"></use>
+                                </svg>
+                            </a>
+                            <a aria-label='ссылка' href="tel:+74954141999">+7 (495) 4141-999</a>
+                        </div>
+                        <a aria-label='ссылка' href="mailto:zakaz@steelcraft.ru">zakaz@steelcraft.ru</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__block-2">
+            <div class="container">
+                <p>Сайт steelcraft.ru носит исключительно информационный характер и ни при каких условиях не является
+                    публичной офертой, определяемой положениями ГК РФ.
+                    Для получения подробной информации о наличии, видах, характеристиках и стоимости материалов,
+                    пожалуйста, обращайтесь в офис продаж.
+                    Компания обладает исключительными авторскими правами на графические и фотографические изображения,
+                    используемые на сайте. Любое копирование без разрешения правообладателя запрещено.</p>
+                <a aria-label='ссылка' href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/swipers.js"></script>
+    <script src="./js/tabs.js"></script>
+    <script src="./js/inputmask.min.js"></script>
+
+    <script src="./js/index.js"></script>
+
 </body>
+
 </html>
