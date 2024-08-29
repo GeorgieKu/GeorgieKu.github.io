@@ -1,6 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
+    let body = document.querySelector('body')
+    let header = document.querySelector('.header')
+    let fixedBlock = document.querySelector('.fixed-block')
     document.getElementById("burger").addEventListener("click", function () {
-        document.querySelector("header").classList.toggle("open")
+        header.classList.toggle("open")
+        if (header.classList.contains('open')) {
+            body.style.overflow = 'hidden';
+            if (window.matchMedia("(max-width: 576px)").matches){
+                fixedBlock.style.bottom = '-95px'
+            }
+            
+          
+        }
+        else {
+            body.style.overflow = 'auto';
+            if (window.matchMedia("(max-width: 576px)").matches){
+                fixedBlock.style.bottom = '0'
+                           }
+              
+        }
     })
 
     let showBtn = document.querySelector('.show-btn');
