@@ -6,46 +6,45 @@ document.addEventListener("DOMContentLoaded", function () {
         header.classList.toggle("open")
         if (header.classList.contains('open')) {
             body.style.overflow = 'hidden';
-            if (window.matchMedia("(max-width: 576px)").matches){
+            if (window.matchMedia("(max-width: 576px)").matches) {
                 fixedBlock.style.bottom = '-95px'
             }
-            
-          
-        }
-        else {
+
+
+        } else {
             body.style.overflow = 'auto';
-            if (window.matchMedia("(max-width: 576px)").matches){
+            if (window.matchMedia("(max-width: 576px)").matches) {
                 fixedBlock.style.bottom = '0'
-                           }
-              
+            }
+
         }
     })
 
     function adjustMenuHeight() {
         const menu = document.querySelector('.menu');
         const heroSwiper = document.querySelector('.hero__swiper');
-        
+
         if (window.matchMedia("(max-width: 576px)").matches) {
             // Получаем высоту блока hero__swiper
             const heroSwiperHeight = heroSwiper.offsetHeight;
             // Устанавливаем такую же высоту для .menu
-            menu.style.height = heroSwiperHeight + 'px';
+            menu.style.maxHeight = heroSwiperHeight + 'px';
         } else {
             // Если ширина больше 576px, сбрасываем высоту
             menu.style.height = 'auto';
         }
     }
-    
+
     // Вызываем функцию при загрузке страницы
     adjustMenuHeight();
-    
+
     // Отслеживаем изменения размера экрана
     window.addEventListener('resize', adjustMenuHeight);
 
     let showBtn = document.querySelector('.show-btn');
-    showBtn.addEventListener('click' , function() {
+    showBtn.addEventListener('click', function () {
         let corpTags = document.querySelectorAll('.corp__tags span');
-        corpTags.forEach(function(corpTag) {
+        corpTags.forEach(function (corpTag) {
             corpTag.style.display = 'block'
         })
         showBtn.style.display = 'none'
@@ -189,7 +188,7 @@ overlay.addEventListener('click', function () {
 let closes = document.querySelectorAll('.close');
 
 
-closes.forEach(function(close) {
+closes.forEach(function (close) {
     close.addEventListener('click', function () {
         modal3.style.display = 'none';
         overlay.style.display = 'none';
