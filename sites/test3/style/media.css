@@ -138,6 +138,7 @@
     z-index: 2;
     border-radius: 20px;
     overflow: auto;
+    max-height: calc(100dvh - 80px);
   }
   .menu__list {
     display: block;
@@ -329,7 +330,7 @@
     padding: 21px 0;
   }
   .menu {
-    top: 89px;
+    top: 16px;
   }
   .hero__swiper {
     min-height: unset;
@@ -609,7 +610,6 @@
     line-height: 18px;
   }
   .benefits__btn-2 {
-    background-color: var(--green);
     max-width: 170px;
   }
   .benefits__item {
@@ -779,7 +779,6 @@
   .news__btn {
     margin: 0 auto 0 0;
     max-width: 195px;
-    background-color: var(--green);
   }
   .form__block {
     flex-direction: column;
@@ -814,24 +813,18 @@
     font-size: 12px;
     line-height: 18px;
   }
-  .form__btn {
-    background-color: var(--green);
-  }
   .consult__form span {
     font-size: 12px;
     line-height: 18px;
   }
   .contacts__card {
-    background-color: var(--grey);
     border-radius: 12px;
   }
   .contacts__card h2 {
-    color: var(--black);
     font-size: 26px;
     line-height: 33.8px;
   }
   .contacts__card span {
-    color: var(--black);
     font-size: 21px;
     line-height: 29.4px;
     margin-bottom: 14px;
@@ -842,8 +835,6 @@
   }
   .contacts__btn {
     margin-top: 26px;
-    background-color: var(--green);
-    color: var(--white);
   }
   .footer {
     padding-top: 70px;
@@ -991,11 +982,21 @@
     width: 20px;
     height: 20px;
   }
-  .header__icon {
+  .header__icon-hide {
     display: none;
   }
   .corp__img {
     max-width: 312px;
     max-height: 282px;
+  }
+  .header.open .menu-bg {
+    position: fixed;
+    top: 74px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--grey);
   }
 }/*# sourceMappingURL=media.css.map */

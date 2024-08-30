@@ -20,20 +20,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     })
 
-    function adjustMenuHeight() {
-        const menu = document.querySelector('.menu');
-        const heroSwiper = document.querySelector('.hero__swiper');
+    // function adjustMenuHeight() {
+    //     const menu = document.querySelector('.menu');
+    //     const heroSwiper = document.querySelector('.hero__swiper');
 
-        if (window.matchMedia("(max-width: 576px)").matches) {
-            // Получаем высоту блока hero__swiper
-            const heroSwiperHeight = heroSwiper.offsetHeight;
-            // Устанавливаем такую же высоту для .menu
-            menu.style.height = heroSwiperHeight + 'px';
-        } else {
-            // Если ширина больше 576px, сбрасываем высоту
-            menu.style.height = 'auto';
-        }
-    }
+    //     if (window.matchMedia("(max-width: 576px)").matches) {
+    //         // Получаем высоту блока hero__swiper
+    //         const heroSwiperHeight = heroSwiper.offsetHeight;
+    //         // Устанавливаем такую же высоту для .menu
+    //         menu.style.height = heroSwiperHeight + 'px';
+    //     } else {
+    //         // Если ширина больше 576px, сбрасываем высоту
+    //         menu.style.height = 'auto';
+    //     }
+    // }
 
     // Вызываем функцию при загрузке страницы
     adjustMenuHeight();
