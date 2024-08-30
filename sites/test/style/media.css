@@ -11,6 +11,11 @@
   .works__block:nth-child(3) {
     max-width: 224px;
   }
+  .statement-paid__flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
 }
 @media (max-width: 992px) {
   .header__burger-btn {
@@ -63,6 +68,9 @@
   .footer__flex nav {
     flex-basis: 382px;
   }
+  .contacts__flex {
+    flex-direction: column;
+  }
 }
 @media (max-width: 768px) {
   .header__block {
@@ -88,6 +96,28 @@
   .label {
     display: block;
     text-align: center;
+  }
+  .contacts__flex {
+    gap: 32px;
+  }
+  .contacts__block a {
+    max-width: 400px;
+  }
+  .contacts__card {
+    min-height: 236px;
+  }
+  .statement__banner {
+    bottom: 32px;
+    max-width: 624px;
+  }
+  .statement__ready {
+    padding: 32px;
+  }
+  .statement__flex {
+    gap: 12px;
+  }
+  .statement-paid__flex .statement-paid__block {
+    gap: 32px;
   }
 }
 @media (max-width: 700px) {
@@ -120,6 +150,10 @@
   }
   .header__block {
     gap: 24px;
+  }
+  .text-40-b {
+    font-size: 32px;
+    line-height: 38.4px;
   }
 }
 @media (max-width: 576px) {
@@ -186,7 +220,7 @@
     font-size: 28px;
     line-height: 33.6px;
     letter-spacing: -0.02em;
-    margin-bottom: 24px;
+    margin-bottom: 24px !important;
   }
   .works__block {
     gap: 16px;
@@ -202,6 +236,26 @@
     font-size: 14px;
     line-height: 16.8px;
   }
+  .text-18-b {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+  }
+  .text-32-sb {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    letter-spacing: 0.02em;
+  }
+  .contacts__flex-2 img {
+    max-width: 24px;
+  }
+  .contacts__block {
+    gap: 8px;
+  }
+  .contacts .button {
+    justify-content: center;
+  }
   .card {
     padding: 24px;
   }
@@ -213,6 +267,25 @@
     font-size: 14px;
     line-height: 16.8px;
     letter-spacing: 0.02em;
+  }
+  .text-16-sb {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .text-24 {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .text-24-b {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.8px;
+  }
+  .payment__flex {
+    gap: 8px;
+  }
+  .bread-crumbs__flex {
+    gap: 17.5px;
   }
   .info__card {
     min-height: 240px;
@@ -229,5 +302,115 @@
   }
   .footer__line {
     margin-bottom: 24px;
+  }
+  .statement__ready {
+    background-color: transparent;
+    box-shadow: unset;
+    border-radius: unset;
+    padding: unset;
+  }
+  .statement__flex {
+    max-width: unset;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+  .statement__ready span {
+    margin-bottom: 4px;
+  }
+  .statement {
+    position: relative;
+  }
+  .statement__block {
+    position: static;
+  }
+  .statement__banner {
+    bottom: 0;
+    max-width: unset;
+    background-color: rgb(218, 244, 255);
+    -webkit-backdrop-filter: unset;
+            backdrop-filter: unset;
+    border-radius: unset;
+    min-height: unset;
+    padding: 40px 24px;
+    gap: 16px;
+  }
+  .statement__banner p {
+    text-align: left;
+  }
+  .text-40-b {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.6px;
+  }
+  .statement__btn {
+    max-width: 230px;
+  }
+  .statement .hide-text {
+    display: none;
+  }
+  .statement-paid__flex {
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+  .statement-paid__flex .statement-paid__from {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .statement-paid__flex .statement-paid__btn {
+    max-width: unset;
+    justify-content: center;
+  }
+  .statement-paid__flex .statement-paid__block {
+    gap: 24px;
+  }
+  .statement-paid__flex .statement-paid__flex-2 {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .statement-paid__flex .statement-paid__btn-2 {
+    max-width: unset;
+    width: 100%;
+    justify-content: center;
+  }
+  .statement-paid__flex .text-18-sb {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    letter-spacing: 0.02em;
+    text-align: left;
+  }
+  .text-18 {
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.02em;
+  }
+  .statement-paid__flex h3 {
+    margin-bottom: 16px;
+  }
+  .hidden-576 {
+    display: block;
+  }
+  .statement-paid__flex .statement__ready ul {
+    gap: 4px;
+    margin-bottom: 16px;
+  }
+  .statement-paid__flex .statement__ready .hide-text {
+    display: block;
+  }
+  .statement-paid__flex .statement__ready p {
+    margin-bottom: 4px;
+  }
+  .statement-paid__flex .statement-paid__input {
+    height: 44px;
+  }
+  .statement-paid__flex .statement-paid__input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.02em;
+  }
+  .statement-paid__flex .statement-paid__input::placeholder {
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.02em;
   }
 }/*# sourceMappingURL=media.css.map */

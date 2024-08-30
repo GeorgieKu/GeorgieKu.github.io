@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description">
+    <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/air-datepicker.css">
+    <link rel="stylesheet" href="./style/variables.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <title>Сервис по поиску военнослужащих</title>
+</head>
+
+<body>
+    <header class="header bread-crumbs-header">
+        <div class="container">
+            <div class="header__flex">
+                <a href="#" class="header__logo" aria-label="На главную">
+                    LOGO
+                </a>
+                <div class="header__block">
+                    <a href="#" aria-label="Телеграм канал">
+                        <img src="./img/svg/tg.svg" alt="">
+                        <span>Телеграм канал</span>
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="./payment.html" aria-label="Оплата">
+                                    Оплата
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./contacts.html" aria-label="Контакты">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                        <button class="header__btn-576 button" aria-label="Подать заявление">Подать заявление</button>
+                    </nav>
+                    <button class="header__btn button" aria-label="Подать заявление">Подать заявление</button>
+                    <button class="header__burger-btn" id="burger" aria-label="меню">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="bread-crumbs text-16-sb">
+        <div class="container">
+           <div class="overflow">
+            <div class="bread-crumbs__flex">
+                <a href="./index.html">Главная</a>
+                <span>
+                    <img src="./img/svg/bread.svg" alt="">
+                </span>
+                <a href="./statement-form.html">Подать заявление</a>
+            </div>
+           </div>
+        </div>
+    </div>
+    <main>
+        <section class="forms p64">
+            <div class="container">
+                <h1 class="visually-hidden"></h1>
+                <h2>Заявление о розыске военнослужащего</h2>
+                <div class="forms__grid">
+                    <div class="card forms__card-1">
+                        <h3>Информация о заявителе</h3>
+                        <form action="#" class="forms__form">
+                            <div class="forms__flex">
+                                <label for="applicantName">
+                                    <span class="text-16">ФИО</span>
+                                    <input id="applicantName" name="applicantName" type="text" placeholder="Иванова Екатерина Сергеевна">
+                                </label>
+                                <label class="date__label" for="applicantDate">
+                                    <span class="text-16">Дата рождения</span>
+                                    <input class="date__input" type="text" id="applicantDate" name="applicantDate" placeholder="ДД/ММ/ГГГГ">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_10_3828)">
+                                        <path d="M31.6667 6.66668H30V3.33334H26.6667V6.66668H13.3333V3.33334H10V6.66668H8.33333C6.48333 6.66668 5.01667 8.16668 5.01667 10L5 33.3333C5 35.1667 6.48333 36.6667 8.33333 36.6667H31.6667C33.5 36.6667 35 35.1667 35 33.3333V10C35 8.16668 33.5 6.66668 31.6667 6.66668ZM31.6667 33.3333H8.33333V16.6667H31.6667V33.3333ZM15 23.3333H11.6667V20H15V23.3333ZM21.6667 23.3333H18.3333V20H21.6667V23.3333ZM28.3333 23.3333H25V20H28.3333V23.3333ZM15 30H11.6667V26.6667H15V30ZM21.6667 30H18.3333V26.6667H21.6667V30ZM28.3333 30H25V26.6667H28.3333V30Z" fill="#010101" fill-opacity="0.4"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_10_3828">
+                                        <rect width="40" height="40" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        
+                                </label>
+                            </div>
+                            <label for="applicantAdress">
+                                <span class="text-16">Адрес</span>
+                                <input id="applicantAdress" name="applicantAdress" type="text" placeholder="Регион, населенный пункт, улица, номер дома, номер квартиры (если есть)">
+                            </label>
+                            <div class="forms__flex-2">
+                                <label for="applicantPhone">
+                                    <span class="text-16">Номер телефона</span>
+                                    <input id="applicantPhone" name="applicantPhone" type="text" placeholder="+7 (***) ***-**-**">
+                                </label>
+                                <label for="applicantMail">
+                                    <span class="text-16">Электронная почта</span>
+                                    <input id="applicantMail" name="applicantMail" type="text" placeholder="123pochta@mail.ru">
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card forms__card-2">
+                        <h3>Информация о военнослужащем</h3>
+                        <form action="#" class="forms__form">
+                            <div class="forms__flex">
+                                <label for="militaryName">
+                                    <span class="text-16">ФИО</span>
+                                    <input id="militaryName" name="militaryName" type="text" placeholder="Иванов Иван Иванович">
+                                </label>
+                                <label class="date__label" for="militaryDate">
+                                    <span class="text-16">Дата рождения</span>
+                                    <input class="date__input" type="text" id="militaryDate" name="militaryDate" placeholder="ДД/ММ/ГГГГ">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_10_3828)">
+                                        <path d="M31.6667 6.66668H30V3.33334H26.6667V6.66668H13.3333V3.33334H10V6.66668H8.33333C6.48333 6.66668 5.01667 8.16668 5.01667 10L5 33.3333C5 35.1667 6.48333 36.6667 8.33333 36.6667H31.6667C33.5 36.6667 35 35.1667 35 33.3333V10C35 8.16668 33.5 6.66668 31.6667 6.66668ZM31.6667 33.3333H8.33333V16.6667H31.6667V33.3333ZM15 23.3333H11.6667V20H15V23.3333ZM21.6667 23.3333H18.3333V20H21.6667V23.3333ZM28.3333 23.3333H25V20H28.3333V23.3333ZM15 30H11.6667V26.6667H15V30ZM21.6667 30H18.3333V26.6667H21.6667V30ZM28.3333 30H25V26.6667H28.3333V30Z" fill="#010101" fill-opacity="0.4"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_10_3828">
+                                        <rect width="40" height="40" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        
+                                </label>
+                            </div>
+                            <div class="forms__flex-2">
+                                <label for="militaryRank">
+                                    <span class="text-16">Воинское звание</span>
+                                    <input id="militaryRank" name="militaryRank" type="text" placeholder="Сержант">
+                                </label>
+                                <label for="militaryJob">
+                                    <span class="text-16">Должность военнослужащего</span>
+                                    <input id="militaryJob" name="militaryJob" type="text" placeholder="Водитель">
+                                </label>
+                            </div>
+                            <div class="forms__flex-2">
+                                <label for="militaryRank">
+                                    <span class="text-16">Личный номер военнослужащего</span>
+                                    <input id="militaryRank" name="militaryRank" type="text" placeholder="АА - 000 000">
+                                </label>
+                                <label class="date__label" for="militaryJob">
+                                    <span class="text-16">Дата призыва / начала контракта</span>
+                                    <input class="date__input" type="text" id="militaryJob" name="militaryJob" placeholder="ДД/ММ/ГГГГ">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_10_3828)">
+                                        <path d="M31.6667 6.66668H30V3.33334H26.6667V6.66668H13.3333V3.33334H10V6.66668H8.33333C6.48333 6.66668 5.01667 8.16668 5.01667 10L5 33.3333C5 35.1667 6.48333 36.6667 8.33333 36.6667H31.6667C33.5 36.6667 35 35.1667 35 33.3333V10C35 8.16668 33.5 6.66668 31.6667 6.66668ZM31.6667 33.3333H8.33333V16.6667H31.6667V33.3333ZM15 23.3333H11.6667V20H15V23.3333ZM21.6667 23.3333H18.3333V20H21.6667V23.3333ZM28.3333 23.3333H25V20H28.3333V23.3333ZM15 30H11.6667V26.6667H15V30ZM21.6667 30H18.3333V26.6667H21.6667V30ZM28.3333 30H25V26.6667H28.3333V30Z" fill="#010101" fill-opacity="0.4"/>
+                                        </g>
+                                        <defs>
+                                        <clipPath id="clip0_10_3828">
+                                        <rect width="40" height="40" fill="white"/>
+                                        </clipPath>
+                                        </defs>
+                                        </svg>
+                                        
+                                </label>
+                            </div>
+                            <div class="forms__flex-2">
+                                
+                               
+                            </div>
+                            <label for="applicantAdress">
+                                <span class="text-16">Адрес</span>
+                                <input id="applicantAdress" name="applicantAdress" type="text" placeholder="Регион, населенный пункт, улица, номер дома, номер квартиры (если есть)">
+                            </label>
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer p64">
+        <div class="container">
+            <div class="footer__flex">
+                <a class="text-16-b" href="#">
+                    Подписывайтесь
+                    <img src="./img/svg/tg-bg-black.svg" alt="">
+                </a>
+                <nav>
+                    <ul>
+                        <li><span class="text-16-b">Сайт</span></li>
+                        <li class="text-14"><a href="#" aria-label="Оплата">Оплата</a></li>
+                        <li class="text-14"><a href="#" aria-label="Контакты">Контакты</a></li>
+                    </ul>
+                    <ul>
+                        <li><span class="text-16-b">Документы</span></li>
+                        <li class="text-14"><a href="#" aria-label="Политика">Политика</a></li>
+                        <li class="text-14"><a href="#" aria-label="Соглашение">Соглашение</a></li>
+                    </ul>
+                    <ul>
+                        <li><span class="text-16-b">О сервисе</span></li>
+                        <li class="text-14"><a href="#" aria-label="О нас">О нас</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="container">
+            <span class="label">Charger ® — 2024</span>
+        </div>
+    </footer>
+    <script src="./js/air-datepicker.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
