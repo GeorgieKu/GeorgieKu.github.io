@@ -15,15 +15,7 @@
     .header .medium__block .logo img {
         max-width: 300px;
     }
-    .hero__input {
-        display: none;
-    }
-    .hero .container {
-        margin-left: unset;
-    }
-    .hero__form span {
-        display: none;  
-    }
+
     .hero__flex {
         flex-direction: column;
         gap: 20px;
@@ -89,7 +81,11 @@
         bottom: 20px;
     }
     .hero__form {
+        margin: 0 auto;
         padding: 20px;
+    }
+    .hero__slide {
+        padding: 50px 0;
     }
     .hero__form h2 {
         font-size: 20px;
@@ -124,7 +120,7 @@
 
     .menu {
         position: absolute;
-        left: calc(-100% + 32px);
+        left: calc(-101% + 32px);
         top: 210px;
         width: calc(100% - 32px);
         background-color: var(--white);
@@ -135,19 +131,19 @@
         overflow: auto;
     }
 
-    .header .menu__list .circle a::before {
-        display: none;
-    }
 
     .menu__list {
         display: block;
     }
 
     .header.open .menu {
-        transform: translateX(calc(100% + 16px));
+        transform: translateX(calc(101% + 16px));
     }
     .header .menu__list {
         flex-direction: column;
+        max-width: max-content;
+        align-items: baseline;
+        margin: 0 auto;
     }
     .header .upper__nav ul {
         gap: 10px;
@@ -161,10 +157,10 @@
     .header .medium__btn {
         padding: 12px;
     }
-    .menu__list .hidden {
+    .menu .hidden {
         display: block;
     }
-    .menu__list .medium__contacts {
+    .menu .medium__contacts  {
         display: block;
         background-color: var(--lightGray);
         padding: 16px 18px;
@@ -240,6 +236,13 @@
     }
     .benefits__img {
         width: 100%;
+    }
+    .header .medium__socials {
+        justify-content: center;
+    }
+    .header .medium__contacts a {
+        display: block;
+        text-align: center;
     }
 }
 
@@ -321,35 +324,20 @@
     .menu {
         top: 89px;
     }
-    .hero {
-        background-color: var(--grey);
-        padding: 16px;
-    }
     .hero__swiper {
-        border-radius: 20px;
         min-height: unset;
-    }
-    .hero__slide {
-        background-image: unset;
-        min-height: unset;
-        background-color: var(--white);
-    }
-    .hero__block {
-        padding: 20px 4px 0;
     }
     .hero__flex {
-        gap: 24px;
-        padding-bottom: 8px;
+        gap: 30px;
+        padding-bottom: 35px;
     }
     .hero__block h1 {
         font-size: 30px;
         line-height: 36px;
-        color: var(--black);
         margin-bottom: 4px;
     }
     .hero__block span {
         font-size: 21px;
-        color: var(--black);
         line-height: 29.4px;
         margin-bottom: 24px;
     }
@@ -361,20 +349,21 @@
         gap: 10px;
         font-size: 14px;
         line-height: 21px;
-        color: rgba(62, 62, 62, 1);
+        font-weight: 400;
+
     }
     .hero__form {
         max-width: unset;
-        background-color: var(--grey);
-        border-radius: 10px;
-        padding: 16px;
+        background-color: var(-white);
+        border-radius: 20px;
+        padding: 20px;
         margin-bottom: 4px;
     }
     .hero__form h2 {
-        font-size: 12px;
-        font-weight: 500;
-        line-height: 18px;
-        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 14px;
         text-transform: unset;
     }
     .button {
@@ -383,16 +372,16 @@
         line-height: 21px;
     }
     .hero__btn {
-        margin-bottom: unset;
-    }
-    .hero__img-576 {
-        display: block;
+        margin-bottom: 10px;
     }
     .hero .swiper__btns {
         display: none;
     }
+    .hero .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .hero .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        max-width: 78px;
+    }
     .hero .swiper-horizontal > .swiper-pagination-bullets, .hero .swiper-pagination-bullets.swiper-pagination-horizontal, .hero .swiper-pagination-custom, .hero__pagination {
-        display: none;
+        max-width: 258px;
     }
     .header .menu__list {
         gap: 24px;
@@ -406,25 +395,28 @@
         color: var(--green) !important;
         margin-bottom: 20px;
     }
-    .medium__socials a {
+    .header .medium__socials a {
         color: var(--black) !important;
         margin-bottom: unset;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 29.4px;
     }
-    .menu__list .medium__contacts {
-        margin: 26px 0;
+    .menu .medium__contacts {
+        margin: 50px 0;
     }
     .hidden-576 {
         display: block;
     }
     .header .upper__geo {
         color: var(--black);
-        margin-top: 26px;
+        margin: 26px auto 0;
     }
     .fixed-block {
         background-color: var(--grey);
         position: fixed;
         bottom: 0;
-        padding: 17.5px 16px;
+        padding: 17.5px 12px;
         width: 100%;
         display: flex;
         align-items: center;
@@ -433,14 +425,23 @@
         z-index: 10;
         transition: bottom .25s ease;
         button {
-            max-width: 159px;
+            max-width: 154px;
         }
     }
     .fixed__flex {
         display: flex;
-        flex-direction: column;
+        align-items: center;
         gap: 8px;
     }
+    .fixed__flex a {
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        color: #000;
+    }
+
     .fixed__icons {
         display: flex;
         align-items: center;
@@ -498,6 +499,8 @@
         padding: 8px;
         border-radius: 20px;
         max-height: 257px;
+        max-width: 293px;
+        flex-shrink: 0;
     }
     .catalog__img  {
         min-height: 198px;
@@ -935,7 +938,7 @@
         margin:  0 auto;
     }
     .menu {
-        box-shadow: 0px 0px 10px 2px var(--grey);
+        box-shadow: 0px 0px 2px 2px var(--grey);
     }
     .news__swiper .swiper-slide {
         max-width: 293px;
@@ -964,6 +967,33 @@
     }
     .map {
         display: none;
+    }
+    .hero__slide {
+        padding: 30px 0;
+        min-height: unset;
+    }
+    .input {
+        height: 44px;
+        padding-left: 22px;
+    }
+    .input::placeholder {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 18px;
+        text-align: left;
+
+    }
+    .header__icon-576 {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+    .header__icon {
+        display: none;
+    }
+    .corp__img {
+        max-width: 312px;
+        max-height: 282px;
     }
 }
 
