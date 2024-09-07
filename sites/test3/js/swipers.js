@@ -51,7 +51,7 @@ if (modalSwiper) {
 
 
 let page2CatalogSwiper = document.querySelector('.page-2-catalog__swiper');
-let page2MetallSwiper = document.querySelector('.page-2-catalog__swiper');
+let page2MetallSwiper = document.querySelector('.page-2-metall__swiper');
 let page2ReviewsSwiper = document.querySelector('.page-2-reviews__swiper');
 let page2CompanySwiper = document.querySelector('.page-2-company__swiper');
 
@@ -120,3 +120,20 @@ if(page2CompanySwiper) {
   });
 }
 
+let page3ReadySwiper = document.querySelector('.page-2-ready__swiper');
+
+if(page3ReadySwiper) {
+  const swiper4 = new Swiper('.page-2-ready__swiper', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+  
+  
+  
+    navigation: {
+      nextEl: '.page-2-ready__next',
+      prevEl: '.page-2-ready__prev',
+    },
+  
+  });
+}
