@@ -1,26 +1,26 @@
 const dateInputs = document.querySelectorAll('.date__input');
-    
-dateInputs.forEach(function(dateInput) {
- 
+
+dateInputs.forEach(function (dateInput) {
+
     dateInput.setAttribute('type', 'text');
-    
+
 
     new AirDatepicker(dateInput, {
         dateFormat: 'dd.MM.yyyy',
-  
-        onSelect: function(formattedDate) {
+
+        onSelect: function (formattedDate) {
 
         }
     });
 });
 
 document.querySelectorAll('.multiple-selection .custom-checkbox').forEach(checkbox => {
-    checkbox.addEventListener('click', function(event) {
-        event.preventDefault(); 
+    checkbox.addEventListener('click', function (event) {
+        event.preventDefault();
 
         const hiddenInput = this.querySelector('.hidden-checkbox');
         const checkboxElement = this.querySelector('.checkbox');
-        
+
         // Тоглим состояние чекбокса
         if (hiddenInput.checked) {
             hiddenInput.checked = false;
@@ -33,7 +33,7 @@ document.querySelectorAll('.multiple-selection .custom-checkbox').forEach(checkb
 });
 
 document.querySelectorAll('.custom-checkbox-group .custom-checkbox').forEach(checkbox => {
-    checkbox.addEventListener('click', function(event) {
+    checkbox.addEventListener('click', function (event) {
         event.preventDefault();
 
         const hiddenInput = this.querySelector('.hidden-checkbox');
@@ -60,48 +60,48 @@ let no = document.querySelector('.no-answer')
 let yesBlock = document.querySelector('.yes__flex')
 
 
-yes.addEventListener('click', function() {
+yes.addEventListener('click', function () {
     yesBlock.style.display = 'flex'
     document.querySelector('.grid-open').classList.add('open')
     document.querySelector('.forms__card-5 .custom-checkbox-group').style.marginBottom = '24px'
 })
 
-no.addEventListener('click', function() {
+no.addEventListener('click', function () {
 
     document.querySelector('.grid-open').classList.remove('open')
-        yesBlock.style.display = 'none'
-        document.querySelector('.forms__card-5 .custom-checkbox-group').style.marginBottom = '0px'
-  
+    yesBlock.style.display = 'none'
+    document.querySelector('.forms__card-5 .custom-checkbox-group').style.marginBottom = '0px'
+
 })
 
 const fileUpload = document.getElementById('file-upload');
-    const fileListContainer = document.getElementById('file-list-container');
+const fileListContainer = document.getElementById('file-list-container');
 
-    // Обработчик изменения (выбора) файлов
-    fileUpload.addEventListener('change', function() {
-        const files = fileUpload.files;
-        
-        // Для каждого выбранного файла создаем новый элемент в списке
-        for (let i = 0; i < files.length; i++) {
-            const fileItem = document.createElement('div');
-            fileItem.classList.add('file-item');
+// Обработчик изменения (выбора) файлов
+fileUpload.addEventListener('change', function () {
+    const files = fileUpload.files;
 
-            const fileName = document.createElement('span');
-            fileName.textContent = files[i].name;
+    // Для каждого выбранного файла создаем новый элемент в списке
+    for (let i = 0; i < files.length; i++) {
+        const fileItem = document.createElement('div');
+        fileItem.classList.add('file-item');
 
-            const removeButton = document.createElement('button');
-            removeButton.addEventListener('click', function() {
-                fileItem.remove();
-            });
+        const fileName = document.createElement('span');
+        fileName.textContent = files[i].name;
 
-            fileItem.appendChild(fileName);
-            fileItem.appendChild(removeButton);
-            fileListContainer.appendChild(fileItem);
-        }
+        const removeButton = document.createElement('button');
+        removeButton.addEventListener('click', function () {
+            fileItem.remove();
+        });
 
-        // Очищаем input после добавления файлов, чтобы можно было загружать те же файлы снова
-        fileUpload.value = '';
-    });
+        fileItem.appendChild(fileName);
+        fileItem.appendChild(removeButton);
+        fileListContainer.appendChild(fileItem);
+    }
+
+    // Очищаем input после добавления файлов, чтобы можно было загружать те же файлы снова
+    fileUpload.value = '';
+});
 
 const hiddenSelect = document.getElementById('hiddenSelect');
 const customSelect = document.querySelector('.custom-select');
@@ -110,15 +110,15 @@ const customOptions = customSelect.querySelector('.custom-options');
 const customOptionItems = customOptions.querySelectorAll('.custom-option');
 
 // Показать/скрыть выпадающий список кастомного селекта
-customTrigger.addEventListener('click', function() {
+customTrigger.addEventListener('click', function () {
     customOptions.style.display = customOptions.style.display === 'flex' ? 'none' : 'flex';
 });
 
 // Обработка выбора опции
-customOptionItems.forEach(function(option) {
-    option.addEventListener('click', function() {
+customOptionItems.forEach(function (option) {
+    option.addEventListener('click', function () {
         const selectedValue = this.getAttribute('data-value');
-        
+
         // Обновляем кастомный селект
         customTrigger.textContent = this.textContent;
         customTrigger.style.color = '#000'
@@ -133,7 +133,7 @@ customOptionItems.forEach(function(option) {
 });
 
 // Закрыть кастомный список, если клик вне него
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     if (!customSelect.contains(e.target)) {
         customOptions.style.display = 'none';
     }
@@ -146,15 +146,15 @@ const customOptions2 = customSelect2.querySelector('.custom-options2');
 const customOptionItems2 = customOptions2.querySelectorAll('.custom-option2');
 
 // Показать/скрыть выпадающий список кастомного селекта
-customTrigger2.addEventListener('click', function() {
+customTrigger2.addEventListener('click', function () {
     customOptions2.style.display = customOptions2.style.display === 'flex' ? 'none' : 'flex';
 });
 
 // Обработка выбора опции
-customOptionItems2.forEach(function(option) {
-    option.addEventListener('click', function() {
+customOptionItems2.forEach(function (option) {
+    option.addEventListener('click', function () {
         const selectedValue = this.getAttribute('data-value');
-        
+
         // Обновляем кастомный селект
         customTrigger2.textContent = this.textContent;
         customTrigger2.style.color = '#000'
@@ -168,8 +168,8 @@ customOptionItems2.forEach(function(option) {
     });
 });
 
-// Закрыть кастомный список, если клик вне него
-document.addEventListener('click', function(e) {
+
+document.addEventListener('click', function (e) {
     if (!customSelect2.contains(e.target)) {
         customOptions2.style.display = 'none';
     }

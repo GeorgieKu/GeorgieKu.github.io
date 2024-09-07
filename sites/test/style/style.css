@@ -27,6 +27,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Inter";
+  font-weight: 500;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -130,14 +137,20 @@ button {
   letter-spacing: 0.02em;
   text-align: left;
   color: var(--black-80);
+  flex-shrink: 0;
 }
 .header .header__logo {
+  display: block;
   font-family: Open Sans;
+  white-space: nowrap;
   font-size: 32px;
   font-weight: 700;
   line-height: 38.4px;
   text-align: left;
   color: var(--black-100);
+  padding: 12px 24px;
+  border: 2px solid var(--black-100);
+  border-radius: 16px;
 }
 .header__btn-576 {
   display: none;
@@ -1191,7 +1204,8 @@ button {
 }
 
 #file-upload {
-  display: none; /* Скрываем стандартный input */
+  display: none;
+  /* Скрываем стандартный input */
 }
 
 .file-item {

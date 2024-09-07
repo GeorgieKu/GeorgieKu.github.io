@@ -112,10 +112,15 @@
   .forms .yes__flex {
     flex-direction: column;
   }
-}
-@media (max-width: 992px) {
+  .header .header__logo {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
   .header__burger-btn {
     display: block;
+  }
+  .header__block a span {
+    display: none;
   }
   .menu {
     position: absolute;
@@ -137,6 +142,8 @@
   .header__block {
     margin-left: auto;
   }
+}
+@media (max-width: 992px) {
   .hero__block {
     background-size: cover;
     background-position: -330px;
@@ -170,10 +177,9 @@
 }
 @media (max-width: 768px) {
   .header__block {
-    gap: 40px;
-  }
-  .header__block a span {
-    display: none;
+    gap: 10px;
+    justify-content: space-between;
+    flex-basis: 405px;
   }
   .p64 {
     padding: 32px 0;
@@ -357,12 +363,15 @@
   .works__block:nth-child(3) {
     max-width: unset;
   }
-  .header__block {
-    gap: 24px;
-  }
   .text-40-b {
     font-size: 32px;
     line-height: 38.4px;
+  }
+  .header__btn {
+    display: none;
+  }
+  .header__block {
+    flex-basis: unset;
   }
 }
 @media (max-width: 576px) {
@@ -374,9 +383,6 @@
   }
   .menu__list {
     margin-bottom: 16px;
-  }
-  .header__btn {
-    display: none;
   }
   .header__btn-576 {
     display: block;
@@ -393,9 +399,6 @@
     line-height: 19.2px;
     letter-spacing: 0.02em;
   }
-  .hero {
-    padding: unset;
-  }
   .hero .container {
     display: contents;
   }
@@ -406,6 +409,7 @@
     background-image: url(../img/hero-576.webp);
     background-size: contain;
     background-position: center bottom;
+    border-radius: unset;
   }
   .hero__block h1 {
     font-size: 32px;
@@ -425,6 +429,9 @@
   }
   .p64 {
     padding: 24px 0;
+  }
+  .hero {
+    padding: unset;
   }
   h2 {
     font-size: 28px;
@@ -636,7 +643,8 @@
   .forms__grid-1240 {
     gap: 24px;
   }
-  .custom-options, .custom-options2 {
+  .custom-options,
+  .custom-options2 {
     padding: 16px;
     font-size: 14px;
     font-weight: 400;
@@ -730,8 +738,10 @@
     max-width: max-content;
   }
   .file-list {
-    max-height: 100%; /* ограничиваем высоту списка */
-    overflow-y: auto; /* добавляем прокрутку для списка файлов */
+    max-height: 100%;
+    /* ограничиваем высоту списка */
+    overflow-y: auto;
+    /* добавляем прокрутку для списка файлов */
   }
   .file-item {
     display: flex;
@@ -739,8 +749,10 @@
     padding: 5px;
   }
   .file-list {
-    max-height: 100%; /* ограничиваем высоту списка */
-    overflow-y: auto; /* добавляем прокрутку для списка файлов */
+    max-height: 100%;
+    /* ограничиваем высоту списка */
+    overflow-y: auto;
+    /* добавляем прокрутку для списка файлов */
   }
   .forms__card-5 .custom-file-upload {
     width: 88px;
@@ -757,7 +769,8 @@
   .file-item span {
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; /* не переносить текст на новую строку */
+    white-space: nowrap;
+    /* не переносить текст на новую строку */
   }
   .yes__upload-btns {
     max-width: 88px;
@@ -769,5 +782,18 @@
   .statement-paid__flex .statement-paid__hidden-btn {
     width: 100%;
     justify-content: center;
+  }
+  .header .header__logo {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.2px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    padding: 8px 16px;
+    border: 1.5px solid var(--black-100);
+  }
+  .header__block a {
+    width: 24px;
+    height: 24px;
   }
 }/*# sourceMappingURL=media.css.map */

@@ -30,6 +30,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Inter';
+    font-weight: 500;
+    src: url('../fonts/Inter-Medium.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
+}
+
 
 html {
     box-sizing: border-box;
@@ -125,6 +133,7 @@ button {
         align-items: center;
         gap: 32px;
     }
+
     a {
         display: flex;
         align-items: center;
@@ -136,15 +145,23 @@ button {
         letter-spacing: 0.02em;
         text-align: left;
         color: var(--black-80);
+        flex-shrink: 0;
     }
+
     .header__logo {
+        display: block;
         font-family: Open Sans;
+        white-space: nowrap;
         font-size: 32px;
         font-weight: 700;
         line-height: 38.4px;
         text-align: left;
         color: var(--black-100);
+        padding: 12px 24px;
+        border: 2px solid var(--black-100);
+        border-radius: 16px;
     }
+
     &__btn-576 {
         display: none;
     }
@@ -231,6 +248,7 @@ button {
         min-height: 480px;
         display: flex;
         flex-direction: column;
+
         h1 {
             max-width: 580px;
             font-family: Open Sans;
@@ -241,6 +259,7 @@ button {
             text-align: left;
             margin-bottom: 16px;
         }
+
         span {
             font-family: Open Sans;
             font-size: 16px;
@@ -249,6 +268,7 @@ button {
             letter-spacing: 0.02em;
             text-align: left;
         }
+
         .button {
             max-width: 253px;
             margin-top: auto;
@@ -262,6 +282,7 @@ button {
         justify-content: space-between;
         position: relative;
     }
+
     &__block {
         display: flex;
         flex-direction: column;
@@ -271,6 +292,7 @@ button {
         z-index: 2;
         max-width: 186px;
     }
+
     &__sub-block {
         display: flex;
         flex-direction: column;
@@ -281,9 +303,11 @@ button {
     &__block:nth-child(2) {
         max-width: 370px;
     }
+
     &__block:nth-child(3) {
         max-width: 388px;
     }
+
     &__number {
         display: flex;
         align-items: center;
@@ -323,6 +347,7 @@ button {
         justify-content: space-between;
         gap: 40px;
     }
+
     &__card {
         max-width: 860px;
         width: 100%;
@@ -331,6 +356,7 @@ button {
         display: flex;
         flex-direction: column;
     }
+
     .button {
         margin-top: auto;
         max-width: 253px;
@@ -343,37 +369,45 @@ button {
 
 .footer {
     background-color: var(--white-100);
+
     &__flex {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
         margin-bottom: 40px;
+
         a {
             display: flex;
             flex-direction: column;
             gap: 8px;
+
             img {
                 width: 40px;
                 height: 40px;
             }
         }
+
         nav {
             flex-basis: 595px;
             display: flex;
             justify-content: space-between;
+
             ul {
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
+
                 span {
                     margin-bottom: 8px;
                 }
+
                 a {
                     text-decoration: underline;
                 }
             }
         }
     }
+
     &__line {
         width: 100%;
         height: 1px;
@@ -393,9 +427,11 @@ button {
     align-items: center;
     gap: 20px;
     width: max-content;
+
     span {
         flex-shrink: 0;
     }
+
     a {
         color: var(--black-40);
     }
@@ -410,36 +446,43 @@ button {
 .contacts {
     &__flex {
         display: flex;
-        align-items: flex-start ;
+        align-items: flex-start;
         justify-content: space-between;
         gap: 20px;
     }
+
     &__text-block {
         display: flex;
         flex-direction: column;
         gap: 24px;
     }
+
     &__block {
         display: flex;
         flex-direction: column;
         gap: 16px;
+
         span {
             color: var(--black-60);
         }
+
         a {
             color: var(--black-100);
             display: flex;
             align-items: center;
             gap: 8px;
         }
+
         .mail-link {
             text-decoration: underline;
         }
     }
+
     &__flex-2 {
         display: flex;
         gap: 8px;
     }
+
     &__card {
         display: flex;
         flex-direction: column;
@@ -447,6 +490,7 @@ button {
         max-width: 755px;
         min-height: 241px;
     }
+
     .button {
         margin-top: auto;
         max-width: 242px;
@@ -455,13 +499,14 @@ button {
 
 .payment {
     background-color: var(--white-100);
+
     .payment__flex {
         max-width: 852px;
         display: flex;
         flex-direction: column;
         gap: 40px;
     }
-    
+
 }
 
 
@@ -471,6 +516,7 @@ button {
 
 
     }
+
     &__ready {
         background-color: var(--white-100);
         max-width: 840px;
@@ -485,11 +531,13 @@ button {
             text-align: center;
             margin-bottom: 20px;
         }
+
         p {
             margin-bottom: 40px;
         }
 
     }
+
     &__flex {
         display: flex;
         flex-direction: column;
@@ -498,39 +546,43 @@ button {
         max-width: 460px;
         margin-bottom: 40px;
     }
+
     &__flex-2 {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
-    
-&__banner {
-    position: absolute;
-    background-color: var(--blue-40);
-    border-radius: 40px;
-    padding: 64px 40px;
-    left: 50%;
-    bottom: 150px;
-    transform: translateX(-50%);
-    max-width: 712px;
-    width: 100%;
-    min-height: 535px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    backdrop-filter: blur(7px);
-    p {
-        color: var(--black-80);
+
+    &__banner {
+        position: absolute;
+        background-color: var(--blue-40);
+        border-radius: 40px;
+        padding: 64px 40px;
+        left: 50%;
+        bottom: 150px;
+        transform: translateX(-50%);
+        max-width: 712px;
+        width: 100%;
+        min-height: 535px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        backdrop-filter: blur(7px);
+
+        p {
+            color: var(--black-80);
+        }
     }
-}
-&__btn {
-    max-width: 292px;
-}
-.hide-text {
-    margin-bottom: unset;
-    text-align: left;
-}
+
+    &__btn {
+        max-width: 292px;
+    }
+
+    .hide-text {
+        margin-bottom: unset;
+        text-align: left;
+    }
 }
 
 .statement-paid__flex {
@@ -542,6 +594,7 @@ button {
     .statement__ready {
         margin: unset;
     }
+
     .statement-paid__block {
         display: flex;
         flex-direction: column;
@@ -549,20 +602,24 @@ button {
         max-width: 880px;
         width: 100%;
     }
+
     .statement-paid__block-2 {
         display: flex;
         flex-direction: column;
         gap: 16px;
+
         span {
             text-align: left;
             color: var(--black-80);
         }
     }
+
     .statement-paid__hidden-block {
         display: none;
         align-items: center;
         gap: 24px;
     }
+
     .statement-paid__hidden-btn {
         display: flex;
         align-items: center;
@@ -570,17 +627,20 @@ button {
         background-color: var(--white-100);
         color: var(--black-100);
         padding: 10px 30px;
+
         img {
             width: 20px;
             height: 20px;
         }
     }
+
     .statement-paid__from {
         display: flex;
         align-items: center;
         gap: 24px;
         width: 100%;
     }
+
     .statement-paid__input {
         height: 55px;
         background-color: var(--white-100);
@@ -595,6 +655,7 @@ button {
         line-height: 21.6px;
         letter-spacing: 0.02em;
     }
+
     .statement-paid__input::placeholder {
         font-family: Open Sans;
         font-size: 18px;
@@ -604,22 +665,27 @@ button {
         text-align: left;
 
     }
+
     .statement-paid__btn {
         max-width: 270px;
         width: 100%;
     }
+
     .statement-paid__btn-2 {
         max-width: 240px;
     }
+
     .statement-paid__flex-2 {
         display: flex;
         align-items: center;
         gap: 24px;
     }
+
     ul {
         display: flex;
         flex-direction: column;
         gap: 8px;
+
         li {
             color: var(--black-80);
         }
@@ -658,14 +724,14 @@ button {
 }
 
 .air-datepicker-nav--title i {
-        //styleName: Body/16 bold;
-        font-family: Open Sans;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 19.2px;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: var(--black-100);
+    //styleName: Body/16 bold;
+    font-family: Open Sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19.2px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--black-100);
 }
 
 .air-datepicker-body--day-name {
@@ -705,35 +771,41 @@ button {
 .forms {
     &__grid {
         display: flex;
-        gap: 40px; 
+        gap: 40px;
         width: 100%;
         margin-bottom: 40px;
-        }
-        &__grid-flex {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-            max-width: 50%;
-            width: 100%;
-        }
-.card {
-    flex-grow: 1;
-}
+    }
+
+    &__grid-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        max-width: 50%;
+        width: 100%;
+    }
+
+    .card {
+        flex-grow: 1;
+    }
+
     &__form {
         display: flex;
         flex-direction: column;
         gap: 24px;
     }
+
     &__flex {
         display: flex;
         align-items: center;
         gap: 24px;
     }
+
     &__flex-2 {
         display: flex;
         align-items: center;
         gap: 24px;
     }
+
     input[type='text'] {
         background-color: var(--light-gray);
         height: 56px;
@@ -746,6 +818,7 @@ button {
     label {
         width: 100%;
         cursor: pointer;
+
         span {
             display: block;
             margin-bottom: 8px;
@@ -759,6 +832,7 @@ button {
         grid-template-columns: 184px 40px;
         align-items: center;
         column-gap: 16px;
+
         span {
             text-wrap: nowrap;
         }
@@ -767,18 +841,22 @@ button {
     svg path {
         transition: fill-opacity .25s ease;
     }
+
     .date__label:hover svg path {
         fill-opacity: 1;
     }
+
     .date__input {
         max-width: 184px;
         width: 100%;
         grid-area: 2/1/2/1;
     }
+
     .date__label svg {
         grid-area: 2/2/2/2;
         cursor: pointer;
     }
+
     input[type='text']::placeholder {
         font-family: Open Sans;
         font-size: 18px;
@@ -788,6 +866,7 @@ button {
         text-align: left;
         color: var(--black-40);
     }
+
     &__checkboxes {
         max-width: 50%;
         width: 100%;
@@ -795,13 +874,16 @@ button {
         flex-direction: column;
         gap: 8px;
     }
+
     h3 {
         margin-bottom: 24px;
     }
+
     &__block {
         display: flex;
         flex-direction: column;
         gap: 8px;
+
         button {
             border: 1px solid var(--black-40);
             border-radius: 8px;
@@ -812,11 +894,13 @@ button {
         .checkbox {
             border-radius: 8px;
         }
+
         .checkbox.active {
             position: relative;
             background-color: unset;
             border: 1px solid var(--black-40);
         }
+
         .active::after {
             background-image: url(../img/svg/forms-gal.svg);
             background-repeat: no-repeat;
@@ -830,9 +914,11 @@ button {
             transform: unset;
         }
     }
+
     .label-240 {
         max-width: 240px;
     }
+
     &__card-2 {
         .custom-checkbox-group {
             display: flex;
@@ -840,97 +926,122 @@ button {
             gap: 8px;
         }
     }
+
     &__card-3 {
         .checkbox {
             margin-bottom: unset;
         }
+
         .custom-checkbox-display {
             margin-bottom: unset;
             color: var(--black-100);
         }
     }
+
     &__card-4 {
         .custom-checkbox-group {
             display: flex;
             align-items: center;
             gap: 40px;
         }
+
         &__checkboxes {
             max-width: unset;
         }
+
         .custom-checkbox {
             width: unset;
         }
+
         .forms__checkboxes {
             gap: 24px;
         }
+
         .forms__flex {
             align-items: unset;
         }
     }
+
     &__card-5 {
         margin-bottom: 40px;
+
         h3 {
             margin-bottom: 8px;
         }
-        &__checkboxes { 
+
+        &__checkboxes {
             gap: 24px;
-    
+
         }
+
         .custom-checkbox-group {
             display: flex;
             align-items: center;
             gap: 40px;
         }
+
         label {
             width: unset;
         }
+
         .custom-file-upload {
             width: 120px;
         }
     }
+
     &__card-6 {
         h3 {
             margin-bottom: 8px !important;
         }
+
         &__checkboxes {
             margin-bottom: 24px;
             max-width: unset;
         }
+
         .forms__checkboxes {
             gap: 24px;
         }
+
         .custom-checkbox-group {
             display: flex;
             align-items: center;
             gap: 40px;
             margin-bottom: 24px;
         }
+
         .custom-checkbox {
             width: unset;
         }
+
         .forms__flex-2 {
             margin-top: 16px;
         }
+
         &__checkboxes {
             gap: 24px;
         }
     }
+
     &__flexbox {
         display: flex;
         gap: 40px;
     }
+
     &__card-7 {
         max-width: 560px;
+
         .card-7__flex {
             display: flex;
             align-items: center;
             gap: 40px;
             margin-bottom: 60px;
         }
+
         .button {
             margin: 0 auto 24px;
         }
+
         .custom-checkbox-display {
             font-family: Open Sans;
             font-size: 16px;
@@ -939,19 +1050,23 @@ button {
             letter-spacing: 0.02em;
             text-align: left;
             margin-bottom: unset;
+
             a {
                 color: var(--black-100);
             }
         }
+
         .checkbox {
             border-radius: 8px;
 
         }
+
         .checkbox.active {
             position: relative;
             background-color: unset;
             border: 1px solid var(--black-40);
         }
+
         .active::after {
             background-image: url(../img/svg/forms-gal.svg);
             background-repeat: no-repeat;
@@ -965,17 +1080,20 @@ button {
             transform: unset;
         }
     }
+
     .yes__flex {
         display: none;
         justify-content: space-between;
         width: 100%;
         gap: 40px;
         align-items: center;
+
         .yes__block {
             display: flex;
             flex-direction: column;
             width: 100%;
             gap: 24px;
+
             textarea {
                 max-width: 1000px;
                 width: 100%;
@@ -987,6 +1105,7 @@ button {
                 border: none;
                 resize: none;
             }
+
             textarea::placeholder {
                 font-family: Open Sans;
                 font-size: 18px;
@@ -1005,12 +1124,15 @@ button {
     grid-template-rows: 0fr;
     transition: grid-template-rows .25s ease;
 }
+
 .grid-open.open {
     grid-template-rows: 1fr;
 }
+
 .text-wrapper {
     min-height: 0;
 }
+
 .hidden-checkbox {
     display: none;
 }
@@ -1077,7 +1199,7 @@ button {
     height: 56px;
     background-color: rgba(244, 244, 244, 1);
     border-radius: 16px;
-    width: 100%;//styleName: Body/18 regular;
+    width: 100%; //styleName: Body/18 regular;
     font-family: Open Sans;
     font-size: 18px;
     font-weight: 400;
@@ -1085,7 +1207,7 @@ button {
     letter-spacing: 0.02em;
     text-align: left;
     color: var(--black-40);
-    position: relative; 
+    position: relative;
 }
 
 .custom-select__trigger::before {
@@ -1144,7 +1266,7 @@ button {
     height: 56px;
     background-color: rgba(244, 244, 244, 1);
     border-radius: 16px;
-    width: 100%;//styleName: Body/18 regular;
+    width: 100%; //styleName: Body/18 regular;
     font-family: Open Sans;
     font-size: 18px;
     font-weight: 400;
@@ -1152,7 +1274,7 @@ button {
     letter-spacing: 0.02em;
     text-align: left;
     color: var(--black-40);
-    position: relative; 
+    position: relative;
 }
 
 .custom-select__trigger2::before {
@@ -1216,7 +1338,8 @@ button {
 }
 
 #file-upload {
-    display: none; /* Скрываем стандартный input */
+    display: none;
+    /* Скрываем стандартный input */
 }
 
 .file-item {
@@ -1230,6 +1353,7 @@ button {
     justify-content: center;
     position: relative;
     transition: background-color .25s ease;
+
     span {
         font-family: Open Sans;
         font-size: 14px;
@@ -1239,6 +1363,7 @@ button {
         text-align: center;
         color: var(--black-60);
     }
+
     button {
         display: none;
         position: absolute;
@@ -1247,11 +1372,12 @@ button {
         background-image: url(../img/svg/clsoeIcon.svg);
         width: 24px;
         height: 24px;
-    } 
+    }
 }
 
 .file-item:hover {
     background-color: var(--black-10);
+
     button {
         display: block;
     }
