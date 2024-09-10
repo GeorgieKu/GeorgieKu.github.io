@@ -3,17 +3,25 @@ document.addEventListener('DOMContentLoaded', function () {
     //Аккардеон
     let toggleButtons = document.querySelectorAll('.acc');
     let contents = document.querySelectorAll('.content');
-
+    let accBlocks = document.querySelectorAll('.faq__flex ul li');
+    
     toggleButtons.forEach((toggleButton, index) => {
         let toggleArrow = toggleButton.querySelector('button');
-        openAcc(toggleButton, contents[index], toggleArrow);
+        let accBlock = accBlocks[index];
+        openAcc(toggleButton, contents[index], toggleArrow, accBlock);
     });
-
-    function openAcc(toggleButton, content, toggleArrow) {
+    
+    function openAcc(toggleButton, content, toggleArrow, accBlock) {
         toggleButton.addEventListener('click', function () {
             content.classList.toggle('open');
             toggleArrow.classList.toggle('rotate');
-
+    
+            // Добавляем или убираем класс с бордером у accBlock
+            if (content.classList.contains('open')) {
+                accBlock.classList.add('has-border');
+            } else {
+                accBlock.classList.remove('has-border');
+            }
         });
     }
     

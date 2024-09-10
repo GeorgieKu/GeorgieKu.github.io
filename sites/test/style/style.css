@@ -136,6 +136,8 @@ button {
   padding: 40px 0 26px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
   border-radius: 0 0 30px 30px;
+  max-width: 1279px;
+  margin: 0 auto;
 }
 .header__flex {
   display: flex;
@@ -149,6 +151,7 @@ button {
 .hero__flex {
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   gap: 23px;
 }
 .hero__block {
@@ -235,7 +238,9 @@ button {
   aspect-ratio: 1/1;
   position: absolute;
   top: 465px;
-  left: -100px;
+  left: -235px;
+  opacity: 0.37;
+  filter: blur(50px);
 }
 
 h2 {
@@ -295,7 +300,7 @@ h2 {
   display: flex;
   place-content: center;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   gap: 10px;
 }
 .second__item {
@@ -303,8 +308,9 @@ h2 {
   width: 100%;
   background-image: url(../img/svg/card-bg.svg);
   border-radius: 30px;
-  border: 1px solid rgb(2, 211, 255);
+  box-shadow: 2px 2px 1px 0px rgba(2, 211, 255, 0.2) inset, -2px -2px 0px 0px rgba(2, 211, 255, 0.2) inset;
   padding: 24px;
+  min-height: 247px;
 }
 .second__item img {
   width: 32px;
@@ -368,6 +374,7 @@ h2 {
   background-repeat: no-repeat;
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
 }
 .third__block-2 .third__grid {
   display: grid;
@@ -405,7 +412,8 @@ h2 {
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  border: 1px solid;
+  border: 1px solid transparent;
+  background: linear-gradient(#fff, #fff 0) padding-box, linear-gradient(180deg, #191855 0%, #27BFC9 100%) border-box;
 }
 .third__block-2 span {
   font-family: Inter;
@@ -431,6 +439,9 @@ h2 {
 .faq h2 {
   margin-bottom: 32px;
 }
+.faq .has-border {
+  border-color: rgb(39, 191, 201);
+}
 .faq__flex {
   display: flex;
   align-items: flex-start;
@@ -449,6 +460,9 @@ h2 {
   box-shadow: 0px 5px 16px 0px rgba(8, 15, 52, 0.15);
   padding: 24px;
   cursor: pointer;
+  border: 1px solid transparent;
+  transition: border-color 0.25s ease;
+  background-color: #fff;
 }
 .faq__flex ul li .acc {
   display: flex;
@@ -510,6 +524,7 @@ h2 {
   box-shadow: 0px 3px 10px 0px rgba(80, 54, 234, 0.2);
   padding: 24px;
   border-radius: 30px;
+  background-color: rgba(232, 249, 246, 0.3);
 }
 .faq__form h3 {
   font-family: Inter;
@@ -626,7 +641,9 @@ h2 {
   aspect-ratio: 1/1;
   position: absolute;
   top: 0px;
-  left: -100px;
+  left: -237px;
+  opacity: 0.37;
+  filter: blur(50px);
 }
 
 .footer {
@@ -635,6 +652,8 @@ h2 {
   background-color: rgba(232, 249, 246, 0.4);
   border-radius: 30px 30px 0 0;
   position: relative;
+  max-width: 1279px;
+  margin: 0 auto;
 }
 .footer__links {
   display: flex;
@@ -644,6 +663,7 @@ h2 {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  text-wrap: nowrap;
 }
 .footer__links a {
   font-family: Inter;
@@ -689,6 +709,7 @@ select {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: -2px 3px;
+  background-color: transparent;
 }
 
 .range-input::-moz-range-thumb {
@@ -701,6 +722,7 @@ select {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 0 3px;
+  background-color: transparent;
 }
 
 .value {
