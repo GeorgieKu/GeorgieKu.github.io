@@ -9,6 +9,9 @@
     --blackGray2: #3e3e3e;
     --orange: #f56e3c;
     --blue: #5090eb;
+    --red: #f53c3f;
+    --purple: #9747ff;
+    --pink: #f53ce8;
 
     /* fonts */
     --main-font: Montserrat;
@@ -100,6 +103,33 @@
     color: var(--white);
 }
 
+.red-btn {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.red-btn:hover {
+    background-color: rgba(173, 35, 37, 1);
+    color: var(--white);
+}
+
+.purple-btn {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.purple-btn:hover {
+    background-color: rgba(107, 38, 197, 1);
+}
+
+.pink-btn {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+.pink-btn:hover {
+    background-color: rgba(200, 37, 189, 1);
+}
 
 .input {
     height: 66px;
@@ -244,9 +274,25 @@ h3 {
     background-color: var(--green);
 }
 
+.arrow-btn.red {
+    background-color: var(--red);
+}
+
 .arrow-btn.white::after {
     content: "";
     border: 1px solid var(--white);
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 61px;
+    height: 61px;
+    border-radius: 100px;
+    transition: border-color .25s ease;
+}
+
+.arrow-btn.red::after {
+    content: "";
+    border: 1px solid var(--red);
     position: absolute;
     top: -8px;
     left: -8px;
@@ -286,6 +332,14 @@ h3 {
 
 .arrow-btn.green:hover {
     background-color: #01672F;
+}
+
+.arrow-btn.red:hover {
+    background-color: rgba(173, 35, 37, 1);
+}
+
+.arrow-btn.red:hover::after {
+    border-color: rgba(173, 35, 37, 1);
 }
 
 input {
@@ -371,3 +425,10 @@ textarea {
     width: 20px;
     height: 22px;
 }
+
+.card {
+    background-color: var(--lightGray);
+    border-radius: 40px;
+    padding: 20px;
+}
+

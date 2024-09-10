@@ -1,6 +1,12 @@
 let heroSwiper = document.querySelector('.hero__swiper');
 let newsSwiper = document.querySelector('.news__swiper');
 let modalSwiper = document.querySelector('.modal-container');
+let page2CatalogSwiper = document.querySelector('.page-2-catalog__swiper');
+let page2MetallSwiper = document.querySelector('.page-2-metall__swiper');
+let page2ReviewsSwiper = document.querySelector('.page-2-reviews__swiper');
+let page2CompanySwiper = document.querySelector('.page-2-company__swiper');
+let page3ReadySwiper = document.querySelector('.page-2-ready__swiper');
+let page4SpicesSwiper = document.querySelector('.page-4-spices__swiper');
 
 if (heroSwiper) {
   const swiper = new Swiper('.hero__swiper', {
@@ -8,11 +14,11 @@ if (heroSwiper) {
     autoplay: {
       delay: 5000,
     },
-  
+
     pagination: {
       el: '.hero__pagination',
     },
-  
+
 
     navigation: {
       nextEl: '.hero__next',
@@ -27,7 +33,7 @@ if (newsSwiper) {
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 16,
-  
+
 
 
     navigation: {
@@ -43,31 +49,28 @@ if (modalSwiper) {
     loop: true,
     spaceBetween: 20,
     navigation: {
-        nextEl: '.modal-button-next',
-        prevEl: '.modal-button-prev',
+      nextEl: '.modal-button-next',
+      prevEl: '.modal-button-prev',
     },
-});
+  });
 }
 
 
-let page2CatalogSwiper = document.querySelector('.page-2-catalog__swiper');
-let page2MetallSwiper = document.querySelector('.page-2-metall__swiper');
-let page2ReviewsSwiper = document.querySelector('.page-2-reviews__swiper');
-let page2CompanySwiper = document.querySelector('.page-2-company__swiper');
+
 
 if (page2CatalogSwiper) {
   const swiper = new Swiper('.page-2-catalog__swiper', {
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 16,
-  
-  
-  
+
+
+
     navigation: {
       nextEl: '.page-2-catalog__next',
       prevEl: '.page-2-catalog__prev',
     },
-  
+
   });
 }
 
@@ -76,14 +79,14 @@ if (page2MetallSwiper) {
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 16,
-  
-  
-  
+
+
+
     navigation: {
       nextEl: '.page-2-metall__next',
       prevEl: '.page-2-metall__prev',
     },
-  
+
   });
 }
 
@@ -92,48 +95,64 @@ if (page2ReviewsSwiper) {
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 16,
-  
-  
-  
+
+
+
     navigation: {
       nextEl: '.page-2-reviews__next',
       prevEl: '.page-2-reviews__prev',
     },
-  
+
   });
 }
 
 
-if(page2CompanySwiper) {
+if (page2CompanySwiper) {
   const swiper4 = new Swiper('.page-2-company__swiper', {
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 16,
-  
-  
-  
+
+
+
     navigation: {
       nextEl: '.page-2-company__next',
       prevEl: '.page-2-company__prev',
     },
-  
+
   });
 }
 
-let page3ReadySwiper = document.querySelector('.page-2-ready__swiper');
 
-if(page3ReadySwiper) {
+
+if (page3ReadySwiper) {
   const swiper4 = new Swiper('.page-2-ready__swiper', {
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 16,
-  
-  
-  
+
+
+
     navigation: {
       nextEl: '.page-2-ready__next',
       prevEl: '.page-2-ready__prev',
     },
-  
+
+  });
+}
+
+if (page4SpicesSwiper) {
+  const swiper = new Swiper('.page-4-spices__swiper', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+
+
+
+    navigation: {
+      nextEl: '.page-4-spices__next',
+      prevEl: '.page-4-spices__prev',
+    },
+
   });
 }
