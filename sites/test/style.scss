@@ -447,6 +447,7 @@
     }
     .submenu__right-item {
         padding: 20px;
+        border-bottom: unset;
     }
     .submenu__link {
         padding: 20px;
@@ -485,6 +486,9 @@
     }
     .menu__link.active {
         background-color: rgba(19, 20, 23, 1);
+    }
+    .active .submenu__link {
+      background-color: rgb(19, 20, 23);
     }
     .header.open .menu {
         transform: translateX(-100%);
@@ -546,7 +550,7 @@
     }
   }
 
-  @media (hover: none) {
+  @media (hover: hover) {
     .menu__link:hover {
       color: #fff;
     }
@@ -556,7 +560,6 @@
     .menu__item:hover .submenu {
       display: block;
   }
-    
     .submenu__item_dd:hover .submenu-right {
         display: block;
     }
