@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+   <div class="wrapper">
+    <header class="header" id="header">
+      <div class="container">
+       <div class="header__flex">
+      <a href="./index.html" class="header__logo">
+          <img class="logo__img" src="./src/img/svg/logo.svg" alt="Логотип">
+      </a>
+      <nav class="header__menu menu">
+        <ul class="menu__list">
+            <li class="menu__item">
+                <a class="menu__link" href="#">Главная</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link menu__link_dd" href="#">Основное меню
+                  <img class="menu__icon" src="./src/img/svg/drop.svg" alt="">
+                </a>
+                <!-- Подменю первого уровня -->
+                <ul class="submenu">
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">Заказать вёрстку</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">Отправить макет на проверку</a>
+                    </li>
+                    <li class="submenu__item">
+                        <a class="submenu__link" href="#">Хочу работать у вас</a>
+                    </li>
+                    <li class="submenu__item submenu__item_dd">
+                      <a class="submenu__link" href="#">Есть предложение по работе с кл...
+                        <img class="submenu__icon" src="./src/img/svg/drop.svg" alt="">
+                      </a>
+                      <ul class="submenu-right">
+                        <li class="submenu__right-item">
+                            <a class="submenu__right-link" href="#">У меня есть оффер</a>
+                        </li>
+                        <li class="submenu__right-item">
+                            <a class="submenu__right-link" href="#">Сделать партнёром</a>
+                        </li>
+                    </ul>
+                  </li>
+                </ul>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">Наши сервисы</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link" href="#">Контакты</a>
+            </li>
+        </ul>
+    </nav>
+      <a class="header__link" href="tel:+13212223333">
+        <img src="./src/img/svg/phone.svg" alt="">
+        <span>+1 (321) 222 - 33 -33</span>
+      </a>
+      <button class="header__burger-btn" id="burger">
+        <span></span><span></span><span></span>
+    </button>
+       </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__overlay" id="overlay"></div>
+      </section>
+    </main>
+   </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
