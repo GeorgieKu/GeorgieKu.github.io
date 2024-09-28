@@ -3,7 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let header = document.querySelector('.header')
     let fixedBlock = document.querySelector('.fixed-block')
     document.getElementById("burger").addEventListener("click", function () {
-        header.classList.toggle("open")
+        if (header.classList.contains('filter-show')) {
+            filterMenu.classList.remove('page-11__filter-btn--active')
+            filterBg.classList.remove('page-11__filter-bg--active')
+            body.style.overflow = 'auto'
+            header.classList.remove('filter-show')
+        }
+        else {
+            header.classList.toggle("open")
         if (header.classList.contains('open')) {
             body.style.overflow = 'hidden';
             if (window.matchMedia("(max-width: 576px)").matches) {
@@ -17,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 fixedBlock.style.bottom = '0'
             }
 
+        }
         }
     })
 
@@ -299,4 +307,54 @@ if (modal4) {
             modal4.style.display = 'none';
         }
     });
+}
+
+let page10Links = document.querySelectorAll('.page-10__links a');
+
+page10Links.forEach(function(page10Link) {
+    page10Link.addEventListener('click', function() {
+        page10Links.forEach(function(link) {
+            link.classList.remove("page-10_active-link");
+        });
+        this.classList.add("page-10_active-link");
+    });
+});
+
+let customCheckboxBlocks = document.querySelectorAll('.custom-checkbox-block')
+
+customCheckboxBlocks.forEach(function(customCheckboxBlock) {
+
+    customCheckboxBlock.addEventListener('click', function() {
+        let customCheckbox = this.querySelector('.custom-checkbox')
+        let checkbox = this.querySelector('.checkbox');
+        customCheckbox.classList.toggle('custom-checkbox_active')
+        if (checkbox) {
+            checkbox.checked = !checkbox.checked;
+        }
+    })
+})
+
+
+let filerBtn = document.querySelector('.page-11__filter-btn');
+let filterMenu = document.querySelector('.page-11 .page-10__block')
+let filterBg = document.querySelector('.page-11__filter-bg')
+let closeFilter = document.querySelector('.close-filter')
+
+
+if(filerBtn) {
+    filerBtn.addEventListener('click', function() {
+        filterMenu.classList.add('page-11__filter-btn--active')
+        filterBg.classList.add('page-11__filter-bg--active')
+        body.style.overflow = 'hidden'
+        if (window.innerWidth <= 1124) {
+            header.classList.add('filter-show')
+        }
+        
+    })
+    
+    closeFilter.addEventListener('click', function() {
+        filterMenu.classList.remove('page-11__filter-btn--active')
+        filterBg.classList.remove('page-11__filter-bg--active')
+        body.style.overflow = 'auto'
+    })
 }

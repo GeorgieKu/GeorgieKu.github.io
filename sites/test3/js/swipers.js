@@ -7,6 +7,7 @@ let page2ReviewsSwiper = document.querySelector('.page-2-reviews__swiper');
 let page2CompanySwiper = document.querySelector('.page-2-company__swiper');
 let page3ReadySwiper = document.querySelector('.page-2-ready__swiper');
 let page4SpicesSwiper = document.querySelector('.page-4-spices__swiper');
+let workersSwiper = document.querySelector('.workers__swiper')
 
 if (heroSwiper) {
   const swiper = new Swiper('.hero__swiper', {
@@ -152,6 +153,22 @@ if (page4SpicesSwiper) {
     navigation: {
       nextEl: '.page-4-spices__next',
       prevEl: '.page-4-spices__prev',
+    },
+
+  });
+}
+
+if (workersSwiper) {
+  const swiper = new Swiper('.workers__swiper', {
+    loop: true,
+    slidesPerView: 'auto',
+    spaceBetween: 16,
+    navigation: {
+      nextEl: '.workers__next',
+      prevEl: '.workers__prev',
+    },
+    pagination: {
+      el: '.workers__swiper-pagination'
     },
 
   });
