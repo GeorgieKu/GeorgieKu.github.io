@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Lora";
   font-weight: 400;
@@ -126,9 +125,10 @@ button {
   width: 100%;
   z-index: 99;
   transition: transform 0.3s ease;
+  background-color: transparent;
 }
 .header.hidden {
-  transform: translateY(-100%); /* Скрывает шапку, двигая её вверх */
+  transform: translateY(-100%);
 }
 .header__flex {
   display: flex;
@@ -149,6 +149,9 @@ button {
   text-align: right;
   color: rgb(0, 0, 0);
   transition: color 0.3s ease;
+}
+.header.dark-mode .header__link {
+  color: white;
 }
 .header__link:hover {
   color: rgb(255, 214, 0);
@@ -394,7 +397,7 @@ button {
   min-height: 542px;
   margin-right: 38px;
 }
-.videos__card img {
+.videos__card iframe {
   border-radius: 30px;
   width: 100%;
   max-width: 970px;
