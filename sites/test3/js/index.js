@@ -31,14 +31,14 @@ const swiper = new Swiper('.swiper', {
   AOS.init();
 
   document.addEventListener('scroll', function() {
-    const header = document.querySelector('header');  // Хэдер, к которому будем добавлять классы
-    const darkBlocks = document.querySelectorAll('.dark');  // Блоки с классом dark
-    const lightBlocks = document.querySelectorAll('.light');  // Блоки с классом light
+    const header = document.querySelector('header');  
+    const darkBlocks = document.querySelectorAll('.dark'); 
+    const lightBlocks = document.querySelectorAll('.light');  
 
     let darkInViewport = false;
     let lightInViewport = false;
 
-    // Проверяем, находится ли какой-либо блок dark в верхней части экрана
+
     darkBlocks.forEach((darkBlock) => {
         const darkPosition = darkBlock.getBoundingClientRect().top;
         if (darkPosition <= 0 && darkPosition >= -darkBlock.offsetHeight) {
@@ -46,7 +46,6 @@ const swiper = new Swiper('.swiper', {
         }
     });
 
-    // Проверяем, находится ли какой-либо блок light в верхней части экрана
     lightBlocks.forEach((lightBlock) => {
         const lightPosition = lightBlock.getBoundingClientRect().top;
         if (lightPosition <= 0 && lightPosition >= -lightBlock.offsetHeight) {
@@ -54,7 +53,6 @@ const swiper = new Swiper('.swiper', {
         }
     });
 
-    // Добавляем соответствующий класс к хэдеру
     if (darkInViewport) {
         header.classList.add('darkmode');
         header.classList.remove('lightmode');
@@ -62,7 +60,13 @@ const swiper = new Swiper('.swiper', {
         header.classList.add('lightmode');
         header.classList.remove('darkmode');
     } else {
-        // Если ни один из блоков не на вершине, можно убрать классы
         header.classList.remove('darkmode', 'lightmode');
     }
 });
+
+let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector('.menu')
+
+menuBtn.addEventListener('click', function() {
+    menu.classList.toggle('open')
+})

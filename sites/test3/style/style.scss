@@ -147,6 +147,7 @@ button {
     &__flex {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
         margin-top: auto;
     }
@@ -161,7 +162,7 @@ button {
         font-weight: 700;
         line-height: 21.94px;
         text-align: right;
-        color: rgba(0, 0, 0, 1);
+        color: #fff;
         transition: color .3s ease;
     }
     &.dark-mode &__link {
@@ -170,6 +171,39 @@ button {
     &__link:hover {
         color: rgb(255, 214, 0);
     }
+}
+
+.menu {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 20px;
+    transform: translateX(400%);
+    transition: transform .3s ease;
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__link {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21.94px;
+        text-align: right;
+        color: rgba(0, 0, 0, 1);
+        transition: color .3s ease;
+    }
+    &__link:hover {
+        color: rgb(255, 214, 0);
+    }
+}
+
+.menu-btn {
+    text-decoration: underline;
+}
+
+.menu.open {
+    transform: translateX(0%);
 }
 
 .logo__img {
@@ -845,5 +879,92 @@ button {
     &__img {
         width: 30px;
         height: 30px;
+    }
+}
+
+
+.diary {
+    background-image: url(../img/diary/diary-1.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 130px;
+    
+    &__block {
+        min-height: 681px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+            font-family: Montserrat;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.5px;
+            text-align: center;
+            color: #fff;
+            max-width: 834px;
+            margin-top: auto;
+        }
+    }
+    &__texts {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        h1 {
+            font-family: Montserrat;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 60.95px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            margin-bottom: 24px;
+        }
+        span {
+            font-family: Montserrat;
+            font-size: 30px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 36.57px;
+            text-align: center;
+            color: #fff;
+        }
+    }
+}
+
+.diary-content {
+    background-color: #FFD600;
+    padding: 50px 0;
+    h2 {
+        font-family: Montserrat;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        strong {
+            display: block;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 16px;
+            text-align: center;
+            margin-bottom: 2px;
+        }
+        span {
+            display: block;
+            font-family: Montserrat;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 22px;
+            text-align: center;            
+        }
     }
 }
