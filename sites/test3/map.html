@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Дневники путешествий Александра Фокичева">
+    <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/style.css?ver=2">
+    <link rel="stylesheet" href="./style/media.css?ver=2">
+    <link rel="stylesheet" href="./style/aos.css">
+
+    <link rel="preload" href="./fonts/Lora-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Lora-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d618754f-6a72-48c5-835d-ba97c1683cc3&lang=ru_RU" type="text/javascript">
+    </script>
+    <title>Дневники путешествий Александра Фокичева</title>
+</head>
+
+<body>
+        <header class="header header-map">
+            <div class="container">
+                <div class="header__flex">
+                    <a class="logo header__logo" href="./index.html" aria-label="Вернутьбся на главную">
+                        <img class="logo__img" src="./img/svg/logo.svg" alt="logo">
+                    </a>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a aria-label="Перейти на страницу карты" class="header__link" href="#">
+                                    <svg class="header__icon" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.0063 3.99667C18.4525 4.2734 17.5473 4.2734 16.9935 3.99667L10.0062 0.503218C9.45237 0.226494 8.54719 0.226494 7.99334 0.503218L0 4.49989V27L7.99367 23.003C8.54752 22.7263 9.4527 22.7263 10.0065 23.003L16.9938 26.4968C17.5476 26.7735 18.4528 26.7735 19.0067 26.4968L27 22.5001V0L19.0063 3.99667ZM7.87489 20.5466L2.25011 23.359V5.89069L7.87489 3.0783V20.5466ZM16.875 23.9216L10.125 20.5466V3.07837L16.875 6.45337V23.9216ZM24.7499 21.1092L19.1251 23.9216V6.45337L24.7499 3.64098V21.1092Z" fill="black"/>
+                                        </svg>
+                                    <!-- <svg class="header__icon" width="27" height="27">
+                                        <use xlink:href="./img/svg/sprite.svg#map"></use>
+                                    </svg> -->
+                                </a>
+                            </li>
+                            <li class="header__item">
+                                <a aria-label="открыть меню" class="header__link menu-btn" href="#">меню</a>
+                            </li>
+                        </ul>
+                        <div class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__item"><a aria-label="Перейти на страницк поиска" class="menu__link"
+                                        href="#">поиск</a></li>
+                                <li class="menu__item"><a aria-label="Перейти на страницу 'Обо мне'" class="menu__link"
+                                        href="#">обо мне</a></li>
+                                <li class="menu__item"><a aria-label="Перейти на страницу 'Конткаты'" class="menu__link"
+                                        href="#">контакты</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section class="map-frame">
+            <div class="container">
+                <div class="map-frame__filter">
+                    <input class="map-frame__input" type="text" placeholder="поиск">
+                    <button class="map-frame__btn">фильтры
+
+                        <svg width="29" height="13" viewBox="0 0 29 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L14.5 11.5L28.5 1" stroke="#D9D9D9"/>
+                            </svg>
+                            
+                    </button>
+                    <div class="map-filter__block">
+                        <div class="map-filter__flex">
+                            <span class="map-filter__text">фильтры</span>
+                            <button class="map-filter__close-btn">
+                                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.4624 0.609375L21.8241 23.1478" stroke="#D9D9D9" stroke-opacity="0.8"/>
+                                    <path d="M1 22.6582L22.2872 1.09966" stroke="#D9D9D9" stroke-opacity="0.8"/>
+                                    </svg>
+                            </button>
+                                
+                        </div>
+                    <div class="map-filter__categories">
+                        <div class="map-filter__category">
+                            <h2 class="map-filter__category-title">континент</h2>
+                            <ul>
+                                <li><button aria-label="Выбрать фильр">Россия</button></li>
+                                <li><button aria-label="Выбрать фильр">Европа</button></li>
+                                <li><button aria-label="Выбрать фильр">Азия</button></li>
+                                <li><button aria-label="Выбрать фильр">Африка</button></li>
+                                <li><button aria-label="Выбрать фильр">Лат. Америка</button></li>
+                                <li><button aria-label="Выбрать фильр">Сев. Америка</button></li>
+                                <li><button aria-label="Выбрать фильр">Антарктида</button></li>
+                                <li><button aria-label="Выбрать фильр">Океания</button></li>
+                            </ul>
+                        </div>
+                        <div class="map-filter__category">
+                            <h2 class="map-filter__category-title">транспорт</h2>
+                            <ul>
+                                <li><button aria-label="Выбрать фильр">пешком </button></li>
+                                <li><button aria-label="Выбрать фильр">на машине</button></li>
+                                <li><button aria-label="Выбрать фильр">на самолете</button></li>
+                                <li><button aria-label="Выбрать фильр">на поезде</button></li>
+                                <li><button aria-label="Выбрать фильр">на корабле</button></li>
+                            </ul>
+                        </div>
+                        <div class="map-filter__category">
+                            <h2 class="map-filter__category-title">материал</h2>
+                            <ul>
+                                <li><button aria-label="Выбрать фильр">дневники</button></li>
+                                <li><button aria-label="Выбрать фильр">заметки</button></li>
+                                <li><button aria-label="Выбрать фильр">видео</button></li>
+                            </ul>
+                        </div>
+                        <div class="map-filter__category">
+                            <h2 class="map-filter__category-title">климат</h2>
+                            <ul>
+                                <li><button aria-label="Выбрать фильр">климат</button></li>
+                                <li><button aria-label="Выбрать фильр">снег</button></li>
+                                <li><button aria-label="Выбрать фильр">пустыня</button></li>
+                                <li><button aria-label="Выбрать фильр">горы</button></li>
+                                <li><button aria-label="Выбрать фильр">озера</button></li>
+                                <li><button aria-label="Выбрать фильр">моря</button></li>
+                                <li><button aria-label="Выбрать фильр">океаны</button></li>
+                            </ul>
+                        </div>
+                        <div class="map-filter__category">
+                            <h2 class="map-filter__category-title">тип поездки</h2>
+                            <ul>
+                                <li><button aria-label="Выбрать фильр">отдых</button></li>
+                                <li><button aria-label="Выбрать фильр">работа</button></li>
+                                <li><button aria-label="Выбрать фильр">город</button></li>
+                                <li><button aria-label="Выбрать фильр">природа</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div id="map" style="width: 100%; height: 670px"></div>
+        </section>
+    <main>
+        <section class="countries">
+            <div class="countries__flex">
+                <div class="countries__block countries__block-1">
+                    <a href="#" class="countries__link"></a>
+                    <div class="countries__texts">
+                        <h2>Антарктида</h2>
+                        <span>январь 2024</span>
+                    </div>
+                    <span>дневник</span>
+                </div>
+                <div class="countries__block countries__block-2">
+                    <a href="#" class="countries__link"></a>
+                    <div class="countries__texts">
+                        <h2>Швейцария</h2>
+                        <span>март 2022</span>
+                    </div>
+                    <span>дневник</span>
+                </div>
+                <div class="countries__block countries__block-3">
+                    <a href="#" class="countries__link"></a>
+                    <div class="countries__texts">
+                        <h2>Шри-Ланка</h2>
+                        <span>февраль 2018</span>
+                    </div>
+                    <span>заметка</span>
+                </div>
+                <div class="countries__block countries__block-4">
+                    <a href="#" class="countries__link"></a>
+                    <div class="countries__texts">
+                        <h2>Эмираты</h2>
+                        <span>май 2015</span>
+                    </div>
+                    <span>дневник</span>
+                </div>
+                <div class="countries__block countries__block-5">
+                    <a href="#" class="countries__link"></a>
+                    <div class="countries__texts">
+                        <h2>Узбекистан</h2>
+                        <span>апрель 2013</span>
+                    </div>
+                    <span>дневник</span>
+                </div>
+                <div class="countries__block countries__block-6">
+                    <a href="#" class="countries__link"></a>
+                    <div class="countries__texts">
+                        <h2>Антарктида</h2>
+                        <span>январь 2024</span>
+                    </div>
+                    <span>дневник</span>
+                </div>
+                <div class="countries__block countries__block-7">
+                    <a href="#" class="countries__link"></a>
+                    <div class="countries__texts">
+                        <h2>Америка</h2>
+                        <span>март 2022</span>
+                    </div>
+                    <span>дневник</span>
+                </div>
+                <div class="countries__block countries__block-8">
+                    <a href="#" class="countries__link"></a>
+                    <div class="countries__texts">
+                        <h2>Америка</h2>
+                        <span>февраль 2018</span>
+                    </div>
+                    <span>видео</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer footer-black" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
+            <div class="footer__flex">
+                <nav>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link"
+                                aria-label="Перейти на страницу 'Дневники'">дневники</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link"
+                                aria-label="Перейти на страницу 'карта'">карта</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link"
+                                aria-label="Перейти на страницу 'заметки'">заметки</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link"
+                                aria-label="Перейти на страницу 'контакты'">контакты</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link"
+                                aria-label="Перейти на страницу 'видео'">видео</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link"
+                                aria-label="Перейти на страницу 'поиск'">поиск</a></li>
+                    </ul>
+                </nav>
+                <ul class="footer__socials">
+                    <li><a href="#" aria-label="Перейти на канал dzen">
+                        <svg class="footer__icon" width="30" height="30">
+                            <use xlink:href="./img/svg/sprite.svg#dzen"></use>
+                        </svg>
+                    </a></li>
+                    <li><a href="#" aria-label="Перейти на канал youtube">
+                        <svg class="footer__icon" width="30" height="30">
+                            <use xlink:href="./img/svg/sprite.svg#yt"></use>
+                        </svg>
+                    </a></li>
+                    <li><a href="#" aria-label="Перейти на канал touristik">
+                            <img loading="lazy" class="footer__img" src="./img/tour.webp" alt="">
+                        </a></li>
+                </ul>
+                <a class="footer__link-2" href="mailto:fokichev_diary@gmail.com"
+                aria-label="Написать мне на почту">fokichev_diary@gmail.com</a>
+                <a class="logo" href="./index.html" aria-label="На главную">
+                    <img loading="lazy" class="logo__img" src="./img/svg/logo-white.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/aos.js"></script>
+    <script src="./js/map.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,4 +1,8 @@
-const swiper = new Swiper('.swiper', {
+
+let swiperBlockSwiper = document.querySelector('.swiper-block__swiper')
+
+if (swiperBlockSwiper) {
+  const swiper = new Swiper('.swiper-block__swiper', {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 1,
@@ -8,6 +12,7 @@ const swiper = new Swiper('.swiper', {
       },
   
   });
+}
 
   document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
@@ -69,4 +74,25 @@ let menu = document.querySelector('.menu')
 
 menuBtn.addEventListener('click', function() {
     menu.classList.toggle('open')
+})
+
+let filterBtn = document.querySelector('.map-frame__btn');
+let filterBlock = document.querySelector('.map-filter__block');
+let filterItems = document.querySelectorAll('.map-filter__category button');
+let filterCloseBtn = document.querySelector('.map-filter__close-btn')
+
+filterBtn.addEventListener('click', function() {
+  filterBlock.classList.toggle('open')
+  filterBtn.classList.toggle('open')
+});
+
+filterCloseBtn.addEventListener('click', function() {
+  filterBlock.classList.toggle('open')
+  filterBtn.classList.toggle('open')
+});
+
+filterItems.forEach(function(filterItem) {
+  filterItem.addEventListener('click', function() {
+    filterItem.classList.toggle('clicked')
+  })
 })
