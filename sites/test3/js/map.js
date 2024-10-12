@@ -101,75 +101,87 @@ function init() {
             balloonContent: 'Метка из Замбии'
         }, {
             iconLayout: 'default#image',
-            iconImageHref: 'path/to/zambia-icon.png', 
-            iconImageSize: [30, 30],
-            iconImageOffset: [-15, -15]
+            iconImageHref: './img/clusters/afrika.svg', // Путь к вашей кастомной иконке для Замбии
+            iconImageSize: [30, 30], // Размер иконки
+            iconImageOffset: [-15, -15] // Смещение иконки
         }));
     }
-
+    
     // Китай
     var chinaGeoObjects = [];
     for (var i = 0; i < 7; i++) {
         chinaGeoObjects.push(new ymaps.Placemark(getRandomOffset(chinaCenter, 0.5), {
             balloonContent: 'Метка из Китая'
         }, {
-            preset: 'islands#icon',
-            iconColor: '#0000FF'
+            iconLayout: 'default#image',
+            iconImageHref: './img/clusters/china.svg', // Путь к кастомной иконке для Китая
+            iconImageSize: [30, 30],
+            iconImageOffset: [-15, -15]
         }));
     }
-
+    
     // Россия
     var russiaGeoObjects = [];
     for (var i = 0; i < 12; i++) {
         russiaGeoObjects.push(new ymaps.Placemark(getRandomOffset(russiaCenter, 0.5), {
             balloonContent: 'Метка из России'
         }, {
-            preset: 'islands#icon',
-            iconColor: '#40E0D0'
+            iconLayout: 'default#image',
+            iconImageHref: './img/clusters/russia.svg', // Путь к кастомной иконке для России
+            iconImageSize: [30, 30],
+            iconImageOffset: [-15, -15]
         }));
     }
-
+    
     // Европа
     var europeGeoObjects = [];
     for (var i = 0; i < 10; i++) {
         europeGeoObjects.push(new ymaps.Placemark(getRandomOffset(europeCenter, 0.5), {
             balloonContent: 'Метка из Европы'
         }, {
-            preset: 'islands#icon',
-            iconColor: '#0000FF'
+            iconLayout: 'default#image',
+            iconImageHref: './img/clusters/europe.svg', // Путь к кастомной иконке для Европы
+            iconImageSize: [30, 30],
+            iconImageOffset: [-15, -15]
         }));
     }
-
+    
     // Турция
     var turkeyGeoObjects = [];
     for (var i = 0; i < 12; i++) {
         turkeyGeoObjects.push(new ymaps.Placemark(getRandomOffset(turkeyCenter, 0.5), {
             balloonContent: 'Метка из Турции'
         }, {
-            preset: 'islands#icon',
-            iconColor: '#FF69B4'
+            iconLayout: 'default#image',
+            iconImageHref: './img/clusters/turkey.svg', // Путь к кастомной иконке для Турции
+            iconImageSize: [30, 30],
+            iconImageOffset: [-15, -15]
         }));
     }
-
+    
     // Аргентина
     var argentinaGeoObjects = [];
     for (var i = 0; i < 9; i++) {
         argentinaGeoObjects.push(new ymaps.Placemark(getRandomOffset(argentinaCenter, 0.5), {
             balloonContent: 'Метка из Аргентины'
         }, {
-            preset: 'islands#icon',
-            iconColor: '#FF0000'
+            iconLayout: 'default#image',
+            iconImageHref: './img/clusters/sa.svg', // Путь к кастомной иконке для Аргентины
+            iconImageSize: [30, 30],
+            iconImageOffset: [-15, -15]
         }));
     }
-
+    
     // Северная Америка
     var northAmericaGeoObjects = [];
     for (var i = 0; i < 2; i++) {
         northAmericaGeoObjects.push(new ymaps.Placemark(getRandomOffset(northAmericaCenter, 0.5), {
             balloonContent: 'Метка из Северной Америки'
         }, {
-            preset: 'islands#icon',
-            iconColor: '#800080'
+            iconLayout: 'default#image',
+            iconImageHref: './img/clusters/na.svg', // Путь к кастомной иконке для Северной Америки
+            iconImageSize: [30, 30],
+            iconImageOffset: [-15, -15]
         }));
     }
 
