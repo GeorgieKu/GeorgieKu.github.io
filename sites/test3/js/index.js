@@ -81,20 +81,17 @@ menuBtn.addEventListener('click', function() {
 let filterBtn = document.querySelector('.map-frame__btn');
 let filterBlock = document.querySelector('.map-filter__block');
 let filterItems = document.querySelectorAll('.map-filter__category button');
-let filterCloseBtn = document.querySelector('.map-filter__close-btn')
 
-filterBtn.addEventListener('click', function() {
-  filterBlock.classList.toggle('open')
-  filterBtn.classList.toggle('open')
-});
-
-filterCloseBtn.addEventListener('click', function() {
-  filterBlock.classList.toggle('open')
-  filterBtn.classList.toggle('open')
-});
-
-filterItems.forEach(function(filterItem) {
-  filterItem.addEventListener('click', function() {
-    filterItem.classList.toggle('clicked')
+if(filterBtn) {
+  filterBtn.addEventListener('click', function() {
+    filterBlock.classList.toggle('open')
+    filterBtn.classList.toggle('open')
+  });
+  filterItems.forEach(function(filterItem) {
+    filterItem.addEventListener('click', function() {
+      filterItem.classList.toggle('clicked')
+    })
   })
-})
+}
+
+
