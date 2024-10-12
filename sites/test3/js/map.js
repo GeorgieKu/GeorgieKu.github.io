@@ -1,18 +1,21 @@
 ymaps.ready(init);
 
-var initialZoom = window.innerWidth < 576 ? 3 : 5;
+
 
 function init() {
     var myMap = new ymaps.Map("map", {
         center: [20.0, 20.0], 
-        zoom: initialZoom, 
+        zoom: 3, 
         controls: ['zoomControl', 'fullscreenControl'],
         copyrightControl: false
     });
 
     myMap.behaviors.disable('scrollZoom'); 
 
-
+    var isMobile = window.innerWidth < 768;
+    if (isMobile) {
+        myMap.behaviors.disable('drag');
+    }
     // Создание кластеризаторов для разных регионов
     var zambiaClusterer = new ymaps.Clusterer({
         clusterIcons: [{
