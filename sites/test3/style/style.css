@@ -1234,7 +1234,7 @@ button {
   color: #a0a0a0;
 }
 .map-frame__filter .map-frame__btn {
-  padding: 11px 17px 11px 30px;
+  padding: 17px 20px;
   background: rgba(17, 17, 17, 0.75);
   -webkit-backdrop-filter: blur(13px);
           backdrop-filter: blur(13px);
@@ -1249,7 +1249,7 @@ button {
   align-items: center;
   justify-content: space-between;
   border-radius: 30px;
-  margin-bottom: 18px;
+  text-transform: uppercase;
 }
 .map-frame__filter .map-frame__btn svg {
   transform: rotate(180deg);
@@ -1258,14 +1258,26 @@ button {
 .map-frame__filter .map-frame__btn.open svg {
   transform: rotate(0deg);
 }
+.map-frame__filter .map-frame__btn.open {
+  border-radius: 30px 30px 0 0;
+}
+.map-frame__filter .map-frame__btn.open .close-filter {
+  display: block;
+}
 .map-frame__filter .map-filter__block {
   display: none;
   opacity: 0;
-  padding: 16px 20px;
+  padding: 0 30px 16px;
   background: rgba(17, 17, 17, 0.75);
-  border-radius: 30px;
+  border-radius: 0 0 30px 30px;
   width: 100%;
   transition: opacity 0.3s ease;
+}
+.map-frame__filter .map-frame__btn.open .open-filter {
+  display: none;
+}
+.map-frame__filter .close-filter {
+  display: none;
 }
 .map-frame__filter .map-filter__block.open {
   display: block;

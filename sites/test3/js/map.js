@@ -12,10 +12,7 @@ function init() {
 
     myMap.behaviors.disable('scrollZoom'); 
 
-    var isMobile = window.innerWidth < 768;
-    if (isMobile) {
-        myMap.behaviors.disable('drag');
-    }
+
     // Создание кластеризаторов для разных регионов
     var zambiaClusterer = new ymaps.Clusterer({
         clusterIcons: [{
