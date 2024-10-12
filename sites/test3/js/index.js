@@ -76,6 +76,8 @@ menuBtn.addEventListener('click', function() {
     menu.classList.toggle('open')
 })
 
+
+
 let filterBtn = document.querySelector('.map-frame__btn');
 let filterBlock = document.querySelector('.map-filter__block');
 let filterItems = document.querySelectorAll('.map-filter__category button');
