@@ -92,17 +92,21 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.main-page');
 
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    
-    if (currentScroll > 50) {
-      // Если скролл больше 50px, добавить класс бургер-меню
-      header.classList.add('header--burger');
-    } else {
-      // Если находимся на верхней части страницы, удалить класс бургер-меню
-      header.classList.remove('header--burger');
-    }
-  });
+  if(header) {
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScroll > 50) {
+        // Если скролл больше 50px, добавить класс бургер-меню
+        header.classList.add('header--burger');
+      } else {
+        // Если находимся на верхней части страницы, удалить класс бургер-меню
+        header.classList.remove('header--burger');
+      }
+    });
+  }
+
+
 });
 
 // Получаем модальное окно и элементы внутри него
@@ -120,9 +124,10 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Закрытие модального окна при клике на крестик или за пределы изображения
-modal.addEventListener('click', function(event) {
+if (modal) {
+  modal.addEventListener('click', function(event) {
     if (event.target === modal || event.target === closeModal) {
         modal.style.display = 'none';
     }
 });
+}
