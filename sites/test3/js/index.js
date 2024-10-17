@@ -14,24 +14,7 @@ if (swiperBlockSwiper) {
   });
 }
 
-  // document.addEventListener('DOMContentLoaded', () => {
-  //   const header = document.querySelector('.header');
-  //   let lastScroll = 0;
-  
-  //   window.addEventListener('scroll', () => {
-  //     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-  
-  //     if (currentScroll > lastScroll) {
-  //       // Скролл вниз, скрыть шапку
-  //       header.classList.add('hidden');
-  //     } else {
-  //       // Скролл вверх, показать шапку
-  //       header.classList.remove('hidden');
-  //     }
-  
-  //     lastScroll = currentScroll;
-  //   });
-  // });
+
 
   AOS.init();
 
@@ -72,9 +55,12 @@ if (swiperBlockSwiper) {
 let menuBtn = document.querySelector('.menu-btn');
 let menu = document.querySelector('.menu')
 
-menuBtn.addEventListener('click', function() {
+if(menuBtn) {
+  menuBtn.addEventListener('click', function() {
     menu.classList.toggle('open')
 })
+}
+
 
 
 
@@ -95,3 +81,48 @@ if(filterBtn) {
 }
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  let burger = document.getElementById('burger');
+  if(burger) {
+    burger.addEventListener("click", function() {
+      document.querySelector("header").classList.toggle("open")
+  })
+}
+})
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.main-page');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (currentScroll > 50) {
+      // Если скролл больше 50px, добавить класс бургер-меню
+      header.classList.add('header--burger');
+    } else {
+      // Если находимся на верхней части страницы, удалить класс бургер-меню
+      header.classList.remove('header--burger');
+    }
+  });
+});
+
+// Получаем модальное окно и элементы внутри него
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const closeModal = document.querySelector('.close');
+
+// Обрабатываем клик на всех изображениях с классом 'content__img'
+document.addEventListener('click', function(event) {
+    if (event.target.classList.contains('open-modal-img')) {
+        // Увеличиваем версию изображения в 2 раза (x2)
+        const imgSrc = event.target.src.replace('.webp', '@2x.webp');
+        modalImg.src = imgSrc;
+        modal.style.display = 'flex';
+    }
+});
+
+// Закрытие модального окна при клике на крестик или за пределы изображения
+modal.addEventListener('click', function(event) {
+    if (event.target === modal || event.target === closeModal) {
+        modal.style.display = 'none';
+    }
+});

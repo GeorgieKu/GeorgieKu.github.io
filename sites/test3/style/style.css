@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Lora";
   font-weight: 400;
@@ -120,7 +121,7 @@ button {
 
 .container {
   max-width: 1440px;
-  padding: 0 50px;
+  padding: 0 60px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -130,6 +131,71 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 886px;
+  position: relative;
+}
+
+.wrapper::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+}
+
+.wrapper .header__burger-btn {
+  display: none;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  z-index: 2;
+}
+.wrapper .header__burger-btn span {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  left: 5px;
+  transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+.wrapper .header__burger-btn span:nth-child(1) {
+  transform: translateY(-10px);
+}
+.wrapper .header__burger-btn span:nth-child(3) {
+  transform: translateY(10px);
+}
+.wrapper .main-page.open .header__burger-btn span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+.wrapper .main-page.open .header__burger-btn span:nth-child(2) {
+  opacity: 0;
+}
+.wrapper .main-page.open .header__burger-btn span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
+.wrapper .menu__list {
+  display: flex;
+  align-items: center;
+}
+.wrapper .menu__link {
+  font-size: 16px;
+}
+.wrapper .header--burger .header__burger-btn {
+  display: block;
+}
+.wrapper .header--burger .menu {
+  position: absolute;
+  left: -350px;
+  top: 115px;
+  width: -moz-max-content;
+  width: max-content;
+  transition: transform 0.5s, left 0.5s;
+  transform: translateX(-300%);
+}
+.wrapper .header--burger.main-page.open .menu {
+  transform: translateX(-50%);
+  left: 50%;
 }
 
 .header {
@@ -144,17 +210,23 @@ button {
 .header.hidden {
   transform: translateY(-100%);
 }
+.header.darkmode .header__icon path {
+  fill: #fff;
+}
 .header.darkmode .header__link {
   color: #fff;
 }
-.header.darkmode .header__icon path {
-  fill: #fff;
+.header.darkmode .header__burger-btn span {
+  background-color: #fff;
+}
+.header.lightmode .header__icon path {
+  fill: #000;
 }
 .header.lightmode .header__link {
   color: #000;
 }
-.header.lightmode .header__icon path {
-  fill: #000;
+.header.lightmode .header__burger-btn span {
+  background-color: #000;
 }
 .header__icon path {
   fill: #fff;
@@ -222,32 +294,6 @@ button {
   display: none !important;
 }
 
-.menu {
-  position: absolute;
-  background-color: #FFFFFF;
-  padding: 20px;
-  border-radius: 20px;
-  transform: translateX(1000%);
-  transition: transform 0.3s ease;
-}
-.menu__list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.menu__link {
-  font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 21.94px;
-  text-align: right;
-  color: rgb(0, 0, 0);
-  transition: color 0.3s ease;
-}
-.menu__link:hover {
-  color: rgb(255, 214, 0);
-}
-
 .menu-btn {
   text-decoration: underline;
 }
@@ -304,6 +350,8 @@ button {
   align-items: flex-end;
   margin-top: auto;
   width: 100%;
+  position: relative;
+  z-index: 3;
 }
 .hero__link {
   display: block;
@@ -357,6 +405,7 @@ button {
   display: flex;
   margin-right: 38px;
   position: relative;
+  transition: transform 0.25s ease;
 }
 .diaries__card__new-text {
   display: none;
@@ -386,6 +435,16 @@ button {
   position: absolute;
   inset: 0;
   z-index: 1;
+}
+.diaries__card::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+}
+.diaries__card:hover {
+  transform: scale(1.02);
 }
 .diaries__flex-2 {
   display: flex;
@@ -422,6 +481,7 @@ button {
   text-align: left;
   color: #fff;
   transform: translateY(-50%);
+  z-index: 3;
 }
 .diaries__card_new .diaries__new-text {
   display: block;
@@ -590,6 +650,7 @@ button {
 .notes {
   padding: 90px 0;
   background-color: rgb(196, 196, 196);
+  position: relative;
 }
 .notes__icon {
   display: block;
@@ -602,6 +663,10 @@ button {
   margin-bottom: 93px;
   padding-top: 84px;
   padding-left: 121px;
+}
+.notes__link-2 {
+  position: absolute;
+  inset: 0;
 }
 .notes__card {
   max-width: 294px;
@@ -616,6 +681,7 @@ button {
   position: relative;
   padding-top: 120px;
   padding-bottom: 36px;
+  transition: transform 0.25s ease;
 }
 .notes__card h2 {
   font-family: Montserrat;
@@ -636,10 +702,22 @@ button {
   color: #FFFFFF;
   margin-top: auto;
 }
+.notes__card:hover {
+  transform: scale(1.02);
+}
+.notes__card::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+}
 .notes__flex-2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  z-index: 3;
 }
 .notes__card-1 {
   background-image: url(../img/notes-1.webp);
@@ -669,6 +747,13 @@ button {
   color: rgb(255, 214, 0);
 }
 
+.notes::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  inset: 0;
+}
+
 .about {
   padding: 105px 0 110px;
 }
@@ -679,15 +764,16 @@ button {
   font-weight: 400;
   line-height: 89.6px;
   text-align: left;
-  margin-bottom: 58px;
+  margin-bottom: 120px;
 }
 .about h2 strong {
   font-weight: 700;
 }
 .about__flex {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 .about__flex p {
@@ -697,7 +783,11 @@ button {
   line-height: 23px;
   text-align: left;
   color: #000;
-  max-width: 369px;
+}
+.about__flexbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .about__img {
   max-width: 334px;
@@ -709,7 +799,6 @@ button {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 505px;
   width: 100%;
 }
 .about__texts p {
@@ -722,7 +811,7 @@ button {
 }
 .about__block {
   position: relative;
-  top: -70px;
+  flex-shrink: 0;
 }
 .about__block::before {
   content: "";
@@ -928,6 +1017,7 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 130px;
+  position: relative;
 }
 .diary__block {
   min-height: 681px;
@@ -935,6 +1025,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 }
 .diary__block p {
   font-family: Montserrat;
@@ -969,6 +1061,13 @@ button {
   line-height: 36.57px;
   text-align: center;
   color: #fff;
+}
+
+.diary::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  inset: 0;
 }
 
 .diary-content {
@@ -1181,10 +1280,12 @@ button {
   right: 50px;
 }
 
-.notes {
+.notes-2 {
   background-image: url(../img/notes/notes-1.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.notes .diary__texts {
+.notes-2 .diary__texts {
   margin-bottom: auto;
 }
 
@@ -1374,8 +1475,18 @@ button {
   position: absolute;
   inset: 0;
 }
+.countries__block::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  inset: 0;
+}
 .countries__block-1 {
   background-image: url(../img/country/country-1.webp);
+}
+.countries__texts {
+  position: relative;
+  z-index: 2;
 }
 .countries__texts h2 {
   font-family: Montserrat;
@@ -1456,12 +1567,23 @@ button {
   background-size: cover;
   border-radius: 30px;
 }
+.countries_2 .countries__block span {
+  position: relative;
+  z-index: 2;
+}
+.countries_2 .countries__block p {
+  position: relative;
+  z-index: 2;
+}
 .countries_2 .countries__block-3 {
   background-color: unset;
   background-image: url(../img/library-diary/country-1.webp);
 }
 .countries_2 .countries__block-4 {
   background-image: url(../img/library-diary/country-1.webp);
+}
+.countries_2 .countries__block::after {
+  border-radius: 27px;
 }
 .countries_2 .countries__block-5 {
   background-image: url(../img/country/country-1.webp);
@@ -1495,6 +1617,7 @@ button {
   background-image: url(../img/library-diary/library-diary.webp);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   width: 100%;
 }
 .library-diary .library-diary__height {
@@ -1507,6 +1630,8 @@ button {
   justify-content: space-between;
   width: 100%;
   align-items: flex-start;
+  position: relative;
+  z-index: 2;
 }
 .library-diary .library-diary__title {
   font-family: Montserrat;
@@ -1525,4 +1650,75 @@ button {
   text-align: left;
   color: #fff;
   max-width: 511px;
+}
+
+.library-diary::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  inset: 0;
+}
+
+.other .menu {
+  position: absolute;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 20px;
+  transform: translateX(1000%);
+  transition: transform 0.3s ease;
+}
+.other .menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.other .menu__link {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.94px;
+  text-align: right;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s ease;
+}
+.other .menu__link:hover {
+  color: rgb(255, 214, 0);
+}
+.other .menu-btn {
+  text-decoration: underline;
+}
+.other .menu.open {
+  transform: translateX(0%);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стилизуем изображение в модальном окне */
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* Закрытие модального окна */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

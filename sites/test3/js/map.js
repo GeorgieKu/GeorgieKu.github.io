@@ -4,10 +4,12 @@ ymaps.ready(init);
 
 function init() {
     var myMap = new ymaps.Map("map", {
-        center: [20.0, 20.0], 
-        zoom: 3, 
+        center: [20.0, 20.0],
+        zoom: 3,
         controls: ['zoomControl', 'fullscreenControl'],
         copyrightControl: false
+    }, {
+        minZoom: 2, // минимальный зум
     });
 
     myMap.behaviors.disable('scrollZoom'); 
