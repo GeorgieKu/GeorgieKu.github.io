@@ -5,9 +5,6 @@ let searchBtn = document.getElementById('searchBtn')
 let header = document.querySelector('header')
 let closeBtn = document.getElementById('closeBtn')
 
-darkModeBtn.addEventListener('click', function() {
-    document.documentElement.classList.toggle('dark');
-})
 
 searchInput.addEventListener('click', function(event) {
     searchList.style.display = 'flex';
@@ -41,3 +38,28 @@ closeBtn.addEventListener('click', function() {
     closeBtn.classList.add('hidden');
     searchInput.style.display = 'none';
 })
+
+
+
+
+const savedTheme = localStorage.getItem('theme');
+
+
+if (savedTheme) {
+  document.documentElement.classList.add(savedTheme);
+} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.documentElement.classList.add('dark');
+} else {
+  document.documentElement.classList.remove('dark');
+}
+
+
+darkModeBtn.addEventListener('click', function() {
+  document.documentElement.classList.toggle('dark');
+
+  if (document.documentElement.classList.contains('dark')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});

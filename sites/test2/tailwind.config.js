@@ -59,6 +59,7 @@ module.exports = {
       'seasons': "url('./img/season.webp')"
     }
   },
+  
   plugins: [],
 }
 

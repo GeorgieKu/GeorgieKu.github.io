@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lordfilm">
     <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css?ver=2">
     <title>Lordfilm</title>
+
 </head>
 
 <body class="bg-black-2">
+    <div id="scheme"></div>
     <img class="hidden mx-auto md:block" src="./img/page-bg.webp" alt="">
     <header class="max-w-[1100px] mx-auto py-[20px] shadow-[0_10px_20px_0_rgba(0,0,0,0.05)] transition-colors bg-white dark:bg-dark-bg relative md:rounded-t-[5px]">
         <div class="px-[20px] md:mx-auto">
@@ -66,26 +68,26 @@
 
                         </button>
                         <input id="searchInput"
-                            class="w-full py-[9.5px] pl-5 focus:outline-none border-solid border-gray border rounded-[5px] transition-colors bg-light-gray placeholder:text-black font-segoe text-sm font-normal dark:border-dark-bg-2 dark:bg-dark-bg dark:placeholder:text-light-gray-2 hidden md:block md:rounded-l-[0px] md:border-l-[0px]"
+                            class="w-full py-[9.5px] pl-5 focus:outline-none border-solid border-gray border rounded-[5px] transition-colors bg-light-gray placeholder:text-black font-segoe text-sm font-normal dark:border-dark-bg-2 dark:bg-dark-bg dark:placeholder:text-light-gray-2 hidden md:block md:rounded-l-[0px] md:border-l-[0px] dark:text-white"
                             type="text" placeholder="Поиск">
                         <ul id="searchList"
                             class="p-5 bg-white border-t  absolute w-full flex flex-col gap-5 hidden left-0 top-full dark:bg-dark-bg-2 dark:border-dark-bg-2 md:top-[calc(100%_+_10px)] md:rounded-[5px] md:border border-gray shadow-[0_10px_20px_0_rgba(0,0,0,0.05)]">
                             <li
-                                class="flex items-center gap-5 relative odd:bg-white even:bg-white rounded-[5px]  md:odd:bg-white md:even:bg-light-gray dark:odd:bg-dark-bg-2 dark:even:bg-dark-bg-2 md:dark:odd:bg-dark-bg-2 md:dark:even:bg-dark-bg">
+                                class="flex items-center gap-5 relative rounded-[5px]  dark:odd:bg-dark-bg-2 dark:even:bg-dark-bg-2 hover:bg-light-gray dark:hover:bg-black">
                                 <img loading="lazy" class="rounded-[5px] relative" src="./img/search.webp" alt="">
                                 <h2 class="font-segoe text-sm font-semibold text-black-2 relative dark:text-white">
                                     Внешние отмели</h2>
                                 <a aria-label="Перейти на страницу фильма" class="after:content-[''] after:absolute after:inset-0" href="#"></a>
                             </li>
                             <li
-                                class="flex items-center gap-5 relative odd:bg-white even:bg-white rounded-[5px] md:odd:bg-white md:even:bg-light-gray dark:odd:bg-dark-bg-2 dark:even:bg-dark-bg-2 md:dark:odd:bg-dark-bg-2 md:dark:even:bg-dark-bg">
+                                class="flex items-center gap-5 relative rounded-[5px] dark:odd:bg-dark-bg-2 dark:even:bg-dark-bg-2 hover:bg-light-gray dark:hover:bg-black">
                                 <img loading="lazy" class="rounded-[5px] relative" src="./img/search.webp" alt="">
                                 <h2 class="font-segoe text-sm font-semibold text-black-2 relative dark:text-white">Очень
                                     странные дела</h2>
                                 <a aria-label="Перейти на страницу фильма" class="after:content-[''] after:absolute after:inset-0" href="#"></a>
                             </li>
                             <li
-                                class="flex items-center gap-5 relative odd:bg-white even:white rounded-[5px]  md:odd:bg-white md:even:bg-light-gray hidden md:flex md:dark:odd:bg-dark-bg-2 md:dark:even:bg-dark-bg">
+                                class="flex items-center gap-5 relative rounded-[5px]  hidden md:flex hover:bg-light-gray dark:hover:bg-black">
                                 <img loading="lazy" class="rounded-[5px] relative" src="./img/search.webp" alt="">
                                 <h2 class="font-segoe text-sm font-semibold text-black-2 relative dark:text-white">
                                     Внешние отмели</h2>
@@ -213,13 +215,13 @@
             <div
                 class="flex items-center sm:gap-5 bg-white shadow-[0_10px_20px_0_rgba(0,0,0,0.05)] justify-center sm:py-5 dark:bg-dark-bg">
                 <button
-                    class="max-w-[20%] border-x border-transparent w-full py-5 sm:py-0 relative sm:h-10 sm:max-w-[118px] w-full flex items-center sm:pr-[23px] flex-col gap-2.5 sm:gap-0 sm:justify-end sm:flex-row sm:rounded-r-[5px] sm:rounded-l-[20px] sm:bg-light-gray sm:border-gray sm:border dark:bg-dark-bg dark:border-transparent sm:dark:border-dark-bg-2 transition-colors hover:border-active"
+                    class="max-w-[20%] border-x border-transparent w-full py-5 sm:py-0 relative sm:h-10 sm:max-w-[118px] w-full flex items-center sm:pr-[23px] flex-col gap-2.5 sm:gap-0 sm:justify-end sm:flex-row sm:rounded-r-[5px] sm:rounded-l-[20px] sm:bg-light-gray sm:border-gray sm:border dark:bg-dark-bg dark:border-transparent sm:dark:border-dark-bg-2 transition-colors hover:border-active sm:dark:hover:border-active"
                     aria-label="Выбрать реакцию">
                     <img loading="lazy" class="static left-[-1px] w-10 h-10 sm:absolute" src="./img/smile-1.webp" alt="">
                     <span class="font-segoe text-reactBtn font-normal dark:text-white">1000</span>
                 </button>
                 <button
-                    class="bg-activeOpacity border-x-active border-x max-w-[20%] w-full py-5 sm:py-0 relative sm:h-10 sm:max-w-[118px] w-full flex items-center sm:pr-[23px] flex-col gap-2.5 sm:gap-0 sm:justify-end sm:flex-row sm:rounded-r-[5px] sm:rounded-l-[20px] sm:bg-light-gray sm:border-gray sm:border dark:bg-activeOpacity dark:border-active sm:dark:bg-dark-bg sm:dark:border-dark-bg-2 transition-colors hover:border-active"
+                    class="bg-activeOpacity border-x-active border-x max-w-[20%] w-full py-5 sm:py-0 relative sm:h-10 sm:max-w-[118px] w-full flex items-center sm:pr-[23px] flex-col gap-2.5 sm:gap-0 sm:justify-end sm:flex-row sm:rounded-r-[5px] sm:rounded-l-[20px] sm:bg-light-gray sm:border-gray sm:border dark:bg-activeOpacity dark:border-active sm:dark:bg-dark-bg sm:dark:border-dark-bg-2 transition-colors hover:border-active sm:dark:hover:border-active"
                     aria-label="Выбрать реакцию">
                     <img loading="lazy" class="static left-[-1px] w-10 h-10 sm:absolute" src="./img/smile-2.webp" alt="">
                     <span class="font-segoe text-reactBtn font-normal dark:text-white">1000</span>
@@ -231,13 +233,13 @@
                     <span class="font-segoe text-reactBtn font-normal dark:text-white">1000</span>
                 </button>
                 <button
-                    class="max-w-[20%] border-x border-transparent w-full py-5 sm:py-0 relative sm:h-10 sm:max-w-[118px] w-full flex items-center sm:pr-[23px] flex-col gap-2.5 sm:gap-0 sm:justify-end sm:flex-row sm:rounded-r-[5px] sm:rounded-l-[20px] sm:bg-light-gray sm:border-gray sm:border dark:bg-dark-bg dark:border-transparent sm:dark:border-dark-bg-2 transition-colors hover:border-active"
+                    class="max-w-[20%] border-x border-transparent w-full py-5 sm:py-0 relative sm:h-10 sm:max-w-[118px] w-full flex items-center sm:pr-[23px] flex-col gap-2.5 sm:gap-0 sm:justify-end sm:flex-row sm:rounded-r-[5px] sm:rounded-l-[20px] sm:bg-light-gray sm:border-gray sm:border dark:bg-dark-bg dark:border-transparent sm:dark:border-dark-bg-2 transition-colors hover:border-active sm:dark:hover:border-active"
                     aria-label="Выбрать реакцию">
                     <img loading="lazy" class="static left-[-1px] w-10 h-10 sm:absolute" src="./img/smile-4.webp" alt="">
                     <span class="font-segoe text-reactBtn font-normal dark:text-white">1000</span>
                 </button>
                 <button
-                    class="max-w-[20%] border-x border-transparent w-full py-5 sm:py-0 relative sm:h-10 sm:max-w-[118px] w-full flex items-center sm:pr-[23px] flex-col gap-2.5 sm:gap-0 sm:justify-end sm:flex-row sm:rounded-r-[5px] sm:rounded-l-[20px] sm:bg-light-gray sm:border-gray sm:border dark:bg-dark-bg dark:border-transparent sm:dark:border-dark-bg-2 transition-colors hover:border-active"
+                    class="max-w-[20%] border-x border-transparent w-full py-5 sm:py-0 relative sm:h-10 sm:max-w-[118px] w-full flex items-center sm:pr-[23px] flex-col gap-2.5 sm:gap-0 sm:justify-end sm:flex-row sm:rounded-r-[5px] sm:rounded-l-[20px] sm:bg-light-gray sm:border-gray sm:border dark:bg-dark-bg dark:border-transparent sm:dark:border-dark-bg-2 transition-colors hover:border-active sm:dark:hover:border-active"
                     aria-label="Выбрать реакцию">
                     <img loading="lazy" class="static left-[-1px] w-10 h-10 sm:absolute" src="./img/smile-5.webp" alt="">
                     <span class="font-segoe text-reactBtn font-normal dark:text-white">1000</span>
@@ -247,7 +249,7 @@
         <section class="max-w-[1100px] bg-light-gray-3 pb-5 mx-auto dark:bg-dark-bg-3 py-2.5    ">
             <div class="px-[20px] md:mx-auto py-2.5">
                 <h2 class="font-segoe text-mx text-black-2 mb-5 font-semibold dark:text-white">1 сезон</h2>
-                <div class="grid gap-2.5 grid-cols-[repeat(2,_1fr)] md:grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
+                <div class="grid gap-2.5 grid-cols-[repeat(2,_1fr)] md:grid-cols-[repeat(auto-fill,minmax(200px,1fr))] sm:grid-cols-[repeat(3,_1fr)]">
                     <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[96px] py-2.5 px-5 flex md:min-h-[114px] bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
@@ -260,69 +262,69 @@
                     <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[96px] py-2.5 px-5 flex md:min-h-[114px] bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
                 </div>
             </div>
             <div class="px-[20px] md:mx-auto py-2.5">
                 <h2 class="font-segoe text-mx text-black-2 mb-5 font-semibold dark:text-white">2 сезон</h2>
-                <div class="grid gap-2.5 grid-cols-[repeat(2,_1fr)] md:grid-cols-[repeat(auto-fill,minmax(200px,1fr))]">
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[96px] py-2.5 px-5 flex md:min-h[114px] bg-cover">
+                <div class="grid gap-2.5 grid-cols-[repeat(2,_1fr)] md:grid-cols-[repeat(auto-fill,minmax(200px,1fr))] sm:grid-cols-[repeat(3,_1fr)]">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[96px] py-2.5 px-5 flex md:min-h-[114px] bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[96px] py-2.5 px-5 flex md:min-h[114px] bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[96px] py-2.5 px-5 flex md:min-h-[114px] bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[96px] py-2.5 px-5 flex md:min-h[114px] bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[96px] py-2.5 px-5 flex md:min-h-[114px] bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[96px] py-2.5 px-5 flex md:min-h[114px] bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[96px] py-2.5 px-5 flex md:min-h-[114px] bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
-                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden md:flex bg-cover">
+                    <div class="rounded-[5px] bg-[url('../img/season.webp')] bg-no-repeat min-h-[114px] py-2.5 px-5 flex hidden sm:flex bg-cover">
                         <span class="font-segoe text-sm text-white font-semibold mt-auto">1 серия</span>
                     </div>
                 </div>
@@ -330,7 +332,7 @@
         </section>
         <section class="max-w-[1100px] bg-white mx-auto dark:bg-dark-bg py-5 px-5 shadow-[0_10px_20px_0_rgba(0,0,0,0.05)]">
             <div class="flex justify-between items-start gap-5 flex-col md:flex-row">
-                <div class="flex flex-col gap-5 max-w-[640px] w-full">
+                <div class="flex flex-col gap-5 w-full md:max-w-[640px]">
                     <h2 class="font-segoe text-mx font-semibold text-black-2 dark:text-white">Комментарии</h2>
                     <div class="flex gap-2.5 items-start">
                         <img loading="lazy" class="rounded-[5px] w-10 h-10" src="./img/avatar.webp" alt="">
@@ -463,7 +465,7 @@
                     <button class="font-segoe text-sm font-semibold text-white py-2.5 w-full bg-active rounded-[5px] transition-colors hover:bg-active-hover"
                     aria-label="Загрузить остальные комментарии">Загрузить еще</button>
                 </div>
-                <div class="flex flex-col gap-5 max-w-[400px] w-full">
+                <div class="flex flex-col gap-5 w-full md:max-w-[400px]">
                     <h2 class="font-segoe text-mx font-semibold text-black-2 dark:text-white">Оставь свой отзыв</h2>
                     <form class="" action="#">
                         <label for="name" class="flex mb-2.5">
@@ -472,7 +474,7 @@
                                     <path class="dark:stroke-white" d="M9.84375 3.75C9.84375 4.3716 9.59682 4.96774 9.15728 5.40728C8.71774 5.84682 8.1216 6.09375 7.5 6.09375C6.8784 6.09375 6.28226 5.84682 5.84272 5.40728C5.40318 4.96774 5.15625 4.3716 5.15625 3.75C5.15625 3.1284 5.40318 2.53226 5.84272 2.09272C6.28226 1.65318 6.8784 1.40625 7.5 1.40625C8.1216 1.40625 8.71774 1.65318 9.15728 2.09272C9.59682 2.53226 9.84375 3.1284 9.84375 3.75ZM2.81313 12.5738C2.83321 11.344 3.33584 10.1714 4.21261 9.30878C5.08939 8.44621 6.27006 7.96279 7.5 7.96279C8.72995 7.96279 9.91062 8.44621 10.7874 9.30878C11.6642 10.1714 12.1668 11.344 12.1869 12.5738C10.7165 13.248 9.11759 13.5959 7.5 13.5938C5.8275 13.5938 4.24 13.2288 2.81313 12.5738Z" stroke="#292524" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>  
                             </span>
-                            <input id="name" class="rounded-r-[5px] border-y border-r border-gray bg-light-gray pl-5 w-full placeholder:font-segoe placeholder:text-black-2 placeholder:text-sm placeholder:font-normal dark:bg-black dark:border-dark-bg-2 dark:placeholder:text-light-gray-2 focus:outline-none" type="text" placeholder="Имя">
+                            <input id="name" class="rounded-r-[5px] border-y border-r border-gray bg-light-gray pl-5 w-full placeholder:font-segoe placeholder:text-black-2 placeholder:text-sm placeholder:font-normal dark:bg-black dark:border-dark-bg-2 dark:placeholder:text-light-gray-2 focus:outline-none dark:text-white" type="text" placeholder="Имя">
                         </label>
                         <label for="textarea" class="flex min-h-[120px] mb-5">
                             <span class="bg-white rounded-l-[5px] border border-gray flex items-baseline pt-[12px] justify-center h-[120px] max-w-55px w-full dark:bg-dark-bg-2 dark:border-dark-bg-2">
@@ -481,7 +483,7 @@
                                     </svg>
                                      
                             </span>
-                            <textarea id="textarea" class="resize-none rounded-r-[5px] border-y border-r border-gray bg-light-gray pl-5 pt-2.5 w-full placeholder:font-segoe placeholder:text-black-2 placeholder:text-sm placeholder:font-normal dark:bg-black dark:border-dark-bg-2 dark:placeholder:text-light-gray-2 focus:outline-none" placeholder="Текст комментария"></textarea>
+                            <textarea id="textarea" class="resize-none rounded-r-[5px] border-y border-r border-gray bg-light-gray pl-5 pt-2.5 w-full placeholder:font-segoe placeholder:text-black-2 placeholder:text-sm placeholder:font-normal dark:bg-black dark:border-dark-bg-2 dark:placeholder:text-light-gray-2 focus:outline-none dark:text-white" placeholder="Текст комментария"></textarea>
                         </label>
                         <button class="font-segoe text-sm font-semibold text-white py-2.5 w-full bg-active rounded-[5px] transition-colors hover:bg-active-hover" type="submit"
                         aria-label="Отправить сообщение">Отправить</button>
@@ -513,7 +515,7 @@
         <p class="font-segoe text-s font-normal text-text-color dark:text-footer">Все материалы расположенные на сайте не являются публичной офертой или призывом к действию. Все товарные знаки принадлежат их законным владельцам. Данный ресурс носит исключительно информационно-ознакомительный характер, и не является официальным продуктом компании. </p>
         <a aria-label="Связать с нами" class="font-segoe text-s font-semibold text-active" href="#">Обратная связь с проектом</a>
     </footer>
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js?ver=2"></script>
 
 </body>
 
