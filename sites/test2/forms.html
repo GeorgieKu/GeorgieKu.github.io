@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="description">
+    <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/air-datepicker.css">
+    <link rel="stylesheet" href="./style/variables.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <title>Сервис по поиску военнослужащих</title>
+</head>
+
+<body>
+    <header class="header bread-crumbs-header">
+        <div class="container">
+            <div class="header__flex">
+                <a href="#" class="header__logo" aria-label="На главную">
+                    СВОих не теряем
+                </a>
+                <div class="header__block">
+                    <a href="https://t.me/SVOikh_ne_teryaem" aria-label="Телеграм канал">
+                        <img src="./img/svg/tg.svg" alt="">
+                        <span>Телеграм канал</span>
+                    </a>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="./payment.html" aria-label="Оплата">
+                                    Оплата
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="./contacts.html" aria-label="Контакты">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                        <button class="header__btn-576 button" aria-label="Подать заявление">Подать заявление</button>
+                    </nav>
+                    <button class="header__btn button" aria-label="Подать заявление">Подать заявление</button>
+                    <button class="header__burger-btn" id="burger" aria-label="меню">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="bread-crumbs text-16-sb">
+        <div class="container">
+            <div class="overflow">
+                <div class="bread-crumbs__flex">
+                    <a href="./index.html">Главная</a>
+                    <span>
+                        <img src="./img/svg/bread.svg" alt="">
+                    </span>
+                    <a href="./statement-form.html">Подать заявление</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <section class="forms p64">
+            <div class="container">
+                <h1 class="visually-hidden">123</h1>
+                <h2>Заявление о розыске военнослужащего</h2>
+                <div class="forms__grid-1240">
+                    <div class="forms__grid">
+                        <div class="forms__grid-flex">
+                            <div class="card forms__card-1">
+                                <h3>Информация о заявителе</h3>
+                                <form action="https://xn--b1agaam1adgwdq7azk.xn--p1ai/submit" method="POST" enctype="multipart/form-data" class="forms__form">
+                                    <input type="hidden" name="_token" value="rA6u8tkWhrr3yMJXF91DM5IvxEfsfw4gaA5JDxO5" autocomplete="off"> 
+                                    <div class="forms__flex">
+                                        <label for="applicantName">
+                                            <span class="text-16">ФИО</span>
+                                            <input id="applicantName" name="applicantName" type="text" placeholder="Иванова Екатерина Сергеевна" required="">
+                                        </label>
+                                        <label class="date__label" for="applicantDate">
+                                            <span class="text-16">Дата рождения</span>
+                                            <input class="date__input" type="text" id="applicantDate" name="applicantDate" placeholder="2024-10-01" required="">
+                                        </label>
+                                    </div>
+                                    <div class="mb-3 position-relative">
+                                        <label for="applicantAddress" class="form-label">
+                                            <span class="text-16">Адрес</span>
+                                            <input id="applicantAddress" name="applicantAddress" type="text" class="form-control" placeholder="Регион, населенный пункт, улица, номер дома, номер квартиры (если есть)" value="" required="">
+                                        </label>
+                                        <!-- Контейнер для отображения подсказок -->
+                                        <div id="address-suggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></div>
+                                    </div>
+
+                                    <input id="fzo_address_id" name="fzo_address_id" type="hidden">
+
+                                    <div class="forms__flex-2">
+                                        <label for="applicantPhone">
+                                            <span class="text-16">Номер телефона</span>
+                                            <input id="applicantPhone" name="applicantPhone" type="text" placeholder="+7 (***) ***-**-**" required="">
+                                        </label>
+                                        <label for="applicantMail">
+                                            <span class="text-16">Электронная почта</span>
+                                            <input id="applicantMail" name="applicantMail" type="text" placeholder="ekaterina.ivanova@example.com" required="">
+                                        </label>
+                                    </div>
+                            </form></div>
+                            <div class="card forms__card-3">
+                                <h3>Дополнительная информация</h3>
+                                <form action="#" class="forms__form">
+                                    <!-- Блок с множественным выбором -->
+                                    <div class="forms__block multiple-selection">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" name="tattoos" value="tattoo"
+                                                class="hidden-checkbox">
+                                            <span class="checkbox "></span>
+                                            <span class="custom-checkbox-display text-16">Татуировки</span>
+                                        </label>
+                                        <input type="text" placeholder="Изображение льва на груди">
+                                    </div>
+                                    <div class="forms__block multiple-selection">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" name="scars" value="scar" class="hidden-checkbox">
+                                            <span class="checkbox "></span>
+                                            <span class="custom-checkbox-display text-16">Шрамы</span>
+                                        </label>
+                                        <input type="text" placeholder="Шрам в виде овала на левом боку">
+                                    </div>
+                                    <div class="forms__block multiple-selection">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" name="teeth" value="teeth" class="hidden-checkbox">
+                                            <span class="checkbox "></span>
+                                            <span class="custom-checkbox-display text-16">Особую форму зубов</span>
+                                        </label>
+                                        <input type="text" placeholder="Два передних зуба длиннее остальных">
+                                    </div>
+                                    <div class="forms__block multiple-selection">
+                                        <label class="custom-checkbox">
+                                            <input type="checkbox" name="other" value="other" class="hidden-checkbox">
+                                            <span class="checkbox "></span>
+                                            <span class="custom-checkbox-display text-16">Другие отличительные
+                                                черты</span>
+                                        </label>
+                                        <input type="text" placeholder="Сломано левое ухо, глаза разного цвета">
+                                    </div>
+                                    <label for="comment">
+                                        <span class="text-16">Комментарий</span>
+                                        <input id="comment" name="comment" type="text"
+                                            placeholder="Дополнительная информация, если нет подходящего пункта">
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="forms__grid-flex">
+
+                            <div class="card forms__card-2">
+                                <h3>Информация о военнослужащем</h3>
+                                <form action="#" class="forms__form">
+                                    <div class="forms__flex">
+                                        <label for="militaryName">
+                                            <span class="text-16">ФИО</span>
+                                            <input id="militaryName" name="militaryName" type="text"
+                                                placeholder="Иванов Иван Иванович">
+                                        </label>
+                                        <label class="date__label" for="militaryDate">
+                                            <span class="text-16">Дата рождения</span>
+                                            <input class="date__input" type="text" id="militaryDate" name="militaryDate"
+                                                placeholder="ДД/ММ/ГГГГ">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <path
+                                                        d="M31.6667 6.66668H30V3.33334H26.6667V6.66668H13.3333V3.33334H10V6.66668H8.33333C6.48333 6.66668 5.01667 8.16668 5.01667 10L5 33.3333C5 35.1667 6.48333 36.6667 8.33333 36.6667H31.6667C33.5 36.6667 35 35.1667 35 33.3333V10C35 8.16668 33.5 6.66668 31.6667 6.66668ZM31.6667 33.3333H8.33333V16.6667H31.6667V33.3333ZM15 23.3333H11.6667V20H15V23.3333ZM21.6667 23.3333H18.3333V20H21.6667V23.3333ZM28.3333 23.3333H25V20H28.3333V23.3333ZM15 30H11.6667V26.6667H15V30ZM21.6667 30H18.3333V26.6667H21.6667V30ZM28.3333 30H25V26.6667H28.3333V30Z"
+                                                        fill="#010101" fill-opacity="0.4" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath>
+                                                        <rect width="40" height="40" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+
+                                        </label>
+                                    </div>
+                                    <div class="forms__flex-2">
+                                        <label for="militaryRank">
+                                            <span class="text-16">Воинское звание</span>
+                                            <input id="militaryRank" name="militaryRank" type="text"
+                                                placeholder="Сержант">
+                                        </label>
+                                        <label for="militaryJob">
+                                            <span class="text-16">Должность военнослужащего</span>
+                                            <input id="militaryJob" name="militaryJob" type="text"
+                                                placeholder="Водитель">
+                                        </label>
+                                    </div>
+                                    <div class="forms__flex-2">
+                                        <label for="militaryNumber">
+                                            <span class="text-16">Личный номер военнослужащего</span>
+                                            <input id="militaryNumber" name="militaryNumber" type="text"
+                                                placeholder="АА - 000 000">
+                                        </label>
+                                        <label class="date__label" for="militaryBegin">
+                                            <span class="text-16">Дата призыва / начала контракта</span>
+                                            <input class="date__input" type="text" id="militaryBegin"
+                                                name="militaryBegin" placeholder="ДД/ММ/ГГГГ">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <path
+                                                        d="M31.6667 6.66668H30V3.33334H26.6667V6.66668H13.3333V3.33334H10V6.66668H8.33333C6.48333 6.66668 5.01667 8.16668 5.01667 10L5 33.3333C5 35.1667 6.48333 36.6667 8.33333 36.6667H31.6667C33.5 36.6667 35 35.1667 35 33.3333V10C35 8.16668 33.5 6.66668 31.6667 6.66668ZM31.6667 33.3333H8.33333V16.6667H31.6667V33.3333ZM15 23.3333H11.6667V20H15V23.3333ZM21.6667 23.3333H18.3333V20H21.6667V23.3333ZM28.3333 23.3333H25V20H28.3333V23.3333ZM15 30H11.6667V26.6667H15V30ZM21.6667 30H18.3333V26.6667H21.6667V30ZM28.3333 30H25V26.6667H28.3333V30Z"
+                                                        fill="#010101" fill-opacity="0.4" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath>
+                                                        <rect width="40" height="40" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+
+                                        </label>
+                                    </div>
+                                    <div class="forms__flex-2">
+                                        <label for="hiddenSelect">
+                                            <span class="text-16">Кем вам приходится?</span>
+                                            <select id="hiddenSelect" class="hidden-select" name="options">
+                                                <option value="Cын">Cын</option>
+                                                <option value="Муж">Муж</option>
+                                                <option value="Отец">Отец</option>
+                                            </select>
+
+                                            <!-- Кастомный селект -->
+                                            <div class="custom-select">
+                                                <div class="custom-select__trigger">Выберите из списка</div>
+                                                <div class="custom-options">
+                                                    <span class="custom-option" data-value="Cын">Cын</span>
+                                                    <span class="custom-option" data-value="Муж">Муж</span>
+                                                    <span class="custom-option" data-value="Отец">Отец</span>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <div class="forms__checkboxes">
+                                            <span class="text-16">Формат воинской службы</span>
+                                            <div class="custom-checkbox-group">
+                                                <label class="custom-checkbox single-selection">
+                                                    <input type="checkbox" name="option" value="option1"
+                                                        class="hidden-checkbox">
+                                                    <span class="checkbox"></span>
+                                                    <span class="custom-checkbox-display">Срочная служба /
+                                                        мобилизация</span>
+                                                </label>
+
+                                                <label class="custom-checkbox single-selection">
+                                                    <input type="checkbox" name="option" value="option2"
+                                                        class="hidden-checkbox">
+                                                    <span class="checkbox"></span>
+                                                    <span class="custom-checkbox-display">Служба по контракту</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <label for="militaryBase">
+                                        <span class="text-16">Пункт отбора на службу по конракту</span>
+                                        <input id="militaryBase" name="militaryBase" type="text"
+                                            placeholder="Пункт отбора на военную службу по контракту г. Ростов-на-Дону, ул. Оганова, 22">
+                                    </label>
+
+                                </form>
+                            </div>
+
+                            <div class="card forms__card-4">
+                                <h3>Информация о прохождении службы</h3>
+                                <form action="#" class="forms__form">
+                                    <div class="forms__flex">
+                                        <label for="militaryBaseNumber" class="label-240">
+                                            <span class="text-16">Номер войсковой части</span>
+                                            <input id="militaryBaseNumber" name="militaryBaseNumber" type="text"
+                                                placeholder="000 000">
+                                        </label>
+                                        <label for="militaryBaseName">
+                                            <span class="text-16">Пункт постоянной дислокации</span>
+                                            <input id="militaryBaseName" name="militaryBaseName" type="text"
+                                                placeholder="г. Севастополь, Войсковая часть 000 000">
+                                        </label>
+                                    </div>
+                                    <div class="forms__flex">
+                                        <div class="forms__checkboxes">
+                                            <span class="text-16">Военнослужащий был направлен в зону СВО?</span>
+                                            <div class="custom-checkbox-group">
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox" name="option" value="option1"
+                                                        class="hidden-checkbox" checked>
+                                                    <span class="checkbox active"></span>
+                                                    <span class="custom-checkbox-display">Да</span>
+                                                </label>
+
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox" name="option" value="option2"
+                                                        class="hidden-checkbox">
+                                                    <span class="checkbox"></span>
+                                                    <span class="custom-checkbox-display">Нет</span>
+                                                </label>
+                                                <label class="custom-checkbox">
+                                                    <input type="checkbox" name="option" value="option2"
+                                                        class="hidden-checkbox">
+                                                    <span class="checkbox"></span>
+                                                    <span class="custom-checkbox-display">Не знаю</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <label class="date__label" for="militaryDeparture">
+                                            <span class="text-16">Дата отправления</span>
+                                            <input class="date__input" type="text" id="militaryDeparture"
+                                                name="militaryDeparture" placeholder="ДД/ММ/ГГГГ">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <g>
+                                                    <path
+                                                        d="M31.6667 6.66668H30V3.33334H26.6667V6.66668H13.3333V3.33334H10V6.66668H8.33333C6.48333 6.66668 5.01667 8.16668 5.01667 10L5 33.3333C5 35.1667 6.48333 36.6667 8.33333 36.6667H31.6667C33.5 36.6667 35 35.1667 35 33.3333V10C35 8.16668 33.5 6.66668 31.6667 6.66668ZM31.6667 33.3333H8.33333V16.6667H31.6667V33.3333ZM15 23.3333H11.6667V20H15V23.3333ZM21.6667 23.3333H18.3333V20H21.6667V23.3333ZM28.3333 23.3333H25V20H28.3333V23.3333ZM15 30H11.6667V26.6667H15V30ZM21.6667 30H18.3333V26.6667H21.6667V30ZM28.3333 30H25V26.6667H28.3333V30Z"
+                                                        fill="#010101" fill-opacity="0.4" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath>
+                                                        <rect width="40" height="40" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+
+                                        </label>
+                                    </div>
+
+                                    <label class="date__label" for="militaryLostContact">
+                                        <span class="text-16">Дата потери контакта</span>
+                                        <input class="date__input" type="text" id="militaryLostContact"
+                                            name="militaryLostContact" placeholder="ДД/ММ/ГГГГ">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <path
+                                                    d="M31.6667 6.66668H30V3.33334H26.6667V6.66668H13.3333V3.33334H10V6.66668H8.33333C6.48333 6.66668 5.01667 8.16668 5.01667 10L5 33.3333C5 35.1667 6.48333 36.6667 8.33333 36.6667H31.6667C33.5 36.6667 35 35.1667 35 33.3333V10C35 8.16668 33.5 6.66668 31.6667 6.66668ZM31.6667 33.3333H8.33333V16.6667H31.6667V33.3333ZM15 23.3333H11.6667V20H15V23.3333ZM21.6667 23.3333H18.3333V20H21.6667V23.3333ZM28.3333 23.3333H25V20H28.3333V23.3333ZM15 30H11.6667V26.6667H15V30ZM21.6667 30H18.3333V26.6667H21.6667V30ZM28.3333 30H25V26.6667H28.3333V30Z"
+                                                    fill="#010101" fill-opacity="0.4" />
+                                            </g>
+                                            <defs>
+                                                <clipPath>
+                                                    <rect width="40" height="40" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+                                    </label>
+
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card forms__card-5">
+                        <h3>Есть ли приложение к заявлению?</h3>
+                        <div class="forms__checkboxes">
+                            <span class="text-16">Сюда можно сообщить дополнительную информацию, прикрепить изображения
+                                и документы</span>
+                            <div class="custom-checkbox-group">
+                                <label class="custom-checkbox yes-answer">
+                                    <input type="checkbox" name="option" value="option1" class="hidden-checkbox">
+                                    <span class="checkbox"></span>
+                                    <span class="custom-checkbox-display">Да</span>
+                                </label>
+
+                                <label class="custom-checkbox no-answer">
+                                    <input type="checkbox" name="option" value="option2" class="hidden-checkbox"
+                                        checked>
+                                    <span class="checkbox active"></span>
+                                    <span class="custom-checkbox-display">Нет</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="grid-open">
+                            <div class="text-wrapper">
+                                <div class="yes__flex">
+                                    <div class="yes__block">
+                                        <span class="text-24-b">Дополнительная информация</span>
+                                        <textarea name="yes-textarea"
+                                            placeholder="О чем вы хотите сообщить дополнительно?"></textarea>
+                                    </div>
+                                    <div class="yes__block">
+                                        <span class="text-24-b">Загрузите файлы: jpg, png, doc, pdf</span>
+                                        <div class="overflow">
+                                            <div class="yes__upload">
+                                                <div class="yes__upload-btns">
+                                                    <label for="file-upload" class="custom-file-upload">
+                                                        <img src="./img/svg/IconPlus.svg" alt="">
+                                                    </label>
+                                                    <input id="file-upload" type="file" multiple>
+                                                </div>
+
+                                                <div id="file-list-container" class="file-list">
+                                                    <!-- Здесь будут отображаться загруженные файлы -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="forms__flexbox">
+                        <div class="card forms__card-6">
+                            <h3>Отобрать биологический образец?</h3>
+                            <div class="forms__checkboxes">
+                                <span class="text-16">Это нужно для проведения генетической экспертизы с целью внесения
+                                    генетического профиля
+                                    в базу данных и проверки с генетическими профилями неопознанных тел
+                                    военнослужащих</span>
+                                <div class="custom-checkbox-group">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="option" value="option1" class="hidden-checkbox"
+                                            checked>
+                                        <span class="checkbox active"></span>
+                                        <span class="custom-checkbox-display">Да</span>
+                                    </label>
+
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" name="option" value="option2" class="hidden-checkbox">
+                                        <span class="checkbox"></span>
+                                        <span class="custom-checkbox-display">Нет</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <h3>У кого отобрать биологический образец?</h3>
+                            <div class="forms__flex-2">
+                                <label for="militaryDonor">
+                                    <span class="text-16">ФИО донора биологического образца</span>
+                                    <input id="militaryDonor" name="militaryDonor" type="text"
+                                        placeholder="Иванов Алексей Иванович">
+                                </label>
+                                <label for="hiddenSelect2">
+                                    <span class="text-16">Кем вам приходится?</span>
+                                    <select id="hiddenSelect2" class="hidden-select" name="options">
+                                        <option value="Cын">Cын</option>
+                                        <option value="Муж">Муж</option>
+                                        <option value="Отец">Отец</option>
+                                    </select>
+
+                                    <!-- Кастомный селект -->
+                                    <div class="custom-select2">
+                                        <div class="custom-select__trigger2">Выберите из списка</div>
+                                        <div class="custom-options2">
+                                            <span class="custom-option2" data-value="Cын">Cын</span>
+                                            <span class="custom-option2" data-value="Муж">Муж</span>
+                                            <span class="custom-option2" data-value="Отец">Отец</span>
+                                        </div>
+                                    </div>
+                                </label>
+                                <label class="date__label" for="militaryDonorDate">
+                                    <span class="text-16">Дата рождения</span>
+                                    <input class="date__input" type="text" id="militaryDonorDate"
+                                        name="militaryDonorDate" placeholder="ДД/ММ/ГГГГ">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <path
+                                                d="M31.6667 6.66668H30V3.33334H26.6667V6.66668H13.3333V3.33334H10V6.66668H8.33333C6.48333 6.66668 5.01667 8.16668 5.01667 10L5 33.3333C5 35.1667 6.48333 36.6667 8.33333 36.6667H31.6667C33.5 36.6667 35 35.1667 35 33.3333V10C35 8.16668 33.5 6.66668 31.6667 6.66668ZM31.6667 33.3333H8.33333V16.6667H31.6667V33.3333ZM15 23.3333H11.6667V20H15V23.3333ZM21.6667 23.3333H18.3333V20H21.6667V23.3333ZM28.3333 23.3333H25V20H28.3333V23.3333ZM15 30H11.6667V26.6667H15V30ZM21.6667 30H18.3333V26.6667H21.6667V30ZM28.3333 30H25V26.6667H28.3333V30Z"
+                                                fill="#010101" fill-opacity="0.4">
+                                        </g>
+                                        <defs>
+                                            <clipPath>
+                                                <rect width="40" height="40" fill="white">
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+
+                                </label>
+                            </div>
+                        </div>
+                        <div class="card forms__card-7">
+                            <div class="card-7__flex">
+                                <img src="./img/svg/list.svg" alt="">
+                                <span class="text-18">Проверьте правильность заполненных данных
+                                    и нажмите кнопку “Сформировать заявление”</span>
+                            </div>
+                            <button class="button">Сформировать заявление</button>
+                            <div class="custom-checkbox-group">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" name="option" value="option2" class="hidden-checkbox">
+                                    <span class="checkbox"></span>
+                                    <span class="custom-checkbox-display text-16">Даю согласие на <a href="#">обработку
+                                            персональных данных</a></span>
+                                </label>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    <div class="card forms__card-8">
+                        <h3>Куда направим заявление?</h3>
+                        <div class="forms__checkboxes">
+                            <div class="custom-checkbox-group">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" name="option" value="option1" class="hidden-checkbox">
+                                    <span class="checkbox"></span>
+                                    <span class="custom-checkbox-display">Председателю следственного коммитета РФ</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" name="option" value="option2" class="hidden-checkbox">
+                                    <span class="checkbox"></span>
+                                    <span class="custom-checkbox-display">Главное военное следственное управление СК России</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" name="option" value="option3" class="hidden-checkbox">
+                                    <span class="checkbox"></span>
+                                    <span class="custom-checkbox-display">Генеральному прокурору Российской Федерации</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" name="option" value="option4" class="hidden-checkbox">
+                                    <span class="checkbox"></span>
+                                    <span class="custom-checkbox-display">Главному военному прокурору Российской Федерации</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" name="option" value="option5" class="hidden-checkbox">
+                                    <span class="checkbox"></span>
+                                    <span class="custom-checkbox-display">Центр приема обработки и отправки погибших Минобороны России</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" name="option" value="option6" class="hidden-checkbox">
+                                    <span class="checkbox"></span>
+                                    <span class="custom-checkbox-display">Фонд поддержки участников СВО «Защитники Отечества»</span>
+                                </label>
+                                <label class="custom-checkbox all">
+                                    <input type="checkbox" name="option" value="option7" class="hidden-checkbox"
+                                        checked>
+                                    <span class="checkbox active"></span>
+                                    <span class="custom-checkbox-display">Выбрать всё</span>
+                                </label>
+                                <span class="text-16">Цена формирования документа: <span id="price">799</span> рублей</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer p64">
+        <div class="container">
+            <div class="footer__flex">
+                <a class="text-16-b" href="https://t.me/SVOikh_ne_teryaem">
+                    Подписывайтесь
+                    <img src="./img/svg/tg-bg-black.svg" alt="">
+                </a>
+                <nav>
+                    <ul>
+                        <li><span class="text-16-b">Сайт</span></li>
+                        <li class="text-14"><a href="#" aria-label="Оплата">Оплата</a></li>
+                        <li class="text-14"><a href="#" aria-label="Контакты">Контакты</a></li>
+                    </ul>
+                    <ul>
+                        <li><span class="text-16-b">Документы</span></li>
+                        <li class="text-14"><a href="#" aria-label="Политика">Политика</a></li>
+                        <li class="text-14"><a href="#" aria-label="Соглашение">Соглашение</a></li>
+                    </ul>
+                    <ul>
+                        <li><span class="text-16-b">О сервисе</span></li>
+                        <li class="text-14"><a href="#" aria-label="О нас">О нас</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="footer__line"></div>
+        <div class="container">
+            <span class="label">Charger ® — 2024</span>
+        </div>
+    </footer>
+     <!-- Добавляем Axios -->
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script>
+     document.addEventListener('DOMContentLoaded', function () {
+         const addressInput = document.getElementById('applicantAddress');
+         const addressIdInput = document.getElementById('fzo_address_id');
+         const suggestionsContainer = document.getElementById('address-suggestions');
+ 
+         // Таймер для дебаунсинга
+         let debounceTimer;
+ 
+         // Функция для обработки запроса с дебаунсом
+         addressInput.addEventListener('input', function () {
+             // Очищаем предыдущий таймер, если был вызов
+             clearTimeout(debounceTimer);
+ 
+             // Устанавливаем новый таймер с задержкой в 3 секунды
+             debounceTimer = setTimeout(() => {
+                 const query = addressInput.value;
+ 
+                 // Если поле ввода пустое, очищаем контейнер подсказок и сбрасываем ID адреса
+                 if (!query.trim()) {
+                     suggestionsContainer.innerHTML = '';
+                     addressIdInput.value = '';
+                     return;
+                 }
+ 
+                 // Выполняем GET-запрос к API
+                 axios.get('/api/suggest-address', { params: { query: query } })
+                     .then(response => {
+                         const suggestions = response.data;
+                         displaySuggestions(suggestions);
+                     })
+                     .catch(error => {
+                         console.error('Ошибка при получении подсказок:', error);
+                     });
+             }, 1000); // Устанавливаем задержку в 3 секунды
+         });
+ 
+         // Функция для отображения подсказок
+         function displaySuggestions(suggestions) {
+             suggestionsContainer.innerHTML = '';
+ 
+             // Проверяем, есть ли подсказки и не пустой ли ответ
+             if (suggestions && suggestions.unrestricted_value) {
+                 // Создаем элемент для каждой подсказки
+                 const suggestionItem = document.createElement('a');
+                 suggestionItem.classList.add('list-group-item', 'list-group-item-action');
+                 suggestionItem.textContent = suggestions.unrestricted_value;
+ 
+                 // При клике на подсказку заполняем поле ввода и скрытое поле ID адреса
+                 suggestionItem.addEventListener('click', function () {
+                     addressInput.value = suggestions.unrestricted_value;
+                     addressIdInput.value = suggestions.address_id; // Заполняем скрытое поле ID
+                     suggestionsContainer.innerHTML = ''; // Очищаем подсказки
+                 });
+ 
+                 suggestionsContainer.appendChild(suggestionItem);
+             }
+         }
+     });
+ </script>
+    <script src="./js/air-datepicker.js"></script>
+    <script src="./js/forms.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
