@@ -90,7 +90,7 @@ function init() {
     // Определение центральных точек для каждой зоны
     var zambiaCenter = [-13.0, 28.0]; 
     var chinaCenter = [35.0, 104.0];  
-    var russiaCenter = [60.0, 90.0];  
+    var russiaCenter = [60.0, 60.0];  
     var europeCenter = [48.0, 10.0];  
     var turkeyCenter = [39.0, 35.0];  
     var argentinaCenter = [-35.0, -65.0];

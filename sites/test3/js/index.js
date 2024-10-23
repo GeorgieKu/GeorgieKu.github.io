@@ -7,7 +7,7 @@ if (swiperBlockSwiper) {
     loop: true,
     slidesPerView: 1,
     autoplay: {
-        delay: 4500,
+        delay: 6000,
         disableOnInteraction: false,
       },
   

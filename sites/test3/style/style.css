@@ -120,18 +120,24 @@ button {
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1640px;
   padding: 0 60px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .wrapper {
-  background-image: url(../img/hero.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
   min-height: 886px;
   position: relative;
+}
+.wrapper video {
+  min-height: 886px;
+  max-height: 886px;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .wrapper::after {
@@ -323,6 +329,7 @@ button {
   z-index: 1;
 }
 .hero h1 strong {
+  font-style: normal;
   font-weight: 700;
 }
 .hero::after {
@@ -331,13 +338,14 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   display: block;
-  width: 256px;
-  height: 512px;
+  width: 634px;
+  height: 666px;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
+  top: 20%;
+  left: -316px;
   z-index: 0;
+  animation: rotate 5s linear infinite;
+  transform-origin: 50% 50%;
 }
 .hero__block {
   display: flex;
@@ -373,6 +381,17 @@ button {
   color: #fff;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.3);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
 .overflow {
   overflow: auto;
 }
@@ -390,7 +409,7 @@ button {
   width: -moz-max-content;
   width: max-content;
   margin-bottom: 93px;
-  padding-top: 84px;
+  padding-top: 117px;
   padding-left: 121px;
 }
 .diaries__card {
@@ -444,7 +463,7 @@ button {
   border-radius: 20px;
 }
 .diaries__card:hover {
-  transform: scale(1.02);
+  transform: scale(1.1);
 }
 .diaries__flex-2 {
   display: flex;
@@ -500,10 +519,10 @@ button {
   text-align: right;
   color: #fff;
   text-decoration: underline;
-  transition: color 0.3s ease;
 }
 .diaries__link:hover {
-  color: rgb(255, 214, 0);
+  font-style: italic;
+  font-weight: 400;
 }
 
 .map {
@@ -527,11 +546,26 @@ button {
   border: 3px solid rgb(255, 255, 255);
   color: #fff;
   border-radius: 31px;
-  transition: color 0.3s ease, border-color 0.3s ease;
+  transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
 }
 .map .map__link:hover {
-  color: rgb(255, 214, 0);
-  border-color: rgb(255, 214, 0);
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+.map .map__bg {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+.map .map-frame__filter {
+  z-index: 2;
 }
 
 .videos {
@@ -577,15 +611,26 @@ button {
   transition: color 0.3s ease;
 }
 .videos__link:hover {
-  color: rgb(255, 214, 0);
+  font-style: italic;
+  font-weight: 400;
 }
 
 .clipping {
+  padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.clipping::after {
+  content: "";
+  display: block;
+  width: 620px;
+  height: 620px;
   background-image: url(../img/svg/clipping-eclipse.svg);
   background-repeat: no-repeat;
-  background-size: 700px 700px;
-  background-position: 80% 20%;
-  padding-bottom: 100px;
+  top: 100px;
+  right: 200px;
+  position: absolute;
+  animation: rotate 5s linear infinite;
 }
 .clipping .clipping__block {
   display: flex;
@@ -629,7 +674,8 @@ button {
   flex-shrink: 0;
 }
 .clipping .clipping__texts a:hover {
-  color: rgb(255, 214, 0);
+  font-style: italic;
+  font-weight: 400;
 }
 .clipping__flex {
   display: flex;
@@ -744,7 +790,8 @@ button {
   transition: color 0.3s ease;
 }
 .notes__link:hover {
-  color: rgb(255, 214, 0);
+  font-style: italic;
+  font-weight: 400;
 }
 
 .notes-2::after {
@@ -763,7 +810,7 @@ button {
   font-style: italic;
   font-weight: 400;
   line-height: 89.6px;
-  text-align: left;
+  text-align: center;
   margin-bottom: 120px;
 }
 .about h2 strong {
@@ -778,9 +825,9 @@ button {
 }
 .about__flex p {
   font-family: Montserrat;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 23px;
+  line-height: 24px;
   text-align: left;
   color: #000;
 }
@@ -856,14 +903,15 @@ button {
 .adventures::after {
   content: "";
   background-image: url(../img/svg/adv-eclipse.svg);
+  animation: rotate 5s linear infinite;
+  animation-composition: accamulate;
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
   width: 550px;
   height: 550px;
-  bottom: 0;
-  transform: translateY(50%);
-  right: 200px;
+  bottom: -225px;
+  right: 225px;
 }
 .adventures__flex {
   display: flex;
@@ -917,7 +965,7 @@ button {
   font-size: 70px;
   font-weight: 700;
   line-height: 89.6px;
-  text-align: left;
+  text-align: right;
   color: #000;
   margin-bottom: 180px;
 }
@@ -952,7 +1000,8 @@ button {
   transition: color 0.3s ease;
 }
 .contacts__link:hover {
-  color: rgb(255, 214, 0);
+  font-style: italic;
+  font-weight: 400;
 }
 
 .footer {
@@ -1107,7 +1156,7 @@ button {
 }
 
 .content {
-  max-width: 833px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 53px 0 83px;
 }
@@ -1128,7 +1177,7 @@ button {
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
-  line-height: 19.5px;
+  line-height: 24px;
   text-align: left;
 }
 .content .content__block button {
@@ -1136,6 +1185,18 @@ button {
   margin: 0 auto;
   max-width: 74px;
   width: 100%;
+}
+.content .content__block svg path {
+  transition: fill 0.3s ease;
+}
+.content .content__block svg circle {
+  transition: fill 0.3s ease;
+}
+.content .content__block button:hover svg path {
+  fill: #000;
+}
+.content .content__block button:hover svg circle {
+  fill: #fff;
 }
 .content .content__block-2 span {
   display: block;
@@ -1172,7 +1233,7 @@ button {
 }
 
 .comments {
-  padding: 50px 0 80px;
+  padding: 30px 0 50px;
   background-color: #D9D9D9;
 }
 .comments__form {
@@ -1305,7 +1366,7 @@ button {
   position: absolute;
   top: 240px;
   left: 50px;
-  z-index: 2;
+  z-index: 3;
   max-width: 402px;
   width: 100%;
 }
@@ -1475,15 +1536,21 @@ button {
 .countries__block a {
   position: absolute;
   inset: 0;
+  z-index: 2;
 }
-.countries__block::after {
+.countries__filter {
   content: "";
   background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   inset: 0;
+  transition: opacity 0.3s ease;
+}
+.countries__block-3::after {
+  display: none;
 }
 .countries__block-1 {
-  background-image: url(../img/country/country-1.webp);
+  background: url(../img/country/country-1.webp) no-repeat;
+  background-size: cover;
 }
 .countries__texts {
   position: relative;
@@ -1509,25 +1576,31 @@ button {
   letter-spacing: normal;
 }
 .countries__block-2 {
-  background-image: url(../img/country/country-2.webp);
+  background: url(../img/country/country-2.webp) no-repeat;
+  background-size: cover;
 }
 .countries__block-3 {
   background: #FF9D66;
 }
 .countries__block-4 {
-  background-image: url(../img/country/country-4.webp);
+  background: url(../img/country/country-4.webp) no-repeat;
+  background-size: cover;
 }
 .countries__block-5 {
-  background-image: url(../img/country/country-5.webp);
+  background: url(../img/country/country-5.webp) no-repeat;
+  background-size: cover;
 }
 .countries__block-6 {
-  background-image: url(../img/country/country-6.webp);
+  background: url(../img/country/country-6.webp) no-repeat;
+  background-size: cover;
 }
 .countries__block-7 {
-  background-image: url(../img/country/country-7.webp);
+  background: url(../img/country/country-7.webp) no-repeat;
+  background-size: cover;
 }
 .countries__block-8 {
-  background-image: url(../img/country/country-8.webp);
+  background: url(../img/country/country-8.webp) no-repeat;
+  background-size: cover;
 }
 .countries__filters {
   display: flex;
@@ -1726,4 +1799,40 @@ button {
 
 .open-modal-img {
   cursor: pointer;
+}
+
+.ant:hover {
+  background: rgb(160, 232, 255);
+}
+
+.eur:hover {
+  background: rgb(98, 104, 255);
+}
+
+.rus:hover {
+  background: rgb(49, 253, 204);
+}
+
+.east-asia:hover {
+  background: rgb(255, 157, 102);
+}
+
+.af:hover {
+  background: rgb(255, 214, 0);
+}
+
+.am:hover {
+  background: rgb(255, 97, 97);
+}
+
+.central-asia:hover {
+  background: rgb(244, 132, 226);
+}
+
+.north-am:hover {
+  background: rgb(188, 132, 244);
+}
+
+.countries__block:hover .countries__filter {
+  opacity: 0;
 }/*# sourceMappingURL=style.css.map */
