@@ -600,7 +600,7 @@
                  }
  
                  // Выполняем GET-запрос к API
-                 axios.get('/api/suggest-address', { params: { query: query } })
+                 axios.get('http://xn--b1agaam1adgwdq7azk.xn--p1ai/api/suggest-address?query=', { params: { query: query } })
                      .then(response => {
                          const suggestions = response.data;
                          displaySuggestions(suggestions);
