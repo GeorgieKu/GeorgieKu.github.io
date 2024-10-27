@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="РЕЙТИНГ ТОП лучших товаров">
+    <link rel="shortcut icon" href="./img/svg/fav.svg" type="image/x-icon">
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>РЕЙТИНГ ТОП</title>
+</head>
+
+<body class="bg-input-bg min-w-[360px]">
+    <div class="flex flex-col justify-between min-h-[100vh]">
+        <header
+            class="shadow-[0_4px_13.8px_0px_rgba(0,0,0,0.04)] xs:py-2.5 md:py-[25px] xs:mb-[20px] bg-white lg:mb-[30px]">
+            <div class="flex items-center justify-between max-w-[1280px] px-2.5 s:px-5 xl:px-0 w-full mx-auto gap-5">
+                <a class="w-full block sm:max-w-[141px] sm:h-[30px] md:max-w[244px] md:h-[53px] xs:max-w-[141px] xs:h-[30px] lg:max-w-[244px] lg:h-[53px]"
+                    href="./index.html" aria-label="Перейти на главную страницу">
+                    <svg
+                        class="sm:max-w-[141px] sm:h-[30px] md:max-w[244px] md:h-[53px] xs:max-w-[141px] xs:h-[30px] lg:max-w-[244px] lg:h-[53px]">
+                        <use href="./img/svg/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <div class="relative w-full md:max-w-[482px] lg:max-w-[482px] flex xl:max-w-[630px]">
+                    <input id="searchInput"
+                        class="ml-auto md:h-[53px] md:max-w-[482px] lg:max-w-[630px] w-full md:pl-5 bg-input-bg rounded-[5px] desktop-text-regular color-black-text placeholder:desktop-text-regular placeholder:text-placeholder focus:outline-none xs:h-[36px] max-w-[36px]"
+                        type="text" placeholder="Поиск по сайту...">
+                    <button id="searchBtn"
+                        class="max-w-[36px] w-full h-[36px] absolute right-0 md:right-2.5 md:top-[50%] md:-translate-y-1/2 bg-input-bg z-10"
+                        aria-label="Поиск">
+                        <svg class="max-w-[36px] w-full h-[36px]">
+                            <use href="./img/svg/sprite.svg#search"></use>
+                        </svg>
+                    </button>
+                    <ul id="searchList"
+                        class="hidden shadow-[0_4px_13.8px_0px_rgba(0,0,0,0.04)] rounded-2.5 absolute top-[calc(100%_+_10px)] w-full leading-5 mb-0.5 ">
+                        <li class="py-2 px-5 bg-white hover:bg-input-bg transition-colors">
+                            <a href="#" class="text-black-text text-[16px] block" aria-label="Перейти на страницу...">
+                                Название страницы
+
+                                <span class="text-light-gray text-sm block">
+                                    Категория
+                                </span>
+                            </a>
+                        </li>
+                        <li class="py-2 px-5 bg-white hover:bg-input-bg transition-colors">
+                            <a href="#" class="text-black-text text-[16px] block" aria-label="Перейти на страницу...">
+                                Название страницы
+
+                                <span class="text-light-gray text-sm block">
+                                    Категория
+                                </span>
+                            </a>
+                        </li>
+                        <li class="py-2 px-5 bg-white hover:bg-input-bg transition-colors">
+                            <a href="#" class="text-black-text text-[16px] block" aria-label="Перейти на страницу...">
+                                Название страницы
+
+                                <span class="text-light-gray text-sm block">
+                                    Категория
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="px-2.5 md:px-5 xl:px-0 mb-10 max-w-[1280px] mx-auto lg:mb-[80px] s:px-5 w-full">
+            <h1 class="hidden">404</h1>
+            <img class="mb-[40px] mx-auto block w-full s:max-w-[400px] block md:max-w-[470px] lg:max-w-[800px] xl:max-w-[987px] xl:mb-[50px]" src="./img/svg/404.svg" alt="">
+            <span class="text-[14px] leading-[21px] text-dark-gray mb-[30px] text-center block lg:mb-[50px] lg:text-[16px] lg:leading-[19px]">Такой страницы не
+                существует.</span>
+            <a href="./index.html" aria-label="Вернуться на главную"
+                class="block font-bold text-[14px] leading-[17px] text-black-text-2 py-[11.5px] max-w-[207px] w-full border-2 border-light-gray-3 text-center rounded-[5px] bg-input-bg mx-auto lg:max-w-[228px] lg:text-[16px] lg:leading-[19px] hover:bg-light-gray-3-hover hover:border-light-gray-border-hover transition-colors">Вернуться
+                на главную</a>
+
+        </section>
+
+        <footer class="shadow-[0_-4px_19.9px_0px_rgba(0,0,0,0.04)] bg-white py-[15px] px-2.5 lg:px-5">
+            <p
+                class="text-[12px] leading-[18px] font-normal text-dark-gray text-center mb-[15px] opacity-[67%] lg:text-[14px] lg:leading-[21px] max-w-[1067px] mx-auto">
+                Все материалы расположенные на сайте не являются публичной офертой или призывом к действию. Все товарные
+                знаки принадлежат их законным владельцам. Данный ресурс носит исключительно
+                информационно-ознакомительный характер, и не является официальным продуктом компании.</p>
+            <a aria-label="Перейти на страницу..." href="#"
+                class="text-[14px] leading-[17px] font-medium text-dark-gray text-center block hover:text-blue transition-colors">Обратная
+                связь</a>
+        </footer>
+    </div>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

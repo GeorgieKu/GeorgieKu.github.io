@@ -1,50 +1,253 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="description">
-    <link rel="stylesheet" href="./style/normalize.min.css">
-    <link rel="stylesheet" href="./style/style.css?ver=3">
-    <link rel="stylesheet" href="./style/media.css">
-    <title>Document</title>
+    <meta name="description" content="РЕЙТИНГ ТОП лучших товаров">
+    <link rel="shortcut icon" href="./img/svg/fav.svg" type="image/x-icon">
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>РЕЙТИНГ ТОП</title>
+
 </head>
-<body>
 
-    <div class="card">
-        <div class="content">
-            <svg class="bg" viewBox="0 0 153 151" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M106.205 14.8011C99.714 5.37689 90.4966 0 80.8398 0H0.509305H0V41.0267V152H154V33.0379H131.561C121.904 33.0379 112.696 24.2136 106.195 14.7894L106.205 14.8011Z" fill="white"/>
-                </svg> 
-           <div class="texts">
-                <svg class="logo" viewBox="0 0 70 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1393 5.30386H16.9017V15.7495H14.1393V5.30386Z" fill="#020203"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M28.4449 13.7974C27.2663 15.2634 25.7193 16 23.7966 16C22.9937 16 22.2571 15.8674 21.5941 15.5948C20.9237 15.3223 20.3565 14.9466 19.8777 14.4678C19.4062 13.9889 19.0305 13.4144 18.7653 12.7514C18.5002 12.0884 18.3676 11.3518 18.3676 10.5488C18.3676 9.74586 18.5001 9.02394 18.758 8.35359C19.0158 7.68324 19.3915 7.10129 19.8703 6.60037C20.3491 6.10682 20.9237 5.71639 21.5941 5.44383C22.2644 5.16391 22.9937 5.03131 23.7966 5.03131C24.7027 5.03131 25.5425 5.17864 26.316 5.48803C27.0895 5.79006 27.7377 6.32045 28.2681 7.06446L26.4338 8.90608C26.1392 8.50829 25.793 8.19153 25.3878 7.9558C24.9827 7.72008 24.5186 7.59485 23.9955 7.59485C23.5609 7.59485 23.1631 7.66851 22.8243 7.81584C22.478 7.96317 22.1908 8.16207 21.955 8.42726C21.7193 8.68509 21.5425 8.99448 21.4173 9.3407C21.292 9.68693 21.2257 10.07 21.2257 10.4751C21.2257 10.8803 21.292 11.2781 21.4246 11.6317C21.5572 11.9853 21.7414 12.2947 21.9771 12.5525C22.2202 12.8103 22.5075 13.0166 22.8464 13.1639C23.1852 13.3112 23.5609 13.3849 23.9808 13.3849C24.5849 13.3849 25.0784 13.2744 25.4615 13.0681C25.8445 12.8545 26.2129 12.523 26.5812 12.0589L28.4449 13.8122V13.7974Z" fill="#020203"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M34.2055 16C33.4247 16 32.6954 15.86 32.0324 15.5875C31.3694 15.3075 30.7948 14.9319 30.3086 14.4457C29.8224 13.9595 29.4468 13.3849 29.1742 12.7072C28.9016 12.0368 28.769 11.3002 28.769 10.5046C28.769 9.70902 28.909 8.97974 29.1742 8.30203C29.4468 7.63168 29.8224 7.04972 30.3086 6.56354C30.7948 6.07735 31.3694 5.70166 32.0324 5.4291C32.6954 5.15654 33.4173 5.02394 34.2055 5.02394C34.9937 5.02394 35.7156 5.1639 36.3786 5.4291C37.049 5.70166 37.6236 6.07735 38.1024 6.56354C38.5812 7.04972 38.9569 7.62431 39.2294 8.30203C39.502 8.97237 39.6346 9.70902 39.6346 10.5046C39.6346 11.3002 39.4946 12.0295 39.2294 12.7072C38.9569 13.3775 38.5812 13.9595 38.1024 14.4457C37.6236 14.9319 37.049 15.3075 36.3786 15.5875C35.7083 15.8674 34.9864 16 34.2055 16ZM34.2055 13.3996C34.6107 13.3996 34.9716 13.326 35.2957 13.1713C35.6125 13.0239 35.8851 12.8103 36.0987 12.5525C36.3197 12.2947 36.4817 11.9853 36.5996 11.6317C36.7175 11.2781 36.769 10.9024 36.769 10.5046C36.769 10.1068 36.7101 9.73112 36.5996 9.37753C36.4817 9.02394 36.3197 8.71455 36.0987 8.45672C35.8777 8.19889 35.6125 7.99263 35.2957 7.83794C34.979 7.69061 34.6107 7.60958 34.2055 7.60958C33.8003 7.60958 33.432 7.68324 33.1153 7.83794C32.7985 7.99263 32.5259 8.19889 32.3123 8.45672C32.0913 8.71455 31.9293 9.02394 31.8114 9.37753C31.6935 9.73112 31.642 10.1068 31.642 10.5046C31.642 10.9024 31.7009 11.2781 31.8114 11.6317C31.9293 11.9853 32.0913 12.2947 32.3123 12.5525C32.5333 12.8103 32.7985 13.0166 33.1153 13.1713C33.432 13.3186 33.8003 13.3996 34.2055 13.3996Z" fill="#020203"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M39.6936 5.30386H42.7139L45.0638 12.5746L47.259 5.30386H50.2203L46.4118 15.7495H43.4873L39.6936 5.30386Z" fill="#020203"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M51.3105 5.30386H58.8244V7.69797H54.0803V9.31123H57.9772V11.5654H54.0803V13.3554H59.1485V15.7495H51.3105V5.30386Z" fill="#020203"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M60.5701 5.30386H64.8868C65.454 5.30386 65.955 5.37753 66.4117 5.52486C66.8684 5.67219 67.2515 5.88581 67.5756 6.17311C67.8997 6.4604 68.1502 6.82136 68.327 7.24861C68.5038 7.67587 68.5922 8.16942 68.5922 8.73664C68.5922 9.42173 68.4448 10.0258 68.1354 10.5341C67.826 11.0424 67.4283 11.4475 66.9347 11.7495L69.1741 15.7643H66.1981L64.4301 12.2063H63.2736V15.7643H60.5701V5.31123V5.30386ZM64.6216 10.0184C64.99 10.0184 65.2846 9.90791 65.513 9.67955C65.7413 9.45119 65.8592 9.15653 65.8592 8.78084C65.8592 8.38305 65.7487 8.07366 65.5277 7.83793C65.3067 7.60957 65.0047 7.49171 64.6069 7.49171H63.2736V10.011H64.6216V10.0184Z" fill="#020203"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1393 0H16.9017V2.76243H14.1393V0Z" fill="#00B3E0"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82798 5.30386H1.13V8.07366H6.86849L2.23498 12.7072L4.19446 14.6667L8.82798 10.0331V15.779H11.6051V8.07366V5.30386H8.82798Z" fill="#00B3E0"/>
-                <path d="M8.82798 5.30386H1.13V8.07366H6.86849L2.23498 12.7072L4.19446 14.6667L8.82798 10.0331V15.779H11.6051V8.07366V5.30386H8.82798Z" stroke="#00B3E0" stroke-miterlimit="8"/>
+<body class="bg-input-bg min-w-[360px]">
+    <header class="shadow-[0_4px_13.8px_0px_rgba(0,0,0,0.04)] xs:py-2.5 md:py-[25px] xs:mb-[30px] xl:mb-[80px] bg-white">
+       <div class="flex items-center justify-between max-w-[1280px] px-2.5 s:px-5 xl:px-0 w-full mx-auto gap-5">
+            <a class="w-full block sm:max-w-[141px] sm:h-[30px] md:max-w[244px] md:h-[53px] xs:max-w-[141px] xs:h-[30px] lg:max-w-[244px] lg:h-[53px]" href="./index.html" aria-label="Перейти на главную страницу">
+                <svg class="sm:max-w-[141px] sm:h-[30px] md:max-w[244px] md:h-[53px] xs:max-w-[141px] xs:h-[30px] lg:max-w-[244px] lg:h-[53px]">
+                    <use href="./img/svg/sprite.svg#logo"></use>
                 </svg>
-                <span class="second-name">Фамилия</span>
-                <span class="name">Имя</span>   
-                <span class="line"></span>
-                <span class="department-name">Название отдела</span> 
-                <span class="job-title">Должность</span>  
-                <span class="portal-id">Portal ID</span>   
-                <span class="numbers">00000</span>      
-           </div>
-            <svg class="cubes" viewBox="0 0 56 82" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M31.7839 35.203L6.70284 60.2841C3.03582 63.9511 3.03582 69.8965 6.70284 73.5636L31.7839 98.6446C35.4509 102.312 41.3964 102.312 45.0634 98.6446L70.1445 73.5636C73.8115 69.8965 73.8115 63.9511 70.1445 60.2841L45.0634 35.203C41.3964 31.536 35.4509 31.536 31.7839 35.203Z" fill="#00B3E0"/>
-                <path d="M52.0438 3.34942L41.1826 14.2106C39.5971 15.7961 39.5971 18.3668 41.1826 19.9523L52.0438 30.8134C53.6293 32.399 56.2 32.399 57.7855 30.8135L68.6467 19.9523C70.2322 18.3668 70.2322 15.7961 68.6466 14.2106L57.7855 3.34942C56.2 1.7639 53.6293 1.7639 52.0438 3.34942Z" fill="#4A529B"/>
-                <path d="M29.9904 2.16788L26.5893 5.56906C26.2261 5.93225 26.2261 6.5211 26.5893 6.88428L29.9904 10.2855C30.3536 10.6487 30.9425 10.6486 31.3057 10.2855L34.7068 6.88428C35.07 6.52109 35.07 5.93225 34.7068 5.56906L31.3057 2.16788C30.9425 1.80469 30.3536 1.80469 29.9904 2.16788Z" fill="#00B3E0"/>
-                </svg>    
-        </div>
-    </div>
+            </a>
+            <div class="relative w-full md:max-w-[482px] lg:max-w-[482px] flex xl:max-w-[630px]">
+                <input id="searchInput" class="ml-auto md:h-[53px] md:max-w-[482px] lg:max-w-[630px] w-full md:pl-5 bg-input-bg rounded-[5px] desktop-text-regular color-black-text placeholder:desktop-text-regular placeholder:text-placeholder focus:outline-none xs:h-[36px] max-w-[36px]" type="text" placeholder="Поиск по сайту...">
+                <button id="searchBtn" class="max-w-[36px] w-full h-[36px] absolute right-0 md:right-2.5 md:top-[50%] md:-translate-y-1/2 bg-input-bg z-10" aria-label="Поиск">
+                    <svg  class="max-w-[36px] w-full h-[36px]">
+                        <use href="./img/svg/sprite.svg#search"></use>
+                    </svg>
+                </button>
+                <ul id="searchList" class="hidden shadow-[0_4px_13.8px_0px_rgba(0,0,0,0.04)] rounded-2.5 absolute top-[calc(100%_+_10px)] w-full leading-5 mb-0.5 ">
+                    <li class="py-2 px-5 bg-white hover:bg-input-bg transition-colors">
+                        <a href="#" class="text-black-text text-[16px] block" aria-label="Перейти на страницу..." >
+                            Название страницы
+                        
+                            <span class="text-light-gray text-sm block">
+                                Категория
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-2 px-5 bg-white hover:bg-input-bg transition-colors">
+                        <a href="#" class="text-black-text text-[16px] block" aria-label="Перейти на страницу...">
+                            Название страницы
+                        
+                            <span class="text-light-gray text-sm block">
+                                Категория
+                            </span>
+                        </a>
+                    </li>
+                    <li class="py-2 px-5 bg-white hover:bg-input-bg transition-colors">
+                        <a href="#" class="text-black-text text-[16px] block" aria-label="Перейти на страницу...">
+                            Название страницы
+                        
+                            <span class="text-light-gray text-sm block">
+                                Категория
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+       </div>
+    </header>
+    <main>
+        <section class="px-2.5 md:px-5 xl:px-0 mb-10 max-w-[1280px] mx-auto lg:mb-[80px]">
+            <h1 class="h1 xs:mb-[25px] lg:mb-[40px]">Рейтинг товаров для <span class="text-blue">строительства и ремонта</span></h1>
+            <div class="lg:grid-cols-3 lg:gap-10 grid-card">
 
-    
+
+                        <div class="card area-1">
+                            <h2 class="h2 mb-[15px]">Силовая техника и оборудование</h2>
+                            <ul class="flex flex-col gap-2.5">
+                                <li>
+                                    <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Вентиляционные решетки, диффузоры и анемостаты</a>
+                                </li>
+                                <li>
+                                    <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Ручные инструменты</a>
+                                </li>
+                                <li>
+                                    <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                                </li>
+                                <li>
+                                    <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                                </li>
+                                <li>
+                                    <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card area-2">
+                            <h2 class="h2 mb-[15px]">Силовая техника и оборудование</h2>
+                            <ul class="flex flex-col gap-2.5">
+                                <li>
+                                    <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Вентиляционные решетки, диффузоры и анемостаты</a>
+                                </li>
+                                <li>
+                                    <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Ручные инструменты</a>
+                                </li>
+                                <li>
+                                    <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                                </li>
+                                <li>
+                                    <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                                </li>
+                                <li>
+                                    <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                                </li>
+                            </ul>
+                        </div>
+                    <div class="card area-3">
+                        <h2 class="h2 mb-[15px]">Заголовок покороче</h2>
+                        <ul class="flex flex-col gap-2.5">
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Вентиляционные решетки, диффузоры и анемостаты</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Ручные инструменты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card area-4">
+                        <h2 class="h2 mb-[15px]">Силовая техника и оборудование</h2>
+                        <ul class="flex flex-col gap-2.5">
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Вентиляционные решетки, диффузоры и анемостаты</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Ручные инструменты</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                        </ul>
+                    </div>
+ 
+                    <div class="card area-5">
+                        <h2 class="h2 mb-[15px]">Силовая техника и оборудование</h2>
+                        <ul class="flex flex-col gap-2.5">
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Вентиляционные решетки, диффузоры и анемостаты</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Ручные инструменты</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card area-6">
+                        <h2 class="h2 mb-[15px]">Силовая техника и оборудование</h2>
+                        <ul class="flex flex-col gap-2.5">
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Вентиляционные решетки, диффузоры и анемостаты</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Ручные инструменты</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card area-7">
+                        <h2 class="h2 mb-[15px]">Силовая техника и оборудование</h2>
+                        <ul class="flex flex-col gap-2.5">
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Вентиляционные решетки, диффузоры и анемостаты</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Ручные инструменты</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                            <li>
+                                <a class="big-link hover:text-blue transition-colors" href="#" aria-label="Перейти на страницу...">Категория</a>
+                            </li>
+                        </ul>
+                    </div>
+
+            </div>
+            
+        </section>
+        <section class="px-2.5 md:px-5 xl:px-0 mb-10 max-w-[1280px] mx-auto lg:mb-[80px]">
+            <h2 class="hidden">Ссылки на разделы</h2>
+            <div class="flex flex-col gap-[30px] s:grid s:grid-cols-2 lg:gap-[40px] xl:grid-cols-8">
+                <a href="#" aria-label="Перейти на страницу..." class="flex items-center justify-between py-[11px] px-[25px] rounded-[10px] relative after:content-[''] after:absolute after:max-w-[80%] after:left-2/4 after:-translate-x-2/4 after:h-[32px] after:bottom-[14px] after:w-full after:blur-[20px] after:-z-10 bg-custom-purple after:bg-custom-purple-blur lg:py-5 lg:px-[25px] xl:col-span-2 lg:py-[25px] lg-px[25px] xl:min-h-[213px] xl:flex-col xl:items-baseline group" >
+                    <span class="font-semibold text-black-text-2 text-[16px] leading-[19px] lg:text-[24px] lg:leading-[29px] group-hover:text-custom-purple-hover transition-colors">Cмартфоны</span>
+                    <img loading="lazy" class="max-w-[56px] h-[56px] lg:h-[90px] lg:max-w-[90px] w-full lg:ml-auto" src="./img/svg/tel.svg" alt="">
+                </a>
+                <a href="#" aria-label="Перейти на страницу..." class="flex items-center justify-between py-[11px] px-[25px] rounded-[10px] relative after:content-[''] after:absolute after:max-w-[80%] after:left-2/4 after:-translate-x-2/4 after:h-[32px] after:bottom-[14px] after:w-full after:blur-[20px] after:-z-10 bg-custom-blue after:bg-custom-blue-blur lg:py-5 lg:px-[25px] xl:col-span-2 lg:py-[25px] lg-px[25px] xl:min-h-[213px] xl:flex-col xl:items-baseline group" >
+                    <span class="font-semibold text-black-text-2 text-[16px] leading-[19px] lg:text-[24px] lg:leading-[29px] group-hover:text-custom-blue-hover transition-colors">Ноутбуки<br> и компьютеры</span>
+                    <img loading="lazy" class="max-w-[56px] h-[56px] lg:h-[90px] lg:max-w-[90px] w-full lg:ml-auto" src="./img/svg/notebook.svg" alt="">
+                </a>
+                <a href="#" aria-label="Перейти на страницу..." class="flex items-center justify-between py-[11px] px-[25px] rounded-[10px] relative after:content-[''] after:absolute after:max-w-[80%] after:left-2/4 after:-translate-x-2/4 after:h-[32px] after:bottom-[14px] after:w-full after:blur-[20px] after:-z-10 bg-custom-yellow after:bg-custom-yellow-blur lg:py-5 lg:px-[25px] xl:col-span-2 lg:py-[25px] lg-px[25px] xl:min-h-[213px] xl:flex-col xl:items-baseline group" >
+                    <span class="font-semibold text-black-text-2 text-[16px] leading-[19px] lg:text-[24px] lg:leading-[29px] group-hover:text-custom-yellow-hover transition-colors">Электроника</span>
+                    <img loading="lazy" class="max-w-[56px] h-[56px] lg:h-[90px] lg:max-w-[90px] w-full lg:ml-auto" src="./img/svg/headphones.svg" alt="">
+                </a>
+                <a href="#" aria-label="Перейти на страницу..." class="flex items-center justify-between py-[11px] px-[25px] rounded-[10px] relative after:content-[''] after:absolute after:max-w-[80%] after:left-2/4 after:-translate-x-2/4 after:h-[32px] after:bottom-[14px] after:w-full after:blur-[20px] after:-z-10 bg-custom-red after:bg-custom-red-blur lg:py-5 lg:px-[25px] xl:col-span-2 lg:py-[25px] lg-px[25px] xl:min-h-[213px] xl:flex-col xl:items-baseline group" >
+                    <span class="font-semibold text-black-text-2 text-[16px] leading-[19px] lg:text-[24px] lg:leading-[29px] group-hover:text-custom-red-hover transition-colors">Бытовая техника</span>
+                    <img loading="lazy" class="max-w-[56px] h-[56px] lg:h-[90px] lg:max-w-[90px] w-full lg:ml-auto" src="./img/svg/washamchine.svg" alt="">
+                </a>
+                <a href="#" aria-label="Перейти на страницу..." class="flex items-center justify-between py-[11px] px-[25px] rounded-[10px] relative after:content-[''] after:absolute after:max-w-[80%] after:left-2/4 after:-translate-x-2/4 after:h-[32px] after:bottom-[14px] after:w-full after:blur-[20px] after:-z-10 bg-custom-purple-2 after:bg-custom-purple-blur-2 lg:py-5 lg:px-[25px] xl:grid-area-5 lg:py-[25px] lg-px[25px] xl:min-h-[213px] xl:flex-col xl:items-baseline group" >
+                    <span class="font-semibold text-black-text-2 text-[16px] leading-[19px] lg:text-[24px] lg:leading-[29px] group-hover:text-custom-purple-hover-2 transition-colors">Строительство<br>и ремонт</span>
+                    <img loading="lazy" class="max-w-[56px] h-[56px] lg:h-[90px] lg:max-w-[90px] w-full lg:ml-auto" src="./img/svg/drill.svg" alt="">
+                </a>
+                <a href="#" aria-label="Перейти на страницу..." class="flex items-center justify-between py-[11px] px-[25px] rounded-[10px] relative after:content-[''] after:absolute after:max-w-[80%] after:left-2/4 after:-translate-x-2/4 after:h-[32px] after:bottom-[14px] after:w-full after:blur-[20px] after:-z-10 bg-custom-green after:bg-custom-green-blur lg:py-5 lg:px-[25px] xl:grid-area-6 lg:py-[25px] lg-px[25px] xl:min-h-[213px] xl:flex-col xl:items-baseline group" >
+                    <span class="font-semibold text-black-text-2 text-[16px] leading-[19px] lg:text-[24px] lg:leading-[29px] group-hover:text-custom-green-hover transition-colors">Дача и сад</span>
+                    <img loading="lazy" class="max-w-[56px] h-[56px] lg:h-[90px] lg:max-w-[90px] w-full lg:ml-auto" src="./img/svg/plant.svg" alt="">
+                </a>
+                <a href="#" aria-label="Перейти на страницу..." class="flex items-center justify-between py-[11px] px-[25px] rounded-[10px] relative after:content-[''] after:absolute after:max-w-[80%] after:left-2/4 after:-translate-x-2/4 after:h-[32px] after:bottom-[14px] after:w-full after:blur-[20px] after:-z-10 bg-custom-orange after:bg-custom-orange-blur s:col-span-2 s:max-w-[263px] s:w-full s:mx-auto lg:py-5 lg:px-[25px] lg:max-w-[472px] xl:grid-area-7 lg:py-[25px] lg-px[25px] xl:min-h-[213px] xl:flex-col xl:items-baseline group" >
+                    <span class="font-semibold text-black-text-2 text-[16px] leading-[19px] lg:text-[24px] lg:leading-[29px] group-hover:text-custom-orange-hover transition-colors">Спорт и отдых</span>
+                    <img loading="lazy" class="max-w-[56px] h-[56px] lg:h-[90px] lg:max-w-[90px] w-full lg:ml-auto" src="./img/svg/ball.svg" alt="">
+                </a>
+            </div>
+        </section>
+
+    </main>
+    <footer  class="shadow-[0_-4px_19.9px_0px_rgba(0,0,0,0.04)] bg-white py-[15px] px-2.5 lg:px-5">
+        <p class="text-[12px] leading-[18px] font-normal text-dark-gray text-center mb-[15px] opacity-[67%] lg:text-[14px] lg:leading-[21px] max-w-[1067px] mx-auto">Все материалы расположенные на сайте не являются публичной офертой или призывом к действию. Все товарные знаки принадлежат их законным владельцам. Данный ресурс носит исключительно информационно-ознакомительный характер, и не является официальным продуктом компании.</p>
+        <a aria-label="Перейти на страницу..." href="#" class="text-[14px] leading-[17px] font-medium text-dark-gray text-center block hover:text-blue transition-colors">Обратная связь</a>
+    </footer>
+
+    <script src="./js/index.js"></script>
+
 </body>
+
 </html>
