@@ -1,28 +1,40 @@
 var swiper1Mini = new Swiper(".firstSwiper-mini", {
     spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: true,
+    slidesPerView: 3, 
+    centeredSlides: true, 
+    slideToClickedSlide: true, 
     watchSlidesProgress: true,
-  });
-  var swiper1 = new Swiper(".firstSwiper", {
+    initialSlide: 1, 
+});
+
+var swiper1 = new Swiper(".firstSwiper", {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 10,
     navigation: {
-      nextEl: ".first-swiper-button-next",
-      prevEl: ".first-swiper-button-prev",
+        nextEl: ".first-swiper-button-next",
+        prevEl: ".first-swiper-button-prev",
     },
     thumbs: {
-      swiper: swiper1Mini,
+        swiper: swiper1Mini,
     },
-  });
+    initialSlide: 1, 
+    on: {
+        slideChange: function() {
+            const activeIndex = this.realIndex; 
+            swiper1Mini.slideTo(activeIndex); 
+        }
+    }
+});
   
   var swiper2Mini = new Swiper(".secondSwiper-mini", {
     spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: true,
+    slidesPerView: 3, 
+    centeredSlides: true, 
+    slideToClickedSlide: true, 
     watchSlidesProgress: true,
+    initialSlide: 1, 
   });
   var swiper2 = new Swiper(".secondSwiper", {
     direction: 'horizontal',
@@ -30,19 +42,28 @@ var swiper1Mini = new Swiper(".firstSwiper-mini", {
     slidesPerView: 'auto',
     spaceBetween: 10,
     navigation: {
-      nextEl: ".second-swiper-button-next",
-      prevEl: ".second-swiper-button-prev",
+        nextEl: ".second-swiper-button-next",
+        prevEl: ".second-swiper-button-prev",
     },
     thumbs: {
-      swiper: swiper2Mini,
+        swiper: swiper2Mini,
     },
+    initialSlide: 1, 
+    on: {
+        slideChange: function() {
+            const activeIndex = this.realIndex; 
+            swiper2Mini.slideTo(activeIndex); 
+        }
+    }
   });
   
   var swiper3Mini = new Swiper(".threeSwiper-mini", {
     spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: true,
+    slidesPerView: 3, 
+    centeredSlides: true, 
+    slideToClickedSlide: true, 
     watchSlidesProgress: true,
+    initialSlide: 1, 
   });
   var swiper3 = new Swiper(".threeSwiper", {
     direction: 'horizontal',
@@ -50,19 +71,28 @@ var swiper1Mini = new Swiper(".firstSwiper-mini", {
     slidesPerView: 'auto',
     spaceBetween: 10,
     navigation: {
-      nextEl: ".three-swiper-button-next",
-      prevEl: ".three-swiper-button-prev",
+        nextEl: ".three-swiper-button-next",
+        prevEl: ".three-swiper-button-prev",
     },
     thumbs: {
-      swiper: swiper2Mini,
+        swiper: swiper3Mini,
     },
+    initialSlide: 1, 
+    on: {
+        slideChange: function() {
+            const activeIndex = this.realIndex; 
+            swiper3Mini.slideTo(activeIndex); 
+        }
+    }
   });
   
   var swiper4Mini = new Swiper(".fourSwiper-mini", {
     spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: true,
+    slidesPerView: 3, 
+    centeredSlides: true, 
+    slideToClickedSlide: true, 
     watchSlidesProgress: true,
+    initialSlide: 1, 
   });
   var swiper4 = new Swiper(".fourSwiper", {
     direction: 'horizontal',
@@ -70,31 +100,47 @@ var swiper1Mini = new Swiper(".firstSwiper-mini", {
     slidesPerView: 'auto',
     spaceBetween: 10,
     navigation: {
-      nextEl: ".four-swiper-button-next",
-      prevEl: ".four-swiper-button-prev",
+        nextEl: ".four-swiper-button-next",
+        prevEl: ".four-swiper-button-prev",
     },
     thumbs: {
-      swiper: swiper2Mini,
+        swiper: swiper4Mini,
     },
+    initialSlide: 1, 
+    on: {
+        slideChange: function() {
+            const activeIndex = this.realIndex; 
+            swiper4Mini.slideTo(activeIndex); 
+        }
+    }
   });
   
-  var swiper5Mini = new Swiper(".oneSwiper-mini", {
+  var swiper5Mini = new Swiper(".fiveSwiper-mini", {
     spaceBetween: 10,
-    slidesPerView: 3,
-    freeMode: true,
+    slidesPerView: 3, 
+    centeredSlides: true, 
+    slideToClickedSlide: true, 
     watchSlidesProgress: true,
+    initialSlide: 1, 
   });
-  var swiper5 = new Swiper(".oneSwiper", {
+  var swiper5 = new Swiper(".fiveSwiper", {
     direction: 'horizontal',
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 10,
     navigation: {
-      nextEl: ".one-swiper-button-next",
-      prevEl: ".one-swiper-button-prev",
+        nextEl: ".five-swiper-button-next",
+        prevEl: ".five-swiper-button-prev",
     },
     thumbs: {
-      swiper: swiper2Mini,
+        swiper: swiper5Mini,
     },
+    initialSlide: 1, 
+    on: {
+        slideChange: function() {
+            const activeIndex = this.realIndex; 
+            swiper5Mini.slideTo(activeIndex); 
+        }
+    }
   });
   
