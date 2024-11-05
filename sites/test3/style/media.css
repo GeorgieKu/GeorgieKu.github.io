@@ -19,6 +19,51 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+@media (max-width: 1024px) {
+  .diaries__icon, .videos__icon, .notes__icon {
+    display: none;
+  }
+  .diaries__flex {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: unset;
+    margin: 0 auto 20px;
+  }
+  .videos__flex {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: unset;
+    margin: 0 auto 20px;
+    padding-top: unset;
+    padding: 0 20px;
+    width: 100%;
+  }
+  .notes__flex {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: unset;
+    margin: 0 auto 20px;
+    padding-top: unset;
+  }
+  .notes__card {
+    margin-right: unset;
+    max-width: unset;
+  }
+  .videos__card iframe {
+    min-height: 500px;
+  }
+  .diaries__card {
+    margin-right: unset;
+  }
+  .videos__card {
+    margin-right: unset;
+    min-width: unset;
+    min-height: unset;
+  }
+  .diaries {
+    padding: 20px 0;
+  }
+}
 @media (max-width: 978px) {
   .videos__card {
     min-width: unset;
@@ -31,7 +76,6 @@
   }
   .videos__flex {
     margin-bottom: 50px;
-    padding-left: 50px;
   }
   .clipping__flex {
     flex-direction: column;
@@ -166,6 +210,7 @@
     max-width: 250px;
     height: 250px;
     padding: 20px;
+    margin: 0 auto;
   }
   .diaries__card h2 {
     font-size: 24px;
@@ -186,8 +231,16 @@
   }
   .diaries__flex {
     margin-bottom: 30px;
-    padding-top: 60px;
-    padding-left: 30px;
+    padding: 60px 20px 0;
+    width: 100%;
+    margin: 0 auto 20px;
+  }
+  .videos__card iframe {
+    min-height: unset;
+  }
+  .diaries__card {
+    max-width: 100%;
+    height: unset;
   }
   .map {
     min-height: 500px;
@@ -197,8 +250,6 @@
   }
   .videos__flex {
     margin-bottom: 30px;
-    padding-top: 40px;
-    padding-left: 30px;
   }
   .videos__card img {
     max-width: 324px;
@@ -219,9 +270,8 @@
     padding: 45px 0;
   }
   .notes__flex {
-    padding-top: 40px;
     margin-bottom: 30px;
-    padding-left: 30px;
+    padding: 40px 20px 0;
   }
   .about {
     padding: 30px 0;
@@ -285,7 +335,7 @@
     max-height: 100vh;
   }
   .diary {
-    max-height: 100vh;
+    height: 100dvh;
   }
   .diary__block {
     min-height: 560px;
@@ -326,5 +376,8 @@
   .contacts__link {
     display: block;
     text-align: center;
+  }
+  .notes__card {
+    max-width: 294px;
   }
 }/*# sourceMappingURL=media.css.map */
