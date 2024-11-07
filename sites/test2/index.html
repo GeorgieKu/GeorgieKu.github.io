@@ -1,1007 +1,188 @@
-<!DOCTYPE html >
-<html lang="ru" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lordserials">
-    <link rel="shortcut icon" href="./img/svg/fav.svg" type="image/x-icon">
+    <meta name="description" content="Epc Hunters">
+    <link rel="stylesheet" href="./style/normalize.min.css">
     <link rel="stylesheet" href="./style/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="preload" href="./fonts/Gilroy-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Gilroy-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Gilroy-Semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Gilroy-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" fetchpriority="high" as="image" href="./img/film.webp" type="image/webp">
-    <title>Lordserials</title>
-
+    <link rel="stylesheet" href="./style/style.min.css">
+    <link rel="preload" href="./fonts/Actay-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/ActayWide-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <title>Epc Hunters</title>
 </head>
 
-<body class="bg-white dark:bg-darkModeBg font-Gilroy">
-    <div id="scheme"></div>
-    <div class="absolute inset-0 bg-black opacity-50 hidden z-10" id="overlay"></div>
-    <header
-        class="p-4 bg-white relative z-20 sm:px-6 lg:px-8 xl:px-0 shadow-[0px_2px_32px_rgba(164,164,164,0.06)] mb-4 dark:bg-darkModeMainColor">
-        <div class="flex items-center justify-between xl:max-w-[1100px] xl:mx-auto lg:gap-8">
-            <a href="./index.html" aria-label="Пнрнйти на главную страницу">
-                <svg width="203" height="35" viewBox="0 0 203 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M43.2988 25.0517C42.7053 29.0433 42.4085 31.039 40.2822 32.8726C38.1558 34.7061 35.7121 34.7061 30.8247 34.7061H13.4254C8.53801 34.7061 6.09431 34.7061 3.96795 32.8726C1.8416 31.039 1.54483 29.0433 0.951292 25.0517C0.626031 22.8643 0.402833 20.3867 0.402832 17.7061C0.402832 15.0256 0.626027 12.548 0.951285 10.3606C1.54482 6.36904 1.84159 4.37325 3.96794 2.5397C6.0943 0.706147 8.53801 0.706147 13.4254 0.706148L30.8247 0.706151C35.7121 0.706151 38.1558 0.706152 40.2822 2.5397C42.4085 4.37325 42.7053 6.36904 43.2988 10.3606C43.6241 12.548 43.8473 15.0256 43.8473 17.7061C43.8473 20.3867 43.6241 22.8643 43.2988 25.0517Z"
-                        fill="url(#paint0_linear_142_2439)" />
-                    <path
-                        d="M24.3784 14.5765C26.546 15.9559 27.6298 16.6455 27.6657 17.6377C27.6674 17.6833 27.6674 17.729 27.6657 17.7746C27.6298 18.7667 26.546 19.4564 24.3784 20.8358C21.9116 22.4056 20.6782 23.1905 19.7217 22.7125C19.6783 22.6908 19.6357 22.6674 19.594 22.6423C18.6772 22.0921 18.6772 20.6301 18.6772 17.7061C18.6772 14.7822 18.6772 13.3202 19.594 12.7699C19.6357 12.7449 19.6783 12.7215 19.7217 12.6998C20.6782 12.2218 21.9116 13.0067 24.3784 14.5765Z"
-                        fill="white" />
-                    <path
-                        d="M4.57388 4.36735C4.7103 3.57367 4.77851 3.17683 5.05776 2.94149C5.33701 2.70615 5.73966 2.70615 6.54498 2.70615H7.06988C8.1709 2.70615 8.72142 2.70615 9.02108 3.06171C9.32074 3.41727 9.22748 3.95983 9.04097 5.04495L8.86909 6.04494C8.73267 6.83862 8.66446 7.23545 8.38521 7.4708C8.10597 7.70614 7.70331 7.70614 6.89799 7.70614H6.37309C5.27207 7.70614 4.72155 7.70614 4.42189 7.35058C4.12223 6.99502 4.21549 6.45246 4.402 5.36734L4.57388 4.36735Z"
-                        fill="white" />
-                    <path
-                        d="M12.2131 4.36735C12.3496 3.57368 12.4178 3.17684 12.697 2.9415C12.9763 2.70615 13.3789 2.70615 14.1842 2.70615H14.7091C15.8102 2.70615 16.3607 2.70615 16.6603 3.06171C16.96 3.41728 16.8667 3.95983 16.6802 5.04495L16.5083 6.04495C16.3719 6.83862 16.3037 7.23546 16.0245 7.4708C15.7452 7.70615 15.3426 7.70615 14.5373 7.70615H14.0124C12.9113 7.70615 12.3608 7.70615 12.0611 7.35058C11.7615 6.99502 11.8547 6.45246 12.0413 5.36735L12.2131 4.36735Z"
-                        fill="white" />
-                    <path
-                        d="M19.8524 4.36735C19.9888 3.57368 20.057 3.17684 20.3363 2.9415C20.6155 2.70615 21.0182 2.70615 21.8235 2.70615H22.3484C23.4494 2.70615 23.9999 2.70615 24.2996 3.06171C24.5993 3.41728 24.506 3.95983 24.3195 5.04495L24.1476 6.04495C24.0112 6.83862 23.943 7.23546 23.6637 7.4708C23.3845 7.70615 22.9818 7.70615 22.1765 7.70615H21.6516C20.5506 7.70615 20.0001 7.70615 19.7004 7.35058C19.4007 6.99502 19.494 6.45246 19.6805 5.36735L19.8524 4.36735Z"
-                        fill="white" />
-                    <path
-                        d="M27.4917 4.36735C27.6281 3.57368 27.6963 3.17684 27.9755 2.9415C28.2548 2.70615 28.6574 2.70615 29.4627 2.70615H29.9876C31.0887 2.70615 31.6392 2.70615 31.9389 3.06171C32.2385 3.41728 32.1453 3.95983 31.9587 5.04495L31.7869 6.04495C31.6504 6.83862 31.5822 7.23546 31.303 7.4708C31.0237 7.70615 30.6211 7.70615 29.8158 7.70615H29.2909C28.1898 7.70615 27.6393 7.70615 27.3397 7.35058C27.04 6.99502 27.1333 6.45246 27.3198 5.36735L27.4917 4.36735Z"
-                        fill="white" />
-                    <path
-                        d="M35.1309 4.36735C35.2673 3.57368 35.3355 3.17684 35.6148 2.9415C35.894 2.70615 36.2967 2.70615 37.102 2.70615H37.6269C38.7279 2.70615 39.2784 2.70615 39.5781 3.06171C39.8778 3.41728 39.7845 3.95983 39.598 5.04495L39.4261 6.04495C39.2897 6.83862 39.2215 7.23546 38.9422 7.4708C38.663 7.70615 38.2603 7.70615 37.455 7.70615H36.9301C35.8291 7.70615 35.2786 7.70615 34.9789 7.35058C34.6793 6.99502 34.7725 6.45246 34.959 5.36735L35.1309 4.36735Z"
-                        fill="white" />
-                    <path
-                        d="M4.57388 29.3673C4.7103 28.5737 4.77851 28.1768 5.05776 27.9415C5.33701 27.7061 5.73966 27.7061 6.54498 27.7061H7.06988C8.1709 27.7061 8.72142 27.7061 9.02108 28.0617C9.32074 28.4173 9.22748 28.9598 9.04097 30.0449L8.86909 31.0449C8.73267 31.8386 8.66446 32.2355 8.38521 32.4708C8.10597 32.7061 7.70331 32.7061 6.89799 32.7061H6.37309C5.27207 32.7061 4.72155 32.7061 4.42189 32.3506C4.12223 31.995 4.21549 31.4525 4.402 30.3673L4.57388 29.3673Z"
-                        fill="white" />
-                    <path
-                        d="M12.2131 29.3674C12.3496 28.5737 12.4178 28.1768 12.697 27.9415C12.9763 27.7062 13.3789 27.7062 14.1842 27.7062H14.7091C15.8102 27.7062 16.3607 27.7062 16.6603 28.0617C16.96 28.4173 16.8667 28.9598 16.6802 30.045L16.5083 31.0449C16.3719 31.8386 16.3037 32.2355 16.0245 32.4708C15.7452 32.7061 15.3426 32.7061 14.5373 32.7061H14.0124C12.9113 32.7061 12.3608 32.7061 12.0611 32.3506C11.7615 31.995 11.8547 31.4525 12.0413 30.3673L12.2131 29.3674Z"
-                        fill="white" />
-                    <path
-                        d="M19.8524 29.3674C19.9888 28.5737 20.057 28.1768 20.3363 27.9415C20.6155 27.7062 21.0182 27.7062 21.8235 27.7062H22.3484C23.4494 27.7062 23.9999 27.7062 24.2996 28.0617C24.5993 28.4173 24.506 28.9598 24.3195 30.045L24.1476 31.0449C24.0112 31.8386 23.943 32.2355 23.6637 32.4708C23.3845 32.7061 22.9818 32.7061 22.1765 32.7061H21.6516C20.5506 32.7061 20.0001 32.7061 19.7004 32.3506C19.4007 31.995 19.494 31.4525 19.6805 30.3673L19.8524 29.3674Z"
-                        fill="white" />
-                    <path
-                        d="M27.4917 29.3674C27.6281 28.5737 27.6963 28.1768 27.9755 27.9415C28.2548 27.7062 28.6574 27.7062 29.4627 27.7062H29.9876C31.0887 27.7062 31.6392 27.7062 31.9389 28.0617C32.2385 28.4173 32.1453 28.9598 31.9587 30.045L31.7869 31.0449C31.6504 31.8386 31.5822 32.2355 31.303 32.4708C31.0237 32.7061 30.6211 32.7061 29.8158 32.7061H29.2909C28.1898 32.7061 27.6393 32.7061 27.3397 32.3506C27.04 31.995 27.1333 31.4525 27.3198 30.3673L27.4917 29.3674Z"
-                        fill="white" />
-                    <path
-                        d="M35.1309 29.3674C35.2673 28.5737 35.3355 28.1768 35.6148 27.9415C35.894 27.7062 36.2967 27.7062 37.102 27.7062H37.6269C38.7279 27.7062 39.2784 27.7062 39.5781 28.0617C39.8778 28.4173 39.7845 28.9598 39.598 30.045L39.4261 31.0449C39.2897 31.8386 39.2215 32.2355 38.9422 32.4708C38.663 32.7061 38.2603 32.7061 37.455 32.7061H36.9301C35.8291 32.7061 35.2786 32.7061 34.9789 32.3506C34.6793 31.995 34.7725 31.4525 34.959 30.3673L35.1309 29.3674Z"
-                        fill="white" />
-                    <path class="dark:fill-white"
-                        d="M57.9843 22.4002H63.828L63.1969 26H53.6131L54.2443 22.4002L56.4883 9.6375H60.2283L57.9843 22.4002ZM71.9905 26.3273C69.6218 26.3273 67.7362 25.4702 66.3337 23.756C64.9468 22.0418 64.4715 19.9848 64.9078 17.585C65.3286 15.154 66.4428 13.1671 68.2505 11.6244C70.0737 10.0816 72.2554 9.31025 74.7955 9.31025C77.133 9.31025 78.9952 10.1673 80.3821 11.8815C81.7846 13.5957 82.2755 15.6527 81.8547 18.0525C81.4184 20.4835 80.2964 22.4704 78.4887 24.0131C76.681 25.5559 74.515 26.3273 71.9905 26.3273ZM72.3878 22.6807C73.7592 22.6807 74.9902 22.2288 76.0811 21.325C77.1875 20.4212 77.8654 19.2524 78.1147 17.8187C78.364 16.3851 78.1147 15.2163 77.3667 14.3125C76.6343 13.4087 75.5902 12.9567 74.2345 12.9567C72.8787 12.9567 71.671 13.4087 70.6113 14.3125C69.5517 15.2163 68.8972 16.3851 68.6478 17.8187C68.3985 19.268 68.6245 20.4445 69.3257 21.3484C70.027 22.2366 71.0477 22.6807 72.3878 22.6807ZM96.8346 15.4812C96.632 16.5721 96.1957 17.5227 95.5256 18.333C94.8555 19.1277 94.0218 19.7199 93.0245 20.1095L95.4087 26H91.622L89.4949 20.6237H87.4612L86.5262 26H82.7862L85.6614 9.6375H91.9726C93.5309 9.6375 94.801 10.2297 95.7827 11.414C96.7645 12.5827 97.1151 13.9385 96.8346 15.4812ZM92.2999 16.7669C92.7206 16.3617 92.9855 15.8552 93.0946 15.2475C93.2037 14.6397 93.0946 14.1411 92.7674 13.7515C92.4557 13.3463 91.9882 13.1437 91.3649 13.1437H88.7936L88.0456 17.3512H90.8506C91.4116 17.3512 91.8947 17.1565 92.2999 16.7669ZM106.816 9.6375C108.966 9.6375 110.688 10.4634 111.982 12.1152C113.291 13.7671 113.743 15.7462 113.337 18.0525C112.932 20.3744 111.857 22.2834 110.112 23.7794C108.366 25.2598 106.309 26 103.941 26H97.3956L100.271 9.6375H106.816ZM109.738 17.7019C109.987 16.315 109.784 15.2241 109.13 14.4294C108.475 13.6346 107.494 13.2372 106.185 13.2372H103.38L101.767 22.4002H104.338C105.725 22.4002 106.909 21.9717 107.891 21.1146C108.873 20.2575 109.488 19.12 109.738 17.7019ZM119.86 26.3273C118.146 26.3273 116.751 25.9688 115.676 25.252C114.616 24.5196 113.938 23.53 113.642 22.2834L117.055 20.5302C117.46 21.9951 118.504 22.7275 120.187 22.7275C121.621 22.7275 122.423 22.2678 122.595 21.3484C122.688 20.8809 122.524 20.5147 122.104 20.2497C121.699 19.9692 120.974 19.6498 119.93 19.2914C118.387 18.7771 117.234 18.1226 116.47 17.3279C115.722 16.5175 115.473 15.3877 115.722 13.9385C115.972 12.4113 116.673 11.2582 117.826 10.479C118.979 9.69983 120.312 9.31025 121.823 9.31025C123.163 9.31025 124.324 9.62971 125.306 10.2686C126.303 10.9075 127.012 11.8192 127.433 13.0035L124.161 14.7332C123.584 13.5177 122.696 12.91 121.496 12.91C120.935 12.91 120.483 13.0269 120.14 13.2606C119.813 13.4944 119.61 13.7905 119.532 14.1489C119.439 14.6008 119.587 14.9748 119.977 15.2709C120.382 15.5514 121.075 15.8708 122.057 16.2292C122.353 16.3383 122.595 16.4318 122.782 16.5097C122.984 16.5721 123.226 16.6656 123.506 16.7902C123.787 16.8993 124.013 17.0084 124.184 17.1175C124.371 17.211 124.581 17.3357 124.815 17.4915C125.065 17.6317 125.259 17.7798 125.4 17.9356C125.555 18.0915 125.711 18.2707 125.867 18.4732C126.039 18.6602 126.163 18.8706 126.241 19.1044C126.335 19.3225 126.413 19.5641 126.475 19.829C126.537 20.0783 126.561 20.3588 126.545 20.6705C126.545 20.9822 126.514 21.3172 126.451 21.6756C126.187 23.1716 125.462 24.3248 124.278 25.1351C123.109 25.9299 121.636 26.3273 119.86 26.3273ZM140.145 13.2372H133.717L133.226 15.9721H139.093L138.462 19.4784H132.618L132.104 22.4002H138.649L138.018 26H127.733L130.608 9.6375H140.776L140.145 13.2372ZM154.405 15.4812C154.202 16.5721 153.766 17.5227 153.096 18.333C152.426 19.1277 151.592 19.7199 150.595 20.1095L152.979 26H149.192L147.065 20.6237H145.031L144.096 26H140.356L143.231 9.6375H149.543C151.101 9.6375 152.371 10.2297 153.353 11.414C154.335 12.5827 154.685 13.9385 154.405 15.4812ZM149.87 16.7669C150.291 16.3617 150.556 15.8552 150.665 15.2475C150.774 14.6397 150.665 14.1411 150.337 13.7515C150.026 13.3463 149.558 13.1437 148.935 13.1437H146.364L145.616 17.3512H148.421C148.982 17.3512 149.465 17.1565 149.87 16.7669ZM157.841 9.6375H161.581L158.706 26H154.966L157.841 9.6375ZM172.147 26L171.82 23.4287H165.742L164.433 26H160.343L168.781 9.6375H173.55L176.238 26H172.147ZM167.496 19.9225H171.399L170.628 13.7281L167.496 19.9225ZM182.232 22.4002H188.076L187.445 26H177.861L178.492 22.4002L180.736 9.6375H184.476L182.232 22.4002ZM195.03 26.3273C193.315 26.3273 191.921 25.9688 190.845 25.252C189.786 24.5196 189.108 23.53 188.812 22.2834L192.225 20.5302C192.63 21.9951 193.674 22.7275 195.357 22.7275C196.79 22.7275 197.593 22.2678 197.764 21.3484C197.858 20.8809 197.694 20.5147 197.274 20.2497C196.868 19.9692 196.144 19.6498 195.1 19.2914C193.557 18.7771 192.404 18.1226 191.64 17.3279C190.892 16.5175 190.643 15.3877 190.892 13.9385C191.141 12.4113 191.843 11.2582 192.996 10.479C194.149 9.69983 195.481 9.31025 196.993 9.31025C198.333 9.31025 199.494 9.62971 200.476 10.2686C201.473 10.9075 202.182 11.8192 202.603 13.0035L199.331 14.7332C198.754 13.5177 197.866 12.91 196.666 12.91C196.105 12.91 195.653 13.0269 195.31 13.2606C194.983 13.4944 194.78 13.7905 194.702 14.1489C194.609 14.6008 194.757 14.9748 195.146 15.2709C195.552 15.5514 196.245 15.8708 197.227 16.2292C197.523 16.3383 197.764 16.4318 197.951 16.5097C198.154 16.5721 198.396 16.6656 198.676 16.7902C198.957 16.8993 199.182 17.0084 199.354 17.1175C199.541 17.211 199.751 17.3357 199.985 17.4915C200.234 17.6317 200.429 17.7798 200.569 17.9356C200.725 18.0915 200.881 18.2707 201.037 18.4732C201.208 18.6602 201.333 18.8706 201.411 19.1044C201.504 19.3225 201.582 19.5641 201.645 19.829C201.707 20.0783 201.73 20.3588 201.715 20.6705C201.715 20.9822 201.684 21.3172 201.621 21.6756C201.356 23.1716 200.632 24.3248 199.447 25.1351C198.279 25.9299 196.806 26.3273 195.03 26.3273Z"
-                        fill="#312D2D" />
-                    <defs>
-                        <linearGradient id="paint0_linear_142_2439" x1="5.53825" y1="2.34347" x2="28.4118" y2="33.5373"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#77E067" />
-                            <stop offset="1" stop-color="#43C230" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </a>
-            <button id="burgerBtn" class="flex flex-col gap-[6px] max-w-[29px] w-full not-open lg:hidden" aria-label="Открыть меню">
-                <span
-                    class="bg-customBlack w-full h-[3px] block rotate-45 translate-y-[8px] transition-transform dark:bg-white"></span>
-                <span class="bg-customBlack w-full h-[3px] block opacity-0 transition-opacity dark:bg-white"></span>
-                <span
-                    class="bg-customBlack w-full h-[3px] block -rotate-45 -translate-y-[10px] transition-transform dark:bg-white"></span>
-            </button>
-            <div id="burgerContent"
-                class="closed-content bg-white absolute top-full w-full pt-[8px] px-4 pb-[24px] shadow-[0px_2px_32px_rgba(164,164,164,0.06)] left-0 transition-transform sm:pb-[32px] sm:px-[24px] lg:static lg:p-0 dark:bg-darkModeMainColor">
-                <div class="relative flex items-center gap-x-4">
-                    <div class="relative w-full max-w-[calc(100%_-_32px)] group">
-                        <input id="searchInput"
-                            class="bg-customGray rounded-[12px] h-[40px] w-full pl-[48px] placeholder:font-Gilroy placeholder:text-sm placeholder:text-customDarkGray placeholder:opacity-50 focus:outline-none dark:bg-darkModeMainColor2 dark:placeholder:text-white dark:text-white"
-                            type="text" placeholder="Найти сериал">
-                        <svg class="w-full max-w-[24px] h-[24px] absolute top-[8px] left-[16px]" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g class="search-svg-g" opacity="0.5">
-                                <path class="dark:fill-white search-svg" fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M14.5546 15.9688C13.3466 16.8816 11.8422 17.4229 10.2114 17.4229C6.22868 17.4229 3 14.1942 3 10.2114C3 6.22868 6.22868 3 10.2114 3C14.1942 3 17.4229 6.22868 17.4229 10.2114C17.4229 11.8422 16.8816 13.3466 15.9688 14.5546L20.7055 19.2913C21.096 19.6818 21.096 20.315 20.7055 20.7055C20.315 21.096 19.6818 21.096 19.2913 20.7055L14.5546 15.9688ZM15.9229 10.2114C15.9229 13.3658 13.3658 15.9229 10.2114 15.9229C7.0571 15.9229 4.5 13.3658 4.5 10.2114C4.5 7.0571 7.0571 4.5 10.2114 4.5C13.3658 4.5 15.9229 7.0571 15.9229 10.2114Z"
-                                    fill="#1E222E" />
-                            </g>
-                        </svg>
-
-                    </div>
-                    <button id="darkModeBtn"
-                        class="flex relative items-center justify-center gap-[11.5px] max-w-[64px] w-full bg-customDarkGray2 min-h-[34px] rounded-[42px] p-[2px] dark:bg-darkModeMainColor2" aria-label="Переключить тему сайта">
-                        <svg id="moon" class="relative z-10" width="16" height="18" viewBox="0 0 16 18" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path class="moonpath" fill-rule="evenodd" clip-rule="evenodd"
-                                d="M9.15852 18C11.8791 18 14.3226 16.831 16 14.9748C11.1208 13.4739 7.57947 8.98608 7.57947 3.68316C7.57947 2.39718 7.78773 1.15914 8.17283 0C3.57826 0.484528 0 4.31753 0 8.97417C0 13.959 4.10041 18 9.15852 18Z"
-                                fill="#989898" />
-                        </svg>
-                        <svg id="sun" class="relative z-10" width="22" height="20" viewBox="0 0 22 20" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="11" cy="10" r="5" fill="white" class="dark:fill-darkModeIcon" />
-                            <path d="M11 0L11 3" stroke="white" class="dark:stroke-darkModeIcon" stroke-width="1.5" />
-                            <path d="M11 17L11 20" stroke="white" class="dark:stroke-darkModeIcon" stroke-width="1.5" />
-                            <path d="M21 10H18" stroke="white" class="dark:stroke-darkModeIcon" stroke-width="1.5" />
-                            <path d="M4 10L1 10" stroke="white" class="dark:stroke-darkModeIcon" stroke-width="1.5" />
-                            <path d="M17.9502 16.9497L15.8289 14.8284" stroke="white" class="dark:stroke-darkModeIcon"
-                                stroke-width="1.5" />
-                            <path d="M6.0498 5.05026L3.92848 2.92894" stroke="white" class="dark:stroke-darkModeIcon"
-                                stroke-width="1.5" />
-                            <path d="M4.0498 16.95L6.17113 14.8287" stroke="white" class="dark:stroke-darkModeIcon"
-                                stroke-width="1.5" />
-                            <path d="M15.9492 5.04996L18.0705 2.92864" stroke="white" class="dark:stroke-darkModeIcon"
-                                stroke-width="1.5" />
-                        </svg>
-                        <span id="modeChanger"
-                            class="modeChanger bg-greenGradient absolute right-[33.5px] top-1/2 -translate-y-1/2 w-[29px] h-[29px] rounded-[100%] transition-all">
-
-                        </span>
-                    </button>
-                    <ul id="filmList"
-                        class="absolute top-[calc(100%_+_4px)] flex flex-col p-4 gap-4 hidden w-full bg-white shadow-[0px_4px_32px_rgba(0,0,0,0.15)] rounded-xl max-h-[276px] overflow-auto sm:max-w-[calc(100%_-_80px)] dark:bg-darkModeMainColor">
-                        <li class="pb-4 border-b border-customGrayBorder dark:border-customGrayBorder">
-                            <a href="#" class="flex items-center gap-4" aria-label="Перейти к фильму...">
-                                <img loading="lazy" class="rounded-[4px]" src="./img/films.webp" alt="">
-                                <div>
-                                    <h2
-                                        class="text-[16px] leading-[20px] font-semibold text-customDarkGray mb-[4px] dark:text-white">
-                                        Очень странные дела</h2>
-                                    <span
-                                        class="text-[14px] leading-[20px] font-medium text-customDarkGray opacity-50 dark:text-white">Stranger
-                                        things, 2016—2024</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="pb-4 border-b border-customGrayBorder dark:border-customGrayBorder">
-                            <a href="#" class="flex items-center gap-4" aria-label="Перейти к фильму...">
-                                <img loading="lazy" class="rounded-[4px]" src="./img/films.webp" alt="">
-                                <div>
-                                    <h2
-                                        class="text-[16px] leading-[20px] font-semibold text-customDarkGray mb-[4px] dark:text-white">
-                                        Очень странные дела</h2>
-                                    <span
-                                        class="text-[14px] leading-[20px] font-medium text-customDarkGray opacity-50 dark:text-white">Stranger
-                                        things, 2016—2024</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="pb-4 border-b border-customGrayBorder dark:border-customGrayBorder">
-                            <a href="#" class="flex items-center gap-4" aria-label="Перейти к фильму...">
-                                <img loading="lazy" class="rounded-[4px]" src="./img/films.webp" alt="">
-                                <div>
-                                    <h2
-                                        class="text-[16px] leading-[20px] font-semibold text-customDarkGray mb-[4px] dark:text-white">
-                                        Очень странные дела</h2>
-                                    <span
-                                        class="text-[14px] leading-[20px] font-medium text-customDarkGray opacity-50 dark:text-white">Stranger
-                                        things, 2016—2024</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="pb-4 border-b border-customGrayBorder dark:border-customGrayBorder">
-                            <a href="#" class="flex items-center gap-4" aria-label="Перейти к фильму...">
-                                <img loading="lazy" class="rounded-[4px]" src="./img/films.webp" alt="">
-                                <div>
-                                    <h2
-                                        class="text-[16px] leading-[20px] font-semibold text-customDarkGray mb-[4px] dark:text-white">
-                                        Очень странные дела</h2>
-                                    <span
-                                        class="text-[14px] leading-[20px] font-medium text-customDarkGray opacity-50 dark:text-white">Stranger
-                                        things, 2016—2024</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="pb-4 border-b border-customGrayBorder dark:border-customGrayBorder">
-                            <a href="#" class="flex items-center gap-4" aria-label="Перейти к фильму...">
-                                <img loading="lazy" class="rounded-[4px]" src="./img/films.webp" alt="">
-                                <div>
-                                    <h2
-                                        class="text-[16px] leading-[20px] font-semibold text-customDarkGray mb-[4px] dark:text-white">
-                                        Очень странные дела</h2>
-                                    <span
-                                        class="text-[14px] leading-[20px] font-medium text-customDarkGray opacity-50 dark:text-white">Stranger
-                                        things, 2016—2024</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="pb-4 border-b border-customGrayBorder dark:border-customGrayBorder">
-                            <a href="#" class="flex items-center gap-4" aria-label="Перейти к фильму...">
-                                <img loading="lazy" class="rounded-[4px]" src="./img/films.webp" alt="">
-                                <div>
-                                    <h2
-                                        class="text-[16px] leading-[20px] font-semibold text-customDarkGray mb-[4px] dark:text-white">
-                                        Очень странные дела</h2>
-                                    <span
-                                        class="text-[14px] leading-[20px] font-medium text-customDarkGray opacity-50 dark:text-white">Stranger
-                                        things, 2016—2024</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main class="mb-[56px] sm:mb-[47px] lg:mb-14 xl:mb-[60px]">
-        <section class="px-4 sm:px-6 lg:px-8 xl:px-0 xl:max-w-[1100px] xl:mx-auto mb-12 sm:mb-[56px]  sm:px-6">
-            <div class="flex flex-col gap-6 sm:gap-8 lg:flex-row-reverse lg:justify-between lg:gap-[40px]">
-                <div class="flex flex-col gap-[34px] max-w-[339px] w-full mx-auto lg:max-w-[257px] lg:shrink-0 lg:gap-[38px] lg:mx-0">
-                    <div class="relative">
-                        <img class="rounded-[16px] max-w-[288px] w-full max-h-[429px] h-[100%] mx-auto sm:max-w-[339px] sm:max-h-[504px] lg:max-w-[257px] lg:max-h-[382px]"  src="./img/film.webp" alt="">
-                        <div
-                            class="absolute -bottom-[50px] left-1/2 -translate-x-1/2 bg-white w-[66px] h-[66px] flex items-center justify-center rounded-full bg-ratingCircle bg-no-repeat bg-center dark:bg-darkModeBg dark:bg-ratingCircleDark">
-                            <span
-                                class="text-[22px] leading-[20px] text-customDarkGray font-semibold dark:text-white">8.4</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center relative gap-[7px]">
-                        <button
-                            class="flex items-center justify-center gap-2 bg-white w-full border border-customLightGray rounded-[16px] transition-colors py-[9px] dark:bg-darkModeMainColor dark:border-darkModeMainColor group hover:border-customLightGrayHover active:border-customGreen dark:hover:border-customLightGrayHover2 dark:active:border-customGreen" aria-label="Поставить лайк">
-                            <svg class="group-hover:fill-likeFill group-active:fill-likeFill  transition-colors"
-                                width="20" height="20" viewBox="0 0 20 20" fill="none"
+<body>
+    <div class="wrapper">
+        <div class="overlay" id="overlay"></div>
+        <header class="header">
+            <div class="container">
+                <div class="header__flex">
+                    <a href="./index.html" class="header__logo" aria-label="На главну">
+                        Epc Hunters
+                    </a>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a class="header__link" href="#" aria-label="Перейти куда-то...">
+                                    Loren Ipsum
+                                </a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="#" aria-label="Перейти куда-то...">
+                                    Loren Ipsum
+                                </a>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="#" aria-label="Перейти куда-то...">
+                                    Loren Ipsum
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="#" class="header__link header__link-2" aria-label="Перейти куда-то...">
+                            Loren Ipsum
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12.0834 2.49682C11.4472 1.5425 10.5303 1.30156 9.78333 1.29503C8.75212 1.28602 8.5115 1.84146 8.38795 2.80003C8.14347 4.69685 7.37656 8.0006 5.00012 8.0006H3.94C3.05542 8.0006 2.61313 8.0006 2.32699 8.26097C2.30375 8.28212 2.28152 8.30435 2.26037 8.32759C2 8.61373 2 9.05602 2 9.9406V16.5606C2 17.4452 2 17.8875 2.26037 18.1736C2.28152 18.1969 2.30375 18.2191 2.32699 18.2402C2.61313 18.5006 3.05542 18.5006 3.94 18.5006L13.3992 18.5006C15.0789 18.5006 15.9188 18.5006 16.6279 18.0058C16.6795 17.9698 16.7497 17.9166 16.7983 17.8767C17.4668 17.3284 17.6582 16.6486 18.0411 15.2891C18.2931 14.3944 18.4474 13.5579 18.5333 12.7153C18.7449 10.6383 18.8507 9.59973 18.1299 8.71647C18.0774 8.65215 18.0037 8.57052 17.945 8.51179C17.2019 7.76778 16.1076 7.71003 14.0299 7.70554C13.7258 7.70491 13.4041 7.705 13.0827 7.7051C12.9671 7.70513 12.8515 7.70516 12.7367 7.70516C12.5166 7.70516 12.5033 7.6891 12.5467 7.47283C12.9389 5.51686 13.1956 4.16507 12.0834 2.49682ZM13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346L5.00012 9.5006L3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999H6.00012L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579Z"
-                                    fill="url(#paint2_linear_159_389)" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M12.0834 2.49682C11.4472 1.5425 10.5303 1.30156 9.78333 1.29503C8.75212 1.28602 8.5115 1.84146 8.38795 2.80003C8.14347 4.69685 7.37656 8.0006 5.00012 8.0006H3.94C3.05542 8.0006 2.61313 8.0006 2.32699 8.26097C2.30375 8.28212 2.28152 8.30435 2.26037 8.32759C2 8.61373 2 9.05602 2 9.9406V16.5606C2 17.4452 2 17.8875 2.26037 18.1736C2.28152 18.1969 2.30375 18.2191 2.32699 18.2402C2.61313 18.5006 3.05542 18.5006 3.94 18.5006L13.3992 18.5006C15.0789 18.5006 15.9188 18.5006 16.6279 18.0058C16.6795 17.9698 16.7497 17.9166 16.7983 17.8767C17.4668 17.3284 17.6582 16.6486 18.0411 15.2891C18.2931 14.3944 18.4474 13.5579 18.5333 12.7153C18.7449 10.6383 18.8507 9.59973 18.1299 8.71647C18.0774 8.65215 18.0037 8.57052 17.945 8.51179C17.2019 7.76778 16.1076 7.71003 14.0299 7.70554C13.7258 7.70491 13.4041 7.705 13.0827 7.7051C12.9671 7.70513 12.8515 7.70516 12.7367 7.70516C12.5166 7.70516 12.5033 7.6891 12.5467 7.47283C12.9389 5.51686 13.1956 4.16507 12.0834 2.49682ZM13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346L5.00012 9.5006L3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999H6.00012L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579Z"
-                                    fill="url(#paint0_linear_159_389)" />
                                 <path
-                                    d="M16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346V16.999L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109Z"
-                                    fill="url(#paint2_linear_159_389)" />
-                                <path
-                                    class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                    d="M16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346V16.999L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109Z"
-                                    fill="url(#paint1_linear_159_389)" />
-                                <path d="M6.00012 16.999V9.37346L5.00012 9.5006V16.999H6.00012Z"
-                                    fill="url(#paint2_linear_159_389)" />
-                                <path
-                                    class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                    d="M6.00012 16.999V9.37346L5.00012 9.5006V16.999H6.00012Z"
-                                    fill="url(#paint2_linear_159_389)" />
-                                <path
-                                    d="M3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999V9.5006L3.50165 9.50225Z"
-                                    fill="url(#paint2_linear_159_389)" />
-                                <path
-                                    class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                    d="M3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999V9.5006L3.50165 9.50225Z"
-                                    fill="url(#paint3_linear_159_389)" />
-                                <defs>
-                                    <linearGradient x1="3.97293" y1="2.12349" x2="16.1023"
-                                        y2="14.6814" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#77E067" />
-                                        <stop offset="1" stop-color="#43C230" />
-                                    </linearGradient>
-                                    <linearGradient id="paint1_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                        y2="14.6814" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#77E067" />
-                                        <stop offset="1" stop-color="#43C230" />
-                                    </linearGradient>
-                                    <linearGradient id="paint2_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                        y2="14.6814" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#77E067" />
-                                        <stop offset="1" stop-color="#43C230" />
-                                    </linearGradient>
-                                    <linearGradient id="paint3_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                        y2="14.6814" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#77E067" />
-                                        <stop offset="1" stop-color="#43C230" />
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-
-                            <span
-                                class="font-medium font-Gilroy text-[16px] leading-[150%] text-customDarkGray dark:text-white">6014</span>
-                        </button>
-                        <button
-                            class="flex items-center justify-center gap-2 bg-white w-full border border-customLightGray rounded-[16px] transition-colors py-[9px] dark:bg-darkModeMainColor dark:border-darkModeMainColor group hover:border-dislikeColor active:border-dislikeColor dark:hover:border-dislikeColor dark:active:border-dislikeColor" aria-label="Поставить дизлайк">
-                            <svg class="group-hover:fill-dislikeColor group-active:fill-dislikeColor  transition-colors"
-                                width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M8.41658 17.5032C9.05281 18.4575 9.96966 18.6984 10.7167 18.705C11.7479 18.714 11.9885 18.1585 12.1121 17.2C12.3565 15.3032 13.1234 11.9994 15.4999 11.9994H16.56C17.4446 11.9994 17.8869 11.9994 18.173 11.739C18.1963 11.7179 18.2185 11.6956 18.2396 11.6724C18.5 11.3863 18.5 10.944 18.5 10.0594V3.43939C18.5 2.55481 18.5 2.11252 18.2396 1.82638C18.2185 1.80314 18.1963 1.78091 18.173 1.75976C17.8869 1.4994 17.4446 1.4994 16.56 1.4994L7.1008 1.4994C5.42107 1.4994 4.5812 1.4994 3.87214 1.99418C3.82054 2.03018 3.75032 2.08336 3.70167 2.12327C3.0332 2.67164 2.84176 3.35138 2.45887 4.71086C2.20689 5.60556 2.05257 6.4421 1.96672 7.2847C1.7551 9.36174 1.64928 10.4003 2.37009 11.2835C2.42257 11.3479 2.4963 11.4295 2.55497 11.4882C3.29809 12.2322 4.39241 12.29 6.47015 12.2945C6.77418 12.2951 7.09586 12.295 7.41727 12.2949C7.53292 12.2949 7.64853 12.2948 7.76328 12.2948C7.98343 12.2948 7.99671 12.3109 7.95335 12.5272C7.56114 14.4831 7.30441 15.8349 8.41658 17.5032ZM7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265L15.4999 10.4994L16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104H14.4999L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942Z"
-                                    fill="#2B2B2B" />
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M8.41658 17.5032C9.05281 18.4575 9.96966 18.6984 10.7167 18.705C11.7479 18.714 11.9885 18.1585 12.1121 17.2C12.3565 15.3032 13.1234 11.9994 15.4999 11.9994H16.56C17.4446 11.9994 17.8869 11.9994 18.173 11.739C18.1963 11.7179 18.2185 11.6956 18.2396 11.6724C18.5 11.3863 18.5 10.944 18.5 10.0594V3.43939C18.5 2.55481 18.5 2.11252 18.2396 1.82638C18.2185 1.80314 18.1963 1.78091 18.173 1.75976C17.8869 1.4994 17.4446 1.4994 16.56 1.4994L7.1008 1.4994C5.42107 1.4994 4.5812 1.4994 3.87214 1.99418C3.82054 2.03018 3.75032 2.08336 3.70167 2.12327C3.0332 2.67164 2.84176 3.35138 2.45887 4.71086C2.20689 5.60556 2.05257 6.4421 1.96672 7.2847C1.7551 9.36174 1.64928 10.4003 2.37009 11.2835C2.42257 11.3479 2.4963 11.4295 2.55497 11.4882C3.29809 12.2322 4.39241 12.29 6.47015 12.2945C6.77418 12.2951 7.09586 12.295 7.41727 12.2949C7.53292 12.2949 7.64853 12.2948 7.76328 12.2948C7.98343 12.2948 7.99671 12.3109 7.95335 12.5272C7.56114 14.4831 7.30441 15.8349 8.41658 17.5032ZM7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265L15.4999 10.4994L16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104H14.4999L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942Z"
-                                    fill="#FF7D7D" />
-                                <path
-                                    class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                    d="M4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265V3.00104L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089Z"
-                                    fill="#2B2B2B" />
-                                <path
-                                    class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                    d="M4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265V3.00104L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089Z"
-                                    fill="#FF7D7D" />
-                                <path
-                                    class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                    d="M14.4999 3.00104V10.6265L15.4999 10.4994V3.00104H14.4999Z" fill="#2B2B2B" />
-                                <path
-                                    class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                    d="M14.4999 3.00104V10.6265L15.4999 10.4994V3.00104H14.4999Z" fill="#FF7D7D" />
-                                <path
-                                    class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                    d="M16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104V10.4994L16.9983 10.4977Z"
-                                    fill="#2B2B2B" />
-                                <path
-                                    class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                    d="M16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104V10.4994L16.9983 10.4977Z"
-                                    fill="#FF7D7D" />
-                            </svg>
-
-                            <span
-                                class="font-medium font-Gilroy text-[16px] leading-[150%] text-customDarkGray dark:text-white">1514</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="lg:max-w-[679px] lg:w-full">
-                    <h1 class="text-[32px] leading-[120%] font-bold text-customDarkGray mb-[15px] sm:text-[48px] sm:mb-[24px] dark:text-white">Пацаны. 1 сезон 1
-                        серия</h1>
-                    <div class="flex gap-x-4 gap-y-2 items-center flex-wrap mb-6 sm:gap-6">
-                        <div
-                            class="flex items-center gap-[18px] after:content-[''] after:w-[1px] after:h-[13.5px] after:bg-black after:opacity-10 dark:after:bg-white dark:after:opacity-20">
-                            <span
-                                class="flex items-center gap-2 font-medium text-[16px] leading-[150%] text-customDarkGray dark:text-white">
-                                <svg class="w-[30px] h-[20px]">
-                                    <use href="./img/svg/sprite.svg#imdb"></use>
-                                </svg>
-                                8.7
-                            </span>
-                            <span
-                                class="flex items-center gap-2 font-medium text-[16px] leading-[150%] text-customDarkGray sm:mr-[6px] dark:text-white">
-                                <svg class="w-[22px] h-[20px]">
-                                    <use href="./img/svg/sprite.svg#kp"></use>
-                                </svg>
-                                8.3
-                            </span>
-                        </div>
-                        <span class="font-medium text-[16px] leading-[150%] text-customDarkGray sm:flex sm:items-center sm:gap-4 sm:after:content-[''] sm:after:w-[1px] sm:after:h-[13.5px] sm:after:bg-black sm:after:opacity-10 dark:text-white dark:after:bg-white dark:after:opacity-20">The Boys</span>
-                        <span
-                            class="font-medium text-[16px] leading-[150%] text-customDarkGray gap-4 flex items-center after:content-[''] after:w-[1px] after:h-[13.5px] after:bg-black after:opacity-10 dark:text-white dark:after:bg-white dark:after:opacity-20">4
-                            сезона</span>
-                        <span class="font-medium text-[16px] leading-[150%] text-customDarkGray dark:text-white dark:after:bg-white dark:after:opacity-20">2019 - 2024</span>
-                    </div>
-                    <span class="font-medium text-[16px] leading-[150%] text-customLightGray2 mb-1 dark:text-customLightGray2 dark:opacity-40">Описание</span>
-                    <p id="descr"
-                        class="font-normal text-[16px] leading-[140%] text-customDarkGray mb-2 text-ellipsis overflow-hidden line-clamp-4 sm:line-clamp-[8] dark:text-white dark:opacity-80">
-                        Супергерои в привычном понимании - это защитники, рыцари в белых плащах, спасающие простых
-                        смертных от любых угроз. Они безупречны и чисты. Но что если это не так? Что будет, если любимые
-                        всеми герои превратятся в жадных до славы и похоти гордецов, которым абсолютно наплевать на
-                        людей? Именно об этом рассказывается в сериале “Пацаны”. Здешние защитники тратят своё время на
-                        шумные вечеринки и пресс конференции. Их не волнуют жертвы и катастрофы.Они могут бросить
-                        спасение человека на полпути или стрелять лазерами в толпу недовольных граждан. Противостоять им
-                        будет компания энтузиастов во главе с Мясником, который жаждет отомстить за гибель своей жены.
-                    </p>
-                    <button id="moreText" class="font-normal text-[16px] leading-[140%] text-customDarkGray underline mb-6 sm:mb-12 dark:text-white dark:opacity-50" aria-label="Больше текста">Читать
-                        всё</button>
-                    <div class="lg:flex lg:gap-2 lg:items-center">
-                        <button class="flex items-center justify-center gap-[10px] bg-greenGradient py-[10px] rounded-[16px] w-full mb-2 after:bg-transparent after:content-[''] hover:after:bg-customBlackOpacity after:absolute after:inset-0 relative after:rounded-[16px] after:transition-colors lg:max-w-[318px] lg:mb-0" aria-label="Смотреть">
-                            <svg class="w-[36px] h-[36px] relative z-10" width="36" height="36" viewBox="0 0 36 36" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="36" height="36" rx="18" fill="white" fill-opacity="0.1" />
-                                <path
-                                    d="M24.724 14.6292C27.0981 16.146 28.2852 16.9044 28.2852 18C28.2852 19.0956 27.0981 19.854 24.724 21.3708L18.1536 25.5686C15.4367 27.3043 14.0783 28.1722 13.0392 27.603C12 27.0337 12 25.4217 12 22.1978L12 13.8022C12 10.5783 12 8.96626 13.0392 8.39704C14.0783 7.82781 15.4367 8.69569 18.1536 10.4314L24.724 14.6292Z"
+                                    d="M7.9912 2H14V8.0088H13.2489V3.28509L2.52812 14L2 13.4719L12.7149 2.7511H7.9912V2Z"
                                     fill="white" />
                             </svg>
-                            <span class="font-medium text-[16px] leading-[20px] text-white relative z-10">Смотреть 1 серию 1 сезон</span>
+                        </a>
+                    </nav>
+                    <div class="header__flexbox">
+                        <a href="#" class="header__link header__link-3" aria-label="Перейти куда-то...">Loren Ipsum</a>
+                        <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
+                            <span></span><span></span><span></span>
                         </button>
-                        <div class="flex items-center gap-2 lg:w-full">
-                            <a href="#about" class="flex items-center justify-center sm:gap-[10px] text-[16px] leading-[20px] text-customDarkGray py-[18px] lg:py-[16px] rounded-[16px] w-full bg-customGray hover:bg-customGrayHover transition-colors dark:bg-darkModeMainColor dark:text-white dark:hover:bg-darkModeMainColorHover" aria-label="О сериале">
-                                <svg class="hidden sm:block" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M2.8999 7.43998C2.8999 6.09585 2.8999 5.42379 3.16149 4.9104C3.39158 4.45881 3.75874 4.09166 4.21033 3.86156C4.72371 3.59998 5.39578 3.59998 6.7399 3.59998H18.2599C19.604 3.59998 20.2761 3.59998 20.7895 3.86156C21.2411 4.09166 21.6082 4.45881 21.8383 4.9104C22.0999 5.42379 22.0999 6.09585 22.0999 7.43998V13.56C22.0999 14.9041 22.0999 15.5762 21.8383 16.0896C21.6082 16.5411 21.2411 16.9083 20.7895 17.1384C20.2761 17.4 19.604 17.4 18.2599 17.4H14.4199V18.9692H18.5C18.8976 18.9692 19.22 19.2916 19.22 19.6892C19.22 20.0869 18.8976 20.4092 18.5 20.4092H6.5C6.10235 20.4092 5.78 20.0869 5.78 19.6892C5.78 19.2916 6.10235 18.9692 6.5 18.9692H10.5799V17.4H6.7399C5.39578 17.4 4.72371 17.4 4.21033 17.1384C3.75874 16.9083 3.39158 16.5411 3.16149 16.0896C2.8999 15.5762 2.8999 14.9041 2.8999 13.56V7.43998ZM6.7399 5.39998H18.2599C18.9617 5.39998 19.3797 5.40138 19.6896 5.4267C19.8788 5.44215 19.9583 5.46254 19.9796 5.46915C20.0867 5.5256 20.1743 5.61315 20.2307 5.72029C20.2373 5.7416 20.2577 5.8211 20.2732 6.01024C20.2985 6.32014 20.2999 6.73821 20.2999 7.43998V13.56C20.2999 14.2617 20.2985 14.6798 20.2732 14.9897L20.2723 15H4.72748L4.72662 14.9897C4.7013 14.6798 4.6999 14.2617 4.6999 13.56V7.43998C4.6999 6.73821 4.7013 6.32014 4.72662 6.01024C4.74208 5.8211 4.76247 5.7416 4.76908 5.72029C4.82553 5.61315 4.91308 5.5256 5.02021 5.46915C5.04152 5.46254 5.12102 5.44215 5.31016 5.4267C5.62007 5.40138 6.03814 5.39998 6.7399 5.39998ZM19.9858 5.47132L19.9822 5.46998C19.9847 5.47082 19.9858 5.47132 19.9858 5.47132ZM20.2286 5.71407C20.2286 5.71407 20.2291 5.71515 20.2299 5.71771L20.2286 5.71407ZM4.77125 5.71407L4.7699 5.71771C4.77075 5.71515 4.77125 5.71407 4.77125 5.71407ZM5.014 5.47132C5.014 5.47132 5.01507 5.47082 5.01764 5.46998L5.014 5.47132Z" fill="#2B2B2B"/>
-                                    <path d="M13.81 9.76722C14.3261 10.097 14.5842 10.2618 14.5842 10.5C14.5842 10.7382 14.3261 10.903 13.81 11.2328L12.3817 12.1453C11.7911 12.5227 11.4958 12.7113 11.2698 12.5876C11.0439 12.4639 11.0439 12.1134 11.0439 11.4126L11.0439 9.58744C11.0439 8.88658 11.0439 8.53614 11.2698 8.4124C11.4958 8.28865 11.7911 8.47732 12.3817 8.85466L13.81 9.76722Z" fill="#2B2B2B"/>
-                                    </svg>
-                                    
-                                Подробнее о сериале
-                            </a>
-                            <a href="#com" class="bg-customGray max-w-[56px] h-[56px] sm:max-w-[72px] w-full flex items-center justify-center rounded-[16px] hover:bg-customGrayHover transition-colors dark:bg-darkModeMainColor dark:hover:bg-darkModeMainColorHover" aria-label="Написать коментарии">
-                                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path class="dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M8.16466 17.2909C8.08845 16.9873 7.82103 16.8291 7.2862 16.5128C4.88807 15.2957 3.5 13.2749 3.5 11.1059C3.5 7.73649 6.99594 4.5 12 4.5C17.0041 4.5 20.5 7.73649 20.5 11.1059C20.5 14.4505 17.0349 17.5941 12 17.5941L11.9854 17.5941C11.7592 17.5941 11.2602 17.5939 10.8524 17.7151C10.5101 17.8168 10.2315 17.9765 9.92187 18.1813C8.91276 18.849 7.43256 19.6276 6.7 19.93C6.7 19.93 7.28377 19.174 7.80256 18.3178C8.09476 17.8356 8.24086 17.5945 8.16466 17.2909ZM2 11.1059C2 13.9728 3.8362 16.4439 6.60733 17.8504C6.4245 18.2391 5.98799 18.866 5.54547 19.5015C5.42923 19.6685 5.31258 19.836 5.2 20C4.85106 20.5082 4.67996 20.9639 5.04706 21.3176C5.65712 21.9055 7.90909 21.3117 10.7496 19.4323C11.0156 19.2563 11.1487 19.1919 11.2797 19.1529C11.4706 19.0962 11.7644 19.0941 12 19.0941C17.5228 19.0941 22 15.5826 22 11.1059C22 6.62913 17.5228 3 12 3C6.47715 3 2 6.62913 2 11.1059ZM8 8.5C7.72386 8.5 7.5 8.72386 7.5 9C7.5 9.27614 7.72386 9.5 8 9.5H16C16.2761 9.5 16.5 9.27614 16.5 9C16.5 8.72386 16.2761 8.5 16 8.5H8ZM7.5 12C7.5 11.7239 7.72386 11.5 8 11.5H12C12.2761 11.5 12.5 11.7239 12.5 12C12.5 12.2761 12.2761 12.5 12 12.5H8C7.72386 12.5 7.5 12.2761 7.5 12Z" fill="#2B2B2B"/>
-                                    </svg>                                
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="max-w-[1100px] mx-auto mb-12 sm:px-6 lg:px-8 xl:px-0">
-            <h2 class="hidden">Плеер</h2>
-            <div class="flex bg-black">
-                <button class="bg-greenGradient max-w-[93px] w-full h-10 text-white text-[16px] leading-[20px] font-medium" aria-label="Выбрать плеер 1">Плеер
-                    1</button>
-                <button class="bg-customDarkGray max-w-[93px] w-full h-10 text-white text-[16px] leading-[20px] font-medium" aria-label="Выбрать плеер 2">Плеер
-                    2</button>
-                <button class="bg-customDarkGray max-w-[93px] w-full h-10 text-white text-[16px] leading-[20px] font-medium" aria-label="Выбрать плеер 3">Плеер
-                    3</button>
-            </div>
-            <iframe title="Плеер" class="w-full min-h-[265px] mb-[7px] sm:min-h-[378px] lg:min-h-[516px] xl:min-h-[580px] bg-black"></iframe>
-            <div class="grid grid-cols-3 gap-2 w-full px-4 sm:grid-cols-6 lg:px-0">
-                <button class="flex flex-col gap-1 bg-transparent border border-customLightGray rounded-[16px] items-center justify-center py-2 lg:flex-row lg:gap-2 lg:py-[12px] dark:border-customLightGrayHover3 hover:border-customLightGrayHover active:border-customGreen dark:active:border-customGreen dark:hover:border-customLightGrayHover2 transition-colors" aria-label="Поставить реакцию">
-                    <img loading="lazy" class="w-[24px] h-[24px]" src="./img/reaction-1.webp" alt="">
-                    <span class="font-medium text-[16px] leading-[150%] text-customDarkGray dark:text-white">6014</span>
-                </button>
-                <button class="flex flex-col gap-1 bg-transparent border border-customLightGray rounded-[16px] items-center justify-center py-2 lg:flex-row lg:gap-2 lg:py-[12px] dark:border-customLightGrayHover3 hover:border-customLightGrayHover active:border-customGreen dark:active:border-customGreen dark:hover:border-customLightGrayHover2 transition-colors" aria-label="Поставить реакцию">
-                    <img loading="lazy" class="w-[24px] h-[24px]" src="./img/reaction-2.webp" alt="">
-                    <span class="font-medium text-[16px] leading-[150%] text-customDarkGray dark:text-white">6014</span>
-                </button>
-                <button class="flex flex-col gap-1 bg-transparent border border-customLightGray rounded-[16px] items-center justify-center py-2 lg:flex-row lg:gap-2 lg:py-[12px] dark:border-customLightGrayHover3 hover:border-customLightGrayHover active:border-customGreen dark:active:border-customGreen dark:hover:border-customLightGrayHover2 transition-colors" aria-label="Поставить реакцию">
-                    <img loading="lazy" class="w-[24px] h-[24px]" src="./img/reaction-3.webp" alt="">
-                    <span class="font-medium text-[16px] leading-[150%] text-customDarkGray dark:text-white">6014</span>
-                </button>
-                <button class="flex flex-col gap-1 bg-transparent border border-customLightGray rounded-[16px] items-center justify-center py-2 lg:flex-row lg:gap-2 lg:py-[12px] dark:border-customLightGrayHover3 hover:border-customLightGrayHover active:border-customGreen dark:active:border-customGreen dark:hover:border-customLightGrayHover2 transition-colors" aria-label="Поставить реакцию">
-                    <img loading="lazy" class="w-[24px] h-[24px]" src="./img/reaction-4.webp" alt="">
-                    <span class="font-medium text-[16px] leading-[150%] text-customDarkGray dark:text-white">6014</span>
-                </button>
-                <button class="flex flex-col gap-1 bg-transparent border border-customLightGray rounded-[16px] items-center justify-center py-2 lg:flex-row lg:gap-2 lg:py-[12px] dark:border-customLightGrayHover3 hover:border-customLightGrayHover active:border-customGreen dark:active:border-customGreen dark:hover:border-customLightGrayHover2 transition-colors" aria-label="Поставить реакцию">
-                    <img loading="lazy" class="w-[24px] h-[24px]" src="./img/reaction-5.webp" alt="">
-                    <span class="font-medium text-[16px] leading-[150%] text-customDarkGray dark:text-white">6014</span>
-                </button>
-                <button class="flex flex-col gap-1 bg-transparent border border-customLightGray rounded-[16px] items-center justify-center py-2 lg:flex-row lg:gap-2 lg:py-[12px] dark:border-customLightGrayHover3 hover:border-customLightGrayHover active:border-customGreen dark:active:border-customGreen dark:hover:border-customLightGrayHover2 transition-colors" aria-label="Поставить реакцию">
-                    <img loading="lazy" class="w-[24px] h-[24px]" src="./img/reaction-6.webp" alt="">
-                    <span class="font-medium text-[16px] leading-[150%] text-customDarkGray dark:text-white">6014</span>
-                </button>
-            </div>
-        </section>
-        <section class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-10 lg:mb-14 xl:mb-[60px] xl:px-0">
-            <h2 class="font-semibold text-[24px] leading-[120%] text-customDarkGray mb-6 sm:text-[28px] dark:text-white">Выбрать серию</h2>
-            <div class="sm:flex sm:items-center sm:justify-between sm:w-full sm:mb-6">
-                <div class="sm:flex sm:items-center sm:gap-4 sm:w-full">
-                    <span class="block font-medium text-[16px] leading-[150%] text-customDarkGray mb-2 sm:mb-0 dark:text-white">Сезоны</span>
-                    <div class="flex items-center gap-2 mb-6 sm:w-full sm:mb-0">
-                        <button data-tab-btn="1" class="tab-btn active-tab max-w-[57px] w-full min-h-[48px] rounded-[16px] border border-customGrayBorder text-customDarkGray font-medium text-[16px] leading-[150%] flex items-center justify-center dark:border-customLightGrayHover3 hover:border-customLightGrayHover dark:hover:border-customLightGrayHover2 dark:text-white transition-colors" aria-label="Выбрать сезон">1</button>
-                        <button data-tab-btn="2" class="tab-btn max-w-[57px] w-full min-h-[48px] rounded-[16px] border border-customGrayBorder text-customDarkGray font-medium text-[16px] leading-[150%] flex items-center justify-center dark:border-customLightGrayHover3 hover:border-customLightGrayHover dark:hover:border-customLightGrayHover2 dark:text-white transition-colors" aria-label="Выбрать сезон">2</button>
-                        <button data-tab-btn="3" class="tab-btn max-w-[57px] w-full min-h-[48px] rounded-[16px] border border-customGrayBorder text-customDarkGray font-medium text-[16px] leading-[150%] flex items-center justify-center dark:border-customLightGrayHover3 hover:border-customLightGrayHover dark:hover:border-customLightGrayHover2 dark:text-white transition-colors" aria-label="Выбрать сезон">3</button>
-                        <button data-tab-btn="4" class="tab-btn max-w-[57px] w-full min-h-[48px] rounded-[16px] border border-customGrayBorder text-customDarkGray font-medium text-[16px] leading-[150%] flex items-center justify-center dark:border-customLightGrayHover3 hover:border-customLightGrayHover dark:hover:border-customLightGrayHover2 dark:text-white transition-colors" aria-label="Выбрать сезон">4</button>
-                    </div>
-                </div>
-                <div class="hidden sm:flex sm:items-center sm:gap-[45px]">
-                    <button class="swiper-prev rotate-180 swiper-button-disabled" aria-label="Предыдущий слайд" disabled>
-                        <svg  width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M0.292895 23.7071C0.683419 24.0976 1.31658 24.0976 1.70711 23.7071L12.7071 12.7071C13.0976 12.3166 13.0976 11.6834 12.7071 11.2929L1.70711 0.292892C1.31658 -0.0976308 0.683417 -0.0976308 0.292893 0.292893C-0.0976311 0.683418 -0.0976311 1.31658 0.292893 1.70711L10.5858 12L0.292894 22.2929C-0.0976298 22.6834 -0.0976298 23.3166 0.292895 23.7071Z" fill="#2B2B2B"/>
-                            </svg>
-                            
-                    </button>
-                    <button class="swiper-next" aria-label="Следующий слайд">
-                        <svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path class="dark:fill-white" fill-rule="evenodd" clip-rule="evenodd" d="M0.292895 23.7071C0.683419 24.0976 1.31658 24.0976 1.70711 23.7071L12.7071 12.7071C13.0976 12.3166 13.0976 11.6834 12.7071 11.2929L1.70711 0.292892C1.31658 -0.0976308 0.683417 -0.0976308 0.292893 0.292893C-0.0976311 0.683418 -0.0976311 1.31658 0.292893 1.70711L10.5858 12L0.292894 22.2929C-0.0976298 22.6834 -0.0976298 23.3166 0.292895 23.7071Z" fill="#2B2B2B"/>
-                            </svg>                            
-                    </button>
-                </div>
-            </div>
-            <div data-tab="1" class="tab-content">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px] ">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-1.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 1 серию 1 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-2.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 2 серию 1 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-3.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 3 серию 1 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-4.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 4 серию 1 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-4.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 4 серию 1 сезон</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div data-tab="2" class="tab-content hidden">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px] ">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-1.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 1 серию 2 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-2.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 2 серию 2 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-3.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 3 серию 2 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-4.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 4 серию 2 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-4.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 4 серию 2 сезон</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div data-tab="3" class="tab-content hidden">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px] ">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-1.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 1 серию 3 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-2.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 2 серию 3 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-3.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 3 серию 3 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-4.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 4 серию 3 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-4.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 4 серию 3 сезон</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div data-tab="4" class="tab-content hidden">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px] ">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-1.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 1 серию 4 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-2.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 2 серию 4 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-3.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 3 серию 4 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-4.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 4 серию 4 сезон</h3>
-                            </a>
-                        </div>
-                        <div class="swiper-slide max-w-[254px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]">
-                            <a href="#" aria-label="Перейти к серии...">
-                                <img loading="lazy" class="rounded-[16px] max-w-[254px] w-full h-[149px] sm:h-[196px] lg:h-[152px] xl:h-[175px] mb-[12px] sm:max-w-[322px] lg:max-w-[233px] xl:max-w-[269px]" src="./img/season-4.webp" alt="">
-                                <h3 class="font-semibold text-customDarkGray text-[16px] leading-[20px] dark:text-white">Смотреть 4 серию 4 сезон</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-14 lg:mb-14 xl:mb-[60px] xl:px-0" id="about">
-            <h2 class="font-semibold text-[24px] leading-[120%] text-customDarkGray mb-6 sm:text-[28px] dark:text-white sm:mb-8">Подробнее о сериале</h2>
-            <span class="font-medium text-[16px] leading-[150%] text-customLightGray2 dark:text-customLightGray2 dark:opacity-40">Оригинальное название</span>
-            <span class="font-normal text-[16px] leading-[150%] text-customDarkGray dark:text-white block mb-2 dark:opacity-80">The Boys</span>
-            <span class="font-medium text-[16px] leading-[150%] text-customLightGray2 dark:text-customLightGray2 dark:opacity-40">Страна</span>
-            <span class="font-normal text-[16px] leading-[150%] text-customDarkGray dark:text-white block mb-2 dark:opacity-80">США</span>
-            <span class="font-medium text-[16px] leading-[150%] text-customLightGray2 dark:text-customLightGray2 dark:opacity-40">Премьера</span>
-            <span class="font-normal text-[16px] leading-[150%] text-customDarkGray dark:text-white block mb-2 dark:opacity-80">26 июля 2019</span>
-            <span class="font-medium text-[16px] leading-[150%] text-customLightGray2 dark:text-customLightGray2 dark:opacity-40">Режиссер</span>
-            <span class="font-normal text-[16px] leading-[150%] text-customDarkGray dark:text-white block mb-2 dark:opacity-80">Филип Сгриккиа, Дэниэл Эттиэс, Эрик Крипке</span>
-            <span class="font-medium text-[16px] leading-[150%] text-customLightGray2 dark:text-customLightGray2 dark:opacity-40">Актеры</span>
-            <span class="font-normal text-[16px] leading-[150%] text-customDarkGray dark:text-white block mb-2 dark:opacity-80">Карл Урбан, Джек Куэйд, Энтони Старр, Эрин Мориарти, Доминик МакЭллигот, Джесси Ашер, Лас Алонсо, Чейс Кроуфорд, Томер Капон, Карен Фукухара</span>
-        </section>
-        <section id="com" class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-14 lg:mb-14 xl:mb-[60px] xl:px-0">
-            <div class="flex gap-1 items-end mb-6 sm:mb-8 sm:gap-4">
-                <h2 class="font-semibold text-[24px] leading-[120%] text-customDarkGray sm:text-[28px] dark:text-white max-w-[155px] sm:max-w-[max-content]">Отзывы и комментарии</h2> 
-                <span class="font-normal text-[20px] leading-[120%] text-customDarkGray relative opacity-50 sm:text-[24px]">8</span>
-            </div> 
-            <div class="flex flex-col gap-8 xl:flex-row-reverse xl:items-start xl:gap-6">
-                <div class="pt-4 pb-6 px-6 bg-customGray rounded-[24px] dark:bg-darkModeMainColor sm:pt-6 sm:px-8 sm:pb-8 sm:mb-2 xl:max-w-[397px] xl:w-full xl:shrink-0">
-                    <h3 class="font-semibold text-[20px] leading-[120%] text-customDarkGray mb-6  dark:text-white">Оставить комментарий</h3>
-                    <form action="#">
-<input class="bg-white rounded-[8px] h-[48px] pl-4 mb-3 w-full outline-none placeholder:font-Gilroy border border-transparent placeholder:text-[16px] placeholder:leading-[150%] placeholder:text-customDarkGray placeholder:opacity-50 focus:outline-none focus:border-customInputBorder dark:focus:border-customInputBorderDark dark:focus:border dark:bg-customInputBg dark:placeholder:text-white dark:text-white" type="text" placeholder="Ваше имя">
-                        <textarea class="resize-none bg-white rounded-[8px] min-h-[166px] pl-4 pt-3 mb-4 w-full border border-transparent placeholder:font-Gilroy placeholder:text-[16px] placeholder:leading-[150%] placeholder:text-customDarkGray placeholder:opacity-50 focus:outline-none focus:border-customInputBorder dark:focus:border-customInputBorderDark dark:focus:border dark:bg-customInputBg dark:placeholder:text-white dark:text-white"  placeholder="Ваш комментарий..."></textarea>
-                        <button type="submit" class="bg-greenGradient py-[14px] rounded-[16px] w-full after:bg-transparent after:content-[''] hover:after:bg-customBlackOpacity after:absolute after:inset-0 relative after:rounded-[16px] after:transition-colors font-medium text-[16px] leading-[20px] text-white relative z-10 shadow-custom-shadow"  aria-label="Отправить">
-                            <span class='relative z-10'>Отправить</span>
-                        </button>
-                    </form>
-                </div>
-                <div class="flex flex-col gap-8">
-                    <div class="comment flex flex-col gap-2">
-                        <div class="flex gap-3 items-center">
-                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20" cy="20.5" r="20" fill="#C3DFFF"/>
-                                <path d="M17.2763 13.3H23.5963V15.06H19.1163V24.5H17.2763V13.3Z" fill="#2B2B2B"/>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <h1 class="hero__title">Loren Ipsum</h1>
+                    <div class="hero__block swiper">
+                        <ul class="hero__list swiper-wrapper">
+                            <li class="hero__flex hero__item swiper-slide"> 
+                                <div class="hero__flex-2">
+                                    <div class="hero__counter">
+                                        <span class="hero__number">1</span>
+                                    </div>
+                                    <span class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit</span>
+                                </div>
+                                <svg class="hero__svg" width="14" height="31" viewBox="0 0 14 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.57655 0C2.94442 0 0 2.94442 0 6.57655V29.8302V29.8302C0 30.1521 0.425785 30.2667 0.587404 29.9884L12.2639 9.87887C14.8096 5.49452 11.6464 0 6.57655 0V0Z"
+                                        fill="white" />
                                 </svg>
-                            <div class="flex flex-col">
-                                <span class="font-semibold text-[16px] leading-[150%] text-customDarkGray dark:text-white dark:opacity-80 user">Гость Oleg</span>
-                                <span class="font-medium text-[14px] leading-[150%] text-customDarkGray opacity-50 dark:text-white">28 июля 2024 08:05</span>
-                            </div> 
-                        </div>
-                            <p class="font-regular text-[16px] leading-[150%] text-customDarkGray dark:text-white dark:opacity-80">Сезон вышел хорошим, злым, жестоким и с кучей шок-контента. Но общий градус угара, не напряжения, как бы немного стих. И я бы этот сезон назвал переходным, в хорошем смысле. Получается, что у Хоумлендера не было реально равной ему силы. А почти все персонажи, так или иначе разбирались в своих демонах и в отношениях друг с другом.</p>                           
-                            <div class="flex items-center gap-4">
-                                <div class="flex items-center gap-[9px]">
-                                    <button  aria-label="Поставить лайк комментарию">
-                                        <svg class="group hover:fill-likeFill active:fill-likeFill  transition-colors"
-                                        width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M12.0834 2.49682C11.4472 1.5425 10.5303 1.30156 9.78333 1.29503C8.75212 1.28602 8.5115 1.84146 8.38795 2.80003C8.14347 4.69685 7.37656 8.0006 5.00012 8.0006H3.94C3.05542 8.0006 2.61313 8.0006 2.32699 8.26097C2.30375 8.28212 2.28152 8.30435 2.26037 8.32759C2 8.61373 2 9.05602 2 9.9406V16.5606C2 17.4452 2 17.8875 2.26037 18.1736C2.28152 18.1969 2.30375 18.2191 2.32699 18.2402C2.61313 18.5006 3.05542 18.5006 3.94 18.5006L13.3992 18.5006C15.0789 18.5006 15.9188 18.5006 16.6279 18.0058C16.6795 17.9698 16.7497 17.9166 16.7983 17.8767C17.4668 17.3284 17.6582 16.6486 18.0411 15.2891C18.2931 14.3944 18.4474 13.5579 18.5333 12.7153C18.7449 10.6383 18.8507 9.59973 18.1299 8.71647C18.0774 8.65215 18.0037 8.57052 17.945 8.51179C17.2019 7.76778 16.1076 7.71003 14.0299 7.70554C13.7258 7.70491 13.4041 7.705 13.0827 7.7051C12.9671 7.70513 12.8515 7.70516 12.7367 7.70516C12.5166 7.70516 12.5033 7.6891 12.5467 7.47283C12.9389 5.51686 13.1956 4.16507 12.0834 2.49682ZM13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346L5.00012 9.5006L3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999H6.00012L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M12.0834 2.49682C11.4472 1.5425 10.5303 1.30156 9.78333 1.29503C8.75212 1.28602 8.5115 1.84146 8.38795 2.80003C8.14347 4.69685 7.37656 8.0006 5.00012 8.0006H3.94C3.05542 8.0006 2.61313 8.0006 2.32699 8.26097C2.30375 8.28212 2.28152 8.30435 2.26037 8.32759C2 8.61373 2 9.05602 2 9.9406V16.5606C2 17.4452 2 17.8875 2.26037 18.1736C2.28152 18.1969 2.30375 18.2191 2.32699 18.2402C2.61313 18.5006 3.05542 18.5006 3.94 18.5006L13.3992 18.5006C15.0789 18.5006 15.9188 18.5006 16.6279 18.0058C16.6795 17.9698 16.7497 17.9166 16.7983 17.8767C17.4668 17.3284 17.6582 16.6486 18.0411 15.2891C18.2931 14.3944 18.4474 13.5579 18.5333 12.7153C18.7449 10.6383 18.8507 9.59973 18.1299 8.71647C18.0774 8.65215 18.0037 8.57052 17.945 8.51179C17.2019 7.76778 16.1076 7.71003 14.0299 7.70554C13.7258 7.70491 13.4041 7.705 13.0827 7.7051C12.9671 7.70513 12.8515 7.70516 12.7367 7.70516C12.5166 7.70516 12.5033 7.6891 12.5467 7.47283C12.9389 5.51686 13.1956 4.16507 12.0834 2.49682ZM13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346L5.00012 9.5006L3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999H6.00012L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579Z"
-                                            fill="url(#paint0_linear_159_389)" />
-                                        <path
-                                            d="M16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346V16.999L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                            d="M16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346V16.999L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109Z"
-                                            fill="url(#paint1_linear_159_389)" />
-                                        <path d="M6.00012 16.999V9.37346L5.00012 9.5006V16.999H6.00012Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                            d="M6.00012 16.999V9.37346L5.00012 9.5006V16.999H6.00012Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            d="M3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999V9.5006L3.50165 9.50225Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                            d="M3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999V9.5006L3.50165 9.50225Z"
-                                            fill="url(#paint3_linear_159_389)" />
-                                        <defs>
-                                            <linearGradient x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                            <linearGradient id="paint1_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                            <linearGradient id="paint2_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                            <linearGradient id="paint3_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                        </defs>
-                                        </svg>
-                                    </button>
-                                    <span class="text-customGreen font-medium text-[16px] leading-[150%]">+2</span>
-                                    <button aria-label="Поставить дизлайк комментарию">
-                                        <svg class="group hover:fill-dislikeColor active:fill-dislikeColor  transition-colors"
-                                        width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.41658 17.5032C9.05281 18.4575 9.96966 18.6984 10.7167 18.705C11.7479 18.714 11.9885 18.1585 12.1121 17.2C12.3565 15.3032 13.1234 11.9994 15.4999 11.9994H16.56C17.4446 11.9994 17.8869 11.9994 18.173 11.739C18.1963 11.7179 18.2185 11.6956 18.2396 11.6724C18.5 11.3863 18.5 10.944 18.5 10.0594V3.43939C18.5 2.55481 18.5 2.11252 18.2396 1.82638C18.2185 1.80314 18.1963 1.78091 18.173 1.75976C17.8869 1.4994 17.4446 1.4994 16.56 1.4994L7.1008 1.4994C5.42107 1.4994 4.5812 1.4994 3.87214 1.99418C3.82054 2.03018 3.75032 2.08336 3.70167 2.12327C3.0332 2.67164 2.84176 3.35138 2.45887 4.71086C2.20689 5.60556 2.05257 6.4421 1.96672 7.2847C1.7551 9.36174 1.64928 10.4003 2.37009 11.2835C2.42257 11.3479 2.4963 11.4295 2.55497 11.4882C3.29809 12.2322 4.39241 12.29 6.47015 12.2945C6.77418 12.2951 7.09586 12.295 7.41727 12.2949C7.53292 12.2949 7.64853 12.2948 7.76328 12.2948C7.98343 12.2948 7.99671 12.3109 7.95335 12.5272C7.56114 14.4831 7.30441 15.8349 8.41658 17.5032ZM7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265L15.4999 10.4994L16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104H14.4999L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942Z"
-                                            fill="#2B2B2B" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.41658 17.5032C9.05281 18.4575 9.96966 18.6984 10.7167 18.705C11.7479 18.714 11.9885 18.1585 12.1121 17.2C12.3565 15.3032 13.1234 11.9994 15.4999 11.9994H16.56C17.4446 11.9994 17.8869 11.9994 18.173 11.739C18.1963 11.7179 18.2185 11.6956 18.2396 11.6724C18.5 11.3863 18.5 10.944 18.5 10.0594V3.43939C18.5 2.55481 18.5 2.11252 18.2396 1.82638C18.2185 1.80314 18.1963 1.78091 18.173 1.75976C17.8869 1.4994 17.4446 1.4994 16.56 1.4994L7.1008 1.4994C5.42107 1.4994 4.5812 1.4994 3.87214 1.99418C3.82054 2.03018 3.75032 2.08336 3.70167 2.12327C3.0332 2.67164 2.84176 3.35138 2.45887 4.71086C2.20689 5.60556 2.05257 6.4421 1.96672 7.2847C1.7551 9.36174 1.64928 10.4003 2.37009 11.2835C2.42257 11.3479 2.4963 11.4295 2.55497 11.4882C3.29809 12.2322 4.39241 12.29 6.47015 12.2945C6.77418 12.2951 7.09586 12.295 7.41727 12.2949C7.53292 12.2949 7.64853 12.2948 7.76328 12.2948C7.98343 12.2948 7.99671 12.3109 7.95335 12.5272C7.56114 14.4831 7.30441 15.8349 8.41658 17.5032ZM7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265L15.4999 10.4994L16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104H14.4999L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942Z"
-                                            fill="#FF7D7D" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265V3.00104L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089Z"
-                                            fill="#2B2B2B" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265V3.00104L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089Z"
-                                            fill="#FF7D7D" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M14.4999 3.00104V10.6265L15.4999 10.4994V3.00104H14.4999Z" fill="#2B2B2B" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M14.4999 3.00104V10.6265L15.4999 10.4994V3.00104H14.4999Z" fill="#FF7D7D" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104V10.4994L16.9983 10.4977Z"
-                                            fill="#2B2B2B" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104V10.4994L16.9983 10.4977Z"
-                                            fill="#FF7D7D" />
-                                        </svg>
-                                    </button>
+                            </li>
+                            <li class="hero__flex hero__item swiper-slide"> 
+                                <div class="hero__flex-2">
+                                    <div class="hero__counter">
+                                        <span class="hero__number">2</span>
+                                    </div>
+                                    <span class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit</span>
                                 </div>
-                                <button class="text-customPurple font-medium text-[14px] leading-[150%] answer-btn" aria-label="Ответить на комментарии">Ответить</button>
-                                <button class="text-customDarkGray opacity-50 font-medium text-[14px] leading-[150%] dark:text-white dark:opacity-80" aria-label="Пожаловаться на комментарий">Пожаловаться</button>
-                            </div>
-                    </div>
-                    <div class="comment flex flex-col gap-2 pl-6 sm:pl-[52px]">
-                        <div class="flex gap-3 items-center">
-                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20" cy="20.5" r="20" fill="#C7C3FF"/>
-                                <path d="M22.2836 18.676C23.3823 19.284 23.9316 20.1907 23.9316 21.396C23.9316 22.4093 23.5743 23.2147 22.8596 23.812C22.1556 24.4093 21.2063 24.708 20.0116 24.708C18.817 24.708 17.8623 24.4147 17.1476 23.828C16.433 23.2413 16.0756 22.4307 16.0756 21.396C16.0756 20.82 16.2196 20.2973 16.5076 19.828C16.7956 19.348 17.201 18.964 17.7236 18.676C16.881 18.1213 16.4596 17.332 16.4596 16.308C16.4596 15.284 16.801 14.4947 17.4836 13.94C18.177 13.3747 19.0196 13.092 20.0116 13.092C20.993 13.092 21.8303 13.3747 22.5236 13.94C23.217 14.5053 23.5636 15.2947 23.5636 16.308C23.5636 17.3213 23.137 18.1107 22.2836 18.676ZM20.0116 14.836C19.4996 14.836 19.0836 14.9747 18.7636 15.252C18.4543 15.5187 18.2996 15.8973 18.2996 16.388C18.2996 16.8573 18.4596 17.236 18.7796 17.524C19.0996 17.8013 19.5103 17.94 20.0116 17.94C20.5023 17.94 20.9076 17.8013 21.2276 17.524C21.5583 17.236 21.7236 16.8573 21.7236 16.388C21.7236 15.8973 21.5636 15.5187 21.2436 15.252C20.9236 14.9747 20.513 14.836 20.0116 14.836ZM20.0116 22.964C20.641 22.964 21.1423 22.8093 21.5156 22.5C21.8996 22.1907 22.0916 21.764 22.0916 21.22C22.0916 20.676 21.8996 20.2493 21.5156 19.94C21.1423 19.6307 20.641 19.476 20.0116 19.476C19.3716 19.476 18.8596 19.6307 18.4756 19.94C18.1023 20.2493 17.9156 20.676 17.9156 21.22C17.9156 21.764 18.1023 22.1907 18.4756 22.5C18.8596 22.8093 19.3716 22.964 20.0116 22.964Z" fill="#2B2B2B"/>
-                                </svg>                            
-                            <div class="flex flex-col">
-                                <div class="flex items-center gap-2">
-                                    <span class="font-semibold text-[16px] leading-[150%] text-customDarkGray dark:text-white dark:opacity-80 user">845678</span>
-                                    <span class="font-medium text-[14px] leading-[150%] text-customDarkGray opacity-50 dark:text-white">Ответ Гость Олег</span>
-                                </div>
-                                <span class="font-medium text-[14px] leading-[150%] text-customDarkGray opacity-50 dark:text-white">28 июля 2024 08:05</span>
-                            </div> 
-                        </div>
-                            <p class="font-regular text-[16px] leading-[150%] text-customDarkGray dark:text-white dark:opacity-80">Пардон, зря быканул</p>                           
-                            <div class="flex items-center gap-4">
-                                <div class="flex items-center gap-[9px]">
-                                    <button aria-label="Поставить лайк комментарию">
-                                        <svg class="group hover:fill-likeFill active:fill-likeFill  transition-colors"
-                                        width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M12.0834 2.49682C11.4472 1.5425 10.5303 1.30156 9.78333 1.29503C8.75212 1.28602 8.5115 1.84146 8.38795 2.80003C8.14347 4.69685 7.37656 8.0006 5.00012 8.0006H3.94C3.05542 8.0006 2.61313 8.0006 2.32699 8.26097C2.30375 8.28212 2.28152 8.30435 2.26037 8.32759C2 8.61373 2 9.05602 2 9.9406V16.5606C2 17.4452 2 17.8875 2.26037 18.1736C2.28152 18.1969 2.30375 18.2191 2.32699 18.2402C2.61313 18.5006 3.05542 18.5006 3.94 18.5006L13.3992 18.5006C15.0789 18.5006 15.9188 18.5006 16.6279 18.0058C16.6795 17.9698 16.7497 17.9166 16.7983 17.8767C17.4668 17.3284 17.6582 16.6486 18.0411 15.2891C18.2931 14.3944 18.4474 13.5579 18.5333 12.7153C18.7449 10.6383 18.8507 9.59973 18.1299 8.71647C18.0774 8.65215 18.0037 8.57052 17.945 8.51179C17.2019 7.76778 16.1076 7.71003 14.0299 7.70554C13.7258 7.70491 13.4041 7.705 13.0827 7.7051C12.9671 7.70513 12.8515 7.70516 12.7367 7.70516C12.5166 7.70516 12.5033 7.6891 12.5467 7.47283C12.9389 5.51686 13.1956 4.16507 12.0834 2.49682ZM13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346L5.00012 9.5006L3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999H6.00012L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M12.0834 2.49682C11.4472 1.5425 10.5303 1.30156 9.78333 1.29503C8.75212 1.28602 8.5115 1.84146 8.38795 2.80003C8.14347 4.69685 7.37656 8.0006 5.00012 8.0006H3.94C3.05542 8.0006 2.61313 8.0006 2.32699 8.26097C2.30375 8.28212 2.28152 8.30435 2.26037 8.32759C2 8.61373 2 9.05602 2 9.9406V16.5606C2 17.4452 2 17.8875 2.26037 18.1736C2.28152 18.1969 2.30375 18.2191 2.32699 18.2402C2.61313 18.5006 3.05542 18.5006 3.94 18.5006L13.3992 18.5006C15.0789 18.5006 15.9188 18.5006 16.6279 18.0058C16.6795 17.9698 16.7497 17.9166 16.7983 17.8767C17.4668 17.3284 17.6582 16.6486 18.0411 15.2891C18.2931 14.3944 18.4474 13.5579 18.5333 12.7153C18.7449 10.6383 18.8507 9.59973 18.1299 8.71647C18.0774 8.65215 18.0037 8.57052 17.945 8.51179C17.2019 7.76778 16.1076 7.71003 14.0299 7.70554C13.7258 7.70491 13.4041 7.705 13.0827 7.7051C12.9671 7.70513 12.8515 7.70516 12.7367 7.70516C12.5166 7.70516 12.5033 7.6891 12.5467 7.47283C12.9389 5.51686 13.1956 4.16507 12.0834 2.49682ZM13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346L5.00012 9.5006L3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999H6.00012L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579Z"
-                                            fill="url(#paint0_linear_159_389)" />
-                                        <path
-                                            d="M16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346V16.999L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                            d="M16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346V16.999L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109Z"
-                                            fill="url(#paint1_linear_159_389)" />
-                                        <path d="M6.00012 16.999V9.37346L5.00012 9.5006V16.999H6.00012Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                            d="M6.00012 16.999V9.37346L5.00012 9.5006V16.999H6.00012Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            d="M3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999V9.5006L3.50165 9.50225Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                            d="M3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999V9.5006L3.50165 9.50225Z"
-                                            fill="url(#paint3_linear_159_389)" />
-                                        <defs>
-                                            <linearGradient x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                            <linearGradient id="paint1_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                            <linearGradient id="paint2_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                            <linearGradient id="paint3_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                        </defs>
-                                        </svg>
-                                    </button>
-                                    <span class="text-customDarkGray opacity-50 font-medium text-[16px] leading-[150%] dark:text-white dark:opacity-80">0</span>
-                                    <button aria-label="Поставить дизлайк комментарию">
-                                        <svg class="group hover:fill-dislikeColor active:fill-dislikeColor  transition-colors"
-                                        width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.41658 17.5032C9.05281 18.4575 9.96966 18.6984 10.7167 18.705C11.7479 18.714 11.9885 18.1585 12.1121 17.2C12.3565 15.3032 13.1234 11.9994 15.4999 11.9994H16.56C17.4446 11.9994 17.8869 11.9994 18.173 11.739C18.1963 11.7179 18.2185 11.6956 18.2396 11.6724C18.5 11.3863 18.5 10.944 18.5 10.0594V3.43939C18.5 2.55481 18.5 2.11252 18.2396 1.82638C18.2185 1.80314 18.1963 1.78091 18.173 1.75976C17.8869 1.4994 17.4446 1.4994 16.56 1.4994L7.1008 1.4994C5.42107 1.4994 4.5812 1.4994 3.87214 1.99418C3.82054 2.03018 3.75032 2.08336 3.70167 2.12327C3.0332 2.67164 2.84176 3.35138 2.45887 4.71086C2.20689 5.60556 2.05257 6.4421 1.96672 7.2847C1.7551 9.36174 1.64928 10.4003 2.37009 11.2835C2.42257 11.3479 2.4963 11.4295 2.55497 11.4882C3.29809 12.2322 4.39241 12.29 6.47015 12.2945C6.77418 12.2951 7.09586 12.295 7.41727 12.2949C7.53292 12.2949 7.64853 12.2948 7.76328 12.2948C7.98343 12.2948 7.99671 12.3109 7.95335 12.5272C7.56114 14.4831 7.30441 15.8349 8.41658 17.5032ZM7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265L15.4999 10.4994L16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104H14.4999L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942Z"
-                                            fill="#2B2B2B" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.41658 17.5032C9.05281 18.4575 9.96966 18.6984 10.7167 18.705C11.7479 18.714 11.9885 18.1585 12.1121 17.2C12.3565 15.3032 13.1234 11.9994 15.4999 11.9994H16.56C17.4446 11.9994 17.8869 11.9994 18.173 11.739C18.1963 11.7179 18.2185 11.6956 18.2396 11.6724C18.5 11.3863 18.5 10.944 18.5 10.0594V3.43939C18.5 2.55481 18.5 2.11252 18.2396 1.82638C18.2185 1.80314 18.1963 1.78091 18.173 1.75976C17.8869 1.4994 17.4446 1.4994 16.56 1.4994L7.1008 1.4994C5.42107 1.4994 4.5812 1.4994 3.87214 1.99418C3.82054 2.03018 3.75032 2.08336 3.70167 2.12327C3.0332 2.67164 2.84176 3.35138 2.45887 4.71086C2.20689 5.60556 2.05257 6.4421 1.96672 7.2847C1.7551 9.36174 1.64928 10.4003 2.37009 11.2835C2.42257 11.3479 2.4963 11.4295 2.55497 11.4882C3.29809 12.2322 4.39241 12.29 6.47015 12.2945C6.77418 12.2951 7.09586 12.295 7.41727 12.2949C7.53292 12.2949 7.64853 12.2948 7.76328 12.2948C7.98343 12.2948 7.99671 12.3109 7.95335 12.5272C7.56114 14.4831 7.30441 15.8349 8.41658 17.5032ZM7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265L15.4999 10.4994L16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104H14.4999L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942Z"
-                                            fill="#FF7D7D" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265V3.00104L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089Z"
-                                            fill="#2B2B2B" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265V3.00104L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089Z"
-                                            fill="#FF7D7D" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M14.4999 3.00104V10.6265L15.4999 10.4994V3.00104H14.4999Z" fill="#2B2B2B" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M14.4999 3.00104V10.6265L15.4999 10.4994V3.00104H14.4999Z" fill="#FF7D7D" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104V10.4994L16.9983 10.4977Z"
-                                            fill="#2B2B2B" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104V10.4994L16.9983 10.4977Z"
-                                            fill="#FF7D7D" />
-                                        </svg>
-                                    </button>
-                                </div>
-                                <button class="text-customPurple font-medium text-[14px] leading-[150%] answer-btn" aria-label="ответить на комментари">Ответить</button>
-                                <button class="text-customDarkGray opacity-50 font-medium text-[14px] leading-[150%] dark:text-white dark:opacity-80" aria-label="пожаловаться на комментарии">Пожаловаться</button>
-                            </div>
-                    </div> 
-                    <div class="comment flex flex-col gap-2">
-                        <div class="flex gap-3 items-center">
-                            <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="20" cy="20.5" r="20" fill="#F8FFC3"/>
-                                <path d="M17.2763 13.3H23.5963V15.06H19.1163V24.5H17.2763V13.3Z" fill="#2B2B2B"/>
+                                <svg class="hero__svg" width="14" height="31" viewBox="0 0 14 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.57655 0C2.94442 0 0 2.94442 0 6.57655V29.8302V29.8302C0 30.1521 0.425785 30.2667 0.587404 29.9884L12.2639 9.87887C14.8096 5.49452 11.6464 0 6.57655 0V0Z"
+                                        fill="white" />
                                 </svg>
-                                
-                            <div class="flex flex-col">
-                                <span class="font-semibold text-[16px] leading-[150%] text-customDarkGray dark:text-white dark:opacity-80 user">Гость Oleg</span>
-                                <span class="font-medium text-[14px] leading-[150%] text-customDarkGray opacity-50 dark:text-white">28 июля 2024 08:05</span>
-                            </div> 
-                        </div>
-                            <p class="font-regular text-[16px] leading-[150%] text-customDarkGray dark:text-white dark:opacity-80">Ну, это вообще неправда. Несколько лет назад ходил на Зеленую Книгу - зал битком был. На Паразитах - тоже. Из более свежего - на Треугольнике печали тоже свободных мест не было. И я уж не говорю, сколько кинотеатров с сеансами было тогда и сейчас.</p>                           
-                            <div class="flex items-center gap-4">
-                                <div class="flex items-center gap-[9px]">
-                                    <button aria-label="Поставить лайк комментарию">
-                                        <svg class="group hover:fill-likeFill active:fill-likeFill  transition-colors"
-                                        width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M12.0834 2.49682C11.4472 1.5425 10.5303 1.30156 9.78333 1.29503C8.75212 1.28602 8.5115 1.84146 8.38795 2.80003C8.14347 4.69685 7.37656 8.0006 5.00012 8.0006H3.94C3.05542 8.0006 2.61313 8.0006 2.32699 8.26097C2.30375 8.28212 2.28152 8.30435 2.26037 8.32759C2 8.61373 2 9.05602 2 9.9406V16.5606C2 17.4452 2 17.8875 2.26037 18.1736C2.28152 18.1969 2.30375 18.2191 2.32699 18.2402C2.61313 18.5006 3.05542 18.5006 3.94 18.5006L13.3992 18.5006C15.0789 18.5006 15.9188 18.5006 16.6279 18.0058C16.6795 17.9698 16.7497 17.9166 16.7983 17.8767C17.4668 17.3284 17.6582 16.6486 18.0411 15.2891C18.2931 14.3944 18.4474 13.5579 18.5333 12.7153C18.7449 10.6383 18.8507 9.59973 18.1299 8.71647C18.0774 8.65215 18.0037 8.57052 17.945 8.51179C17.2019 7.76778 16.1076 7.71003 14.0299 7.70554C13.7258 7.70491 13.4041 7.705 13.0827 7.7051C12.9671 7.70513 12.8515 7.70516 12.7367 7.70516C12.5166 7.70516 12.5033 7.6891 12.5467 7.47283C12.9389 5.51686 13.1956 4.16507 12.0834 2.49682ZM13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346L5.00012 9.5006L3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999H6.00012L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M12.0834 2.49682C11.4472 1.5425 10.5303 1.30156 9.78333 1.29503C8.75212 1.28602 8.5115 1.84146 8.38795 2.80003C8.14347 4.69685 7.37656 8.0006 5.00012 8.0006H3.94C3.05542 8.0006 2.61313 8.0006 2.32699 8.26097C2.30375 8.28212 2.28152 8.30435 2.26037 8.32759C2 8.61373 2 9.05602 2 9.9406V16.5606C2 17.4452 2 17.8875 2.26037 18.1736C2.28152 18.1969 2.30375 18.2191 2.32699 18.2402C2.61313 18.5006 3.05542 18.5006 3.94 18.5006L13.3992 18.5006C15.0789 18.5006 15.9188 18.5006 16.6279 18.0058C16.6795 17.9698 16.7497 17.9166 16.7983 17.8767C17.4668 17.3284 17.6582 16.6486 18.0411 15.2891C18.2931 14.3944 18.4474 13.5579 18.5333 12.7153C18.7449 10.6383 18.8507 9.59973 18.1299 8.71647C18.0774 8.65215 18.0037 8.57052 17.945 8.51179C17.2019 7.76778 16.1076 7.71003 14.0299 7.70554C13.7258 7.70491 13.4041 7.705 13.0827 7.7051C12.9671 7.70513 12.8515 7.70516 12.7367 7.70516C12.5166 7.70516 12.5033 7.6891 12.5467 7.47283C12.9389 5.51686 13.1956 4.16507 12.0834 2.49682ZM13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346L5.00012 9.5006L3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999H6.00012L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579Z"
-                                            fill="url(#paint0_linear_159_389)" />
-                                        <path
-                                            d="M16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346V16.999L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                            d="M16.1153 9.29109C15.5352 9.20869 14.7466 9.20516 13.484 9.20516C13.4291 9.20516 13.3737 9.20548 13.3179 9.20579C12.649 9.20957 11.9237 9.21367 11.44 8.68345C11.0263 8.22994 10.9802 7.62848 11.102 7.05481C11.2496 6.35995 11.4032 5.63684 11.38 4.92576C11.3516 4.0566 10.8984 2.87536 9.90057 2.80034C9.7195 4.1614 9.44844 5.52726 8.84128 6.77006C8.33161 7.8133 7.44001 8.99103 6.00012 9.37346V16.999L13.3992 17.0006C14.2746 17.0006 14.7989 16.9981 15.1964 16.9497C15.4336 16.9209 15.6601 16.8703 15.847 16.717C16.0815 16.5246 16.1793 16.3667 16.5973 14.8825C16.8254 14.0725 16.9638 13.3211 17.041 12.5633C17.1517 11.4768 17.2123 10.8379 17.1839 10.3567C17.1661 10.0564 17.0988 9.78715 16.8837 9.57181C16.792 9.47997 16.6394 9.36553 16.1153 9.29109Z"
-                                            fill="url(#paint1_linear_159_389)" />
-                                        <path d="M6.00012 16.999V9.37346L5.00012 9.5006V16.999H6.00012Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                            d="M6.00012 16.999V9.37346L5.00012 9.5006V16.999H6.00012Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            d="M3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999V9.5006L3.50165 9.50225Z"
-                                            fill="url(#paint2_linear_159_389)" />
-                                        <path
-                                            class="fill-white dark:fill-darkModeMainColor group-hover:fill-likeFill group-active:fill-likeFill transition-colors"
-                                            d="M3.50165 9.50225L3.50165 16.999C3.50012 17.0006 5.00012 16.999 5.00012 16.999V9.5006L3.50165 9.50225Z"
-                                            fill="url(#paint3_linear_159_389)" />
-                                        <defs>
-                                            <linearGradient x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                            <linearGradient id="paint1_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                            <linearGradient id="paint2_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                            <linearGradient id="paint3_linear_159_389" x1="3.97293" y1="2.12349" x2="16.1023"
-                                                y2="14.6814" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#77E067" />
-                                                <stop offset="1" stop-color="#43C230" />
-                                            </linearGradient>
-                                        </defs>
-                                        </svg>
-                                    </button>
-                                    <span class="text-dislikeColor font-medium text-[16px] leading-[150%]">-6</span>
-                                    <button aria-label="Поставить дизлайк комментарию">
-                                        <svg class="group hover:fill-dislikeColor active:fill-dislikeColor  transition-colors"
-                                        width="21" height="20" viewBox="0 0 21 20" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.41658 17.5032C9.05281 18.4575 9.96966 18.6984 10.7167 18.705C11.7479 18.714 11.9885 18.1585 12.1121 17.2C12.3565 15.3032 13.1234 11.9994 15.4999 11.9994H16.56C17.4446 11.9994 17.8869 11.9994 18.173 11.739C18.1963 11.7179 18.2185 11.6956 18.2396 11.6724C18.5 11.3863 18.5 10.944 18.5 10.0594V3.43939C18.5 2.55481 18.5 2.11252 18.2396 1.82638C18.2185 1.80314 18.1963 1.78091 18.173 1.75976C17.8869 1.4994 17.4446 1.4994 16.56 1.4994L7.1008 1.4994C5.42107 1.4994 4.5812 1.4994 3.87214 1.99418C3.82054 2.03018 3.75032 2.08336 3.70167 2.12327C3.0332 2.67164 2.84176 3.35138 2.45887 4.71086C2.20689 5.60556 2.05257 6.4421 1.96672 7.2847C1.7551 9.36174 1.64928 10.4003 2.37009 11.2835C2.42257 11.3479 2.4963 11.4295 2.55497 11.4882C3.29809 12.2322 4.39241 12.29 6.47015 12.2945C6.77418 12.2951 7.09586 12.295 7.41727 12.2949C7.53292 12.2949 7.64853 12.2948 7.76328 12.2948C7.98343 12.2948 7.99671 12.3109 7.95335 12.5272C7.56114 14.4831 7.30441 15.8349 8.41658 17.5032ZM7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265L15.4999 10.4994L16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104H14.4999L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942Z"
-                                            fill="#2B2B2B" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.41658 17.5032C9.05281 18.4575 9.96966 18.6984 10.7167 18.705C11.7479 18.714 11.9885 18.1585 12.1121 17.2C12.3565 15.3032 13.1234 11.9994 15.4999 11.9994H16.56C17.4446 11.9994 17.8869 11.9994 18.173 11.739C18.1963 11.7179 18.2185 11.6956 18.2396 11.6724C18.5 11.3863 18.5 10.944 18.5 10.0594V3.43939C18.5 2.55481 18.5 2.11252 18.2396 1.82638C18.2185 1.80314 18.1963 1.78091 18.173 1.75976C17.8869 1.4994 17.4446 1.4994 16.56 1.4994L7.1008 1.4994C5.42107 1.4994 4.5812 1.4994 3.87214 1.99418C3.82054 2.03018 3.75032 2.08336 3.70167 2.12327C3.0332 2.67164 2.84176 3.35138 2.45887 4.71086C2.20689 5.60556 2.05257 6.4421 1.96672 7.2847C1.7551 9.36174 1.64928 10.4003 2.37009 11.2835C2.42257 11.3479 2.4963 11.4295 2.55497 11.4882C3.29809 12.2322 4.39241 12.29 6.47015 12.2945C6.77418 12.2951 7.09586 12.295 7.41727 12.2949C7.53292 12.2949 7.64853 12.2948 7.76328 12.2948C7.98343 12.2948 7.99671 12.3109 7.95335 12.5272C7.56114 14.4831 7.30441 15.8349 8.41658 17.5032ZM7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265L15.4999 10.4994L16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104H14.4999L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942Z"
-                                            fill="#FF7D7D" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265V3.00104L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089Z"
-                                            fill="#2B2B2B" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M4.38468 10.7089C4.96484 10.7913 5.75341 10.7948 7.01599 10.7948C7.07086 10.7948 7.12631 10.7945 7.18214 10.7942C7.85098 10.7904 8.57628 10.7863 9.05997 11.3165C9.47367 11.7701 9.5198 12.3715 9.39796 12.9452C9.25038 13.6401 9.0968 14.3632 9.12002 15.0742C9.1484 15.9434 9.60161 17.1246 10.5994 17.1997C10.7805 15.8386 11.0516 14.4727 11.6587 13.2299C12.1684 12.1867 13.06 11.009 14.4999 10.6265V3.00104L7.1008 2.9994C6.22535 2.9994 5.70108 3.00193 5.30355 3.05027C5.06645 3.07911 4.83989 3.12968 4.65303 3.28297C4.41851 3.47536 4.3207 3.63333 3.9027 5.1175C3.67456 5.92755 3.53622 6.67885 3.45899 7.43675C3.3483 8.5232 3.28771 9.16212 3.31613 9.64333C3.33387 9.94363 3.40118 10.2128 3.61627 10.4282C3.708 10.52 3.86057 10.6345 4.38468 10.7089Z"
-                                            fill="#FF7D7D" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M14.4999 3.00104V10.6265L15.4999 10.4994V3.00104H14.4999Z" fill="#2B2B2B" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M14.4999 3.00104V10.6265L15.4999 10.4994V3.00104H14.4999Z" fill="#FF7D7D" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104V10.4994L16.9983 10.4977Z"
-                                            fill="#2B2B2B" />
-                                        <path
-                                            class="fill-white group-hover:fill-dislikeColor group-active:fill-dislikeColor dark:fill-darkModeMainColor"
-                                            d="M16.9983 10.4977L16.9984 3.00104C16.9999 2.99939 15.4999 3.00104 15.4999 3.00104V10.4994L16.9983 10.4977Z"
-                                            fill="#FF7D7D" />
-                                        </svg>
-                                    </button>
+                            </li>
+                            <li class="hero__flex hero__item swiper-slide"> 
+                                <div class="hero__flex-2">
+                                    <div class="hero__counter">
+                                        <span class="hero__number">3</span>
+                                    </div>
+                                    <span class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit</span>
                                 </div>
-                                <button class="text-customPurple font-medium text-[14px] leading-[150%] answer-btn" aria-label="Ответить на комментарий">Ответить</button>
-                                <button class="text-customDarkGray opacity-50 font-medium text-[14px] leading-[150%] dark:text-white dark:opacity-80" aria-label="Пожаловаться на комментарии">Пожаловаться</button>
-                            </div>
-                    </div> 
-                </div>
-            </div>
+                                <svg class="hero__svg" width="14" height="31" viewBox="0 0 14 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.57655 0C2.94442 0 0 2.94442 0 6.57655V29.8302V29.8302C0 30.1521 0.425785 30.2667 0.587404 29.9884L12.2639 9.87887C14.8096 5.49452 11.6464 0 6.57655 0V0Z"
+                                        fill="white" />
+                                </svg>
+                            </li>
+                            <li class="hero__flex hero__item swiper-slide"> 
+                                <div class="hero__flex-2">
+                                    <div class="hero__counter">
+                                        <span class="hero__number">4</span>
+                                    </div>
+                                    <span class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit</span>
+                                </div>
+                                <svg class="hero__svg" width="14" height="31" viewBox="0 0 14 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.57655 0C2.94442 0 0 2.94442 0 6.57655V29.8302V29.8302C0 30.1521 0.425785 30.2667 0.587404 29.9884L12.2639 9.87887C14.8096 5.49452 11.6464 0 6.57655 0V0Z"
+                                        fill="white" />
+                                </svg>
+                            </li>
+                            <li class="hero__flex hero__item swiper-slide"> 
+                                <div class="hero__flex-2">
+                                    <div class="hero__counter">
+                                        <span class="hero__number">5</span>
+                                    </div>
+                                    <span class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit</span>
+                                </div>
+                                <svg class="hero__svg" width="14" height="31" viewBox="0 0 14 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.57655 0C2.94442 0 0 2.94442 0 6.57655V29.8302V29.8302C0 30.1521 0.425785 30.2667 0.587404 29.9884L12.2639 9.87887C14.8096 5.49452 11.6464 0 6.57655 0V0Z"
+                                        fill="white" />
+                                </svg>
+                            </li>
+                            <li class="hero__flex hero__item swiper-slide"> 
+                                <div class="hero__flex-2">
+                                    <div class="hero__counter">
+                                        <span class="hero__number">6</span>
+                                    </div>
+                                    <span class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                        elit</span>
+                                </div>
+                                <svg class="hero__svg   " width="14" height="31" viewBox="0 0 14 31" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.57655 0C2.94442 0 0 2.94442 0 6.57655V29.8302V29.8302C0 30.1521 0.425785 30.2667 0.587404 29.9884L12.2639 9.87887C14.8096 5.49452 11.6464 0 6.57655 0V0Z"
+                                        fill="white" />
+                                </svg>
+                            </li>
+                        </ul>
+                        <div class="hero__btns">
+                            <button class="hero__btn hero__prev" aria-label="Предыдущий слайд">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 11.5H20M20 11.5L14 16M20 11.5L14 7" stroke="#F6FFD2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                loren ipsum
 
-        </section>
-        <section class="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-0">
-            <h2 class="font-semibold text-[24px] leading-[120%] text-customDarkGray sm:text-[28px] dark:text-white  mb-6 sm:mb-8">Возможно вам понравится</h2>
-            <div class="overflow-auto no-scrollbar">
-                <div class="flex gap-4 w-[max-content]">
-                    <a href="#" aria-label="Перейти на страницу сериала" class="group relative after:top-[140px] after:left-1/2 after:-translate-x-1/2 after:content-[''] after:absolute after:w-[56px] after:h-[56px] hover:after:bg-play before:inset-0  before:content-[''] before:absolute before:w-[207px] before:h-[308px] hover:before:bg-customBlackOpacity before:transition-colors before:rounded-[16px]">
-                        <img loading="lazy" class="mb-2 rounded-[16px] max-w-[201px] w-full sm:max-w-[207px] h-[308px]" src="./img/maybe-1.webp" alt="">
-                        <h3 class="font-semibold text-[16px] leading-[20px] text-customDarkGray dark:text-white">Поколение «V»</h3>
-                    </a>
-                    <a href="#" aria-label="Перейти на страницу сериала" class="group relative after:top-[140px] after:left-1/2 after:-translate-x-1/2 after:content-[''] after:absolute after:w-[56px] after:h-[56px] hover:after:bg-play before:inset-0  before:content-[''] before:absolute before:w-[207px] before:h-[308px] hover:before:bg-customBlackOpacity before:transition-colors before:rounded-[16px]">
-                        <img loading="lazy" class="mb-2 rounded-[16px] max-w-[201px] w-full sm:max-w-[207px] h-[308px]" src="./img/maybe-2.webp" alt="">
-                        <h3 class="font-semibold text-[16px] leading-[20px] text-customDarkGray dark:text-white">Отбросы</h3>
-                    </a>
-                    <a href="#" aria-label="Перейти на страницу сериала" class="group relative after:top-[140px] after:left-1/2 after:-translate-x-1/2 after:content-[''] after:absolute after:w-[56px] after:h-[56px] hover:after:bg-play before:inset-0  before:content-[''] before:absolute before:w-[207px] before:h-[308px] hover:before:bg-customBlackOpacity before:transition-colors before:rounded-[16px]">
-                        <img loading="lazy" class="mb-2 rounded-[16px] max-w-[201px] w-full sm:max-w-[207px] h-[308px]" src="./img/maybe-1.webp" alt="">
-                        <h3 class="font-semibold text-[16px] leading-[20px] text-customDarkGray dark:text-white">Поколение «V»</h3>
-                    </a>
-                    <a href="#" aria-label="Перейти на страницу сериала" class="group relative after:top-[140px] after:left-1/2 after:-translate-x-1/2 after:content-[''] after:absolute after:w-[56px] after:h-[56px] hover:after:bg-play before:inset-0  before:content-[''] before:absolute before:w-[207px] before:h-[308px] hover:before:bg-customBlackOpacity before:transition-colors before:rounded-[16px]">
-                        <img loading="lazy" class="mb-2 rounded-[16px] max-w-[201px] w-full sm:max-w-[207px] h-[308px]" src="./img/maybe-2.webp" alt="">
-                        <h3 class="font-semibold text-[16px] leading-[20px] text-customDarkGray dark:text-white">Отбросы</h3>
-                    </a>
-                    <a href="#" aria-label="Перейти на страницу сериала" class="group relative after:top-[140px] after:left-1/2 after:-translate-x-1/2 after:content-[''] after:absolute after:w-[56px] after:h-[56px] hover:after:bg-play before:inset-0  before:content-[''] before:absolute before:w-[207px] before:h-[308px] hover:before:bg-customBlackOpacity before:transition-colors before:rounded-[16px]">
-                        <img loading="lazy" class="mb-2 rounded-[16px] max-w-[201px] w-full sm:max-w-[207px] h-[308px]" src="./img/maybe-1.webp" alt="">
-                        <h3 class="font-semibold text-[16px] leading-[20px] text-customDarkGray dark:text-white">Поколение «V»</h3>
-                    </a>
+                            </button>
+                            <button class="hero__btn hero__next" aria-label="Следующий слайд">
+                                loren ipsum
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 11.5H20M20 11.5L14 16M20 11.5L14 7" stroke="#F6FFD2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div> 
-        </section>
-    </main>
-    <footer class="bg-customGray py-6 sm:px-6 sm:pt-10 sm:pb-8 lg:px-8 xl:px-0 dark:bg-darkModeMainColor">
-        <div class="flex flex-col gap-4 items-center sm:flex-row sm:gap-[31px] sm:items-start max-w-[1100px] mx-auto px-4">
-         <button class="text-[16px] leading-[20px] text-customDarkGray py-[14px] font-medium rounded-[16px] w-full bg-white hover:bg-customGrayHover transition-colors dark:text-white dark:hover:bg-darkModeMainColorHover sm:max-w-[203px] w-full sm:shrink-0 sm:text-[14px] dark:bg-customInputBg"  aria-label="Обратная связь">                    
-             Обратная связь
-         </button>
-         <p class="font-medium text-[14px] leading-[20px] text-customDarkGray dark:text-white dark:opacity-80">Все материалы расположенные на сайте не являются публичной офертой или призывом к действию. Все товарные знаки принадлежат их законным владельцам. Данный ресурс носит исключительно информационно-ознакомительный характер, и не является официальным продуктом компании.</p>
-        </div>
-     </footer>
+            </section>
+        </main>
+    </div>
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/index.js?ver=2"></script>
+    <script src="./js/index.min.js"></script>
 
 </body>
 
