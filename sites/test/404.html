@@ -15,11 +15,11 @@
     <div class=" min-h-[100vh] flex flex-col">
         <img class="hidden mx-auto md:block" src="./img/page-bg.webp" alt="">
         <header
-            class="max-w-[1100px] mx-auto py-[20px] shadow-[0_10px_20px_0_rgba(0,0,0,0.05)] transition-colors bg-white dark:bg-dark-bg relative md:rounded-t-[5px] w-full">
-            <div class="px-[20px] md:mx-auto">
-                <div class="flex justify-between items-center gap-5">
-                    <a href="./index.html" class="max-w-[173px] w-full" aria-label="Перейти на главную">
-                        <svg class="max-w-[173px] w-full h-10" viewBox="0 0 173 40" fill="none"
+        class="max-w-[1100px] mx-auto py-[20px] shadow-[0_10px_20px_0_rgba(0,0,0,0.05)] transition-colors bg-white dark:bg-dark-bg relative md:rounded-t-[5px]">
+        <div class="px-[20px] md:mx-auto">
+            <div class="flex justify-between items-center gap-5">
+                <a href="./index.html" class="max-w-[173px] w-full" aria-label="Перейти на главную">
+                    <svg class="max-w-[173px] w-full h-10" viewBox="0 0 173 40" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1_6)">
                             <path
@@ -55,89 +55,84 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    </a>
-                    <div class="flex max-w-[90px] w-full gap-[10px] md:contents">
-                        <div class="flex items-center w-full max-w-[40px] md:max-w-none md:relative">
-                            <button id="searchBtn"
-                                class="border border-gray rounded-[5px] bg-white transition-colors dark:bg-dark-bg-2 max-w-[40px] p-[11.5px] dark:border-dark-bg-2 md:rounded-l-[5px] md:rounded-r-[0px] md:max-w-55px md:py-[11.5px] md:px-5"
-                                aria-label="Поиск">
-                                <svg class="w-full max-w-15px h-15px " viewBox="0 0 15 15" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path class="stroke-[#0C0A09] transition-colors dark:stroke-[#d6d3d1]"
-                                        d="M13.125 13.125L9.87688 9.87688M9.87688 9.87688C10.756 8.99777 11.2499 7.80544 11.2499 6.56219C11.2499 5.31894 10.756 4.12661 9.87688 3.2475C8.99777 2.36839 7.80544 1.87451 6.56219 1.87451C5.31894 1.87451 4.12661 2.36839 3.2475 3.2475C2.36839 4.12661 1.87451 5.31894 1.87451 6.56219C1.87451 7.80544 2.36839 8.99777 3.2475 9.87688C4.12661 10.756 5.31894 11.2499 6.56219 11.2499C7.80544 11.2499 8.99777 10.756 9.87688 9.87688Z"
-                                        stroke="#292524" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                </a>
+                <div class="flex max-w-[90px] w-full gap-[10px] md:contents">
+                    <div class="flex items-center w-full max-w-[40px] md:max-w-none md:relative">
+                        <button id="searchBtn"
+                            class="border border-gray rounded-[5px] bg-white transition-colors dark:bg-dark-bg-2 max-w-[40px] p-[11.5px] dark:border-dark-bg-2 md:rounded-l-[5px] md:rounded-r-[0px] md:max-w-55px md:py-[11.5px] md:px-5"
+                            aria-label="Поиск">
+                            <svg class="w-full max-w-15px h-15px " viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path class="stroke-[#0C0A09] transition-colors dark:stroke-[#d6d3d1]"
+                                    d="M13.125 13.125L9.87688 9.87688M9.87688 9.87688C10.756 8.99777 11.2499 7.80544 11.2499 6.56219C11.2499 5.31894 10.756 4.12661 9.87688 3.2475C8.99777 2.36839 7.80544 1.87451 6.56219 1.87451C5.31894 1.87451 4.12661 2.36839 3.2475 3.2475C2.36839 4.12661 1.87451 5.31894 1.87451 6.56219C1.87451 7.80544 2.36839 8.99777 3.2475 9.87688C4.12661 10.756 5.31894 11.2499 6.56219 11.2499C7.80544 11.2499 8.99777 10.756 9.87688 9.87688Z"
+                                    stroke="#292524" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
 
-                            </button>
-                            <input id="searchInput"
-                                class="w-full py-[9.5px] pl-5 focus:outline-none border-solid border-gray border rounded-[5px] transition-colors bg-light-gray placeholder:text-black font-segoe text-sm font-normal dark:border-dark-bg-2 dark:bg-dark-bg dark:placeholder:text-light-gray-2 hidden md:block md:rounded-l-[0px] md:border-l-[0px] dark:text-white"
-                                type="text" placeholder="Поиск">
-                                <ul id="searchList"
-                                class="z-30 p-5 bg-white border-t  absolute w-full flex flex-col gap-5 hidden left-0 top-full dark:bg-dark-bg-2 dark:border-dark-bg-2 md:top-[calc(100%_+_10px)] md:rounded-[5px] md:border border-gray shadow-[0_10px_20px_0_rgba(0,0,0,0.05)]">
-                                <li
-                                        class="flex items-center gap-5 relative rounded-[5px] font-segoe text-sm font-semibold text-black-2 relative dark:text-white  dark:odd:bg-dark-bg-2 dark:even:bg-dark-bg-2 hover:bg-light-gray dark:hover:bg-black">
-                                        <div class="rounded-[5px] relative">
-                                            <img loading="lazy" src="./img/search.webp" alt="">
-                                        </div>
-                                        <h2>
-                                            Внешние отмели</h2>
-                                        <a aria-label="Перейти на страницу фильма"
-                                            class="after:content-[''] after:absolute after:inset-0" href="#"></a>
-                                    </li>
-                                    <li
-                                    class="flex items-center gap-5 relative rounded-[5px] font-segoe text-sm font-semibold text-black-2 relative dark:text-white  dark:odd:bg-dark-bg-2 dark:even:bg-dark-bg-2 hover:bg-light-gray dark:hover:bg-black">
-                                    <div class="rounded-[5px] relative">
-                                        <img loading="lazy" src="./img/search.webp" alt="">
-                                    </div>
+                        </button>
+                        <input id="searchInput"
+                            class="w-full py-[9.5px] pl-5 focus:outline-none border-solid border-gray border rounded-[5px] transition-colors bg-light-gray placeholder:text-black font-segoe text-sm font-normal dark:border-dark-bg-2 dark:bg-dark-bg dark:placeholder:text-light-gray-2 hidden md:block md:rounded-l-[0px] md:border-l-[0px] dark:text-white"
+                            type="text" placeholder="Поиск">
+                        <div class="search">
+                            <ul id="searchList">
+                                <li>
+
+                                    <img loading="lazy" src="./img/search.webp" alt="">
+
                                     <h2>
                                         Внешние отмели</h2>
-                                    <a aria-label="Перейти на страницу фильма"
-                                        class="after:content-[''] after:absolute after:inset-0" href="#"></a>
+                                    <a aria-label="Перейти на страницу фильма" href="#"></a>
                                 </li>
-                                <li
-                                        class="flex items-center gap-5 relative rounded-[5px] font-segoe text-sm font-semibold text-black-2 relative dark:text-white  dark:odd:bg-dark-bg-2 dark:even:bg-dark-bg-2 hover:bg-light-gray dark:hover:bg-black">
-                                        <div class="rounded-[5px] relative">
-                                            <img loading="lazy" src="./img/search.webp" alt="">
-                                        </div>
-                                        <h2>
-                                            Внешние отмели</h2>
-                                        <a aria-label="Перейти на страницу фильма"
-                                            class="after:content-[''] after:absolute after:inset-0" href="#"></a>
-                                    </li>
+                                <li>
+
+                                    <img loading="lazy" src="./img/search.webp" alt="">
+
+                                    <h2>
+                                        Внешние отмели</h2>
+                                    <a aria-label="Перейти на страницу фильма" href="#"></a>
+                                </li>
+                                <li>
+
+                                    <img loading="lazy" src="./img/search.webp" alt="">
+
+                                    <h2>
+                                        Внешние отмели</h2>
+                                    <a aria-label="Перейти на страницу фильма" href="#"></a>
+                                </li>
                             </ul>
                         </div>
-                        <button
-                            class="flex shrink-0 items-center max-w-[40px] w-full bg-white rounded-[5px] md:max-w-[184px]"
-                            id="darkModeBtn" aria-label="Переключить тему страницы">
-                            <span
-                                class="py-[11.5px] max-w-[40px] w-full flex items-center justify-center shrink-0 border border-gray rounded-[5px] transition-colors dark:border-dark-bg-2 dark:rounded-l-[3px] dark:bg-dark-bg md:rounded-l-[5px] md:rounded-r-[0px] md:max-w-55px">
-                                <svg class="w-full max-w-15px h-15px dark:hidden">
-                                    <use href="./img/svg/sprite.svg#moon"></use>
-                                </svg>
-                                <svg class="w-full max-w-15px h-15px hidden dark:block">
-                                    <use href="./img/svg/sprite.svg#sun"></use>
-                                </svg>
-                            </span>
-                            <span
-                                class="font-segoe text-sm font-normal text-black px-[21px] py-[9.5px] bg-light-gray shrink-0 border-solid border-gray border-y border-r rounded-r-[5px] transition-colors dark:bg-dark-bg dark:border-dark-bg-2 dark:text-light-gray-2 dark:rounded-r-[3px] hidden md:block">Темная
-                                тема</span>
-                        </button>
-                        <button id="closeBtn"
-                            class="flex shrink-0 items-center max-w-[40px] w-full bg-white rounded-[5px] hidden"
-                            aria-label="Закрыть поиск">
-                            <span
-                                class="py-[11.5px] max-w-[40px] w-full flex items-center justify-center shrink-0 border border-gray rounded-[5px] transition-colors dark:border-dark-bg-2 dark:rounded-l-[3px] dark:bg-dark-bg md:rounded-l-[5px] md:rounded-r-[0px] md:max-w-55px">
-                                <svg class="w-full max-w-15px h-15px" viewBox="0 0 15 15" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path class="dark:stroke-[#fff]" d="M3.75 11.25L11.25 3.75M3.75 3.75L11.25 11.25"
-                                        stroke="#292524" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                            </span>
-                        </button>
                     </div>
+                    <button
+                        class="flex shrink-0 items-center max-w-[40px] w-full bg-white rounded-[5px] md:max-w-[182px]"
+                        id="darkModeBtn" aria-label="Переключить тему страницы">
+                        <span
+                            class="py-[11.5px] max-w-[40px] w-full flex items-center justify-center shrink-0 border border-gray rounded-[5px] transition-colors dark:border-dark-bg-2 dark:rounded-l-[3px] dark:bg-dark-bg md:rounded-l-[5px] md:rounded-r-[0px] md:max-w-55px">
+                            <svg class="w-full max-w-15px h-15px dark:hidden">
+                                <use href="./img/svg/sprite.svg#moon"></use>
+                            </svg>
+                            <svg class="w-full max-w-15px h-15px hidden dark:block">
+                                <use href="./img/svg/sprite.svg#sun"></use>
+                            </svg>
+                        </span>
+                        <span
+                            class="font-segoe text-sm font-normal text-black px-[21px] py-[9.5px] bg-light-gray shrink-0 border-solid border-gray border-y border-r rounded-r-[5px] transition-colors dark:bg-dark-bg dark:border-dark-bg-2 dark:text-light-gray-2 dark:rounded-r-[3px] hidden md:block">Темная
+                            тема</span>
+                    </button>
+                    <button id="closeBtn"
+                        class="flex shrink-0 items-center max-w-[40px] w-full bg-white rounded-[5px] hidden"
+                        aria-label="Закрыть поиск">
+                        <span
+                            class="py-[11.5px] max-w-[40px] w-full flex items-center justify-center shrink-0 border border-gray rounded-[5px] transition-colors dark:border-dark-bg-2 dark:rounded-l-[3px] dark:bg-dark-bg md:rounded-l-[5px] md:rounded-r-[0px] md:max-w-55px">
+                            <svg class="w-full max-w-15px h-15px" viewBox="0 0 15 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path class="dark:stroke-[#fff]" d="M3.75 11.25L11.25 3.75M3.75 3.75L11.25 11.25"
+                                    stroke="#292524" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </span>
+                    </button>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
             <section class="max-w-[1100px] bg-light-gray-3 mx-auto dark:bg-dark-bg-3 w-full grow flex items-center justify-center">
                 <div class="flex flex-col items-center pt-10 sm:justify-center sm:pt-0">
                     <h1

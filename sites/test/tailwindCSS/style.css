@@ -17,6 +17,48 @@
         font-display: swap;
         src: url(../fonts/SegoeUI-SemiBold.woff2) format('woff2');
       }
+      .font-segoe {
+        font-family: 'Segoe UI', sans-serif;
+      }
   }
 
- 
+  .main h1 {
+    @apply font-segoe text-m font-semibold text-center sm:text-left dark:text-white;
+  }
+  
+  .main p {
+    @apply font-segoe text-s font-normal text-text-color dark:text-light-gray-2;
+  }
+  
+
+  .main strong {
+    @apply font-segoe text-s font-semibold text-text-color dark:text-white mr-[3px];
+  }
+  
+  .main span {
+    @apply font-segoe text-s font-normal text-text-color dark:text-light-gray-2 inline;
+  }
+
+  .about h2 {
+    @apply font-segoe text-mx text-black-2 font-semibold dark:text-white;
+  }
+
+  .about p {
+    @apply font-segoe text-s font-normal text-text-color dark:text-light-gray-2;
+  }
+
+  .search ul {
+    @apply z-30 p-5 bg-white border-t  absolute w-full flex flex-col gap-5 hidden left-0 top-full dark:bg-dark-bg-2 dark:border-dark-bg-2 md:top-[calc(100%_+_10px)] md:rounded-[5px] md:border border-gray shadow-[0_10px_20px_0_rgba(0,0,0,0.05)];
+  }
+
+  .search li {
+    @apply flex items-center gap-5 relative rounded-[5px] font-segoe text-sm font-semibold text-black-2 relative dark:text-white  dark:odd:bg-dark-bg-2 dark:even:bg-dark-bg-2 hover:bg-light-gray dark:hover:bg-black;
+  }
+
+  .search img {
+    @apply rounded-[5px] relative;
+  }
+
+  .search a {
+    @apply after:content-[''] after:absolute after:inset-0;
+  }

@@ -578,6 +578,10 @@ video {
   src: url(../fonts/SegoeUI-SemiBold.woff2) format('woff2');
 }
 
+.font-segoe {
+  font-family: 'Segoe UI', sans-serif;
+}
+
 .static {
   position: static;
 }
@@ -635,16 +639,8 @@ video {
   margin-bottom: 5px;
 }
 
-.mr-\[3px\] {
-  margin-right: 3px;
-}
-
 .mt-auto {
   margin-top: auto;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -681,10 +677,6 @@ video {
 
 .min-h-\[100vh\] {
   min-height: 100vh;
-}
-
-.min-h-\[114px\] {
-  min-height: 114px;
 }
 
 .min-h-\[120px\] {
@@ -1071,6 +1063,176 @@ video {
   transition-duration: 150ms;
 }
 
+.main h1 {
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  font-size: 24px;
+  line-height: 31px;
+  font-weight: 600;
+}
+
+.main h1:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px) {
+  .main h1 {
+    text-align: left;
+  }
+}
+
+.main p {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 22.5px;
+  font-weight: 400;
+  color: rgba(87, 83, 78, 1);
+}
+
+.main p:is(.dark *) {
+  color: rgba(214, 211, 209, 1);
+}
+
+.main strong {
+  font-family: 'Segoe UI', sans-serif;
+  margin-right: 3px;
+  font-size: 15px;
+  line-height: 22.5px;
+  font-weight: 600;
+  color: rgba(87, 83, 78, 1);
+}
+
+.main strong:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.main span {
+  font-family: 'Segoe UI', sans-serif;
+  display: inline;
+  font-size: 15px;
+  line-height: 22.5px;
+  font-weight: 400;
+  color: rgba(87, 83, 78, 1);
+}
+
+.main span:is(.dark *) {
+  color: rgba(214, 211, 209, 1);
+}
+
+.about h2 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+}
+
+.about h2:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.about p {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 22.5px;
+  font-weight: 400;
+  color: rgba(87, 83, 78, 1);
+}
+
+.about p:is(.dark *) {
+  color: rgba(214, 211, 209, 1);
+}
+
+.search ul {
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  z-index: 30;
+  display: flex;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-top-width: 1px;
+  border-color: rgba(231, 229, 228, 1);
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 1.25rem;
+  --tw-shadow: 0 10px 20px 0 rgba(0,0,0,0.05);
+  --tw-shadow-colored: 0 10px 20px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.search ul:is(.dark *) {
+  border-color: rgba(68, 64, 60, 1);
+  background-color: rgba(68, 64, 60, 1);
+}
+
+@media (min-width: 768px) {
+  .search ul {
+    top: calc(100% + 10px);
+    border-radius: 5px;
+    border-width: 1px;
+  }
+}
+
+.search li {
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border-radius: 5px;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+}
+
+.search li:hover {
+  background-color: rgba(250, 250, 249, 1);
+}
+
+.search li:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.search li:nth-child(odd):is(.dark *) {
+  background-color: rgba(68, 64, 60, 1);
+}
+
+.search li:nth-child(even):is(.dark *) {
+  background-color: rgba(68, 64, 60, 1);
+}
+
+.search li:hover:is(.dark *) {
+  background-color: rgba(41, 37, 36, 1);
+}
+
+.search img {
+  position: relative;
+  border-radius: 5px;
+}
+
+.search a::after {
+  position: absolute;
+  inset: 0px;
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.placeholder\:font-segoe::-moz-placeholder {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.placeholder\:font-segoe::placeholder {
+  font-family: 'Segoe UI', sans-serif;
+}
+
 .placeholder\:text-sm::-moz-placeholder {
   font-size: 15px;
   line-height: 19px;
@@ -1289,10 +1451,6 @@ video {
     grid-column: span 2 / span 2;
   }
 
-  .sm\:flex {
-    display: flex;
-  }
-
   .sm\:h-10 {
     height: 2.5rem;
   }
@@ -1456,6 +1614,10 @@ video {
     max-width: none;
   }
 
+  .md\:max-w-\[182px\] {
+    max-width: 182px;
+  }
+
   .md\:grid-cols-\[repeat\(auto-fill\2c minmax\(200px\2c 1fr\)\)\] {
     grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
   }
@@ -1511,5 +1673,3 @@ video {
     padding-bottom: 11.5px;
   }
 }
-
- 
