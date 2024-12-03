@@ -1,65 +1,65 @@
-let darkModeBtn = document.getElementById('darkModeBtn')
-let searchInput = document.getElementById('searchInput')
-let searchList = document.getElementById('searchList')
-let searchBtn = document.getElementById('searchBtn')
-let header = document.querySelector('header')
-let closeBtn = document.getElementById('closeBtn')
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("burger").addEventListener("click", function() {
+        document.querySelector("header").classList.toggle("open")
+    })
 
+    let headerCatalogBtn = document.getElementById('headerCatalogBtn');
+    let headerCatalogList = document.querySelector('.header__catalog-list');
+    let headerCatalogBlock = document.querySelector('.header__catalog-block')
 
-searchInput.addEventListener('click', function(event) {
-    searchList.style.display = 'flex';
-    event.stopPropagation();
-});
+    headerCatalogBtn.addEventListener('click', function() {
+        headerCatalogBlock.classList.toggle('open');
+    })
 
-document.addEventListener('click', function(event) {
-    const isClickInsideInput = searchInput.contains(event.target);
-    const isClickInsideList = searchList.contains(event.target);
+    let requestCheckboxBlocks = document.querySelectorAll('.request__checkbox-block');
 
-    if (!isClickInsideInput && !isClickInsideList) {
-        searchList.style.display = 'none';
-    }
-});
-
-searchBtn.addEventListener('click', function() {
-    if(window.innerWidth <= 768) {
-        searchInput.style.display = 'block';
-        searchInput.style.position = 'absolute';
-        searchInput.style.left = '20px';
-        searchInput.style.width = 'calc(100% - 90px)';
-        searchInput.style.borderRadius = '3px';
-        darkModeBtn.classList.add('hidden')
-        closeBtn.classList.remove('hidden')
-        
-    }
-})
-
-closeBtn.addEventListener('click', function() {
-    darkModeBtn.classList.remove('hidden');
-    closeBtn.classList.add('hidden');
-    searchInput.style.display = 'none';
+requestCheckboxBlocks.forEach(function(requestCheckboxBlock) {
+    requestCheckboxBlock.addEventListener('click', function() {
+        let requestCheckbox = requestCheckboxBlock.querySelector('.request__checkbox');
+        requestCheckbox.toggleAttribute('checked');
+        let requestCustomCheckbox = requestCheckboxBlock.querySelector('.request__custom-checkbox');
+        requestCustomCheckbox.classList.toggle('active');
+    })
 })
 
 
+const swiper = new Swiper('.about__swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    spaceBetween: 20,
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.about-next',
+        prevEl: '.about-prev',
+      },
+  });
 
+  const swiper2 = new Swiper('.company__swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: false,
+    spaceBetween: 24,
+    slidesPerView: 'auto',
+    navigation: {
+        nextEl: '.company-next',
+        prevEl: '.company-prev',
+      },
+    pagination: {
+        el: ".company__pagination"
+    }
+    
+  });
+})
 
-const savedTheme = localStorage.getItem('theme');
+function openModal() {
+    let modal = document.querySelector('.modal');
+    let overlay = document.querySelector('.overlay');
+    overlay.style.display = 'block';
+    modal.setAttribute('open', 'open');
 
-
-if (savedTheme) {
-  document.documentElement.classList.add(savedTheme);
-} else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  document.documentElement.classList.add('dark');
-} else {
-  document.documentElement.classList.remove('dark');
+    overlay.addEventListener('click', function() {
+        modal.removeAttribute('open', 'open');
+        overlay.style.display = 'none';
+    })
 }
-
-
-darkModeBtn.addEventListener('click', function() {
-  document.documentElement.classList.toggle('dark');
-
-  if (document.documentElement.classList.contains('dark')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light');
-  }
-});
