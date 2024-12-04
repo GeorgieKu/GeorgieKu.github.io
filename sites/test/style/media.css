@@ -6,6 +6,12 @@
   .request .request__image {
     right: 10%;
   }
+  .advantages .advantages__flex {
+    align-items: center;
+  }
+  .advantages .advantages__block {
+    max-width: 50%;
+  }
 }
 @media (max-width: 1440px) {
   .header__flex {
@@ -30,6 +36,31 @@
   }
   .request .request__image {
     right: 3%;
+  }
+  .info .info__flex {
+    align-items: center;
+  }
+  .info .info__swiper {
+    max-width: 540px;
+  }
+  .info .info__card {
+    padding: 16px;
+  }
+  .info .info__card-2 {
+    padding: 16px;
+  }
+  .info .info__list li {
+    gap: 12px;
+  }
+  .info .info__list li {
+    font-size: 14px;
+    line-height: 110%;
+  }
+  .consult .request__flex {
+    flex-direction: column;
+  }
+  .consult .consult__block {
+    align-items: center;
   }
 }
 @media (max-width: 1200px) {
@@ -63,6 +94,38 @@
   }
   .footer .footer__block::after {
     display: none;
+  }
+  .info .info__card {
+    width: 100%;
+    max-width: 100%;
+    min-height: unset;
+  }
+  .info .info__flex-2 {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .info .info__card-2 {
+    width: 100%;
+    max-width: 100%;
+    min-height: unset;
+  }
+  .info h1 {
+    font-size: 36px;
+    line-height: 110%;
+  }
+  .info .info__card-2 strong {
+    margin-bottom: 14px;
+  }
+  .advantages .advantages__flex {
+    flex-direction: column;
+  }
+  .advantages .advantages__block {
+    max-width: 100%;
+    gap: 16px;
+  }
+  .consult .consult__block {
+    flex-direction: column;
+    padding: 32px;
   }
 }
 @media (max-width: 1024px) {
@@ -120,6 +183,23 @@
   .banner .banner__block {
     padding: 0 50px;
   }
+  .info .info__flex {
+    flex-direction: column;
+  }
+  .info .info__flex-2 {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  .bread-crumbs {
+    margin-bottom: 25px;
+    padding-top: 30px;
+  }
+  .info .info__btns-2 {
+    gap: 16px;
+  }
+  .characteristics .characteristics__flex {
+    flex-direction: column;
+  }
 }
 @media (max-width: 768px) {
   .header__top {
@@ -162,6 +242,27 @@
   }
   .footer .footer__flexbox {
     gap: 3px;
+  }
+  .info .info__btns-2 {
+    flex-wrap: wrap;
+  }
+  .info .btn-trans {
+    max-width: 170px;
+  }
+  .info .info__flex {
+    margin-bottom: 30px;
+  }
+  .info {
+    padding-top: unset;
+  }
+  .works .works__card {
+    padding: 16px;
+  }
+  .tech .tech__table td {
+    padding: 14px;
+  }
+  .tech .tech__table thead th {
+    padding-left: 14px;
   }
 }
 @media (max-width: 576px) {
@@ -446,5 +547,105 @@
   }
   .request__flex {
     flex-direction: column;
+  }
+  .catalog__card h3 {
+    position: relative;
+  }
+  .catalog__card .orange-block {
+    position: relative;
+  }
+  .catalog__item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    height: 100px;
+  }
+  .services__item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+    width: 100%;
+    height: 100px;
+  }
+  .services__text span {
+    position: relative;
+  }
+  .services__text .orange-block {
+    position: relative;
+  }
+  .banner__block::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .banner .banner__texts {
+    position: relative;
+  }
+  .projects__card::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+  }
+  .projects .projects__flex-2 {
+    position: relative;
+  }
+  .info {
+    padding-top: unset;
+  }
+  .bread-crumbs {
+    padding-top: 10px;
+  }
+  .info .info__flex-2 {
+    flex-direction: column;
+  }
+  .info .info__list {
+    flex-wrap: wrap;
+  }
+  .info .info__list svg {
+    flex-shrink: 0;
+  }
+  .info .btn-trans {
+    max-width: 100%;
+    width: calc(50% - 8px);
+  }
+  .bread-crumbs__flex {
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .advantages .advantages__block div {
+    padding: 14px;
+    overflow: hidden;
+  }
+  .advantages .advantages__block-2 span {
+    top: 16px;
+    left: 16px;
+  }
+  .works .works__grid {
+    grid-template-columns: 1fr;
+  }
+  .consult h2 {
+    line-height: 37px;
+  }
+  .consult .consult__block {
+    padding: 16px;
+  }
+  .tech .tech__block {
+    padding: 12px;
+  }
+  .works .works__card::before {
+    display: none;
   }
 }/*# sourceMappingURL=media.css.map */
