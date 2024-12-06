@@ -1,83 +1,30 @@
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("burger").addEventListener("click", function () {
-        document.querySelector("header").classList.toggle("open")
-    })
-
-    let headerCatalogBtn = document.getElementById('headerCatalogBtn');
-    let headerCatalogList = document.querySelector('.header__catalog-list');
-    let headerCatalogBlock = document.querySelector('.header__catalog-block')
-
-    headerCatalogBtn.addEventListener('click', function () {
-        headerCatalogBlock.classList.toggle('open');
-    })
-
-    let requestCheckboxBlocks = document.querySelectorAll('.request__checkbox-block');
-
-    requestCheckboxBlocks.forEach(function (requestCheckboxBlock) {
-        requestCheckboxBlock.addEventListener('click', function () {
-            let requestCheckbox = requestCheckboxBlock.querySelector('.request__checkbox');
-            requestCheckbox.toggleAttribute('checked');
-            let requestCustomCheckbox = requestCheckboxBlock.querySelector('.request__custom-checkbox');
-            requestCustomCheckbox.classList.toggle('active');
-        })
-    })
-
-
-    const swiper = new Swiper('.about__swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: false,
-        spaceBetween: 20,
-        slidesPerView: 1,
-        navigation: {
-            nextEl: '.about-next',
-            prevEl: '.about-prev',
+const swiper = new Swiper('.news__swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    slidesPerView: 'auto',
+    loop: false,
+    spaceBetween: 30,
+    breakpoints: {
+        360: {
+            centeredSlides: true,
         },
-    });
-
-    const swiper2 = new Swiper('.company__swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: false,
-        spaceBetween: 24,
-        slidesPerView: 'auto',
-        navigation: {
-            nextEl: '.company-next',
-            prevEl: '.company-prev',
-        },
-        pagination: {
-            el: ".company__pagination"
+        576: {
+            centeredSlides: false,
         }
+    }
 
-    });
+  });
 
-    const swiper3 = new Swiper('.info__swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: false,
-        spaceBetween: 20,
-        slidesPerView: 1,
-        navigation: {
-            nextEl: '.info-next',
-            prevEl: '.info-prev',
-        },
-    });
-})
 
-function openModal() {
-    let modal = document.querySelector('.modal');
-    let overlay = document.querySelector('.overlay');
-    overlay.style.display = 'block';
-    modal.setAttribute('open', 'open');
-
-    overlay.addEventListener('click', function () {
-        modal.removeAttribute('open', 'open');
-        overlay.style.display = 'none';
-    })
-    let closeModal = document.getElementById('modalClose');
-
-    closeModal.addEventListener('click', function () {
-        modal.removeAttribute('open', 'open');
-        overlay.style.display = 'none';
-    })
+  function goToShop() {
+    // Предполагается, что httpcontext.getParams возвращает объект с параметрами
+    const id = httpcontext.getParams().id; // Получаем id пользователя
+    if (id) {
+        // Формируем URL с добавленным id
+        const url = `https://powerofpower.shop/shop?UserId=${id}&Nickname=123`;
+        // Выполняем редирект
+        window.location.href = url;
+    } else {
+        console.error('User ID is not defined');
+    }
 }

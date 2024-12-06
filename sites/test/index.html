@@ -1,1216 +1,287 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Шпунт Ларсена. Продажа и аренда шпунта.">
-    <link rel="shortcut icon" href="./img/fav.svg" type="image/x-icon">
-
+    <meta name="description" content="description">
     <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
-    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
-
-    <link rel="preload" href="./fonts/ProbaPro-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/PTRootUI-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/PTRootUI-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/PTRootUI-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" fetchpriority="high" as="image" href="./img/hero-576.webp" type="image/webp">
-    <title>Шпунт PRO</title>
+    <link rel="preload" href="./fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" fetchpriority="high" as="image" href="./img/hero-bg-576.webp" type="image/webp">
+    <title>Power of power</title>
 </head>
-
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header__top">
-                <div class="header__adress">
-                    <button class="header__btn" aria-label="Выбрать город">
-                        <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M0.52569 7.72876L11.4685 0.948856C12.0114 0.612484 12.6843 1.11925 12.5109 1.73393L8.80101 14.8867C8.61584 15.5432 7.69685 15.5742 7.46791 14.9317L5.82894 10.3322C5.74565 10.0985 5.54483 9.92632 5.3011 9.87968L0.762815 9.01133C0.136387 8.89147 -0.0164744 8.06467 0.52569 7.72876Z"
-                                fill="#EA722F" />
-                        </svg>
-                        <span>г. Москва</span>
-                    </button>
-                    <span>Энергетическая улица, 4, помещение 1/Н</span>
-                </div>
-                <span>С 09:00 до 18:00 по МСК с Пн по Пт</span>
-            </div>
-            <div class="header__main">
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
                 <div class="header__flex">
-                    <a class="header__logo" href="./index.html" aria-label="На главную">
-                        <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="49" height="49" fill="#34373B" />
-                            <path d="M49 49V37L41.7941 42.7931L35 49H49Z" fill="#EA722F" />
-                            <path
-                                d="M23.3941 14.9981L21.6071 13.2111V11.6818L33.6606 23.7354V25.2647L23.3948 14.9988L23.3941 14.9981Z"
-                                fill="white" />
-                            <path d="M26.9106 27.5925L34.4253 35.1071H26.9106V27.5925Z" fill="white" />
-                            <path
-                                d="M28.2156 23.1945L23.5357 18.5147V16.5032L33.8016 26.7691C33.8924 26.8592 34.0149 26.91 34.1429 26.9107H35.1072V34.4254L27.5925 26.9107H27.875C28.0029 26.9108 28.1256 26.86 28.216 26.7696C28.3064 26.6791 28.3572 26.5565 28.3572 26.4286V23.5357C28.3564 23.4079 28.3056 23.2854 28.2156 23.1945Z"
-                                fill="white" />
-                            <path
-                                d="M14.6576 11L22.7123 19.0548L22.7131 19.0555L26.7112 23.0535H23.7354L11.6819 11H14.6576Z"
-                                fill="white" />
-                            <path d="M23.0535 23.7354V37.3182L10.9999 25.2647V11.6818L23.0535 23.7354Z" fill="white" />
-                            <path
-                                d="M27.3928 25.9465H26.4285C26.1627 25.9474 25.9474 26.1627 25.9464 26.4286V35.5893C25.9463 35.7172 25.9971 35.8399 26.0876 35.9303C26.178 36.0208 26.3007 36.0715 26.4285 36.0715H35.5893C35.8551 36.0705 36.0704 35.8552 36.0715 35.5893V26.4286C36.0715 26.3007 36.0207 26.178 35.9303 26.0876C35.8398 25.9972 35.7172 25.9464 35.5893 25.9464H34.625V24.0179H38V38H24.0178V24.0179H27.3928V25.9465Z"
-                                fill="white" />
-                            <path d="M22.2888 11H25.2646L37.3181 23.0535H34.3424L22.2888 11Z" fill="white" />
-                        </svg>
-                        <span>Шпунт <sup>PRO</sup></span>
-
+                    <a href="./index.html" aria-label="На главную" class="header__logo">
+                        POWER OF POWER
                     </a>
-                    <div class="header__catalog-block">
-                        <button class="header__catalog" id="headerCatalogBtn">
-                            <span class="header__catalog-btn">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </span>
-                            <span>Каталог товаров</span>
-                        </button>
-                        <ul class="header__catalog-list">
-                            <li>
-                                <a href="#" aria-label="Товар: ">1</a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="Товар: ">2</a>
-                            </li>
-                            <li>
-                                <a href="#" aria-label="Товар: ">3</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
-                    <span></span><span></span><span></span>
-                </button>
-                <nav class="menu">
-                    <ul class="menu__list">
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                Услуги
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                Аренда шпунта
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                О компании
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                Проекты
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                Контакты
-                            </a>
-                        </li>
-                        <li class="menu__item">
-                            <a class="menu__link" href="#">
-                                Прайс-лист
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="header__right">
-                        <div class="menu__contacts">
-                            <a class="header__tel" href="tel:+74951468795" aria-label="позвонить нам">+7 (495)
-                                146-87-95</a>
-                            <a class="header__mail" href="mailto:mail@sk-metallstroy.ru"
-                                aria-label="написать нам">mail@sk-metallstroy.ru</a>
+                    <div class="header__block">
+                        <nav class="header__nav">
+                            <a href="#" aria-label="перейти на страницу about us">about us</a>
+                            <a href="#" aria-label="перейти на страницу support">support</a>
+                        </nav>
+                        <div class="header__lang">
+                            <label for="headerSelect" class="label visually-hidden">select language</label>
+                            <select class="header__select" name="headerSelect" id="headerSelect">
+                                <option value="en">ENG</option>
+                                <option value="ru">RUS</option>
+                            </select>
                         </div>
-                        <button class="header__btn-2 orange-btn" aria-label="Обратная связь" onclick="openModal()">
-                            <span>Обратная связь</span>
-                            <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                    fill="white" />
-                            </svg>
-                        </button>
                     </div>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="hero__flex">
-                    <div class="hero__block">
-                        <h1>
-                            <span>Шпунт Ларсена.</span>
-                            Продажа и аренда шпунта.
-                        </h1>
-                        <p>Выполняем шпунтовые и свайные работы любой сложности
-                            на объектах по всей стране</p>
-                        <button class="orange-btn hero__btn" onclick="openModal()">
-                            Получить консультацию
-                            <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                    fill="white" />
-                            </svg>
-                        </button>
-                    </div>
-                    <ul class="hero__list">
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9C1.5 13.14 4.86 16.5 9 16.5C13.14 16.5 16.5 13.14 16.5 9C16.5 4.86 13.14 1.5 9 1.5ZM8.25 12V9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9V12C9.75 12.4142 9.41421 12.75 9 12.75C8.58579 12.75 8.25 12.4142 8.25 12ZM8.06262 6.18748V5.81265C8.06262 5.39843 8.3984 5.06265 8.81262 5.06265H9.18754C9.60175 5.06265 9.93754 5.39843 9.93754 5.81265V6.18748C9.93754 6.6017 9.60175 6.93748 9.18754 6.93748H8.81262C8.3984 6.93748 8.06262 6.6017 8.06262 6.18748Z"
-                                    fill="#99A2AD" />
-                            </svg>
-                            <div>
-                                <h2>Каталог шпунта</h2>
-                                <span>Решение с лучшими сроками
-                                    и ценами на рынке</span>
-                            </div>
-                        </li>
-                        <li class="hero__divider">
-
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9C1.5 13.14 4.86 16.5 9 16.5C13.14 16.5 16.5 13.14 16.5 9C16.5 4.86 13.14 1.5 9 1.5ZM8.25 12V9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9V12C9.75 12.4142 9.41421 12.75 9 12.75C8.58579 12.75 8.25 12.4142 8.25 12ZM8.06262 6.18748V5.81265C8.06262 5.39843 8.3984 5.06265 8.81262 5.06265H9.18754C9.60175 5.06265 9.93754 5.39843 9.93754 5.81265V6.18748C9.93754 6.6017 9.60175 6.93748 9.18754 6.93748H8.81262C8.3984 6.93748 8.06262 6.6017 8.06262 6.18748Z"
-                                    fill="#99A2AD" />
-                            </svg>
-                            <div>
-                                <h2>Монтаж шпунта</h2>
-                                <span>Решение с лучшими сроками
-                                    и ценами на рынке</span>
-                            </div>
-                        </li>
-                        <li class="hero__divider hidden">
-
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9C1.5 13.14 4.86 16.5 9 16.5C13.14 16.5 16.5 13.14 16.5 9C16.5 4.86 13.14 1.5 9 1.5ZM8.25 12V9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9V12C9.75 12.4142 9.41421 12.75 9 12.75C8.58579 12.75 8.25 12.4142 8.25 12ZM8.06262 6.18748V5.81265C8.06262 5.39843 8.3984 5.06265 8.81262 5.06265H9.18754C9.60175 5.06265 9.93754 5.39843 9.93754 5.81265V6.18748C9.93754 6.6017 9.60175 6.93748 9.18754 6.93748H8.81262C8.3984 6.93748 8.06262 6.6017 8.06262 6.18748Z"
-                                    fill="#99A2AD" />
-                            </svg>
-                            <div>
-                                <h2>Аренда шпунта</h2>
-                                <span>Решение с лучшими сроками
-                                    и ценами на рынке</span>
-                            </div>
-                        </li>
-                        <li class="hero__divider">
-
-                        </li>
-                        <li>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M9 1.5C4.86 1.5 1.5 4.86 1.5 9C1.5 13.14 4.86 16.5 9 16.5C13.14 16.5 16.5 13.14 16.5 9C16.5 4.86 13.14 1.5 9 1.5ZM8.25 12V9C8.25 8.58579 8.58579 8.25 9 8.25C9.41421 8.25 9.75 8.58579 9.75 9V12C9.75 12.4142 9.41421 12.75 9 12.75C8.58579 12.75 8.25 12.4142 8.25 12ZM8.06262 6.18748V5.81265C8.06262 5.39843 8.3984 5.06265 8.81262 5.06265H9.18754C9.60175 5.06265 9.93754 5.39843 9.93754 5.81265V6.18748C9.93754 6.6017 9.60175 6.93748 9.18754 6.93748H8.81262C8.3984 6.93748 8.06262 6.6017 8.06262 6.18748Z"
-                                    fill="#99A2AD" />
-                            </svg>
-                            <div>
-                                <h2>Выполненные работы</h2>
-                                <span>Решение с лучшими сроками
-                                    и ценами на рынке</span>
-                            </div>
-                        </li>
-                    </ul>
                 </div>
             </div>
-        </section>
-        <section class="catalog section-padding">
-            <div class="container">
-                <div class="flex">
-                    <h2>Каталог шпунта Ларсена</h2>
-                    <button class="btn-trans">Весь каталог
-                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                fill="white" />
-                        </svg>
-                    </button>
+        </header>
+            <section class="hero">
+                <div class="container">
+                    <h2 class="visually-hidden">Power of power</h2>
+                    <img class="hero__logo" src="./img/logo.webp" alt="">
                 </div>
-                <ul class="catalog__grid">
-                    <li class="catalog__item">
-                        <a aria-label="Ссылка на..." href="#" class="catalog__card">
-                            <h3>Шпунтовые
-                                сваи</h3>
-                            <span class="orange-block">
-                                <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                        fill="white" />
-                                </svg>
-
-                            </span>
-                        </a>
-                    </li>
-                    <li class="catalog__item">
-                        <a aria-label="Ссылка на..." href="#" class="catalog__card">
-                            <h3>Композитный
-                                шпунт</h3>
-                            <span class="orange-block">
-                                <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                        fill="white" />
-                                </svg>
-
-                            </span>
-                        </a>
-                    </li>
-                    <li class="catalog__item">
-                        <a aria-label="Ссылка на..." href="#" class="catalog__card">
-                            <h3>Соединительные
-                                элементы</h3>
-                            <span class="orange-block">
-                                <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                        fill="white" />
-                                </svg>
-
-                            </span>
-                        </a>
-                    </li>
-                    <li class="catalog__item">
-                        <a aria-label="Ссылка на..." href="#" class="catalog__card">
-                            <h3>Каталог
-                                Б/У шпунта</h3>
-                            <span class="orange-block">
-                                <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                        fill="white" />
-                                </svg>
-
-                            </span>
-                        </a>
-                    </li>
-                    <li class="catalog__item">
-                        <a aria-label="Ссылка на..." href="#" class="catalog__card">
-                            <h3>Анкерные
-                                тяги</h3>
-                            <span class="orange-block">
-                                <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                        fill="white" />
-                                </svg>
-
-                            </span>
-                        </a>
-                    </li>
-                    <li class="catalog__item">
-                        <a aria-label="Ссылка на..." href="#" class="catalog__card">
-                            <h3>Шпунт из ПВХ (поливинилхлорид)</h3>
-                            <span class="orange-block">
-                                <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                        fill="white" />
-                                </svg>
-
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="benefits section-padding">
-            <div class="container">
-                <div class="benefits__grid">
-                    <h2>Преимущества
-                        сотрудничества
-                        с Шпунт<span>ПРО</span></h2>
-                    <div class="benefits__card">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M47.5859 47.5859H25H2.41406V13.8984L25 2.41406L47.5859 13.8984V47.5859Z"
-                                stroke="#EA722F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M40.1211 21.5547V47.5859" stroke="#EA722F" stroke-width="2" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M9.87891 47.5859V21.5547" stroke="#EA722F" stroke-width="2" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M25 39.9297H17.3438V47.5859H25V39.9297Z" stroke="#8B95A2" stroke-width="2"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M32.6562 39.9297H25V47.5859H32.6562V39.9297Z" stroke="#8B95A2" stroke-width="2"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M28.8281 32.2734H21.1719V39.9297H28.8281V32.2734Z" stroke="#8B95A2"
-                                stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M21.1719 13.8984H28.8281" stroke="#EA722F" stroke-width="2" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M2.41406 21.5547H47.5859" stroke="#EA722F" stroke-width="2" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <h3>Прямые поставки</h3>
-                        <span>Решение с лучшими сроками
-                            и ценами на рынке</span>
+            </section>
+    </div>
+            <main>
+                <section class="store">
+                    <div class="container">
+                        <h1>ЗАХОДИТЕ В НАШ МАГАЗИН  ЗА ВЫГОДНЫМИ ПОКУПКАМИ</h1>
+                        <div class="store__grid">
+                            <div class="store__card">
+                                <div class="store__flex">
+                                    <span class="store__hit">HIT</span>
+                                    <span class="store__price">99.00 ₽</span>
+                                </div>
+                                <div class="store__bg"></div>
+                                <button onclick="goToShop()" aria-label="Купить..."></button>
+                            </div>
+                            <div class="store__card">
+                                <div class="store__flex">
+                                    <span class="store__hit">HIT</span>
+                                    <span class="store__price">249.00 ₽</span>
+                                </div>
+                                <div class="store__bg"></div>
+                                <button onclick="goToShop()" aria-label="Купить..."></button>
+                            </div>
+                            <div class="store__card">
+                                <div class="store__flex">
+                                    <span class="store__hit">HIT</span>
+                                    <span class="store__price">499.00 ₽</span>
+                                </div>
+                                <div class="store__bg"></div>
+                                <button onclick="goToShop()" aria-label="Купить..."></button>
+                            </div>
+                            <div class="store__card">
+                                <div class="store__flex">
+                                    <span class="store__hit">HIT</span>
+                                    <span class="store__price">999.00 ₽</span>
+                                </div>
+                                <div class="store__bg"></div>
+                                <button onclick="goToShop()" aria-label="Купить..."></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="benefits__card">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <mask id="mask0_31_1136" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
-                                width="50" height="50">
-                                <path d="M0.834961 0.833984H49.835V49.834H0.834961V0.833984Z" fill="white" />
-                            </mask>
-                            <g mask="url(#mask0_31_1136)">
-                                <path
-                                    d="M14.1855 47.9202L2.74951 36.4842L36.4854 2.74829L47.9214 14.1842L14.1855 47.9202Z"
-                                    stroke="#EA722F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                                    stroke-linejoin="round" />
-                            </g>
-                            <path d="M32.3878 15.52L28.8677 11.9999" stroke="#8B95A2" stroke-width="2"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M23.9547 23.9546L20.4346 20.4344" stroke="#8B95A2" stroke-width="2"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M15.5202 32.3887L12 28.8685" stroke="#8B95A2" stroke-width="2"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-
-                        <h3>Вариативность по длине</h3>
-                        <span>Решение с лучшими сроками
-                            и ценами на рынке</span>
-                    </div>
-                    <div class="benefits__card">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M24.6172 47.5859V43.7578C24.6172 41.6436 26.3311 39.9297 28.4453 39.9297H43.7578C45.872 39.9297 47.5859 41.6436 47.5859 43.7578V47.5859H24.6172Z"
-                                stroke="#8B95A2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            <path d="M36.1016 9.30469V2.41406H2.41406V47.5859H16.9609" stroke="#EA722F" stroke-width="2"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M14.6641 14.0898L17.5352 16.9609L23.2773 11.2188" stroke="#EA722F" stroke-width="2"
-                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M10.0703 28.4453H20.7891" stroke="#EA722F" stroke-width="2" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M10.0703 36.1016H16.9609" stroke="#EA722F" stroke-width="2" stroke-miterlimit="10"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M32.2734 39.9297C32.2734 39.9297 30.3594 24.6243 30.3594 22.7031C30.3594 19.5318 32.9302 16.9609 36.1016 16.9609C39.2729 16.9609 41.8438 19.5318 41.8438 22.7031C41.8438 24.6243 39.9297 39.9297 39.9297 39.9297"
-                                stroke="#8B95A2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-
-
-                        <h3>Сертификат качества</h3>
-                        <span>Решение с лучшими сроками
-                            и ценами на рынке</span>
-                    </div>
-                    <div class="benefits__card">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_31_1124)">
-                                <path d="M25.3337 25.3335L9.36377 9.36361" stroke="#8B95A2" stroke-width="2"
-                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                <mask id="mask0_31_1124" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
-                                    y="0" width="50" height="50">
-                                    <path d="M0.834717 0.833744H49.8347V49.8337H0.834717V0.833744Z" fill="white" />
-                                </mask>
-                                <g mask="url(#mask0_31_1124)">
-                                    <path
-                                        d="M4.03422 17.8048C3.20189 20.1596 2.74902 22.6936 2.74902 25.3335C2.74902 37.8073 12.8611 47.9194 25.335 47.9194C37.8089 47.9194 47.9209 37.8073 47.9209 25.3335C47.9209 12.8596 37.8089 2.74756 25.335 2.74756V10.2761"
-                                        stroke="#EA722F" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"
-                                        stroke-linejoin="round" />
-                                </g>
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_31_1124">
-                                    <rect width="49" height="49" fill="white"
-                                        transform="translate(0.833008 0.833252)" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-
-
-                        <h3>Производство в течение 30 дней</h3>
-                        <span>Решение с лучшими сроками
-                            и ценами на рынке</span>
-                    </div>
-                    <a href="#" class="benefits__link" aria-label="Получить консультацию" onclick="openModal()">
-                        Получить консультацию
-                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                fill="white" />
-                        </svg>
-
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section class="services section-padding">
-            <div class="container">
-                <div class="flex">
-                    <h2>Наши услуги</h2>
-                    <button class="btn-trans">Все услуги
-                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                fill="white" />
-                        </svg>
-                    </button>
-                </div>
-               <div class="overflow">
-                <ul class="services__list">
-                    <li class="services__item">
-                        <div class="services__text">
-                            <a href="#" aria-label="Перейти к ...">
-                                <span>Шпунтовые
-                                    работы</span>
-                            </a>
-                                <span class="orange-block">
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                            fill="white" />
-                                    </svg>
+                </section>
+                <section class="game">
     
-                                </span>
-                        </div>
-                    </li>
-                    <li class="services__item">
-                        <div class="services__text">
-                            <a href="#" aria-label="Перейти к ...">
-                                <span>Разработка
-                                    котлована</span>
-                            </a>
-                                <span class="orange-block">
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                            fill="white" />
-                                    </svg>
+                        <div class="container">
+                            <div class="game__flex">
+                                <div class="game__block">
+                                    <h2>НОВАЯ ИГРОВАЯ ВСЕЛЕННАЯ</h2>
+                                    <p>Такой игры вы еще не видели это настолько 
+                                        невероятно насколько только возможно. 
+                                        Спаси весь мир, свергнуть Путина, 
+                                        отобрать у Меркель пиво - все это ты можешь
+                                        сделать в нашей  потрясаюшей игре</p>
+                                    <div class="game__btns">
+                                        <a href="#" aria-label="скачать в app store">
+                                            <img loading="lazy" src="./img/download-on-the-app-store.svg" alt="">
+                                        </a>
+                                        <a href="#" aria-label="скачать в google play">
+                                            <img loading="lazy" src="./img/googleplay.webp" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="game__image">
     
-                                </span>
-                        </div>
-                    </li>
-                    <li class="services__item">
-                        <div class="services__text">
-                            <a href="#" aria-label="Перейти к ...">
-                                <span>Забивка
-                                    шпунта</span>
-                            </a>
-                                <span class="orange-block">
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                            fill="white" />
-                                    </svg>
-    
-                                </span>
-                        </div>
-                    </li>
-                    <li class="services__item">
-                        <div class="services__text">
-                            <a href="#" aria-label="Перейти к ...">
-                                <span>Сварка и резка
-                                    шпунта Лазерсона</span>
-                            </a>
-                                <span class="orange-block">
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                            fill="white" />
-                                    </svg>
-    
-                                </span>
-                        </div>
-                    </li>
-                </ul>
-               </div>
-            </div>
-        </section>
-        <section class="banner section-padding">
-            <div class="container">
-                <div class="banner__block">
-                    <div class="banner__abs">
-                        <span>Среднее время
-                            доставки машины:</span>
-                        <span>2-3 часа</span>
-                    </div>
-                    <div class="banner__texts">
-                        <h2>Аренда шпунтозабивной 
-                            машины с доставкой 
-                            на стройплощадку</h2>
-                            <span>Аренда шпунта или договор обратного выкупа - максимальная оптимизация 
-                                вашего бюджета</span>
-                            <div class="banner__btns">
-                                <button class="orange-btn banner__btn">Запросить КП <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z" fill="white"/>
-                                    </svg>
-                                    </button>
-                                <button class="white-btn banner__btn-2">Подробнее</button>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="projects section-padding">
-            <div class="container">
-                <div class="flex">
-                    <h2>Выполненные проекты</h2>
-                    <button class="btn-trans">Все проекты
-                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                fill="white" />
-                        </svg>
-                    </button>
-                </div>
-                <div class="projects__flex">
-                    <div class="projects__card">
-                        <div class="projects__tags tags">
-                            <span>Продажа</span>
-                            <span>Вибропогружение</span>
-                        </div>
-                        <div class="projects__flex-2">
-                            <h3>Монтаж шпунтового ограждения для производственно-
-                                складского корпуса</h3>
-                                <span class="orange-block">
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                            fill="white" />
-                                    </svg>
-    
-                                </span>
-                        </div>
-                        <a href="#" aria-label="Перейти на странцу проекта"></a>
-                    </div>
-                    <div class="projects__card">
-                        <div class="projects__tags tags">
-                            <span>Продажа</span>
-                            <span>Вибропогружение</span>
-                        </div>
-                        <div class="projects__flex-2">
-                            <h3>Монтаж шпунтового ограждения для производственно-
-                                складского корпуса</h3>
-                                <span class="orange-block">
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                            fill="white" />
-                                    </svg>
-    
-                                </span>
-                        </div>
-                        <a href="#" aria-label="Перейти на странцу проекта"></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="popular section-padding">
-            <div class="container">
-                <h2>Популярные марки шпунта</h2>
-               <div class="overflow">
-                <div class="popular__flex">
-                    <div class="popular__card">
-                        <div class="popular__img">
-                            <div class="popular__tags tags">
-                                <span class="active">На складе</span>
-                                <span>Новый</span>
-                                <span>Б/У</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="popular__texts">
-                            <h3>Шпунт Ларсена Л5-УМ</h3>
-                            <ul>
-                                <li>
-                                    <span>Вес:</span>
-                                    <span>114кг/м</span>
-                                </li>
-                                <li>
-                                    <span>Ширина профиля:</span>
-                                    <span>506 мм</span>
-                                </li>
-                                <li>
-                                    <span>Высота профиля:</span>
-                                    <span>470 мм</span>
-                                </li>
-                            </ul>
-                            <div class="popular__flex-2">
-                                <span>153 000 ₽/Т</span>
-                                <button class="btn-trans">Перейти
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                            fill="white" />
-                                    </svg>
-                                </button>
+                 
+                </section>
+                <section class="char">
+                    <div class="container">
+                        <div class="cahr__flex">
+                            <img loading="lazy" src="./img/char.webp" alt="">
+                            <div class="char__block">
+                                <h2>УЗНАВАЕМЫЕ ГЕРОИ</h2>
+                                <p>Уникальная возможность поиграть за лидеров 
+                                    мировых держав. Ваша цель - преуспеть в борьбе 
+                                    за лидерство, устанавливая свою гегемонию 
+                                    над другими нациями. 
+                                    Покажите свою силу, стратегические навыки и 
+                                    дипломатический искусство, чтобы стать 
+                                    величайшим лидером в истории.
+                                </p>
+                                <p>Не можешь изменить реальность? Сделай это
+                                    в нашей игре!</p>
                             </div>
                         </div>
                     </div>
-                    <div class="popular__card">
-                        <div class="popular__img">
-                            <div class="popular__tags tags">
-                                <span class="active">На складе</span>
-                                <span>Новый</span>
-                                <span>Б/У</span>
+                </section>
+                <section class="news">
+                        <h2>НОВОСТИ</h2>
+                        <div class="news__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <div class="news__img"></div>
+                                        <h3>Новая локация.Нихрена себе! </h3>
+                                        <a href="#" aria-label="Ссылка на новость..."></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <div class="news__img"></div>
+                                        <h3>Новая локация. Не пропусти!  </h3>
+                                        <a href="#" aria-label="Ссылка на новость..."></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <div class="news__img"></div>
+                                        <h3>Летний турнир </h3>
+                                        <a href="#" aria-label="Ссылка на новость..."></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <div class="news__img"></div>
+                                        <h3>Изменения от 13.03.2024 </h3>
+                                        <a href="#" aria-label="Ссылка на новость..."></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <div class="news__img"></div>
+                                        <h3>Внедрение нового</h3>
+                                        <a href="#" aria-label="Ссылка на новость..."></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <div class="news__img"></div>
+                                        <h3>Новая локация.Нихрена себе! </h3>
+                                        <a href="#" aria-label="Ссылка на новость..."></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <div class="news__img"></div>
+                                        <h3>Новая локация. Не пропусти!  </h3>
+                                        <a href="#" aria-label="Ссылка на новость..."></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <div class="news__img"></div>
+                                        <h3>Летний турнир </h3>
+                                        <a href="#" aria-label="Ссылка на новость..."></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <div class="news__img"></div>
+                                        <h3>Изменения от 13.03.2024 </h3>
+                                        <a href="#" aria-label="Ссылка на новость..."></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="news__card">
+                                        <div class="news__img"></div>
+                                        <h3>Внедрение нового</h3>
+                                        <a href="#" aria-label="Ссылка на новость..."></a>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="popular__texts">
-                            <h3>Шпунт Ларсена Л5-УМ</h3>
-                            <ul>
-                                <li>
-                                    <span>Вес:</span>
-                                    <span>114кг/м</span>
-                                </li>
-                                <li>
-                                    <span>Ширина профиля:</span>
-                                    <span>506 мм</span>
-                                </li>
-                                <li>
-                                    <span>Высота профиля:</span>
-                                    <span>470 мм</span>
-                                </li>
-                            </ul>
-                            <div class="popular__flex-2">
-                                <span>153 000 ₽/Т</span>
-                                <button class="btn-trans">Перейти
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                            fill="white" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popular__card">
-                        <div class="popular__img">
-                            <div class="popular__tags tags">
-                                <span class="active">На складе</span>
-                                <span>Новый</span>
-                                <span>Б/У</span>
-                            </div>
-                        </div>
-                        <div class="popular__texts">
-                            <h3>Шпунт Ларсена Л5-УМ</h3>
-                            <ul>
-                                <li>
-                                    <span>Вес:</span>
-                                    <span>114кг/м</span>
-                                </li>
-                                <li>
-                                    <span>Ширина профиля:</span>
-                                    <span>506 мм</span>
-                                </li>
-                                <li>
-                                    <span>Высота профиля:</span>
-                                    <span>470 мм</span>
-                                </li>
-                            </ul>
-                            <div class="popular__flex-2">
-                                <span>153 000 ₽/Т</span>
-                                <button class="btn-trans">Перейти
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                            fill="white" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="popular__card">
-                        <div class="popular__img">
-                            <div class="popular__tags tags">
-                                <span class="active">На складе</span>
-                                <span>Новый</span>
-                                <span>Б/У</span>
-                            </div>
-                        </div>
-                        <div class="popular__texts">
-                            <h3>Шпунт Ларсена Л5-УМ</h3>
-                            <ul>
-                                <li>
-                                    <span>Вес:</span>
-                                    <span>114кг/м</span>
-                                </li>
-                                <li>
-                                    <span>Ширина профиля:</span>
-                                    <span>506 мм</span>
-                                </li>
-                                <li>
-                                    <span>Высота профиля:</span>
-                                    <span>470 мм</span>
-                                </li>
-                            </ul>
-                            <div class="popular__flex-2">
-                                <span>153 000 ₽/Т</span>
-                                <button class="btn-trans">Перейти
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z"
-                                            fill="white" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               </div>
-                <button class="orange-btn">Посмотреть весь каталог
-                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z" fill="white"/>
-                        </svg>
                         
-                </button>
-            </div>
-        </section>
-        <section class="request section-padding">
-            <div class="container">
-                <div class="request__flexbox">
-                    <div class="request__block">
-                        <div class="request__left">
-                            <h2>Оставить заявку на поставку
-                                шпунта Ларсена</h2>
-                            <form class="request__form" action="#">
-                                <div class="request__flex">
-                                    <input class="request__input" type="text" placeholder="Ваше имя">
-                                    <input class="request__input" type="text" placeholder="Ваш номер телефона">
-                                </div>
-                                <textarea class="request__textarea" name="requestTextArea" id="requestTextArea" placeholder="Ваше сообщение"></textarea>
-                                <button type="submit" class="request__btn orange-btn">Оставить заявку
-                                    <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z" fill="white"/>
-                                        </svg>
-                                        
-                                </button>
-                                <div class="request__checkbox-block">
-                                    <label for="checkbox1">
-                                        <input class="request__checkbox visually-hidden" id="checkbox1" type="checkbox">
-                                    </label>
-                                    <span class="request__custom-checkbox active"></span>
-                                    <span>Нажимая на кнопку «Оставить заявку», вы даете согласие на <a aria-label="Перейти на страницу об обработке персональных данных" href="#">обработку персональных данных</a></span>
-                                </div>
-                            </form>
+                </section>
+                <section class="update">
+                    <div class="container">
+                        <div class="update__block">
+                            <h2>STAY TO UPDATE</h2>
+                        <p>Оставайтесь с нами следите в соцсетях
+                            чтобы быть вкурсе и ничего не пропустить
+                            будет бомбически
+                            конкурсы и все такое в наших соцсетях
+                        </p>
+                        <span>ПОДПИШИСЬ</span>
+                        <div class="update__links">
+                            <a href="#" aria-label="Перейти на страницу в facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h7.621v-6.961h-2.343v-2.725h2.343V9.309 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365V21H19c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Перейти на страницу в x">
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 2.8671875 3 L 9.7363281 12.818359 L 2.734375 21 L 5.3808594 21 L 10.919922 14.509766 L 15.460938 21 L 21.371094 21 L 14.173828 10.697266 L 20.744141 3 L 18.138672 3 L 12.996094 9.0097656 L 8.7988281 3 L 2.8671875 3 z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Перейти на страницу в tumbler">
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 20 2 L 4 2 C 2.898438 2 2 2.898438 2 4 L 2 20 C 2 21.101563 2.898438 22 4 22 L 20 22 C 21.101563 22 22 21.101563 22 20 L 22 4 C 22 2.898438 21.101563 2 20 2 Z M 17 17.875 C 17 17.921875 16.980469 17.972656 16.941406 18 C 16.894531 18.046875 15.515625 19 13 19 C 9.980469 19 10 15.386719 10 15 L 10 11 L 8.175781 11 C 8.078125 11 8 10.921875 8 10.824219 L 8 9.164063 C 8 9.085938 8.039063 9.027344 8.105469 9 C 8.136719 8.988281 11 7.730469 11 5.175781 C 11 5.078125 11.078125 5 11.175781 5 L 12.828125 5 C 12.921875 5 13 5.078125 13 5.175781 L 13 9 L 15.824219 9 C 15.914063 9 16 9.078125 16 9.175781 L 16 10.828125 C 16 10.921875 15.914063 11 15.824219 11 L 13 11 L 13 15 C 13 15.058594 12.90625 16.273438 14.199219 16.273438 C 15.261719 16.273438 16.71875 15.925781 16.730469 15.925781 C 16.789063 15.886719 16.855469 15.886719 16.902344 15.917969 C 16.960938 15.945313 17 16.003906 17 16.070313 Z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Перейти на страницу в inst">
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"/></svg>
+                            </a>
+                            <a href="#" aria-label="Перейти на страницу в linkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"/></svg>
+                            </a>
+                        </div>
                         </div>
                     </div>
-                    <div class="request__image">
-                        <img loading="lazy" src="./img/tel.webp" alt="">
-                        <div class="request__img-content">
-                            <svg width="195" height="156" viewBox="0 0 195 156" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M46.2307 105.519V142.716H0V105.519H6.05781V137.721H20.0864V105.519H26.1442V137.721H40.1728V105.519H46.2307Z" fill="#34373B"/>
-                                <path d="M72.1773 142.716H66.2789V123.373H56.9796V142.716H51.1344V118.803H72.1773V142.716Z" fill="#34373B"/>
-                                <path d="M94.7994 118.803H101.335L84.4905 156H77.9545L85.2345 142.716L74.5536 118.803H81.0896L87.9977 135.595L94.7994 118.803Z" fill="#34373B"/>
-                                <path d="M103.744 118.803H109.589V128.421H119.473V118.803H125.371V142.716H119.473V132.991H109.589V142.716H103.744V118.803Z" fill="#34373B"/>
-                                <path d="M148.669 123.373H141.708V142.716H135.863V123.373H128.955V118.803H148.669V123.373Z" fill="#34373B"/>
-                                <path d="M162.454 118.424H159.691V104.608H163.934C165.29 104.608 166.382 104.983 167.211 105.733C168.04 106.483 168.454 107.489 168.454 108.752C168.454 110.016 168.04 111.022 167.211 111.772C166.382 112.522 165.29 112.897 163.934 112.897H162.454V118.424ZM163.934 106.877H162.454V110.627H163.934C164.461 110.627 164.882 110.456 165.198 110.114C165.527 109.772 165.691 109.318 165.691 108.752C165.691 108.187 165.527 107.733 165.198 107.39C164.882 107.048 164.461 106.877 163.934 106.877Z" fill="#EC7E1B"/>
-                                <path d="M179.925 118.424H176.886L174.142 112.897H172.997V118.424H170.234V104.608H174.675C176.03 104.608 177.122 104.983 177.951 105.733C178.78 106.483 179.195 107.489 179.195 108.752C179.195 109.647 178.978 110.423 178.544 111.081C178.122 111.726 177.517 112.206 176.728 112.522L179.925 118.424ZM174.675 106.877H172.997V110.627H174.675C175.201 110.627 175.622 110.456 175.938 110.114C176.267 109.772 176.432 109.318 176.432 108.752C176.432 108.187 176.267 107.733 175.938 107.39C175.622 107.048 175.201 106.877 174.675 106.877Z" fill="#EC7E1B"/>
-                                <path d="M187.685 104.41C189.804 104.41 191.514 105.068 192.817 106.384C194.133 107.687 194.791 109.397 194.791 111.516C194.791 113.634 194.133 115.351 192.817 116.667C191.514 117.97 189.804 118.621 187.685 118.621C185.58 118.621 183.87 117.963 182.554 116.647C181.238 115.331 180.58 113.621 180.58 111.516C180.58 109.41 181.238 107.7 182.554 106.384C183.87 105.068 185.58 104.41 187.685 104.41ZM187.685 106.779C186.396 106.779 185.35 107.219 184.547 108.101C183.745 108.983 183.343 110.121 183.343 111.516C183.343 112.91 183.745 114.049 184.547 114.93C185.35 115.812 186.396 116.252 187.685 116.252C188.975 116.252 190.021 115.812 190.824 114.93C191.626 114.049 192.028 112.91 192.028 111.516C192.028 110.121 191.626 108.983 190.824 108.101C190.021 107.219 188.975 106.779 187.685 106.779Z" fill="#EC7E1B"/>
-                                <rect x="34.208" width="80.4671" height="80.4671" fill="#34373B"/>
-                                <path d="M114.675 80.4675V60.7612L102.842 70.2746L91.6846 80.4675H114.675Z" fill="#EA722F"/>
-                                <path d="M72.6255 24.6295L69.6909 21.695V19.1836L89.4851 38.9778V41.4892L72.6267 24.6307L72.6255 24.6295Z" fill="white"/>
-                                <path d="M78.4005 45.3115L90.741 57.652H78.4005V45.3115Z" fill="white"/>
-                                <path d="M80.5436 38.0899L72.8584 30.4047V27.1016L89.7168 43.96C89.8659 44.1079 90.0672 44.1915 90.2773 44.1926H91.8608V56.5331L79.5204 44.1926H79.9843C80.1943 44.1927 80.3957 44.1093 80.5443 43.9608C80.6928 43.8123 80.7762 43.6108 80.7761 43.4008V38.6502C80.7749 38.4402 80.6914 38.2391 80.5436 38.0899Z" fill="white"/>
-                                <path d="M58.2785 18.064L71.5059 31.2914L71.5071 31.2926L78.0728 37.8581H73.186L53.3918 18.064H58.2785Z" fill="white"/>
-                                <path d="M72.0659 38.9778V61.2833L52.2717 41.4892V19.1836L72.0659 38.9778Z" fill="white"/>
-                                <path d="M79.1924 42.609H77.6088C77.1722 42.6106 76.8187 42.9642 76.8171 43.4008V58.4444C76.817 58.6544 76.9004 58.8558 77.0489 59.0043C77.1974 59.1529 77.3988 59.2362 77.6088 59.2362H92.6525C93.0891 59.2345 93.4426 58.881 93.4443 58.4444V43.4007C93.4444 43.1907 93.361 42.9893 93.2125 42.8408C93.0639 42.6922 92.8625 42.6088 92.6525 42.6089H91.0689V39.4419H96.6113V62.4032H73.65V39.4419H79.1924V42.609Z" fill="white"/>
-                                <path d="M70.8103 18.064H75.697L95.4912 37.8581H90.6046L70.8103 18.064Z" fill="white"/>
-                                </svg>
-                            <a href="tel:+74951468795">+7 (495) 146-87-95</a>    
+                </section>
+            </main>
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer__flex">
+                        <div class="footer__block">
+                            <span>Follow us on</span>
+                            <div class="footer__links">
+                                <a href="#" aria-label="Перейти на страницу в facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h7.621v-6.961h-2.343v-2.725h2.343V9.309 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365V21H19c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z"/></svg>
+                                </a>
+                                <a href="#" aria-label="Перейти на страницу в x">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 2.8671875 3 L 9.7363281 12.818359 L 2.734375 21 L 5.3808594 21 L 10.919922 14.509766 L 15.460938 21 L 21.371094 21 L 14.173828 10.697266 L 20.744141 3 L 18.138672 3 L 12.996094 9.0097656 L 8.7988281 3 L 2.8671875 3 z"/></svg>
+                                </a>
+                                <a href="#" aria-label="Перейти на страницу в tumbler">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 20 2 L 4 2 C 2.898438 2 2 2.898438 2 4 L 2 20 C 2 21.101563 2.898438 22 4 22 L 20 22 C 21.101563 22 22 21.101563 22 20 L 22 4 C 22 2.898438 21.101563 2 20 2 Z M 17 17.875 C 17 17.921875 16.980469 17.972656 16.941406 18 C 16.894531 18.046875 15.515625 19 13 19 C 9.980469 19 10 15.386719 10 15 L 10 11 L 8.175781 11 C 8.078125 11 8 10.921875 8 10.824219 L 8 9.164063 C 8 9.085938 8.039063 9.027344 8.105469 9 C 8.136719 8.988281 11 7.730469 11 5.175781 C 11 5.078125 11.078125 5 11.175781 5 L 12.828125 5 C 12.921875 5 13 5.078125 13 5.175781 L 13 9 L 15.824219 9 C 15.914063 9 16 9.078125 16 9.175781 L 16 10.828125 C 16 10.921875 15.914063 11 15.824219 11 L 13 11 L 13 15 C 13 15.058594 12.90625 16.273438 14.199219 16.273438 C 15.261719 16.273438 16.71875 15.925781 16.730469 15.925781 C 16.789063 15.886719 16.855469 15.886719 16.902344 15.917969 C 16.960938 15.945313 17 16.003906 17 16.070313 Z"/></svg>
+                                </a>
+                                <a href="#" aria-label="Перейти на страницу в inst">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"/></svg>
+                                </a>
+                                <a href="#" aria-label="Перейти на страницу в linkedIn">
+                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer__btns">
+                            <a href="#" aria-label="скачать в app store">
+                                <img loading="lazy" src="./img/download-on-the-app-store.svg" alt="">
+                            </a>
+                            <a href="#" aria-label="скачать в google play">
+                                <img loading="lazy" src="./img/googleplay.webp" alt="">
+                            </a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="about section-padding">
-            <div class="container">
-                <div class="about__flex">
-                    <div class="about__block">
-                        <h2>ШпунтПро  —  <span>надёжный</span> 
-                            российский поставщик шпунта</h2>
-                        <p>ШпунтПро  — надёжный российский поставщик шпунта. Мы поможем вам подобрать 
-                            оптимальный вид шпунта под каждую строительную задачу, быстро поставим материал 
-                            в любую точку России и стран СНГ и реализуем полный комплекс шпунтовых работ. 
-                            У нас есть лицензии качества на всю продукцию и необходимые разрешения 
-                            на проведение проектных и строительных работ даже на опасных объектах.</p>
-                        <p>Является членом саморегулируемой организации (СРО), что подтверждает нашу 
-                            компетентность и профессионализм в выполнении строительных работ.</p>
-                        <button class="orange-btn" aria-label="Подробнее о компании">Подробнее о компании <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z" fill="white"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="about__swiper swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img loading="lazy" src="./img/about.webp" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img loading="lazy" src="./img/about.webp" alt="">
-                            </div>
-                            <div class="swiper-slide">
-                                <img loading="lazy" src="./img/about.webp" alt="">
-                            </div>
-                        </div>
-                        <div class="about__btns swiper-btns">
-                            <button class="about-prev prev">
-                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.634956 1.55805C0.32688 1.19862 0.368504 0.65751 0.727926 0.349433C1.08735 0.0413573 1.62846 0.0829815 1.93654 0.442404L7.0794 6.4424C7.35453 6.7634 7.35453 7.23705 7.0794 7.55805L1.93654 13.558C1.62846 13.9175 1.08735 13.9591 0.727926 13.651C0.368504 13.3429 0.32688 12.8018 0.634956 12.4424L5.29968 7.00022L0.634956 1.55805Z" fill="white"/>
-                                    </svg>
-                                    
-                            </button>
-                            <button class="about-next next">
-                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0.634956 1.55805C0.32688 1.19862 0.368504 0.65751 0.727926 0.349433C1.08735 0.0413573 1.62846 0.0829815 1.93654 0.442404L7.0794 6.4424C7.35453 6.7634 7.35453 7.23705 7.0794 7.55805L1.93654 13.558C1.62846 13.9175 1.08735 13.9591 0.727926 13.651C0.368504 13.3429 0.32688 12.8018 0.634956 12.4424L5.29968 7.00022L0.634956 1.55805Z" fill="white"/>
-                                    </svg>
-                                    
-                            </button>
-                        </div>
+                    <div class="footer__terms">
+                        <a href="#" aria-label="Перейти на стрицу Terms of Service">Terms of Service</a>
+                        <a href="#" aria-label="Перейти на стрицу Privacy Policy">Privacy Policy</a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="company section-padding">
-            <div class="container">
-                <div class="flex">
-                    <h2>Нам доверяют</h2>
-                    <div class="company__btns swiper-btns">
-                        <button class="company-prev prev">
-                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.634956 1.55805C0.32688 1.19862 0.368504 0.65751 0.727926 0.349433C1.08735 0.0413573 1.62846 0.0829815 1.93654 0.442404L7.0794 6.4424C7.35453 6.7634 7.35453 7.23705 7.0794 7.55805L1.93654 13.558C1.62846 13.9175 1.08735 13.9591 0.727926 13.651C0.368504 13.3429 0.32688 12.8018 0.634956 12.4424L5.29968 7.00022L0.634956 1.55805Z" fill="white"/>
-                                </svg>
-                                
-                        </button>
-                        <button class="company-next next">
-                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.634956 1.55805C0.32688 1.19862 0.368504 0.65751 0.727926 0.349433C1.08735 0.0413573 1.62846 0.0829815 1.93654 0.442404L7.0794 6.4424C7.35453 6.7634 7.35453 7.23705 7.0794 7.55805L1.93654 13.558C1.62846 13.9175 1.08735 13.9591 0.727926 13.651C0.368504 13.3429 0.32688 12.8018 0.634956 12.4424L5.29968 7.00022L0.634956 1.55805Z" fill="white"/>
-                                </svg>
-                                
-                        </button>
-                    </div>
-                </div>
-                <div class="company__swiper swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="company__block">
-                                <svg width="177" height="102" viewBox="0 0 177 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M100.432 45.4617C100.152 46.2233 99.3945 46.7082 98.6309 46.7082C97.9391 46.7082 95.929 46.7082 95.929 46.7082L94.9631 51.1389C94.9631 51.1389 94.9631 51.1389 98.6309 51.1389C101.261 51.1389 103.617 49.4773 104.583 47.0541C105.209 45.3233 105.209 45.3233 105.209 45.3233L100.706 44.6309C100.706 44.6309 100.706 44.6309 100.432 45.4617Z" fill="black"/>
-                                    <path d="M67.4744 33V45.9468H72.2516V41.3079H76.2V45.9468H81.0424V33H76.2V37.0848H72.2516V33H67.4744Z" fill="black"/>
-                                    <path d="M34.7256 55.9852H30.8491V51.9004H26V64.7774H30.8491V60.1392H34.7256V64.7774H39.5681V51.9004H34.7256V55.9852Z" fill="black"/>
-                                    <path d="M129.716 55.9852H125.774V51.9004H120.925V64.7774H125.774V60.1392H129.716V64.7774H134.493V51.9004H129.716V55.9852Z" fill="black"/>
-                                    <path d="M95.929 45.9468V33H87.0663C83.9533 33 82.0803 35.0773 82.0803 37.4999C82.0803 39.9929 83.6074 41.1696 84.5733 41.5847L82.0803 45.9468H87.4122L89.2135 41.862H91.0865V45.9468H95.929ZM88.1041 38.5388C87.4123 38.5388 87.0663 38.1231 87.0663 37.4999V37.3615C87.0663 36.6691 87.4841 36.3232 88.1041 36.3232H91.1518V38.5388H88.1041Z" fill="black"/>
-                                    <path d="M66.8479 45.9468L62.4884 39.4388L66.7827 33H61.4507L59.6495 35.9773L57.7829 33H48.5743L46.1466 40.6847L43.7254 33H34.3079L30.7772 37.4999V33H26V45.9468H30.7772V42.8312L31.6778 41.7928L34.0339 46.016H39.7769L34.9344 38.8847L39.157 33.8308L43.9342 45.8085C43.5883 46.3619 42.7529 46.7084 42.1329 46.7084H41.3041L40.3317 51.1391H42.1329C44.763 51.1391 47.119 49.5467 48.0849 47.0543C49.1943 44.077 52.3792 35.7691 53.071 33.9692L56.6735 39.3696L52.3074 45.8776H57.6393L59.5124 42.8312L61.3789 45.8776H66.8479V45.9468Z" fill="black"/>
-                                    <path d="M114.281 51.5547C110.261 51.5547 106.319 54.6005 105.483 58.2702C104.655 62.0085 107.213 64.9858 111.233 64.9858C115.247 64.9858 119.195 61.9393 120.024 58.2702C120.925 54.6005 118.295 51.5547 114.281 51.5547ZM114.901 58.2702C114.627 59.6544 113.38 60.7626 112.271 60.7626C111.096 60.7626 110.398 59.6544 110.75 58.2702C111.024 56.8853 112.271 55.7778 113.38 55.7778C114.555 55.7778 115.247 56.8853 114.901 58.2702Z" fill="black"/>
-                                    <path d="M68.3751 51.5547C66.9916 51.5547 65.8103 52.1081 64.7726 53.0779V51.9006H59.9954V68.7938H64.7726V63.6009C65.7451 64.57 66.9916 65.1241 68.3751 65.1241C71.4882 65.1241 74.053 62.0783 74.053 58.4086C74.053 54.6005 71.4882 51.5547 68.3751 51.5547ZM66.8479 60.7626C65.8103 60.7626 64.9815 59.9318 64.7726 58.8236C64.7726 58.6161 64.7009 58.4778 64.7009 58.2702C64.7009 58.0627 64.7008 57.9237 64.7726 57.7161C64.9815 56.6086 65.8103 55.7778 66.8479 55.7778C68.0292 55.7778 68.9299 56.8853 68.9299 58.2702C68.9299 59.6544 68.0292 60.7626 66.8479 60.7626Z" fill="black"/>
-                                    <path d="M144.119 51.5547C140.105 51.5547 136.157 54.6005 135.328 58.2702C134.499 62.0085 137.058 64.9858 141.071 64.9858C142.944 64.9858 144.811 64.2933 146.403 63.1858L143.773 60.5551C143.218 61.0393 142.598 61.3167 141.907 61.3167C140.934 61.3167 140.242 60.6934 139.968 59.7243H149.314C149.523 59.2394 149.732 58.7545 149.797 58.2702C150.769 54.6005 148.139 51.5547 144.119 51.5547ZM140.66 56.8853C141.28 55.9162 142.318 55.2238 143.29 55.2238C144.256 55.2238 145.02 55.9162 145.229 56.8853H140.66Z" fill="black"/>
-                                    <path d="M95.9291 58.131V51.9004H91.1519V64.7774H95.7202L99.8057 58.131V64.7774H104.583V51.9004H99.8057L95.9291 58.131Z" fill="black"/>
-                                    <path d="M50.7867 52.9389C50.0231 52.1081 48.9202 51.5547 47.6737 51.5547C44.5541 51.5547 41.3041 54.6005 40.4687 58.2702C39.6399 62.0085 41.5064 64.9858 44.626 64.9858C45.9377 64.9858 47.1842 64.5009 48.3655 63.6009L48.1566 64.7782H53.0057L55.7728 51.9006H50.9237L50.7867 52.9389ZM49.612 58.2702C49.612 58.4086 49.5402 58.5469 49.4749 58.6853C49.0572 59.8626 47.9478 60.7626 46.9101 60.7626C45.7354 60.7626 45.0436 59.6544 45.3895 58.2702C45.6636 56.8853 46.9101 55.7778 48.0196 55.7778C49.0573 55.7778 49.7491 56.6778 49.612 57.8545C49.6773 57.9935 49.612 58.1319 49.612 58.2702Z" fill="black"/>
-                                    <path d="M85.1998 52.9389C84.4362 52.1081 83.3268 51.5547 82.0803 51.5547C78.9673 51.5547 75.7106 54.6005 74.8818 58.2702C74.053 62.0085 75.9195 64.9858 79.039 64.9858C80.3508 64.9858 81.5973 64.5009 82.772 63.6009L82.4979 64.709H87.347L90.1859 51.7622H85.3369L85.1998 52.9389ZM84.0904 58.2702C84.0904 58.4086 84.0186 58.5469 83.9533 58.6853C83.5357 59.8626 82.4262 60.7626 81.3885 60.7626C80.2138 60.7626 79.522 59.6544 79.8679 58.2702C80.142 56.8853 81.3884 55.7778 82.4979 55.7778C83.5356 55.7778 84.2274 56.6778 84.0904 57.8545C84.0904 57.9935 84.0904 58.1319 84.0904 58.2702Z" fill="black"/>
-                                    </svg>
-                                    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="company__block">
-                                <svg width="177" height="102" viewBox="0 0 177 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M63.0102 37.6296V15H58.5688V26.3738L53.5818 15H50V37.6296H54.0887V26.2564L59.0977 37.6296H63.0102ZM74.5986 37.6296V15H70.7028L67.0824 17.8578V22.4193L70.5264 19.7376V37.6495H74.5986V37.6296ZM67.4131 61.4533V41.4079H63.7871V58.0471H60.5195V41.4079H56.8936V58.0471H53.6425V41.4079H50V61.4339H67.4131V61.4533ZM74.5821 61.4533V41.4079H70.7799V61.4339H74.5821V61.4533ZM83.3051 61.4533L78.7479 50.7258L82.7982 41.4079H78.4339L74.5986 50.9219L78.8252 61.4533H83.3051ZM95.7312 51.4896C95.7312 48.0441 95.7311 45.4211 94.1551 43.3265C93.042 41.8582 91.7361 41.0945 89.8516 41.0945C87.9615 41.0945 86.6555 41.8776 85.5479 43.3265C83.9664 45.4211 83.9663 48.0441 83.9663 51.4896C83.9663 54.9345 83.9664 57.5581 85.5479 59.6527C86.6555 61.121 87.9615 61.8842 89.8516 61.8842C91.7361 61.8842 93.042 61.101 94.1551 59.6527C95.7311 57.5381 95.7312 54.9345 95.7312 51.4896ZM91.9345 51.4896C91.9345 55.7376 91.7196 56.5008 91.3669 57.1859C91.0969 57.7342 90.5514 58.2233 89.8516 58.2233C89.1462 58.2233 88.6007 57.7342 88.3307 57.1859C87.978 56.5008 87.7631 55.7376 87.7631 51.4896C87.7631 47.2416 87.978 46.4585 88.3307 45.7733C88.6007 45.225 89.1462 44.7554 89.8516 44.7554C90.5514 44.7554 91.0969 45.2057 91.3669 45.7733C91.7196 46.4391 91.9345 47.2217 91.9345 51.4896ZM109.893 61.4533V41.4079H99.3956V51.7045C99.3956 56.7943 98.4588 57.891 97.1143 57.891H96.6679V61.61H98.1283C101.925 61.61 103.077 59.4174 103.077 51.0393V45.127H106.091V61.4339H109.893V61.4533ZM120.506 55.0519H117.216L118.908 47.7306L120.506 55.0519ZM126 61.4533L120.66 41.4273H116.963L111.623 61.4533H115.58L116.357 58.478H121.283L122.027 61.4533H126ZM59.23 70.1254V66.5631H50V86.6671H53.8573V70.1454H59.23V70.1254ZM70.7633 86.6671V83.1042H65.308V78.406H70.0195V74.667H65.308V70.1454H70.7633V66.5825H61.3956V86.6865H70.7633V86.6671ZM81.145 73.0226C81.145 74.4908 80.5389 75.9004 79.5085 75.9004H77.3869V70.1648H79.5085C80.5389 70.1648 81.145 71.5549 81.145 73.0226ZM84.9032 73.0226C84.9032 69.7145 83.7515 66.5631 80.3626 66.5631H73.6618V86.6671H77.4034V79.5026H80.1917C83.5807 79.4827 84.9032 76.3313 84.9032 73.0226ZM121.267 80.5987C121.267 82.2037 120.76 83.2023 119.939 83.2023H117.486V78.0343H119.939C120.776 78.0537 121.267 78.9936 121.267 80.5987ZM121.068 72.2007C121.068 73.5316 120.583 74.354 119.768 74.354H117.508V70.0667H119.768C120.583 70.0667 121.068 70.8692 121.068 72.2007ZM125.317 80.7554C125.317 78.7194 124.771 77.3099 123.388 76.1939C124.595 75.0585 124.964 73.9819 125.102 72.2201C125.377 68.7159 123.664 66.5825 120.137 66.5825H113.668V86.6865H120.467C123.41 86.6672 125.317 84.3377 125.317 80.7554ZM98.7895 76.6054C98.7895 73.1599 98.7894 70.5369 97.2134 68.4423C96.1003 66.974 94.7945 66.2103 92.9099 66.2103C91.0198 66.2103 89.7138 66.9934 88.6007 68.4423C87.0247 70.5369 87.0246 73.1599 87.0246 76.6054C87.0246 80.0503 87.0247 82.6739 88.6007 84.7686C89.7138 86.2368 91.0198 87 92.9099 87C94.7945 87 96.1003 86.2169 97.2134 84.7686C98.7894 82.6739 98.7895 80.0503 98.7895 76.6054ZM94.9927 76.6054C94.9927 80.8534 94.7779 81.6166 94.4253 82.3017C94.1553 82.8501 93.6097 83.3391 92.9099 83.3391C92.2046 83.3391 91.659 82.8501 91.389 82.3017C91.0363 81.6166 90.8214 80.8534 90.8214 76.6054C90.8214 72.3574 91.0363 71.5743 91.389 70.8892C91.659 70.3409 92.2046 69.8712 92.9099 69.8712C93.6097 69.8712 94.1553 70.3215 94.4253 70.8892C94.7779 71.5743 94.9927 72.3574 94.9927 76.6054ZM110.946 86.6671V83.1042H105.49V78.406H110.185V74.667H105.468V70.1454H110.924V66.5825H101.556V86.6865H110.946V86.6671Z" fill="black"/>
-                                    </svg>
-                                    
-                                    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="company__block">
-                                <svg width="177" height="102" viewBox="0 0 177 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_25_73" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="32" y="27" width="111" height="48">
-                                    <path d="M143 27.959H32.1001V74.3681H143V27.959Z" fill="white"/>
-                                    </mask>
-                                    <g mask="url(#mask0_25_73)">
-                                    <path d="M116.477 43.36C116.351 44.9843 116.103 46.5966 115.734 48.1835C114.683 48.2457 113.631 47.9363 112.948 47.0087C112.58 46.4516 112.332 45.8956 112.205 45.2768C112.701 43.9159 113.257 42.5557 114.248 41.4426C114.562 41.0709 114.87 40.7615 115.366 40.7615C115.801 40.6999 116.109 40.8854 116.29 41.3187C116.538 41.9375 116.538 42.6173 116.477 43.36ZM114.622 51.6479C114.248 52.5761 113.819 53.4414 113.257 54.2451C113.009 54.6784 112.513 55.0495 112.084 55.2966C111.341 55.6677 110.537 55.2966 110.163 54.4929C109.667 53.5031 109.607 52.4516 109.734 51.3385C109.794 50.3487 109.975 49.3588 110.042 48.3696C110.102 48.3696 110.102 48.3696 110.163 48.4312C111.214 50.1015 112.888 51.0907 114.743 51.2762C114.683 51.4001 114.683 51.524 114.622 51.6479ZM93.327 45.8956C93.3875 45.8956 93.4479 45.9573 93.5748 46.0195C93.4479 46.5138 93.3874 47.0087 93.2 47.442C92.4567 49.8537 91.5927 52.1428 90.2874 54.3068C90.0276 54.7515 89.6951 55.1491 89.3024 55.4821C88.8068 55.9154 88.3718 55.7915 88.3114 55.1117C88.2449 54.369 88.1844 53.6269 88.2448 52.9465C88.5591 50.0392 89.1755 47.2565 90.2269 44.5347C90.6016 43.4827 91.0972 42.4934 91.774 41.6281C92.0882 41.2565 92.4568 40.8854 92.9523 40.7615C93.327 40.6376 93.5748 40.7615 93.6352 41.1948C93.6352 41.752 93.6351 42.3696 93.5082 42.9267C93.3874 43.6065 93.0792 44.2247 92.8918 44.8435C92.7045 45.4007 92.765 45.7101 93.321 45.8956H93.327ZM73.3249 46.761C73.8204 44.7203 74.5637 42.7412 75.4339 40.8238C75.5547 40.576 75.8025 40.2672 75.9294 40.3289C76.5458 40.4527 76.4853 41.5042 76.4853 41.8136C76.298 43.6065 75.9898 44.9064 75.4339 46.3905C75.2465 46.8232 74.9383 47.2565 74.6241 47.6275C74.3823 47.9369 74.0681 47.9369 73.76 47.813C73.3913 47.5659 73.2645 47.1326 73.3249 46.761ZM142.42 40.3911C142.855 40.2056 142.976 39.9578 142.915 39.4629C142.728 38.3498 142.112 37.6688 141.06 37.3606C139.634 36.9273 138.208 37.2367 136.909 37.8549C135.114 38.7208 133.627 39.9578 132.141 41.2564C131.379 41.9562 130.612 42.6572 129.851 43.36C130.098 42.1224 130.406 41.0093 130.654 39.8962C131.397 36.7418 132.141 33.649 132.884 30.4946C133.071 29.6909 133.011 29.5054 132.268 29.2576C130.968 28.8866 129.663 28.5155 128.364 28.2061C128.056 28.1445 127.621 28.0823 127.312 28.2061C126.757 28.33 126.63 28.8249 126.509 29.3192C126.14 30.8656 125.765 32.3504 125.457 33.8962C124.835 37.1128 124.218 40.3905 123.596 43.6065C123.227 44.1015 122.792 44.5347 122.297 44.9674C122.297 43.9788 122.236 43.0506 122.049 42.0602C121.68 40.2056 120.689 38.8447 119.016 38.0404C118.091 37.6071 117.033 37.4216 115.982 37.3606C115.057 37.2983 114.187 37.2367 113.323 37.67C113.009 37.7926 112.888 37.7926 112.64 37.5461C112.084 36.9889 111.401 36.6179 110.598 37.0512C109.854 37.4832 109.111 37.9165 108.495 38.4737C106.573 40.2056 105.395 42.3696 104.47 44.7825C103.787 46.5754 103.352 48.4312 103.413 50.3487C103.413 50.9052 103.413 51.4618 103.231 51.9561C102.923 53.0082 102.549 53.9974 101.745 54.7401C101.37 55.0495 101.002 55.1733 100.566 54.9878C100.198 54.8639 100.01 54.4929 100.01 54.0596C100.01 53.1936 99.95 52.2667 100.137 51.4001C100.627 48.4929 101.122 45.5862 101.684 42.679C102.428 38.7208 103.171 34.8238 103.975 30.8656C104.156 30.0003 103.975 29.567 103.171 29.0721C102.984 28.9482 102.796 28.8866 102.609 28.7627C101.437 28.2684 100.198 28.0206 98.8986 27.959C98.5239 27.959 98.1553 28.0823 97.968 28.5155C97.7202 29.0098 97.4724 29.567 97.3455 30.123C96.9769 32.1643 96.6687 34.1439 96.2941 36.1846C96.1732 37.0512 95.9858 37.9782 95.7985 38.8447H95.6777C95.6173 38.7831 95.5507 38.7831 95.4903 38.7208C93.8164 37.3606 91.9613 36.9273 89.8584 37.3606C88.1241 37.731 86.8248 38.7831 85.7068 40.1433C84.039 42.2463 83.1084 44.7825 82.5524 47.4414C82.3651 48.3696 82.2443 49.2978 82.1174 50.1631C81.5614 50.2248 81.0659 50.287 80.5704 50.3487C80.3226 50.4109 80.2017 50.5342 80.1353 50.843C79.5793 53.0692 78.5278 54.9256 76.6062 56.2242C75.6816 56.843 74.6905 57.0902 73.5726 56.9663C72.5211 56.843 71.7779 55.9154 71.7779 54.6784C71.7779 53.627 71.9048 52.5132 72.0257 51.4618C72.0861 50.7813 72.3338 50.1631 72.5816 49.4205C72.7085 49.606 72.7689 49.6682 72.8293 49.7921C73.8204 51.1524 75.9899 51.895 77.5973 50.7813C78.401 50.2248 79.0839 49.5443 79.5794 48.679C80.8182 46.7616 81.3136 44.6586 81.3136 42.3696C81.3136 41.5042 81.1867 40.6999 80.8181 39.9578C79.9539 38.1643 78.5278 37.1744 76.733 36.6179C74.8718 36.0607 72.8293 36.123 71.2823 37.2983C70.11 38.2259 69.1794 39.2774 68.4966 40.576C66.3332 44.597 65.4026 48.3696 65.7712 52.9465C65.7108 54.1212 64.9675 54.4306 64.9675 54.4306C64.1637 54.8639 63.481 54.6784 63.1124 54.5545C62.5564 54.369 62.3086 53.6263 62.3086 53.6263C61.8131 52.761 63.6078 44.1015 63.6078 44.1015C64.2242 41.4426 65.9585 34.5766 66.6414 31.9787C66.8891 31.0505 66.5146 30.4324 65.8377 29.938C64.9071 29.196 63.7951 28.8243 62.6772 28.5155C61.4384 28.2061 59.9518 27.959 58.6526 28.3916C57.2325 28.8243 55.5587 34.2055 55.5587 34.2055C54.5072 37.0512 52.09 44.4109 50.7908 48.0602C50.543 48.679 50.4222 48.3073 50.4222 48.1835V47.9363C50.5431 46.8848 50.7303 45.8956 50.9176 44.9058C51.3467 42.6173 52.9602 35.3809 53.3892 33.0308C53.7639 32.2265 53.3287 31.6083 52.7124 31.1744C50.9176 30.0003 48.5609 29.7525 46.5184 29.8142C45.2796 29.8764 44.6028 31.7316 44.6028 31.7316C43.2975 35.3193 39.708 46.8232 38.4088 50.4109C38.3484 50.5964 38.2819 50.7203 38.1611 50.7813C38.0402 50.9052 37.8529 50.843 37.726 50.7197L38.0403 49.606L38.2819 48.6784C37.6051 47.0704 32.8373 46.9471 32.2813 48.1218C32.2813 48.1218 31.1633 53.7502 34.5111 56.4103C36.4267 57.8945 38.161 58.3888 40.3909 57.5234C40.6991 57.3996 41.1342 57.1524 41.1342 56.7808C41.1342 56.7808 42.1856 52.3283 42.6207 50.9668C43.364 48.4312 43.7931 47.1326 44.5364 44.7825C44.5364 44.7825 44.8506 43.9782 44.9715 44.5347C44.9111 45.3385 44.8505 45.7717 44.7236 46.3905C44.5363 48.0602 44.4155 49.7299 44.2886 51.4001C44.1677 52.8226 44.0408 54.3068 44.1072 55.7299C44.1677 57.5234 44.9714 58.8843 46.5788 59.5031C47.449 59.8735 48.3796 60.059 49.3042 60.1219C50.1744 60.1829 50.9782 60.1219 51.7819 59.8125C52.0296 59.7496 52.3378 59.5031 52.4647 59.1937C52.9602 57.3379 53.4557 55.3582 53.9512 53.5031C54.7549 50.4109 55.3714 47.9979 56.302 45.0913C56.4228 44.7819 56.737 44.6586 57.1056 44.9058C56.8578 46.0195 56.6706 47.0087 56.4228 48.2457C55.9938 50.2248 55.619 52.2044 55.7459 54.1835C55.8668 56.4097 56.4893 57.6473 58.2841 58.5755C60.3266 59.6264 63.2331 60.059 65.7107 59.1937C65.9585 59.1314 66.2062 59.0076 66.454 58.8843H66.5145C67.01 58.6365 67.4452 58.3271 67.9407 58.0794C70.2309 60.2446 73.0168 61.1105 76.1107 60.8634C79.2712 60.6162 81.8091 59.1937 83.5434 56.4103C84.5345 57.9567 85.8337 59.0698 87.5076 59.5019C89.1755 59.9352 90.8494 59.9351 92.3359 58.8843C93.4478 58.1422 94.1911 57.0902 94.8739 55.9154C94.9948 55.7299 95.0552 55.5438 95.1821 55.3583C95.303 55.4821 95.3695 55.5437 95.3695 55.6676C95.5508 57.0901 96.294 58.0794 97.5932 58.5749C99.2671 59.1937 100.875 58.8221 102.428 58.1422C103.539 57.6473 104.47 56.9046 105.274 56.0393C105.334 56.0393 105.334 56.1009 105.334 56.1009C107.377 58.9459 110.163 59.8113 113.444 59.3792C116.109 59.0076 118.091 57.3995 119.511 55.0494C120.55 53.3465 121.3 51.4871 121.741 49.5443C122.17 49.2984 122.581 49.0301 122.98 48.7406C122.919 49.05 122.919 49.2978 122.853 49.606C122.671 51.0019 122.545 52.4057 122.484 53.8119C122.424 54.9878 122.424 56.1625 122.424 57.2757C122.424 58.2039 122.605 58.5133 123.415 58.6982C124.786 59.0777 126.17 59.4281 127.56 59.7496C128.243 59.9352 128.612 59.5641 128.672 58.8221V58.2033C128.672 56.3481 128.739 54.5545 128.739 52.6988C128.739 52.3277 128.799 51.9573 128.859 51.4618C129.168 51.7711 129.415 52.0189 129.603 52.2655C131.029 54.1835 132.515 56.0393 133.936 57.9561C134.745 59.0076 135.549 60.1219 136.413 61.1721C137.035 61.9765 137.652 62.1004 138.516 61.6671C139.138 61.3577 139.821 61.0483 140.438 60.7389C141.06 60.4295 141.676 60.0596 142.293 59.688C142.788 59.3786 142.855 59.0076 142.541 58.5126C142.293 58.1422 142.045 57.7712 141.737 57.3995C139.447 54.6784 137.217 51.895 134.927 49.1739C134.25 48.3696 133.567 47.6269 132.884 46.8232C133.319 46.4516 133.688 46.0811 134.123 45.7101C136.661 43.4839 139.447 41.8136 142.42 40.3905V40.3911ZM35.3813 72.8386C35.7016 72.8386 35.9735 72.7444 36.1911 72.5558C36.4026 72.3679 36.5174 72.134 36.5295 71.8567H37.7622C37.744 72.2174 37.6293 72.5673 37.4239 72.8652C37.2063 73.1807 36.9101 73.4345 36.5657 73.6019C36.2031 73.7832 35.8164 73.8738 35.3934 73.8738C34.5836 73.8738 33.9371 73.6127 33.4657 73.0894C32.9883 72.5661 32.7527 71.8446 32.7527 70.923V70.7889C32.7527 69.9108 32.9883 69.2087 33.4597 68.6811C33.931 68.1511 34.5715 67.8858 35.3873 67.8858C36.0823 67.8858 36.6443 68.0871 37.0733 68.4895C37.5084 68.8878 37.738 69.4123 37.7622 70.0631H36.5295C36.5174 69.7326 36.4026 69.4606 36.1911 69.2467C35.9796 69.0334 35.7076 68.9265 35.3813 68.9265C34.9583 68.9265 34.632 69.0799 34.4024 69.3857C34.1728 69.6884 34.0579 70.1489 34.0519 70.7683V70.9768C34.0519 71.6023 34.1667 72.0706 34.3903 72.38C34.6199 72.6857 34.9462 72.8386 35.3813 72.8386ZM41.3034 73.8744C40.4755 73.8744 39.8047 73.6158 39.291 73.1003C38.7774 72.5806 38.5236 71.8905 38.5236 71.0294V70.8692C38.5236 70.2927 38.6324 69.7797 38.856 69.3271C39.0796 68.8714 39.3938 68.5179 39.7987 68.2647C40.2036 68.0121 40.6749 67.8804 41.1523 67.8858C41.9439 67.8858 42.5543 68.1372 42.9833 68.6388C43.4124 69.1404 43.63 69.8492 43.63 70.7683V71.291H39.835C39.8773 71.7678 40.0343 72.1449 40.3123 72.4223C40.5963 72.6996 40.9528 72.8392 41.3758 72.8392C41.9741 72.8392 42.4636 72.5981 42.8383 72.1183L43.5392 72.7855C43.3036 73.1317 42.9833 73.4097 42.6086 73.591C42.2219 73.7795 41.7868 73.8738 41.3034 73.8738V73.8744ZM41.1463 68.9265C40.7897 68.9265 40.4997 69.0509 40.2761 69.3005C40.0586 69.5495 39.9195 69.8963 39.859 70.3411H42.3427V70.245C42.3125 69.8111 42.1977 69.4836 41.9922 69.263C41.7928 69.0389 41.5088 68.9265 41.1463 68.9265ZM49.1531 69.0225H47.2677V73.7674H45.9625V69.0225H44.1012V67.9928H49.1531V69.0225ZM51.4253 69.8287H52.7003C53.1777 69.8287 53.5947 69.9108 53.9451 70.074C54.3017 70.2378 54.5676 70.4674 54.755 70.7629C54.9362 71.0578 55.0329 71.4016 55.0329 71.7926C55.0329 72.3866 54.8214 72.8634 54.3984 73.2224C53.9754 73.5825 53.4133 73.7638 52.7124 73.7674H50.1201V67.9928H51.4253V69.8287ZM51.4253 70.8692V72.7323H52.7003C53.0145 72.7323 53.2684 72.6537 53.4497 72.4966C53.6371 72.3365 53.7277 72.1105 53.7277 71.8192C53.7277 71.5273 53.6369 71.2983 53.4556 71.1309C53.2743 70.9599 53.0327 70.8729 52.7245 70.8692H51.4253ZM63.922 71.4458H63.2272V73.7674H61.9278V71.4458H61.239L59.9035 73.7674H58.3021L60.2299 70.7629L58.4049 67.9928H60.0002L61.3175 70.2613H61.9278V67.9928H63.2272V70.2613H63.8496L65.1669 67.9928H66.7622L64.9433 70.7466L66.8771 73.7668H65.2575L63.922 71.4458ZM70.1342 73.8738C69.3063 73.8738 68.6355 73.6158 68.1218 73.1003C67.6142 72.5806 67.3544 71.8905 67.3544 71.0294V70.8692C67.3544 70.2927 67.4692 69.7797 67.6868 69.3271C67.8983 68.8914 68.2246 68.5234 68.6356 68.2647C69.0404 68.0121 69.5057 67.8804 69.9831 67.8858C70.7747 67.8858 71.3851 68.1372 71.8141 68.6388C72.2492 69.1404 72.4608 69.8492 72.4608 70.7683V71.291H68.6718C68.7081 71.7678 68.8713 72.1449 69.1493 72.4223C69.4333 72.6996 69.7838 72.8392 70.2128 72.8392C70.8111 72.8392 71.2945 72.5981 71.6691 72.1183L72.3761 72.7855C72.1404 73.1317 71.8201 73.4097 71.4394 73.591C71.0527 73.7795 70.6176 73.8738 70.1342 73.8738ZM69.9771 68.9265C69.6205 68.9265 69.3305 69.0509 69.113 69.3005C68.8954 69.5495 68.7504 69.8963 68.69 70.3411H71.1736V70.245C71.1494 69.8111 71.0285 69.4836 70.8291 69.263C70.6236 69.0389 70.3396 68.9265 69.9771 68.9265ZM78.4009 73.7674H77.0957V71.4349H74.8356V73.7674H73.5304V67.9928H74.8356V70.3997H77.0957V67.9928H78.4009V73.7674ZM82.1777 72.8392C82.498 72.8392 82.77 72.7444 82.9875 72.5558C83.199 72.3679 83.3139 72.134 83.332 71.8567H84.5587C84.5406 72.2174 84.4258 72.5673 84.2203 72.8652C84.0028 73.1807 83.7067 73.4345 83.3623 73.6019C82.9997 73.7832 82.6128 73.8738 82.1898 73.8738C81.3801 73.8738 80.7335 73.6127 80.2622 73.0894C79.7848 72.5661 79.5491 71.8446 79.5491 70.923V70.7889C79.5491 69.9108 79.7848 69.2087 80.2561 68.6811C80.7275 68.1511 81.368 67.8858 82.1838 67.8858C82.8787 67.8858 83.4407 68.0871 83.8698 68.4895C84.3049 68.8878 84.5346 69.4123 84.5587 70.0631H83.332C83.3139 69.7326 83.199 69.4606 82.9875 69.2467C82.776 69.0334 82.504 68.9265 82.1777 68.9265C81.7547 68.9265 81.4285 69.0799 81.1988 69.3857C80.9692 69.6884 80.8543 70.1489 80.8483 70.7683V70.9768C80.8483 71.6023 80.9632 72.0706 81.1867 72.38C81.4164 72.6857 81.7487 72.8392 82.1777 72.8392ZM87.6043 71.4832H86.9457V73.7674H85.6403V67.9928H86.9457V70.2982H87.5197L89.121 67.9928H90.7346L88.6377 70.7574L90.9099 73.7674H89.2178L87.6043 71.4832ZM95.2487 67.9922H96.5478V73.7674H95.2487V69.9138L92.9765 73.7674H91.6772V67.9928H92.9765V71.8458L95.2487 67.9922ZM100.023 69.8927L101.128 67.9928H102.573L100.796 70.8372L102.633 73.7674H101.195L100.035 71.7926L98.8805 73.7674H97.4361L99.2672 70.8372L97.4966 67.9922H98.9348L100.023 69.8927ZM108.259 71.4832H107.6V73.7674H106.301V67.9928H107.6V70.2982H108.174L109.782 67.9928H111.389L109.292 70.7574L111.565 73.7674H109.873L108.259 71.4832ZM117.215 67.9922V73.7674H115.915V69.0388H114.272L114.163 71.0505C114.097 72.0186 113.909 72.7142 113.601 73.1378C113.299 73.5571 112.828 73.7674 112.199 73.7674H111.8L111.794 72.6894L112.06 72.6622C112.344 72.6229 112.556 72.4513 112.682 72.1443C112.815 71.8349 112.9 71.2735 112.936 70.4583L113.045 67.9928L117.215 67.9922ZM122.23 67.9922H123.524V73.7674H122.23V69.9138L119.952 73.7674H118.653V67.9928H119.952V71.8458L122.23 67.9922ZM129.832 73.7674H128.527V71.4349H126.267V73.7674H124.962V67.9928H126.267V70.3997H128.527V67.9928H129.832V73.7674ZM134.848 67.9928H136.147V73.7674H134.848V69.9138L132.57 73.7674H131.277V67.9928H132.57V71.8458L134.848 67.9928ZM139.598 71.4832H138.933V73.7674H137.634V67.9928H138.933V70.2982H139.507L141.114 67.9928H142.722L140.625 70.7574L142.903 73.7674H141.205L139.598 71.4832Z" fill="#F56CA8"/>
-                                    </g>
-                                    </svg>
-                                    
-                                    
-                                    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="company__block">
-                                <svg width="177" height="102" viewBox="0 0 177 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g opacity="0.8">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M144.474 37.3963C141.798 37.3963 139.511 38.3547 137.589 40.2708C137.073 40.7924 136.636 41.3245 136.255 41.8994V38.1634H132.452V32H127.878V35.6725C127.878 36.4173 127.663 37.0136 127.258 37.471C126.861 37.9291 126.353 38.1634 125.782 38.1634H124.058V42.1121C123.693 41.1434 123.106 40.2922 122.312 39.5252C120.819 38.0991 118.889 37.3963 116.539 37.3963C115.626 37.3963 114.752 37.5353 113.871 37.8013C112.998 38.0673 112.291 38.3651 111.759 38.6843C111.227 38.9931 110.735 39.3656 110.274 39.7705C109.829 40.1858 109.535 40.4733 109.408 40.6432C109.273 40.8139 109.178 40.9521 109.091 41.0481L111.949 43.9218L112.378 43.4644C112.664 43.1238 113.148 42.8038 113.847 42.4742C114.546 42.1654 115.324 41.9954 116.166 41.9954C117.182 41.9954 117.976 42.2503 118.556 42.7506C119.128 43.2516 119.398 43.9003 119.398 44.6777L113.474 45.7528C111.743 46.0617 110.385 46.7319 109.408 47.7538C108.845 48.3391 108.448 49.01 108.209 49.7763V45.6353C108.209 42.9213 107.614 40.8774 106.407 39.4831C105.216 38.0887 103.58 37.3963 101.516 37.3963C100.73 37.3963 99.9751 37.5138 99.2446 37.737C98.53 37.9712 97.9345 38.2269 97.4898 38.5247C97.0451 38.8232 96.6165 39.1528 96.2353 39.5252C95.8463 39.8872 95.592 40.1532 95.4729 40.3136C95.3617 40.4621 95.2745 40.5797 95.2189 40.6535L95.0759 40.3136C94.9647 40.0794 94.7742 39.792 94.4962 39.4831C94.2263 39.1639 93.8848 38.855 93.5037 38.5461C93.1146 38.2372 92.6064 37.9712 91.9474 37.737C91.2963 37.5027 90.6135 37.3963 89.883 37.3963C88.9143 37.3963 88.001 37.6417 87.1434 38.1419C86.3017 38.6422 85.7381 39.036 85.484 39.3338C85.2219 39.6324 85.0314 39.8769 84.8964 40.0794V37.7799H79.751V44.507C79.3778 42.8149 78.5678 41.3459 77.3132 40.0794C75.5266 38.2904 73.2954 37.3963 70.6036 37.3963C67.9118 37.3963 65.6168 38.3547 63.6953 40.2708C62.2898 41.6754 61.3847 43.2937 61.0194 45.1144V32.0103H55.8581V44.827C55.8581 44.827 55.8581 44.827 55.8581 44.8159C55.477 43.0174 54.5559 41.3991 53.1028 39.9404C51.1415 37.9926 48.8229 37.0136 46.1549 37.0136C43.479 37.0136 41.1604 37.9926 39.1832 39.9404C37.1981 41.8993 36.2135 44.1775 36.2135 46.7851C36.2135 47.2854 36.2531 47.7753 36.3325 48.2541C36.2849 48.1794 36.2452 48.1159 36.1897 48.0413C35.61 47.2536 34.8795 46.6787 34.0299 46.3166C33.1723 45.9553 32.3227 45.6568 31.489 45.4011C30.6473 45.1462 29.9325 44.8587 29.3449 44.5284C28.7653 44.1989 28.4795 43.8051 28.4795 43.3151C28.4795 42.911 28.678 42.5592 29.091 42.2503C29.5039 41.9422 30.0675 41.7929 30.7742 41.7929C31.338 41.7929 31.878 41.9311 32.4179 42.2186C32.95 42.4957 33.3073 42.7299 33.4661 42.8998C33.6408 43.0809 33.7678 43.2087 33.8314 43.3151L36.4992 40.2597L35.8562 39.5363C35.4274 39.0781 34.673 38.5993 33.5852 38.1102C32.4973 37.6202 31.3063 37.386 30.012 37.386C27.9792 37.386 26.2641 38.003 24.8666 39.2171C23.4691 40.4407 22.7704 41.8033 22.7704 43.3254C22.7704 44.4863 23.0641 45.444 23.6437 46.2102C24.2313 46.9661 24.9459 47.5307 25.7797 47.9031C26.6134 48.2652 27.4711 48.5733 28.3208 48.829C29.1783 49.0846 29.9009 49.3824 30.4805 49.7231C31.0602 50.0637 31.3618 50.5004 31.3618 51.011C31.3618 51.5224 31.1474 51.9376 30.7345 52.2569C30.3136 52.5761 29.6944 52.7253 28.8845 52.7253C28.1381 52.7253 27.4155 52.5332 26.7168 52.1393C26.0339 51.7455 25.5654 51.4374 25.351 51.2032C25.1366 50.9689 24.9778 50.7768 24.8745 50.6283L22 53.5019L22.27 53.8958C22.4527 54.1197 22.7545 54.396 23.1674 54.7263C23.5962 55.0567 24.0725 55.3862 24.6283 55.7268C25.1921 56.0675 25.9147 56.3549 26.812 56.5892C27.7172 56.8234 28.6542 56.9512 29.6467 56.9512C31.9654 56.9512 33.7757 56.3867 35.1017 55.248C36.4278 54.1086 37.0791 52.7039 37.0791 51.011C37.0791 50.8943 37.0791 50.7768 37.0711 50.66V50.6704C37.5555 51.7455 38.278 52.7253 39.1991 53.6409C41.1683 55.599 43.4949 56.5677 46.1708 56.5677C48.8468 56.5677 51.1733 55.5887 53.1267 53.6409C54.5877 52.1925 55.5088 50.564 55.882 48.7654C55.882 48.7654 55.882 48.7654 55.882 48.7543V56.5677H61.0353V49.1911C61.4085 51.0324 62.3216 52.6507 63.7588 54.0665C65.7042 55.9825 68.0627 56.9512 70.818 56.9512C71.7947 56.9512 72.7474 56.8337 73.6605 56.6106C74.5816 56.3867 75.3201 56.1207 75.8918 55.8332C76.4636 55.5355 77.0194 55.2051 77.5276 54.8327C78.0438 54.4603 78.3693 54.1832 78.5361 54.0347L78.8854 53.6941L76.2014 50.2559L75.6615 50.83C75.3201 51.2135 74.7405 51.597 73.9147 51.9797C73.073 52.3521 72.1758 52.5443 71.1991 52.5443C69.8572 52.5443 68.7297 52.1925 67.8483 51.4906C66.9748 50.7768 66.419 49.9152 66.2284 48.8933H79.7905V56.5677H84.9439V46.7962C84.9439 45.4122 85.2694 44.3259 85.9205 43.5383C86.5637 42.7617 87.3896 42.3678 88.3901 42.3678C89.2635 42.3678 89.9941 42.7085 90.5817 43.3898C91.1613 44.0711 91.4472 45.0072 91.4472 46.2102V56.5677H96.6006V46.7962C96.6006 45.4122 96.9261 44.3259 97.5613 43.5383C98.2124 42.7617 99.0381 42.3678 100.023 42.3678C100.92 42.3678 101.651 42.7085 102.222 43.3898C102.794 44.0711 103.08 45.0072 103.08 46.2102V56.5677H108.241V53.2359C108.519 54.0236 109.019 54.7478 109.726 55.3759C110.893 56.4184 112.41 56.9401 114.268 56.9401C115.237 56.9401 116.166 56.7273 117.071 56.3017C117.96 55.8864 118.54 55.5458 118.81 55.2901C119.072 55.0352 119.286 54.8224 119.429 54.6414V56.5463H124.535V44.8373C124.535 44.1028 124.456 43.4001 124.273 42.7402H127.306V50.394C127.306 54.7367 129.275 56.9195 133.214 56.9195C134.5 56.9298 135.644 56.7384 136.66 56.3549V52.927C136.954 53.3106 137.271 53.6726 137.637 54.0347C139.566 55.9507 141.917 56.9195 144.664 56.9195C145.625 56.9195 146.57 56.802 147.491 56.5788C148.404 56.3549 149.142 56.0889 149.714 55.8015C150.286 55.5037 150.826 55.1734 151.334 54.801C151.842 54.4286 152.176 54.1514 152.334 54.0022L152.668 53.6615L150 50.2233L149.46 50.7982C149.118 51.1817 148.547 51.5645 147.721 51.948C146.895 52.3204 145.998 52.5125 145.029 52.5125C143.687 52.5125 142.576 52.1608 141.694 51.458C140.813 50.745 140.273 49.8827 140.074 48.8607H153.613L153.804 46.7637C153.804 44.0814 152.914 41.8461 151.135 40.0468C149.365 38.2904 147.141 37.3963 144.474 37.3963ZM49.6884 50.3091C48.6879 51.3096 47.4968 51.8098 46.1232 51.8098C44.7495 51.8098 43.5663 51.3096 42.55 50.3091C41.5336 49.3078 41.0255 48.1374 41.0255 46.7962C41.0255 45.4543 41.5336 44.2942 42.55 43.2834C43.5584 42.2829 44.7495 41.7826 46.1232 41.7826C47.4968 41.7826 48.6879 42.2829 49.6884 43.2834C50.7048 44.2839 51.2129 45.4543 51.2129 46.7962C51.2129 48.1374 50.7048 49.3078 49.6884 50.3091ZM66.1887 45.2629C66.4983 44.241 67.0383 43.4112 67.8085 42.772C68.5708 42.1336 69.5078 41.8144 70.6036 41.8144C71.7073 41.8144 72.6284 42.1439 73.3907 42.7934C74.145 43.443 74.6213 44.2624 74.8198 45.2629H66.1887ZM119.39 48.5201C119.39 49.8406 119.048 50.8832 118.365 51.6288C117.674 52.3633 116.737 52.7357 115.578 52.7357C113.919 52.7357 113.093 52.1076 113.093 50.83C113.093 49.6381 113.807 48.9354 115.205 48.7123L119.398 47.9452V48.5201H119.39ZM134.731 52.3633C134.072 52.3633 133.532 52.1608 133.103 51.7455C132.674 51.3413 132.452 50.8411 132.452 50.2559V42.7831H135.747C135.064 44.1131 134.723 45.5821 134.723 47.179C134.723 49.0203 135.175 50.6918 136.088 52.1719C135.969 52.2037 135.842 52.2354 135.707 52.2672C135.39 52.3315 135.072 52.3633 134.731 52.3633ZM140.074 45.2629C140.376 44.241 140.916 43.4112 141.686 42.772C142.449 42.1336 143.378 41.8144 144.474 41.8144C145.569 41.8144 146.49 42.1439 147.237 42.7934C147.991 43.443 148.467 44.2624 148.666 45.2629H140.074Z" fill="black"/>
-                                    <path d="M22.7546 63.6364C22.7546 63.0933 22.7466 62.6462 22.7148 62.2095H23.5486L23.5961 63.0615H23.6279C23.9217 62.5613 24.4061 62.0928 25.2716 62.0928C25.9783 62.0928 26.5263 62.5295 26.7486 63.1465H26.7723C26.9311 62.8487 27.1457 62.6248 27.3521 62.4652C27.6697 62.2206 28.0112 62.0928 28.5114 62.0928C29.2022 62.0928 30.2344 62.5501 30.2344 64.3812V67.4788H29.3054V64.4987C29.3054 63.4871 28.9321 62.8805 28.1698 62.8805C27.6299 62.8805 27.2091 63.2846 27.0503 63.7531C27.0026 63.881 26.9708 64.062 26.9708 64.2327V67.4899H26.0418V64.3391C26.0418 63.4982 25.6687 62.8908 24.9462 62.8908C24.3586 62.8908 23.9219 63.3704 23.771 63.8492C23.7233 63.9874 23.6995 64.1581 23.6995 64.3177V67.5002H22.7705V63.6364H22.7546Z" fill="black"/>
-                                    <path d="M34.689 67.4792L34.6095 66.8193H34.5777C34.2839 67.2346 33.7201 67.607 32.9817 67.607C31.9177 67.607 31.3777 66.8511 31.3777 66.0952C31.3777 64.8183 32.5052 64.1259 34.538 64.1371V64.0307C34.538 63.5939 34.4189 62.8062 33.3548 62.8062C32.8625 62.8062 32.3544 62.9555 31.9812 63.2001L31.7747 62.572C32.2035 62.2846 32.8309 62.1035 33.4979 62.1035C35.1019 62.1035 35.491 63.2001 35.491 64.2538V66.223C35.491 66.6812 35.5147 67.1282 35.5782 67.4903H34.689V67.4792ZM34.5459 64.7969C33.5137 64.7755 32.3226 64.9565 32.3226 65.9784C32.3226 66.5954 32.7356 66.894 33.2279 66.894C33.9028 66.894 34.3396 66.4573 34.4984 66.0102C34.5302 65.9141 34.5459 65.8077 34.5459 65.7013V64.7969Z" fill="black"/>
-                                    <path d="M37.9444 64.625H37.9603C38.0873 64.444 38.278 64.2105 38.4288 64.0295L39.9613 62.2087H41.1126L39.0878 64.3701L41.3985 67.4677H40.2393L38.4288 64.945L37.9444 65.4873V67.4677H36.9995V59.7393H37.9444V64.625Z" fill="black"/>
-                                    <path d="M42.6135 65.0204C42.6373 66.3187 43.4631 66.8507 44.416 66.8507C45.0909 66.8507 45.5037 66.734 45.8689 66.5744L46.0277 67.2556C45.6863 67.4049 45.1146 67.5852 44.2729 67.5852C42.6689 67.5852 41.7002 66.5212 41.7002 64.9347C41.7002 63.3489 42.6372 62.0928 44.1618 62.0928C45.8769 62.0928 46.3216 63.6046 46.3216 64.5734C46.3216 64.7647 46.2977 64.9243 46.2898 65.0204H42.6135ZM45.4006 64.3391C45.4085 63.7325 45.1543 62.7844 44.0744 62.7844C43.1136 62.7844 42.6849 63.6785 42.6135 64.3391H45.4006Z" fill="black"/>
-                                    <path d="M50.149 62.209L51.2924 65.3169C51.4035 65.6686 51.5305 66.0839 51.6258 66.392H51.6497C51.7449 66.0728 51.8481 65.679 51.991 65.2962L53.0313 62.209H54.0318L52.6025 65.9664C51.9275 67.776 51.459 68.7027 50.8 69.2664C50.3394 69.6817 49.871 69.8413 49.6407 69.8842L49.4024 69.0751C49.6407 69.0004 49.9583 68.8512 50.2442 68.6066C50.5062 68.4041 50.8238 68.0317 51.0462 67.5418C51.0859 67.4465 51.1177 67.3719 51.1177 67.3187C51.1177 67.2655 51.1018 67.1908 51.0541 67.063L49.1167 62.209H50.149Z" fill="black"/>
-                                    <path d="M59.5345 64.8076C59.5345 66.7554 58.1927 67.6066 56.9302 67.6066C55.5089 67.6066 54.4209 66.5632 54.4209 64.8926C54.4209 63.125 55.5643 62.0928 57.0095 62.0928C58.5182 62.0928 59.5345 63.1893 59.5345 64.8076ZM55.3737 64.8608C55.3737 66.0098 56.0248 66.8832 56.9618 66.8832C57.875 66.8832 58.5499 66.0209 58.5499 64.8394C58.5499 63.9453 58.1052 62.8169 56.9777 62.8169C55.8581 62.8169 55.3737 63.8595 55.3737 64.8608Z" fill="black"/>
-                                    <path d="M65.1167 66.0416C65.1167 66.5847 65.1246 67.0635 65.1564 67.4788H64.3147L64.2592 66.6165H64.2354C63.9972 67.0421 63.4333 67.5963 62.5042 67.5963C61.6705 67.5963 60.686 67.1382 60.686 65.2857V62.2095H61.6388V65.1261C61.6388 66.1273 61.9485 66.7975 62.8061 66.7975C63.4413 66.7975 63.886 66.3505 64.0687 65.9249C64.1243 65.7867 64.1559 65.6057 64.1559 65.4349V62.1992H65.1087V66.0416H65.1167Z" fill="black"/>
-                                    <path d="M66.6968 63.8599C66.6968 63.243 66.689 62.7102 66.6572 62.221H67.4908L67.5226 63.2533H67.5624C67.8085 62.5506 68.3803 62.1035 69.0155 62.1035C69.1267 62.1035 69.198 62.1146 69.2933 62.1353V63.0405C69.198 63.019 69.1028 63.0087 68.9678 63.0087C68.3008 63.0087 67.8243 63.5193 67.6814 64.2435C67.6576 64.3713 67.6418 64.5309 67.6418 64.6905V67.5006H66.6968V63.8599Z" fill="black"/>
-                                    <path d="M72.5329 63.6364C72.5329 63.0933 72.5249 62.6462 72.4932 62.2095H73.3269L73.3746 63.0615H73.4064C73.7002 62.5613 74.1844 62.0928 75.042 62.0928C75.7567 62.0928 76.3046 62.5295 76.527 63.1465H76.5508C76.7096 62.8487 76.924 62.6248 77.1305 62.4652C77.4481 62.2206 77.7895 62.0928 78.2897 62.0928C78.9805 62.0928 80.0127 62.5501 80.0127 64.3812V67.4788H79.0838V64.4987C79.0838 63.4871 78.7106 62.8805 77.9483 62.8805C77.4084 62.8805 76.9874 63.2846 76.8286 63.7531C76.781 63.881 76.7493 64.062 76.7493 64.2327V67.4899H75.8202V64.3391C75.8202 63.4982 75.4471 62.8908 74.7245 62.8908C74.1369 62.8908 73.7002 63.3704 73.5493 63.8492C73.5017 63.9874 73.4778 64.1581 73.4778 64.3177V67.5002H72.5488V63.6364H72.5329Z" fill="black"/>
-                                    <path d="M86.3019 64.8076C86.3019 66.7554 84.952 67.6066 83.6895 67.6066C82.2681 67.6066 81.1802 66.5632 81.1802 64.8926C81.1802 63.125 82.3236 62.0928 83.7767 62.0928C85.2775 62.0928 86.3019 63.1893 86.3019 64.8076ZM82.1411 64.8608C82.1411 66.0098 82.8 66.8832 83.737 66.8832C84.6422 66.8832 85.3251 66.0209 85.3251 64.8394C85.3251 63.9453 84.8804 62.8169 83.7529 62.8169C82.6333 62.8169 82.1411 63.8595 82.1411 64.8608Z" fill="black"/>
-                                    <path d="M87.7947 62.209L88.8191 65.1684C88.9938 65.6472 89.1367 66.0839 89.2479 66.5198H89.2797C89.3908 66.0839 89.5495 65.6472 89.7242 65.1684L90.7406 62.209H91.7331L89.6767 67.4783H88.7714L86.7783 62.209H87.7947Z" fill="black"/>
-                                    <path d="M93.0593 65.0204C93.0831 66.3187 93.9087 66.8507 94.8616 66.8507C95.5365 66.8507 95.9495 66.734 96.3147 66.5744L96.4735 67.2556C96.1321 67.4049 95.5604 67.5852 94.7266 67.5852C93.1147 67.5852 92.146 66.5212 92.146 64.9347C92.146 63.3489 93.083 62.0928 94.6076 62.0928C96.3227 62.0928 96.7674 63.6046 96.7674 64.5734C96.7674 64.7647 96.7435 64.9243 96.7356 65.0204H93.0593ZM95.8541 64.3391C95.87 63.7325 95.616 62.7844 94.5361 62.7844C93.5673 62.7844 93.1464 63.6785 93.067 64.3391H95.8541Z" fill="black"/>
-                                    </g>
-                                    </svg>
-                                    
-                                    
-                                    
-                                    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="company__block">
-                                <svg width="177" height="102" viewBox="0 0 177 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <mask id="mask0_25_46" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="24" y="32" width="126" height="38">
-                                    <path d="M150 32.4756H24.1072V69.6334H150V32.4756Z" fill="white"/>
-                                    </mask>
-                                    <g mask="url(#mask0_25_46)">
-                                    <path d="M150.002 51.0542V66.7748C150.002 68.3534 148.723 69.6334 147.138 69.6334H26.9708C25.3916 69.6334 24.1072 68.3534 24.1072 66.7748V35.3337C24.1072 33.755 25.3916 32.4756 26.9708 32.4756H147.138C148.723 32.4756 150.002 33.755 150.002 35.3337V51.0542Z" fill="#EF4741"/>
-                                    <path d="M82.6477 40.2119H73.8956V61.8204H83.6486C87.313 61.8204 93.3572 61.4874 93.3572 55.2652V46.7766C93.3516 40.5455 86.3121 40.2119 82.6477 40.2119ZM88.1527 54.6936C88.1527 57.8097 85.884 58.1238 83.2984 58.1238H79.0891V43.9085H82.3253C84.9109 43.9085 88.1805 44.2232 88.1805 47.3388L88.1527 54.6936ZM42.3733 40.2119H33.6824V61.8204H43.3909C47.0553 61.8204 53.0995 61.4874 53.0995 55.2652V46.7766C53.0995 40.5455 46.0822 40.2119 42.4011 40.2119H42.3733ZM47.8727 54.6936C47.8727 57.8097 45.604 58.1238 43.0184 58.1238H38.8425V43.9085H42.0453C44.6309 43.9085 47.9059 44.2232 47.9059 47.3388L47.8727 54.6936ZM118.452 41.0504H113.586V56.99C113.57 57.7568 113.697 58.5203 113.97 59.2387C114.17 59.7948 114.498 60.2969 114.921 60.7056C115.36 61.082 115.872 61.3673 116.422 61.5446C116.989 61.7454 117.584 61.8794 118.185 61.9444C118.752 61.995 119.414 62.0234 120.17 62.0301C121.071 62.029 121.971 61.975 122.867 61.8682V59.1336H121.132C120.743 59.1881 120.348 59.1653 119.97 59.0652C119.592 58.9651 119.241 58.7905 118.93 58.5525C118.524 57.8769 118.346 57.0874 118.435 56.3039V48.4153H122.867V45.4232H118.435L118.452 41.0504ZM138.48 46.4619C137.324 45.7379 135.255 45.3787 132.28 45.3854H126.637V45.6234L127.332 48.3863H132.28C133.103 48.3369 133.926 48.5009 134.666 48.8629C134.922 49.1048 135.116 49.4039 135.233 49.7348C135.355 50.0656 135.394 50.4198 135.35 50.7684V51.8644H129.917C128.01 51.8644 126.698 52.2359 125.986 52.9787C125.274 53.7222 124.907 55.0589 124.88 56.99C124.88 59.0958 125.235 59.9816 125.947 60.6483C126.664 61.3156 128.049 61.811 130.223 61.811H136.957C138.631 61.811 140.243 61.0203 140.243 59.1242V50.7306C140.243 48.6027 139.665 47.1764 138.508 46.4524L138.48 46.4619ZM135.344 59.1336H132.147C131.424 59.2137 130.696 59.0986 130.029 58.8C129.751 58.5781 129.612 57.9426 129.612 56.895C129.612 55.8468 129.745 55.1924 130.012 54.9321C130.624 54.6091 131.324 54.4823 132.014 54.5701H135.344V59.1336ZM109.116 46.4619C107.959 45.7379 105.891 45.3787 102.916 45.3854H97.2718V45.6234L97.9668 48.3863H102.916C103.739 48.3369 104.562 48.5009 105.301 48.8629C105.557 49.1059 105.751 49.4039 105.868 49.7348C105.985 50.0656 106.03 50.4198 105.985 50.7684V51.8644H100.519C98.6119 51.8644 97.3052 52.2359 96.5934 52.9787C95.8817 53.7222 95.5258 55.0589 95.5258 56.99C95.5258 59.0958 95.8761 59.9816 96.5934 60.6483C97.3052 61.3156 98.6897 61.811 100.864 61.811H107.598C109.288 61.811 110.889 61.0203 110.889 59.1242V50.7306C110.884 48.6027 110.306 47.1764 109.155 46.4524L109.116 46.4619ZM105.985 59.1336H102.793C102.071 59.2137 101.337 59.0986 100.675 58.8C100.397 58.5781 100.252 57.9426 100.252 56.895C100.252 55.8468 100.386 55.1924 100.653 54.9321C101.27 54.6091 101.97 54.4823 102.66 54.5701H105.985V59.1336ZM68.869 46.4619C67.7124 45.7379 65.6439 45.3787 62.669 45.3854H57.0475V45.6234L57.7481 48.3863H62.6968C63.5198 48.3369 64.3428 48.5009 65.0823 48.8629C65.3325 49.1059 65.5271 49.4039 65.6495 49.7348C65.7663 50.0656 65.8107 50.4193 65.7662 50.7684V51.8644H60.3002C58.393 51.8644 57.0863 52.2359 56.3745 52.9787C55.6628 53.7222 55.2902 55.0589 55.268 56.99C55.268 59.0958 55.6184 59.9816 56.3357 60.6483C57.0474 61.3156 58.432 61.811 60.6061 61.811H67.3399C69.0303 61.811 70.6316 61.0203 70.6316 59.1242V50.7306C70.6316 48.6027 70.0533 47.1764 68.8967 46.4524L68.869 46.4619ZM65.7384 59.1336H62.5745C61.8517 59.2137 61.1177 59.0986 60.456 58.8C60.1779 58.5781 60.0334 57.9426 60.0334 56.895C60.0334 55.8468 60.1668 55.1924 60.4337 54.9321C61.0509 54.6091 61.7516 54.4828 62.4411 54.5701H65.7662L65.7384 59.1336Z" fill="white"/>
-                                    </g>
-                                    </svg>
-                                    
-                                    
-                                    
-                                    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="company__block">
-                                <svg width="177" height="102" viewBox="0 0 177 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M21.3999 49.3935C21.3999 43.7571 22.455 37.4168 30.0151 36.1997L39.8754 34.5986L40.7091 39.8505L30.5604 41.7078C27.102 42.3481 26.2992 44.6536 26.2375 45.6145C26.7161 44.8142 28.9547 42.7644 32.8968 42.7644C37.7962 42.7644 42.1191 46.2228 42.1191 51.5709C42.1191 56.9828 37.7654 61.402 31.7442 61.402C24.8274 61.3696 21.3999 57.2067 21.3999 49.3935ZM35.4906 51.6028C35.4906 49.4254 33.9211 47.5999 31.7442 47.5999C29.5004 47.5999 28.0593 49.3935 28.0593 51.6028C28.0593 53.7802 29.6291 55.6057 31.806 55.6057C34.0498 55.6057 35.4906 53.8127 35.4906 51.6028Z" fill="#22A2DC"/>
-                                    <path d="M43.4984 57.1745L47.7236 54.0682C48.8455 55.2853 49.9006 55.9898 51.5989 55.9898C53.4259 55.9898 54.8668 54.8689 55.4741 53.2035H50.2505V49.2969H55.4741C54.8668 47.6635 53.4257 46.5107 51.6914 46.5107C49.9313 46.5107 48.7477 47.1514 47.7545 48.4323L43.6889 45.134C45.3203 42.7322 47.914 41.1631 51.6914 41.1631C57.8105 41.1631 62.0716 45.7742 62.0716 51.25C62.0716 56.7901 57.7796 61.3693 51.9487 61.3693C47.8213 61.3693 45.2894 59.672 43.4984 57.1745Z" fill="#22A2DC"/>
-                                    <path d="M64.7891 49.3935C64.7891 43.7571 65.8491 37.4168 73.404 36.1997L83.2698 34.5986L84.1033 39.8505L73.9495 41.7078C70.4912 42.3481 69.6884 44.6536 69.6266 45.6145C70.1052 44.8142 72.349 42.7644 76.286 42.7644C81.1854 42.7644 85.5083 46.2228 85.5083 51.5709C85.5083 56.9828 81.1546 61.402 75.1333 61.402C68.2475 61.3696 64.7891 57.2067 64.7891 49.3935ZM78.8798 51.6028C78.8798 49.4254 77.3103 47.5999 75.1333 47.5999C72.8947 47.5999 71.4535 49.3935 71.4535 51.6028C71.4535 53.7802 73.0233 55.6057 75.2002 55.6057C77.4749 55.6057 78.8798 53.8127 78.8798 51.6028Z" fill="#22A2DC"/>
-                                    <path d="M88.3594 41.5469H94.9263V51.2499L101.359 41.5469H107.607V60.8885H101.04V51.1855L94.6072 60.8885H88.3594V41.5469Z" fill="#22A2DC"/>
-                                    <path d="M128.615 48.9453C127.235 48.9453 126.114 50.0981 126.114 51.7635C126.114 53.3964 127.235 54.5492 128.615 54.5492C130.02 54.5492 131.111 53.4283 131.111 51.731C131.111 50.0981 129.989 48.9453 128.615 48.9453Z" fill="#E35192"/>
-                                    <path d="M133.992 29.8271C122.398 29.8271 112.985 39.2419 112.985 50.8342C112.985 51.2505 112.985 51.635 113.016 52.0513C113.561 51.7631 114.168 51.6025 114.812 51.6025C116.958 51.6025 118.687 53.3322 118.687 55.4777C118.687 57.6233 116.958 59.3524 114.812 59.3524H114.781C118.044 66.7174 125.408 71.8731 133.992 71.8731C145.587 71.8731 155 62.4588 155 50.8661C155 39.2739 145.587 29.8271 133.992 29.8271ZM129.927 58.1353C128.069 58.1353 126.978 57.3026 126.18 56.3742V61.498H121.888V45.6147H126.18V47.2477C127.014 46.223 128.069 45.3584 129.896 45.3584C132.809 45.3584 135.336 47.7921 135.336 51.7307C135.336 55.7016 132.84 58.1353 129.927 58.1353ZM144.815 57.5589C143.76 60.409 142.607 61.5299 140.142 61.5299C138.634 61.5299 137.322 61.1136 136.2 60.4733L137.549 57.4632C138.218 57.879 138.953 58.1353 139.437 58.1353C139.854 58.1353 140.173 58.0072 140.431 57.6233L135.624 45.6147H140.142L142.577 52.9797L144.882 45.6147H149.298L144.815 57.5589Z" fill="#E35192"/>
-                                    </svg>
-                                    
-                                    
-                                    
-                                    
-                                    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="company__block">
-                                <svg width="177" height="102" viewBox="0 0 177 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M100.432 45.4617C100.152 46.2233 99.3945 46.7082 98.6309 46.7082C97.9391 46.7082 95.929 46.7082 95.929 46.7082L94.9631 51.1389C94.9631 51.1389 94.9631 51.1389 98.6309 51.1389C101.261 51.1389 103.617 49.4773 104.583 47.0541C105.209 45.3233 105.209 45.3233 105.209 45.3233L100.706 44.6309C100.706 44.6309 100.706 44.6309 100.432 45.4617Z" fill="black"/>
-                                    <path d="M67.4744 33V45.9468H72.2516V41.3079H76.2V45.9468H81.0424V33H76.2V37.0848H72.2516V33H67.4744Z" fill="black"/>
-                                    <path d="M34.7256 55.9852H30.8491V51.9004H26V64.7774H30.8491V60.1392H34.7256V64.7774H39.5681V51.9004H34.7256V55.9852Z" fill="black"/>
-                                    <path d="M129.716 55.9852H125.774V51.9004H120.925V64.7774H125.774V60.1392H129.716V64.7774H134.493V51.9004H129.716V55.9852Z" fill="black"/>
-                                    <path d="M95.929 45.9468V33H87.0663C83.9533 33 82.0803 35.0773 82.0803 37.4999C82.0803 39.9929 83.6074 41.1696 84.5733 41.5847L82.0803 45.9468H87.4122L89.2135 41.862H91.0865V45.9468H95.929ZM88.1041 38.5388C87.4123 38.5388 87.0663 38.1231 87.0663 37.4999V37.3615C87.0663 36.6691 87.4841 36.3232 88.1041 36.3232H91.1518V38.5388H88.1041Z" fill="black"/>
-                                    <path d="M66.8479 45.9468L62.4884 39.4388L66.7827 33H61.4507L59.6495 35.9773L57.7829 33H48.5743L46.1466 40.6847L43.7254 33H34.3079L30.7772 37.4999V33H26V45.9468H30.7772V42.8312L31.6778 41.7928L34.0339 46.016H39.7769L34.9344 38.8847L39.157 33.8308L43.9342 45.8085C43.5883 46.3619 42.7529 46.7084 42.1329 46.7084H41.3041L40.3317 51.1391H42.1329C44.763 51.1391 47.119 49.5467 48.0849 47.0543C49.1943 44.077 52.3792 35.7691 53.071 33.9692L56.6735 39.3696L52.3074 45.8776H57.6393L59.5124 42.8312L61.3789 45.8776H66.8479V45.9468Z" fill="black"/>
-                                    <path d="M114.281 51.5547C110.261 51.5547 106.319 54.6005 105.483 58.2702C104.655 62.0085 107.213 64.9858 111.233 64.9858C115.247 64.9858 119.195 61.9393 120.024 58.2702C120.925 54.6005 118.295 51.5547 114.281 51.5547ZM114.901 58.2702C114.627 59.6544 113.38 60.7626 112.271 60.7626C111.096 60.7626 110.398 59.6544 110.75 58.2702C111.024 56.8853 112.271 55.7778 113.38 55.7778C114.555 55.7778 115.247 56.8853 114.901 58.2702Z" fill="black"/>
-                                    <path d="M68.3751 51.5547C66.9916 51.5547 65.8103 52.1081 64.7726 53.0779V51.9006H59.9954V68.7938H64.7726V63.6009C65.7451 64.57 66.9916 65.1241 68.3751 65.1241C71.4882 65.1241 74.053 62.0783 74.053 58.4086C74.053 54.6005 71.4882 51.5547 68.3751 51.5547ZM66.8479 60.7626C65.8103 60.7626 64.9815 59.9318 64.7726 58.8236C64.7726 58.6161 64.7009 58.4778 64.7009 58.2702C64.7009 58.0627 64.7008 57.9237 64.7726 57.7161C64.9815 56.6086 65.8103 55.7778 66.8479 55.7778C68.0292 55.7778 68.9299 56.8853 68.9299 58.2702C68.9299 59.6544 68.0292 60.7626 66.8479 60.7626Z" fill="black"/>
-                                    <path d="M144.119 51.5547C140.105 51.5547 136.157 54.6005 135.328 58.2702C134.499 62.0085 137.058 64.9858 141.071 64.9858C142.944 64.9858 144.811 64.2933 146.403 63.1858L143.773 60.5551C143.218 61.0393 142.598 61.3167 141.907 61.3167C140.934 61.3167 140.242 60.6934 139.968 59.7243H149.314C149.523 59.2394 149.732 58.7545 149.797 58.2702C150.769 54.6005 148.139 51.5547 144.119 51.5547ZM140.66 56.8853C141.28 55.9162 142.318 55.2238 143.29 55.2238C144.256 55.2238 145.02 55.9162 145.229 56.8853H140.66Z" fill="black"/>
-                                    <path d="M95.9291 58.131V51.9004H91.1519V64.7774H95.7202L99.8057 58.131V64.7774H104.583V51.9004H99.8057L95.9291 58.131Z" fill="black"/>
-                                    <path d="M50.7867 52.9389C50.0231 52.1081 48.9202 51.5547 47.6737 51.5547C44.5541 51.5547 41.3041 54.6005 40.4687 58.2702C39.6399 62.0085 41.5064 64.9858 44.626 64.9858C45.9377 64.9858 47.1842 64.5009 48.3655 63.6009L48.1566 64.7782H53.0057L55.7728 51.9006H50.9237L50.7867 52.9389ZM49.612 58.2702C49.612 58.4086 49.5402 58.5469 49.4749 58.6853C49.0572 59.8626 47.9478 60.7626 46.9101 60.7626C45.7354 60.7626 45.0436 59.6544 45.3895 58.2702C45.6636 56.8853 46.9101 55.7778 48.0196 55.7778C49.0573 55.7778 49.7491 56.6778 49.612 57.8545C49.6773 57.9935 49.612 58.1319 49.612 58.2702Z" fill="black"/>
-                                    <path d="M85.1998 52.9389C84.4362 52.1081 83.3268 51.5547 82.0803 51.5547C78.9673 51.5547 75.7106 54.6005 74.8818 58.2702C74.053 62.0085 75.9195 64.9858 79.039 64.9858C80.3508 64.9858 81.5973 64.5009 82.772 63.6009L82.4979 64.709H87.347L90.1859 51.7622H85.3369L85.1998 52.9389ZM84.0904 58.2702C84.0904 58.4086 84.0186 58.5469 83.9533 58.6853C83.5357 59.8626 82.4262 60.7626 81.3885 60.7626C80.2138 60.7626 79.522 59.6544 79.8679 58.2702C80.142 56.8853 81.3884 55.7778 82.4979 55.7778C83.5356 55.7778 84.2274 56.6778 84.0904 57.8545C84.0904 57.9935 84.0904 58.1319 84.0904 58.2702Z" fill="black"/>
-                                    </svg>
-                                    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="company__block">
-                                <svg width="177" height="102" viewBox="0 0 177 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M63.0102 37.6296V15H58.5688V26.3738L53.5818 15H50V37.6296H54.0887V26.2564L59.0977 37.6296H63.0102ZM74.5986 37.6296V15H70.7028L67.0824 17.8578V22.4193L70.5264 19.7376V37.6495H74.5986V37.6296ZM67.4131 61.4533V41.4079H63.7871V58.0471H60.5195V41.4079H56.8936V58.0471H53.6425V41.4079H50V61.4339H67.4131V61.4533ZM74.5821 61.4533V41.4079H70.7799V61.4339H74.5821V61.4533ZM83.3051 61.4533L78.7479 50.7258L82.7982 41.4079H78.4339L74.5986 50.9219L78.8252 61.4533H83.3051ZM95.7312 51.4896C95.7312 48.0441 95.7311 45.4211 94.1551 43.3265C93.042 41.8582 91.7361 41.0945 89.8516 41.0945C87.9615 41.0945 86.6555 41.8776 85.5479 43.3265C83.9664 45.4211 83.9663 48.0441 83.9663 51.4896C83.9663 54.9345 83.9664 57.5581 85.5479 59.6527C86.6555 61.121 87.9615 61.8842 89.8516 61.8842C91.7361 61.8842 93.042 61.101 94.1551 59.6527C95.7311 57.5381 95.7312 54.9345 95.7312 51.4896ZM91.9345 51.4896C91.9345 55.7376 91.7196 56.5008 91.3669 57.1859C91.0969 57.7342 90.5514 58.2233 89.8516 58.2233C89.1462 58.2233 88.6007 57.7342 88.3307 57.1859C87.978 56.5008 87.7631 55.7376 87.7631 51.4896C87.7631 47.2416 87.978 46.4585 88.3307 45.7733C88.6007 45.225 89.1462 44.7554 89.8516 44.7554C90.5514 44.7554 91.0969 45.2057 91.3669 45.7733C91.7196 46.4391 91.9345 47.2217 91.9345 51.4896ZM109.893 61.4533V41.4079H99.3956V51.7045C99.3956 56.7943 98.4588 57.891 97.1143 57.891H96.6679V61.61H98.1283C101.925 61.61 103.077 59.4174 103.077 51.0393V45.127H106.091V61.4339H109.893V61.4533ZM120.506 55.0519H117.216L118.908 47.7306L120.506 55.0519ZM126 61.4533L120.66 41.4273H116.963L111.623 61.4533H115.58L116.357 58.478H121.283L122.027 61.4533H126ZM59.23 70.1254V66.5631H50V86.6671H53.8573V70.1454H59.23V70.1254ZM70.7633 86.6671V83.1042H65.308V78.406H70.0195V74.667H65.308V70.1454H70.7633V66.5825H61.3956V86.6865H70.7633V86.6671ZM81.145 73.0226C81.145 74.4908 80.5389 75.9004 79.5085 75.9004H77.3869V70.1648H79.5085C80.5389 70.1648 81.145 71.5549 81.145 73.0226ZM84.9032 73.0226C84.9032 69.7145 83.7515 66.5631 80.3626 66.5631H73.6618V86.6671H77.4034V79.5026H80.1917C83.5807 79.4827 84.9032 76.3313 84.9032 73.0226ZM121.267 80.5987C121.267 82.2037 120.76 83.2023 119.939 83.2023H117.486V78.0343H119.939C120.776 78.0537 121.267 78.9936 121.267 80.5987ZM121.068 72.2007C121.068 73.5316 120.583 74.354 119.768 74.354H117.508V70.0667H119.768C120.583 70.0667 121.068 70.8692 121.068 72.2007ZM125.317 80.7554C125.317 78.7194 124.771 77.3099 123.388 76.1939C124.595 75.0585 124.964 73.9819 125.102 72.2201C125.377 68.7159 123.664 66.5825 120.137 66.5825H113.668V86.6865H120.467C123.41 86.6672 125.317 84.3377 125.317 80.7554ZM98.7895 76.6054C98.7895 73.1599 98.7894 70.5369 97.2134 68.4423C96.1003 66.974 94.7945 66.2103 92.9099 66.2103C91.0198 66.2103 89.7138 66.9934 88.6007 68.4423C87.0247 70.5369 87.0246 73.1599 87.0246 76.6054C87.0246 80.0503 87.0247 82.6739 88.6007 84.7686C89.7138 86.2368 91.0198 87 92.9099 87C94.7945 87 96.1003 86.2169 97.2134 84.7686C98.7894 82.6739 98.7895 80.0503 98.7895 76.6054ZM94.9927 76.6054C94.9927 80.8534 94.7779 81.6166 94.4253 82.3017C94.1553 82.8501 93.6097 83.3391 92.9099 83.3391C92.2046 83.3391 91.659 82.8501 91.389 82.3017C91.0363 81.6166 90.8214 80.8534 90.8214 76.6054C90.8214 72.3574 91.0363 71.5743 91.389 70.8892C91.659 70.3409 92.2046 69.8712 92.9099 69.8712C93.6097 69.8712 94.1553 70.3215 94.4253 70.8892C94.7779 71.5743 94.9927 72.3574 94.9927 76.6054ZM110.946 86.6671V83.1042H105.49V78.406H110.185V74.667H105.468V70.1454H110.924V66.5825H101.556V86.6865H110.946V86.6671Z" fill="black"/>
-                                    </svg>
-                                    
-                                    
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="company__block">
-                                <svg width="177" height="102" viewBox="0 0 177 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <mask style="mask-type:luminance" maskUnits="userSpaceOnUse" x="32" y="27" width="111" height="48">
-                                    <path d="M143 27.959H32.1001V74.3681H143V27.959Z" fill="white"/>
-                                    </mask>
-                                    <g>
-                                    <path d="M116.477 43.36C116.351 44.9843 116.103 46.5966 115.734 48.1835C114.683 48.2457 113.631 47.9363 112.948 47.0087C112.58 46.4516 112.332 45.8956 112.205 45.2768C112.701 43.9159 113.257 42.5557 114.248 41.4426C114.562 41.0709 114.87 40.7615 115.366 40.7615C115.801 40.6999 116.109 40.8854 116.29 41.3187C116.538 41.9375 116.538 42.6173 116.477 43.36ZM114.622 51.6479C114.248 52.5761 113.819 53.4414 113.257 54.2451C113.009 54.6784 112.513 55.0495 112.084 55.2966C111.341 55.6677 110.537 55.2966 110.163 54.4929C109.667 53.5031 109.607 52.4516 109.734 51.3385C109.794 50.3487 109.975 49.3588 110.042 48.3696C110.102 48.3696 110.102 48.3696 110.163 48.4312C111.214 50.1015 112.888 51.0907 114.743 51.2762C114.683 51.4001 114.683 51.524 114.622 51.6479ZM93.327 45.8956C93.3875 45.8956 93.4479 45.9573 93.5748 46.0195C93.4479 46.5138 93.3874 47.0087 93.2 47.442C92.4567 49.8537 91.5927 52.1428 90.2874 54.3068C90.0276 54.7515 89.6951 55.1491 89.3024 55.4821C88.8068 55.9154 88.3718 55.7915 88.3114 55.1117C88.2449 54.369 88.1844 53.6269 88.2448 52.9465C88.5591 50.0392 89.1755 47.2565 90.2269 44.5347C90.6016 43.4827 91.0972 42.4934 91.774 41.6281C92.0882 41.2565 92.4568 40.8854 92.9523 40.7615C93.327 40.6376 93.5748 40.7615 93.6352 41.1948C93.6352 41.752 93.6351 42.3696 93.5082 42.9267C93.3874 43.6065 93.0792 44.2247 92.8918 44.8435C92.7045 45.4007 92.765 45.7101 93.321 45.8956H93.327ZM73.3249 46.761C73.8204 44.7203 74.5637 42.7412 75.4339 40.8238C75.5547 40.576 75.8025 40.2672 75.9294 40.3289C76.5458 40.4527 76.4853 41.5042 76.4853 41.8136C76.298 43.6065 75.9898 44.9064 75.4339 46.3905C75.2465 46.8232 74.9383 47.2565 74.6241 47.6275C74.3823 47.9369 74.0681 47.9369 73.76 47.813C73.3913 47.5659 73.2645 47.1326 73.3249 46.761ZM142.42 40.3911C142.855 40.2056 142.976 39.9578 142.915 39.4629C142.728 38.3498 142.112 37.6688 141.06 37.3606C139.634 36.9273 138.208 37.2367 136.909 37.8549C135.114 38.7208 133.627 39.9578 132.141 41.2564C131.379 41.9562 130.612 42.6572 129.851 43.36C130.098 42.1224 130.406 41.0093 130.654 39.8962C131.397 36.7418 132.141 33.649 132.884 30.4946C133.071 29.6909 133.011 29.5054 132.268 29.2576C130.968 28.8866 129.663 28.5155 128.364 28.2061C128.056 28.1445 127.621 28.0823 127.312 28.2061C126.757 28.33 126.63 28.8249 126.509 29.3192C126.14 30.8656 125.765 32.3504 125.457 33.8962C124.835 37.1128 124.218 40.3905 123.596 43.6065C123.227 44.1015 122.792 44.5347 122.297 44.9674C122.297 43.9788 122.236 43.0506 122.049 42.0602C121.68 40.2056 120.689 38.8447 119.016 38.0404C118.091 37.6071 117.033 37.4216 115.982 37.3606C115.057 37.2983 114.187 37.2367 113.323 37.67C113.009 37.7926 112.888 37.7926 112.64 37.5461C112.084 36.9889 111.401 36.6179 110.598 37.0512C109.854 37.4832 109.111 37.9165 108.495 38.4737C106.573 40.2056 105.395 42.3696 104.47 44.7825C103.787 46.5754 103.352 48.4312 103.413 50.3487C103.413 50.9052 103.413 51.4618 103.231 51.9561C102.923 53.0082 102.549 53.9974 101.745 54.7401C101.37 55.0495 101.002 55.1733 100.566 54.9878C100.198 54.8639 100.01 54.4929 100.01 54.0596C100.01 53.1936 99.95 52.2667 100.137 51.4001C100.627 48.4929 101.122 45.5862 101.684 42.679C102.428 38.7208 103.171 34.8238 103.975 30.8656C104.156 30.0003 103.975 29.567 103.171 29.0721C102.984 28.9482 102.796 28.8866 102.609 28.7627C101.437 28.2684 100.198 28.0206 98.8986 27.959C98.5239 27.959 98.1553 28.0823 97.968 28.5155C97.7202 29.0098 97.4724 29.567 97.3455 30.123C96.9769 32.1643 96.6687 34.1439 96.2941 36.1846C96.1732 37.0512 95.9858 37.9782 95.7985 38.8447H95.6777C95.6173 38.7831 95.5507 38.7831 95.4903 38.7208C93.8164 37.3606 91.9613 36.9273 89.8584 37.3606C88.1241 37.731 86.8248 38.7831 85.7068 40.1433C84.039 42.2463 83.1084 44.7825 82.5524 47.4414C82.3651 48.3696 82.2443 49.2978 82.1174 50.1631C81.5614 50.2248 81.0659 50.287 80.5704 50.3487C80.3226 50.4109 80.2017 50.5342 80.1353 50.843C79.5793 53.0692 78.5278 54.9256 76.6062 56.2242C75.6816 56.843 74.6905 57.0902 73.5726 56.9663C72.5211 56.843 71.7779 55.9154 71.7779 54.6784C71.7779 53.627 71.9048 52.5132 72.0257 51.4618C72.0861 50.7813 72.3338 50.1631 72.5816 49.4205C72.7085 49.606 72.7689 49.6682 72.8293 49.7921C73.8204 51.1524 75.9899 51.895 77.5973 50.7813C78.401 50.2248 79.0839 49.5443 79.5794 48.679C80.8182 46.7616 81.3136 44.6586 81.3136 42.3696C81.3136 41.5042 81.1867 40.6999 80.8181 39.9578C79.9539 38.1643 78.5278 37.1744 76.733 36.6179C74.8718 36.0607 72.8293 36.123 71.2823 37.2983C70.11 38.2259 69.1794 39.2774 68.4966 40.576C66.3332 44.597 65.4026 48.3696 65.7712 52.9465C65.7108 54.1212 64.9675 54.4306 64.9675 54.4306C64.1637 54.8639 63.481 54.6784 63.1124 54.5545C62.5564 54.369 62.3086 53.6263 62.3086 53.6263C61.8131 52.761 63.6078 44.1015 63.6078 44.1015C64.2242 41.4426 65.9585 34.5766 66.6414 31.9787C66.8891 31.0505 66.5146 30.4324 65.8377 29.938C64.9071 29.196 63.7951 28.8243 62.6772 28.5155C61.4384 28.2061 59.9518 27.959 58.6526 28.3916C57.2325 28.8243 55.5587 34.2055 55.5587 34.2055C54.5072 37.0512 52.09 44.4109 50.7908 48.0602C50.543 48.679 50.4222 48.3073 50.4222 48.1835V47.9363C50.5431 46.8848 50.7303 45.8956 50.9176 44.9058C51.3467 42.6173 52.9602 35.3809 53.3892 33.0308C53.7639 32.2265 53.3287 31.6083 52.7124 31.1744C50.9176 30.0003 48.5609 29.7525 46.5184 29.8142C45.2796 29.8764 44.6028 31.7316 44.6028 31.7316C43.2975 35.3193 39.708 46.8232 38.4088 50.4109C38.3484 50.5964 38.2819 50.7203 38.1611 50.7813C38.0402 50.9052 37.8529 50.843 37.726 50.7197L38.0403 49.606L38.2819 48.6784C37.6051 47.0704 32.8373 46.9471 32.2813 48.1218C32.2813 48.1218 31.1633 53.7502 34.5111 56.4103C36.4267 57.8945 38.161 58.3888 40.3909 57.5234C40.6991 57.3996 41.1342 57.1524 41.1342 56.7808C41.1342 56.7808 42.1856 52.3283 42.6207 50.9668C43.364 48.4312 43.7931 47.1326 44.5364 44.7825C44.5364 44.7825 44.8506 43.9782 44.9715 44.5347C44.9111 45.3385 44.8505 45.7717 44.7236 46.3905C44.5363 48.0602 44.4155 49.7299 44.2886 51.4001C44.1677 52.8226 44.0408 54.3068 44.1072 55.7299C44.1677 57.5234 44.9714 58.8843 46.5788 59.5031C47.449 59.8735 48.3796 60.059 49.3042 60.1219C50.1744 60.1829 50.9782 60.1219 51.7819 59.8125C52.0296 59.7496 52.3378 59.5031 52.4647 59.1937C52.9602 57.3379 53.4557 55.3582 53.9512 53.5031C54.7549 50.4109 55.3714 47.9979 56.302 45.0913C56.4228 44.7819 56.737 44.6586 57.1056 44.9058C56.8578 46.0195 56.6706 47.0087 56.4228 48.2457C55.9938 50.2248 55.619 52.2044 55.7459 54.1835C55.8668 56.4097 56.4893 57.6473 58.2841 58.5755C60.3266 59.6264 63.2331 60.059 65.7107 59.1937C65.9585 59.1314 66.2062 59.0076 66.454 58.8843H66.5145C67.01 58.6365 67.4452 58.3271 67.9407 58.0794C70.2309 60.2446 73.0168 61.1105 76.1107 60.8634C79.2712 60.6162 81.8091 59.1937 83.5434 56.4103C84.5345 57.9567 85.8337 59.0698 87.5076 59.5019C89.1755 59.9352 90.8494 59.9351 92.3359 58.8843C93.4478 58.1422 94.1911 57.0902 94.8739 55.9154C94.9948 55.7299 95.0552 55.5438 95.1821 55.3583C95.303 55.4821 95.3695 55.5437 95.3695 55.6676C95.5508 57.0901 96.294 58.0794 97.5932 58.5749C99.2671 59.1937 100.875 58.8221 102.428 58.1422C103.539 57.6473 104.47 56.9046 105.274 56.0393C105.334 56.0393 105.334 56.1009 105.334 56.1009C107.377 58.9459 110.163 59.8113 113.444 59.3792C116.109 59.0076 118.091 57.3995 119.511 55.0494C120.55 53.3465 121.3 51.4871 121.741 49.5443C122.17 49.2984 122.581 49.0301 122.98 48.7406C122.919 49.05 122.919 49.2978 122.853 49.606C122.671 51.0019 122.545 52.4057 122.484 53.8119C122.424 54.9878 122.424 56.1625 122.424 57.2757C122.424 58.2039 122.605 58.5133 123.415 58.6982C124.786 59.0777 126.17 59.4281 127.56 59.7496C128.243 59.9352 128.612 59.5641 128.672 58.8221V58.2033C128.672 56.3481 128.739 54.5545 128.739 52.6988C128.739 52.3277 128.799 51.9573 128.859 51.4618C129.168 51.7711 129.415 52.0189 129.603 52.2655C131.029 54.1835 132.515 56.0393 133.936 57.9561C134.745 59.0076 135.549 60.1219 136.413 61.1721C137.035 61.9765 137.652 62.1004 138.516 61.6671C139.138 61.3577 139.821 61.0483 140.438 60.7389C141.06 60.4295 141.676 60.0596 142.293 59.688C142.788 59.3786 142.855 59.0076 142.541 58.5126C142.293 58.1422 142.045 57.7712 141.737 57.3995C139.447 54.6784 137.217 51.895 134.927 49.1739C134.25 48.3696 133.567 47.6269 132.884 46.8232C133.319 46.4516 133.688 46.0811 134.123 45.7101C136.661 43.4839 139.447 41.8136 142.42 40.3905V40.3911ZM35.3813 72.8386C35.7016 72.8386 35.9735 72.7444 36.1911 72.5558C36.4026 72.3679 36.5174 72.134 36.5295 71.8567H37.7622C37.744 72.2174 37.6293 72.5673 37.4239 72.8652C37.2063 73.1807 36.9101 73.4345 36.5657 73.6019C36.2031 73.7832 35.8164 73.8738 35.3934 73.8738C34.5836 73.8738 33.9371 73.6127 33.4657 73.0894C32.9883 72.5661 32.7527 71.8446 32.7527 70.923V70.7889C32.7527 69.9108 32.9883 69.2087 33.4597 68.6811C33.931 68.1511 34.5715 67.8858 35.3873 67.8858C36.0823 67.8858 36.6443 68.0871 37.0733 68.4895C37.5084 68.8878 37.738 69.4123 37.7622 70.0631H36.5295C36.5174 69.7326 36.4026 69.4606 36.1911 69.2467C35.9796 69.0334 35.7076 68.9265 35.3813 68.9265C34.9583 68.9265 34.632 69.0799 34.4024 69.3857C34.1728 69.6884 34.0579 70.1489 34.0519 70.7683V70.9768C34.0519 71.6023 34.1667 72.0706 34.3903 72.38C34.6199 72.6857 34.9462 72.8386 35.3813 72.8386ZM41.3034 73.8744C40.4755 73.8744 39.8047 73.6158 39.291 73.1003C38.7774 72.5806 38.5236 71.8905 38.5236 71.0294V70.8692C38.5236 70.2927 38.6324 69.7797 38.856 69.3271C39.0796 68.8714 39.3938 68.5179 39.7987 68.2647C40.2036 68.0121 40.6749 67.8804 41.1523 67.8858C41.9439 67.8858 42.5543 68.1372 42.9833 68.6388C43.4124 69.1404 43.63 69.8492 43.63 70.7683V71.291H39.835C39.8773 71.7678 40.0343 72.1449 40.3123 72.4223C40.5963 72.6996 40.9528 72.8392 41.3758 72.8392C41.9741 72.8392 42.4636 72.5981 42.8383 72.1183L43.5392 72.7855C43.3036 73.1317 42.9833 73.4097 42.6086 73.591C42.2219 73.7795 41.7868 73.8738 41.3034 73.8738V73.8744ZM41.1463 68.9265C40.7897 68.9265 40.4997 69.0509 40.2761 69.3005C40.0586 69.5495 39.9195 69.8963 39.859 70.3411H42.3427V70.245C42.3125 69.8111 42.1977 69.4836 41.9922 69.263C41.7928 69.0389 41.5088 68.9265 41.1463 68.9265ZM49.1531 69.0225H47.2677V73.7674H45.9625V69.0225H44.1012V67.9928H49.1531V69.0225ZM51.4253 69.8287H52.7003C53.1777 69.8287 53.5947 69.9108 53.9451 70.074C54.3017 70.2378 54.5676 70.4674 54.755 70.7629C54.9362 71.0578 55.0329 71.4016 55.0329 71.7926C55.0329 72.3866 54.8214 72.8634 54.3984 73.2224C53.9754 73.5825 53.4133 73.7638 52.7124 73.7674H50.1201V67.9928H51.4253V69.8287ZM51.4253 70.8692V72.7323H52.7003C53.0145 72.7323 53.2684 72.6537 53.4497 72.4966C53.6371 72.3365 53.7277 72.1105 53.7277 71.8192C53.7277 71.5273 53.6369 71.2983 53.4556 71.1309C53.2743 70.9599 53.0327 70.8729 52.7245 70.8692H51.4253ZM63.922 71.4458H63.2272V73.7674H61.9278V71.4458H61.239L59.9035 73.7674H58.3021L60.2299 70.7629L58.4049 67.9928H60.0002L61.3175 70.2613H61.9278V67.9928H63.2272V70.2613H63.8496L65.1669 67.9928H66.7622L64.9433 70.7466L66.8771 73.7668H65.2575L63.922 71.4458ZM70.1342 73.8738C69.3063 73.8738 68.6355 73.6158 68.1218 73.1003C67.6142 72.5806 67.3544 71.8905 67.3544 71.0294V70.8692C67.3544 70.2927 67.4692 69.7797 67.6868 69.3271C67.8983 68.8914 68.2246 68.5234 68.6356 68.2647C69.0404 68.0121 69.5057 67.8804 69.9831 67.8858C70.7747 67.8858 71.3851 68.1372 71.8141 68.6388C72.2492 69.1404 72.4608 69.8492 72.4608 70.7683V71.291H68.6718C68.7081 71.7678 68.8713 72.1449 69.1493 72.4223C69.4333 72.6996 69.7838 72.8392 70.2128 72.8392C70.8111 72.8392 71.2945 72.5981 71.6691 72.1183L72.3761 72.7855C72.1404 73.1317 71.8201 73.4097 71.4394 73.591C71.0527 73.7795 70.6176 73.8738 70.1342 73.8738ZM69.9771 68.9265C69.6205 68.9265 69.3305 69.0509 69.113 69.3005C68.8954 69.5495 68.7504 69.8963 68.69 70.3411H71.1736V70.245C71.1494 69.8111 71.0285 69.4836 70.8291 69.263C70.6236 69.0389 70.3396 68.9265 69.9771 68.9265ZM78.4009 73.7674H77.0957V71.4349H74.8356V73.7674H73.5304V67.9928H74.8356V70.3997H77.0957V67.9928H78.4009V73.7674ZM82.1777 72.8392C82.498 72.8392 82.77 72.7444 82.9875 72.5558C83.199 72.3679 83.3139 72.134 83.332 71.8567H84.5587C84.5406 72.2174 84.4258 72.5673 84.2203 72.8652C84.0028 73.1807 83.7067 73.4345 83.3623 73.6019C82.9997 73.7832 82.6128 73.8738 82.1898 73.8738C81.3801 73.8738 80.7335 73.6127 80.2622 73.0894C79.7848 72.5661 79.5491 71.8446 79.5491 70.923V70.7889C79.5491 69.9108 79.7848 69.2087 80.2561 68.6811C80.7275 68.1511 81.368 67.8858 82.1838 67.8858C82.8787 67.8858 83.4407 68.0871 83.8698 68.4895C84.3049 68.8878 84.5346 69.4123 84.5587 70.0631H83.332C83.3139 69.7326 83.199 69.4606 82.9875 69.2467C82.776 69.0334 82.504 68.9265 82.1777 68.9265C81.7547 68.9265 81.4285 69.0799 81.1988 69.3857C80.9692 69.6884 80.8543 70.1489 80.8483 70.7683V70.9768C80.8483 71.6023 80.9632 72.0706 81.1867 72.38C81.4164 72.6857 81.7487 72.8392 82.1777 72.8392ZM87.6043 71.4832H86.9457V73.7674H85.6403V67.9928H86.9457V70.2982H87.5197L89.121 67.9928H90.7346L88.6377 70.7574L90.9099 73.7674H89.2178L87.6043 71.4832ZM95.2487 67.9922H96.5478V73.7674H95.2487V69.9138L92.9765 73.7674H91.6772V67.9928H92.9765V71.8458L95.2487 67.9922ZM100.023 69.8927L101.128 67.9928H102.573L100.796 70.8372L102.633 73.7674H101.195L100.035 71.7926L98.8805 73.7674H97.4361L99.2672 70.8372L97.4966 67.9922H98.9348L100.023 69.8927ZM108.259 71.4832H107.6V73.7674H106.301V67.9928H107.6V70.2982H108.174L109.782 67.9928H111.389L109.292 70.7574L111.565 73.7674H109.873L108.259 71.4832ZM117.215 67.9922V73.7674H115.915V69.0388H114.272L114.163 71.0505C114.097 72.0186 113.909 72.7142 113.601 73.1378C113.299 73.5571 112.828 73.7674 112.199 73.7674H111.8L111.794 72.6894L112.06 72.6622C112.344 72.6229 112.556 72.4513 112.682 72.1443C112.815 71.8349 112.9 71.2735 112.936 70.4583L113.045 67.9928L117.215 67.9922ZM122.23 67.9922H123.524V73.7674H122.23V69.9138L119.952 73.7674H118.653V67.9928H119.952V71.8458L122.23 67.9922ZM129.832 73.7674H128.527V71.4349H126.267V73.7674H124.962V67.9928H126.267V70.3997H128.527V67.9928H129.832V73.7674ZM134.848 67.9928H136.147V73.7674H134.848V69.9138L132.57 73.7674H131.277V67.9928H132.57V71.8458L134.848 67.9928ZM139.598 71.4832H138.933V73.7674H137.634V67.9928H138.933V70.2982H139.507L141.114 67.9928H142.722L140.625 70.7574L142.903 73.7674H141.205L139.598 71.4832Z" fill="#F56CA8"/>
-                                    </g>
-                                    </svg>
-                                    
-                                    
-                                    
-                            </div>
-                        </div>
-          
-                    </div>
-                    <div class="company__pagination"></div>
-                </div>
-            </div>
-        </section>
-        <section class="buy section-padding">
-            <div class="container">
-                <div class="buy__block">
-                    <h2>Купить шпунт Ларсена с доставкой</h2>
-                    <p>«ШпунтПро» — надёжный российский поставщик шпунта. Мы поможем вам подобрать оптимальный вид шпунта под каждую строительную задачу, быстро поставим материал в любую точку России и стран СНГ 
-                        и реализуем полный комплекс шпунтовых работ. У нас есть лицензии качества на всю продукцию и необходимые разрешения на проведение проектных и строительных работ даже на опасных объектах. 
-                        Наличие собственных крупнейших складских комплексов в Москве и Санкт-Петербурге позволяет не задерживать поставки и обеспечивать клиентов самым дефицитным шпунтом.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__flexbox">
-                <div class="footer__block">
-                    <a class="footer__logo" href="./index.html" aria-label="На главную">
-                        <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="49" height="49" fill="#34373B" />
-                            <path d="M49 49V37L41.7941 42.7931L35 49H49Z" fill="#EA722F" />
-                            <path
-                                d="M23.3941 14.9981L21.6071 13.2111V11.6818L33.6606 23.7354V25.2647L23.3948 14.9988L23.3941 14.9981Z"
-                                fill="white" />
-                            <path d="M26.9106 27.5925L34.4253 35.1071H26.9106V27.5925Z" fill="white" />
-                            <path
-                                d="M28.2156 23.1945L23.5357 18.5147V16.5032L33.8016 26.7691C33.8924 26.8592 34.0149 26.91 34.1429 26.9107H35.1072V34.4254L27.5925 26.9107H27.875C28.0029 26.9108 28.1256 26.86 28.216 26.7696C28.3064 26.6791 28.3572 26.5565 28.3572 26.4286V23.5357C28.3564 23.4079 28.3056 23.2854 28.2156 23.1945Z"
-                                fill="white" />
-                            <path
-                                d="M14.6576 11L22.7123 19.0548L22.7131 19.0555L26.7112 23.0535H23.7354L11.6819 11H14.6576Z"
-                                fill="white" />
-                            <path d="M23.0535 23.7354V37.3182L10.9999 25.2647V11.6818L23.0535 23.7354Z" fill="white" />
-                            <path
-                                d="M27.3928 25.9465H26.4285C26.1627 25.9474 25.9474 26.1627 25.9464 26.4286V35.5893C25.9463 35.7172 25.9971 35.8399 26.0876 35.9303C26.178 36.0208 26.3007 36.0715 26.4285 36.0715H35.5893C35.8551 36.0705 36.0704 35.8552 36.0715 35.5893V26.4286C36.0715 26.3007 36.0207 26.178 35.9303 26.0876C35.8398 25.9972 35.7172 25.9464 35.5893 25.9464H34.625V24.0179H38V38H24.0178V24.0179H27.3928V25.9465Z"
-                                fill="white" />
-                            <path d="M22.2888 11H25.2646L37.3181 23.0535H34.3424L22.2888 11Z" fill="white" />
-                        </svg>
-                        <span>Шпунт <sup>PRO</sup></span>
-                    </a>
-                    <span>Мы дорожим своей репутацией 
-                        профессионалов и работаем для вас 
-                        с 2019 года</span>
-                </div>
-                <nav class="footer__nav">
-                    <ul>
-                        <li>
-                            О компании
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">О компании</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Проекты</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Контакты</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            Шпунт Ларсена
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Шпунт Ларсена VL</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Шпунт Ларсена AZ</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Шпунт Ларсена новый</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Шпунт Ларсена ЕВРАЗ</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Шпунт Ларсена ZU</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Шпунт Ларсена AU</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            Услуги
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Шпунтовые работы</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Свайные работы</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Проектирование</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Аренда техники</a>
-                        </li>
-                        <li>
-                            <a href="#" aria-label="Перейти на страницу...">Ограждение</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="footer__block-2">
-                    <a href="tel:+79995095883" aria-label="Позвонить +7 (999) 509-58-83">+7 (999) 509-58-83</a>
-                    <div class="footer__status">
-                        <span class="footer__online"></span>
-                        <span>Cейчас онлайн</span>
-                    </div>
-                    <a class="footer__mail" href="mailto:mail@sk-metallstroy.ru" aria-label="Написать на почту mail@sk-metallstroy.ru">mail@sk-metallstroy.ru</a>
-                    <button class="orange-btn" onclick="openModal()">
-                        Cвязаться с нами
-                        <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z" fill="white"/>
-                            </svg>
-                            
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <div class="container">
-                <div class="footer__texts">
-                    <span>2019-2022 © «ШпунтПро» - Все права защищены!</span>
-                    <a href="#" aria-label="Перейти в политку конфиденциальности">Политика конфиденциальности</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <div class="overlay"></div>
-    <dialog class="modal">
-        <button class="modal__close" id="modalClose">&times;</button>
-        <form class="request__form" action="#">
-            <div class="request__flex">
-                <input class="request__input" type="text" placeholder="Ваше имя">
-                <input class="request__input" type="text" placeholder="Ваш номер телефона">
-            </div>
-            <textarea class="request__textarea" name="requestTextArea" id="requestTextArea" placeholder="Ваше сообщение"></textarea>
-            <button type="submit" class="request__btn orange-btn">Оставить заявку
-                <svg width="17" height="11" viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16.016 5.95962C16.2698 5.70578 16.2698 5.29422 16.016 5.04038L11.8794 0.903806C11.6256 0.649965 11.214 0.649965 10.9602 0.903806C10.7063 1.15765 10.7063 1.5692 10.9602 1.82304L14.6371 5.5L10.9602 9.17696C10.7063 9.4308 10.7063 9.84235 10.9602 10.0962C11.214 10.35 11.6256 10.35 11.8794 10.0962L16.016 5.95962ZM0 6.15L15.5564 6.15V4.85L0 4.85L0 6.15Z" fill="white"/>
-                    </svg>
-                    
-            </button>
-            <div class="request__checkbox-block">
-                <label for="checkbox1">
-                    <input class="request__checkbox visually-hidden" id="checkbox1" type="checkbox">
-                </label>
-                <span class="request__custom-checkbox active"></span>
-                <span>Нажимая на кнопку «Оставить заявку», вы даете согласие на <a aria-label="Перейти на страницу об обработке персональных данных" href="#">обработку персональных данных</a></span>
-            </div>
-        </form>
-    </dialog>
+            </footer>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
-
+    
 </body>
-
 </html>
