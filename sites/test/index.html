@@ -1,287 +1,521 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="description">
+    <meta name="description" content="Производим и продаём прицепную технику">
+    <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/normalize.min.css">
-    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./style/style.css?ver=2">
-    <link rel="stylesheet" href="./style/media.css?ver=2">
-    <link rel="preload" href="./fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" fetchpriority="high" as="image" href="./img/hero-bg-576.webp" type="image/webp">
-    <title>Power of power</title>
+    <link rel="stylesheet" href="./style/simple-scrollbar.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="preload" href="./fonts/Rubik/Rubik-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Rubik/Rubik-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Rubik/Rubik-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Roboto_Condensed/RobotoCondensed-SemiBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Roboto_Condensed/RobotoCondensed-ExtraBold.woff2" as="font" type="font/woff2"
+        crossorigin="anonymous">
+    <title>Sotrans</title>
 </head>
+
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="container">
-                <div class="header__flex">
-                    <a href="./index.html" aria-label="На главную" class="header__logo">
-                        POWER OF POWER
-                    </a>
-                    <div class="header__block">
-                        <nav class="header__nav">
-                            <a href="#" aria-label="перейти на страницу about us">about us</a>
-                            <a href="#" aria-label="перейти на страницу support">support</a>
-                        </nav>
-                        <div class="header__lang">
-                            <label for="headerSelect" class="label visually-hidden">select language</label>
-                            <select class="header__select" name="headerSelect" id="headerSelect">
-                                <option value="en">ENG</option>
-                                <option value="ru">RUS</option>
-                            </select>
+    <header class="header">
+        <div class="container">
+            <div class="header__flex">
+                <a class="header__link-logo" href="#" aria-label="Вернуться на главную">
+                    <svg class="header__logo" viewBox="0 0 188 44">
+                        <use href="./img/svg/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <button class="header__burger-btn" id="burger" aria-label="Меню">
+                    <span></span><span></span><span></span>
+                </button>
+                <div class="header__block">
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <button class="header__button accordion-btn" aria-label="Список продукции">
+                                    Продукция
+                                    <svg class="header__arrow" viewBox="0 0 20 20">
+                                        <use href="./img/svg/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="text-wrapper">
+                                        <ul class="header__dropdown">
+                                            <li>
+                                                <a href="#" aria-label="Перейти на страницу 1">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use class="he" href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    Страница 1
+                                                </a>
+                                                <a href="#" aria-label="Перейти на подстраницу 2">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    Подстраница 2
+                                                </a>
+                                                <a href="#" aria-label="Перейти на страницу 3">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    Ещё страница 3
+                                                </a>
+                                                <a href="#" aria-label="Перейти на страницу 4">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    4 страница
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__item">
+                                <button class="header__button accordion-btn" aria-label="Список услуг и сервисов">
+                                    Услуги и сервис
+                                    <svg class="header__arrow" viewBox="0 0 20 20">
+                                        <use href="./img/svg/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+
+                                <div class="accordion-content">
+                                    <div class="text-wrapper">
+                                        <ul class="header__dropdown">
+                                            <li>
+                                                <a href="#" aria-label="Перейти на страницу 1">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    Страница 1
+                                                </a>
+                                                <a href="#" aria-label="Перейти на подстраницу 2">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    Подстраница 2
+                                                </a>
+                                                <a href="#" aria-label="Перейти на страницу 3">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    Ещё страница 3
+                                                </a>
+                                                <a href="#" aria-label="Перейти на страницу 4">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    4 страница
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__item">
+                                <button class="header__button accordion-btn" aria-label="">
+                                    О заводе
+                                    <svg class="header__arrow" viewBox="0 0 20 20">
+                                        <use href="./img/svg/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="text-wrapper">
+                                        <ul class="header__dropdown">
+                                            <li>
+                                                <a href="#" aria-label="Перейти на страницу 1">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    Страница 1
+                                                </a>
+                                                <a href="#" aria-label="Перейти на подстраницу 2">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    Подстраница 2
+                                                </a>
+                                                <a href="#" aria-label="Перейти на страницу 3">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    Ещё страница 3
+                                                </a>
+                                                <a href="#" aria-label="Перейти на страницу 4">
+                                                    <svg class="header__at" viewBox="0 0 16 16">
+                                                        <use href="./img/svg/sprite.svg#at"></use>
+                                                    </svg>
+                                                    4 страница
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__item">
+                                <a class="header__link" href="#" aria-label="">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__right-side">
+                        <button class="primary-btn s" aria-label="">Заказать звонок</button>
+                        <div class="header__contacts">
+                            <a href="mailto:mz@sotrans.ru">
+                                <svg class="header__icon" viewBox="0 0 20 20">
+                                    <use href="./img/svg/sprite.svg#mail"></use>
+                                </svg>
+                                mz@sotrans.ru
+                            </a>
+                            <a href="tel:+78124954202">
+                                <svg class="header__icon" viewBox="0 0 20 20">
+                                    <use href="./img/svg/sprite.svg#phone"></use>
+                                </svg>
+                                +7 (812) 495-42-02
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
-            <section class="hero">
-                <div class="container">
-                    <h2 class="visually-hidden">Power of power</h2>
-                    <img class="hero__logo" src="./img/logo.webp" alt="">
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__flex">
+                    <div class="hero__block">
+                        <h1><span>Производим и продаём</span> прицепную технику</h1>
+                        <span><i>Собственное производство</i> на территории Санкт-Петербурга с передовыми технологиями
+                            в сфере производства прицепной техники. Делаем качественно с 1999 года.</span>
+                        <div class="hero__list">
+                            <strong>Качественно и бесперебойно производим:</strong>
+                            <ul>
+                                <li>Прицепы</li>
+                                <li>Полуприцепы</li>
+                                <li>Контейнеры</li>
+                                <li>Прицепные оси</li>
+                            </ul>
+                        </div>
+                        <button class="primary-btn l" aria-label="">Заказать звонок</button>
+                    </div>
+                    <div class="hero__img-block">
+                        <picture>
+                            <source media="(max-width: 576px)" srcset="./img/hero-576.webp">
+                            <source media="(max-width: 768px)" srcset="./img/hero-768.webp">
+                            <source media="(max-width: 1440px)" srcset="./img/hero-1440.webp">
+                            <img class="hero__img" src="./img/hero-1920.webp" alt="">
+                        </picture>
+                    </div>
                 </div>
-            </section>
-    </div>
-            <main>
-                <section class="store">
-                    <div class="container">
-                        <h1>ЗАХОДИТЕ В НАШ МАГАЗИН  ЗА ВЫГОДНЫМИ ПОКУПКАМИ</h1>
-                        <div class="store__grid">
-                            <div class="store__card">
-                                <div class="store__flex">
-                                    <span class="store__hit">HIT</span>
-                                    <span class="store__price">99.00 ₽</span>
-                                </div>
-                                <div class="store__bg"></div>
-                                <button onclick="goToShop()" aria-label="Купить..."></button>
-                            </div>
-                            <div class="store__card">
-                                <div class="store__flex">
-                                    <span class="store__hit">HIT</span>
-                                    <span class="store__price">249.00 ₽</span>
-                                </div>
-                                <div class="store__bg"></div>
-                                <button onclick="goToShop()" aria-label="Купить..."></button>
-                            </div>
-                            <div class="store__card">
-                                <div class="store__flex">
-                                    <span class="store__hit">HIT</span>
-                                    <span class="store__price">499.00 ₽</span>
-                                </div>
-                                <div class="store__bg"></div>
-                                <button onclick="goToShop()" aria-label="Купить..."></button>
-                            </div>
-                            <div class="store__card">
-                                <div class="store__flex">
-                                    <span class="store__hit">HIT</span>
-                                    <span class="store__price">999.00 ₽</span>
-                                </div>
-                                <div class="store__bg"></div>
-                                <button onclick="goToShop()" aria-label="Купить..."></button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="game">
-    
-                        <div class="container">
-                            <div class="game__flex">
-                                <div class="game__block">
-                                    <h2>НОВАЯ ИГРОВАЯ ВСЕЛЕННАЯ</h2>
-                                    <p>Такой игры вы еще не видели это настолько 
-                                        невероятно насколько только возможно. 
-                                        Спаси весь мир, свергнуть Путина, 
-                                        отобрать у Меркель пиво - все это ты можешь
-                                        сделать в нашей  потрясаюшей игре</p>
-                                    <div class="game__btns">
-                                        <a href="#" aria-label="скачать в app store">
-                                            <img loading="lazy" src="./img/download-on-the-app-store.svg" alt="">
-                                        </a>
-                                        <a href="#" aria-label="скачать в google play">
-                                            <img loading="lazy" src="./img/googleplay.webp" alt="">
-                                        </a>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about__flex">
+                    <div class="about__block">
+                        <h2>Lorem Ipsum is simply dummy</h2>
+                        <span>Welcome to Burger Bliss, where we take your cravings to a whole new level! Our
+                            mouthwatering burgers are made from 100% beef and are served on freshly baked buns.</span>
+                        <div class="about__accordions">
+                            <div class="about__accordion">
+                                <button class="about__accordion-btn accordion-btn"
+                                    aria-label="Раскрыть выпадающий список">
+                                    <span>Заголовок элемента. Устанавливает и стилизует переключатель элемента</span>
+                                    <svg class="about__arrow" viewBox="0 0 24 24">
+                                        <use href="./img/svg/sprite.svg#accordionIcon"></use>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="text-wrapper">
+                                        <p>Определяет контентную часть для каждого элемента аккордеона. Часть контента,
+                                            которая раскрывается при нажатии на заголовок.</p>
                                     </div>
                                 </div>
-                                <div class="game__image">
-    
+                            </div>
+                            <div class="about__accordion">
+                                <button class="about__accordion-btn accordion-btn"
+                                    aria-label="Раскрыть выпадающий список">
+                                    <span>Заголовок элемента. Устанавливает и стилизует переключатель элемента</span>
+                                    <svg class="about__arrow" viewBox="0 0 24 24">
+                                        <use href="./img/svg/sprite.svg#accordionIcon"></use>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="text-wrapper">
+                                        <p>Определяет контентную часть для каждого элемента аккордеона. Часть контента,
+                                            которая раскрывается при нажатии на заголовок.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                 
-                </section>
-                <section class="char">
-                    <div class="container">
-                        <div class="cahr__flex">
-                            <img loading="lazy" src="./img/char.webp" alt="">
-                            <div class="char__block">
-                                <h2>УЗНАВАЕМЫЕ ГЕРОИ</h2>
-                                <p>Уникальная возможность поиграть за лидеров 
-                                    мировых держав. Ваша цель - преуспеть в борьбе 
-                                    за лидерство, устанавливая свою гегемонию 
-                                    над другими нациями. 
-                                    Покажите свою силу, стратегические навыки и 
-                                    дипломатический искусство, чтобы стать 
-                                    величайшим лидером в истории.
-                                </p>
-                                <p>Не можешь изменить реальность? Сделай это
-                                    в нашей игре!</p>
+                            <div class="about__accordion">
+                                <button class="about__accordion-btn accordion-btn"
+                                    aria-label="Раскрыть выпадающий список">
+                                    <span>Заголовок элемента. Устанавливает и стилизует переключатель элемента</span>
+                                    <svg class="about__arrow" viewBox="0 0 24 24">
+                                        <use href="./img/svg/sprite.svg#accordionIcon"></use>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="text-wrapper">
+                                        <p>Определяет контентную часть для каждого элемента аккордеона. Часть контента,
+                                            которая раскрывается при нажатии на заголовок.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about__accordion">
+                                <button class="about__accordion-btn accordion-btn"
+                                    aria-label="Раскрыть выпадающий список">
+                                    <span>Заголовок элемента. Устанавливает и стилизует переключатель элемента</span>
+                                    <svg class="about__arrow" viewBox="0 0 24 24">
+                                        <use href="./img/svg/sprite.svg#accordionIcon"></use>
+                                    </svg>
+                                </button>
+                                <div class="accordion-content">
+                                    <div class="text-wrapper">
+                                        <p>Определяет контентную часть для каждого элемента аккордеона. Часть контента,
+                                            которая раскрывается при нажатии на заголовок.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <section class="news">
-                        <h2>НОВОСТИ</h2>
-                        <div class="news__swiper swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="news__card">
-                                        <div class="news__img"></div>
-                                        <h3>Новая локация.Нихрена себе! </h3>
-                                        <a href="#" aria-label="Ссылка на новость..."></a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__card">
-                                        <div class="news__img"></div>
-                                        <h3>Новая локация. Не пропусти!  </h3>
-                                        <a href="#" aria-label="Ссылка на новость..."></a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__card">
-                                        <div class="news__img"></div>
-                                        <h3>Летний турнир </h3>
-                                        <a href="#" aria-label="Ссылка на новость..."></a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__card">
-                                        <div class="news__img"></div>
-                                        <h3>Изменения от 13.03.2024 </h3>
-                                        <a href="#" aria-label="Ссылка на новость..."></a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__card">
-                                        <div class="news__img"></div>
-                                        <h3>Внедрение нового</h3>
-                                        <a href="#" aria-label="Ссылка на новость..."></a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__card">
-                                        <div class="news__img"></div>
-                                        <h3>Новая локация.Нихрена себе! </h3>
-                                        <a href="#" aria-label="Ссылка на новость..."></a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__card">
-                                        <div class="news__img"></div>
-                                        <h3>Новая локация. Не пропусти!  </h3>
-                                        <a href="#" aria-label="Ссылка на новость..."></a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__card">
-                                        <div class="news__img"></div>
-                                        <h3>Летний турнир </h3>
-                                        <a href="#" aria-label="Ссылка на новость..."></a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__card">
-                                        <div class="news__img"></div>
-                                        <h3>Изменения от 13.03.2024 </h3>
-                                        <a href="#" aria-label="Ссылка на новость..."></a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="news__card">
-                                        <div class="news__img"></div>
-                                        <h3>Внедрение нового</h3>
-                                        <a href="#" aria-label="Ссылка на новость..."></a>
-                                    </div>
-                                </div>
+                    <div class="about__grid">
+                        <picture>
+                            <source media="(max-width: 430px)" srcset="./img/about-1-576.webp">
+                            <source media="(max-width: 768px)" srcset="./img/about-1-768.webp">
+                            <source media="(max-width: 1440px)" srcset="./img/about-1-1440.webp">
+                            <img loading='lazy' src="./img/about-1-1920.webp" alt="">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 430px)" srcset="./img/about-2-576.webp">
+                            <source media="(max-width: 768px)" srcset="./img/about-2-768.webp">
+                            <source media="(max-width: 1440px)" srcset="./img/about-2-1440.webp">
+                            <img loading='lazy' src="./img/about-2-1920.webp" alt="">
+                        </picture>
+                        <picture>
+                            <source media="(max-width: 430px)" srcset="./img/about-3-576.webp">
+                            <source media="(max-width: 768px)" srcset="./img/about-3-768.webp">
+                            <source media="(max-width: 1440px)" srcset="./img/about-3-1440.webp">
+                            <img loading='lazy' src="./img/about-3-1920.webp" alt="">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="logos">
+            <h2 class="visually-hidden">Логотипы</h2>
+            <div class="logos__overflow">
+                <div>
+                    <div class="logos__flex">
+                        <svg class="logos__logo" viewBox="0 0 114 32">
+                            <use href="./img/svg/sprite.svg#logos-1"></use>
+                        </svg>
+                        <svg class="logos__logo" viewBox="0 0 148 32">
+                            <use href="./img/svg/sprite.svg#logos-2"></use>
+                        </svg>
+                        <svg class="logos__logo" viewBox="0 0 150 32">
+                            <use href="./img/svg/sprite.svg#logos-3"></use>
+                        </svg>
+                        <svg class="logos__logo" viewBox="0 0 114 32">
+                            <use href="./img/svg/sprite.svg#logos-1"></use>
+                        </svg>
+                        <svg class="logos__logo" viewBox="0 0 148 32">
+                            <use href="./img/svg/sprite.svg#logos-2"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="numbers">
+            <div class="container">
+                <h2 class="visually-hidden">Цифры о компании</h2>
+                <div class="numbers__flex">
+                    <div class="numbers__block">
+                        <strong>24+</strong>
+                        <span>Прицепа выпускаем каждый месяц</span>
+                    </div>
+                    <div class="numbers__block">
+                        <strong>17км<sup>2</sup></strong>
+                        <span>Общая площадь производства</span>
+                    </div>
+                    <div class="numbers__block">
+                        <strong>+95%</strong>
+                        <span>Клиентов довольны покупкой</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <div class="contacts__flex">
+                    <div class="contacts__map">
+                        <script async
+                            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab3009de43ee0b8bceec692ffbee55b46af376e38d8412bf3a63ae799b7daf670&amp;width=816&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
+                    </div>
+                    <div class="contacts__block">
+                        <h2>Контакты</h2>
+                        <span class="contacts__text">Свяжитесь с нами</span>
+                        <form class="contacts__form" action="#">
+                            <div class="contacts__flex-2">
+                                <div class="contacts__group">
+                                    <label for="formName">
+                                        Имя Фамилия Отчество
+                                    </label>
+                                    <input class="contacts__input" type="text"
+                                        placeholder="Константинопольский Константин Константинович" id="formName">
 
+                                </div>
+                                <div class="contacts__group">
+                                    <label for="formEmail">
+                                        Электронная почта
+                                    </label>
+                                    <input class="contacts__input" type="email" placeholder="example@mail.ru"
+                                        id="formEmail">
+                                    <span class="contacts__error">
+                                        <span><svg class="contacts__password-icon" viewBox="0 0 16 16">
+                                                <use href="./img/svg/sprite.svg#error"></use>
+                                            </svg>
+                                            mail@sotrans.ru
+                                        </span>
+                                        <span>10/25</span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        
-                </section>
-                <section class="update">
-                    <div class="container">
-                        <div class="update__block">
-                            <h2>STAY TO UPDATE</h2>
-                        <p>Оставайтесь с нами следите в соцсетях
-                            чтобы быть вкурсе и ничего не пропустить
-                            будет бомбически
-                            конкурсы и все такое в наших соцсетях
-                        </p>
-                        <span>ПОДПИШИСЬ</span>
-                        <div class="update__links">
-                            <a href="#" aria-label="Перейти на страницу в facebook">
-                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h7.621v-6.961h-2.343v-2.725h2.343V9.309 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365V21H19c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z"/></svg>
-                            </a>
-                            <a href="#" aria-label="Перейти на страницу в x">
-                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 2.8671875 3 L 9.7363281 12.818359 L 2.734375 21 L 5.3808594 21 L 10.919922 14.509766 L 15.460938 21 L 21.371094 21 L 14.173828 10.697266 L 20.744141 3 L 18.138672 3 L 12.996094 9.0097656 L 8.7988281 3 L 2.8671875 3 z"/></svg>
-                            </a>
-                            <a href="#" aria-label="Перейти на страницу в tumbler">
-                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 20 2 L 4 2 C 2.898438 2 2 2.898438 2 4 L 2 20 C 2 21.101563 2.898438 22 4 22 L 20 22 C 21.101563 22 22 21.101563 22 20 L 22 4 C 22 2.898438 21.101563 2 20 2 Z M 17 17.875 C 17 17.921875 16.980469 17.972656 16.941406 18 C 16.894531 18.046875 15.515625 19 13 19 C 9.980469 19 10 15.386719 10 15 L 10 11 L 8.175781 11 C 8.078125 11 8 10.921875 8 10.824219 L 8 9.164063 C 8 9.085938 8.039063 9.027344 8.105469 9 C 8.136719 8.988281 11 7.730469 11 5.175781 C 11 5.078125 11.078125 5 11.175781 5 L 12.828125 5 C 12.921875 5 13 5.078125 13 5.175781 L 13 9 L 15.824219 9 C 15.914063 9 16 9.078125 16 9.175781 L 16 10.828125 C 16 10.921875 15.914063 11 15.824219 11 L 13 11 L 13 15 C 13 15.058594 12.90625 16.273438 14.199219 16.273438 C 15.261719 16.273438 16.71875 15.925781 16.730469 15.925781 C 16.789063 15.886719 16.855469 15.886719 16.902344 15.917969 C 16.960938 15.945313 17 16.003906 17 16.070313 Z"/></svg>
-                            </a>
-                            <a href="#" aria-label="Перейти на страницу в inst">
-                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"/></svg>
-                            </a>
-                            <a href="#" aria-label="Перейти на страницу в linkedIn">
-                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"/></svg>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <footer class="footer">
-                <div class="container">
-                    <div class="footer__flex">
-                        <div class="footer__block">
-                            <span>Follow us on</span>
-                            <div class="footer__links">
-                                <a href="#" aria-label="Перейти на страницу в facebook">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h7.621v-6.961h-2.343v-2.725h2.343V9.309 c0-2.324,1.421-3.591,3.495-3.591c0.699-0.002,1.397,0.034,2.092,0.105v2.43h-1.428c-1.13,0-1.35,0.534-1.35,1.322v1.735h2.7 l-0.351,2.725h-2.365V21H19c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z"/></svg>
-                                </a>
-                                <a href="#" aria-label="Перейти на страницу в x">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 2.8671875 3 L 9.7363281 12.818359 L 2.734375 21 L 5.3808594 21 L 10.919922 14.509766 L 15.460938 21 L 21.371094 21 L 14.173828 10.697266 L 20.744141 3 L 18.138672 3 L 12.996094 9.0097656 L 8.7988281 3 L 2.8671875 3 z"/></svg>
-                                </a>
-                                <a href="#" aria-label="Перейти на страницу в tumbler">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 20 2 L 4 2 C 2.898438 2 2 2.898438 2 4 L 2 20 C 2 21.101563 2.898438 22 4 22 L 20 22 C 21.101563 22 22 21.101563 22 20 L 22 4 C 22 2.898438 21.101563 2 20 2 Z M 17 17.875 C 17 17.921875 16.980469 17.972656 16.941406 18 C 16.894531 18.046875 15.515625 19 13 19 C 9.980469 19 10 15.386719 10 15 L 10 11 L 8.175781 11 C 8.078125 11 8 10.921875 8 10.824219 L 8 9.164063 C 8 9.085938 8.039063 9.027344 8.105469 9 C 8.136719 8.988281 11 7.730469 11 5.175781 C 11 5.078125 11.078125 5 11.175781 5 L 12.828125 5 C 12.921875 5 13 5.078125 13 5.175781 L 13 9 L 15.824219 9 C 15.914063 9 16 9.078125 16 9.175781 L 16 10.828125 C 16 10.921875 15.914063 11 15.824219 11 L 13 11 L 13 15 C 13 15.058594 12.90625 16.273438 14.199219 16.273438 C 15.261719 16.273438 16.71875 15.925781 16.730469 15.925781 C 16.789063 15.886719 16.855469 15.886719 16.902344 15.917969 C 16.960938 15.945313 17 16.003906 17 16.070313 Z"/></svg>
-                                </a>
-                                <a href="#" aria-label="Перейти на страницу в inst">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"/></svg>
-                                </a>
-                                <a href="#" aria-label="Перейти на страницу в linkedIn">
-                                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px">    <path d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M9,17H6.477v-7H9 V17z M7.694,8.717c-0.771,0-1.286-0.514-1.286-1.2s0.514-1.2,1.371-1.2c0.771,0,1.286,0.514,1.286,1.2S8.551,8.717,7.694,8.717z M18,17h-2.442v-3.826c0-1.058-0.651-1.302-0.895-1.302s-1.058,0.163-1.058,1.302c0,0.163,0,3.826,0,3.826h-2.523v-7h2.523v0.977 C13.93,10.407,14.581,10,15.802,10C17.023,10,18,10.977,18,13.174V17z"/></svg>
-                                </a>
+                            <div class="contacts__flex-2">
+                                <div class="contacts__group">
+                                    <label for="formPassword">
+                                        Пароль
+                                    </label>
+                                    <div class="contacts__relative">
+                                        <input class="contacts__input" type="password" placeholder="Введите пароль"
+                                            id="formPassword">
+                                        <button class="contacts__show-password-btn" aria-label="Показать/скрыть пароль">
+                                            <svg class="contacts__icon" viewBox="0 0 24 24">
+                                                <use href="./img/svg/sprite.svg#eye"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="contacts__password-strength">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="contacts__password-flex">
+                                        <span class="contacts__password-info">Password strenght</span>
+                                        <svg class="contacts__password-icon" viewBox="0 0 16 16">
+                                            <use href="./img/svg/sprite.svg#info"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="contacts__group">
+                                    <label for="formPhone">
+                                        Номер телефона
+                                    </label>
+                                    <input class="contacts__input" type="tel" placeholder="+7 (___) ___-__-__"
+                                        id="formPhone">
+
+                                </div>
                             </div>
-                        </div>
-                        <div class="footer__btns">
-                            <a href="#" aria-label="скачать в app store">
-                                <img loading="lazy" src="./img/download-on-the-app-store.svg" alt="">
-                            </a>
-                            <a href="#" aria-label="скачать в google play">
-                                <img loading="lazy" src="./img/googleplay.webp" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="footer__terms">
-                        <a href="#" aria-label="Перейти на стрицу Terms of Service">Terms of Service</a>
-                        <a href="#" aria-label="Перейти на стрицу Privacy Policy">Privacy Policy</a>
+                            <div class="contacts__group">
+                                <label for="formTextarea">
+                                    Сообщение
+                                </label>
+                                <div id="formTextarea" class="simple-scrollbar" data-name="formTextarea"
+                                    data-placeholder="Введите описательный текст для обратной связи"></div>
+                            </div>
+                            <div class="contacts__checkbox-block">
+                                <label for="checkbox" class="visually-hidden">Согласие с Политикой конфиденциальности и
+                                    Правилами обработки персональных данных</label>
+                                <input type="checkbox" class="contacts__checkbox visually-hidden" id="checkbox">
+
+                                <span class="contacts__custom-checkbox"></span>
+                                <span>Я согласен(а) с <a href="#"
+                                        aria-label="Перейти на страницу политики конфиденциальности">Политикой
+                                        конфиденциальности</a> и <a href="#"
+                                        aria-label="Перейти на страницу правил обработки персональных данных">Правилами
+                                        обработки персональных данных</a></span>
+                            </div>
+                            <button type="submit" class="primary-btn m" aria-label="">Отправить заявку</button>
+                        </form>
                     </div>
                 </div>
-            </footer>
-    <script src="./js/swiper-bundle.min.js"></script>
+            </div>
+        </section>
+    </main>
+    <div class="cookie" id="cookie">
+        <div class="container">
+            <div class="cookie__block">
+                <svg class="cookie-icon" viewBox="0 0 16 16">
+                    <use href="./img/svg/sprite.svg#info"></use>
+                </svg>
+                <span>Мы используем куки-файлы, чтобы вам было удобно пользоваться сайтом</span>
+                <button class="cookie__close" id="cookieCloseBtn" aria-label="Закрыть всплывающее уведомление">
+                    <svg class="cookie__close-icon" viewBox="0 0 24 24">
+                        <use href="./img/svg/sprite.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__flex">
+                <a href="./index.html" aria-label="На главную">
+                    <svg class="footer__logo" viewBox="0 0 188 44">
+                        <use href="./img/svg/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <div class="footer__nav">
+                    <ul>
+                        <li>
+                            <a href="#" aria-label="Перейти на страницу">Продукция</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Перейти на страницу">Услуги и сервис</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Перейти на страницу">О заводе</a>
+                        </li>
+                        <li>
+                            <a href="#" aria-label="Перейти на страницу">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__divider"></div>
+        <div class="container">
+            <div class="footer__flex-2">
+                <div class="footer__links">
+                    <a href="#" aria-label="Перейти в вКонтакте">
+                        <svg class="footer__logo" viewBox="0 0 24 25">
+                            <use href="./img/svg/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Перейти в вКонтакте">
+                        <svg class="footer__logo" viewBox="0 0 24 25">
+                            <use href="./img/svg/sprite.svg#inst"></use>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Перейти в вКонтакте">
+                        <svg class="footer__logo" viewBox="0 0 24 25">
+                            <use href="./img/svg/sprite.svg#tg"></use>
+                        </svg>
+                    </a>
+                </div>
+                <span>Все права защищены © Сотранс 2024</span>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/simple-scrollbar.js"></script>
     <script src="./js/index.js"></script>
-    
+
 </body>
+
 </html>
