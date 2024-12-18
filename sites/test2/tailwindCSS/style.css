@@ -97,6 +97,10 @@
       margin-top: unset;
     }
 
+    #seasons a:hover svg {
+      display: block;
+    }
+
     #mainBlock::after {
       content: "";
       width: 1px;
@@ -208,11 +212,40 @@
     #formInput:focus {
       border: 1px solid rgba(247,133,35,1);
     }
+    #about ul li::before {
+      content: "";
+      background-image: url(../img/svg/star.svg);
+      background-repeat: no-repeat;
+      width: 32px;
+      height: 32px;
+      background-size: contain;
+      flex-shrink: 0;
+    }
+    .dark #about ul li::before {
+      background-image: url(../img/svg/star-2.svg);
+    }
+    .swiper-slide {
+      max-width: 147px;
+    }
+    
+    .swiper-slide a:hover svg {
+      opacity: 1;
+    }
 
+    .swiper-slide a:hover .overlay {
+      opacity: .5;
+    }
+
+    .swiper-slide  svg {
+      opacity: 1;
+    }
 
     @media(min-width:1020px) {
       .container {
         padding: 0 32px;
+      }
+      .swiper-slide {
+        max-width: 152px;
       }
       #simillarList svg  {
         opacity: 0;
@@ -226,18 +259,27 @@
         align-items: center;
         gap: 24px;
       }
+
       #about ul li svg {
        max-width: 44px;
        height: 44px;
       }
-      .active-season:hover {
-        background: #87CD3D !important;
+
+      #about ul li::before {
+        width: 44px;
+        height: 44px;
+      }
+      .swiper-slide  svg {
+        opacity: 0;
       }
       
     }
     @media(min-width:1440px) {
       .container {
         padding: 0 170px;
+      }
+      .swiper-slide {
+        max-width: 180px;
       }
     }
   }

@@ -176,78 +176,96 @@ document.addEventListener('click', closeSearchListIfClickedOutside);
   });
 
   document.addEventListener("DOMContentLoaded", () => {
-    const replyButtons = document.querySelectorAll(".answerBtn");
-    const replyPreview = document.getElementById("reply-preview");
-    let replyPreviewDiv = replyPreview.querySelector('div');
-    const replyAvatar = document.getElementById("reply-avatar");
-    const replyUsername = document.getElementById("reply-username");
-    const replyDate = document.getElementById("reply-date");
-    const replyText = document.getElementById("reply-text");
     const commentForm = document.getElementById("comment-form");
-
-    replyButtons.forEach(button => {
-        button.addEventListener("click", (e) => {
-            // Найти родительский элемент комментария
-            const commentBlock = e.target.closest(".comment");
-            cancelBtn.classList.remove('hidden')
-            replyPreview.classList.add('mb-4')
-
-            // Получить данные комментария
-            const avatar = commentBlock.querySelector("img").src;
-            replyAvatar.classList.remove('hidden');
-            const username = commentBlock.querySelector(".username").innerText;
-            const date = commentBlock.querySelector(".date").innerText;
-            const text = commentBlock.querySelector("p").innerText;
-            let formText = document.getElementById('formText');
-
-            formText.innerHTML = `Ваш ответ <span>${username}</span>`;
-
+    if(commentForm) {
+      const replyButtons = document.querySelectorAll(".answerBtn");
+      const replyPreview = document.getElementById("reply-preview");
+      let replyPreviewDiv = replyPreview.querySelector('div');
+      const replyAvatar = document.getElementById("reply-avatar");
+      const replyUsername = document.getElementById("reply-username");
+      const replyDate = document.getElementById("reply-date");
+      const replyText = document.getElementById("reply-text");
   
-
-            // Вставить данные в блок перед формой
-            replyAvatar.src = avatar;
-            replyUsername.innerText = username;
-            replyDate.innerText = date;
-            replyText.innerText = text;
-
-            // Показать блок
-            replyPreview.classList.remove("hidden");
-
-            // Прокрутить к форме
-            replyPreview.scrollIntoView({ behavior: "smooth" });
-        });
-    });
-
+      replyButtons.forEach(button => {
+          button.addEventListener("click", (e) => {
+              // Найти родительский элемент комментария
+              const commentBlock = e.target.closest(".comment");
+              cancelBtn.classList.remove('hidden')
+              replyPreview.classList.add('mb-4')
+  
+              // Получить данные комментария
+              const avatar = commentBlock.querySelector("img").src;
+              replyAvatar.classList.remove('hidden');
+              const username = commentBlock.querySelector(".username").innerText;
+              const date = commentBlock.querySelector(".date").innerText;
+              const text = commentBlock.querySelector("p").innerText;
+              let formText = document.getElementById('formText');
+  
+              formText.innerHTML = `Ваш ответ <span>${username}</span>`;
+  
     
-    let cancelBtn = document.getElementById('cancelBtn');
-    cancelBtn.addEventListener('click', function() {
-      replyAvatar.classList.add('hidden');
-      replyUsername.innerText = '';
-      replyDate.innerText = '';
-      replyText.innerText = '';
-      formText.innerHTML = `Оставить комментарий`;
-      replyPreview.classList.add('hidden')
-      cancelBtn.classList.add('hidden')
-    })
-
-    const inputField = document.querySelector('#formInput'); // Поле для имени
-    const textareaField = document.querySelector('textarea'); // Поле для комментария
-    const submitButton = document.querySelector('form button[type="submit"]'); // Кнопка отправки
-
-    // Функция для проверки заполнения полей
-    function toggleSubmitButton() {
-        if (inputField.value.trim() !== '' && textareaField.value.trim() !== '') {
-            submitButton.disabled = false;
-            submitButton.classList.remove('bg-[#9B9B9C]', 'dark:text-[#878787]');
-            submitButton.classList.add('bg-[#383839]', 'dark:bg-[#565656]', 'dark:text-white');
-        } else {
-            submitButton.disabled = true;
-            submitButton.classList.remove('bg-[#383839]', 'dark:bg-[#565656]', 'dark:text-white');
-            submitButton.classList.add('bg-[#9B9B9C]', 'dark:text-[#878787]');
-        }
+  
+              // Вставить данные в блок перед формой
+              replyAvatar.src = avatar;
+              replyUsername.innerText = username;
+              replyDate.innerText = date;
+              replyText.innerText = text;
+  
+              // Показать блок
+              replyPreview.classList.remove("hidden");
+  
+              // Прокрутить к форме
+              replyPreview.scrollIntoView({ behavior: "smooth" });
+          });
+      });
+  
+      
+      let cancelBtn = document.getElementById('cancelBtn');
+      cancelBtn.addEventListener('click', function() {
+        replyAvatar.classList.add('hidden');
+        replyUsername.innerText = '';
+        replyDate.innerText = '';
+        replyText.innerText = '';
+        formText.innerHTML = `Оставить комментарий`;
+        replyPreview.classList.add('hidden')
+        cancelBtn.classList.add('hidden')
+      })
+  
+      const inputField = document.querySelector('#formInput'); // Поле для имени
+      const textareaField = document.querySelector('textarea'); // Поле для комментария
+      const submitButton = document.querySelector('form button[type="submit"]'); // Кнопка отправки
+  
+      // Функция для проверки заполнения полей
+      function toggleSubmitButton() {
+          if (inputField.value.trim() !== '' && textareaField.value.trim() !== '') {
+              submitButton.disabled = false;
+              submitButton.classList.remove('bg-[#9B9B9C]', 'dark:text-[#878787]');
+              submitButton.classList.add('bg-[#383839]', 'dark:bg-[#565656]', 'dark:text-white');
+          } else {
+              submitButton.disabled = true;
+              submitButton.classList.remove('bg-[#383839]', 'dark:bg-[#565656]', 'dark:text-white');
+              submitButton.classList.add('bg-[#9B9B9C]', 'dark:text-[#878787]');
+          }
+      }
+  
+      // Добавляем события input для полей
+      inputField.addEventListener('input', toggleSubmitButton);
+      textareaField.addEventListener('input', toggleSubmitButton);
     }
 
-    // Добавляем события input для полей
-    inputField.addEventListener('input', toggleSubmitButton);
-    textareaField.addEventListener('input', toggleSubmitButton);
+    var swiper = new Swiper(".default-carousel", {
+      loop: false,
+      slidesPerView: 'auto',
+      breakpoints: {
+        320: {
+          spaceBetween: 16,
+        },
+        1020: {
+          spaceBetween: 32, 
+        }
+      }
+
+      });
+    
 });
+

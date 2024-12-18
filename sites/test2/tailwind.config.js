@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./*.html"],
   darkMode: 'class',
+  safelist: [
+    '.dark #about ul li::after', // Указываем селектор в точности
+  ],
   theme: {
     extend: {
       typography: {
@@ -45,6 +48,7 @@ module.exports = {
       'lg': '1440px',
     },
   },
+  
   
   plugins: [
     require('@tailwindcss/typography'),
