@@ -5,463 +5,625 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Дневники путешествий Александра Фокичева">
-    <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
+    <meta name="description" content="Устройство свайного основания.">
+    <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/normalize.min.css">
-    <link rel="stylesheet" href="./style/style.css?ver=18">
-    <link rel="stylesheet" href="./style/media.css?ver=18">
-    <link rel="stylesheet" href="./style/aos.css">
-    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
-
-    <link rel="preload" href="./fonts/Lora-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Lora-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" fetchpriority="high" as="image" href="./img/hero.webp" type="image/webp">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=d618754f-6a72-48c5-835d-ba97c1683cc3&lang=ru_RU" type="text/javascript">
-    </script>
-    <title>Дневники путешествий Александра Фокичева</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <link rel="preload" href="fonts/Onest-ExtraLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Onest-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Onest-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Onest-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Onest-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <title>SVU</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <video muted autoplay playsinline loop preload="auto">
-            <source src="./video/hero.mp4" type="video/mp4">
-        </video>
-        <header class="header main-page">
-            <div class="container">
-                <div class="header__flex">
-                    <a class="logo header__logo" href="./index.html" aria-label="Вернуться на главную">
-                        <img class="logo__img" src="./img/svg/logo.svg" alt="logo">
+    <header class="header">
+        <div class="container">
+            <div class="header__flex">
+                <div class="header__flex-3">
+                    <div class="header__burger">
+                        <button class="header__burger-btn" id="burger" aria-label="Меню">
+                            <span></span><span></span><span></span>
+                        </button>
+                        <nav class="menu">
+                            <div class="container">
+                                <ul class="menu__list">
+                                    <li class="menu__item">
+                                        <a aria-label="Перейти к разделу..." class="menu__link" href="#">
+                                            1 пункт
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a aria-label="Перейти к разделу..." class="menu__link" href="#">
+                                            2 пункт
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a aria-label="Перейти к разделу..." class="menu__link" href="#">
+                                            3 пункт
+                                        </a>
+                                    </li>
+                                    <li class="menu__item">
+                                        <a aria-label="Перейти к разделу..." class="menu__link" href="#">
+                                            4 пункт
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="menu__flex">
+                                    <div class="header__flexbox menu__hidden">
+                                        <svg class="header__icon">
+                                            <use xlink:href="./img/svg/sprite.svg#geo"></use>
+                                        </svg>
+                                        <div class="header__info">
+                                            <span>Адрес:</span>
+                                            <strong>г.&nbsp;Санкт-Петербург,
+                                                ул.&nbsp;Автовская,&nbsp;д.&nbsp;31.</strong>
+                                        </div>
+                                    </div>
+
+                                    <div class="header__flexbox menu__hidden">
+                                        <svg class="header__icon">
+                                            <use xlink:href="./img/svg/sprite.svg#time"></use>
+                                        </svg>
+                                        <div class="header__info">
+                                            <span>График работы:</span>
+                                            <strong>Пн-Пт с&nbsp;09:00&nbsp;до&nbsp;18:00</strong>
+                                        </div>
+                                    </div>
+                                    <div class="header__flexbox menu__hidden-576">
+                                        <svg class="header__icon">
+                                            <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                                        </svg>
+                                        <div class="header__info">
+                                            <span>Телефон:</span>
+                                            <a href="tel:+78129260006" aria-label="Позвонить">+7 812 926-00-06</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <a href="#" class="header__logo" aria-label="На главную">
+                        <svg class="header__logo-icon">
+                            <use xlink:href="./img/svg/sprite.svg#logo"></use>
+                        </svg>
                     </a>
-                    <nav class="header__nav menu">
-                        <ul class="header__list menu__list">
-                            <li class="header__item menu__item"><a aria-label="Перейти на страницу поиска" class="header__link menu__link" href="./map.html">поиск</a></li>
-                            <li class="header__item menu__item"><a aria-label="Перейти на страницу 'Обо мне'" class="header__link menu__link" href="#about">обо мне</a></li>
-                            <li class="header__item menu__item"><a aria-label="Перейти на страницу 'Контакты'" class="header__link menu__link" href="#contacts">контакты</a></li>
-                        </ul>
-                    </nav>
-                    <button class="header__burger-btn" id="burger">
-                        <span></span><span></span><span></span>
+                    <span class="header__text">Устройство свайного
+                        основания</span>
+                </div>
+                <div class="header__flex-2">
+                    <div class="header__flexbox">
+                        <svg class="header__icon">
+                            <use xlink:href="./img/svg/sprite.svg#geo"></use>
+                        </svg>
+                        <div class="header__info">
+                            <span>Адрес:</span>
+                            <strong>г.&nbsp;Санкт-Петербург, ул.&nbsp;Автовская,&nbsp;д.&nbsp;31.</strong>
+                        </div>
+                    </div>
+                    <div class="header__flexbox">
+                        <svg class="header__icon">
+                            <use xlink:href="./img/svg/sprite.svg#time"></use>
+                        </svg>
+                        <div class="header__info">
+                            <span>График работы:</span>
+                            <strong>Пн-Пт с&nbsp;09:00&nbsp;до&nbsp;18:00</strong>
+                        </div>
+                    </div>
+                    <div class="header__flexbox">
+                        <svg class="header__icon">
+                            <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                        </svg>
+                        <div class="header__info">
+                            <span>Телефон:</span>
+                            <a href="tel:+78129260006" aria-label="Позвонить">+7 812 926-00-06</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero__flex">
+                    <h1>
+                        Устройство свайного основания.<br>
+                        <span>Вдавливание свай. Забивка свай.
+                            Буронабивные сваи.</span>
+                    </h1>
+                    <p>Специализированная подрядная организация выполняет работы по устройству свайных фундаментов.</p>
+                    <button class="brown-btn hero__btn" aria-label="Отправить заявку" onclick="openModal()">
+                        Отправить заявку
+                        <svg class="btn__icon">
+                            <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
+                        </svg>
                     </button>
                 </div>
             </div>
-        </header>
-        <section class="hero">
+        </section>
+        <section class="services section_padding">
             <div class="container">
-                <div class="hero__block">
-                    <div class="hero__flex">
-                        <h1>
-                            <strong>Дневники<br>путешествий</strong><br>
-                            александра<br>
-                            фокичева
-                        </h1>
-                        <a class="hero__link" href="#about" aria-label="Перейти на страницу 'Обо мне'">обо мне</a>
-                    </div>
-                </div>
+                <h2>Спектр наших услуг</h2>
+                <ul class="services__list">
+                    <li class="services__item">
+                        <img loading="lazy" class="services__img" src="./img/services-1.webp" alt="">
+                        <div class="services__texts">
+                            <h3>Статическое вдавливание свай</h3>
+                            <p>Статический способ погружения свай обладает значительными преимуществами, отсутствие
+                                вибрации и динамических нагрузок позволяет производить работы по вдавливанию свай в тех
+                                местах и условиях, в которых другие методы не подойдут.</p>
+                            <span>
+                                <svg class="services__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <a href="#" aria-label="Перейти на страницу услуги"></a>
+                    </li>
+                    <li class="services__item">
+                        <img  loading="lazy" class="services__img" src="./img/services-2.webp" alt="">
+                        <div class="services__texts">
+                            <h3>Динамическое погружение свай</h3>
+                            <p>Забивка свай - проверенный временем метод погружения свай. Данная технологи является
+                                самой распространенной технологией погружения свай.</p>
+                            <span>
+                                <svg class="services__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <a href="#" aria-label="Перейти на страницу услуги"></a>
+                    </li>
+                    <li class="services__item">
+                        <img  loading="lazy" class="services__img" src="./img/services-3.webp" alt="">
+                        <div class="services__texts">
+                            <h3>Буровые работы</h3>
+                            <p>Строительная компания "Вектор" имеет в своем распоряжении буровые установки различной
+                                мощности и различной комплектации, что позволяет нам выполнять устройство буронабивных
+                                свай по технологиям.</p>
+                            <span>
+                                <svg class="services__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                                </svg>
+                            </span>
+                        </div>
+                        <a href="#" aria-label="Перейти на страницу услуги"></a>
+                    </li>
+                </ul>
             </div>
         </section>
-    </div>
-    <main>
-        <section class="diaries dark">
-            <div data-aos="fade-up" data-aos-delay="100">
-                <div class="container">
-                    <svg class="diaries__icon" width="240" height="16">
-                        <use xlink:href="./img/svg/sprite.svg#arrow-symbol"></use>
-                    </svg>
-                </div>
-                <div class="overflow">
-                    <div class="diaries__flex">
-                        <div class="diaries__card diaries__card-1 diaries__card_new">
-                            <div class="diaries__flex-2">
-                                <h2>Аргентина</h2>
-                                <span>январь 2024</span>
-                            </div>
-                            <a href="./diary.html" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                        <div class="diaries__card diaries__card-2">
-                            <div class="diaries__flex-2">
-                                <h2>Намибия</h2>
-                                <span>декабрь 2023</span>
-                            </div>
-    
-                            <a  href="./diary.html" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                        <div class="diaries__card diaries__card-3">
-                            <div class="diaries__flex-2">
-                                <h2>Эмираты</h2>
-                                <span>январь 2024</span>
-    
-                            </div>
-    
-                            <a  href="./diary.html" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <a class="diaries__link"  href="./library-diary.html" aria-label="Перейти на страницу 'Дневники'">
-                        смотреть все дневники
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section class="map dark" id="map" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="visually-hidden">Карта</h2>
-            <a class="map__link" href="#">раскрыть карту</a>
-            <div class="map__bg"></div>
-            <div class="map-frame__filter">
-                <input class="map-frame__input" type="text" placeholder="поиск">
-                <button class="map-frame__btn open">фильтры
-
-                    <svg class="open-filter" width="29" height="13" viewBox="0 0 29 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 1L14.5 11.5L28.5 1" stroke="#D9D9D9"/>
-                        </svg>
-                        <svg class="close-filter" width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.36951 1L17.6304 18" stroke="#929184"/>
-                            <path d="M1 17.6309L18 1.36999" stroke="#929184"/>
+        <section class="speciality">
+            <div class="container">
+                <div class="speciality__flex">
+                    <div class="speciality__block">
+                        <div class="speciality__corner">
+                            <svg class="speciality__icon">
+                                <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
                             </svg>
-                                
-                </button>
-                <div class="map-filter__block open">
-                <div class="map-filter__categories">
-                    <div class="map-filter__category">
-                        <h2 class="map-filter__category-title">континент</h2>
-                        <ul>
-                            <li><button aria-label="Выбрать фильр">Россия</button></li>
-                            <li><button aria-label="Выбрать фильр">Европа</button></li>
-                            <li><button aria-label="Выбрать фильр">Азия</button></li>
-                            <li><button aria-label="Выбрать фильр">Африка</button></li>
-                            <li><button aria-label="Выбрать фильр">Лат. Америка</button></li>
-                            <li><button aria-label="Выбрать фильр">Сев. Америка</button></li>
-                            <li><button aria-label="Выбрать фильр">Антарктида</button></li>
-                            <li><button aria-label="Выбрать фильр">Океания</button></li>
-                        </ul>
-                    </div>
-                    <div class="map-filter__category">
-                        <h2 class="map-filter__category-title">транспорт</h2>
-                        <ul>
-                            <li><button aria-label="Выбрать фильр">пешком </button></li>
-                            <li><button aria-label="Выбрать фильр">на машине</button></li>
-                            <li><button aria-label="Выбрать фильр">на самолете</button></li>
-                            <li><button aria-label="Выбрать фильр">на поезде</button></li>
-                            <li><button aria-label="Выбрать фильр">на корабле</button></li>
-                        </ul>
-                    </div>
-                    <div class="map-filter__category">
-                        <h2 class="map-filter__category-title">материал</h2>
-                        <ul>
-                            <li><button aria-label="Выбрать фильр">дневники</button></li>
-                            <li><button aria-label="Выбрать фильр">заметки</button></li>
-                            <li><button aria-label="Выбрать фильр">видео</button></li>
-                        </ul>
-                    </div>
-                    <div class="map-filter__category">
-                        <h2 class="map-filter__category-title">климат</h2>
-                        <ul>
-                            <li><button aria-label="Выбрать фильр">климат</button></li>
-                            <li><button aria-label="Выбрать фильр">снег</button></li>
-                            <li><button aria-label="Выбрать фильр">пустыня</button></li>
-                            <li><button aria-label="Выбрать фильр">горы</button></li>
-                            <li><button aria-label="Выбрать фильр">озера</button></li>
-                            <li><button aria-label="Выбрать фильр">моря</button></li>
-                            <li><button aria-label="Выбрать фильр">океаны</button></li>
-                        </ul>
-                    </div>
-                    <div class="map-filter__category">
-                        <h2 class="map-filter__category-title">тип поездки</h2>
-                        <ul>
-                            <li><button aria-label="Выбрать фильр">отдых</button></li>
-                            <li><button aria-label="Выбрать фильр">работа</button></li>
-                            <li><button aria-label="Выбрать фильр">город</button></li>
-                            <li><button aria-label="Выбрать фильр">природа</button></li>
-                        </ul>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </section>
-        <section class="videos dark" id="videos">
-          <div data-aos="fade-up" data-aos-delay="100">
-            <h2 class="visually-hidden">Видео</h2>
-            <div class="container">
-                <svg class="videos__icon" width="240" height="16">
-                    <use xlink:href="./img/svg/sprite.svg#arrow-symbol"></use>
-                </svg>
-            </div>
-            <div class="overflow">
-                <div class="videos__flex">
-                    <div class="videos__card">
-                        
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_NvUNX_tnxI" title="Заглушка видео" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="videos__card">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_NvUNX_tnxI" title="Заглушка видео" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="videos__card">
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_NvUNX_tnxI" title="Заглушка видео" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <a class="videos__link" href="#" aria-label="Перейти на страницу 'Видео'">
-                    смотреть все видео
-                </a>
-            </div>
-          </div>
-        </section>
-        <section class="clipping light" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="visually-hidden">Дневники</h2>
-            <div class="container">
-                <div class="clipping__block">
-                    <div class="clipping__texts">
-                        <span>Чили. Январь 2007</span>
-                        <div class="clipping__flex">
-                            <p>Вообще в Чили, довольно ясно видно социальное расслоение. По дороге из аэропорта Сантьяго
-                                до города, по берегу реки Ma po che, этакий ручей с водой грязно-глинянного цвета,
-                                раскинулся «шанхай» - ветхое жильё, узкие улочки, мусоры вываливают по оврагу вдоль реки
-                                и собственно в реку. Эти кучи периодически жгут – так происходит утилизация...</p>
-                            <a href="#" aria-label="Перейти на страницу дневника">читать дневник полностью</a>
+                            <div>
+                                <strong>с <span>2019</span> года</strong>
+                                <span>работаем в сфере устройства
+                                    свайных фундаментов</span>
+                            </div>
                         </div>
                     </div>
+                    <div class="speciality__texts">
+                        <h2>Специализируемся
+                            на устройстве свайных
+                            фундаментов любой
+                            степени сложности:</h2>
+                        <p>Для качественного и своевременного выполнения взятых на себя обязательств, компания имеет
+                            собственный парк специализированного оборудования, который включает в себя следующую
+                            технику:</p>
+                        <ul>
+                            <li>
+                                <svg class="speciality__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
+                                </svg>
+                                <p>Сваевдавливающие установки: Starke, Sunward, Jove.<br>
+                                    Усилие вдавливания до 380 тонн.</p>
+                            </li>
+                            <li>
+                                <svg class="speciality__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
+                                </svg>
+                                <p>Сваебойные установки: Junttan PM25HD, PVE 5021. <br>
+                                    Вес ударной части молота 7 тонн.</p>
+                            </li>
+                            <li>
+                                <svg class="speciality__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
+                                </svg>
+                                <p>Буровые установки: Junttan PM26-40S, Enteco E400 HD.  <br>
+                                    C возможностью устройства буронабивных свай по различным
+                                    технологиям.</p>
+                            </li>
+                        </ul>
+                        <p>Данные аспекты являются слагаемыми успешной работы нашей компании. Мы поставили перед собой
+                            цель, заслужить доверия и уверенность наших партнеров в каждом нашем слове и наших
+                            действиях,
+                            и строго следуем поставленной цели.</p>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="swiper-block dark">
-            <h2 class="visually-hidden">Слайдшоу</h2>
-            <div class="swiper swiper-block__swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="swiper__img" src="./img/clipping.webp" alt="">
+        <section class="benefits section_padding">
+            <div class="container">
+                <h2>Преимущества работы с нами</h2>
+                <div class="benefits__grid">
+                    <div class="benefits__block">
+                        <svg class="benefits__icon">
+                            <use xlink:href="./img/svg/sprite.svg#benefits-1"></use>
+                        </svg>
+                        <span>Собственный парк техники</span>
                     </div>
-                    <div class="swiper-slide"><img class="swiper__img" src="./img/clipping.webp" alt="">
+                    <div class="benefits__block benefits__block_bg">
+                        <div class="benefits__abs">
+                            <strong>300+</strong>
+                            <span>Проектов реализовали</span>
+                        </div>
                     </div>
-                    <div class="swiper-slide"><img class="swiper__img" src="./img/clipping.webp" alt="">
+                    <div class="benefits__block">
+                        <svg class="benefits__icon">
+                            <use xlink:href="./img/svg/sprite.svg#benefits-2"></use>
+                        </svg>
+                        <span>Подготовленный персонал</span>
                     </div>
-                    <div class="swiper-slide"><img class="swiper__img" src="./img/clipping.webp" alt="">
+                    <div class="benefits__block">
+                        <svg class="benefits__icon">
+                            <use xlink:href="./img/svg/sprite.svg#benefits-3"></use>
+                        </svg>
+                        <span>Гибкость и оперативность</span>
                     </div>
-                    <div class="swiper-slide"><img class="swiper__img" src="./img/clipping.webp" alt="">
+                    <div class="benefits__block">
+                        <svg class="benefits__icon">
+                            <use xlink:href="./img/svg/sprite.svg#benefits-4"></use>
+                        </svg>
+                        <span>Работаем по всей территории
+                            РФ и СНГ</span>
                     </div>
-                    <div class="swiper-slide"><img class="swiper__img" src="./img/clipping.webp" alt="">
-                    </div>
-                    <div class="swiper-slide"><img class="swiper__img" src="./img/clipping.webp" alt="">
-                    </div>
-                    <div class="swiper-slide"><img class="swiper__img" src="./img/clipping.webp" alt="">
-                    </div>
-                    <div class="swiper-slide"><img class="swiper__img" src="./img/clipping.webp" alt="">
-                    </div>
-                    <div class="swiper-slide"><img class="swiper__img" src="./img/clipping.webp" alt="">
+                    <div class="benefits__block">
+                        <svg class="benefits__icon">
+                            <use xlink:href="./img/svg/sprite.svg#benefits-5"></use>
+                        </svg>
+                        <span>Соблюдение ГОСТов и СНиПов</span>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="notes dark">
-            <div data-aos="fade-up" data-aos-delay="100">
-                <div class="container">
-                    <svg class="notes__icon" width="240" height="16">
-                        <use xlink:href="./img/svg/sprite.svg#arrow-symbol"></use>
+        <section class="projects section_padding">
+            <div class="container">
+                <h2>Проекты над которыми поработали</h2>
+                <div class="projects__flex">
+
+                    <div class="projects__block">
+                        <img loading="lazy" class="projects__img" src="./img/projects.webp" alt="">
+                        <div class="projects__flex-2">
+                            <h3>СКК «Петербургский»</h3>
+                            <div>
+                                <span>Статическое вдавливание свай</span>
+                                <span>
+                                    г. Санкт&#8209;Петербург, пр&nbsp;&#8209;&nbsp;т&nbsp;Юрия&nbsp;Гагарина&nbsp;8
+                                  </span>
+                            </div>
+                        </div>
+                        <a class="projects__link" href="#" aria-label="Открыть страниц проекта"></a>
+                    </div>
+                    <div class="projects__block">
+                        <img loading="lazy" class="projects__img" src="./img/projects.webp" alt="">
+                        <div class="projects__flex-2">
+                            <h3>ЖК «TARMO»</h3>
+                            <div>
+                                <span>Динамическое погружение свай</span>
+                                <span>г. Санкт&#8209;Петербург, ул.&nbsp;Студентческая&nbsp;24</span>
+                            </div>
+                        </div>
+                        <a class="projects__link" href="#" aria-label="Открыть страниц проекта"></a>
+                    </div>
+                </div>
+                <button class="brown-btn projects__btn" aria-label="Все проекты">
+                    Все проекты
+                    <svg class="btn__icon">
+                        <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
                     </svg>
-                </div>
-                <div class="overflow">
-                    <div class="notes__flex">
-                        <div class="notes__card notes__card-1 notes__card_new">
-                            <div class="notes__flex-2">
-                                <a href="#" class="notes__link-2"></a>
-                                <h2>Новый год в Арктике</h2>
-                                <span>30 октября 2020</span>
-                            </div>
-                            <a href="#" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                        <div class="notes__card notes__card-2">
-                            <div class="notes__flex-2">
-                                <a href="#" class="notes__link-2"></a>
-                                <h2>Bagnioregio. Исчезающий город</h2>
-                                <span>30 октября 2020</span>
-                            </div>
-    
-                            <a href="#" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                        <div class="notes__card notes__card-3">
-                            <div class="notes__flex-2">
-                                <a href="#" class="notes__link-2"></a>
-                                <h2>Му́рманск, не Мурма́нск</h2>
-                                <span>30 октября 2020</span>
-    
-                            </div>
-    
-                            <a href="#" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                        <div class="notes__card notes__card-4">
-                            <div class="notes__flex-2">
-                                <a href="#" class="notes__link-2"></a>
-                                <h2>За картой в Ташкент</h2>
-                                <span>30 октября 2020</span>
-    
-                            </div>
-    
-                            <a href="#" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                        <div class="notes__card notes__card-1 notes__card_new">
-                            <div class="notes__flex-2">
-                                <a href="#" class="notes__link-2"></a>
-                                <h2>Новый год в Арктике</h2>
-                                <span>30 октября 2020</span>
-                            </div>
-                            <a href="#" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                        <div class="notes__card notes__card-2">
-                            <div class="notes__flex-2">
-                                <a href="#" class="notes__link-2"></a>
-                                <h2>Bagnioregio. Исчезающий город</h2>
-                                <span>30 октября 2020</span>
-                            </div>
-    
-                            <a href="#" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                        <div class="notes__card notes__card-3">
-                            <div class="notes__flex-2">
-                                <a href="#" class="notes__link-2"></a>
-                                <h2>Му́рманск, не Мурма́нск</h2>
-                                <span>30 октября 2020</span>
-    
-                            </div>
-    
-                            <a href="#" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                        <div class="notes__card notes__card-4">
-                            <div class="notes__flex-2">
-                                <a href="#" class="notes__link-2"></a>
-                                <h2>За картой в Ташкент</h2>
-                                <span>30 октября 2020</span>
-    
-                            </div>
-    
-                            <a href="#" aria-label="Перейти на страницу дневника"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
-                    <a class="notes__link" href="#" aria-label="Перейти на страницу 'Заметки'">
-                        смотреть все заметки
-                    </a>
-                </div>
+                </button>
             </div>
         </section>
-        <section class="about light" data-aos="fade-up" data-aos-delay="100" id="about">
+        <section class="numbers">
             <div class="container">
-                <h2><strong>обо</strong> мне</h2>
-                <div class="about__flex">
-                    <div class="about__flexbox">
-                        <p>Меня зовут Александр Фокичев. Я люблю путешествовать. Началось всё в раннем детстве, вместе с
-                            родителями путешествовали по Советскому Союзу, на Юг, в Краснодарский край, запомнилось большое
-                            путешествие на автомобиле всей семьёй в Белоруссию, Литву, Латвию, Эстонию и Ленинград. В 1988
-                            году впервые выехал заграницу, в Болгарию. Но массовое покорение мира началось в 1993 году. На
-                            сегодня по собственным расчётам посетил 83 страны мира, 5 континентов, количество городов при
-                            этом не поддаётся расчёту. В некоторых странах и городах бывал многократно, в том числе в
-                            командировках. Так, например, в Лондоне был тридцать раз. Часто бываю в Италии.</p>
-                        <div class="about__texts">
-                            <p>Примерно 20 лет назад начал записывать свои впечатления. Одиннадцать лет назад появился это
-                                сайт, дочка подарила на юбилей. За прошедшие годы написал и опубликовал более 50 рассказов о
-                                городах и странах. Помогает готовить материалы Алексей Исаев, он редактирует текст,
-                                размещает фото a_isa@list.ru.</p>
-                            <p>Кроме фиксации впечатлений на бумаге, снимаю видео в поездках. Володя Верендеев
-                                verendeev@mail.ru, мой давний друг, профессионально монтирует, получаются видеофильмы,
-                                которые также можно посмотреть на сайте.</p>
-                            <p>Да! Важно! Мои заметки не являются подробной и объективной информацией об посещённых городах
-                                и странах, скорее это личное и очень субъективное впечатление. Но я надеюсь, оно поможет
-                                заочно познакомиться c жизнью людей в далёких уголках нашей удивительной планеты, а если вы
-                                соберётесь в путь, сможете почерпнуть и практическую информацию.</p>
+                <div class="numbers__flex">
+                    <div class="numbers__block">
+                        <h3>300+</h3>
+                        <span>Выполнили проектов за 5 лет</span>
+                    </div>
+                    <div class="numbers__block">
+                        <img loading="lazy" class="numbers__img" src="./img/projects-2.webp" alt="">
+                        <svg class="numbers__icon">
+                            <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                        </svg>
+                        <a class="numbers__link" href="#" aria-label="Перейти к ..."></a>
+                    </div>
+                    <div class="numbers__block">
+                        <h3>22</h3>
+                        <span>Единицы техники в налчии</span>
+                    </div>
+                    <div class="numbers__block">
+                        <h3>РФ И СНГ</h3>
+                        <span>Работаем по всей территории</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <div class="partners__flex">
+                    <div class="partners__block-1">
+                        <h2>Наши партнёры</h2>
+                        <p>Строительная компания «СВУ» выражает искреннюю благодарность 
+                            за плодотворное сотрудничество!</p>
+                    </div>
+                    <div class="partners__block-2">
+                        <div class="partners__link-block">
+                            <div>
+                                <h3>ЛСР.Недвижимость-СЗ</h3>
+                                <span>www.lsrgroup.ru</span>
+                            </div>
+                            <div class="partners__icon">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                                </svg>
+                            </div>
+                            <a class="partners__link" href="#" aria-label="Перейти к ..."></a>
+                        </div>
+                        <div class="partners__link-block">
+                            <div>
+                                <h3>Реновация</h3>
+                                <span>www.spbren.ru</span>
+                            </div>
+                            <div class="partners__icon">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                                </svg>
+                            </div>
+                            <a class="partners__link" href="#" aria-label="Перейти к ..."></a>
+                        </div>
+                        <div class="partners__link-block">
+                            <div>
+                                <h3>Лидер Групп</h3>
+                                <span>www.lidgroup.ru</span>
+                            </div>
+                            <div class="partners__icon">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                                </svg>
+                            </div>
+                            <a class="partners__link" href="#" aria-label="Перейти к ..."></a>
+                        </div>
+                        <div class="partners__link-block">
+                            <div>
+                                <h3>МегаСтрой</h3>
+                                <span>www.megastroyspb.ru</span>
+                            </div>
+                            <div class="partners__icon">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                                </svg>
+                            </div>
+                            <a class="partners__link" href="#" aria-label="Перейти к ..."></a>
+                        </div>
+                        <div class="partners__link-block">
+                            <div>
+                                <h3>Арсенал-Групп</h3>
+                                <span>www.arsenalestate.ru</span>
+                            </div>
+                            <div class="partners__icon">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                                </svg>
+                            </div>
+                            <a class="partners__link" href="#" aria-label="Перейти к ..."></a>
                         </div>
                     </div>
-                    <div class="about__block">
-                        <img loading="lazy" class="about__img" src="./img/about.webp" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="callback">
+            <div class="container">
+                <div class="callback__flex">
+                    <div class="callback__block">
+                        <h2>Оставить заявку 
+                            на устройство свайного
+                            основания</h2>
+                        <form action="#" class="callback__form">
+                            <input class="callback__input" type="text" placeholder="Ваше имя">
+                            <input  class="callback__input" type="tel" placeholder="Номер телефона">
+                            <textarea  class="callback__textarea" name="callbackTextarea" id="callbackTextarea" placeholder="Комментарий к заявке"></textarea>
+                            <button class="brown-btn callback__btn" type="submit">Отправить заявку
+                                <svg class="btn__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
+                                </svg>
+                            </button>
+                            <p>Нажимая кнопку отправить заявку вы соглашаетесь
+                                с <a href="#" aria-label="Страница персональных данных">Правилами обработки персональных данных</a></p>
+                        </form>
+                    </div>
+                    <div class="callback__block-2">
+                        <div class="callback__corner">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                            </svg>
+                            <div>
+                                <strong>РФ И СНГ</strong>
+                                <span>Работаем по всей территории</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <a class="about__link" href="#" aria-label="Cсылка">Ну что, поехали?</a>
+                
             </div>
         </section>
-        <section class="adventures" data-aos="fade-up" data-aos-delay="100">
-            <h2 class="visually-hidden">Цифры</h2>
-            <div class="adventures__flex">
-                <span class="adventures__text">7 конти-<br>
-                    нентов,<br>
-                    90 стран,<br>
-                    108 городов</span>
-                <strong class="adventures__text-2">
-                    более<br>
-                    30 лет<br>
-                    путеше<br>
-                    ствий
-                </strong>
-            </div>
-        </section>
-        <section class="contacts light" data-aos="fade-up" data-aos-delay="100" id="contacts">
+        <section class="contacts">
             <div class="container">
-                <h2>контакты</h2>
-                <div class="contacts__flex">
-                    <img loading="lazy" class="contacts__img" src="./img/contacts.webp" alt="">
-                    <ul>
-                        <li><a class="contacts__link" href="#" aria-label="Перейти на 'Туристер'">читать мои дневники на
-                                туристере</a></li>
-                        <li><a class="contacts__link" href="#" aria-label="Перейти на youtube канал">смотреть мои видео
-                                на youtube</a></li>
-                        <li><a class="contacts__link" href="mailto:fokichev@yandex.ru"
-                                aria-label="Написать на почту">написать мне на почту fokichev@yandex.ru</a></li>
-                    </ul>
+                <div class="contacts__block">
+                    <h2>Контакты</h2>
+                    <div class="contacts__block-2">
+                        <svg class="header__icon">
+                            <use xlink:href="./img/svg/sprite.svg#geo"></use>
+                        </svg>
+                        <div class="header__info">
+                            <span>Адрес:</span>
+                            <strong>г.&nbsp;Санкт-Петербург,
+                                ул.&nbsp;Автовская,&nbsp;д.&nbsp;31.</strong>
+                        </div>
+                    </div>
+                    <div class="contacts__block-2">
+                        <svg class="header__icon">
+                            <use xlink:href="./img/svg/sprite.svg#time"></use>
+                        </svg>
+                        <div class="header__info">
+                            <span>График работы:</span>
+                            <strong>Пн-Пт с&nbsp;09:00&nbsp;до&nbsp;18:00</strong>
+                        </div>
+                    </div>
+                    <div class="contacts__block-2">
+                        <svg class="header__icon">
+                            <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                        </svg>
+                        <div class="header__info">
+                            <span>Телефон:</span>
+                            <a href="tel:+78129260006" aria-label="Позвонить">+7 812 926-00-06</a>
+                        </div>
+                    </div>
+                    <div class="contacts__flex">
+                        <a href="#" class="contacts__icon" aria-label="Перейти в вк">
+                            <svg >
+                                <use xlink:href="./img/svg/sprite.svg#vk"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="contacts__icon" aria-label="Перейти в тг">
+                            <svg >
+                                <use xlink:href="./img/svg/sprite.svg#tg"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="contacts__icon" aria-label="Перейти в whats up">
+                            <svg >
+                                <use xlink:href="./img/svg/sprite.svg#wa"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <button class="brown-btn" aria-label="Заказть звонок" onclick="openModal()">Заказать обратный звонок
+                        <svg class="btn__icon">
+                            <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
+                        </svg>
+                    </button>
                 </div>
+                <div class="contacts__map">
+                 
+                </div>
+             
             </div>
         </section>
     </main>
-    <footer class="footer" data-aos="fade-up" data-aos-delay="100">
+    <div class="overlay" id="overlay"></div>
+    <dialog class="modal" id="modal">
+        <div class="modal__body">
+            <button class="modal__btn" id="closeBtn">&times;</button>
+            <form action="#" class="callback__form">
+                <input class="callback__input" type="text" placeholder="Ваше имя">
+                <input  class="callback__input" type="tel" placeholder="Номер телефона">
+                <textarea  class="callback__textarea" name="modalTextarea" id="modalTextarea" placeholder="Комментарий к заявке"></textarea>
+                <button class="brown-btn callback__btn" type="submit">Отправить заявку
+                    <svg class="btn__icon">
+                        <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
+                    </svg>
+                </button>
+                <p>Нажимая кнопку отправить заявку вы соглашаетесь
+                    с <a href="#" aria-label="Страница персональных данных">Правилами обработки персональных данных</a></p>
+            </form>
+        </div>
+    </dialog>
+    <footer class="footer">
         <div class="container">
-            <div class="footer__flex">
-                <nav>
-                    <ul class="footer__list">
-                        <li class="footer__item"><a href="./library-diary.html" class="footer__link"
-                                aria-label="Перейти на страницу 'Дневники'">дневники</a></li>
-                        <li class="footer__item"><a href="./map.html" class="footer__link"
-                                aria-label="Перейти на страницу 'карта'">карта</a></li>
-                        <li class="footer__item"><a href="./notes.html" class="footer__link"
-                                aria-label="Перейти на страницу 'заметки'">заметки</a></li>
-                        <li class="footer__item"><a href="#contacts" class="footer__link"
-                                aria-label="Перейти на страницу 'контакты'">контакты</a></li>
-                        <li class="footer__item"><a href="#videos" class="footer__link"
-                                aria-label="Перейти на страницу 'видео'">видео</a></li>
-                        <li class="footer__item"><a href="./map.html" class="footer__link"
-                                aria-label="Перейти на страницу 'поиск'">поиск</a></li>
-                    </ul>
-                </nav>
-                <a class="footer__link-2" href="mailto:fokichev@yandex.ru"
-                    aria-label="Написать мне на почту">fokichev@yandex.ru</a>
-                <ul class="footer__socials">
-                    <li><a href="#" aria-label="Перейти в группу vk">
-                            <svg class="footer__icon" width="30" height="30">
+            <div class="footer__top">
+                <div class="footer__flex">
+                    <a href="#" class="footer__logo" aria-label="На главную">
+                        <svg class="footer__logo-icon">
+                            <use xlink:href="./img/svg/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <span>Устройство свайного 
+                        основания</span>
+                </div>
+                <span>Copyright © 2019<br> OOO «СВУ-Сваи»</span>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__block">
+                    <div class="footer__contacts">
+                        <span>Адрес:</span>
+                        <strong>г.&nbsp;Санкт-Петербург,
+                            ул.&nbsp;Автовская,&nbsp;д.&nbsp;31.</strong>
+                    </div>
+                    <div class="footer__contacts">
+                        <span>График работы:</span>
+                        <strong>Пн-Пт с 09:00 до 18:00</strong>
+                    </div>
+                    <div class="footer__contacts">
+                        <span>Телефон:</span>
+                        <a href="tel:+78129260006" aria-label="Позвонить">+7 812 926-00-06</a>
+                    </div>
+                    <div class="footer__flex-2">
+                        <a href="#" class="contacts__icon" aria-label="Перейти в вк">
+                            <svg >
                                 <use xlink:href="./img/svg/sprite.svg#vk"></use>
                             </svg>
-                        </a></li>
-                    <li><a href="#" aria-label="Перейти на канал touristik">
-                            <img loading="lazy" class="footer__img" src="./img/tour.webp" alt="">
-                        </a></li>
-                    <li><a href="#" aria-label="Перейти на канал dzen">
-                            <svg class="footer__icon" width="30" height="30">
-                                <use xlink:href="./img/svg/sprite.svg#dzen"></use>
+                        </a>
+                        <a href="#" class="contacts__icon" aria-label="Перейти в тг">
+                            <svg >
+                                <use xlink:href="./img/svg/sprite.svg#tg"></use>
                             </svg>
-                        </a></li>
-                    <li><a href="#" aria-label="Перейти на канал youtube">
-                            <svg class="footer__icon" width="30" height="30">
-                                <use xlink:href="./img/svg/sprite.svg#yt"></use>
+                        </a>
+                        <a href="#" class="contacts__icon" aria-label="Перейти в whats up">
+                            <svg >
+                                <use xlink:href="./img/svg/sprite.svg#wa"></use>
                             </svg>
-                        </a></li>
-                </ul>
-                <a class="logo" href="./index.html" aria-label="На главную">
-                    <img loading="lazy" class="logo__img" src="./img/svg/logo-white.svg" alt="">
-                </a>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__block-2">
+                    <div>
+                        <nav>
+                            <span>Услуги</span>
+                            <div>
+                                <a href="#" aria-label="Статическое вдавливание свай">Статическое вдавливание свай</a>
+                                <a href="#" aria-label="Динамическое погружение свай">Динамическое погружение свай</a>
+                                <a href="#" aria-label="Буровые работы">Буровые работы</a>
+                            </div>
+                        </nav>
+                        <nav>
+                            <span>Меню</span>
+                            <div>
+                                <a href="#" aria-label="О компании">О компании</a>
+                                <a href="#" aria-label="Контакты">Контакты</a>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="footer__policy">
+                        <a href="#" aria-label="Политика конфиденциальности">Политика конфиденциальности</a>
+                        <button class="footer__btn" aria-label="Наверх страницы">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
-    <script src="./js/aos.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/index.js?ver=8"></script>
-    <script src="./js/map.js"></script>
+
+    <script src="./js/index.js"></script>
 
 </body>
 
