@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Экскаваторы для любых задач">
+    <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <title>СпецТех</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__block">
+                <div class="header__top">
+                    <a class="header__logo logo" href="#" aria-label="на главную">
+                        <svg class="logo__icon">
+                            <use xlink:href="./img/svg/sprite.svg#logo"></use>
+                        </svg>
+                    </a>
+                    <div class="header__menu">
+                        <button class="header__btn" id="catalogBtn">
+                            <span class="header__burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                            <span class="header__btn-text">Каталог спецтехники</span>
+                        </button>
+                        <ul class="header__dropdown" id="catalogDD">
+                            <li>
+                                <a href="#" aria-label="Перейти к товару">
+                                    Пункт 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Перейти к товару">
+                                    Пункт 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Перейти к товару">
+                                    Пункт 3
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__contact">
+                        <strong>г. Москва</strong>
+                        <span>
+                            <svg class="header__icon-1">
+                                <use xlink:href="./img/svg/sprite.svg#geo"></use>
+                            </svg>
+                            пр-т&nbsp;Мира,&nbsp;102, корп.&nbsp;Б; этаж&nbsp;3</span>
+                    </div>
+                    <div class="header__contact">
+                        <a href="tel:+74952018484" aria-label="позвонить">8 495 201-84-84</a>
+                        <a href="mailto:info.spetst@gmail.com">
+                            <svg class="header__icon-2">
+                                <use xlink:href="./img/svg/sprite.svg#mail"></use>
+                            </svg>
+                            info.spetst@gmail.com</a>
+                    </div>
+                    <button class="yellow-btn header__btn-2" onclick="openModal()">
+                        <span>Заказать звонок</span>
+                        <svg class="header__btn-icon">
+                            <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header__bottom">
+                    <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item" id="itemDD">
+                                <a class="menu__link" id="menuDD" href="#">
+                                    Услуги
+                                    <svg class="dropdown__icon">
+                                        <use xlink:href="./img/svg/sprite.svg#select-arrow"></use>
+                                    </svg>
+                                </a>
+                                <ul class="header__dropdown menu__dropdown">
+                                    <li>
+                                        <a href="#" aria-label="Услуга">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="Услуга">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="Услуга">3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Акции <span>%</span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Прайс
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Блог
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                24/7 без выходных
+                            </li>
+                            <li class="hidden-976">
+                                <div class="header__contact">
+                                    <strong>г. Москва</strong>
+                                    <span>
+                                        <svg class="header__icon-1">
+                                            <use xlink:href="./img/svg/sprite.svg#geo"></use>
+                                        </svg>
+                                        пр-т&nbsp;Мира,&nbsp;102, корп.&nbsp;Б; этаж&nbsp;3</span>
+                                </div>
+                            </li>
+                            <li class="hidden-976">
+                                <div class="header__contact">
+                                    <a href="tel:+74952018484" aria-label="позвонить">8 495 201-84-84</a>
+                                    <a href="mailto:info.spetst@gmail.com">
+                                        <svg class="header__icon-2">
+                                            <use xlink:href="./img/svg/sprite.svg#mail"></use>
+                                        </svg>
+                                        info.spetst@gmail.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="bread-crumbs">
+            <div class="container">
+                <div class="overflow">
+                    <div class="bread-crumbs__flex">
+                        <a href="#" aria-label="Перейти на страницу">Главная</a>
+                        <span>-</span>
+                        <a href="#" aria-label="Перейти на страницу">Каталог</a>
+                        <span>-</span>
+                        <a href="#" aria-label="Перейти на страницу">Другая техника</a>
+                        <span>-</span>
+                        <a href="#" aria-label="Перейти на страницу">Ямобуры</a>
+                        <span>-</span>
+                        <a class="active" href="#" aria-label="Перейти на страницу">Ямобур БКМ 317 на базе ГАЗ 3308</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="product">
+            <div class="container">
+                <div class="product__flex">
+                    <img class="product__img" src="./img/product.webp" alt="">
+                    <div class="product__block">
+                        <span class="product__indicator">В наличии</span>
+                        <h1>Ямобур БКМ 317
+                            на базе ГАЗ 3308</h1>
+                        <div class="product__block-2">
+                            <span class="product__price">от<strong>18 000</strong>
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#rub-2"></use>
+                                </svg>
+                            </span>
+                            <span>Цена за доставку: <span>договорная</span></span>
+                        </div>
+                        <div class="text-20-28 product__block-3">
+                            <span>Технические характеристики</span>
+                            <ul>
+                                <li><span>Эксплуатационная масса, кг</span><span>8000</span></li>
+                                <li><span>Глубина бурения, м</span><span>6</span></li>
+                                <li><span>Диаметр бурения, мм</span><span>800</span></li>
+                                <li><span>Полез. мощность двигателя, кВт</span><span>106</span></li>
+                                <li class="hidden"><span>Полез. мощность двигателя, кВт</span><span>106</span></li>
+                                <li class="hidden"><span>Полез. мощность двигателя, кВт</span><span>106</span></li>
+                            </ul>
+                            <button id="showMore">Показать все характеристики</button>
+                        </div>
+                        <div class="product__block-4">
+                            <button class="yellow-btn product__btn" aria-label="Заказать" onclick="openModal()">Заказать
+                                спецтехнику</button>
+                            <button class="product__btn-2" aria-label="WhatsApp">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#wa"></use>
+                                </svg>
+                                Спросить в WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about__bg">
+                <div class="container">
+                    <div class="tab__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <button class="tab__btn active" aria-label="Выбрать категорию">Описание</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="tab__btn" aria-label="Выбрать категорию">Тех. характеристики</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="tab__btn" aria-label="Выбрать категорию">Оплата и доставка</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="tab__btn" aria-label="Выбрать категорию">Гарантии</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab active">
+                        <div class="about__flex">
+                            <p>Ямобур БКМ 317 на базе грузовика ГАЗ 3308 в аренду подходит компаниям, осуществляющим
+                                обслуживание ЛЭП, сооружающим дорожные и строительные
+                                объекты. Бурильно-крановая установка часто встречается на объектах Москвы и за городом.
+                                Техника работает с грунтами 1-4 категорий. На машине установлено
+                                шасси с высокой проходимостью — модель перемещается по бездорожью и местности со сложным
+                                рельефом.</p>
+                            <div>
+                                <h2>Эксплуатация ямобура БКМ 317 на базе ГАЗ 3308</h2>
+                                <p>Бурильный агрегат оснащен гидроприводом с удобной системой управления. Регулятор с
+                                    большим диапазоном скоростей позволяет выбрать оптимальный режим
+                                    работы в зависимости от типа грунта.</p>
+                                <br>
+                                <p>Ямобур БКМ 317 оснащен металлической мачтой, на которой размещены основные детали
+                                    привода. К мачте прикрепляется дополнительное навесное
+                                    оборудование: свае-бои и манипуляторы. Защита обеспечивается стальным ограждением.
+                                    Аренда бурильной установки выгодна — одна модель выполняет
+                                    функции нескольких машин.</p>
+                            </div>
+                            <div>
+                                <h2>Основные преимущества ямобура на базе ГАЗ 3308</h2>
+                                <ul class="yellow-markers-list">
+                                    <li>
+                                        <p>Маневренности техники достаточно для работы в стесненных условиях;</p>
+                                    </li>
+                                    <li>
+                                        <p>Производительность ямобура достигает 15 м в час;</p>
+                                    </li>
+                                    <li>
+                                        <p>Гидросистема изготовлена из импортных комплектующих;</p>
+                                    </li>
+                                    <li>
+                                        <p>Лебедка БКМ отличается повышенной грузоподъемностью — арендованная модель
+                                            способна выполнять функции автовышки.</p>
+                                    </li>
+                                </ul>
+                                <p>Ямобур — это выносливая машина с экономным расходом топлива. Заявки на аренду техники
+                                    принимаются 24/7.</p>
+                            </div>
+                            <div class="about__relative">
+                                <div class="card__swiper swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="card__card text-20-28">
+                                                <div class="benefits__icon yellow-icon">
+                                                    <svg>
+                                                        <use xlink:href="./img/svg/sprite.svg#eye"></use>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <strong>Ежедневный техосмотр</strong>
+                                                    <span>всей техники</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card__card text-20-28">
+                                                <div class="benefits__icon yellow-icon">
+                                                    <svg>
+                                                        <use xlink:href="./img/svg/sprite.svg#clock"></use>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <strong>Работаем круглосуточно</strong>
+                                                    <span>без выходных</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card__card text-20-28">
+                                                <div class="benefits__icon yellow-icon">
+                                                    <svg>
+                                                        <use xlink:href="./img/svg/sprite.svg#percent"></use>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <strong>Гибкая система скидок</strong>
+                                                    <span>программа лояльности</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card__card text-20-28">
+                                                <div class="benefits__icon yellow-icon">
+                                                    <svg>
+                                                        <use xlink:href="./img/svg/sprite.svg#house"></use>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <strong>Собственный автопарк</strong>
+                                                    <span>хранение, парковка</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="card__card text-20-28">
+                                                <div class="benefits__icon yellow-icon">
+                                                    <svg>
+                                                        <use xlink:href="./img/svg/sprite.svg#percent"></use>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <strong>Гибкая система скидок</strong>
+                                                    <span>программа лояльности</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card__swiper-btns trans-btns btns">
+                                    <div class="card-prev prev">
+                                        <svg>
+                                            <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="card-next next">
+                                        <svg>
+                                            <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-2">
+
+                    </div>
+                    <div class="tab-3">
+
+                    </div>
+                    <div class="tab-4">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="consult">
+            <div class="container">
+                <h2>Бесплатная консультация</h2>
+                <p>У вас есть вопросы по аренде спецтехники, не нашли то что искали? Задайте мне их удобным вам способом
+                    и мы поможем разобраться</p>
+                <div class="consult__relative">
+                    <div class="consult__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="consult__card">
+                                    <img class="consult__img" src="./img/consult.webp" alt="">
+                                    <div class="consult__texts">
+                                        <span>Офис:</span>
+                                        <a href="tel:+74952018484" aria-label="Позвонить">+7 495 201-84-84</a>
+                                        <a href="mailto:info.spetst@gmail.com"
+                                            aria-label="Написать">info.spetst@gmail.com</a>
+                                        <button class="yellow-btn consult__btn" onclick="openModal()">Заказать звонок
+                                            <svg>
+                                                <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="consult__card">
+                                    <img class="consult__img" src="./img/consult.webp" alt="">
+                                    <div class="consult__texts">
+                                        <span>Михаил</span>
+                                        <a href="tel:+74952018484" aria-label="Позвонить">+7 903 555-31-18</a>
+                                        <a href="mailto:info.spetst@gmail.com"
+                                            aria-label="Написать">info.spetst@gmail.com</a>
+                                        <div class="socials">
+                                            <a href="#" aria-label="What's up">
+                                                <svg>
+                                                    <use xlink:href="./img/svg/sprite.svg#wa"></use>
+                                                </svg>
+                                            </a>
+                                            <a href="#" aria-label="Telegram">
+                                                <svg>
+                                                    <use xlink:href="./img/svg/sprite.svg#tg"></use>
+                                                </svg>
+                                            </a>
+                                            <a href="tel:+74952018484" aria-label="Позвонить">
+                                                <svg>
+                                                    <use xlink:href="./img/svg/sprite.svg#call"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="consult__card">
+                                    <img class="consult__img" src="./img/consult.webp" alt="">
+                                    <div class="consult__texts">
+                                        <span>Офис:</span>
+                                        <a href="tel:+74952018484" aria-label="Позвонить">+7 495 201-84-84</a>
+                                        <a href="mailto:info.spetst@gmail.com"
+                                            aria-label="Написать">info.spetst@gmail.com</a>
+                                        <button class="yellow-btn consult__btn" onclick="openModal()">Заказать звонок
+                                            <svg>
+                                                <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="consult__swiper-btns trans-btns btns">
+                        <div class="consult-prev prev">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                            </svg>
+                        </div>
+                        <div class="consult-next next">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="within">
+            <div class="container">
+                <div class="within__flex">
+                    <h2>C этой техникой арендуют</h2>
+                    <div class="trans-btns btns">
+                        <div class="within-prev prev">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                            </svg>
+                        </div>
+                        <div class="within-next next">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="within__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="within__card">
+                                <img class="within__img" src="./img/within.webp" alt="">
+                                <div class="within__texts">
+                                    <h3>Экскаватор-погрузчик
+                                        New Holland B80B</h3>
+                                    <ul>
+                                        <li>
+                                            <span>Эксплуатационная масса, кг</span>
+                                            <strong>8000</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем фронтального ковша, м3</span>
+                                            <strong>1</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем заднего ковша, м3</span>
+                                            <strong>0.2</strong>
+                                        </li>
+                                        <li>
+                                            <span>Макс. глубина копания, м</span>
+                                            <strong>4.7</strong>
+                                        </li>
+                                    </ul>
+                                    <span>от 14 500 ₽</span>
+                                    <button class="yellow-btn within__btn" aria-label="закзать">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="within__card">
+                                <img class="within__img" src="./img/within.webp" alt="">
+                                <div class="within__texts">
+                                    <h3>Экскаватор-погрузчик
+                                        New Holland B80B</h3>
+                                    <ul>
+                                        <li>
+                                            <span>Эксплуатационная масса, кг</span>
+                                            <strong>8000</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем фронтального ковша, м3</span>
+                                            <strong>1</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем заднего ковша, м3</span>
+                                            <strong>0.2</strong>
+                                        </li>
+                                        <li>
+                                            <span>Макс. глубина копания, м</span>
+                                            <strong>4.7</strong>
+                                        </li>
+                                    </ul>
+                                    <span>от 14 500 ₽</span>
+                                    <button class="yellow-btn within__btn" disabled
+                                        aria-label="закзать">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="within__card">
+                                <img class="within__img" src="./img/within.webp" alt="">
+                                <div class="within__texts">
+                                    <h3>Экскаватор-погрузчик
+                                        New Holland B80B</h3>
+                                    <ul>
+                                        <li>
+                                            <span>Эксплуатационная масса, кг</span>
+                                            <strong>8000</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем фронтального ковша, м3</span>
+                                            <strong>1</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем заднего ковша, м3</span>
+                                            <strong>0.2</strong>
+                                        </li>
+                                        <li>
+                                            <span>Макс. глубина копания, м</span>
+                                            <strong>4.7</strong>
+                                        </li>
+                                    </ul>
+                                    <span>от 14 500 ₽</span>
+                                    <button class="yellow-btn within__btn" disabled
+                                        aria-label="закзать">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="within__card">
+                                <img class="within__img" src="./img/within.webp" alt="">
+                                <div class="within__texts">
+                                    <h3>Экскаватор-погрузчик
+                                        New Holland B80B</h3>
+                                    <ul>
+                                        <li>
+                                            <span>Эксплуатационная масса, кг</span>
+                                            <strong>8000</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем фронтального ковша, м3</span>
+                                            <strong>1</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем заднего ковша, м3</span>
+                                            <strong>0.2</strong>
+                                        </li>
+                                        <li>
+                                            <span>Макс. глубина копания, м</span>
+                                            <strong>4.7</strong>
+                                        </li>
+                                    </ul>
+                                    <span>от 14 500 ₽</span>
+                                    <button class="yellow-btn within__btn" disabled
+                                        aria-label="закзать">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="within__card">
+                                <img class="within__img" src="./img/within.webp" alt="">
+                                <div class="within__texts">
+                                    <h3>Экскаватор-погрузчик
+                                        New Holland B80B</h3>
+                                    <ul>
+                                        <li>
+                                            <span>Эксплуатационная масса, кг</span>
+                                            <strong>8000</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем фронтального ковша, м3</span>
+                                            <strong>1</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем заднего ковша, м3</span>
+                                            <strong>0.2</strong>
+                                        </li>
+                                        <li>
+                                            <span>Макс. глубина копания, м</span>
+                                            <strong>4.7</strong>
+                                        </li>
+                                    </ul>
+                                    <span>от 14 500 ₽</span>
+                                    <button class="yellow-btn active within__btn" aria-label="закзать">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="within__card">
+                                <img class="within__img" src="./img/within.webp" alt="">
+                                <div class="within__texts">
+                                    <h3>Экскаватор-погрузчик
+                                        New Holland B80B</h3>
+                                    <ul>
+                                        <li>
+                                            <span>Эксплуатационная масса, кг</span>
+                                            <strong>8000</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем фронтального ковша, м3</span>
+                                            <strong>1</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем заднего ковша, м3</span>
+                                            <strong>0.2</strong>
+                                        </li>
+                                        <li>
+                                            <span>Макс. глубина копания, м</span>
+                                            <strong>4.7</strong>
+                                        </li>
+                                    </ul>
+                                    <span>от 14 500 ₽</span>
+                                    <button class="yellow-btn within__btn" disabled
+                                        aria-label="закзать">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="within__card">
+                                <img class="within__img" src="./img/within.webp" alt="">
+                                <div class="within__texts">
+                                    <h3>Экскаватор-погрузчик
+                                        New Holland B80B</h3>
+                                    <ul>
+                                        <li>
+                                            <span>Эксплуатационная масса, кг</span>
+                                            <strong>8000</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем фронтального ковша, м3</span>
+                                            <strong>1</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем заднего ковша, м3</span>
+                                            <strong>0.2</strong>
+                                        </li>
+                                        <li>
+                                            <span>Макс. глубина копания, м</span>
+                                            <strong>4.7</strong>
+                                        </li>
+                                    </ul>
+                                    <span>от 14 500 ₽</span>
+                                    <button class="yellow-btn within__btn" disabled
+                                        aria-label="закзать">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="within__card">
+                                <img class="within__img" src="./img/within.webp" alt="">
+                                <div class="within__texts">
+                                    <h3>Экскаватор-погрузчик
+                                        New Holland B80B</h3>
+                                    <ul>
+                                        <li>
+                                            <span>Эксплуатационная масса, кг</span>
+                                            <strong>8000</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем фронтального ковша, м3</span>
+                                            <strong>1</strong>
+                                        </li>
+                                        <li>
+                                            <span>Объем заднего ковша, м3</span>
+                                            <strong>0.2</strong>
+                                        </li>
+                                        <li>
+                                            <span>Макс. глубина копания, м</span>
+                                            <strong>4.7</strong>
+                                        </li>
+                                    </ul>
+                                    <span>от 14 500 ₽</span>
+                                    <button class="yellow-btn within__btn" disabled
+                                        aria-label="закзать">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="callback">
+            <div class="team-banner">
+                <div class="container">
+                    <div class="team-banner__flex">
+                        <div class="team-banner__block">
+                            <h2><span>Не нашли что искали?</span>
+                                Оставьте свои
+                                контактные данные,
+                                мы вам
+                                <i>
+                                    <svg>
+                                        <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                                    </svg>
+                                </i>
+                                перезвоними поможем подобрать
+                                нужную технику!
+                            </h2>
+                        </div>
+                        <form action="#" class="team-banner__form form">
+                            <input type="text" placeholder="Имя *">
+                            <input type="text" placeholder="Телефон *">
+                            <textarea name="teamBannerTextarea" id="teamBannerTextarea"
+                                placeholder="Комментарий к заявке"></textarea>
+                            <div class="form__flex">
+                                <button class="yellow-btn form__btn" type="submit">Заказать обратный звонок</button>
+                                <span>Нажимая кнопку Получить консультацию,
+                                    вы соглашаетесь с условиями обработки
+                                    и использования персональных данных</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="overlay" id="overlay"></div>
+    <dialog class="modal" id="modal">
+        <div class="modal__body">
+            <button class="modal__btn" id="closeBtn">&times;</button>
+            <form action="#" class="form">
+                <input type="text" placeholder="Имя *">
+                <input type="text" placeholder="Телефон *">
+                <textarea name="modalTextarea" id="modalTextarea" placeholder="Комментарий к заявке"></textarea>
+                <div class="form__flex">
+                    <button class="yellow-btn form__btn" type="submit">Получить консультацию</button>
+                    <span>Нажимая кнопку Получить консультацию,
+                        вы соглашаетесь с условиями обработки
+                        и использования персональных данных</span>
+                </div>
+            </form>
+        </div>
+    </dialog>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__flex">
+                <a class="footer__logo logo" href="#" aria-label="на главную">
+                    <svg class="logo__icon">
+                        <use xlink:href="./img/svg/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <div class="footer__socials">
+                    <a href="#" aria-label="What's up">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#wa"></use>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Telegram">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#tg"></use>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Vkontakte">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#yt"></use>
+                        </svg>
+                    </a>
+                    <a href="tel:+74952018484" aria-label="Позвонить">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#call"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__flex-2">
+                <div class="footer__adress">
+                    <div class="footer__block">
+                        <span>Офис в Москве:</span>
+                        <p>Москва, проспект Мира, 102, корп. Б; этаж 3,помещение I, комната 11Д</p>
+                    </div>
+                    <div class="footer__block">
+                        <span>Офис в Люберцах:</span>
+                        <p>Россия , МО, г. Люберцы, Октябрьский проспект
+                            112 "А", 2 этаж, офис 123</p>
+                    </div>
+                </div>
+                <nav class="footer__nav">
+                    <span>Клиентам</span>
+                    <ul>
+                        <li><a href="#" aria-label="Перейти на страницу">Аренда спецтехники</a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">Акции <span>%</span></a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">Блог</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <span>Информация</span>
+                    <ul>
+                        <li><a href="#" aria-label="Перейти на страницу">Сотрудничество</a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">О компании</a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">Контакты</a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">Аренда в Подмосковье</a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">Карта сайта</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__contacts">
+                    <a href="tel:+74952018484">+7 495 201-84-84</a>
+                    <a href="mailto:info.spetst@gmail.com"><svg>
+                            <use xlink:href="./img/svg/sprite.svg#mail"></use>
+                        </svg>
+                        info.spetst@gmail.com</a>
+                    <button class="yellow-btn footer__btn" onclick="openModal()">Заказать спецтехнику</button>
+                </div>
+            </div>
+            <div class="footer__acc acc">
+                Спецтехника в аренду популярные категории
+                <div class="acc__icon">
+                    <svg>
+                        <use xlink:href="./img/svg/sprite.svg#select-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="content">
+                <div class="text-wrapper">
+                    <p>123</p>
+                </div>
+            </div>
+            <div class="footer__acc acc">
+                Услуги спецтехники с экипажем
+                <div class="acc__icon">
+                    <svg>
+                        <use xlink:href="./img/svg/sprite.svg#select-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="content content-2">
+                <div class="text-wrapper">
+                    <p>123</p>
+                </div>
+            </div>
+            <div class="footer__flex-3">
+                <span>© 2024 г. ООО «Прайм Групп»</span>
+                <a href="#" aria-label="перейти на страницу">Политика кондиенциальности</a>
+            </div>
+            <span class="footer__text">Сайт носит исключительно информационный характер и не является публичной офертой.
+                Использование материалов с сайтов допустимо с упоминанием spectehar.ru</span>
+        </div>
+    </footer>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

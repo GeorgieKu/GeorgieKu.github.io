@@ -5,354 +5,615 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Устройство свайного основания.">
+    <meta name="description" content="Экскаваторы для любых задач">
     <link rel="shortcut icon" href="./img/fav.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
-    <link rel="preload" href="fonts/Onest-ExtraLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Onest-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Onest-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Onest-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/Onest-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <title>SVU</title>
+    <title>СпецТех</title>
 </head>
 
 <body>
     <header class="header">
         <div class="container">
-            <div class="header__flex">
-                <div class="header__flex-3">
-                    <div class="header__burger">
-                        <button class="header__burger-btn" id="burger" aria-label="Меню">
-                            <span></span><span></span><span></span>
-                        </button>
-                        <nav class="menu">
-                            <div class="container">
-                                <ul class="menu__list">
-                                    <li class="menu__item">
-                                        <a aria-label="Перейти к разделу..." class="menu__link" href="#">
-                                            1 пункт
-                                        </a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a aria-label="Перейти к разделу..." class="menu__link" href="#">
-                                            2 пункт
-                                        </a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a aria-label="Перейти к разделу..." class="menu__link" href="#">
-                                            3 пункт
-                                        </a>
-                                    </li>
-                                    <li class="menu__item">
-                                        <a aria-label="Перейти к разделу..." class="menu__link" href="#">
-                                            4 пункт
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="menu__flex">
-                                    <div class="header__flexbox menu__hidden">
-                                        <svg class="header__icon">
-                                            <use xlink:href="./img/svg/sprite.svg#geo"></use>
-                                        </svg>
-                                        <div class="header__info">
-                                            <span>Адрес:</span>
-                                            <strong>г.&nbsp;Санкт-Петербург,
-                                                ул.&nbsp;Автовская,&nbsp;д.&nbsp;31.</strong>
-                                        </div>
-                                    </div>
-
-                                    <div class="header__flexbox menu__hidden">
-                                        <svg class="header__icon">
-                                            <use xlink:href="./img/svg/sprite.svg#time"></use>
-                                        </svg>
-                                        <div class="header__info">
-                                            <span>График работы:</span>
-                                            <strong>Пн-Пт с&nbsp;09:00&nbsp;до&nbsp;18:00</strong>
-                                        </div>
-                                    </div>
-                                    <div class="header__flexbox menu__hidden-576">
-                                        <svg class="header__icon">
-                                            <use xlink:href="./img/svg/sprite.svg#phone"></use>
-                                        </svg>
-                                        <div class="header__info">
-                                            <span>Телефон:</span>
-                                            <a href="tel:+78129260006" aria-label="Позвонить">+7 812 926-00-06</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                    <a href="#" class="header__logo" aria-label="На главную">
-                        <svg class="header__logo-icon">
+            <div class="header__block">
+                <div class="header__top">
+                    <a class="header__logo logo" href="#" aria-label="на главную">
+                        <svg class="logo__icon">
                             <use xlink:href="./img/svg/sprite.svg#logo"></use>
                         </svg>
                     </a>
-                    <span class="header__text">Устройство свайного
-                        основания</span>
-                </div>
-                <div class="header__flex-2">
-                    <div class="header__flexbox">
-                        <svg class="header__icon">
-                            <use xlink:href="./img/svg/sprite.svg#geo"></use>
-                        </svg>
-                        <div class="header__info">
-                            <span>Адрес:</span>
-                            <strong>г.&nbsp;Санкт-Петербург, ул.&nbsp;Автовская,&nbsp;д.&nbsp;31.</strong>
-                        </div>
+                    <div class="header__menu">
+                        <button class="header__btn" id="catalogBtn">
+                            <span class="header__burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                            <span class="header__btn-text">Каталог спецтехники</span>
+                        </button>
+                        <ul class="header__dropdown" id="catalogDD">
+                            <li>
+                                <a href="#" aria-label="Перейти к товару">
+                                    Пункт 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Перейти к товару">
+                                    Пункт 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" aria-label="Перейти к товару">
+                                    Пункт 3
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="header__flexbox">
-                        <svg class="header__icon">
-                            <use xlink:href="./img/svg/sprite.svg#time"></use>
-                        </svg>
-                        <div class="header__info">
-                            <span>График работы:</span>
-                            <strong>Пн-Пт с&nbsp;09:00&nbsp;до&nbsp;18:00</strong>
-                        </div>
+                    <div class="header__contact">
+                        <strong>г. Москва</strong>
+                        <span>
+                            <svg class="header__icon-1">
+                                <use xlink:href="./img/svg/sprite.svg#geo"></use>
+                            </svg>
+                            пр-т&nbsp;Мира,&nbsp;102, корп.&nbsp;Б; этаж&nbsp;3</span>
                     </div>
-                    <div class="header__flexbox">
-                        <svg class="header__icon">
+                    <div class="header__contact">
+                        <a href="tel:+74952018484" aria-label="позвонить">8 495 201-84-84</a>
+                        <a href="mailto:info.spetst@gmail.com">
+                            <svg class="header__icon-2">
+                                <use xlink:href="./img/svg/sprite.svg#mail"></use>
+                            </svg>
+                            info.spetst@gmail.com</a>
+                    </div>
+                    <button class="yellow-btn header__btn-2" onclick="openModal()">
+                        <span>Заказать звонок</span>
+                        <svg class="header__btn-icon">
                             <use xlink:href="./img/svg/sprite.svg#phone"></use>
                         </svg>
-                        <div class="header__info">
-                            <span>Телефон:</span>
-                            <a href="tel:+78129260006" aria-label="Позвонить">+7 812 926-00-06</a>
-                        </div>
-                    </div>
+                    </button>
+                </div>
+                <div class="header__bottom">
+                    <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
+                        <span></span><span></span><span></span>
+                    </button>
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item" id="itemDD">
+                                <a class="menu__link" id="menuDD" href="#">
+                                    Услуги
+                                    <svg class="dropdown__icon">
+                                        <use xlink:href="./img/svg/sprite.svg#select-arrow"></use>
+                                    </svg>
+                                </a>
+                                <ul class="header__dropdown menu__dropdown">
+                                    <li>
+                                        <a href="#" aria-label="Услуга">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="Услуга">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" aria-label="Услуга">3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Акции <span>%</span>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Прайс
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    О компании
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Блог
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                24/7 без выходных
+                            </li>
+                            <li class="hidden-976">
+                                <div class="header__contact">
+                                    <strong>г. Москва</strong>
+                                    <span>
+                                        <svg class="header__icon-1">
+                                            <use xlink:href="./img/svg/sprite.svg#geo"></use>
+                                        </svg>
+                                        пр-т&nbsp;Мира,&nbsp;102, корп.&nbsp;Б; этаж&nbsp;3</span>
+                                </div>
+                            </li>
+                            <li class="hidden-976">
+                                <div class="header__contact">
+                                    <a href="tel:+74952018484" aria-label="позвонить">8 495 201-84-84</a>
+                                    <a href="mailto:info.spetst@gmail.com">
+                                        <svg class="header__icon-2">
+                                            <use xlink:href="./img/svg/sprite.svg#mail"></use>
+                                        </svg>
+                                        info.spetst@gmail.com</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
     </header>
     <main>
         <section class="hero">
-            <div class="container">
-                <div class="hero__flex">
-                    <h1>
-                        Устройство свайного основания.<br>
-                        <span>Вдавливание свай. Забивка свай.
-                            Буронабивные сваи.</span>
-                    </h1>
-                    <p>Специализированная подрядная организация выполняет работы по устройству свайных фундаментов.</p>
-                    <button class="brown-btn hero__btn" aria-label="Отправить заявку" onclick="openModal()">
-                        Отправить заявку
-                        <svg class="btn__icon">
-                            <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
+
+            <div class="hero__swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="container">
+                            <span class="hero__rent">АРЕНДА</span>
+                            <div class="hero__block">
+                                <h1>Экскаваторы
+                                    для любых задач</h1>
+                                <span>Решайте сложные задачи с легкостью
+                                    вместе СпецтехАренда</span>
+                                <button class="yellow-btn hero__btn">Перейти в каталог
+                                    <svg class="hero__icon">
+                                        <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <img class="hero__img" src="./img/hero-2.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container">
+                            <span class="hero__rent">АРЕНДА
+                                <span class="hero__rent-2">Аренда автокранов для разных задач<br> МАЗ, КАМАЗ, УРАЛ,
+                                    ЛИБХЕР</span>
+                            </span>
+                            <div class="hero__block">
+                                <h1>Эффективные,
+                                    маневренные
+                                    и безопасные</h1>
+                                <button class="yellow-btn hero__btn">Перейти в каталог
+                                    <svg class="hero__icon">
+                                        <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <img loading='lazy' class="hero__img-2" src="./img/hero-2-2.webp" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="container">
+                            <span class="hero__rent">АРЕНДА</span>
+                            <div class="hero__block">
+                                <h1>Манипуляторы
+                                    для простых задач</h1>
+                                <span>Решайте сложные задачи с легкостью
+                                    вместе СпецтехАренда</span>
+                                <button class="yellow-btn hero__btn">Перейти в каталог
+                                    <svg class="hero__icon">
+                                        <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <img loading='lazy' class="hero__img-3" src="./img/hero-2-3.webp" alt="">
+                    </div>
+                </div>
+                <div class="hero__swiper-btns">
+                    <div class="hero-prev">
+                        <svg class="hero__icon">
+                            <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
                         </svg>
-                    </button>
+                    </div>
+                    <div class="hero-next">
+                        <svg class="hero__icon">
+                            <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="benefits section-padding">
+            <div class="container">
+                <h2 class="visually-hidden">Преимущества</h2>
+                <div class="benefits__grid">
+                    <div class="benefits__card text-20-28">
+                        <div class="benefits__icon yellow-icon">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#clock"></use>
+                            </svg>
+                        </div>
+                        <span>Доставка за 24 часа</span>
+                    </div>
+                    <div class="benefits__card text-20-28">
+                        <div class="benefits__icon yellow-icon">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#user"></use>
+                            </svg>
+                        </div>
+                        <span>Личный менеджер</span>
+                    </div>
+                    <div class="benefits__card text-20-28">
+                        <div class="benefits__icon yellow-icon">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#list"></use>
+                            </svg>
+                        </div>
+                        <span>Полный документо-
+                            оборот</span>
+                    </div>
+                    <div class="benefits__card text-20-28">
+                        <div class="benefits__icon yellow-icon">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#rub"></use>
+                            </svg>
+                        </div>
+                        <span>Без наценокв выходные</span>
+                    </div>
+                    <div class="benefits__card text-20-28">
+                        <div class="benefits__icon yellow-icon">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#flash"></use>
+                            </svg>
+                        </div>
+                        <span>Техника от 2015 года выпуска</span>
+                    </div>
+                    <div class="benefits__card text-20-28 benefits__card_big">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#tool"></use>
+                        </svg>
+                        <span>ТО в автопарке и ремонт
+                            на объекте</span>
+                    </div>
+                    <div class="benefits__card text-20-28">
+                        <div class="benefits__icon yellow-icon">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#cap"></use>
+                            </svg>
+                        </div>
+                        <span>Полный бак топлива</span>
+                    </div>
                 </div>
             </div>
         </section>
-        <section class="services section_padding">
+        <section class="rent section-padding">
             <div class="container">
-                <h2>Спектр наших услуг</h2>
-                <ul class="services__list">
-                    <li class="services__item">
-                        <img loading="lazy" class="services__img" src="./img/services-1.webp" alt="">
-                        <div class="services__texts">
-                            <h3>Статическое вдавливание свай</h3>
-                            <p>Статический способ погружения свай обладает значительными преимуществами, отсутствие
-                                вибрации и динамических нагрузок позволяет производить работы по вдавливанию свай в тех
-                                местах и условиях, в которых другие методы не подойдут.</p>
-                            <span>
-                                <svg class="services__icon">
-                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
-                                </svg>
-                            </span>
-                        </div>
-                        <a href="#" aria-label="Перейти на страницу услуги"></a>
-                    </li>
-                    <li class="services__item">
-                        <img  loading="lazy" class="services__img" src="./img/services-2.webp" alt="">
-                        <div class="services__texts">
-                            <h3>Динамическое погружение свай</h3>
-                            <p>Забивка свай - проверенный временем метод погружения свай. Данная технологи является
-                                самой распространенной технологией погружения свай.</p>
-                            <span>
-                                <svg class="services__icon">
-                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
-                                </svg>
-                            </span>
-                        </div>
-                        <a href="#" aria-label="Перейти на страницу услуги"></a>
-                    </li>
-                    <li class="services__item">
-                        <img  loading="lazy" class="services__img" src="./img/services-3.webp" alt="">
-                        <div class="services__texts">
-                            <h3>Буровые работы</h3>
-                            <p>Строительная компания "Вектор" имеет в своем распоряжении буровые установки различной
-                                мощности и различной комплектации, что позволяет нам выполнять устройство буронабивных
-                                свай по технологиям.</p>
-                            <span>
-                                <svg class="services__icon">
-                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
-                                </svg>
-                            </span>
-                        </div>
-                        <a href="#" aria-label="Перейти на страницу услуги"></a>
-                    </li>
-                </ul>
+                <span>Почему выбирают нас</span>
+                <div class="rent__flex">
+                    <div class="rent__block">
+                        <h2>Аренда спецтехники
+                            по Москве и МО
+                            от компании «СпецТех»</h2>
+                        <p>Аренда спецтехники для компаний Москвы и МО от «СпецТех» —
+                            это выгодная сделка! Доставим любую машину из каталога 
+                            от 4 часов по Москве и за 24 часа по Московской области.
+                            В цену смены, указанную на сайте, входит: топливо, экипаж, ТО,
+                            ремонт.</p>
+                        <button class="yellow-btn rent__btn">Перейти в каталог
+                            <svg class="hero__icon">
+                                <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="rent__block-2">
+                        <span>Доставка за:</span>
+                        <strong><span>24</span> часа</strong>
+
+                    </div>
+                    <img loading='lazy' class="rent__img" src="./img/rent.webp" alt="">
+                </div>
             </div>
         </section>
-        <section class="speciality">
-            <div class="container">
-                <div class="speciality__flex">
-                    <div class="speciality__block">
-                        <div class="speciality__corner">
-                            <svg class="speciality__icon">
-                                <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
-                            </svg>
-                            <div>
-                                <strong>с <span>2019</span> года</strong>
-                                <span>работаем в сфере устройства
-                                    свайных фундаментов</span>
+        <section class="category">
+            <h2 class="visually-hidden">Техника</h2>
+            <div class="category__bg">
+                <div class="container">
+                    <div class="category__swiper tab__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <button class="category__btn tab__btn active"
+                                    aria-label="Выбрать категорию">Землеройная</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="category__btn tab__btn" aria-label="Выбрать категорию">Высотные
+                                    работы</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="category__btn tab__btn" aria-label="Выбрать категорию">Перевозки</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="category__btn tab__btn"
+                                    aria-label="Выбрать категорию">Дорожно-ремонтная</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="category__btn tab__btn"
+                                    aria-label="Выбрать категорию">Погрузочная</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="category__btn tab__btn"
+                                    aria-label="Выбрать категорию">Коммунальная</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <button class="category__btn tab__btn" aria-label="Выбрать категорию">Навесное
+                                    оборудование</button>
+                            </div>
+                        </div>
+                        <div class="category__swiper-btns swiper-btns">
+                            <div class="category-prev prev">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                                </svg>
+                            </div>
+                            <div class="category-next next">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                                </svg>
                             </div>
                         </div>
                     </div>
-                    <div class="speciality__texts">
-                        <h2>Специализируемся
-                            на устройстве свайных
-                            фундаментов любой
-                            степени сложности:</h2>
-                        <p>Для качественного и своевременного выполнения взятых на себя обязательств, компания имеет
-                            собственный парк специализированного оборудования, который включает в себя следующую
-                            технику:</p>
-                        <ul>
+                    <div class="tab category__tab active">
+                        <div class="category__grid">
+                            <div class="category__card text-20-28">
+                                <strong>70 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-1.webp" alt="">
+                                <span>Гусеничные
+                                    экскаваторы</span>
+                                <span>от 14 500 ₽</span>
+                            </div>
+                            <div class="category__card text-20-28">
+                                <strong>38 ед</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-2.webp" alt="">
+                                <span>Колесные
+                                    экскаваторы</span>
+                                <span>от 14 200 ₽</span>
+                            </div>
+                            <div class="category__card text-20-28">
+                                <strong>26 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-3.webp" alt="">
+                                <span>Мини-экскаваторы</span>
+                                <span>от 11 000 ₽</span>
+                            </div>
+                            <div class="category__card text-20-28">
+                                <strong>5 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-4.webp" alt="">
+                                <span>Плавающие
+                                    экскаваторы</span>
+                                <span>от 39 000 ₽</span>
+                            </div>
+                            <div class="category__card text-20-28">
+                                <strong>4 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-5.webp" alt="">
+                                <span>Экскаваторы-
+                                    планировщики</span>
+                                <span>от 21 000 ₽</span>
+                            </div>
+                            <div class="category__card text-20-28">
+                                <strong>29 ед</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-6.webp" alt="">
+                                <span>Экскаваторы-
+                                    погрузчики</span>
+                                <span>от 76 000 ₽</span>
+                            </div>
+                            <div class="category__card text-20-28">
+                                <strong>8 ед</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-7.webp" alt="">
+                                <span>Экскаваторы-
+                                    разрушители</span>
+                                <span>от 13 000 ₽</span>
+                            </div>
+                            <div class="category__card text-20-28">
+                                <strong>8 ед</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-8.webp" alt="">
+                                <span>Ямобуры</span>
+                                <span>от 17 800 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-2 category__tab-2">
+                        <div class="category__grid">
+                            <div class="category__card text-20-28">
+                                <strong>70 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-1.webp" alt="">
+                                <span>Гусеничные
+                                    экскаваторы</span>
+                                <span>от 14 500 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-3 category__tab-3">
+                        <div class="category__grid">
+                            <div class="category__card text-20-28">
+                                <strong>70 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-1.webp" alt="">
+                                <span>Гусеничные
+                                    экскаваторы</span>
+                                <span>от 14 500 ₽</span>
+                            </div>
+                            <div class="category__card text-20-28">
+                                <strong>70 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-1.webp" alt="">
+                                <span>Гусеничные
+                                    экскаваторы</span>
+                                <span>от 14 500 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-4 category__tab-4">
+                        <div class="category__grid">
+                            <div class="category__card text-20-28">
+                                <strong>70 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-1.webp" alt="">
+                                <span>Гусеничные
+                                    экскаваторы</span>
+                                <span>от 14 500 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-5 category__tab-5">
+                        <div class="category__grid">
+                            <div class="category__card text-20-28">
+                                <strong>70 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-1.webp" alt="">
+                                <span>Гусеничные
+                                    экскаваторы</span>
+                                <span>от 14 500 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-6 category__tab-6">
+                        <div class="category__grid">
+                            <div class="category__card text-20-28">
+                                <strong>70 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-1.webp" alt="">
+                                <span>Гусеничные
+                                    экскаваторы</span>
+                                <span>от 14 500 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-7 category__tab-7">
+                        <div class="category__grid">
+                            <div class="category__card text-20-28">
+                                <strong>70 ед.</strong>
+                                <img loading='lazy' class="category__img" src="./img/rent-1.webp" alt="">
+                                <span>Гусеничные
+                                    экскаваторы</span>
+                                <span>от 14 500 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="trust">
+            <div class="container">
+                <div class="trust__flex">
+                    <div class="trust__block">
+                        <img loading='lazy' class="trust__img" src="./img/exc-2.webp" alt="">
+                    </div>
+                    <div class="trust__block-2">
+                        <h2>Почему нам можно
+                            доверять</h2>
+                        <ul class="yellow-markers-list">
                             <li>
-                                <svg class="speciality__icon">
-                                    <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
-                                </svg>
-                                <p>Сваевдавливающие установки: Starke, Sunward, Jove.<br>
-                                    Усилие вдавливания до 380 тонн.</p>
+                                <p>Для начала мы добились прозрачности цен, они известны клиенту
+                                    уже на этапе оформления заявки.</p>
                             </li>
                             <li>
-                                <svg class="speciality__icon">
-                                    <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
-                                </svg>
-                                <p>Сваебойные установки: Junttan PM25HD, PVE 5021. <br>
-                                    Вес ударной части молота 7 тонн.</p>
+                                <p>Затем обеспечили достойную и быструю бухгалтерию: подготовим договор
+                                    и закрывающие документы по запросу в течение нескольких часов.</p>
                             </li>
                             <li>
-                                <svg class="speciality__icon">
-                                    <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
-                                </svg>
-                                <p>Буровые установки: Junttan PM26-40S, Enteco E400 HD.  <br>
-                                    C возможностью устройства буронабивных свай по различным
-                                    технологиям.</p>
+                                <P>Наши водители стабильно проходят медицинское освидетельствование,
+                                    а машины — технический осмотр у опытных механиков.</P>
+                            </li>
+                            <li>
+                                <p>Мы сами оформляем путевые листы и согласовываем перевозку техники
+                                    по дорогам Москвы</p>
+                            </li>
+                            <li>
+                                <p>Если у вас большой интересный заказ, гарантируем скидки на прокат
+                                    специальной техники, которые прописываются в договоре.</p>
                             </li>
                         </ul>
-                        <p>Данные аспекты являются слагаемыми успешной работы нашей компании. Мы поставили перед собой
-                            цель, заслужить доверия и уверенность наших партнеров в каждом нашем слове и наших
-                            действиях,
-                            и строго следуем поставленной цели.</p>
+                    </div>
+                </div>
+                <div class="trust__swiper card__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="trust__card card__card text-20-28">
+                                <div class="trust__number">
+                                    <strong>1</strong>
+                                </div>
+                                <span>Скрытые платежи
+                                    отсутствуют</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__card card__card text-20-28">
+                                <div class="trust__number">
+                                    <strong>2</strong>
+                                </div>
+                                <span>Оперативная
+                                    бухгалтерия</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__card card__card text-20-28">
+                                <div class="trust__number">
+                                    <strong>3</strong>
+                                </div>
+                                <span>Типовой договор</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__card card__card text-20-28">
+                                <div class="trust__number">
+                                    <strong>4</strong>
+                                </div>
+                                <span>Адекватные водители</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="trust__card card__card text-20-28">
+                                <div class="trust__number">
+                                    <strong>1</strong>
+                                </div>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trust__swiper-btns card__swiper-btns trans-btns btns">
+                        <div class="card-prev prev">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                            </svg>
+                        </div>
+                        <div class="card-next next">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="benefits section_padding">
+        <section class="banner">
             <div class="container">
-                <h2>Преимущества работы с нами</h2>
-                <div class="benefits__grid">
-                    <div class="benefits__block">
-                        <svg class="benefits__icon">
-                            <use xlink:href="./img/svg/sprite.svg#benefits-1"></use>
-                        </svg>
-                        <span>Собственный парк техники</span>
-                    </div>
-                    <div class="benefits__block benefits__block_bg">
-                        <div class="benefits__abs">
-                            <strong>300+</strong>
-                            <span>Проектов реализовали</span>
-                        </div>
-                    </div>
-                    <div class="benefits__block">
-                        <svg class="benefits__icon">
-                            <use xlink:href="./img/svg/sprite.svg#benefits-2"></use>
-                        </svg>
-                        <span>Подготовленный персонал</span>
-                    </div>
-                    <div class="benefits__block">
-                        <svg class="benefits__icon">
-                            <use xlink:href="./img/svg/sprite.svg#benefits-3"></use>
-                        </svg>
-                        <span>Гибкость и оперативность</span>
-                    </div>
-                    <div class="benefits__block">
-                        <svg class="benefits__icon">
-                            <use xlink:href="./img/svg/sprite.svg#benefits-4"></use>
-                        </svg>
-                        <span>Работаем по всей территории
-                            РФ и СНГ</span>
-                    </div>
-                    <div class="benefits__block">
-                        <svg class="benefits__icon">
-                            <use xlink:href="./img/svg/sprite.svg#benefits-5"></use>
-                        </svg>
-                        <span>Соблюдение ГОСТов и СНиПов</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="projects section_padding">
-            <div class="container">
-                <h2>Проекты над которыми поработали</h2>
-                <div class="projects__flex">
-
-                    <div class="projects__block">
-                        <img loading="lazy" class="projects__img" src="./img/projects.webp" alt="">
-                        <div class="projects__flex-2">
-                            <h3>СКК «Петербургский»</h3>
-                            <div>
-                                <span>Статическое вдавливание свай</span>
-                                <span>
-                                    г. Санкт&#8209;Петербург, пр&nbsp;&#8209;&nbsp;т&nbsp;Юрия&nbsp;Гагарина&nbsp;8
-                                  </span>
-                            </div>
-                        </div>
-                        <a class="projects__link" href="#" aria-label="Открыть страниц проекта"></a>
-                    </div>
-                    <div class="projects__block">
-                        <img loading="lazy" class="projects__img" src="./img/projects.webp" alt="">
-                        <div class="projects__flex-2">
-                            <h3>ЖК «TARMO»</h3>
-                            <div>
-                                <span>Динамическое погружение свай</span>
-                                <span>г. Санкт&#8209;Петербург, ул.&nbsp;Студентческая&nbsp;24</span>
-                            </div>
-                        </div>
-                        <a class="projects__link" href="#" aria-label="Открыть страниц проекта"></a>
-                    </div>
-                </div>
-                <button class="brown-btn projects__btn" aria-label="Все проекты">
-                    Все проекты
-                    <svg class="btn__icon">
-                        <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
+                <div class="banner__block">
+                    <svg class="banner__icon">
+                        <use xlink:href="./img/svg/sprite.svg#lines"></use>
                     </svg>
-                </button>
-            </div>
-        </section>
-        <section class="numbers">
-            <div class="container">
-                <div class="numbers__flex">
-                    <div class="numbers__block">
-                        <h3>300+</h3>
-                        <span>Выполнили проектов за 5 лет</span>
-                    </div>
-                    <div class="numbers__block">
-                        <img loading="lazy" class="numbers__img" src="./img/projects-2.webp" alt="">
-                        <svg class="numbers__icon">
-                            <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
-                        </svg>
-                        <a class="numbers__link" href="#" aria-label="Перейти к ..."></a>
-                    </div>
-                    <div class="numbers__block">
-                        <h3>22</h3>
-                        <span>Единицы техники в налчии</span>
-                    </div>
-                    <div class="numbers__block">
-                        <h3>РФ И СНГ</h3>
-                        <span>Работаем по всей территории</span>
+                    <div class="banner__texts text-20-28">
+                        <h2>Вы знали, что 1 экскаватор, в зависимости
+                            от эксплуатации, окупается до 5 лет?</h2>
+                        <span>Арендуйте спецтехнику выгодно: у нас прозрачная система платежей с минимальной рабочей
+                            сменой
+                            от 8 часов, по цене, в среднем — от 12 000 ₽</span>
+                        <p>Строительная, дорожная или коммунальная техника — позвоните нам, менеджеры знают
+                            индивидуальные функционал
+                            и особенности спецтехники, мы поможем вам сэкономить или не совершить ошибку в выборе:
+                            бывает так, что модели машин
+                            очень похожи, но доставка одной стоит 40 000 рублей, а доставка другой в 3 раза дешевле.</p>
+                        <button class="yellow-btn banner__btn">Отзывы реальных клиентов</button>
                     </div>
                 </div>
             </div>
@@ -360,170 +621,185 @@
         <section class="partners">
             <div class="container">
                 <div class="partners__flex">
-                    <div class="partners__block-1">
-                        <h2>Наши партнёры</h2>
-                        <p>Строительная компания «СВУ» выражает искреннюю благодарность 
-                            за плодотворное сотрудничество!</p>
+                    <h2>Наши партнёры</h2>
+                    <div class="partners__swiper-btns trans-btns btns">
+                        <div class="partners-prev prev">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                            </svg>
+                        </div>
+                        <div class="partners-next next">
+                            <svg>
+                                <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="partners__block-2">
-                        <div class="partners__link-block">
-                            <div>
-                                <h3>ЛСР.Недвижимость-СЗ</h3>
-                                <span>www.lsrgroup.ru</span>
-                            </div>
-                            <div class="partners__icon">
-                                <svg>
-                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                </div>
+                <div class="partners__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="partners__card">
+                                <svg class="partners__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#partners-1"></use>
                                 </svg>
                             </div>
-                            <a class="partners__link" href="#" aria-label="Перейти к ..."></a>
                         </div>
-                        <div class="partners__link-block">
-                            <div>
-                                <h3>Реновация</h3>
-                                <span>www.spbren.ru</span>
-                            </div>
-                            <div class="partners__icon">
-                                <svg>
-                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                        <div class="swiper-slide">
+                            <div class="partners__card">
+                                <svg class="partners__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#partners-1"></use>
                                 </svg>
                             </div>
-                            <a class="partners__link" href="#" aria-label="Перейти к ..."></a>
                         </div>
-                        <div class="partners__link-block">
-                            <div>
-                                <h3>Лидер Групп</h3>
-                                <span>www.lidgroup.ru</span>
-                            </div>
-                            <div class="partners__icon">
-                                <svg>
-                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                        <div class="swiper-slide">
+                            <div class="partners__card">
+                                <svg class="partners__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#partners-1"></use>
                                 </svg>
                             </div>
-                            <a class="partners__link" href="#" aria-label="Перейти к ..."></a>
                         </div>
-                        <div class="partners__link-block">
-                            <div>
-                                <h3>МегаСтрой</h3>
-                                <span>www.megastroyspb.ru</span>
-                            </div>
-                            <div class="partners__icon">
-                                <svg>
-                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                        <div class="swiper-slide">
+                            <div class="partners__card">
+                                <svg class="partners__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#partners-1"></use>
                                 </svg>
                             </div>
-                            <a class="partners__link" href="#" aria-label="Перейти к ..."></a>
                         </div>
-                        <div class="partners__link-block">
-                            <div>
-                                <h3>Арсенал-Групп</h3>
-                                <span>www.arsenalestate.ru</span>
-                            </div>
-                            <div class="partners__icon">
-                                <svg>
-                                    <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
+                        <div class="swiper-slide">
+                            <div class="partners__card">
+                                <svg class="partners__icon">
+                                    <use xlink:href="./img/svg/sprite.svg#partners-1"></use>
                                 </svg>
                             </div>
-                            <a class="partners__link" href="#" aria-label="Перейти к ..."></a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="callback">
+        <section class="team">
             <div class="container">
-                <div class="callback__flex">
-                    <div class="callback__block">
-                        <h2>Оставить заявку 
-                            на устройство свайного
-                            основания</h2>
-                        <form action="#" class="callback__form">
-                            <input class="callback__input" type="text" placeholder="Ваше имя">
-                            <input  class="callback__input" type="tel" placeholder="Номер телефона">
-                            <textarea  class="callback__textarea" name="callbackTextarea" id="callbackTextarea" placeholder="Комментарий к заявке"></textarea>
-                            <button class="brown-btn callback__btn" type="submit">Отправить заявку
-                                <svg class="btn__icon">
-                                    <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
+                <div class="team__bg">
+                    <div class="team__flex">
+                        <h2>Команда и принципы</h2>
+                        <p>На протяжении 10 лет «СТА» успешно конкурирует в Москве
+                            и Московской области. И высокая репутация бренда — главная
+                            заслуга сплоченного коллектива компании. Профессионалы
+                            и единомышленники! Наша цель — 100% успех в долговременных
+                            и разовых проектах</p>
+                    </div>
+                    <div class="team__grid">
+                        <div class="team__card text-20-28">
+                            <div class="team__icon">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#user"></use>
                                 </svg>
-                            </button>
-                            <p>Нажимая кнопку отправить заявку вы соглашаетесь
-                                с <a href="#" aria-label="Страница персональных данных">Правилами обработки персональных данных</a></p>
+                            </div>
+                            <span>Личный менеджер
+                                расскажет о технике
+                                всё</span>
+                        </div>
+                        <div class="team__card text-20-28">
+                            <div class="team__icon">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#geo-2"></use>
+                                </svg>
+                            </div>
+                            <span>Логистика - наш козырь!
+                                Знаем лучшие маршруты
+                                Москвы и МО </span>
+                        </div>
+                        <div class="team__card text-20-28">
+                            <div class="team__icon">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#hat"></use>
+                                </svg>
+                            </div>
+                            <span>Экипаж водителей - асы,
+                                ежегодно повышающие
+                                свою квалификацию</span>
+                        </div>
+                        <div class="team__card text-20-28">
+                            <div class="team__icon">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#settings"></use>
+                                </svg>
+                            </div>
+                            <span>Автомеханики готовы
+                                устранить неисправности
+                                в режиме 24/7</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="team-banner">
+                <div class="container">
+                    <div class="team-banner__flex">
+                        <div class="team-banner__block">
+                            <h2>Остались вопросы?
+                                <span>Позвоните
+                                    <i>
+                                        <svg>
+                                            <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                                        </svg>
+                                    </i>
+                                </span>
+                                или напишите нам!
+                            </h2>
+                            <p>Получите бесплатную консультацию наших специалистов по аренде
+                                спецтехники — позвоните или <span>заполните форму обратной связи</span>.
+                                Мы свяжемся с вами в течение 5 минут и вы получите полный расчет
+                                цены аренды спецтехники.</p>
+                        </div>
+                        <form action="#" class="team-banner__form form">
+                            <input type="text" placeholder="Имя *">
+                            <input type="text" placeholder="Телефон *">
+                            <textarea name="teamBannerTextarea" id="teamBannerTextarea"
+                                placeholder="Комментарий к заявке"></textarea>
+                            <div class="form__flex">
+                                <button class="yellow-btn form__btn" type="submit">Получить консультацию</button>
+                                <span>Нажимая кнопку Получить консультацию,
+                                    вы соглашаетесь с условиями обработки
+                                    и использования персональных данных</span>
+                            </div>
                         </form>
                     </div>
-                    <div class="callback__block-2">
-                        <div class="callback__corner">
-                            <svg>
-                                <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
-                            </svg>
-                            <div>
-                                <strong>РФ И СНГ</strong>
-                                <span>Работаем по всей территории</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                
             </div>
+
         </section>
         <section class="contacts">
-            <div class="container">
-                <div class="contacts__block">
-                    <h2>Контакты</h2>
-                    <div class="contacts__block-2">
-                        <svg class="header__icon">
-                            <use xlink:href="./img/svg/sprite.svg#geo"></use>
-                        </svg>
-                        <div class="header__info">
-                            <span>Адрес:</span>
-                            <strong>г.&nbsp;Санкт-Петербург,
-                                ул.&nbsp;Автовская,&nbsp;д.&nbsp;31.</strong>
-                        </div>
-                    </div>
-                    <div class="contacts__block-2">
-                        <svg class="header__icon">
-                            <use xlink:href="./img/svg/sprite.svg#time"></use>
-                        </svg>
-                        <div class="header__info">
-                            <span>График работы:</span>
-                            <strong>Пн-Пт с&nbsp;09:00&nbsp;до&nbsp;18:00</strong>
-                        </div>
-                    </div>
-                    <div class="contacts__block-2">
-                        <svg class="header__icon">
-                            <use xlink:href="./img/svg/sprite.svg#phone"></use>
-                        </svg>
-                        <div class="header__info">
-                            <span>Телефон:</span>
-                            <a href="tel:+78129260006" aria-label="Позвонить">+7 812 926-00-06</a>
-                        </div>
-                    </div>
-                    <div class="contacts__flex">
-                        <a href="#" class="contacts__icon" aria-label="Перейти в вк">
-                            <svg >
-                                <use xlink:href="./img/svg/sprite.svg#vk"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="contacts__icon" aria-label="Перейти в тг">
-                            <svg >
-                                <use xlink:href="./img/svg/sprite.svg#tg"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="contacts__icon" aria-label="Перейти в whats up">
-                            <svg >
-                                <use xlink:href="./img/svg/sprite.svg#wa"></use>
-                            </svg>
-                        </a>
-                    </div>
-                    <button class="brown-btn" aria-label="Заказть звонок" onclick="openModal()">Заказать обратный звонок
-                        <svg class="btn__icon">
-                            <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
-                        </svg>
-                    </button>
+            <div class="contacts__map">
+                <div class="container">
                 </div>
-                <div class="contacts__map">
-                 
-                </div>
-             
+            </div>
+            <div class="contacts__block">
+                <h2>Контакты</h2>
+                <a class="contacts__link" href="tel:+79035553118" aria-label="Позвонить">
+                    <svg>
+                        <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                    </svg>
+                    +7 903 555-31-18 <span>Михаил</span>
+                </a>
+                <a class="contacts__link" href="tel:+79035553142" aria-label="Позвонить">
+                    <svg>
+                        <use xlink:href="./img/svg/sprite.svg#phone"></use>
+                    </svg>
+                    +7 903 555-31-42 <span>Евгений</span>
+                </a>
+                <a class="contacts__link" href="mailto:info.spetst@gmail.com" aria-label="Написать на почту">
+                    <svg>
+                        <use xlink:href="./img/svg/sprite.svg#mail"></use>
+                    </svg>
+                    info.spetst@gmail.com
+                </a>
+                <a href="#" class="contacts__link contacts__link_mb" aria-label="Показать на карте">
+                    <svg>
+                        <use xlink:href="./img/svg/sprite.svg#geo"></use>
+                    </svg>
+                    Москва, проспект Мира, 102
+                </a>
+                <button class="yellow-btn contacts__btn" onclick="openModal()">Получить консультацию</button>
             </div>
         </section>
     </main>
@@ -531,98 +807,130 @@
     <dialog class="modal" id="modal">
         <div class="modal__body">
             <button class="modal__btn" id="closeBtn">&times;</button>
-            <form action="#" class="callback__form">
-                <input class="callback__input" type="text" placeholder="Ваше имя">
-                <input  class="callback__input" type="tel" placeholder="Номер телефона">
-                <textarea  class="callback__textarea" name="modalTextarea" id="modalTextarea" placeholder="Комментарий к заявке"></textarea>
-                <button class="brown-btn callback__btn" type="submit">Отправить заявку
-                    <svg class="btn__icon">
-                        <use xlink:href="./img/svg/sprite.svg#arrow-btn"></use>
-                    </svg>
-                </button>
-                <p>Нажимая кнопку отправить заявку вы соглашаетесь
-                    с <a href="#" aria-label="Страница персональных данных">Правилами обработки персональных данных</a></p>
+            <form action="#" class="form">
+                <input type="text" placeholder="Имя *">
+                <input type="text" placeholder="Телефон *">
+                <textarea name="modalTextarea" id="modalTextarea" placeholder="Комментарий к заявке"></textarea>
+                <div class="form__flex">
+                    <button class="yellow-btn form__btn" type="submit">Получить консультацию</button>
+                    <span>Нажимая кнопку Получить консультацию,
+                        вы соглашаетесь с условиями обработки
+                        и использования персональных данных</span>
+                </div>
             </form>
         </div>
     </dialog>
     <footer class="footer">
         <div class="container">
-            <div class="footer__top">
-                <div class="footer__flex">
-                    <a href="#" class="footer__logo" aria-label="На главную">
-                        <svg class="footer__logo-icon">
-                            <use xlink:href="./img/svg/sprite.svg#logo"></use>
+            <div class="footer__flex">
+                <a class="footer__logo logo" href="#" aria-label="на главную">
+                    <svg class="logo__icon">
+                        <use xlink:href="./img/svg/sprite.svg#logo"></use>
+                    </svg>
+                </a>
+                <div class="footer__socials socials">
+                    <a href="#" aria-label="What's up">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#wa"></use>
                         </svg>
                     </a>
-                    <span>Устройство свайного 
-                        основания</span>
-                </div>
-                <span>Copyright © 2019<br> OOO «СВУ-Сваи»</span>
-            </div>
-            <div class="footer__bottom">
-                <div class="footer__block">
-                    <div class="footer__contacts">
-                        <span>Адрес:</span>
-                        <strong>г.&nbsp;Санкт-Петербург,
-                            ул.&nbsp;Автовская,&nbsp;д.&nbsp;31.</strong>
-                    </div>
-                    <div class="footer__contacts">
-                        <span>График работы:</span>
-                        <strong>Пн-Пт с 09:00 до 18:00</strong>
-                    </div>
-                    <div class="footer__contacts">
-                        <span>Телефон:</span>
-                        <a href="tel:+78129260006" aria-label="Позвонить">+7 812 926-00-06</a>
-                    </div>
-                    <div class="footer__flex-2">
-                        <a href="#" class="contacts__icon" aria-label="Перейти в вк">
-                            <svg >
-                                <use xlink:href="./img/svg/sprite.svg#vk"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="contacts__icon" aria-label="Перейти в тг">
-                            <svg >
-                                <use xlink:href="./img/svg/sprite.svg#tg"></use>
-                            </svg>
-                        </a>
-                        <a href="#" class="contacts__icon" aria-label="Перейти в whats up">
-                            <svg >
-                                <use xlink:href="./img/svg/sprite.svg#wa"></use>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-                <div class="footer__block-2">
-                    <div>
-                        <nav>
-                            <span>Услуги</span>
-                            <div>
-                                <a href="#" aria-label="Статическое вдавливание свай">Статическое вдавливание свай</a>
-                                <a href="#" aria-label="Динамическое погружение свай">Динамическое погружение свай</a>
-                                <a href="#" aria-label="Буровые работы">Буровые работы</a>
-                            </div>
-                        </nav>
-                        <nav>
-                            <span>Меню</span>
-                            <div>
-                                <a href="#" aria-label="О компании">О компании</a>
-                                <a href="#" aria-label="Контакты">Контакты</a>
-                            </div>
-                        </nav>
-                    </div>
-                    <div class="footer__policy">
-                        <a href="#" aria-label="Политика конфиденциальности">Политика конфиденциальности</a>
-                        <button class="footer__btn" aria-label="Наверх страницы">
-                            <svg>
-                                <use xlink:href="./img/svg/sprite.svg#projects-arrow"></use>
-                            </svg>
-                        </button>
-                    </div>
+                    <a href="#" aria-label="Telegram">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#tg"></use>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Vkontakte">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#vk"></use>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#yt"></use>
+                        </svg>
+                    </a>
+                    <a href="tel:+74952018484" aria-label="Позвонить">
+                        <svg>
+                            <use xlink:href="./img/svg/sprite.svg#call"></use>
+                        </svg>
+                    </a>
                 </div>
             </div>
+            <div class="footer__flex-2">
+                <div class="footer__adress">
+                    <div class="footer__block">
+                        <span>Офис в Москве:</span>
+                        <p>Москва, проспект Мира, 102, корп. Б; этаж 3,помещение I, комната 11Д</p>
+                    </div>
+                    <div class="footer__block">
+                        <span>Офис в Люберцах:</span>
+                        <p>Россия , МО, г. Люберцы, Октябрьский проспект
+                            112 "А", 2 этаж, офис 123</p>
+                    </div>
+                </div>
+                <nav class="footer__nav">
+                    <span>Клиентам</span>
+                    <ul>
+                        <li><a href="#" aria-label="Перейти на страницу">Аренда спецтехники</a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">Акции <span>%</span></a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">Блог</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <span>Информация</span>
+                    <ul>
+                        <li><a href="#" aria-label="Перейти на страницу">Сотрудничество</a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">О компании</a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">Контакты</a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">Аренда в Подмосковье</a></li>
+                        <li><a href="#" aria-label="Перейти на страницу">Карта сайта</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__contacts">
+                    <a href="tel:+74952018484">+7 495 201-84-84</a>
+                    <a href="mailto:info.spetst@gmail.com"><svg>
+                            <use xlink:href="./img/svg/sprite.svg#mail"></use>
+                        </svg>
+                        info.spetst@gmail.com</a>
+                    <button class="yellow-btn footer__btn" onclick="openModal()">Заказать спецтехнику</button>
+                </div>
+            </div>
+            <div class="footer__acc acc">
+                Спецтехника в аренду популярные категории
+                <div class="acc__icon">
+                    <svg>
+                        <use xlink:href="./img/svg/sprite.svg#select-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="content">
+                <div class="text-wrapper">
+                    <p>123</p>
+                </div>
+            </div>
+            <div class="footer__acc acc">
+                Услуги спецтехники с экипажем
+                <div class="acc__icon">
+                    <svg>
+                        <use xlink:href="./img/svg/sprite.svg#select-arrow"></use>
+                    </svg>
+                </div>
+            </div>
+            <div class="content content-2">
+                <div class="text-wrapper">
+                    <p>123</p>
+                </div>
+            </div>
+            <div class="footer__flex-3">
+                <span>© 2024 г. ООО «Прайм Групп»</span>
+                <a href="#" aria-label="перейти на страницу">Политика кондиенциальности</a>
+            </div>
+            <span class="footer__text">Сайт носит исключительно информационный характер и не является публичной офертой.
+                Использование материалов с сайтов допустимо с упоминанием spectehar.ru</span>
         </div>
     </footer>
 
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
 
 </body>
