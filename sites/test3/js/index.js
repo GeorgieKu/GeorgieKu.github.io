@@ -62,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
             prevEl: '.card-prev',
         },
         breakpoints: {
+            768: {
+                slidesPerView: 'auto',
+            },
             576: {
                 slidesPerView: 2,
             },
@@ -102,6 +105,9 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             976: {
                 slidesPerView: 2,
+            },
+            450: {
+                slidesPerView: 'auto',
             },
             320: {
                 slidesPerView: 1,
@@ -175,10 +181,6 @@ overlay.addEventListener('click', function () {
 })
 
 
-function openModal() {
-    modal.setAttribute('open', 'open');
-    overlay.classList.add('active');
-}
 
 
 let showMoreBtn = document.getElementById('showMore');
@@ -200,6 +202,7 @@ if (showMoreBtn) {
 
 
 
-
-
-
+function openModal() {
+    modal.setAttribute('open', 'open');
+    overlay.classList.add('active');
+}
