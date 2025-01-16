@@ -135,20 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    const buttons = document.querySelectorAll('.tab__btn');
-    const tabs = document.querySelectorAll('.tab, .tab-2, .tab-3, .tab-4, .tab-5, .tab-6, .tab-7');
 
-    buttons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-            buttons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            tabs.forEach(tab => tab.classList.remove('active'));
-            if (tabs[index]) {
-                tabs[index].classList.add('active');
-            }
-        });
-    });
 
     function openAcc(toggleButton, content, toggleArrow) {
         toggleButton.addEventListener('click', function () {
@@ -181,22 +168,45 @@ overlay.addEventListener('click', function () {
 })
 
 
+const buttons = document.querySelectorAll('.tab__btn');
+const tabs = document.querySelectorAll('.tab, .tab-2, .tab-3, .tab-4, .tab-5, .tab-6, .tab-7');
 
+buttons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        tabs.forEach(tab => tab.classList.remove('active'));
+        if (tabs[index]) {
+            tabs[index].classList.add('active');
+        }
+    });
+});
 
 let showMoreBtn = document.getElementById('showMore');
-let list = document.querySelector('.product__block-3 ul');
+let about = document.getElementById('about');
+let techBtn = document.getElementById('tech');
 
 if (showMoreBtn) {
-    showMoreBtn.addEventListener('click', function () {
-        list.classList.toggle('open');
+    showMoreBtn.addEventListener('click', function() {
+        about.scrollIntoView({ behavior: 'smooth' });
 
-        if (list.classList.contains('open')) {
-            showMoreBtn.textContent = 'Cкрыть характеристики'
-        } else {
-            showMoreBtn.textContent = 'Показать все характеристики'
+        buttons.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        tabs.forEach(tab => tab.classList.remove('active'));
+        
+        if (tabs[2]) {
+            tabs[2].classList.add('active');
         }
-    })
-}
+
+        techBtn.classList.add('active');
+
+        if (window.innerWidth <= 768) {
+            swiper2.slideTo(1);
+        }
+    });
+}   
+
 
 })
 

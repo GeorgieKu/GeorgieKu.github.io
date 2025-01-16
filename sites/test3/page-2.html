@@ -13,8 +13,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./style/normalize.min.css">
     <link rel="stylesheet" href="./style/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/media.css">
+    <link rel="stylesheet" href="./style/style.css?ver=2">
+    <link rel="stylesheet" href="./style/media.css?ver=2">
     <title>СпецТех</title>
 </head>
 
@@ -198,8 +198,6 @@
                                 <li><span>Глубина бурения, м</span><span>6</span></li>
                                 <li><span>Диаметр бурения, мм</span><span>800</span></li>
                                 <li><span>Полез. мощность двигателя, кВт</span><span>106</span></li>
-                                <li class="hidden"><span>Полез. мощность двигателя, кВт</span><span>106</span></li>
-                                <li class="hidden"><span>Полез. мощность двигателя, кВт</span><span>106</span></li>
                             </ul>
                             <button id="showMore">Показать все характеристики</button>
                         </div>
@@ -216,7 +214,7 @@
                 </div>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="about__bg">
                 <div class="container">
                     <div class="tab__swiper swiper">
@@ -225,7 +223,7 @@
                                 <button class="tab__btn active" aria-label="Выбрать категорию">Описание</button>
                             </div>
                             <div class="swiper-slide">
-                                <button class="tab__btn" aria-label="Выбрать категорию">Тех. характеристики</button>
+                                <button id="tech" class="tab__btn" aria-label="Выбрать категорию">Тех. характеристики</button>
                             </div>
                             <div class="swiper-slide">
                                 <button class="tab__btn" aria-label="Выбрать категорию">Оплата и доставка</button>
@@ -275,91 +273,7 @@
                                 <p>Ямобур — это выносливая машина с экономным расходом топлива. Заявки на аренду техники
                                     принимаются 24/7.</p>
                             </div>
-                            <div class="about__relative">
-                                <div class="card__swiper swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="card__card text-20-28">
-                                                <div class="benefits__icon yellow-icon">
-                                                    <svg>
-                                                        <use xlink:href="./img/svg/sprite.svg#eye"></use>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <strong>Ежедневный техосмотр</strong>
-                                                    <span>всей техники</span>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card__card text-20-28">
-                                                <div class="benefits__icon yellow-icon">
-                                                    <svg>
-                                                        <use xlink:href="./img/svg/sprite.svg#clock"></use>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <strong>Работаем круглосуточно</strong>
-                                                    <span>без выходных</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card__card text-20-28">
-                                                <div class="benefits__icon yellow-icon">
-                                                    <svg>
-                                                        <use xlink:href="./img/svg/sprite.svg#percent"></use>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <strong>Гибкая система скидок</strong>
-                                                    <span>программа лояльности</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card__card text-20-28">
-                                                <div class="benefits__icon yellow-icon">
-                                                    <svg>
-                                                        <use xlink:href="./img/svg/sprite.svg#house"></use>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <strong>Собственный автопарк</strong>
-                                                    <span>хранение, парковка</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="card__card text-20-28">
-                                                <div class="benefits__icon yellow-icon">
-                                                    <svg>
-                                                        <use xlink:href="./img/svg/sprite.svg#percent"></use>
-                                                    </svg>
-                                                </div>
-                                                <div>
-                                                    <strong>Гибкая система скидок</strong>
-                                                    <span>программа лояльности</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="card__swiper-btns trans-btns btns">
-                                    <div class="card-prev prev">
-                                        <svg>
-                                            <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="card-next next">
-                                        <svg>
-                                            <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
+                   
                         </div>
                     </div>
                     <div class="tab-2">
@@ -370,6 +284,91 @@
                     </div>
                     <div class="tab-4">
 
+                    </div>
+                    <div class="about__relative">
+                        <div class="card__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="card__card text-20-28">
+                                        <div class="benefits__icon yellow-icon">
+                                            <svg>
+                                                <use xlink:href="./img/svg/sprite.svg#eye"></use>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <strong>Ежедневный техосмотр</strong>
+                                            <span>всей техники</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card__card text-20-28">
+                                        <div class="benefits__icon yellow-icon">
+                                            <svg>
+                                                <use xlink:href="./img/svg/sprite.svg#clock"></use>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <strong>Работаем круглосуточно</strong>
+                                            <span>без выходных</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card__card text-20-28">
+                                        <div class="benefits__icon yellow-icon">
+                                            <svg>
+                                                <use xlink:href="./img/svg/sprite.svg#percent"></use>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <strong>Гибкая система скидок</strong>
+                                            <span>программа лояльности</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card__card text-20-28">
+                                        <div class="benefits__icon yellow-icon">
+                                            <svg>
+                                                <use xlink:href="./img/svg/sprite.svg#house"></use>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <strong>Собственный автопарк</strong>
+                                            <span>хранение, парковка</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="card__card text-20-28">
+                                        <div class="benefits__icon yellow-icon">
+                                            <svg>
+                                                <use xlink:href="./img/svg/sprite.svg#percent"></use>
+                                            </svg>
+                                        </div>
+                                        <div>
+                                            <strong>Гибкая система скидок</strong>
+                                            <span>программа лояльности</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card__swiper-btns trans-btns btns">
+                            <div class="card-prev prev">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                                </svg>
+                            </div>
+                            <div class="card-next next">
+                                <svg>
+                                    <use xlink:href="./img/svg/sprite.svg#btn-arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -885,7 +884,7 @@
     </footer>
 
     <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js?ver=2"></script>
 
 </body>
 
