@@ -69,6 +69,16 @@
             flex-direction: column;
         }
     }
+    .contacts {
+        &__links {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .hidden {
+            display: flex;
+        }
+    }
 }
 
 @media(max-width: 768px) {
@@ -91,6 +101,64 @@
             img:nth-child(2) {
                 max-width: unset;
             }
+        }
+    }
+    .questions {
+        margin-bottom: 80px;
+        h2 {
+            font-size: 24px;
+            line-height: 31px;
+        }
+        svg {
+            width: 68px;
+            height: 70px;
+        }
+        .questions__acc {
+            padding-bottom: 10px;
+            gap: 13px;
+        }
+        .content {
+            margin-bottom: 28px;
+        }
+        p {
+            color: var(--txt-grey);
+        }
+    }
+    .loaction {
+        &__list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    .service {
+        ul {
+            h3 {
+                font-size: 24px;
+                line-height: 31.2px;
+            }
+        }
+    }
+    .docs {
+        &__flex {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__block {
+            display: contents;
+            h3 {
+                order: 1;
+            }
+          
+        }
+        &__picture {
+            order: 2;
+        }
+        &__picture-2 {
+            order: 3;
+        }
+        &__link {
+            order: 4;
         }
     }
 }
@@ -341,6 +409,75 @@
         }
       
     }
-    
+    .loaction {
+        margin-bottom: 80px;
+        h3 {
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 14px;
+        }
+        .loaction__list li:first-child li {
+            font-size: 15px;
+            line-height: 19px;
+        }
+    }
+    .service {
+        h2 {
+            line-height: 41px;
+        }
+        ul ul li {
+            font-size: 15px;
+            line-height: 19px;
+        }
+    }
+    .docs {
+        h2 {
+            margin-bottom: 36px;
+        }
+        .docs__flex {
+            margin-bottom: 40px;
+        }
+        .docs__block {
+            h3 {
+                font-size: 20px;
+                line-height: 26px;
+                padding: 19px 0;
+                margin-bottom: 21px;
+            }
+            .docs__link {
+                max-width: unset;
+                width: 100%;
+                text-align: center;
+            }
+            
+        }
+        .docs__picture-2 {
+            margin-bottom: 28px;
+        }
+    }
+    .monitoring {
+        &__flex {
+            flex-direction: column;
+            align-items: baseline;
+            gap: 30px;
+        }
+        &__btn {
+            font-size: 15px;
+            line-height: 22px;
+            max-width: unset;
+        }
+        &__powered {
+            bottom: 30px;
+        }
+    }
+    .contacts {
+        &__block {
+            background: #F4F2F0;
+            padding: 19px 12px;
+        }
+    }
+    .wrapper {
+        gap: 20px;
+    }
 
 }
