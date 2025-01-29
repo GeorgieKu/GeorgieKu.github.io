@@ -301,6 +301,13 @@ button {
     }
     .video__video {
         border-radius: var(--radiusl);
+        width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .hidden {
+        display: none;
     }
     .video__play {
         position: absolute;
@@ -560,6 +567,12 @@ p {
     }
     &__btn-576 {
         display: none;
+    }
+    &__price {
+        display: block;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
     }
     
 }
@@ -930,7 +943,7 @@ p {
         padding: 10px;
         border: 1px solid var(--btn);
         border-radius: var(--radiuss);
-        max-width: 236px;
+        max-width: max-content;
         display: block;
         white-space: nowrap;
         transition: background .25s ease, color .25s ease;
@@ -1067,28 +1080,7 @@ p {
         a:hover {
             color: var(--hover-btn);
         }
-        a:nth-child(2) {
-            svg path {
-                fill: var(--txt-black);
-                transition: fill .25s ease;
-            }
-        }
-        a:nth-child(3) {
-            svg path {
-                fill: var(--txt-black);
-                transition: fill .25s ease;
-            }
-        }
-        a:hover:nth-child(2) {
-            svg path {
-                fill: var(--hover-btn);
-            }
-        }
-        a:hover:nth-child(3) {
-            svg path {
-                fill: var(--hover-btn);
-            }
-        }
+
         a:nth-child(1) {
             svg path {
                 transition: stroke .25s ease;
@@ -1098,6 +1090,35 @@ p {
             svg path {
                 stroke: var(--hover-btn);
             }
+        }
+    }
+    &__btns {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 10px;
+            color: var(--txt-white);
+            font-family: Inter;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22.5px;
+            border-radius: var(--radiuss);
+            background: var(--btn);
+            transition: background .25s ease;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        a:hover {
+            background: var(--hover-btn);
+            color: #fff;
         }
     }
     .hidden {

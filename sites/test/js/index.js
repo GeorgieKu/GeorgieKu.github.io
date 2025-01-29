@@ -72,3 +72,39 @@ document.addEventListener('DOMContentLoaded', function() {
         openAcc(toggleButton, contents[index], toggleArrow);
     });
 });
+
+
+let video = document.getElementById('video');
+let playBtn = document.getElementById('playBtn');
+
+playBtn.addEventListener('click', function() {
+    video.play();
+    playBtn.classList.add('hidden');
+})
+
+let memory8Btn = document.getElementById('memory8');
+let memory16Btn = document.getElementById('memory16');
+let memory8Price = document.getElementById('priceFor8');
+let memory16Price = document.getElementById('priceFor16');
+
+if (memory8Btn.classList.contains('active')) {
+    memory8Price.style.display = 'block';
+    memory16Price.style.display = 'none';
+}
+
+if(memory16Btn) {
+    memory16Btn.addEventListener('click', function() {
+        memory8Price.style.display = 'none';
+        memory16Price.style.display = 'block';
+    })
+}
+
+if(memory8Btn) {
+    memory8Btn.addEventListener('click', function() {
+        memory8Price.style.display = 'block';
+        memory16Price.style.display = 'none';
+    })
+}
+
+
+
