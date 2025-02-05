@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Админка">
+    <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <title>Кибермиллион</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__divider"></div>
+        <div class="container">
+            <div class="header__flex">
+                <div class="header__upper">
+                    <a class="header__logo logo" href="#" aria-label="На главную">
+                        <picture>
+                            <source media="(max-width: 576px)" srcset="./img/Logo-576.webp">
+                            <img class="logo__img" src="./img/Logo.webp" alt="">
+                        </picture>
+                    </a>
+                    <div class="header__account">
+                        <div class="header__user">
+                            <svg class="header__icon">
+                                <use xlink:href="./img/svg/sprite.svg#avatar"></use>
+                            </svg>
+                            <span>admin</span>
+                        </div>
+                        <button class="header__btn">
+                            <span>Выход</span>
+                            <svg class="header__btn-icon">
+                                <use xlink:href="./img/svg/sprite.svg#exit"></use>
+                            </svg>
+                        </button>
+                        <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="header__flexbox">
+                    <div class="header__bottom">
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a class="menu__link active" href="#">
+                                        Пользователи
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./terminals.html">
+                                        Терминалы
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./events.html">
+                                        События терминалов
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./checks.html">
+                                        Чеки
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./questions.html">
+                                        Вопросы
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./scheme.html">
+                                        Схема колеса
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./otchet.html">
+                                        Отчеты
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./preferences.html">
+                                        Настройки
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <button class="header__add-btn" onclick="openModal()">Добавить пользователя</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="users">
+            <div class="container">
+                <div class="overflow">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Логин</th>
+                                <th>E-mail</th>
+                                <th>Дата регистрации</th>
+                                <th>Тип аккаунта</th>
+                                <th>Управление</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>adm</td>
+                                <td>adm@mail.ru</td>
+                                <td>2024.05.12 / 11:15:01.086318 UTC</td>
+                                <td>admin</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Denis</td>
+                                <td>Denis@mail.ru</td>
+                                <td>2024.05.12 / 11:15:01.086318 UTC</td>
+                                <td>Denis</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>adm</td>
+                                <td>adm@mail.ru</td>
+                                <td>2024.05.12 / 11:15:01.086318 UTC</td>
+                                <td>admin</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Yura</td>
+                                <td>Yura@mail.ru</td>
+                                <td>2024.05.12 / 11:15:01.086318 UTC</td>
+                                <td>Yura</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>162</td>
+                                <td>adm</td>
+                                <td>adm@mail.ru</td>
+                                <td>2024.05.12 / 11:15:01.086318 UTC</td>
+                                <td>admin</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>222</td>
+                                <td>Vasya</td>
+                                <td>adm@mail.ru</td>
+                                <td>2024.05.12 / 11:15:01.086318 UTC</td>
+                                <td>Vasya</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>453</td>
+                                <td>adm</td>
+                                <td>adm@mail.ru</td>
+                                <td>2024.05.12 / 11:15:01.086318 UTC</td>
+                                <td>admin</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>75</td>
+                                <td>adm</td>
+                                <td>adm@mail.ru</td>
+                                <td>2024.05.12 / 11:15:01.086318 UTC</td>
+                                <td>admin</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>123</td>
+                                <td>adm</td>
+                                <td>adm@mail.ru</td>
+                                <td>2024.05.12 / 11:15:01.086318 UTC</td>
+                                <td>admin</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-576">
+                    <div class="table__flexbox">
+                        <div class="table__flex">
+                            <div class="table__block">
+                                <strong>ID</strong>
+                                <span>2</span>
+                            </div>
+                            <div class="table__block">
+                                <strong>Логин</strong>
+                                <span>adm</span>
+                            </div>
+                            <div class="table__block">
+                                <strong>E-mail</strong>
+                                <span>adm@mail.ru</span>
+                            </div>
+                        </div>
+                        <div class="table__block">
+                            <strong>Дата регистрации</strong>
+                            <span>2024.05.12 / 11:15:01.086318 UTC</span>
+                        </div>
+                        <div class="table__flex">
+                            <div class="table__block">
+                                <strong>Тип аккаунта</strong>
+                                <span>admin</span>
+                            </div>
+                            <div class="table__block">
+                                <strong>Управление</strong>
+                                <span>-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__flexbox">
+                        <div class="table__flex">
+                            <div class="table__block">
+                                <strong>ID</strong>
+                                <span>2</span>
+                            </div>
+                            <div class="table__block">
+                                <strong>Логин</strong>
+                                <span>adm</span>
+                            </div>
+                            <div class="table__block">
+                                <strong>E-mail</strong>
+                                <span>adm@mail.ru</span>
+                            </div>
+                        </div>
+                        <div class="table__block">
+                            <strong>Дата регистрации</strong>
+                            <span>2024.05.12 / 11:15:01.086318 UTC</span>
+                        </div>
+                        <div class="table__flex">
+                            <div class="table__block">
+                                <strong>Тип аккаунта</strong>
+                                <span>admin</span>
+                            </div>
+                            <div class="table__block">
+                                <strong>Управление</strong>
+                                <span>-</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__flexbox">
+                        <div class="table__flex">
+                            <div class="table__block">
+                                <strong>ID</strong>
+                                <span>2</span>
+                            </div>
+                            <div class="table__block">
+                                <strong>Логин</strong>
+                                <span>adm</span>
+                            </div>
+                            <div class="table__block">
+                                <strong>E-mail</strong>
+                                <span>adm@mail.ru</span>
+                            </div>
+                        </div>
+                        <div class="table__block">
+                            <strong>Дата регистрации</strong>
+                            <span>2024.05.12 / 11:15:01.086318 UTC</span>
+                        </div>
+                        <div class="table__flex">
+                            <div class="table__block">
+                                <strong>Тип аккаунта</strong>
+                                <span>admin</span>
+                            </div>
+                            <div class="table__block">
+                                <strong>Управление</strong>
+                                <span>-</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex">
+                    <span>Записи с 1 до 10 из 10 записей</span>
+                    <div class="pagination">
+                        <button>
+                            <svg class="dd-arrow dd-arrow-reverse">
+                                <use xlink:href="./img/svg/sprite.svg#dd-arrow"></use>
+                            </svg>
+                        </button>
+                        <button>
+                            <svg class="arrow arrow-reverse">
+                                <use xlink:href="./img/svg/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                        <button class="active">
+                            1
+                        </button>
+                        <button>
+                            2
+                        </button>
+                        <button>
+                            ...
+                        </button>
+                        <button>
+                            <svg class="dd-arrow">
+                                <use xlink:href="./img/svg/sprite.svg#dd-arrow"></use>
+                            </svg>
+                        </button>
+                        <button>
+                            <svg class="arrow">
+                                <use xlink:href="./img/svg/sprite.svg#arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__flex">
+                <nav class="footer__nav">
+                    <a href="#">Faq</a>
+                    <a href="#">Документы</a>
+                    <a href="#">Мониторинг</a>
+                    <a href="#">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <dialog class="modal">
+        <div class="modal__flex">
+            <h2>Регистрация нового
+                пользователя</h2>
+                <button class="modal__close">
+                    <svg class="modal__icon">
+                        <use xlink:href="./img/svg/sprite.svg#close"></use>
+                    </svg>
+                </button>
+        </div>
+        <form class="modal__form" action="#" method="dialog">
+            <input class="modal__input" type="text" placeholder="Введите логин">
+            <input class="modal__input" type="email" placeholder="Введите email">
+            <input class="modal__input modal__input_mb" type="password" placeholder="Введите пароль">
+            <div class="modal__radois">
+                <label for="moder">
+                    <input class="modal__radio" type="radio" name="role" id="moder">
+                    Модератор
+                </label>
+                <label for="adm">
+                    <input class="modal__radio" type="radio" name="role" id="adm">
+                    Администратор
+                </label>
+            </div>
+            <div class="modal__btns">
+                <button class="modal__close modal__btn">
+                    Отмена
+                </button>
+                <button class="modal__btn">
+                    Регистрация
+                </button>
+            </div>
+        </form>
+    </dialog>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Админка">
+    <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <title>Кибермиллион</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__divider"></div>
+        <div class="container">
+            <div class="header__flex">
+                <div class="header__upper">
+                    <a class="header__logo logo" href="#" aria-label="На главную">
+                        <picture>
+                            <source media="(max-width: 576px)" srcset="./img/Logo-576.webp">
+                            <img class="logo__img" src="./img/Logo.webp" alt="">
+                        </picture>
+                    </a>
+                    <div class="header__account">
+                        <div class="header__user">
+                            <svg class="header__icon">
+                                <use xlink:href="./img/svg/sprite.svg#avatar"></use>
+                            </svg>
+                            <span>admin</span>
+                        </div>
+                        <button class="header__btn">
+                            <span>Выход</span>
+                            <svg class="header__btn-icon">
+                                <use xlink:href="./img/svg/sprite.svg#exit"></use>
+                            </svg>
+                        </button>
+                        <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
+                            <span></span><span></span><span></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="header__flexbox">
+                    <div class="header__bottom">
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./users.html">
+                                        Пользователи
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./terminals.html">
+                                        Терминалы
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./events.html">
+                                        События терминалов
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./checks.html">
+                                        Чеки
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./questions.html">
+                                        Вопросы
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./scheme.html">
+                                        Схема колеса
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="./otchet.html">
+                                        Отчеты
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link active" href="./preferences.html">
+                                        Настройки
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="preferences">
+            <div class="container">
+                <h1>Общие настройки</h1>
+                <div class="preferences__flex">
+                    <input type="text" name="" id="" placeholder="@kibermillion">
+                    <button class="preferences__btn">Сохранить настройки</button>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__flex">
+                <nav class="footer__nav">
+                    <a href="#">Faq</a>
+                    <a href="#">Документы</a>
+                    <a href="#">Мониторинг</a>
+                    <a href="#">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <dialog class="modal">
+        <div class="modal__flex">
+            <h2>Редактировать вопрос</h2>
+                <button class="modal__close">
+                    <svg class="modal__icon">
+                        <use xlink:href="./img/svg/sprite.svg#close"></use>
+                    </svg>
+                </button>
+        </div>
+        <form class="modal__form" action="#" method="dialog">
+            <input class="modal__input" type="text" placeholder="Гарри Поттер">
+            <input class="modal__input" type="text" placeholder="К какому факультету школы чародейства и волшебства Хогвартс...">
+            <div class="custom-select">
+                <div class="select-selected">Легкий</div>
+                <div class="select-items select-hide">
+                    <span>---Выберите уровень сложности---</span>
+                    <div data-value="Легкий">Легкий</div>
+                    <div data-value="Средний">Средний</div>
+                    <div data-value="Сложный">Сложный</div>
+                </div>
+            </div>
+            
+            <div class="modal__btns">
+                <button class="modal__close modal__btn">
+                    Отмена
+                </button>
+                <button class="modal__btn">
+                    Редактировать
+                </button>
+            </div>
+        </form>
+    </dialog>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
