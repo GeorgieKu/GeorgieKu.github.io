@@ -1,803 +1,565 @@
-@media(max-width: 1440px) {
-
-    .hero {
-        &__img-3 {
-            max-width: 60%;
-        }
-        &__img-2 {
-            max-width: 60%;
-        }
-    }
-    .rent__img {
-        right: 0;
-        max-width: 734px;
-        width: 100%;
-        height: 500px;
-    }
-    .callback {
-
-        .team-banner__block h2 {
-            font-size: 38px;
-            line-height: 110%;
-           
-        }
-    }
-}
-
-@media(max-width: 1240px) {
-    .header {
-        &__btn-2 span {
-            display: none;
-        }
-        &__btn-2 {
-            padding: unset;
-            width: 50px;
-            height: 50px;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        &__contact a[href^="tel:"] {
-            font-size: 18px;
-        }
-        &__contact strong {
-            font-size: 18px;
-        }
-        & .logo__icon {
-            max-width: 220px;
-        }
-        &__menu {
-            max-width: 200px;
-        }
-    }
-    .hero {
-        &__rent {
-            font-size: 200px;
-            line-height: 110%;
-        }
-        
-    }
-    .rent {
-        &__img {
-            right: 0;
-            max-width: 586px;
-            width: 100%;
-            height: 345px;
-        }
-    }
-    .category {
-        &__card {
-            padding: 16px;
-            gap: 16px;
-        }
-    }
-    .trust  {
-        &__img {
-            left: -145px;
-            max-width: 64%;
-        }
-    }
-    .team {
-        &__card {
-            padding: 16px;
-        }
-        .text-20-28 {
-            font-size: 18px;
-        }
-        &-banner {
-            padding: 24px;
-            .container {
-                padding: unset;
-            }
-            &-banner__block h2 {
-                font-size: 40px;
-                line-height: 110%;
-            }
-        }
-    }
-    .product {
-        h1 {
-            font-size: 46px;
-        }
-        &__img {
-            max-width: 470px;
-        }
-        &__block {
-            gap: 18px;
-        }
-        &__block-4 {
-            flex-wrap: wrap;
-        }
-    }
-    .callback {
-
-        .team-banner__block h2 {
-            font-size: 30px;
-            line-height: 110%;
-           i {
-            top: unset;
-           }
-        }
-    }
-
-}
-
-@media(max-width: 976px) {
-    .header {
-        position: relative;
-        
-        &__burger-btn {
-            display: block;
-        }
-        .menu {
-            position: absolute;
-            left: -100%;
-            top: 100%;
-            width: 100%;
-            background-color: #fff;
-            padding: 20px;
-            transition: transform .5s;
-            z-index: 2;
-        }
-        .menu__list {
-            display: flex;
-            flex-direction: column;
-            align-items: baseline;
-            gap: 8px;
-        }
-        &.open .menu {
-            transform: translateX(100%);
-        }
-        &__contact {
-            display: none;
-        }
-        .hidden-976 {
-            display: block;
-            margin-top: 10px;
-        }
-        .hidden-976 &__contact {
-            display: block;
-        }
-        .menu__dropdown {
-            position: static;
-            border: unset;
-        }
-        &__menu {
-            margin-left: auto;
-        }
-    }
-    .hero {
-        &__rent {
-            font-size: 167px;
-        }
-        &__img {
-            max-width: 90%;
-        }
-    }
-    .benefits {
-        &__grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        &__card {
-            padding: 18px;
-            span {
-                font-size: 18px;
-                line-height: 110%;
-            }
-        }
-        &__card:nth-child(7) {
-            order: 6;
-        }
-        &__card:nth-child(6) {
-            order: 7;
-            grid-column: span 3;
-            background-position: right;
-            span {
-                max-width: unset;
-            }
-        }
-
-    }
-    .rent {
-        &__img {
-            right: 0;
-            max-width: 455px;
-            width: 100%;
-            height: 284px;    
-        }
-    }
-    .category {
-        &__grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    .trust  {
-        &__block {
-            display: none;
-        }
-        &__block-2 {
-            border-right: 1px solid #eee;
-            border-radius: 28px 28px 0 0;
-        }
-        &__flex {
-            margin-bottom: 40px;
-        }
-        .swiper-slide {
-            max-width: unset;
-        }
-    } 
-    .banner {
-        &__block {
-            padding: 24px;
-        }
-    }
-    .team {
-       &__grid {
-        grid-template-columns: repeat(3, 1fr);
-       }
-       &__card:nth-child(1) {
-        grid-area: 1 / 1 / 2 / 2;
-       }
-       &__card:nth-child(2) {
-        grid-area: 1 / 3 / 2 / 4;
-       }
-       &__card:nth-child(3) {
-        grid-area: 2 / 1 / 3 / 2;
-       }
-       &__card:nth-child(4) {
-        grid-area: 2 / 3 / 3 / 4;
-       }
-       &-banner__flex {
-        flex-direction: column;
-       }
-    }
-    .footer  {
-       &__flex-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-        &__adress {
-            grid-column: span 2;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-       &__contacts a[href^="mailto:"] {
-            justify-content: start;
-        }
-       &__btn {
-            margin-left: unset;
-        }
-    }
-    .product {
-        &__img {
-            max-width: 340px;
-        }
-        &__block {
-            gap: 14px;
-        }
-        h1 {
-            font-size: 30px;
-        }
-        &__block-2 &__price strong {
-            font-size: 24px;
-        }
-        &__block-3 span {
-            margin-bottom: 16px;
-        }
-        &__block-3 ul {
-            margin-bottom: 8px;
-        }
-        &__block-4 &__btn {
-            max-width: unset;
-            justify-content: center;
-        }
-        &__block-4 &__btn-2 {
-            max-width: unset;
-        }
-        &__block-2 span {
-            gap: 4px;
-        }
-    }
-
-    .about {
-        &__bg {
-            padding: 40px 0;
-        }
-    }
-    .callback {
-
-        .team-banner__block h2 {
-            max-width: unset;
-            margin-bottom: unset;
-        }
-        .form {
-            margin: 0 auto;
-        }
-    }
-    .consult {
-        .consult__card {
-            padding: 16px;
-            gap: 16px;
-        }
-        .swiper-slide {
-            max-width: 460px;
-        }
-    }
-   
-}
-@media(max-width: 768px) {
-    .hero {
-        &__rent {
-            font-size: 130px;
-        }
-        .swiper-slide {
-            min-height: 600px;
-        }
-        &__img-2 {
-            max-width: 80%;
-            bottom: -60px;
-        }
-        &__img-3 {
-            max-width: 55%;
-        }
-    }
-
-    .benefits {
-        &__grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        &__card {
-            padding: 18px;
-            span {
-                font-size: 18px;
-                line-height: 110%;
-            }
-        }
-        &__card:nth-child(7) {
-            order: 6;
-        }
-        &__card:nth-child(6) {
-            order: 7;
-            grid-column: span 2;
-            background-position: right;
-            span {
-                max-width: unset;
-            }
-        }
-
-    }
-    .rent {
-        &__img {
-            right: 0;
-            max-width: 455px;
-            width: 100%;
-            height: 284px;    
-        }
-        &__block {
-            padding-top: 20px;
-            gap: 20px;
-            padding-right: 20px;
-        }
-        &__block-2 {
-            padding-top: 20px;
-            padding-left: 20px;
-        }
-        &__flex  {
-            min-height: 500px;
-        }
-    }
-    h2 {
-        font-size: 26px;
-        line-height: 110%;
-    }
-    .category {
-        &__grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-    .banner {
-        &__texts h2 {
-            font-size: 28px;
-            line-height: 110%;
-        }
-        &__texts {
-            gap: 16px;
-        }
-    }
-    .team {
-        padding: 50px 0;
-        &__bg {
-            background-position: center;
-    background-size: contain;
-        }
-        &__grid {
-         grid-template-columns: repeat(2, 1fr);
-         gap: 16px;
-        }
-        &__flex {
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 30px;
-        }
-        &__grid {
-            margin-bottom: 40px;
-        }
-        &__card:nth-child(1) {
-         grid-area: unset;
-        }
-        &__card:nth-child(2) {
-         grid-area: unset;
-        }
-        &__card:nth-child(3) {
-         grid-area: unset;
-        }
-        &__card:nth-child(4) {
-         grid-area: unset;
-        }
-        &-banner__block h2 {
-            margin-bottom: 20px;
-        }
-        &-banner__block h2 span {
-                gap: 12px;
-        }
-        &-banner__block h2 i {
-            width: 30px;
-            height: 30px;
-            
-            svg {
-                width: 14px;
-                height: 14px;
-            }
-        }
-     }
-     .contacts {
-        &__block {
-            top: 30px;
-            right: 30px;
-            transform: unset;
-        }
-     }
-     .product {
-        &__flex {
-            flex-direction: column;
-        }
-        &__block-4 &__btn-2 {
-            padding: 12px 0;
-        }
-     }
-     .callback {
-
-        .form__flex span {
-            max-width: unset;
-        }
-    }
-    .about {
-        .card__swiper .card__card {
-            padding: 16px;
-        }
-    }
-
-
-}
-
-@media(max-width: 576px) {
+@media(max-width: 1800px) {
     .container {
-        padding: 0 15px;
+        padding: 0 30px;
     }
-    .header {
-        position: relative;
-        &__top, &__bottom {
-            display: contents;
-        }
-        &__block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-        &__logo {
-            order: 1;
-        }
-        &__btn-2 {
-            order: 2;
-            margin-left: auto;
-            align-self: center;
-        }
-        &__menu {
-            order: 4;
-        }
-        &__burger-btn {
-            order: 3;
-            align-self: center;
-        }
-        &__menu {
-            max-width: unset;
-        }
-        &__btn {
-            padding: 10px;
-        }
-        .menu {
-            padding-top: unset;
+    .parks-page {
+        .container {
+            padding: 0 50px;
         }
     }
-    .yellow-btn {
-        padding: 12px;
+    .parks-page-header {
+        .container {
+            padding: 0 50px;
+        }
+    }
+    .icon {
+        max-width: 500px;
+        height: 472px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+@media(max-width: 1440px) {
+    .hero__name .hero__icon {
+        top: -39px;
+    }
+}
+
+@media(max-width: 1370px) {
+    .company__flex {
         justify-content: center;
-    }
-    .hero {
-        .swiper-slide {
-            background-image: url(../img/hero-bg-1-576.webp);
-        }
-        &__rent {
-            font-size: 80px;
-        }
-        .hero__block {
-            gap: 20px;
-            h1 {
-                font-size: 40px;
-                line-height: 110%;
-            }
-        }
-        .hero__btn {
-            max-width: unset;
-        }
-        .swiper-slide {
-            min-height: 460px;
-        }
-        &__img-3 {
-            bottom: -30px;
-        }
-        .hero__rent-2 {
-            font-size: 14px;
-            line-height: 110%;
-            padding-left: 12px;
+        li:nth-child(3)::after {
+            display: none;
         }
     }
-    .yellow-icon {
-        width: 45px;
-        height: 45px;
-        margin-left: 7px;
-        margin-top: 7px;
+    .company__block-2 .company__flex {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .section-padding {
-        padding: 25px 0;
-    }
+    
     .benefits {
-        &__grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-        }
-        &__card {
-            padding: 12px;
-            min-height: 220px;
-            span {
-                font-size: 16px;
-                line-height: 110%;
-            }
-        }
-        &__card_big {
-            min-height: 220px;
-        }
-        
-
-    }
-    .rent {
-       &__flex {
-        flex-direction: column;
-        min-height: 600px;
-        gap: 10px;
-       }
-       &__block {
-        max-width: 100%;
-        padding-right: unset;
-        border-right: unset;
-        border-radius: unset;
-       }
-       &__btn {
-        max-width: 100%;
-       }
-       &__img  {
-        height: 250px;
-       }
-       &__block-2 {
-        border: unset;
-        padding: unset;
-       }
-    }
-    .category {
-        &__swiper {
-            padding-left: 50px;
-        }
-        &__bg {
-            padding: 80px 0 20px;
-        }
-        &__grid {
-            gap: 12px;
-        }
-        &__btn {
-            padding: 12px;
-        }
-        &__swiper-btns .next {
-            width: 45px;
-            height: 45px;
-        }
-        &__swiper-btns .prev {
-            width: 45px;
-            height: 45px;
-        }
-    }
-    .trust  {
-        &__block-2 {
-            padding: 16px;
-            h2 {
-                margin-bottom: 20px;
-            }
-            ul {
-                gap: 12px;
-            }
-        }
-        &__flex {
-            margin-bottom: 20px;
-        }
-        .card__swiper .card__card {
-            max-width: unset;
-        }
-        .card__swiper .swiper-slide {
-            max-width: unset;
-        }
-    } 
-    .text-20-28 {
-        font-size: 18px;
-        line-height: 110%;
-    }
-    .banner  {
-        padding: 25px 0;
         &__icon {
-            width: 30px;
-            height: 45px;
+            max-width: 138px;
+        }
+        &__icon-2 {
+            max-width: 100px;
+        }
+        &__icon-3 {
+            max-width: 100px;
         }
         &__block {
-            padding: 16px;
-            gap: 12px;
-        }
-        &__texts h2 {
-            font-size: 24px;
-        }
-    }
-    .partners {
-        padding: 25px 0;
-       &__flex {
-            margin-bottom: 20px;
-        }
-        .swiper-slide {
-            max-width: unset;
-        }
-       &__card {
-            max-width: unset;
-        }
-    }
-    .form__flex {
-        flex-direction: column-reverse;
-        gap: 20px;
-    }
-    .form__btn {
-        max-width: unset;
-        width: 100%;
-    }
-    .contacts {
-        &__block {
-            position: static;
-            top: 30px;
-            right: 30px;
-            transform: unset;
-            border-radius: unset;
-        }
-        .contacts__link {
-            font-size: 18px;
-        }
-     }
-
-     .footer {
-        &__flex {
-            flex-direction: column;
             gap: 20px;
-            padding-bottom: 25px;
-            margin-bottom: 20px;
+            align-items: center;
         }
-        &__flex-2 {
-            grid-template-columns: 1fr;
-            margin-bottom: 25px;
+        &__block span {
+            font-size: 16px;
+            text-align: center;
         }
-        &__adress {
-            grid-column: span 1;
+        &__flex {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
         }
-        &__flex-3 {
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 25px;
-        }
-     }
-     .bread-crumbs {
-        padding-top: 16px;
-        margin-bottom: 20px;
-     }
+    }
+    .dates {
+        &__flex {
+            display: flex;
 
-     .about {
-        padding-bottom: 50px;
-        .about__bg {
-            padding: 15px 0;
+            gap: 20px;
         }
-        .card__swiper .card__card {
+        &__block {
             max-width: unset;
-        }
-        .card__swiper .swiper-slide {
-            max-width: unset;
-        }
-     }
-     .consult {
-        padding-bottom: 50px;
-        h2 {
-            margin-bottom: 14px;
         }
         p {
-            margin-bottom: 20px;
+            font-size: 18px;
+            max-width: unset;
         }
-        
-        &__card {
-            padding: 16px;
-            gap: 16px;
+        h2 {
+            font-size: 40px;
         }
-        .swiper-slide {
-            max-width: 460px;
-        }
-        &__img {
-            max-width: 80px;
-            height: 80px;
-        }
-        .next {
-            right: -10px;
-           
-        }
-        .prev {
-            left: -10px;
-        }
-     }
-     
-     .within {
-        padding-bottom: 50px;
-     }
-     .modal {
-        width: 90%;
-     }
-     .form__flex span {
-        max-width: unset;
-     }
-    
-}
+    }
 
-@media(max-width: 430px) {
-    .within {
+
+
+    .parks {
+        .parks__grid {
+            grid-template-columns: repeat(2, 1fr);
+            .parks__texts {
+                max-height: 482px;
+                padding: 20px 50px;
+            }
+            .parks__block:nth-child(3) {
+                display: none;
+            }
+        }
+        img {
+            max-height: 482px;
+        }
+    }
+    .parks {
+        #parksGrid1 {
+            z-index: 500;
+            display: none;
+          }
+          #parksGrid2 {
+            z-index: 499;
+            display: none;
+          }
+          #parksGrid3 {
+            z-index: 498;
+            display: none;
+          }
+          #parksGrid4 {
+            z-index: 497;
+            display: none;
+          }
+          #parksGrid5 {
+            z-index: 500;
+            display: grid;
+          }
+          #parksGrid6 {
+            z-index: 499;
+            display: grid;
+          }
+          #parksGrid7 {
+            z-index: 498;
+            display: grid;
+          }
+          #parksGrid8 {
+            z-index: 497;
+            display: grid;
+          }
+          #parksGrid9 {
+            z-index: 496;
+            display: grid;
+          }
+          #parksGrid10 {
+            z-index: 495;
+            display: grid;
+          }
+    }
+    .hero {
+        padding-bottom: 40px;
+        .hero__title {
+            height: 146px;
+        }
+        .hero__name {
+            align-items: center;
+        }
+    }
+    .company__company {
+        max-width: 105px !important;
+        height: 50px;
+    }
+    .company__block-2 {
+        max-width: 275px;
+    }
+   }
+
+   @media(max-width: 1024px) {
+
+    .company__company {
+        max-width: 140px !important;
+        width: 100%;
+        height: 40px !important;
+    }
+
+    .company__block-2 {
+        margin-left: unset;
+        max-width: 290px;
+    }
+    
+    .container {
+        padding: 0 50px;
+    }
+    .hero {
+        min-height: 840px;
+        &__name {
+            display: contents;
+            .hero__title {
+                max-width: 40%;
+                position: absolute;
+                top: 100px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .hero__icon  {
+                position: absolute;
+                top: 51px;
+                right: 50px;
+                max-width: 85px;
+                height: 175px;
+            }
+        }
+
+        
+       
+        .icon {
+            max-width: 381px;
+            height: auto;
+        }
+    
+    }
+    .about {
         .swiper-slide {
+            max-width: calc(100% / 3);
+        }
+    }
+    .benefits {
+        padding: 30px 0;
+    }
+    .benefits__block {
+        max-width: unset;
+        align-items: unset;
+        span {
+            text-align: left;
+            font-size: 14px;
+        }
+    }
+    .dates {
+        a {
+            font-size: 40px;
+        }
+    }
+    .parks {
+        .parks__texts {
+            h2 {
+                font-size: 20px;
+            }
+             p {
+                font-size: 20px;
+             }
+        }
+    }
+
+   }
+
+   @media(max-width: 1000px) {
+    .company__flexbox {
+        flex-direction: column;
+    }
+    .dates__flex {
+        flex-direction: column;
+    }
+   }
+
+   @media(max-width: 768px) {
+    .parks-page {
+        .container {
+            padding: 0 30px;
+        }
+    }
+    .parks-page-header {
+        .container {
+            padding: 0 30px;
+        }
+    }
+    .header {
+        &__flex {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+    }
+
+        .company__flex {
+            li {
+                max-width: 150px;
+            }
+        }
+    
+    .benefits {
+        &__flex {
+            display: flex;
+            flex-direction: column;
+        }
+        &__block {
+            flex-direction: row;
+            align-items: center;
+            gap: 30px;
             max-width: unset;
         }
-        .within__card {
+        .benefits__icon {
+            width: 138px;
+            height: 111px;
             max-width: unset;
         }
-        .within__texts {
-            padding: 12px;
-            max-width: unset;
-            gap: 12px;
+        span br {
+            display: none;
         }
-        .within__img {
+    }
+    .about {
+        .swiper-slide {
+            max-width: calc(100% / 2);
+        }
+    }
+    .parks {
+        .parks__grid {
+            grid-template-columns: repeat(1, 1fr);
+            .parks__block {
+                grid-template-rows: 1fr;
+            }
+            .parks__block:nth-child(2) {
+                display: none;
+            }
+            .parks__texts {
+                padding: 20px 30px;
+            }
+        }
+        img {
+            aspect-ratio: 1/1;
+        }
+    }
+    .parks {
+        #parksGrid5 {
+            z-index: 500;
+            display: none;
+          }
+          #parksGrid6 {
+            z-index: 499;
+            display: none;
+          }
+          #parksGrid7 {
+            z-index: 498;
+            display: none;
+          }
+          #parksGrid8 {
+            z-index: 497;
+            display: none;
+          }
+          #parksGrid9 {
+            z-index: 496;
+            display: none;
+          }
+          #parksGrid10 {
+            z-index: 495;
+            display: none;
+          }
+          #parksGrid11 {
+            z-index: 494;
+            display: grid;
+          }
+          #parksGrid12 {
+            z-index: 493;
+            display: grid;
+          }
+          #parksGrid13 {
+            z-index: 492;
+            display: grid;
+          }
+          #parksGrid14 {
+            z-index: 491;
+            display: grid;
+          }
+          #parksGrid15 {
+            z-index: 490;
+            display: grid;
+          }
+          #parksGrid16 {
+            z-index: 489;
+            display: grid;
+          }
+          #parksGrid17 {
+            z-index: 488;
+            display: grid;
+          }
+          #parksGrid18 {
+            z-index: 487;
+            display: grid;
+          }
+          #parksGrid19 {
+            z-index: 486;
+            display: grid;
+          }
+          #parksGrid20 {
+            z-index: 485;
+            display: grid;
+          }
+          #parksGrid21 {
+            z-index: 484;
+            display: grid;
+          }
+          #parksGrid22 {
+            z-index: 483;
+            display: grid;
+          }
+          .parks__texts p {
+            max-width: unset;
+          }
+          .parks__texts h2 {
+            max-width: unset;
+          }
+    }
+   }
+
+   @media(max-width: 576px) {
+    .container {
+        padding: 0 40px;
+    }
+    .hero {
+        .hero__icon {
+            max-width: 108px;
+            height: 168px;
+            top: 51px;
+            right: 19px;
+        }
+        .icon {
+            max-width: 335px;
+            height: 329px;
+        }
+        .hero__title {
+            max-width: 84%;
+            top: 280px;
+        }
+       
+    }
+    .company__flex {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        li:nth-child(2)::after {
+            display: none;
+        }
+        li:nth-child(4)::after {
+            display: none;
+        }
+        li:nth-child(3)::after {
             display: block;
+        }
+    }
+    .company__company {
+        max-width: unset !important;
+        height: unset !important;
+    }
+   
+    .benefits {
+        padding: 20px 0;
+        .benefits__flex {
+            align-items: flex-start;
+        }
+        .benefits__block span {
+            font-size: 14px;
+            text-align: left;
             width: 100%;
-            margin: 0 auto;
         }
-        .within__btn {
-            max-width: unset;
-            padding: 10px 0;
+        .benefits__icon {
+            max-width: 136px;
+            width: 100%;
+            height: 76px;
         }
-     }
-}
+    }
+    .dates {
+        padding: 38px 0 33px;
+        .container {
+            padding: 0 50px;
+        }
+        &__flex {
+            gap: 74px;
+            margin-bottom: 15px;
+        }
+        .dates__block {
+            gap: 38px;
+            h2 {
+                font-size: 40px;
+                padding-bottom: unset;
+                border-bottom: unset;
+            }
+            span {
+                font-size: 24px;
+            }
+        }
+        p {
+            font-size: 22px;
+            line-height: 26px;
+        }
+        a {
+            font-size: 24px;
+            gap: 10px;
+            svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+    .header {
+        padding: 40px 0 25px;
+        a {
+            font-size: 24px;
+            gap: 8px;
+            svg {
+                width: 21px;
+                height: 21px;
+            }
+        }
+        .header__icon {
+            height: 50px;
+        }
+    }
+    .about {
+        .hidden-576 {
+            display: none;
+        }
+        .about__grid__item {
+            padding: 40px 0;
+            min-height: unset;
+            h1 {
+                font-family: GothamPro;
+                font-weight: 700;
+                text-transform: uppercase;
+                max-width: unset;
+                font-size: 22px;
+            }
+            p {
+                font-size: 18px;
+            }
+        }
+            .swiper-slide {
+                max-width: calc(100% / 2);
+               
+            }
+            .about__swiper {
+                svg {
+                    width: 31px;
+                    height: 31px;
+                }
+            }
+            .about__btns {
+                width: calc(100% - 50px);
+            }
+    }
+
+
+    .footer {
+        padding: 20px 0;
+    }
+    .modal {
+        .modal__swiper {
+            max-width: 100%;
+        }
+        .modal__btns {
+            display: none;
+        }
+    }
+    .parks-page .parks-page__item {
+        span {
+            font-size: 14px;
+            padding: 13px 0;
+        }
+        svg {
+            width: 31px !important;
+            height: 31px !important;
+        }
+    }
+    .parks {
+        .parks__grid {
+            .parks__block {
+                min-height: 980px;
+                height: 100%;
+            }
+            .parks__texts {
+                max-height: unset;
+                padding: 50px 30px;
+            }
+        }
+       
+    }
+   }

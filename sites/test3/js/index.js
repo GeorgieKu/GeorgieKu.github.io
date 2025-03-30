@@ -1,218 +1,49 @@
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("burger").addEventListener("click", function () {
-        document.querySelector("header").classList.toggle("open")
-    })
+// Получить все сетки
+let gridsAll = Array.from(document.querySelectorAll('[id^="parksGrid"]'));
 
-    let catalogBtn = document.getElementById('catalogBtn');
-    let catalogDD = document.getElementById('catalogDD');
-    let headerMenu = document.querySelector('.header__menu');
-    let menuDD = document.getElementById('menuDD');
-    let itemDD = document.getElementById('itemDD');
+// Определить массив сеток и индекс в зависимости от ширины экрана
+if(gridsAll) {
+  let grids;
+  let currentGridIndex;
 
-    catalogBtn.addEventListener('click', function (event) {
-        event.stopPropagation();
-        headerMenu.classList.toggle('active');
-    });
+  if (innerWidth < 769) {
+    grids = gridsAll.slice(10, 22); // parksGrid11 - parksGrid22
+    currentGridIndex = 0;
+  } else if (innerWidth < 1370) {
+    grids = gridsAll.slice(4, 10); // parksGrid5 - parksGrid10
+    currentGridIndex = 0;
+  } else {
+    grids = gridsAll.slice(0, 4); // parksGrid1 - parksGrid4
+    currentGridIndex = 0;
+  }
 
-    menuDD.addEventListener('click', function (event) {
-        event.stopPropagation();
-        itemDD.classList.toggle('active');
-    });
-
-    document.addEventListener('click', function () {
-        headerMenu.classList.remove('active');
-        itemDD.classList.remove('active');
-    });
-
-    catalogDD.addEventListener('click', function (event) {
-        event.stopPropagation();
-    });
-
-    itemDD.addEventListener('click', function (event) {
-        event.stopPropagation();
-    });
-
-    var swiper = new Swiper(".hero__swiper", {
-        loop: false,
-        slidesPerView: 'auto',
-        navigation: {
-            nextEl: '.hero-next',
-            prevEl: '.hero-prev',
-        }
-
-    });
-
-    var swiper2 = new Swiper(".tab__swiper", {
-        loop: false,
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-        navigation: {
-            nextEl: '.category-next',
-            prevEl: '.category-prev',
-        }
-
-    });
-
-    var swiper3 = new Swiper(".card__swiper", {
-        loop: false,
-        slidesPerView: 'auto',
-        spaceBetween: 25,
-        navigation: {
-            nextEl: '.card-next',
-            prevEl: '.card-prev',
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 'auto',
-            },
-            576: {
-                slidesPerView: 2,
-            },
-            320: {
-                slidesPerView: 1,
-            }
-        }
-
-    });
-
-    var swiper3 = new Swiper(".partners__swiper", {
-        loop: false,
-        slidesPerView: 'auto',
-        spaceBetween: 25,
-        navigation: {
-            nextEl: '.partners-next',
-            prevEl: '.partners-prev',
-        },
-        breakpoints: {
-            576: {
-                slidesPerView: 2,
-            },
-            320: {
-                slidesPerView: 1,
-            }
-        }
-
-    });
-
-    var swiper3 = new Swiper(".consult__swiper", {
-        loop: false,
-        slidesPerView: 2,
-        spaceBetween: 24,
-        navigation: {
-            nextEl: '.consult-next',
-            prevEl: '.consult-prev',
-        },
-        breakpoints: {
-            976: {
-                slidesPerView: 2,
-            },
-            450: {
-                slidesPerView: 'auto',
-            },
-            320: {
-                slidesPerView: 1,
-            }
-        }
-
-    });
-
-    var swiper3 = new Swiper(".within__swiper", {
-        loop: false,
-        slidesPerView: 'auto',
-        spaceBetween: 24,
-        navigation: {
-            nextEl: '.within-next',
-            prevEl: '.within-prev',
-        },
-        breakpoints: {
-            440: {
-                slidesPerView: 'auto',
-            },
-            320: {
-                slidesPerView: 1,
-            }
-        }
-
-    });
+  function hideCurrentGrid() {
+    // Скрыть текущую сетку
+    grids[currentGridIndex].classList.add('fade-out');
+    setTimeout(() => {
+      grids[currentGridIndex].classList.remove('fade-out');
+      grids[currentGridIndex].style.display = 'none'; // Скрыть сетку
 
 
+      let currentZIndex = parseInt(window.getComputedStyle(grids[currentGridIndex]).zIndex);
+      grids[currentGridIndex].style.zIndex = currentZIndex - 15;
 
-    function openAcc(toggleButton, content, toggleArrow) {
-        toggleButton.addEventListener('click', function () {
-            content.classList.toggle('open');
-            toggleArrow.classList.toggle('rotate');
-    
-        });
-    }
+      // Применить display: grid к предыдущему элементу
+      let previousIndex = (currentGridIndex - 1 + grids.length) % grids.length;
+      setTimeout(() => {
+        grids[previousIndex].style.display = 'grid'; // Показать предыдущую сетку
+      }, 5000); // Время ожидания
 
-    let toggleButtons = document.querySelectorAll('.acc');
-    let contents = document.querySelectorAll('.content');
+      showNextGrid();
+    }, 500); // Время анимации
+  }
 
-    toggleButtons.forEach((toggleButton, index) => {
-        let toggleArrow = toggleButton.querySelector('svg');
-        openAcc(toggleButton, contents[index], toggleArrow);
-    });
+  function showNextGrid() {
+    currentGridIndex = (currentGridIndex + 1) % grids.length;
+  }
 
-    let modal = document.getElementById('modal');
-let overlay = document.getElementById('overlay');
-let closeBtn = document.getElementById('closeBtn');
+  setInterval(hideCurrentGrid, 7000); 
 
-closeBtn.addEventListener('click', function () {
-    modal.removeAttribute('open', 'open');
-    overlay.classList.remove('active');
-});
-
-overlay.addEventListener('click', function () {
-    modal.removeAttribute('open', 'open');
-    overlay.classList.remove('active');
-})
-
-
-const buttons = document.querySelectorAll('.tab__btn');
-const tabs = document.querySelectorAll('.tab, .tab-2, .tab-3, .tab-4, .tab-5, .tab-6, .tab-7');
-
-buttons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        buttons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        tabs.forEach(tab => tab.classList.remove('active'));
-        if (tabs[index]) {
-            tabs[index].classList.add('active');
-        }
-    });
-});
-
-let showMoreBtn = document.getElementById('showMore');
-let about = document.getElementById('about');
-let techBtn = document.getElementById('tech');
-
-if (showMoreBtn) {
-    showMoreBtn.addEventListener('click', function() {
-        about.scrollIntoView({ behavior: 'smooth' });
-
-        buttons.forEach(function(btn) {
-            btn.classList.remove('active');
-        });
-        tabs.forEach(tab => tab.classList.remove('active'));
-        
-        if (tabs[2]) {
-            tabs[2].classList.add('active');
-        }
-
-        techBtn.classList.add('active');
-
-        if (window.innerWidth <= 768) {
-            swiper2.slideTo(1);
-        }
-    });
-}   
-
-
-})
-
-
-
-function openModal() {
-    modal.setAttribute('open', 'open');
-    overlay.classList.add('active');
 }
+
+  
