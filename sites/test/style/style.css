@@ -141,18 +141,36 @@ button {
   position: relative;
   top: -60px;
 }
-.company__flex {
+.company__flexbox {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   gap: 20px;
 }
-.company__flex li:not(:last-child)::after {
-  content: "";
+
+.compnay__text {
+  font-family: Gilroy;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
   display: block;
-  width: 1px;
-  height: 75px;
-  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.company__block {
+  width: 100%;
+}
+
+.company__block-2 {
+  max-width: 375px;
+  margin-left: auto;
+  width: 100%;
+}
+
+.company__flex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 .company__flex li {
   display: flex;
@@ -161,11 +179,6 @@ button {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  font-family: Gilroy;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 16px;
-  justify-self: anchor-center;
 }
 
 .benefits {
@@ -437,11 +450,12 @@ button {
   gap: 20px;
 }
 .header__icon {
+  width: 100%;
   max-width: 889px;
 }
 .header__link {
   font-family: Gilroy;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 500;
   color: #000;
   white-space: nowrap;
@@ -463,12 +477,17 @@ button {
   height: 100%;
   cursor: pointer;
 }
+.about .about__grid .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .about .bg-black {
   background-color: #000;
 }
 .about .about__grid__item {
-  padding: 20px 63px;
-  min-height: 880px;
+  grid-column: span 2;
+  padding: 70px 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -476,11 +495,12 @@ button {
   position: relative;
 }
 .about .about__grid__item h1 {
-  max-width: 380px;
+  text-transform: uppercase;
   font-family: Gilroy;
   font-weight: 700;
   font-size: 44px;
   color: #fff;
+  margin-bottom: 20px;
 }
 .about .about__grid__item p {
   font-family: GothamPro;
@@ -609,7 +629,7 @@ button {
 }
 .parks-page .parks-page__item span {
   font-family: GothamPro;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   color: #000;
   text-transform: uppercase;
@@ -624,6 +644,8 @@ button {
   transition: fill 0.25s ease;
 }
 .parks-page .parks-page__item svg {
+  width: 45px;
+  height: 45px;
   transition: fill 0.25s ease;
 }
 .parks-page .parks-page__item:hover span {

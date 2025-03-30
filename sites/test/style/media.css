@@ -2,9 +2,15 @@
   .container {
     padding: 0 30px;
   }
+  .parks-page .container {
+    padding: 0 50px;
+  }
+  .parks-page-header .container {
+    padding: 0 50px;
+  }
   .icon {
     max-width: 500px;
-    height: 492px;
+    height: 472px;
     position: absolute;
     top: 0;
     left: 0;
@@ -17,12 +23,13 @@
 }
 @media (max-width: 1370px) {
   .company__flex {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
   }
   .company__flex li:nth-child(3)::after {
     display: none;
+  }
+  .company__block-2 .company__flex {
+    grid-template-columns: repeat(2, 1fr);
   }
   .benefits__icon {
     max-width: 138px;
@@ -35,7 +42,6 @@
   }
   .benefits__block {
     gap: 20px;
-    max-width: calc(33% - 10px);
     align-items: center;
   }
   .benefits__block span {
@@ -45,43 +51,21 @@
   .benefits__flex {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
     gap: 20px;
   }
   .dates__flex {
     display: flex;
-    flex-direction: column;
     gap: 20px;
   }
   .dates__block {
     max-width: unset;
   }
   .dates p {
+    font-size: 18px;
     max-width: unset;
   }
-  .header__flex {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-  .about .about__grid {
-    grid-template-columns: 1fr;
-  }
-  .about .about__grid svg {
-    left: 50%;
-    top: unset;
-  }
-  .about .about__grid__item:nth-child(2n-1) svg {
-    bottom: -39px;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
-  }
-  .about .about__grid__item:nth-child(2n) p {
-    color: #000;
-  }
-  .about .about__grid__item:nth-child(2n) svg {
-    top: -39px;
-    left: 50%;
-    transform: translateX(-50%);
+  .dates h2 {
+    font-size: 40px;
   }
   .parks .parks__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -136,8 +120,33 @@
     z-index: 495;
     display: grid;
   }
+  .hero {
+    padding-bottom: 40px;
+  }
+  .hero .hero__title {
+    height: 146px;
+  }
+  .hero .hero__name {
+    align-items: center;
+  }
+  .company__company {
+    max-width: 105px !important;
+    height: 50px;
+  }
+  .company__block-2 {
+    max-width: 275px;
+  }
 }
 @media (max-width: 1024px) {
+  .company__company {
+    max-width: 140px !important;
+    width: 100%;
+    height: 40px !important;
+  }
+  .company__block-2 {
+    margin-left: unset;
+    max-width: 290px;
+  }
   .container {
     padding: 0 50px;
   }
@@ -148,28 +157,66 @@
     display: contents;
   }
   .hero__name .hero__title {
-    max-width: 50%;
+    max-width: 40%;
     position: absolute;
-    top: 260px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
   }
   .hero__name .hero__icon {
     position: absolute;
-    top: 50px;
+    top: 51px;
     right: 50px;
-    max-width: 133px;
-    height: 218px;
+    max-width: 85px;
+    height: 175px;
   }
   .hero .icon {
     max-width: 381px;
-    height: 375px;
+    height: auto;
   }
   .about .swiper-slide {
     max-width: 33.3333333333%;
   }
+  .benefits {
+    padding: 30px 0;
+  }
+  .benefits__block {
+    max-width: unset;
+    align-items: unset;
+  }
+  .benefits__block span {
+    text-align: left;
+    font-size: 14px;
+  }
+  .dates a {
+    font-size: 40px;
+  }
+  .parks .parks__texts h2 {
+    font-size: 20px;
+  }
+  .parks .parks__texts p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1000px) {
+  .company__flexbox {
+    flex-direction: column;
+  }
+  .dates__flex {
+    flex-direction: column;
+  }
 }
 @media (max-width: 768px) {
+  .parks-page .container {
+    padding: 0 30px;
+  }
+  .parks-page-header .container {
+    padding: 0 30px;
+  }
+  .header__flex {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
   .company__flex li {
     max-width: 150px;
   }
@@ -179,6 +226,7 @@
   }
   .benefits__block {
     flex-direction: row;
+    align-items: center;
     gap: 30px;
     max-width: unset;
   }
@@ -306,6 +354,7 @@
     top: 280px;
   }
   .company__flex {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
   .company__flex li:nth-child(2)::after {
@@ -316,6 +365,10 @@
   }
   .company__flex li:nth-child(3)::after {
     display: block;
+  }
+  .company__company {
+    max-width: unset !important;
+    height: unset !important;
   }
   .benefits {
     padding: 20px 0;
@@ -377,11 +430,14 @@
     width: 21px;
     height: 21px;
   }
+  .header .header__icon {
+    height: 50px;
+  }
   .about .hidden-576 {
     display: none;
   }
   .about .about__grid__item {
-    padding: 40px;
+    padding: 40px 0;
     min-height: unset;
   }
   .about .about__grid__item h1 {
@@ -392,7 +448,7 @@
     font-size: 22px;
   }
   .about .about__grid__item p {
-    font-size: 24px;
+    font-size: 18px;
   }
   .about .swiper-slide {
     max-width: 50%;

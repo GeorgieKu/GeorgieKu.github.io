@@ -153,19 +153,36 @@ button {
     }
    
 }
+.company__flexbox {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+}
+.compnay__text {
+    font-family: Gilroy;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.company__block {
+    width: 100%;
+
+}
+
+.company__block-2 {
+    max-width: 375px;
+    margin-left: auto;
+    width: 100%;
+}
 
 .company__flex {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 20px;
-    li:not(:last-child)::after {
-        content: "";
-        display: block;
-        width: 1px;
-        height: 75px;
-        background-color: #fff;
-    }
     li {
         display: flex;
         max-width: 241px;
@@ -173,11 +190,6 @@ button {
         justify-content: space-between;
         align-items: center;
         gap: 20px;
-        font-family: Gilroy;
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 16px;
-        justify-self: anchor-center;
 
     }
 }
@@ -458,11 +470,12 @@ button {
         gap: 20px;
     }
     &__icon {
+        width: 100%;
         max-width: 889px;
     }
     &__link {
         font-family: Gilroy;
-        font-size: 48px;
+        font-size: 40px;
         font-weight: 500;
         color: #000;
         white-space: nowrap;
@@ -484,24 +497,30 @@ button {
             height: 100%;
             cursor: pointer;
         }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
     .bg-black {
         background-color: #000;
     }
     .about__grid__item {
-        padding: 20px 63px;
-        min-height: 880px;
+        grid-column: span 2;
+        padding: 70px 0;
         display: flex;
         justify-content: center;
         flex-direction: column;
         gap: 20px;
         position: relative;
         h1 {
-            max-width: 380px;
+            text-transform: uppercase;
             font-family: Gilroy;
             font-weight: 700;
             font-size: 44px;
             color: #fff;
+            margin-bottom: 20px;
 
         }
         p {
@@ -633,6 +652,7 @@ button {
         flex-direction: column;
     }
     .parks-page__item {
+
      
         a {
             display: flex;
@@ -641,7 +661,7 @@ button {
         }
         span {
             font-family: GothamPro;
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 700;
             color: #000;
             text-transform: uppercase;
@@ -656,6 +676,8 @@ button {
             transition: fill .25s ease;
         }
         svg {
+            width: 45px;
+            height: 45px;
             transition: fill .25s ease;
         }
     

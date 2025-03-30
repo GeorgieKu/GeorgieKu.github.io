@@ -2,9 +2,19 @@
     .container {
         padding: 0 30px;
     }
+    .parks-page {
+        .container {
+            padding: 0 50px;
+        }
+    }
+    .parks-page-header {
+        .container {
+            padding: 0 50px;
+        }
+    }
     .icon {
         max-width: 500px;
-        height: 492px;
+        height: 472px;
         position: absolute;
         top: 0;
         left: 0;
@@ -19,14 +29,15 @@
 
 @media(max-width: 1370px) {
     .company__flex {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
         justify-content: center;
         li:nth-child(3)::after {
             display: none;
         }
     }
-
+    .company__block-2 .company__flex {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
     .benefits {
         &__icon {
             max-width: 138px;
@@ -39,7 +50,6 @@
         }
         &__block {
             gap: 20px;
-            max-width: calc(33% - 10px);
             align-items: center;
         }
         &__block span {
@@ -49,57 +59,29 @@
         &__flex {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            justify-items: center;
             gap: 20px;
         }
     }
     .dates {
         &__flex {
             display: flex;
-            flex-direction: column;
+
             gap: 20px;
         }
         &__block {
             max-width: unset;
         }
         p {
+            font-size: 18px;
             max-width: unset;
         }
-    }
-
-    .header {
-        &__flex {
-            flex-direction: column-reverse;
-            align-items: flex-start;
+        h2 {
+            font-size: 40px;
         }
     }
 
-    .about {
-        .about__grid {
-            grid-template-columns: 1fr;
-            svg {
-                left: 50%;
-                top: unset;
-            }
-        }
-        .about__grid__item:nth-child(2n - 1) {
-            svg {
-                bottom: -39px;
-                left: 50%;
-                transform: translateX(-50%) rotate(180deg);
-            }
-        }
-        .about__grid__item:nth-child(2n) {
-            p {
-                color: #000;
-            }
-            svg {
-                top: -39px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-        }
-    }
+
+
     .parks {
         .parks__grid {
             grid-template-columns: repeat(2, 1fr);
@@ -157,9 +139,37 @@
             display: grid;
           }
     }
+    .hero {
+        padding-bottom: 40px;
+        .hero__title {
+            height: 146px;
+        }
+        .hero__name {
+            align-items: center;
+        }
+    }
+    .company__company {
+        max-width: 105px !important;
+        height: 50px;
+    }
+    .company__block-2 {
+        max-width: 275px;
+    }
    }
 
    @media(max-width: 1024px) {
+
+    .company__company {
+        max-width: 140px !important;
+        width: 100%;
+        height: 40px !important;
+    }
+
+    .company__block-2 {
+        margin-left: unset;
+        max-width: 290px;
+    }
+    
     .container {
         padding: 0 50px;
     }
@@ -168,25 +178,26 @@
         &__name {
             display: contents;
             .hero__title {
-                max-width: 50%;
+                max-width: 40%;
                 position: absolute;
-                top: 260px;
+                top: 100px;
                 left: 50%;
                 transform: translateX(-50%);
             }
             .hero__icon  {
                 position: absolute;
-                top: 50px;
+                top: 51px;
                 right: 50px;
-                max-width: 133px;
-                height: 218px;
+                max-width: 85px;
+                height: 175px;
             }
         }
+
         
        
         .icon {
             max-width: 381px;
-            height: 375px;
+            height: auto;
         }
     
     }
@@ -195,10 +206,61 @@
             max-width: calc(100% / 3);
         }
     }
+    .benefits {
+        padding: 30px 0;
+    }
+    .benefits__block {
+        max-width: unset;
+        align-items: unset;
+        span {
+            text-align: left;
+            font-size: 14px;
+        }
+    }
+    .dates {
+        a {
+            font-size: 40px;
+        }
+    }
+    .parks {
+        .parks__texts {
+            h2 {
+                font-size: 20px;
+            }
+             p {
+                font-size: 20px;
+             }
+        }
+    }
 
    }
 
+   @media(max-width: 1000px) {
+    .company__flexbox {
+        flex-direction: column;
+    }
+    .dates__flex {
+        flex-direction: column;
+    }
+   }
+
    @media(max-width: 768px) {
+    .parks-page {
+        .container {
+            padding: 0 30px;
+        }
+    }
+    .parks-page-header {
+        .container {
+            padding: 0 30px;
+        }
+    }
+    .header {
+        &__flex {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+    }
 
         .company__flex {
             li {
@@ -213,6 +275,7 @@
         }
         &__block {
             flex-direction: row;
+            align-items: center;
             gap: 30px;
             max-width: unset;
         }
@@ -351,6 +414,7 @@
        
     }
     .company__flex {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         li:nth-child(2)::after {
             display: none;
@@ -361,6 +425,10 @@
         li:nth-child(3)::after {
             display: block;
         }
+    }
+    .company__company {
+        max-width: unset !important;
+        height: unset !important;
     }
    
     .benefits {
@@ -422,13 +490,16 @@
                 height: 21px;
             }
         }
+        .header__icon {
+            height: 50px;
+        }
     }
     .about {
         .hidden-576 {
             display: none;
         }
         .about__grid__item {
-            padding: 40px;
+            padding: 40px 0;
             min-height: unset;
             h1 {
                 font-family: GothamPro;
@@ -438,7 +509,7 @@
                 font-size: 22px;
             }
             p {
-                font-size: 24px;
+                font-size: 18px;
             }
         }
             .swiper-slide {
