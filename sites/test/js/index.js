@@ -9,7 +9,7 @@ if(gridsAll) {
   if (innerWidth < 769) {
     grids = gridsAll.slice(10, 22); // parksGrid11 - parksGrid22
     currentGridIndex = 0;
-  } else if (innerWidth < 1370) {
+  } else if (innerWidth < 1024) {
     grids = gridsAll.slice(4, 10); // parksGrid5 - parksGrid10
     currentGridIndex = 0;
   } else {

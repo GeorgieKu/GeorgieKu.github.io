@@ -188,6 +188,9 @@
                 font-size: 18px;
              }
         }
+        img {
+            object-fit: cover;
+        }
     }
 
    }
@@ -420,11 +423,12 @@
     }
     .hero {
         min-height: 110vh;
+        background-image: url(../img/hero-576.webp);
         .hero__icon {
             max-width: 82px;
             height: 122px;
             top: 20px;
-            right: 20px;
+            right: 30px;
         }
         .icon {
             max-width: 240px;
@@ -466,7 +470,7 @@
             width: 100%;
         }
         .benefits__icon {
-            max-width: 136px;
+            max-width: 80px;
             width: 100%;
             height: 76px;
         }
@@ -477,22 +481,20 @@
             padding: 0 50px;
         }
         &__flex {
-            gap: 74px;
+            gap: 30px;
             margin-bottom: 15px;
         }
         .dates__block {
             gap: 38px;
             h2 {
-                font-size: 40px;
-                padding-bottom: unset;
-                border-bottom: unset;
+                font-size: 30px;
             }
             span {
-                font-size: 24px;
+                font-size: 20px;
             }
         }
         p {
-            font-size: 22px;
+            font-size: 20px;
             line-height: 26px;
         }
         a {
@@ -542,13 +544,20 @@
             }
             .about__swiper {
                 svg {
-                    width: 31px;
-                    height: 31px;
+                    width: 25px;
+                    height: 25px;
                 }
             }
             .about__btns {
                 width: calc(100% - 50px);
             }
+    }
+    .about .about-swiper-btn-next {
+        right: 20px;
+    }
+
+    .about .about-swiper-btn-prev {
+        left: 20px;
     }
 
 
@@ -564,6 +573,9 @@
         }
     }
     .parks-page .parks-page__item {
+        a {
+            align-items: flex-start;
+        }
         span {
             font-size: 14px;
             padding: 13px 0;
@@ -571,6 +583,8 @@
         svg {
             width: 31px !important;
             height: 31px !important;
+            position: relative;
+            top: 13px;
         }
     }
     .parks {
