@@ -17,9 +17,6 @@
   }
 }
 @media (max-width: 1440px) {
-  .hero__name .hero__icon {
-    top: -39px;
-  }
   .parks .parks__texts {
     padding: 20px;
   }
@@ -61,23 +58,34 @@
     gap: 20px;
   }
   .dates__block {
-    max-width: unset;
+    max-width: 25%;
+    flex-shrink: 0;
+  }
+  .dates__block span {
+    font-size: 26px;
   }
   .dates p {
-    font-size: 18px;
+    font-size: 16px;
     max-width: unset;
   }
   .dates h2 {
-    font-size: 40px;
+    font-size: 32px;
   }
   .hero {
     padding-bottom: 40px;
   }
-  .hero .hero__title {
-    height: 146px;
+  .hero__title {
+    height: auto;
   }
-  .hero .hero__name {
-    align-items: center;
+  .hero__name {
+    top: 20px;
+  }
+  .hero__name__icon {
+    height: 200px;
+  }
+  .hero .icon {
+    max-width: 400px;
+    height: auto;
   }
   .company__company {
     max-width: 105px !important;
@@ -87,14 +95,14 @@
     max-width: 275px;
   }
   .parks .parks__texts {
-    padding: 20px;
+    padding: 30px 50px;
     gap: 20px;
   }
   .parks .parks__texts h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .parks .parks__texts p {
-    font-size: 18px;
+    font-size: 16px;
   }
   .parks img {
     -o-object-fit: cover;
@@ -117,25 +125,13 @@
   .hero {
     min-height: 481px;
   }
-  .hero__name {
-    display: contents;
-  }
-  .hero__name .hero__title {
-    max-width: 40%;
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
   .hero__name .hero__icon {
-    position: absolute;
-    top: 51px;
-    right: 50px;
-    max-width: 85px;
-    height: 175px;
+    height: 130px;
+    max-width: -moz-max-content;
+    max-width: max-content;
   }
   .hero .icon {
-    max-width: 381px;
+    max-width: 280px;
     height: auto;
   }
   .about .swiper-slide {
@@ -155,32 +151,37 @@
   .dates a {
     font-size: 40px;
   }
-  .parks .parks__texts h2 {
-    font-size: 20px;
-  }
-  .parks .parks__texts p {
-    font-size: 18px;
-  }
 }
 @media (max-width: 1000px) {
   .company__flexbox {
     flex-direction: column;
   }
+  .company__flex {
+    position: static;
+    transform: unset;
+  }
   .dates__flex {
     flex-direction: column;
+  }
+  .dates__block {
+    max-width: unset;
   }
   .hero {
     min-height: 600px;
   }
+  .hero__name {
+    right: 57px;
+    max-width: calc(66% - 100px);
+  }
   .parks .parks__grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .parks .parks__grid .parks__texts {
-    max-height: 482px;
-    padding: 20px 50px;
-  }
   .parks .parks__grid .parks__block:nth-child(3) {
     display: none;
+  }
+  .parks .parks__texts {
+    max-height: 482px;
+    padding: 20px 50px;
   }
   .parks img {
     max-height: 482px;
@@ -363,22 +364,27 @@
     padding: 0 40px;
   }
   .hero {
-    min-height: 110vh;
+    min-height: 100vh;
     background-image: url(../img/hero-576.webp);
   }
   .hero .hero__icon {
-    max-width: 82px;
     height: 122px;
-    top: 20px;
-    right: 30px;
+    max-width: 58px;
   }
   .hero .icon {
-    max-width: 240px;
+    max-width: 220px;
   }
   .hero .hero__title {
-    max-width: 84%;
     top: 210px;
     height: 78px;
+    margin: 0 auto;
+  }
+  .hero .hero__name {
+    flex-direction: column-reverse;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 74%;
   }
   .company__flex {
     display: grid;
@@ -433,8 +439,8 @@
     font-size: 20px;
   }
   .dates p {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 110%;
   }
   .dates a {
     font-size: 24px;
@@ -514,7 +520,7 @@
     top: 13px;
   }
   .parks .parks__grid .parks__block {
-    min-height: 980px;
+    min-height: 800px;
     height: 100%;
   }
   .parks .parks__grid .parks__texts {

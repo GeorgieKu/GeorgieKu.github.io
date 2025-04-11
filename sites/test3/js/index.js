@@ -1,49 +1,24 @@
-// Получить все сетки
-let gridsAll = Array.from(document.querySelectorAll('[id^="parksGrid"]'));
-
-// Определить массив сеток и индекс в зависимости от ширины экрана
-if(gridsAll) {
-  let grids;
-  let currentGridIndex;
+var tl = gsap.timeline({repeat: -1});
 
   if (innerWidth < 769) {
-    grids = gridsAll.slice(10, 22); // parksGrid11 - parksGrid22
-    currentGridIndex = 0;
+    var blocks = ["#parksGrid10", "#parksGrid11", "#parksGrid12", "#parksGrid13", "#parksGrid14", "#parksGrid15", "#parksGrid16", "#parksGrid17", "#parksGrid18", "#parksGrid19", "#parksGrid20", "#parksGrid21", "#parksGrid22"];
+    blocks.forEach((block) => {
+      tl.to(block, {autoAlpha: 1, duration: 1}) 
+        .to(block, {autoAlpha: 0, duration: 1, delay: 7});
+    });
   } else if (innerWidth < 1024) {
-    grids = gridsAll.slice(4, 10); // parksGrid5 - parksGrid10
-    currentGridIndex = 0;
+    var blocks = ["#parksGrid5", "#parksGrid6", "#parksGrid7", "#parksGrid8", "#parksGrid9", "#parksGrid10"];
+    blocks.forEach((block) => {
+      tl.to(block, {autoAlpha: 1, duration: 1}) 
+        .to(block, {autoAlpha: 0, duration: 1, delay: 7}); 
+    });
   } else {
-    grids = gridsAll.slice(0, 4); // parksGrid1 - parksGrid4
-    currentGridIndex = 0;
+    var blocks = ["#parksGrid1", "#parksGrid2", "#parksGrid3", "#parksGrid4"];
+    blocks.forEach((block) => {
+      tl.to(block, {autoAlpha: 1, duration: 1}) 
+        .to(block, {autoAlpha: 0, duration: 1, delay: 7});
+    });
   }
 
-  function hideCurrentGrid() {
-    // Скрыть текущую сетку
-    grids[currentGridIndex].classList.add('fade-out');
-    setTimeout(() => {
-      grids[currentGridIndex].classList.remove('fade-out');
-      grids[currentGridIndex].style.display = 'none'; // Скрыть сетку
 
 
-      let currentZIndex = parseInt(window.getComputedStyle(grids[currentGridIndex]).zIndex);
-      grids[currentGridIndex].style.zIndex = currentZIndex - 15;
-
-      // Применить display: grid к предыдущему элементу
-      let previousIndex = (currentGridIndex - 1 + grids.length) % grids.length;
-      setTimeout(() => {
-        grids[previousIndex].style.display = 'grid'; // Показать предыдущую сетку
-      }, 5000); // Время ожидания
-
-      showNextGrid();
-    }, 500); // Время анимации
-  }
-
-  function showNextGrid() {
-    currentGridIndex = (currentGridIndex + 1) % grids.length;
-  }
-
-  setInterval(hideCurrentGrid, 7000); 
-
-}
-
-  

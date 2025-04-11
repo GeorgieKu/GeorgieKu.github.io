@@ -22,9 +22,7 @@
 }
 
 @media(max-width: 1440px) {
-    .hero__name .hero__icon {
-        top: -39px;
-    }
+
     .parks .parks__texts {
         padding: 20px;
     }
@@ -72,14 +70,18 @@
             gap: 20px;
         }
         &__block {
-            max-width: unset;
+            max-width: 25%;
+            flex-shrink: 0;
+            span {
+                font-size: 26px;
+            }
         }
         p {
-            font-size: 18px;
+            font-size: 16px;
             max-width: unset;
         }
         h2 {
-            font-size: 40px;
+            font-size: 32px;
         }
     }
 
@@ -89,11 +91,19 @@
    
     .hero {
         padding-bottom: 40px;
-        .hero__title {
-            height: 146px;
+        &__title {
+            height: auto;
         }
-        .hero__name {
-            align-items: center;
+        &__name  {
+            top: 20px;
+            &__icon {
+                height: 200px;
+            }
+            
+        }
+        .icon {
+            max-width: 400px;
+            height: auto;
         }
     }
     .company__company {
@@ -104,13 +114,13 @@
         max-width: 275px;
     }
     .parks .parks__texts {
-        padding: 20px;
+        padding: 30px 50px;
         gap: 20px;
         h2 {
-            font-size: 20px;
+            font-size: 18px;
         }
         p {
-            font-size: 18px;
+            font-size: 16px;
         }
     }
     .parks img{
@@ -139,27 +149,17 @@
     .hero {
         min-height: 481px;
         &__name {
-            display: contents;
-            .hero__title {
-                max-width: 40%;
-                position: absolute;
-                top: 100px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
+
             .hero__icon  {
-                position: absolute;
-                top: 51px;
-                right: 50px;
-                max-width: 85px;
-                height: 175px;
+                height: 130px;
+                max-width: max-content;
             }
         }
 
         
        
         .icon {
-            max-width: 381px;
+            max-width: 280px;
             height: auto;
         }
     
@@ -185,17 +185,8 @@
             font-size: 40px;
         }
     }
-    .parks {
-        .parks__texts {
-            h2 {
-                font-size: 20px;
-            }
-             p {
-                font-size: 18px;
-             }
-        }
 
-    }
+
 
    }
 
@@ -203,22 +194,35 @@
     .company__flexbox {
         flex-direction: column;
     }
+    .company__flex {
+        position: static;
+        transform: unset;
+    }
     .dates__flex {
         flex-direction: column;
     }
+    .dates__block {
+        max-width: unset;
+    }
     .hero {
         min-height: 600px;
+        &__name {
+            right: 57px;
+            max-width: calc(66% - 100px);
+        }
+   
     }
     .parks {
         .parks__grid {
             grid-template-columns: repeat(2, 1fr);
-            .parks__texts {
-                max-height: 482px;
-                padding: 20px 50px;
-            }
+
             .parks__block:nth-child(3) {
                 display: none;
             }
+        }
+        .parks__texts {
+            max-height: 482px;
+            padding: 20px 50px;
         }
         img {
             max-height: 482px;
@@ -426,22 +430,27 @@
         padding: 0 40px;
     }
     .hero {
-        min-height: 110vh;
+        min-height: 100vh;
         background-image: url(../img/hero-576.webp);
         .hero__icon {
-            max-width: 82px;
             height: 122px;
-            top: 20px;
-            right: 30px;
+            max-width: 58px;
         }
         .icon {
-            max-width: 240px;
+            max-width: 220px;
             
         }
         .hero__title {
-            max-width: 84%;
             top: 210px;
             height: 78px;
+            margin: 0 auto;
+        }
+        .hero__name {
+            flex-direction: column-reverse;
+            right: unset;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 74%;
         }
        
     }
@@ -498,8 +507,8 @@
             }
         }
         p {
-            font-size: 20px;
-            line-height: 26px;
+            font-size: 16px;
+            line-height: 110%;
         }
         a {
             font-size: 24px;
@@ -594,12 +603,13 @@
     .parks {
         .parks__grid {
             .parks__block {
-                min-height: 980px;
+                min-height: 800px;
                 height: 100%;
             }
             .parks__texts {
                 max-height: unset;
                 padding: 50px 30px;
+           
             }
         }
        
