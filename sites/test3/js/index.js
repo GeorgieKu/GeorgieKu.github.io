@@ -20,5 +20,3 @@ var tl = gsap.timeline({repeat: -1});
     });
   }
 
-
-
