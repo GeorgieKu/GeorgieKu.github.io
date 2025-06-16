@@ -7,12 +7,19 @@
 
      let dd = document.querySelectorAll('.dd');
 
-
      dd.forEach(function (element) {
-         element.addEventListener('click', function () {
+         element.addEventListener('click', function (event) {
+             event.stopPropagation();
              element.classList.toggle('dd-open');
-         })
-     })
+         });
+     });
+
+     document.addEventListener('click', function () {
+         dd.forEach(function (element) {
+             element.classList.remove('dd-open');
+         });
+     });
+
 
      //hero 
      let socialsBtn = document.getElementById('socialsBtn');
@@ -172,24 +179,35 @@
 
 
      //map 
-    const points = document.querySelectorAll('.map__point');
+     const points = document.querySelectorAll('.map__point');
 
-  points.forEach(point => {
-    point.addEventListener('click', () => {
-      const text = point.querySelector('.map__text');
-      const isVisible = text.style.display === 'block';
+     points.forEach(point => {
+         point.addEventListener('click', () => {
+             const text = point.querySelector('.map__text');
+             const isVisible = text.style.display === 'block';
 
-      // Скрываем все map__text
-      document.querySelectorAll('.map__text').forEach(t => {
-        t.style.display = 'none';
-      });
 
-      // Если текущий был скрыт, показываем, иначе оставляем скрытым
-      if (!isVisible) {
-        text.style.display = 'block';
-      }
-    });
-  });
+             document.querySelectorAll('.map__text').forEach(t => {
+                 t.style.display = 'none';
+             });
+
+             if (!isVisible) {
+                 text.style.display = 'block';
+             }
+         });
+     });
+
+     window.addEventListener('scroll', function () {
+         const mapBlock = document.querySelector('.map__block');
+         const triggerPoint = window.innerHeight / 2;
+         const blockTop = mapBlock.getBoundingClientRect().top;
+
+         if (blockTop < triggerPoint) {
+             mapBlock.classList.add('show');
+         } else {
+             mapBlock.classList.remove('show');
+         }
+     });
 
      //why-we 
      const swiper = new Swiper('.why__swiper', {
