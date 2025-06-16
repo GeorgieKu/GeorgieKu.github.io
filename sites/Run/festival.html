@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rosa Run">
+
+  <link rel="stylesheet" href="./style/normalize.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="stylesheet" href="./style/media.css">
+  <title>Rosa Run</title>
+</head>
+<div class="header-inner">
+  <header class="header">
+    <div class="header__flexbox flexbox">
+      <nav class="navbar navbar-expand-xxl navbar-light">
+
+        <a class="logo" aria-label="Главная" href="./index.html">
+          <svg width="160" height="60" viewBox="0 0 160 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_2513_3250)">
+              <path
+                d="M33.1599 8.7642L26.168 5.95661L19.1978 10.0542L13.561 4.08127L9.63686 8.04875L0 0.233032L0.0216802 12.1138H38.3957V0.233032L33.1599 8.7642Z"
+                fill="#0F0400" />
+              <path
+                d="M7.28445 28.8726C7.7289 28.0704 7.95654 27.0081 7.95654 25.6748V18.7913C7.95654 17.2195 7.64218 16.0162 7.00261 15.1815C6.36304 14.3577 5.32239 13.9349 3.8915 13.9349H0.0107422V42.4553H1.6476V30.5637H3.47958L7.06765 42.4553H8.73703L5.14895 30.4336C6.12456 30.1843 6.84001 29.6639 7.28445 28.8618V28.8726ZM6.33052 25.6748C6.33052 26.7371 6.1354 27.561 5.756 28.1355C5.3766 28.7208 4.74787 29.0135 3.88066 29.0135H1.6476V15.4959H3.88066C4.74787 15.4959 5.3766 15.7778 5.756 16.3523C6.1354 16.9268 6.33052 17.7398 6.33052 18.7913V25.6748Z"
+                fill="#0F0400" />
+              <path
+                d="M14.027 42.8672C15.4687 42.8672 16.5093 42.4878 17.1381 41.729C17.7776 40.9701 18.092 39.8536 18.092 38.3902V17.9783C18.092 16.5149 17.7776 15.4092 17.1381 14.6612C16.4985 13.9132 15.4578 13.5447 14.027 13.5447C12.5961 13.5447 11.5446 13.9132 10.9158 14.6612C10.2763 15.4092 9.96191 16.5149 9.96191 17.9783V38.3902C9.96191 39.8536 10.2763 40.9701 10.9158 41.729C11.5554 42.4878 12.5961 42.8672 14.027 42.8672ZM11.5879 17.9783C11.5879 17.0244 11.7722 16.3089 12.1625 15.8211C12.5419 15.3333 13.1706 15.084 14.0378 15.084C14.905 15.084 15.5337 15.3333 15.9131 15.8211C16.2925 16.3089 16.4877 17.0352 16.4877 17.9783V38.3902C16.4877 39.3441 16.2925 40.0704 15.9131 40.5691C15.5337 41.0677 14.905 41.3279 14.0378 41.3279C13.1706 41.3279 12.5419 41.0786 12.1625 40.5691C11.7831 40.0704 11.5879 39.3441 11.5879 38.3902V17.9783Z"
+                fill="#0F0400" />
+              <path
+                d="M20.0869 34.3143V38.3902C20.0869 39.8536 20.4013 40.9701 21.0192 41.729C21.6479 42.4878 22.6669 42.8672 24.0761 42.8672C25.4853 42.8672 26.5043 42.4878 27.133 41.729C27.7617 40.9701 28.0652 39.8536 28.0652 38.3902V33.5013C28.0652 32.3631 27.9785 31.4634 27.8051 30.7913C27.6316 30.13 27.3715 29.588 27.0354 29.187C26.6994 28.775 26.2766 28.439 25.778 28.168C25.2793 27.897 24.7156 27.5935 24.0869 27.2683C23.6533 27.0189 23.2847 26.8021 22.9921 26.5962C22.6885 26.3902 22.4501 26.1409 22.2549 25.8374C22.0598 25.5338 21.9297 25.1544 21.843 24.6991C21.7671 24.233 21.7238 23.6368 21.7238 22.9105V17.9783C21.7238 17.0244 21.9081 16.3089 22.2766 15.8211C22.6452 15.3333 23.2522 15.084 24.0869 15.084C24.9216 15.084 25.5286 15.3333 25.8972 15.8211C26.2658 16.3089 26.4501 17.0352 26.4501 17.9783V22.0975H28.0761V17.9783C28.0761 16.5149 27.7617 15.4092 27.1438 14.6612C26.5151 13.9132 25.4961 13.5447 24.0869 13.5447C22.6777 13.5447 21.6587 13.9132 21.03 14.6612C20.4013 15.4092 20.0978 16.5149 20.0978 17.9783V22.9105C20.0978 24.0487 20.1845 24.9593 20.3579 25.6206C20.5314 26.2818 20.7915 26.8238 21.1276 27.2249C21.4636 27.6368 21.8864 27.9729 22.385 28.2439C22.8837 28.5149 23.4473 28.8184 24.0761 29.1436C24.5097 29.3929 24.8782 29.6097 25.1709 29.8157C25.4744 30.0216 25.7129 30.271 25.9081 30.5745C26.0923 30.878 26.2333 31.2574 26.32 31.7127C26.4067 32.1788 26.4392 32.775 26.4392 33.5013V38.3902C26.4392 39.3441 26.2549 40.0704 25.8864 40.5691C25.5178 41.0677 24.9108 41.3279 24.0761 41.3279C23.2414 41.3279 22.6343 41.0786 22.2658 40.5691C21.8972 40.0704 21.7129 39.3441 21.7129 38.3902V34.3143H20.0869Z"
+                fill="#0F0400" />
+              <path
+                d="M0 59.7669H38.3957V44.504H0V59.7669ZM25.9404 46.4878L33.6694 53.7832V46.7371H35.2304V57.588L27.5014 50.2926V57.3387H25.9404V46.4878ZM13.2575 46.7262H14.8293V53.1328C14.8293 53.7723 14.8509 54.4444 15.1545 54.9973C15.5339 55.691 16.2927 56.1029 17.1816 56.1029H19.7073C20.5854 56.1029 21.3442 55.691 21.7344 54.9973C22.0379 54.4444 22.0596 53.7723 22.0596 53.1328V46.7262H23.6314V53.5555C23.6314 54.672 23.3062 55.5718 22.645 56.3089C21.897 57.1328 20.9214 57.5447 19.7182 57.5447H17.1924C15.9892 57.5447 15.0027 57.1328 14.2656 56.3089C13.6043 55.5718 13.2791 54.672 13.2791 53.5555V46.7262H13.2575ZM3.17615 46.7262H7.14363C8.09756 46.7262 9.09485 46.7696 9.94038 47.3441C11.1003 48.1246 11.187 49.4471 11.187 49.8265C11.187 51.2899 10.2656 52.439 8.83469 52.7642H8.76965L12.1084 57.3279H10.2222L7.16531 52.9485H4.72629V57.3279H3.16531V46.7154L3.17615 46.7262Z"
+                fill="#0F0400" />
+              <path
+                d="M9.6258 49.8482C9.6258 48.7208 8.91036 48.168 7.42526 48.168H4.72607V51.626H7.3819C8.82363 51.626 9.6258 50.9972 9.6258 49.8482Z"
+                fill="#0F0400" />
+              <path
+                d="M38.2655 42.4662V13.9025H34.2438C32.8238 13.9025 31.794 14.2819 31.1653 15.0298C30.5365 15.7778 30.2222 16.8835 30.2222 18.3252V42.4553H31.8265V30.7155H36.6504V42.4553H38.2547L38.2655 42.4662ZM31.8265 29.1979V18.3361C31.8265 17.393 32.0108 16.6775 32.3902 16.1897C32.7696 15.6911 33.3766 15.4418 34.2438 15.4418H36.6612V29.1979H31.8373H31.8265Z"
+                fill="#0F0400" />
+              <path d="M52.5128 28.8871L51.9072 29.4927L62.7764 40.3618L63.3819 39.7563L52.5128 28.8871Z"
+                fill="#0F0400" />
+              <path d="M62.7764 28.8795L51.9072 39.7487L52.5128 40.3542L63.3819 29.4851L62.7764 28.8795Z"
+                fill="#0F0400" />
+              <path
+                d="M136.098 33.5773V45.8049H143.556V38.9214H151.057C154.981 38.9214 158.32 36.6992 159.61 33.5773H136.098Z"
+                fill="#046949" />
+              <path
+                d="M157.333 24.6667C155.87 23.3333 153.929 22.4987 151.794 22.4987H135.75C135.783 23.1274 135.87 23.7344 136.011 24.3198C136.043 24.4499 136.076 24.58 136.108 24.71C136.119 24.7642 136.141 24.8184 136.152 24.8726C137.485 29.1003 141.431 32.1572 146.092 32.1572H159.859C159.946 31.6802 160 31.2033 160 30.7046C160 28.309 158.97 26.1626 157.333 24.6558"
+                fill="url(#paint0_linear_2513_3250)" />
+              <path
+                d="M122.883 24.9702L117.658 36.2764H117.127V22.5095H109.712V45.8157H116C117.647 45.8157 119.154 44.851 119.848 43.355L125.073 32.0488H125.604V45.8157H133.019V22.4987H126.731C125.084 22.4987 123.577 23.4634 122.883 24.9594"
+                fill="#046949" />
+              <path
+                d="M88.3576 25.5664L91.447 36.2764H91.9782L95.0676 25.5664C95.588 23.7561 97.2465 22.4987 99.1435 22.4987H106.547V45.8049H99.1327V32.038H98.6015L94.363 45.8049H89.0622L84.8237 32.038H84.2926V45.8049H76.8779V22.4987H84.2817C86.1679 22.4987 87.8264 23.7453 88.3576 25.5664Z"
+                fill="#046949" />
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_2513_3250" x1="135.75" y1="27.3333" x2="160" y2="27.3333"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#44A7DF" />
+                <stop offset="1" stop-color="#345CA8" />
+              </linearGradient>
+              <clipPath id="clip0_2513_3250">
+                <rect width="160" height="59.5339" fill="white" transform="translate(0 0.233032)" />
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        
+        <div class="flex-998">
+          <a aria-label="Главная" class="link-998" href="#">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="24" fill="black" />
+              <path
+                d="M23.7063 23.8189C26.1428 23.8189 28.118 21.8448 28.118 19.4095C28.118 16.9742 26.1428 15 23.7063 15C21.2697 15 19.2945 16.9742 19.2945 19.4095C19.2945 21.8448 21.2697 23.8189 23.7063 23.8189Z"
+                fill="#FFCC07" />
+              <path
+                d="M30.6781 26.0821C28.6193 25.4942 19.415 25.3429 17.4428 26.0821C15.4706 26.8213 14 33.1373 14 33.1373H34C34 33.1373 32.7369 26.6701 30.6781 26.0821Z"
+                fill="#FFCC07" />
+            </svg>
+
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="burg">
+            <span class="navbar-icon"></span>
+          </div>
+        </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="header__nav navbar-nav">
+            <li class="nav-item">
+              <a aria-label="СОРЕВНОВАНИЯ" class="header__link" aria-current="page" href="#">СОРЕВНОВАНИЯ</a>
+            </li>
+            <li class="nav-item">
+              <a aria-label="о фестивале" class="header__link header__link_active" href="#">о фестивале</a>
+            </li>
+            <li class="nav-item">
+              <a aria-label="где жить" class="header__link" href="#">где жить</a>
+            </li>
+            <li class="nav-item">
+              <a aria-label="спецпредложения" class="header__link" href="#">спецпредложения</a>
+            </li>
+            <li class="nav-item">
+              <a aria-label="faq" class="header__link" href="#">faq</a>
+            </li>
+
+          </ul>
+          <div class="header__socials-991">
+            <a href="#" aria-label="Телеграм">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="4" fill="#FFCC07" />
+                <path
+                  d="M12.8152 19.16L15.2927 25.34L18.5361 22.1067L24.0773 26.5L28 9L8 17.2933L12.8152 19.16ZM22.2924 14.04L16.1652 19.6L15.3993 22.4733L13.9873 18.96L22.2924 14.04Z"
+                  fill="black" />
+              </svg>
+  
+            </a>
+            <a href="#" aria-label="Вконтакте">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="4" fill="#FFCC07" />
+                <path
+                  d="M18.8932 24.5C12.06 24.5 8.1624 19.8078 8 12H11.4229C11.5353 17.7307 14.0587 20.1582 16.0575 20.6587V12H19.2804V16.9424C21.2542 16.7297 23.3279 14.4775 24.0275 12H27.2505C26.7133 15.0531 24.4647 17.3053 22.8657 18.2312C24.4647 18.982 27.0256 20.9464 28 24.5H24.4522C23.6902 22.1226 21.7914 20.2833 19.2804 20.033V24.5H18.8932Z"
+                  fill="black" />
+              </svg>
+  
+            </a>
+          </div>
+          <div class="lang-991">
+            <button class="lang-button active-lang btn-reset">RU</button>
+            <span>|</span>
+            <button class="lang-button btn-reset">EN</button>
+          </div>
+        </div>
+
+      </nav>
+      <div class="header__right">
+        <div class="header__socials">
+          <a href="#" aria-label="Телеграм">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="4" fill="#FFCC07" />
+              <path
+                d="M12.8152 19.16L15.2927 25.34L18.5361 22.1067L24.0773 26.5L28 9L8 17.2933L12.8152 19.16ZM22.2924 14.04L16.1652 19.6L15.3993 22.4733L13.9873 18.96L22.2924 14.04Z"
+                fill="black" />
+            </svg>
+
+          </a>
+          <a href="#" aria-label="Вконтакте">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="36" height="36" rx="4" fill="#FFCC07" />
+              <path
+                d="M18.8932 24.5C12.06 24.5 8.1624 19.8078 8 12H11.4229C11.5353 17.7307 14.0587 20.1582 16.0575 20.6587V12H19.2804V16.9424C21.2542 16.7297 23.3279 14.4775 24.0275 12H27.2505C26.7133 15.0531 24.4647 17.3053 22.8657 18.2312C24.4647 18.982 27.0256 20.9464 28 24.5H24.4522C23.6902 22.1226 21.7914 20.2833 19.2804 20.033V24.5H18.8932Z"
+                fill="black" />
+            </svg>
+
+          </a>
+        </div>
+        <div class="header__user">
+          <a href="#" aria-label="Пользователь">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="24" fill="black" />
+              <path
+                d="M23.7063 23.8189C26.1428 23.8189 28.118 21.8448 28.118 19.4095C28.118 16.9742 26.1428 15 23.7063 15C21.2697 15 19.2945 16.9742 19.2945 19.4095C19.2945 21.8448 21.2697 23.8189 23.7063 23.8189Z"
+                fill="#FFCC07" />
+              <path
+                d="M30.6781 26.0821C28.6193 25.4942 19.415 25.3429 17.4428 26.0821C15.4706 26.8213 14 33.1373 14 33.1373H34C34 33.1373 32.7369 26.6701 30.6781 26.0821Z"
+                fill="#FFCC07" />
+            </svg>
+
+          </a>
+          <div class="header__user-data">
+            <span class="header__user-id">id 27896</span>
+            <span class="header__user-name">Константин К.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="lang">
+    <button class="lang-button active-lang btn-reset">RU</button>
+    <span>|</span>
+    <button class="lang-button btn-reset">EN</button>
+  </div>
+</div>
+
+<body>
+  <main>
+    <section>
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h1 class="hero__title">о фестивале</h1>
+            <picture>
+              <source media="(max-width: 1920px) and (min-width: 769px)"
+                  srcset="./img/festival/slide.webp">
+              <source media="(max-width: 768px) and (min-width: 577px)"
+                  srcset="./img/festival/slide-768.webp">
+                  <source media="(max-width: 576px)"
+                  srcset="./img/festival/slide-576.webp">
+              <img class="hero__img" src="./img/festival/slide.jpg" alt="photo">
+            </picture>
+          </div>
+          <div class="carousel-item">
+            <h1 class="hero__title">о фестивале</h1>
+            <picture>
+              <source media="(max-width: 1920px) and (min-width: 769px)"
+                  srcset="./img/festival/slide.webp">
+              <source media="(max-width: 768px) and (min-width: 576px)"
+                  srcset="./img/festival/slide-768.webp">
+                  <source media="(max-width: 576px)"
+                  srcset="./img/festival/slide-576.webp">
+              <img class="hero__img" src="./img/festival/slide.jpg" alt="photo">
+          </picture>
+          </div>
+          <div class="carousel-item">
+            <h1 class="hero__title">о фестивале</h1>
+            <picture>
+              <source media="(max-width: 1920px) and (min-width: 769px)"
+                  srcset="./img/festival/slide.webp">
+              <source media="(max-width: 768px) and (min-width: 576px)"
+                  srcset="./img/festival/slide-768.webp">
+                  <source media="(max-width: 576px)"
+                  srcset="./img/festival/slide-576.webp">
+              <img class="hero__img" src="./img/festival/slide.jpg" alt="photo">
+          </picture>
+          </div>
+          <div class="carousel-item">
+            <h1 class="hero__title">о фестивале</h1>
+            <picture>
+              <source media="(max-width: 1920px) and (min-width: 769px)"
+                  srcset="./img/festival/slide.webp">
+              <source media="(max-width: 768px) and (min-width: 576px)"
+                  srcset="./img/festival/slide-768.webp">
+                  <source media="(max-width: 576px)"
+                  srcset="./img/festival/slide-576.webp">
+              <img class="hero__img" src="./img/festival/slide.jpg" alt="photo">
+          </picture>
+          </div>
+          <div class="carousel-item">
+            <h1 class="hero__title">о фестивале</h1>
+            <picture>
+              <source media="(max-width: 1920px) and (min-width: 769px)"
+                  srcset="./img/festival/slide.webp">
+              <source media="(max-width: 768px) and (min-width: 576px)"
+                  srcset="./img/festival/slide-768.webp">
+                  <source media="(max-width: 576px)"
+                  srcset="./img/festival/slide-576.webp">
+              <img class="hero__img" src="./img/festival/slide.jpg" alt="photo">
+          </picture>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section class="festival">
+      <div class="container">
+        <h2 class="festival__title">Международный фестиваль бега “мир”<br> rosa run</h2>
+        <p class="festival__text">
+          Бег и фан — то, что уже восьмой год подряд собирает тысячи спортсменов и их болельщиков со всех<br> уголков
+          нашей страны на горном курорте “Роза Хутор”.<br>
+          «Роза хутор» — это круглогодичный горный курорт, расположенный в 60 минутах езды от аэропорта в<br> Сочи.<br>
+          Это уникальное место для активного летнего отдыха.<br>
+          Сделай фото на фоне горных пейзажей на обзорной площадке Роза Пик на высоте 2 320 метров над<br> уровнем моря,
+          посети природный Парк водопадов «Менделиха», пройди несколько маршрутов в самом<br> высокогорном веревочном
+          парке, отправляйся на велотрассу для маунтинбайка. Также тебя ждут<br> бесплатные фитнес-тренировки на свежем
+          воздухе и многое другое.<br>
+          Скучать не придется!
+        </p>
+      </div>
+    </section>
+    <section class="pills">
+      <div class="container">
+        <div class="overflow">
+          <ul class="nav nav-pills pills__pills list-reset" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="pills__btn btn-reset active" id="pills-2022-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-2022" type="button" role="tab" aria-controls="pills-2022"
+                aria-selected="true">2022</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="pills__btn btn-reset" id="pills-2021-tab" data-bs-toggle="pill" data-bs-target="#pills-2021"
+                type="button" role="tab" aria-controls="pills-2021" aria-selected="false">2021</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="pills__btn btn-reset" id="pills-2020-tab" data-bs-toggle="pill" data-bs-target="#pills-2020"
+                type="button" role="tab" aria-controls="pills-2020" aria-selected="false">2020</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="pills__btn btn-reset" id="pills-2019-tab" data-bs-toggle="pill" data-bs-target="#pills-2019"
+                type="button" role="tab" aria-controls="pills-2019" aria-selected="false">2019</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="pills__btn btn-reset" id="pills-2018-tab" data-bs-toggle="pill" data-bs-target="#pills-2018"
+                type="button" role="tab" aria-controls="pills-2018" aria-selected="false">2018</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="pills__btn btn-reset" id="pills-2018-tab" data-bs-toggle="pill" data-bs-target="#pills-2018"
+                type="button" role="tab" aria-controls="pills-2018" aria-selected="false">2018</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="pills__btn btn-reset" id="pills-2017-tab" data-bs-toggle="pill" data-bs-target="#pills-2017"
+                type="button" role="tab" aria-controls="pills-2017" aria-selected="false">2017</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="pills__btn btn-reset" id="pills-2016-tab" data-bs-toggle="pill" data-bs-target="#pills-2016"
+                type="button" role="tab" aria-controls="pills-2016" aria-selected="false">2016</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-2022" role="tabpanel" aria-labelledby="pills-2022-tab">
+          <div class="container">
+            <p class="pills__text">“Музыка нас связала” — тема фестиваля ROSA RUN 2022. 4 дня участники погружались в<br>
+              разные музыкальные направления</p>
+          </div>
+          <div class="pills__block">
+            <div class="container">
+              <div class="pills__flexbox flexbox">
+                <div class="pills__left">
+                  <div class="pills__name">
+                    <div class="pills__name-text">
+                      <span class="pills__day">ДЕНЬ 1</span>
+                      <span class="pills__date">01.05.2022</span>
+                      <p class="pills__name-title">ROSA peak</p>
+                    </div>
+                    <div class="pills__name-icon">
+                      <svg class="yellow-squad" width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.101074" y="0.87265" width="52" height="52" rx="4"
+                          transform="rotate(-0.066925 0.101074 0.87265)" fill="#FFCC07" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M21.0337 17.4303C21.4734 16.987 22.1872 16.9862 22.628 17.4284L32.004 26.8354L22.65 36.2643C22.2103 36.7075 21.4965 36.7084 21.0557 36.2661C20.6149 35.8239 20.6141 35.1061 21.0538 34.6628L28.8154 26.8391L21.0356 19.0336C20.5948 18.5914 20.594 17.8735 21.0337 17.4303Z"
+                          fill="black" />
+                      </svg>
+
+                    </div>
+                  </div>
+                  <p class="pills__left-text">
+                    1 мая состоялся забег на вершину Роза Пик - ROSA PEAK. Длина маршрута составила 7 км со стартом на
+                    Розе Плато<br> и набором высоты более 1000 метров. В этом году на трассе было много снега и туман,
+                    что еще больше усложнило<br> задачу участникам, но и сделало маршрут более интересным.
+                  </p>
+                </div>
+                <div class="pills__right">
+                  <span class="pills__right-text">
+                    Победители:
+
+
+                  </span>
+                  <span class="pills__right-text-2">Филиппов Никита 01:00:22</span>
+                  <span class="pills__right-text-2">Овчинникова Арина 01:07:13.</span>
+                  <span class="pills__right-text-3">
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.8994 17.0607C19.9019 19.2698 18.1132 21.0628 15.904 21.0653C13.6949 21.0679 11.9019 19.2792 11.8994 17.07C11.8968 14.8609 13.6855 13.0679 15.8947 13.0653C18.1038 13.0628 19.8968 14.8515 19.8994 17.0607Z"
+                        fill="#FFCC07" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M9.85018 7.07241L12.1348 4.56974L19.6348 4.56098L21.9252 7.0583L25.8877 7.05367C27.2627 7.05207 28.389 8.17575 28.3906 9.55075L28.4081 24.5507C28.4097 25.9257 27.286 27.0521 25.911 27.0537L5.91105 27.077C4.53605 27.0786 3.40973 25.9549 3.40813 24.5799L3.39061 9.57995C3.389 8.20495 4.51268 7.07864 5.88768 7.07703L9.85018 7.07241ZM9.64936 17.0726C9.65339 20.5226 12.4567 23.3194 15.9067 23.3153C19.3567 23.3113 22.1534 20.508 22.1494 17.058C22.1453 13.608 19.3421 10.8113 15.8921 10.8154C12.4421 10.8194 9.64533 13.6226 9.64936 17.0726Z"
+                        fill="#FFCC07" />
+                    </svg>
+                    Фотографии участников
+                  </span>
+                  <button class="yellow-btn pills__button btn-reset">результаты</button>
+                </div>
+              </div>
+              <div class="pills__grid">
+                <div class="pills__grid-image-1">
+                  <picture>
+                    <source srcset="./img/festival/1.webp">
+                    <img class="pilss__grid-image" src="./img/festival/1.jpg" alt="photo">
+                  </picture>
+                  
+                </div>
+                <div class="pills__grid-image-2">
+                  <picture>
+                    <source srcset="./img/festival/2.webp">
+                    <img class="pilss__grid-image" src="./img/festival/2.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-3">
+                  <picture>
+                    <source srcset="./img/festival/3.webp">
+                    <img class="pilss__grid-image" src="./img/festival/3.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-4">
+                  <picture>
+                    <source srcset="./img/festival/4.webp">
+                    <img class="pilss__grid-image" src="./img/festival/4.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-5">
+                  <picture>
+                    <source srcset="./img/festival/5.webp">
+                    <img class="pilss__grid-image" src="./img/festival/5.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-6">
+                  <picture>
+                    <source srcset="./img/festival/6.webp">
+                    <img class="pilss__grid-image" src="./img/festival/6.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-7">
+                  <picture>
+                    <source srcset="./img/festival/7.webp">
+                    <img class="pilss__grid-image" src="./img/festival/7.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-8">
+                  <picture>
+                    <source srcset="./img/festival/8.webp">
+                    <img class="pilss__grid-image" src="./img/festival/8.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-9">
+                  <picture>
+                    <source srcset="./img/festival/9.webp">
+                    <img class="pilss__grid-image" src="./img/festival/9.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-10">
+                  <picture>
+                    <source srcset="./img/festival/8.webp">
+                    <img class="pilss__grid-image" src="./img/festival/8.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-11">
+                  <picture>
+                    <source srcset="./img/festival/10.webp">
+                    <img class="pilss__grid-image" src="./img/festival/10.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-12">
+                  <picture>
+                    <source srcset="./img/festival/11.webp">
+                    <img class="pilss__grid-image" src="./img/festival/11.jpg" alt="photo">
+                  </picture>
+                </div>
+                <div class="pills__grid-image-13">
+                  <picture>
+                    <source srcset="./img/festival/12.webp">
+                    <img class="pilss__grid-image" src="./img/festival/12.jpg" alt="photo">
+                  </picture>
+                </div>
+              </div>
+              <button class="empty-button show-more btn-reset">показать еще</button>
+            </div>
+          </div>
+          </div>
+          <div class="tab-pane fade" id="pills-2021" role="tabpanel" aria-labelledby="pills-2021-tab">
+            <div class="container">
+              123
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-2020" role="tabpanel" aria-labelledby="pills-2020-tab">
+            <div class="container">
+              123
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-2019" role="tabpanel" aria-labelledby="pills-2019-tab">
+            <div class="container">
+              123
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-2018" role="tabpanel" aria-labelledby="pills-2018-tab">
+            <div class="container">
+              123
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-2017" role="tabpanel" aria-labelledby="pills-2017-tab">
+            <div class="container">
+              123
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-2016" role="tabpanel" aria-labelledby="pills-2016-tab">
+            <div class="container">
+              123
+            </div>
+          </div>
+        </div>
+
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__flexbox flexbox">
+        <nav class="footer__nav">
+          <ul class="footer__list list-reset">
+            <li class="footer__item"><a href="#" aria-label="СОРЕВНОВАНИЯ" class="footer__link">СОРЕВНОВАНИЯ</a></li>
+            <li class="footer__item"><a href="./festival.html" aria-label="о фестивале" class="footer__link">о фестивале</a></li>
+            <li>
+              <ul class="footer__sublist list-reset">
+                <li class="footer__item"><a href="#" aria-label="История фестиваля" class="footer__link footer__link_lowerCase">История фестиваля</a></li>
+                <li class="footer__item"><a href="#" aria-label="Результаты" class="footer__link footer__link_lowerCase">Результаты</a></li>
+                <li class="footer__item"><a href="#" aria-label="Фотографии" class="footer__link footer__link_lowerCase">Фотографии</a></li>
+              </ul>
+            </li>
+            <li class="footer__item"><a href="#" aria-label="где жить" class="footer__link">где жить</a></li>
+            <li class="footer__item"><a href="#" aria-label="спецпредложения" class="footer__link">спецпредложения</a></li>
+            <li class="footer__item"><a href="#" aria-label="сертификаты" class="footer__link">сертификаты</a></li>
+            <li class="footer__item"><a href="#" aria-label="faq" class="footer__link">faq</a></li>
+            <li class="footer__item"><a href="#" aria-label="контакты" class="footer__link">контакты</a></li>
+            <li>
+              <ul class="footer__sublist list-reset">
+                <li class="footer__item"><a href="#" aria-label="Договор оферты" class="footer__link footer__link_lowerCase">Договор оферты</a></li>
+                <li class="footer__item"><a href="#" aria-label="Политика конфиденциальности" class="footer__link footer__link_lowerCase">Политика конфиденциальности</a></li>
+              </ul>
+            </li>
+    
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <span class="footer__text">Контакты</span>
+          <span class="footer__text-2">Партнерам</span>
+          <a class="footer__mail" href="mailto:partners@rosarun.ru">partners@rosarun.ru</a>
+          <span class="footer__text-2">Аккредитация СМИ</span>
+          <a class="footer__mail" href="mailto:smi@rosarun.ru">smi@rosarun.ru</a>
+          <p class="footer__text-3">
+            Юридический/фактический адрес:<br>
+            129164, г. Москва, Ракетный бульвар,<br> д. 16, этаж 4, офис 401<br>
+            ОГРН: 1167746111191<br>
+            ИНН: 9717014483
+          </p>
+        </div>
+        <div class="footer__form">
+          <p class="footer__form-text">Подписывайтесь на нашу рассылку, чтобы<br> не пропустить что-то важное и интересное!</p>
+          <form class="footer__form-flex"  action="#">
+            <input class="footer__input input" type="email" placeholder="E-mail">
+            <button class="yellow-btn footer__btn btn-reset">подписаться</button>
+          </form>
+          <div class="footer__socials">
+            <a href="#" aria-label="Телеграм">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="4" fill="#FFCC07" />
+                <path
+                  d="M12.8152 19.16L15.2927 25.34L18.5361 22.1067L24.0773 26.5L28 9L8 17.2933L12.8152 19.16ZM22.2924 14.04L16.1652 19.6L15.3993 22.4733L13.9873 18.96L22.2924 14.04Z"
+                  fill="black" />
+              </svg>
+  
+            </a>
+            <a href="#" aria-label="Вконтакте">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="36" height="36" rx="4" fill="#FFCC07" />
+                <path
+                  d="M18.8932 24.5C12.06 24.5 8.1624 19.8078 8 12H11.4229C11.5353 17.7307 14.0587 20.1582 16.0575 20.6587V12H19.2804V16.9424C21.2542 16.7297 23.3279 14.4775 24.0275 12H27.2505C26.7133 15.0531 24.4647 17.3053 22.8657 18.2312C24.4647 18.982 27.0256 20.9464 28 24.5H24.4522C23.6902 22.1226 21.7914 20.2833 19.2804 20.033V24.5H18.8932Z"
+                  fill="black" />
+              </svg>
+  
+            </a>
+            <a class="footer__mail-2" aria-label="Отправить письмо @ROSARUNFEST" href="mailto:">@ROSARUNFEST</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
