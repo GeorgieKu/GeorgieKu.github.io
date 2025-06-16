@@ -25,9 +25,21 @@
      let socialsBtn = document.getElementById('socialsBtn');
      let socials = document.getElementById('socials');
 
-     socialsBtn.addEventListener('click', function () {
+     socialsBtn.addEventListener('click', function (event) {
+         event.stopPropagation(); 
          socials.classList.toggle('socials-open');
-     })
+     });
+
+    
+     socials.addEventListener('click', function (event) {
+         event.stopPropagation();
+     });
+
+
+     document.addEventListener('click', function () {
+         socials.classList.remove('socials-open');
+     });
+
 
 
      let compassTop = document.querySelector('.compass__top');
