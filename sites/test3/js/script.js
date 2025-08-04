@@ -346,7 +346,8 @@ function openDonateModal() {
     })
     donateModal.style.display = 'block';
     document.querySelector('body').style.overflow = 'hidden'
-    changeBurger()
+    changeBurger();
+    scrollToTop()
 }
 
 const buttons = document.querySelectorAll('.donate-modal__flex button');
