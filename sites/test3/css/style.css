@@ -898,6 +898,9 @@ button {
   .main {
     padding-bottom: 100px;
   }
+  .modal {
+    max-height: calc(100svh - 118px);
+  }
   .modal h2 {
     font-size: 11px;
   }
@@ -1346,20 +1349,6 @@ summary {
   border-radius: 14px;
   width: 100%;
 }
-.registration-form .registration-form__form button {
-  font-family: Actay Wide;
-  font-weight: 700;
-  font-style: Bold;
-  font-size: 16px;
-  leading-trim: NONE;
-  line-height: 100%;
-  letter-spacing: 0%;
-  color: #fff;
-  padding: 12.5px 10px;
-  border: 1px solid var(--tennis-color);
-  border-radius: 16px;
-  min-width: 48px;
-}
 .registration-form .registration-form__form .active {
   background-color: var(--tennis-color);
   color: #141414;
@@ -1406,6 +1395,18 @@ summary {
   border: 1px solid var(--tennis-color);
   border-radius: 16px;
   min-width: 48px;
+}
+
+@media (max-width: 576px) {
+  .block-text-btn button {
+    font-size: 10px;
+  }
+  .btns-block .btns-flex {
+    flex-wrap: wrap;
+  }
+  .btns-block .btns-flex-wrap {
+    width: unset;
+  }
 }
 .registration {
   padding-bottom: 30px;
@@ -1978,6 +1979,7 @@ summary {
   margin-bottom: 13px;
   width: -moz-max-content;
   width: max-content;
+  margin: 0 auto 13px;
 }
 .donate-modal .donate-modal__flex button {
   padding: 10px;
@@ -2062,6 +2064,13 @@ summary {
   letter-spacing: 0%;
   color: #fff;
   margin-bottom: 15px;
+}
+
+@media (max-width: 576px) {
+  .donate-modal .donate-modal__flex button {
+    font-size: 12px;
+    padding: 9px;
+  }
 }
 .faq-modal .faq-modal__list {
   display: flex;
@@ -3235,6 +3244,13 @@ summary {
 
 .inner-content.active {
   display: block;
+}
+
+@media (max-width: 576px) {
+  .rating-modal .btns-block button {
+    padding: 9px 10px;
+    font-size: 9px;
+  }
 }
 .result-match-modal h3 {
   font-family: Actay Wide;

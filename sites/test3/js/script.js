@@ -427,7 +427,8 @@ if (footerBall) {
         let profileContent = document.querySelector('.profile-content');
         let mainContent = document.querySelector('.main-content')
         profileContent.style.display = 'block';
-        mainContent.style.display = 'none'
+        mainContent.style.display = 'none';
+           header.classList.remove("open");
     }
 let inviteMatchModal = document.getElementById('inviteMatchModal');
 
