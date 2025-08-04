@@ -228,14 +228,13 @@ if (courtSwiper) {
 const slider = document.getElementById('slider-1');
 const minValueEl = document.getElementById('min-value');
 const maxValueEl = document.getElementById('max-value');
-const currentValueEl = document.getElementById('current-value');
 
 if (slider) {
     noUiSlider.create(slider, {
-        start: 1800,
-        connect: [true, false],
+        start: [1500, 4000], 
+        connect: [false, true, false], 
         range: {
-            'min': 1583,
+            'min': 1500,
             'max': 4000
         },
         step: 1,
@@ -244,7 +243,13 @@ if (slider) {
             from: value => Number(value)
         }
     });
+
+    slider.noUiSlider.on('update', function(values, handle) {
+        minValueEl.textContent = values[0]; 
+        maxValueEl.textContent = values[1]; 
+    });
 }
+
 
 
 
