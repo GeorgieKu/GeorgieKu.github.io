@@ -34,8 +34,9 @@ window.addEventListener('load', function () {
     }
 });
 
-// Обработчик клика по кнопке accept
-acceptBtn.addEventListener('click', function () {
-    setCookie('modalAccepted', 'true', 30);
-    modal.close();
-});
+if (acceptBtn) {
+    acceptBtn.addEventListener('click', function () {
+        setCookie('modalAccepted', 'true', 30);
+        modal.close();
+    });
+}
