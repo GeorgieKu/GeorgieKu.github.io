@@ -1,933 +1,1076 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="ru">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Din omfattende guide til online spil i Danmark 2025. Ekspertanmeldelser, vurderinger og de seneste nyheder fra branchen om danske online casinoer." />
-  <meta name="keywords"
-    content="danske casinoer, online spil, casino anmeldelser, spillevejledning, online casino DK, casino vurderinger" />
-  <meta name="author" content="v2-Casino Best On" />
-  <title>2025 Guide til Danske Online Casinoer - Casino Best On</title>
-  <link rel="stylesheet" href="css-v2/style-v2.css" />
-  <link rel="icon" type="image/png" href="assets-v2/v2-logo.jpg" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Интертулмаш">
+    <!-- <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preload" href="./fonts/Mulish-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Mulish-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Mulish-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Mulish-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Mulish-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Jost-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <title>Интертулмаш</title>
 </head>
 
 <body>
-  <div>
-    <div>
-
-      <div class="v2-popup-overlay" id="agePopup">
-        <div class="v2-popup-content">
-          <div class="v2-popup-icon">
-            <svg  width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="70" cy="70" r="60" stroke="#EF4444" stroke-width="8" />
-              <text x="70" y="90" font-size="52" font-weight="bold" fill="#EF4444" text-anchor="middle"
-                font-family="Inter">
-                18+
-              </text>
-            </svg>
-          </div>
-          <h2>Ansvarligt spil</h2>
-          <p>Bekræft venligst, at du opfylder alderskravet for at fortsætte</p>
-          <div class="v2-popup-buttons">
-            <button class="v2-btn-popup-confirm" id="confirmAge">
-              Ja, jeg er over 18
-            </button>
-            <button class="v2-btn-popup-decline" id="declineAge">
-              Nej, tag mig tilbage
-            </button>
-          </div>
-        </div>
-      </div>
-
-
-      <header class="v2-header">
-        <div class="v2-container">
-          <div class="v2-header-wrapper">
-            <a href="index.html" class="v2-logo">
-              <div class="v2-logo-text">
-                <span class="v2-logo-casino">CASINO</span>
-                <span class="v2-logo-best">BEST ON</span>
-              </div>
+    <header class="header">
+    <div class="container">
+        <div class="header__flex">
+            <a href="./index.html" class="header__logo logo" aria-label="Перейти на главную">
+                <img сlass="logo__img" src="./img/svg/logo.svg" alt="лого">
             </a>
-            <nav class="v2-nav">
-              <ul class="v2-nav-menu" id="navMenu">
-                <li><a href="index.html" class="v2-nav-link v2-active">Hjem</a></li>
-                <li>
-                  <a href="v2-rating/index.html" class="v2-nav-link">Vurderingskriterier</a>
-                </li>
-                <li>
-                  <a href="v2-responsible/index.html" class="v2-nav-link">Læs Retningslinjer</a>
-                </li>
-                <li><a href="index.html#about" class="v2-nav-link">Om Os</a></li>
-                <li><a href="index.html#contact" class="v2-nav-link">Kontakt</a></li>
-              </ul>
-              <button class="v2-burger-menu" id="burgerMenu" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
-            </nav>
-          </div>
-        </div>
-      </header>
+            <form action="#" class="header__form">
+                <input type="text" class="header__input" placeholder="Например, штангенциркуль">
+                <svg class="header__icon" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.2502 19.2502L14.9072 14.9072M14.9072 14.9072C15.6501 14.1643 16.2394 13.2824 16.6414 12.3118C17.0435 11.3411 17.2504 10.3008 17.2504 9.25021C17.2504 8.1996 17.0435 7.15929 16.6414 6.18866C16.2394 5.21803 15.6501 4.33609 14.9072 3.59321C14.1643 2.85032 13.2824 2.26103 12.3118 1.85898C11.3411 1.45693 10.3008 1.25 9.25021 1.25C8.1996 1.25 7.15929 1.45693 6.18866 1.85898C5.21803 2.26103 4.33609 2.85032 3.59321 3.59321C2.09288 5.09354 1.25 7.12842 1.25 9.25021C1.25 11.372 2.09288 13.4069 3.59321 14.9072C5.09354 16.4075 7.12842 17.2504 9.25021 17.2504C11.372 17.2504 13.4069 16.4075 14.9072 14.9072Z"
+                        stroke="#9FB1BC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
 
-
-      <section class="v2-hero" id="home">
-        <div class="v2-container">
-          <div class="v2-hero-wrapper">
-            <div class="v2-hero-content">
-              <h1 class="v2-hero-title">2025 Guide til Online Kasinoer i Danmark</h1>
-              <p class="v2-hero-description">
-                En komplet oversigt over online spil i Danmark 2025. Vi præsenterer anmeldelser, vurderinger og de nyeste opdateringer indenfor branchen.﻿
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section class="v2-casinos-section" id="rating">
-        <div class="v2-container">
-          <div class="v2-casinos-grid">
-
-            <div class="v2-casino-card">
-              <div class="v2-casino-header v2-casino-header1">
-
-
-                <div class="v2-casino-rating-bottom">
-                  <div class="v2-stars-rating">
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <g clip-path="url(#paint0_angular_15_38_clip_path)" data-figma-skip-parse="true">
-                        <g transform="matrix(0 0.0241545 -0.0241545 0 10.3952 -4.30148)">
-                          <foreignObject x="-1027.4" y="-1027.4" width="2054.79" height="2054.79">
-                            <div xmlns="http://www.w3.org/1999/xhtml" style="
-                              background: conic-gradient(
-                                from 90deg,
-                                rgba(249, 222, 49, 1) 0deg,
-                                rgba(217, 217, 217, 1) 360deg
-                              );
-                              height: 100%;
-                              width: 100%;
-                              opacity: 1;
-                            "></div>
-                          </foreignObject>
-                        </g>
-                      </g>
-                      <path
-                        d="M10.3952 0L12.6239 6.85904H19.8359L14.0013 11.0982L16.2299 17.9572L10.3952 13.7181L4.5606 17.9572L6.78923 11.0982L0.954587 6.85904H8.16661L10.3952 0Z"
-                        data-figma-gradient-fill='{"type":"GRADIENT_ANGULAR","stops":[{"color":{"r":0.97647058963775635,"g":0.87058824300765991,"b":0.19215686619281769,"a":1.0},"position":0.0},{"color":{"r":0.85098040103912354,"g":0.85098040103912354,"b":0.85098040103912354,"a":1.0},"position":1.0}],"stopsVar":[{"color":{"r":0.97647058963775635,"g":0.87058824300765991,"b":0.19215686619281769,"a":1.0},"position":0.0},{"color":{"r":0.85098040103912354,"g":0.85098040103912354,"b":0.85098040103912354,"a":1.0},"position":1.0}],"transform":{"m00":1.6182811790914006e-14,"m01":-48.308929443359375,"m02":34.549705505371094,"m10":48.308929443359375,"m11":2.9580688094989595e-15,"m12":-28.455945968627930},"opacity":1.0,"blendMode":"NORMAL","visible":true}' />
-                      <defs>
-                        <clipPath id="paint0_angular_15_38_clip_path">
-                          <path
-                            d="M10.3952 0L12.6239 6.85904H19.8359L14.0013 11.0982L16.2299 17.9572L10.3952 13.7181L4.5606 17.9572L6.78923 11.0982L0.954587 6.85904H8.16661L10.3952 0Z" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <span class="v2-rating-number">4.5/5</span>
-                </div>
-              </div>
-
-              <div class="v2-casino-content">
-                <h3 class="v2-casino-name">Betinia Casino</h3>
-
-              </div>
-
-              <div class="v2-casino-bonus-wrapper">
-                <div class="v2-casino-bonus-amount">
-                  100% up to
-                  1.000 KR
-                  Welcome Bonus
-                </div>
-
-                <div class="v2-bonus-terms-trigger">
-                  <span class="v2-terms-link">T&C gælder</span>
-                  <div class="v2-bonus-terms-tooltip">
-                    <div class="v2-tooltip-arrow"></div>
-                    <p>
-                      18+ | New players only. | Min. deposit: 100 kr | Max. bonus: 1.000 kr. | Wagering reqs: 5x deposit
-                      +
-                      bonus within 60 days | Min. odds: 1,50 | Self exclude via www.ROFUS.nu | Get advice via
-                      StopSpillet.dk.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="v2-casino-action">
-                <a href="https://betinia.dk/dk/?utm_source=partner&utm_medium=spring-roll.com"
-                  class="v2-btn-visit-casino">Indløs bonus</a>
-
-                <a class="v2-btn-verif-casino"
-                  href="https://play.google.com/store/apps/details?id=com.romixltd.betinia&hl=da">Verificerede
-                  anmeldelser</a>
-
-                <p class="v2-casino-terms">
-                  Vores hjemmeside kan modtage provision fra partner­virksomheder.
-                  Denne oplysning gives udeldkkende af hensyn til gennemsigtighed
-                  og påvirker ikke uafhængigheden af vores anmeldelser. Indholdet
-                  er kun beregnet til brugere over 18 år. Spil ansvarligt.
-                </p>
-              </div>
-            </div>
-
-
-            <div class="v2-casino-card">
-              <div class="v2-casino-header v2-casino-header2">
-
-
-                <div class="v2-casino-rating-bottom">
-                  <div class="v2-stars-rating">
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <g clip-path="url(#paint0_angular_15_38_clip_path)" data-figma-skip-parse="true">
-                        <g transform="matrix(0 0.0241545 -0.0241545 0 10.3952 -4.30148)">
-                          <foreignObject x="-1027.4" y="-1027.4" width="2054.79" height="2054.79">
-                            <div xmlns="http://www.w3.org/1999/xhtml" style="
-                              background: conic-gradient(
-                                from 90deg,
-                                rgba(249, 222, 49, 1) 0deg,
-                                rgba(217, 217, 217, 1) 360deg
-                              );
-                              height: 100%;
-                              width: 100%;
-                              opacity: 1;
-                            "></div>
-                          </foreignObject>
-                        </g>
-                      </g>
-                      <path
-                        d="M10.3952 0L12.6239 6.85904H19.8359L14.0013 11.0982L16.2299 17.9572L10.3952 13.7181L4.5606 17.9572L6.78923 11.0982L0.954587 6.85904H8.16661L10.3952 0Z"
-                        data-figma-gradient-fill='{"type":"GRADIENT_ANGULAR","stops":[{"color":{"r":0.97647058963775635,"g":0.87058824300765991,"b":0.19215686619281769,"a":1.0},"position":0.0},{"color":{"r":0.85098040103912354,"g":0.85098040103912354,"b":0.85098040103912354,"a":1.0},"position":1.0}],"stopsVar":[{"color":{"r":0.97647058963775635,"g":0.87058824300765991,"b":0.19215686619281769,"a":1.0},"position":0.0},{"color":{"r":0.85098040103912354,"g":0.85098040103912354,"b":0.85098040103912354,"a":1.0},"position":1.0}],"transform":{"m00":1.6182811790914006e-14,"m01":-48.308929443359375,"m02":34.549705505371094,"m10":48.308929443359375,"m11":2.9580688094989595e-15,"m12":-28.455945968627930},"opacity":1.0,"blendMode":"NORMAL","visible":true}' />
-                      <defs>
-                        <clipPath id="paint0_angular_15_38_clip_path">
-                          <path
-                            d="M10.3952 0L12.6239 6.85904H19.8359L14.0013 11.0982L16.2299 17.9572L10.3952 13.7181L4.5606 17.9572L6.78923 11.0982L0.954587 6.85904H8.16661L10.3952 0Z" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <span class="v2-rating-number">4.3/5</span>
-                </div>
-              </div>
-
-              <div class="v2-casino-content">
-                <h3 class="v2-casino-name">ComeOn!</h3>
-
-              </div>
-
-              <div class="v2-casino-bonus-wrapper">
-                <div class="v2-casino-bonus-amount">
-                  100% op til 1.000 kroner til casino eller<br>
-                  100% op til 1.000 kroner til sport
-                </div>
-
-                <div class="v2-bonus-terms-trigger">
-                  <span class="v2-terms-link">T&C gælder</span>
-                  <div class="v2-bonus-terms-tooltip">
-                    <div class="v2-tooltip-arrow"></div>
-                    <p>
-                      18+. Only new customers. Min. Revenue: Casino 10x (deposit + bonus). Min. turnover: Sports 5x,
-                      min.
-                      odds 1.8, min. 1 line (deposit + bonus) Min. deposit: 100 kr. Max. deposit: 1000 kr. The maximum
-                      wager allowed when using your bonus funds in the Casino is £ 8 per spin or hand. Failure to do so
-                      will risk losing any winnings. The revenue requirement must be met before you can raise your
-                      funds.
-                      Days to play through your bonus: 60. Play responsibly. Self-exclusion via ROFUS. Contact the
-                      Danish
-                      Gaming Authority's helpline at StopSpillet.dk
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="v2-casino-action">
-                <a href="https://www.comeon.com/da?utm_source=partner&utm_medium=spring-roll.com"
-                  class="v2-btn-visit-casino">Indløs bonus</a>
-
-                <a class="v2-btn-verif-casino"
-                  href="https://play.google.com/store/apps/details?id=com.cogaming.comeoncasino.sga&hl=da">Verificerede
-                  anmeldelser</a>
-
-                <p class="v2-casino-terms">
-                  Vores hjemmeside kan modtage provision fra partner­virksomheder.
-                  Denne oplysning gives udeldkkende af hensyn til gennemsigtighed
-                  og påvirker ikke uafhængigheden af vores anmeldelser. Indholdet
-                  er kun beregnet til brugere over 18 år. Spil ansvarligt.
-                </p>
-              </div>
-            </div>
-
-
-            <div class="v2-casino-card">
-              <div class="v2-casino-header v2-casino-header3">
-
-
-                <div class="v2-casino-rating-bottom">
-                  <div class="v2-stars-rating">
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <g clip-path="url(#paint0_angular_15_38_clip_path)" data-figma-skip-parse="true">
-                        <g transform="matrix(0 0.0241545 -0.0241545 0 10.3952 -4.30148)">
-                          <foreignObject x="-1027.4" y="-1027.4" width="2054.79" height="2054.79">
-                            <div xmlns="http://www.w3.org/1999/xhtml" style="
-                              background: conic-gradient(
-                                from 90deg,
-                                rgba(249, 222, 49, 1) 0deg,
-                                rgba(217, 217, 217, 1) 360deg
-                              );
-                              height: 100%;
-                              width: 100%;
-                              opacity: 1;
-                            "></div>
-                          </foreignObject>
-                        </g>
-                      </g>
-                      <path
-                        d="M10.3952 0L12.6239 6.85904H19.8359L14.0013 11.0982L16.2299 17.9572L10.3952 13.7181L4.5606 17.9572L6.78923 11.0982L0.954587 6.85904H8.16661L10.3952 0Z"
-                        data-figma-gradient-fill='{"type":"GRADIENT_ANGULAR","stops":[{"color":{"r":0.97647058963775635,"g":0.87058824300765991,"b":0.19215686619281769,"a":1.0},"position":0.0},{"color":{"r":0.85098040103912354,"g":0.85098040103912354,"b":0.85098040103912354,"a":1.0},"position":1.0}],"stopsVar":[{"color":{"r":0.97647058963775635,"g":0.87058824300765991,"b":0.19215686619281769,"a":1.0},"position":0.0},{"color":{"r":0.85098040103912354,"g":0.85098040103912354,"b":0.85098040103912354,"a":1.0},"position":1.0}],"transform":{"m00":1.6182811790914006e-14,"m01":-48.308929443359375,"m02":34.549705505371094,"m10":48.308929443359375,"m11":2.9580688094989595e-15,"m12":-28.455945968627930},"opacity":1.0,"blendMode":"NORMAL","visible":true}' />
-                      <defs>
-                        <clipPath id="paint0_angular_15_38_clip_path">
-                          <path
-                            d="M10.3952 0L12.6239 6.85904H19.8359L14.0013 11.0982L16.2299 17.9572L10.3952 13.7181L4.5606 17.9572L6.78923 11.0982L0.954587 6.85904H8.16661L10.3952 0Z" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <span class="v2-rating-number">4.1/5</span>
-                </div>
-              </div>
-
-              <div class="v2-casino-content">
-                <h3 class="v2-casino-name">expekt</h3>
-
-              </div>
-
-              <div class="v2-casino-bonus-wrapper">
-                <div class="v2-casino-bonus-amount">
-                  FÅ 50 GYLDNE FREESPINS<br>
-                  Opret konto og få dine freespins nu!<br>
-                  Opret Konto
-                </div>
-
-                <div class="v2-bonus-terms-trigger">
-                  <span class="v2-terms-link">T&C gælder</span>
-                  <div class="v2-bonus-terms-tooltip">
-                    <div class="v2-tooltip-arrow"></div>
-                    <p>
-                      18+ | Kun nye spillere. | Regler og vilkår gælder. | Spil ansvarligt. | Selvudeluk via ROFUS.nu |
-                      Kontakt Spillemyndighedens hjælpelinje på StopSpillet.dk | Indbetal præcis 100 kr. omsæt 500 kr.
-                      og
-                      få 50 freespins | Omsætning på x5 er gældende på alle spilleautomater | Freespins er til spillet
-                      Gold Blitz | Freespins har en værdi på 2 kr. per spin | Du har 14 dage til at aktivere tilbuddet
-                      under “mine tilbud". Freespins udløber 72 timer efter aktivering.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="v2-casino-action">
-                <a href="https://promo.expekt.dk/dk/casino-standard?utm_source=partner&utm_medium=spring-roll.com"
-                  class="v2-btn-visit-casino">Indløs bonus</a>
-
-                <a class="v2-btn-verif-casino"
-                  href="https://play.google.com/store/search?q=expekt&c=apps&hl=da">Verificerede
-                  anmeldelser</a>
-
-                <p class="v2-casino-terms">
-                  Vores hjemmeside kan modtage provision fra partner­virksomheder.
-                  Denne oplysning gives udeldkkende af hensyn til gennemsigtighed
-                  og påvirker ikke uafhængigheden af vores anmeldelser. Indholdet
-                  er kun beregnet til brugere over 18 år. Spil ansvarligt.
-                </p>
-              </div>
-            </div>
-
-
-            <div class="v2-casino-card">
-              <div class="v2-casino-header v2-casino-header4">
-
-
-                <div class="v2-casino-rating-bottom">
-                  <div class="v2-stars-rating">
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <g clip-path="url(#paint0_angular_15_133_clip_path)" data-figma-skip-parse="true">
-                        <g transform="matrix(0 0.0241545 -0.0241545 0 10.3952 -4.30148)">
-                          <foreignObject x="-1027.4" y="-1027.4" width="2054.79" height="2054.79">
-                            <div xmlns="http://www.w3.org/1999/xhtml" style="
-                              background: conic-gradient(
-                                from 90deg,
-                                rgba(249, 222, 49, 1) 0deg,
-                                rgba(217, 217, 217, 1) 360deg
-                              );
-                              height: 100%;
-                              width: 100%;
-                              opacity: 1;
-                            "></div>
-                          </foreignObject>
-                        </g>
-                      </g>
-                      <path
-                        d="M10.3952 0L12.6239 6.85904H19.8359L14.0013 11.0982L16.2299 17.9572L10.3952 13.7181L4.5606 17.9572L6.78923 11.0982L0.954587 6.85904H8.16661L10.3952 0Z"
-                        data-figma-gradient-fill='{"type":"GRADIENT_ANGULAR","stops":[{"color":{"r":0.97647058963775635,"g":0.87058824300765991,"b":0.19215686619281769,"a":1.0},"position":0.0},{"color":{"r":0.85098040103912354,"g":0.85098040103912354,"b":0.85098040103912354,"a":1.0},"position":1.0}],"stopsVar":[{"color":{"r":0.97647058963775635,"g":0.87058824300765991,"b":0.19215686619281769,"a":1.0},"position":0.0},{"color":{"r":0.85098040103912354,"g":0.85098040103912354,"b":0.85098040103912354,"a":1.0},"position":1.0}],"transform":{"m00":1.6182811790914006e-14,"m01":-48.308929443359375,"m02":34.549705505371094,"m10":48.308929443359375,"m11":2.9580688094989595e-15,"m12":-28.455945968627930},"opacity":1.0,"blendMode":"NORMAL","visible":true}' />
-                      <defs>
-                        <clipPath id="paint0_angular_15_133_clip_path">
-                          <path
-                            d="M10.3952 0L12.6239 6.85904H19.8359L14.0013 11.0982L16.2299 17.9572L10.3952 13.7181L4.5606 17.9572L6.78923 11.0982L0.954587 6.85904H8.16661L10.3952 0Z" />
-                        </clipPath>
-                      </defs>
-                    </svg>
-                  </div>
-                  <span class="v2-rating-number">4.5/5</span>
-                </div>
-              </div>
-
-              <div class="v2-casino-content">
-                <h3 class="v2-casino-name">LeoVegas</h3>
-
-              </div>
-
-              <div class="v2-casino-bonus-wrapper">
-                <div class="v2-casino-bonus-amount">
-                  250 FS
-                  On Gates of LeoVegas 1000
-                </div>
-
-                <div class="v2-bonus-terms-trigger">
-                  <span class="v2-terms-link">T&C gælder</span>
-                  <div class="v2-bonus-terms-tooltip">
-                    <div class="v2-tooltip-arrow"></div>
-                    <p>
-                      18+ | Terms and conditions apply | Play responsibly | Self-exclude at ROFUS.nu | Contact the
-                      gambling authority's helpline at StopSpillet.dk. The campaign is valid from 1.10.2025 to
-                      31.12.2025.
-                      Offer valid only for new customers registered via the correct link. Must be activated under "My
-                      Offers." Deposit 250 DKK, wager 750 DKK on Casino, and get 250 free spins. The free spins are for
-                      the game Gates of Leovegas 1000. Free spins are worth 1 DKK each. You have 72 hours to use your
-                      free
-                      spins after activation.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="v2-casino-action">
-                <a href="https://promo.leovegas.dk/dk/casino_exclusive_woffer?utm_source=partner&utm_medium=spring-roll.com"
-                  class="v2-btn-visit-casino">Indløs bonus</a>
-
-                <a class="v2-btn-verif-casino"
-                  href="https://play.google.com/store/apps/details?id=dk.leovegas&hl=da">Verificerede anmeldelser</a>
-
-                <p class="v2-casino-terms">
-                  Vores hjemmeside kan modtage provision fra partner­virksomheder.
-                  Denne oplysning gives udeldkkende af hensyn til gennemsigtighed
-                  og påvirker ikke uafhængigheden af vores anmeldelser. Indholdet
-                  er kun beregnet til brugere over 18 år. Spil ansvarligt.
-                </p>
-              </div>
-            </div>
-
-
-            <div class="v2-casino-card">
-              <div class="v2-casino-header v2-casino-header5">
-
-
-                <div class="v2-casino-rating-bottom">
-                  <div class="v2-stars-rating">
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M10.2156 0L12.4442 6.85904H19.6562L13.8216 11.0982L16.0502 17.9572L10.2156 13.7181L4.38091 17.9572L6.60955 11.0982L0.774899 6.85904H7.98692L10.2156 0Z"
-                        fill="#D9D9D9" />
-                    </svg>
-                  </div>
-                  <span class="v2-rating-number">4.0/5 </span>
-                </div>
-              </div>
-
-              <div class="v2-casino-content">
-                <h3 class="v2-casino-name">RoyalCasino</h3>
-
-              </div>
-
-              <div class="v2-casino-bonus-wrapper">
-                <div class="v2-casino-bonus-amount">
-                  100% up to
-                  750 KR<br>
-                  Welcome Bonus
-                </div>
-
-                <div class="v2-bonus-terms-trigger">
-                  <span class="v2-terms-link">T&C gælder</span>
-                  <div class="v2-bonus-terms-tooltip">
-                    <div class="v2-tooltip-arrow"></div>
-                    <p>
-                      100% bonus up to 750 Kr on the 1st deposit. Minimum 100 Kr deposit. 10x playthrough requirement,
-                      e.g. 15,000 Kr when using max bonus. Max 100 Kr per effort. Valid for 60 days. Gamble features and
-                      certain games excluded. Breach of terms may result in cancellation of winnings. 21+ Self-exclusion
-                      via ROFUS.nu Contact the Gambling Authority's helpline at StopSpillet.dk
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="v2-casino-action">
-                <a href="https://www.royalcasino.dk/?utm_source=partner&utm_medium=spring-roll.com"
-                  class="v2-btn-visit-casino">Indløs bonus</a>
-
-                <a class="v2-btn-verif-casino"
-                  href="https://play.google.com/store/apps/details?id=com.jack.worldwinpuzzle&hl=da">Verificerede
-                  anmeldelser</a>
-
-                <p class="v2-casino-terms">
-                  Vores hjemmeside kan modtage provision fra partner­virksomheder.
-                  Denne oplysning gives udeldkkende af hensyn til gennemsigtighed
-                  og påvirker ikke uafhængigheden af vores anmeldelser. Indholdet
-                  er kun beregnet til brugere over 18 år. Spil ansvarligt.
-                </p>
-              </div>
-            </div>
-
-
-            <div class="v2-casino-card">
-              <div class="v2-casino-header v2-casino-header6">
-
-
-                <div class="v2-casino-rating-bottom">
-                  <div class="v2-stars-rating">
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M9.92649 0L12.1551 6.85904H19.3671L13.5325 11.0982L15.7611 17.9572L9.92649 13.7181L4.09185 17.9572L6.32048 11.0982L0.485837 6.85904H7.69786L9.92649 0Z"
-                        fill="#F9DE31" />
-                    </svg>
-                    <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-                      <path
-                        d="M10.2156 0L12.4442 6.85904H19.6562L13.8216 11.0982L16.0502 17.9572L10.2156 13.7181L4.38091 17.9572L6.60955 11.0982L0.774899 6.85904H7.98692L10.2156 0Z"
-                        fill="#D9D9D9" />
-                    </svg>
-                  </div>
-                  <span class="v2-rating-number">4.0/5 </span>
-                </div>
-              </div>
-
-              <div class="v2-casino-content">
-                <h3 class="v2-casino-name">Spilleautomaten</h3>
-
-              </div>
-
-              <div class="v2-casino-bonus-wrapper">
-                <div class="v2-casino-bonus-amount">
-                  100% up to
-                  1.000 KR<br />
-                  Welcome Bonus
-                </div>
-
-                <div class="v2-bonus-terms-trigger">
-                  <span class="v2-terms-link">T&C gælder</span>
-                  <div class="v2-bonus-terms-tooltip">
-                    <div class="v2-tooltip-arrow"></div>
-                    <p>
-                      18+ | New players only. | 100% up to 1.000 kr on first deposit. | Self exclude via www.ROFUS.nu |
-                      Get advice via StopSpillet.dk.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="v2-casino-action">
-                <a href="https://www.spilleautomaten.dk/?utm_source=partner&utm_medium=spring-roll.com"
-                  class="v2-btn-visit-casino">Indløs bonus</a>
-
-                <a class="v2-btn-verif-casino"
-                  href="https://play.google.com/store/apps/details?id=com.spilleautomaten&hl=da">Verificerede
-                  anmeldelser</a>
-
-                <p class="v2-casino-terms">
-                  Vores hjemmeside kan modtage provision fra partner­virksomheder.
-                  Denne oplysning gives udeldkkende af hensyn til gennemsigtighed
-                  og påvirker ikke uafhængigheden af vores anmeldelser. Indholdet
-                  er kun beregnet til brugere over 18 år. Spil ansvarligt.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section class="v2-about-section" id="about">
-        <div class="v2-container">
-
-          <div class="v2-affiliate-notice">
-            <p>
-              Vi modtager muligvis kommission via affiliate-partnerskaber, men det påvirker hverken vores uafhængighed eller objektivitet i anmeldelser og anbefalinger. <br>
-              Spil er kun for personer over 18 år. Spil med omtanke. Hvis du oplever problemer, søg hjælp hos pålidelige organisationer som StopSpillet.
-            </p>
-          </div>
-
-
-          <h2 class="v2-section-title">Om Os</h2>
-          <p class="v2-section-subtitle">
-           Vi er et hold af eksperter med mange års erfaring inden for spillebranchen. Vores specialister gennemfører grundige undersøgelser, analyserer information og leverer upartiske anmeldelser for at støtte dig i at træffe velovervejede beslutninger.﻿
-          </p>
-
-
-          <div class="v2-values-grid">
-            <div class="v2-value-item">
-              <div class="v2-value-icon">
-                <img src="assets-v2/v2-1.1.svg" alt="Objectivity" />
-              </div>
-              <h3 class="v2-value-title">Objektivitet</h3>
-              <p class="v2-value-text">
-               Vores vigtigste opgave er at hjælpe dig med at træffe velinformerede og sikre beslutninger inden for gaming. Vi opbygger tillid ved aldrig at gå på kompromis. Du kan være sikker på, at hver anmeldelse og anbefaling, vi publicerer, er baseret på grundige, uafhængige analyser udført af vores team af eksperter. Med ærlighed og gennemsigtighed som vores grundprincip arbejder vi for at være den pålidelige kilde, som spillere altid kan have tillid til.﻿
-              </p>
-            </div>
-
-            <div class="v2-value-item">
-              <div class="v2-value-icon">
-                <img src="assets-v2/v2-1.2.svg" alt="Experience" />
-              </div>
-              <h3 class="v2-value-title">Erfaring</h3>
-              <p class="v2-value-text">
-                Vores team består af specialister med mere end 10 års erfaring i onlinekasinoindustrien. <br>
-                Vi anvender vores ekspertise til at levere troværdige vurderinger.
-              </p>
-            </div>
-
-            <div class="v2-value-item">
-              <div class="v2-value-icon">
-                <img src="assets-v2/v2-1.3.svg" alt="Transparency" />
-              </div>
-              <h3 class="v2-value-title">Gennemsigtighed</h3>
-              <p class="v2-value-text">
-                Vi leverer tydelig information uden skjulte betingelser eller reklame. <br>
-Gennemsigtighed: Du ved altid præcis, hvad du kan forvente, når du læser vores materiale.
-              </p>
-            </div>
-          </div>
-
-
-          <div class="v2-manager-section">
-            <div class="v2-manager-photo">
-              <img src="assets-v2/v2-123.jpg" alt="James Thompson" />
-            </div>
-            <div class="v2-manager-content">
-              <div class="v2-quote-mark-start">❝</div>
-              <div class="v2-manager-info">
-                <h3 class="v2-manager-name">James Thompson</h3>
-                <p class="v2-manager-position">Generaldirektør</p>
-                <p class="v2-manager-quote">
-                 Vores mission er klar: at støtte spillere i at træffe velinformerede og trygge beslutninger. Vi går aldrig på kompromis. Hver anmeldelse og anbefaling bygger på omhyggelig, uafhængig analyse udført af vores erfarne team. Ærlighed og gennemsigtighed ligger til grund for alt, hvad vi laver. I en branche præget af hype og støj arbejder vi for at være den pålidelige kilde, som spillere kan stole på.﻿
-                </p>
-              </div>
-              <div class="v2-quote-mark-end">❞</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="v2-about-section v2-about-section-duble">
-        <div class="v2-container">
-
-          <h2 class="v2-section-title">Fordele ved vores hjemmeside</h2>
-
-          <div class="v2-advantages-grid">
-            <div class="v2-advantage-item">
-              <div class="v2-advantage-icon">
-                <img src="assets-v2/v2-2.1.svg" alt="Independent Reviews" />
-              </div>
-              <div class="v2-advantage-content">
-                <h3 class="v2-advantage-title">Uafhængige anmeldelser</h3>
-                <p class="v2-advantage-text">
-              Alle vores kasinoanmeldelser udføres uafhængigt af vores ekspertteam. Vi vurderer alle sider af et kasino ud fra fakta og egne erfaringer.
-                </p>
-              </div>
-            </div>
-
-            <div class="v2-advantage-item">
-              <div class="v2-advantage-icon">
-                <img src="assets-v2/v2-2.2.svg" alt="Regularly Updated" />
-              </div>
-              <div class="v2-advantage-content">
-                <h3 class="v2-advantage-title">
-                  Regelmæssigt opdateret information
-                </h3>
-                <p class="v2-advantage-text">
-                  Vi sørger for, at vores indhold altid er opdateret, så du får adgang til den seneste information om kasinoer, spil og branchenyheder.﻿
-                </p>
-              </div>
-            </div>
-
-            <div class="v2-advantage-item">
-              <div class="v2-advantage-icon">
-                <img src="assets-v2/v2-2.3.svg" alt="Licensed Casinos" />
-              </div>
-              <div class="v2-advantage-content">
-                <h3 class="v2-advantage-title">
-                  Partnerskaber kun med licenserede kasinoer
-                </h3>
-                <p class="v2-advantage-text">
-                 Vi samarbejder udelukkende med fuldt licenserede og regulerede kasinoer, så du trygt kan stole på de platforme, vi anbefaler.﻿
-                </p>
-              </div>
-            </div>
-
-            <div class="v2-advantage-item">
-              <div class="v2-advantage-icon">
-                <img src="assets-v2/v2-2.4.svg" alt="Transparency" />
-              </div>
-              <div class="v2-advantage-content">
-                <h3 class="v2-advantage-title">Gennemsigtighed</h3>
-                <p class="v2-advantage-text">
-                 På vores side fremgår det tydeligt, når der bruges affiliate-links. Vi giver ærlige anbefalinger uden skjulte vilkår eller reklamepåvirkning.﻿
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section class="v2-responsible-section" id="guidelines">
-        <div class="v2-container">
-
-          <div class="v2-rg-banner">
-            <div class="v2-rg-icon">
-              <span>18+</span>
-            </div>
-            <div class="v2-rg-content">
-              <h2 class="v2-rg-title">Ansvarligt spil</h2>
-              <p class="v2-rg-text">
-                Spil er kun tilladt for brugere over 18 år. Vi fremmer sikre
-                spillevaner, giver vejledning om at sætte indsats- og tidsgrænser,
-                og tilbyder links til pålidelige støtteressourcer.
-              </p>
-            </div>
-            <a href="v2-responsible/index.html" class="v2-btn-learn">Lær reglerne</a>
-          </div>
-
-
-          <h2 class="v2-section-title">Leder du efter hjælp med spil?</h2>
-
-          <div class="v2-support-grid">
-            <div class="v2-support-item">
-              <div class="v2-support-icon">
-                <img src="assets-v2/v2-3.1.svg" alt="National Gambling Helpline" />
-              </div>
-              <h3 class="v2-support-name">National Gambling Helpline</h3>
-              <p class="v2-support-detail">
-                Telefon: 70 22 28 25 (gratis rådgivning) <br />
-                Website: stopspillet.dk 🌐
-              </p>
-            </div>
-
-            <div class="v2-support-item">
-              <div class="v2-support-icon">
-                <img src="assets-v2/v2-3.2.svg" alt="GamCare" />
-              </div>
-              <h3 class="v2-support-name">Selveksklusion fra spil</h3>
-              <p class="v2-support-detail">Website: rofus.nu 🌐</p>
-            </div>
-
-            <div class="v2-support-item">
-              <div class="v2-support-icon">
-                <img src="assets-v2/v2-3.3.svg" alt="Samaritans" />
-              </div>
-              <h3 class="v2-support-name">International Online Support</h3>
-              <p class="v2-support-detail">
-                🌐 Website: gamblingtherapy.org <br />
-                💬 Live chat og rådgivning på flere sprog
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section class="v2-contact-section" id="contact">
-        <div class="v2-container">
-          <div class="v2-contact-wrapper">
-            <div class="v2-contact-info">
-              <h2 class="v2-contact-title">Kom i kontakt</h2>
-              <p class="v2-contact-description">
-                Har du spørgsmål, feedback eller brug for support? Udfyld venligst formularen nedenfor, så kontakter vores team dig hurtigst muligt.
-              </p>
-              <div class="contact-details">
-                <div class="contact-detail-new-item">
-                  <span class="detail-label">Email:</span>
-                  <a href="mailto:support@example.com" class="v2-detail-value">
-                    support@example.com
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <form class="v2-contact-form" id="contactForm" action="send-v2.php" method="POST">
-              <input type="text" name="name" placeholder="Name" class="v2-form-input" required />
-              <input type="email" name="email" placeholder="Email" class="v2-form-input" required />
-              <textarea name="message" placeholder="Message" class="v2-form-textarea" rows="4" required></textarea>
-              <button type="submit" class="v2-btn-send">Send</button>
             </form>
-          </div>
+            <div class="header__socials socials">
+                <a href="#" class="socials__link" aria-label="Перейти в вк">
+                    <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.9825 14C4.46596 14 0.178638 8.74474 0 0H3.76515C3.88882 6.41842 6.66458 9.13714 8.86321 9.6977V0H12.4085V5.53554C14.5796 5.2973 16.8607 2.77477 17.6302 0H21.1755C20.8855 1.43908 20.3075 2.80165 19.4776 4.0025C18.6477 5.20335 17.5837 6.21663 16.3523 6.97898C17.7269 7.67556 18.941 8.6615 19.9145 9.87175C20.888 11.082 21.5988 12.489 22 14H18.0974C17.7373 12.6876 17.0054 11.5128 15.9934 10.6228C14.9814 9.73284 13.7343 9.16728 12.4085 8.997V14H11.9825Z"
+                            fill="white" />
+                    </svg>
+                </a>
+                <a href="#" class="socials__link" aria-label="Перейти в whatsapp">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2049_767)">
+                            <path
+                                d="M18.3129 4.74728C15.393 0.220805 9.41359 -1.12037 4.78933 1.68772C0.276828 4.49581 -1.17611 10.6149 1.74374 15.1274L1.98124 15.4907L1.0033 19.151L4.66359 18.173L5.02683 18.4105C6.6055 19.2627 8.32389 19.7517 10.0283 19.7517C11.8584 19.7517 13.6886 19.2627 15.2673 18.2848C19.7798 15.351 21.1209 9.35757 18.3129 4.71933V4.74728ZM15.7562 14.1635C15.2673 14.8899 14.6526 15.3789 13.8004 15.5046C13.3114 15.5046 12.6967 15.7421 10.2658 14.7782C8.19815 13.8002 6.47977 12.2076 5.26433 10.3774C4.53786 9.52522 4.16065 8.42154 4.04889 7.31786C4.04889 6.33992 4.41212 5.48772 5.02683 4.87301C5.26433 4.63551 5.5158 4.50978 5.7533 4.50978H6.368C6.6055 4.50978 6.85698 4.50978 6.98271 4.99875C7.22021 5.61345 7.83492 7.08036 7.83492 7.2061C7.96065 7.33184 7.90477 8.26786 7.34595 8.79875C7.03859 9.14801 6.98271 9.16198 7.10845 9.41345C7.59742 10.1399 8.21212 10.8804 8.81286 11.4951C9.53933 12.1098 10.2798 12.5987 11.132 12.962C11.3695 13.0877 11.6209 13.0877 11.7467 12.8362C11.8724 12.5987 12.4732 11.984 12.7246 11.7326C12.9621 11.4951 13.0879 11.4951 13.3393 11.6068L15.2952 12.5848C15.5327 12.7105 15.7842 12.8223 15.9099 12.948C16.0357 13.3112 16.0357 13.8002 15.7842 14.1635H15.7562Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2049_767">
+                                <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="#" class="socials__link" aria-label="Перейти в telegram">
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                            fill="white" />
+                    </svg>
+
+                </a>
+                <a href="#" class="socials__link" aria-label="Перейти в dzen">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.9286 11.9286C10.3571 13.55 10.2429 15.5714 10.1071 20C14.2357 20 17.0857 19.9857 18.5571 18.5571C19.9857 17.0857 20 14.1 20 10.1071C15.5714 10.25 13.55 10.3571 11.9286 11.9286ZM0 10.1071C0 14.1 0.0142857 17.0857 1.44286 18.5571C2.91429 19.9857 5.76429 20 9.89286 20C9.75 15.5714 9.64286 13.55 8.07143 11.9286C6.45 10.3571 4.42857 10.2429 0 10.1071ZM9.89286 0C5.77143 0 2.91429 0.0142857 1.44286 1.44286C0.0142857 2.91429 0 5.9 0 9.89286C4.42857 9.75 6.45 9.64286 8.07143 8.07143C9.64286 6.45 9.75714 4.42857 9.89286 0ZM11.9286 8.07143C10.3571 6.45 10.2429 4.42857 10.1071 0C14.2357 0 17.0857 0.0142857 18.5571 1.44286C19.9857 2.91429 20 5.9 20 9.89286C15.5714 9.75 13.55 9.64286 11.9286 8.07143Z"
+                            fill="white" />
+                        <path
+                            d="M20 10.1071V9.89286C15.5714 9.75 13.55 9.64286 11.9286 8.07143C10.3571 6.45 10.2429 4.42857 10.1071 0H9.89286C9.75 4.42857 9.64286 6.45 8.07143 8.07143C6.45 9.64286 4.42857 9.75714 0 9.89286V10.1071C4.42857 10.25 6.45 10.3571 8.07143 11.9286C9.64286 13.55 9.75714 15.5714 9.89286 20H10.1071C10.25 15.5714 10.3571 13.55 11.9286 11.9286C13.55 10.3571 15.5714 10.2429 20 10.1071Z"
+                            fill="#B3253E" />
+                    </svg>
+
+                </a>
+            </div>
+            <div class="header__contatcs header__contatcs-1">
+                <a class="header__link" href="mailto:inbox@itmash.ru" aria-label="Написать на почту">inbox@itmash.ru</a>
+                <span class="header__text">Пн-Пт 08:15 - 18:30</span>
+            </div>
+            <div class="header__contatcs">
+                <a class="header__link" href="tel:+7 495 668-13-58" aria-label="Позвонить">+7 495 668-13-58</a>
+                <button class="header__btn" aria-label="Открыть модальное окно" onclick="openModal()">Заказать
+                    звонок</button>
+            </div>
         </div>
-      </section>
-
-
-      <footer class="v2-footer">
-        <div class="v2-container">
-          <nav class="v2-footer-nav">
-            <a href="v2-responsible/index.html" class="v2-footer-link">Ansvarligt spil</a>
-            <a href="v2-privacy/index.html" class="v2-footer-link">Privatlivspolitik</a>
-            <a href="v2-terms/index.html" class="v2-footer-link">Vilkår og betingelser</a>
-            <a href="index.html#about" class="v2-footer-link">Om Os</a>
-            <a href="index.html#contact" class="v2-footer-link">Kontakt</a>
-          </nav>
-
-          <div class="v2-footer-advertising">
-            <h3 class="v2-footer-ad-title">Reklameinformation for 18+</h3>
-            <p class="v2-footer-ad-text">
-              Dette materiale er udeldkkende til informationsformål og er beregnet
-              til personer over 18 år.
-            </p>
-          </div>
-
-          <div class="v2-footer-logos">
-            <a href="https://www.rofus.nu/"><img src="assets-v2/v2-f0.svg" alt="DK Gambling Commission"
-                class="v2-footer-logo" /></a>
-            <a href="https://www.stopspillet.dk"><img src="assets-v2/v2-f2.svg" alt="GamCare" class="v2-footer-logo" /></a>
-            <a href="https://www.spillemyndigheden.dk/en/stopspillet-stopgambling-helpline-about-responsible-gambling"><img
-                src="assets-v2/v2-f3.svg" alt="Take Time to Think" class="v2-footer-logo" /></a>
-          </div>
-
-          <p class="v2-footer-copyright">© 2025 All rights reserved.</p>
-        </div>
-      </footer>
-
-      <script src="v2-js/index-v2.js"></script>
     </div>
-  </div>
+    <div class="header__bottom">
+        <div class="container">
+            <nav class="header__nav menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
+                            Каталоги
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
+                            ПРОДУКЦИЯ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
+                            О КОМПАНИИ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
+                            НОВОСТИ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
+                            БРЕНДЫ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="menu__item-1080">
+                        <div class="header__socials socials">
+                            <a href="#" class="socials__link" aria-label="Перейти в вк">
+                                <svg width="22" height="14" viewBox="0 0 22 14" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.9825 14C4.46596 14 0.178638 8.74474 0 0H3.76515C3.88882 6.41842 6.66458 9.13714 8.86321 9.6977V0H12.4085V5.53554C14.5796 5.2973 16.8607 2.77477 17.6302 0H21.1755C20.8855 1.43908 20.3075 2.80165 19.4776 4.0025C18.6477 5.20335 17.5837 6.21663 16.3523 6.97898C17.7269 7.67556 18.941 8.6615 19.9145 9.87175C20.888 11.082 21.5988 12.489 22 14H18.0974C17.7373 12.6876 17.0054 11.5128 15.9934 10.6228C14.9814 9.73284 13.7343 9.16728 12.4085 8.997V14H11.9825Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                            <a href="#" class="socials__link" aria-label="Перейти в whatsapp">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2049_767)">
+                                        <path
+                                            d="M18.3129 4.74728C15.393 0.220805 9.41359 -1.12037 4.78933 1.68772C0.276828 4.49581 -1.17611 10.6149 1.74374 15.1274L1.98124 15.4907L1.0033 19.151L4.66359 18.173L5.02683 18.4105C6.6055 19.2627 8.32389 19.7517 10.0283 19.7517C11.8584 19.7517 13.6886 19.2627 15.2673 18.2848C19.7798 15.351 21.1209 9.35757 18.3129 4.71933V4.74728ZM15.7562 14.1635C15.2673 14.8899 14.6526 15.3789 13.8004 15.5046C13.3114 15.5046 12.6967 15.7421 10.2658 14.7782C8.19815 13.8002 6.47977 12.2076 5.26433 10.3774C4.53786 9.52522 4.16065 8.42154 4.04889 7.31786C4.04889 6.33992 4.41212 5.48772 5.02683 4.87301C5.26433 4.63551 5.5158 4.50978 5.7533 4.50978H6.368C6.6055 4.50978 6.85698 4.50978 6.98271 4.99875C7.22021 5.61345 7.83492 7.08036 7.83492 7.2061C7.96065 7.33184 7.90477 8.26786 7.34595 8.79875C7.03859 9.14801 6.98271 9.16198 7.10845 9.41345C7.59742 10.1399 8.21212 10.8804 8.81286 11.4951C9.53933 12.1098 10.2798 12.5987 11.132 12.962C11.3695 13.0877 11.6209 13.0877 11.7467 12.8362C11.8724 12.5987 12.4732 11.984 12.7246 11.7326C12.9621 11.4951 13.0879 11.4951 13.3393 11.6068L15.2952 12.5848C15.5327 12.7105 15.7842 12.8223 15.9099 12.948C16.0357 13.3112 16.0357 13.8002 15.7842 14.1635H15.7562Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2049_767">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="#" class="socials__link" aria-label="Перейти в telegram">
+                                <svg width="19" height="17" viewBox="0 0 19 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                                        fill="white" />
+                                </svg>
+
+                            </a>
+                            <a href="#" class="socials__link" aria-label="Перейти в dzen">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.9286 11.9286C10.3571 13.55 10.2429 15.5714 10.1071 20C14.2357 20 17.0857 19.9857 18.5571 18.5571C19.9857 17.0857 20 14.1 20 10.1071C15.5714 10.25 13.55 10.3571 11.9286 11.9286ZM0 10.1071C0 14.1 0.0142857 17.0857 1.44286 18.5571C2.91429 19.9857 5.76429 20 9.89286 20C9.75 15.5714 9.64286 13.55 8.07143 11.9286C6.45 10.3571 4.42857 10.2429 0 10.1071ZM9.89286 0C5.77143 0 2.91429 0.0142857 1.44286 1.44286C0.0142857 2.91429 0 5.9 0 9.89286C4.42857 9.75 6.45 9.64286 8.07143 8.07143C9.64286 6.45 9.75714 4.42857 9.89286 0ZM11.9286 8.07143C10.3571 6.45 10.2429 4.42857 10.1071 0C14.2357 0 17.0857 0.0142857 18.5571 1.44286C19.9857 2.91429 20 5.9 20 9.89286C15.5714 9.75 13.55 9.64286 11.9286 8.07143Z"
+                                        fill="white" />
+                                    <path
+                                        d="M20 10.1071V9.89286C15.5714 9.75 13.55 9.64286 11.9286 8.07143C10.3571 6.45 10.2429 4.42857 10.1071 0H9.89286C9.75 4.42857 9.64286 6.45 8.07143 8.07143C6.45 9.64286 4.42857 9.75714 0 9.89286V10.1071C4.42857 10.25 6.45 10.3571 8.07143 11.9286C9.64286 13.55 9.75714 15.5714 9.89286 20H10.1071C10.25 15.5714 10.3571 13.55 11.9286 11.9286C13.55 10.3571 15.5714 10.2429 20 10.1071Z"
+                                        fill="#B3253E" />
+                                </svg>
+
+                            </a>
+                        </div>
+
+                    </li>
+                    <li class="menu__item-1080">
+                        <div class="header__contatcs header__contatcs-1">
+                            <a class="header__link" href="mailto:inbox@itmash.ru"
+                                aria-label="Написать на почту">inbox@itmash.ru</a>
+                            <span class="header__text">Пн-Пт 08:15 - 18:30</span>
+                        </div>
+                    </li>
+                    <li class="menu__item-768">
+                        <div class="header__contatcs">
+                            <a class="header__link" href="tel:+7 495 668-13-58" aria-label="Позвонить">+7 495
+                                668-13-58</a>
+                            <button class="header__btn" aria-label="Открыть модальное окно"
+                                onclick="openModal()">Заказать
+                                звонок</button>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+    </div>
+</header>
+    <main>
+        <section class="hero">
+
+            <div class="hero__swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="hero__block">
+                            <div class="container">
+                                <h1>Технологический партнер&nbsp;№1:<br> инструмент, оснастка и оборудование</h1>
+                                <button class="hero__btn blue-btn" aria-label="Открыть модальное окно">Получить
+                                    консультацию</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero__block">
+                            <div class="container">
+                                <h1>Технологический партнер&nbsp;№1:<br> инструмент, оснастка и оборудование</h1>
+                                <button class="hero__btn blue-btn" aria-label="Открыть модальное окно">Получить
+                                    консультацию</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero__block">
+                            <div class="container">
+                                <h1>Технологический партнер&nbsp;№1:<br> инструмент, оснастка и оборудование</h1>
+                                <button class="hero__btn blue-btn" aria-label="Открыть модальное окно">Получить
+                                    консультацию</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="hero__pagination"></div>
+            </div>
+            <div class="container">
+                <div class="hero__flex">
+                    <div class="hero__card text-16-20">
+                        <strong>20+</strong>
+                        <span>Штат технологов с опытом более 15 лет в отрасли</span>
+                        <img class="hero__icon" src="./img/svg/hero-1.svg" alt="Иконка">
+                    </div>
+                    <div class="hero__card text-16-20">
+                        <strong>До 5 лет</strong>
+                        <span>Гарантия, постпродажное обслуживание и тех поддержка </span>
+                        <img class="hero__icon" src="./img/svg/hero-2.svg" alt="Иконка">
+                    </div>
+                    <div class="hero__card text-16-20">
+                        <strong>Проектирование </strong>
+                        <span>Индивидуальное под специфику предприятия</span>
+                        <img class="hero__icon" src="./img/svg/hero-3.svg" alt="Иконка">
+                    </div>
+                    <div class="hero__card text-16-20">
+                        <strong>Аудит</strong>
+                        <span>Бесплатный аудит производственных участков</span>
+                        <img class="hero__icon" src="./img/svg/hero-4.svg" alt="Иконка">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="container">
+                <h2 class="visually-hidden">Каталог</h2>
+                <div class="catalog__grid">
+                    <div class="catalog__card blue-card text-16-20 catalog__card_wide">
+                        <h3 class="h3-title">Комплексное<br> оснащение</h3>
+                        <span>От инструмента и оснастки<br> до автоматизированных комплексов</span>
+                        <img class="catalog__img" src="./img/catalog-1.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Технологический <br> аудит</h3>
+                        <span>Анализ существующей технологии, разработка плана улучшения производства</span>
+                        <img class="catalog__img" src="./img/catalog-2.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Технология <br> «под&nbsp;ключ»</h3>
+                        <span>Проектирование и внедрение производственных линий</span>
+                        <img class="catalog__img" src="./img/catalog-3.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Оборудование <br> под задачи</h3>
+                        <span>Подбор и поставка<br> оборудования</span>
+                        <img class="catalog__img" src="./img/catalog-4.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Обучение персонала<br> и поддержка внедрения</h3>
+                        <span>Пуско-наладка, запуск<br> производства и обучение<br> персонала</span>
+                        <img class="catalog__img" src="./img/catalog-5.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card_wide">
+                        <h3 class="h3-title">Сервис и модернизация <br> оборудования</h3>
+                        <span>Продление ресурса и повышение<br> эффективности</span>
+                        <img class="catalog__img" src="./img/catalog-6.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about__flex">
+                    <div class="about__block text-20-30">
+                        <h2 class="about__title h2-title">ИНТЕРТУЛМАШ</h2>
+                        <strong>Российская инжиниринговая компания, основанная в 2004 году.
+                            Наша специализация — оснащение промышленных предприятий инструментом, оснасткой, станочным и
+                            технологическим оборудованием.</strong>
+                        <p>Наша экспертиза — это не просто поставка современного оборудования, а глубокий инжиниринг: мы
+                            анализируем ваш техпроцесс, подбираемоптимальные инструмент, станки и технологическую
+                            оснастку, обеспечиваем полную адаптацию решения под ваши задачи и обучаем персонал. Ваш
+                            результат — это увеличение производительности и сокращение издержек с первого дня работы с
+                            нами.</p>
+                    </div>
+                    <ul class="about__list">
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Экспертиза в<br> металлообработке</h3>
+                            </div>
+                            <p>Мы не просто продаем инструмент — <br>
+                                мы разбираемся в нем</p>
+                        </li>
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Ассортимент<br> «под ключ»</h3>
+                            </div>
+                            <p>Подберем, проведем испытания и внедрим<br> инструмент и оборудование</p>
+                        </li>
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Гарантированные<br> сроки поставки</h3>
+                            </div>
+                            <p>Для нас договор — это обязательство,<br>
+                                а не формальность</p>
+                        </li>
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Цены<br> без переплат</h3>
+                            </div>
+                            <p>Адекватное соотношение цены-качества<br> за счет прямых поставок</p>
+                        </li>
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Качество<br> под контролем</h3>
+                            </div>
+                            <p>Сертифицированная продукция<br> от проверенных производителеи</p>
+                        </li>
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Гибкие<br>
+                                    условия</h3>
+                            </div>
+                            <p>Бонусная система для постоянных<br> закзачиков и гибкие условия оплаты</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about__text">ИНТЕРТУЛМАШ</div>
+            </div>
+        </section>
+        <section class="production">
+            <div class="container">
+                <h2 class="h2-title production__title">Каталог продукции</h2>
+                <div class="production__grid">
+                    <div class="production__card arrow-card" style="background-image: url(./img/prod-1.webp);">
+                        <div class="arrow-card__arrow">
+                            <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+                            <span>В каталог</span>
+                        </div>
+
+                        <h3 class="h3-title">Инструмент режущий</h3>
+                        <a href="#" class="arrow__link" aria-label="Перейти к инструменту"></a>
+
+                    </div>
+                    <div class="production__card arrow-card" style="background-image: url(./img/prod-2.webp);">
+                        <div class="arrow-card__arrow">
+                            <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+                            <span>В каталог</span>
+                        </div>
+                        <h3 class="h3-title">Оснастка</h3>
+                        <a href="#" class="arrow__link" aria-label="Перейти к инструменту"></a>
+
+
+                    </div>
+                    <div class="production__card arrow-card" style="background-image: url(./img/prod-3.webp);">
+                        <div class="arrow-card__arrow">
+                            <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+                            <span>В каталог</span>
+                        </div>
+
+                        <h3 class="h3-title">Станки и оборудование</h3>
+                        <a href="#" class="arrow__link" aria-label="Перейти к инструменту"></a>
+
+                    </div>
+                    <div class="production__card arrow-card" style="background-image: url(./img/prod-4.webp);">
+                        <div class="arrow-card__arrow">
+                            <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+                            <span>В каталог</span>
+                        </div>
+                        <h3 class="h3-title">Измерительный инструмент</h3>
+                        <a href="#" class="arrow__link" aria-label="Перейти к инструменту"></a>
+
+
+                    </div>
+                    <div class="production__card arrow-card" style="background-image: url(./img/prod-5.webp);">
+                        <div class="arrow-card__arrow">
+                            <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+                            <span>В каталог</span>
+                        </div>
+
+                        <h3 class="h3-title">Пневмоинструмент и оборудование</h3>
+                        <a href="#" class="arrow__link" aria-label="Перейти к инструменту"></a>
+
+                    </div>
+                    <div class="production__card arrow-card" style="background-image: url(./img/prod-6.webp);">
+                        <div class="arrow-card__arrow">
+                            <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+                            <span>В каталог</span>
+                        </div>
+                        <h3 class="h3-title">Слесарный и монтажный инструмент</h3>
+                        <a href="#" class="arrow__link" aria-label="Перейти к инструменту"></a>
+
+
+                    </div>
+                </div>
+                <div class="production__flex">
+                    <div class="production__block">
+                        <h2 class="h2-title production__title-2">50+ производителей </h2>
+                        <span class="text-20-30 production__text">работаем с проверенными заводами по всему миру</span>
+                    </div>
+                    <div class="production__arrows swiper-arrows">
+                        <button class="swiper-arrow__prev production__btn-prev" aria-label="Предыдущий слайд">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="60" y="60" width="60" height="60" rx="30" transform="rotate(-180 60 60)"
+                                    fill="#F2F2FE" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.27 31.6489C18.0971 31.4767 18 31.2433 18 31C18 30.7567 18.0971 30.5233 18.27 30.3511L26.8692 21.7807C26.9543 21.6929 27.0561 21.6229 27.1687 21.5747C27.2813 21.5266 27.4024 21.5012 27.525 21.5C27.6475 21.4989 27.7691 21.5221 27.8826 21.5682C27.996 21.6143 28.0991 21.6825 28.1858 21.7687C28.2725 21.8548 28.3411 21.9573 28.3876 22.0702C28.4341 22.183 28.4575 22.3039 28.4565 22.4258C28.4555 22.5477 28.4301 22.6682 28.3817 22.7803C28.3334 22.8924 28.2631 22.9937 28.175 23.0785L21.1499 30.0805L41.0757 30.0671C41.3205 30.0667 41.5554 30.1632 41.7288 30.3351C41.9021 30.5071 41.9997 30.7406 42 30.9841C42.0003 31.2276 41.9034 31.4613 41.7305 31.6338C41.5576 31.8062 41.323 31.9033 41.0782 31.9036L21.1474 31.9158L28.1762 38.9216C28.2644 39.0063 28.3346 39.1077 28.383 39.2197C28.4313 39.3318 28.4567 39.4523 28.4577 39.5742C28.4587 39.6961 28.4353 39.817 28.3888 39.9299C28.3424 40.0427 28.2738 40.1452 28.1871 40.2314C28.1004 40.3175 27.9973 40.3857 27.8838 40.4318C27.7703 40.4779 27.6488 40.5011 27.5262 40.5C27.4037 40.4989 27.2825 40.4735 27.1699 40.4253C27.0574 40.3771 26.9555 40.3071 26.8704 40.2194L18.27 31.6489Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+
+                        </button>
+                        <button class="swiper-arrow__next production__btn-next" aria-label="Следующий слайд">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="60" height="60" rx="30" fill="#F2F2FE" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M41.73 28.3511C41.9029 28.5233 42 28.7567 42 29C42 29.2433 41.9029 29.4767 41.73 29.6489L33.1308 38.2194C33.0457 38.3071 32.9439 38.3771 32.8313 38.4253C32.7187 38.4735 32.5976 38.4988 32.475 38.5C32.3525 38.5011 32.2309 38.4779 32.1174 38.4318C32.004 38.3857 31.9009 38.3175 31.8142 38.2314C31.7275 38.1452 31.6589 38.0427 31.6124 37.9299C31.5659 37.817 31.5425 37.6961 31.5435 37.5742C31.5445 37.4523 31.57 37.3318 31.6183 37.2197C31.6666 37.1077 31.7369 37.0063 31.825 36.9215L38.8501 29.9195L18.9243 29.933C18.6795 29.9333 18.4446 29.8368 18.2712 29.6649C18.0979 29.4929 18.0003 29.2595 18 29.0159C17.9997 28.7724 18.0966 28.5387 18.2695 28.3663C18.4424 28.1938 18.677 28.0968 18.9218 28.0964L38.8526 28.0842L31.8238 21.0785C31.7356 20.9937 31.6654 20.8923 31.617 20.7803C31.5687 20.6682 31.5433 20.5477 31.5423 20.4258C31.5413 20.3039 31.5647 20.183 31.6112 20.0701C31.6576 19.9573 31.7262 19.8548 31.8129 19.7686C31.8997 19.6825 32.0027 19.6143 32.1162 19.5682C32.2297 19.5221 32.3512 19.4989 32.4738 19.5C32.5964 19.5012 32.7175 19.5265 32.8301 19.5747C32.9427 19.6229 33.0445 19.6929 33.1296 19.7806L41.73 28.3511Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+
+                        </button>
+                    </div>
+
+                </div>
+                <div class="production__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="prodcution__swiper-block">
+                                <img src="./img/prod-logo-1.webp" loading="lazy" alt="Логотип">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="prodcution__swiper-block">
+                                <img src="./img/prod-logo-2.webp" loading="lazy" alt="Логотип">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="prodcution__swiper-block">
+                                <img src="./img/prod-logo-3.webp" loading="lazy" alt="Логотип">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="prodcution__swiper-block">
+                                <img src="./img/prod-logo-4.webp" loading="lazy" alt="Логотип">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="prodcution__swiper-block">
+                                <img src="./img/prod-logo-1.webp" loading="lazy" alt="Логотип">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__flex">
+                    <div class="reviews__texts">
+                        <h2 class="h2-title reviews__title">
+                            Отзывы<br>и опыт
+                        </h2>
+                        <div class="reviews__block">
+                            <strong class="reviews__strong">300+</strong>
+                            <span class="reviews__text text-20-30">ГОС заказов ежегодно
+                                и более <span>500&nbsp;000 заказов в год</span></span>
+                        </div>
+                        <div class="reviews__arrows swiper-arrows">
+                            <button class="swiper-arrow__prev reviews__btn-prev" aria-label="Предыдущий слайд">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="60" y="60" width="60" height="60" rx="30" transform="rotate(-180 60 60)"
+                                        fill="#F2F2FE" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M18.27 31.6489C18.0971 31.4767 18 31.2433 18 31C18 30.7567 18.0971 30.5233 18.27 30.3511L26.8692 21.7807C26.9543 21.6929 27.0561 21.6229 27.1687 21.5747C27.2813 21.5266 27.4024 21.5012 27.525 21.5C27.6475 21.4989 27.7691 21.5221 27.8826 21.5682C27.996 21.6143 28.0991 21.6825 28.1858 21.7687C28.2725 21.8548 28.3411 21.9573 28.3876 22.0702C28.4341 22.183 28.4575 22.3039 28.4565 22.4258C28.4555 22.5477 28.4301 22.6682 28.3817 22.7803C28.3334 22.8924 28.2631 22.9937 28.175 23.0785L21.1499 30.0805L41.0757 30.0671C41.3205 30.0667 41.5554 30.1632 41.7288 30.3351C41.9021 30.5071 41.9997 30.7406 42 30.9841C42.0003 31.2276 41.9034 31.4613 41.7305 31.6338C41.5576 31.8062 41.323 31.9033 41.0782 31.9036L21.1474 31.9158L28.1762 38.9216C28.2644 39.0063 28.3346 39.1077 28.383 39.2197C28.4313 39.3318 28.4567 39.4523 28.4577 39.5742C28.4587 39.6961 28.4353 39.817 28.3888 39.9299C28.3424 40.0427 28.2738 40.1452 28.1871 40.2314C28.1004 40.3175 27.9973 40.3857 27.8838 40.4318C27.7703 40.4779 27.6488 40.5011 27.5262 40.5C27.4037 40.4989 27.2825 40.4735 27.1699 40.4253C27.0574 40.3771 26.9555 40.3071 26.8704 40.2194L18.27 31.6489Z"
+                                        fill="#346C9A" />
+                                </svg>
+
+                            </button>
+                            <button class="swiper-arrow__next reviews__btn-next" aria-label="Следующий слайд">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="60" height="60" rx="30" fill="#F2F2FE" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M41.73 28.3511C41.9029 28.5233 42 28.7567 42 29C42 29.2433 41.9029 29.4767 41.73 29.6489L33.1308 38.2194C33.0457 38.3071 32.9439 38.3771 32.8313 38.4253C32.7187 38.4735 32.5976 38.4988 32.475 38.5C32.3525 38.5011 32.2309 38.4779 32.1174 38.4318C32.004 38.3857 31.9009 38.3175 31.8142 38.2314C31.7275 38.1452 31.6589 38.0427 31.6124 37.9299C31.5659 37.817 31.5425 37.6961 31.5435 37.5742C31.5445 37.4523 31.57 37.3318 31.6183 37.2197C31.6666 37.1077 31.7369 37.0063 31.825 36.9215L38.8501 29.9195L18.9243 29.933C18.6795 29.9333 18.4446 29.8368 18.2712 29.6649C18.0979 29.4929 18.0003 29.2595 18 29.0159C17.9997 28.7724 18.0966 28.5387 18.2695 28.3663C18.4424 28.1938 18.677 28.0968 18.9218 28.0964L38.8526 28.0842L31.8238 21.0785C31.7356 20.9937 31.6654 20.8923 31.617 20.7803C31.5687 20.6682 31.5433 20.5477 31.5423 20.4258C31.5413 20.3039 31.5647 20.183 31.6112 20.0701C31.6576 19.9573 31.7262 19.8548 31.8129 19.7686C31.8997 19.6825 32.0027 19.6143 32.1162 19.5682C32.2297 19.5221 32.3512 19.4989 32.4738 19.5C32.5964 19.5012 32.7175 19.5265 32.8301 19.5747C32.9427 19.6229 33.0445 19.6929 33.1296 19.7806L41.73 28.3511Z"
+                                        fill="#346C9A" />
+                                </svg>
+
+                            </button>
+                        </div>
+                    </div>
+                    <div class="reviews__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews__slide" style="background-image: url(../img/reviews-1.webp);">
+                                    <h3 class="reviews__subtitle">Комплексное оснащение цеха в г. Москва</h3>
+                                    <a href="#" class="reviews__link" aria-label="Открыть статью"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide" style="background-image: url(../img/reviews-2.webp);">
+                                    <h3 class="reviews__subtitle">Обучение сотрудников компании Северсталь</h3>
+                                    <a href="#" class="reviews__link" aria-label="Открыть статью"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide" style="background-image: url(../img/reviews-3.webp);">
+                                    <h3 class="reviews__subtitle">Комплексное оснащение цеха в г. Москва</h3>
+                                    <a href="#" class="reviews__link" aria-label="Открыть статью"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="container">
+                <div class="faq__flex">
+                    <h2 class="h2-title faq__title">Вопрос/Ответ</h2>
+                    <button class="faq__btn" aria-label="Открыть модальное окно">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.875 8.12538L21.875 13.1254M23.75 27.5004V27.5129M23.75 23.7504C24.3104 23.7486 24.8539 23.5589 25.2937 23.2116C25.7335 22.8643 26.0441 22.3795 26.1757 21.8348C26.3073 21.2901 26.2524 20.717 26.0198 20.2072C25.7872 19.6974 25.3902 19.2804 24.8925 19.0229C24.3952 18.7681 23.8264 18.6892 23.2785 18.7988C22.7306 18.9084 22.236 19.2002 21.875 19.6266M10 25.0004L17.5 17.5004L21.25 13.7504L23.125 11.8754C23.4533 11.5471 23.7137 11.1573 23.8914 10.7284C24.0691 10.2994 24.1605 9.83967 24.1605 9.37538C24.1605 8.91109 24.0691 8.45134 23.8914 8.02239C23.7137 7.59344 23.4533 7.20368 23.125 6.87538C22.7967 6.54707 22.4069 6.28665 21.978 6.10897C21.549 5.93129 21.0893 5.83984 20.625 5.83984C20.1607 5.83984 19.701 5.93129 19.272 6.10897C18.8431 6.28665 18.4533 6.54707 18.125 6.87538L5 20.0004V25.0004H10Z"
+                                stroke="#B3253E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Задать вопрос
+                    </button>
+                </div>
+
+                <div class="faq__flexbox">
+                    <div class="faq__question">
+                        <div class="start__acc acc faq__acc">
+
+
+                            <h3 class="h3-title faq__subtitle"> Какие условия доставки?</h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="white" />
+                                <g clip-path="url(#clip0_2010_511)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                        fill="#346C9A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2010_511">
+                                        <rect width="29.6329" height="31.4953" fill="white"
+                                            transform="translate(45.4951 15.5) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <div class="text-wrapper">
+                                <div class="faq__block">
+                                    <p class="start__text-5 faq__text text-20-30">Мы осуществляем доставку на территории
+                                        России
+                                        и СНГ через
+                                        транспортные
+                                        компании. При заказе от 50 000 рублей без дополнительных скидок доставка
+                                        осуществляется
+                                        бесплатно.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__question">
+                        <div class="start__acc acc faq__acc">
+
+
+                            <h3 class="h3-title faq__subtitle"> Можно ли получить оборудование на испытания?</h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="white" />
+                                <g clip-path="url(#clip0_2010_511)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                        fill="#346C9A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2010_511">
+                                        <rect width="29.6329" height="31.4953" fill="white"
+                                            transform="translate(45.4951 15.5) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <div class="text-wrapper">
+                                <div class="faq__block">
+                                    <p class="start__text-5 faq__text text-20-30">Мы осуществляем доставку на территории
+                                        России
+                                        и СНГ через
+                                        транспортные
+                                        компании. При заказе от 50 000 рублей без дополнительных скидок доставка
+                                        осуществляется
+                                        бесплатно.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__question">
+                        <div class="start__acc acc faq__acc">
+
+
+                            <h3 class="h3-title faq__subtitle">Как оформить заказ? </h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="white" />
+                                <g clip-path="url(#clip0_2010_511)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                        fill="#346C9A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2010_511">
+                                        <rect width="29.6329" height="31.4953" fill="white"
+                                            transform="translate(45.4951 15.5) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <div class="text-wrapper">
+                                <div class="faq__block">
+                                    <p class="start__text-5 faq__text text-20-30">Мы осуществляем доставку на территории
+                                        России
+                                        и СНГ через
+                                        транспортные
+                                        компании. При заказе от 50 000 рублей без дополнительных скидок доставка
+                                        осуществляется
+                                        бесплатно.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__question">
+                        <div class="start__acc acc faq__acc">
+
+
+                            <h3 class="h3-title faq__subtitle">Можете ли вы подобрать хорошие альтернативы ушедшим
+                                брендам?
+                            </h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="white" />
+                                <g clip-path="url(#clip0_2010_511)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                        fill="#346C9A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2010_511">
+                                        <rect width="29.6329" height="31.4953" fill="white"
+                                            transform="translate(45.4951 15.5) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <div class="text-wrapper">
+                                <div class="faq__block">
+                                    <p class="start__text-5 faq__text text-20-30">Мы осуществляем доставку на территории
+                                        России
+                                        и СНГ через
+                                        транспортные
+                                        компании. При заказе от 50 000 рублей без дополнительных скидок доставка
+                                        осуществляется
+                                        бесплатно.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__question">
+                        <div class="start__acc acc faq__acc">
+
+
+                            <h3 class="h3-title faq__subtitle">Какие гарантии на оборудование и инструмент вы
+                                предоставляете?
+                            </h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="white" />
+                                <g clip-path="url(#clip0_2010_511)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                        fill="#346C9A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2010_511">
+                                        <rect width="29.6329" height="31.4953" fill="white"
+                                            transform="translate(45.4951 15.5) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <div class="text-wrapper">
+                                <div class="faq__block">
+                                    <p class="start__text-5 faq__text text-20-30">Мы осуществляем доставку на территории
+                                        России
+                                        и СНГ через
+                                        транспортные
+                                        компании. При заказе от 50 000 рублей без дополнительных скидок доставка
+                                        осуществляется
+                                        бесплатно.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <div class="news__flex">
+                    <div class="news__texts">
+                        <h2 class="h2-title news__title">Новости</h2>
+                        <span class="news__text text-20-122">Здесь мы рассказываем о последних новостях компании,
+                            событиях отрасли и особенностях продукции</span>
+                    </div>
+                    <div class="news__arrows swiper-arrows">
+                        <button class="swiper-arrow__prev news__btn-prev" aria-label="Предыдущий слайд">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="60" y="60" width="60" height="60" rx="30" transform="rotate(-180 60 60)"
+                                    fill="#F2F2FE" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.27 31.6489C18.0971 31.4767 18 31.2433 18 31C18 30.7567 18.0971 30.5233 18.27 30.3511L26.8692 21.7807C26.9543 21.6929 27.0561 21.6229 27.1687 21.5747C27.2813 21.5266 27.4024 21.5012 27.525 21.5C27.6475 21.4989 27.7691 21.5221 27.8826 21.5682C27.996 21.6143 28.0991 21.6825 28.1858 21.7687C28.2725 21.8548 28.3411 21.9573 28.3876 22.0702C28.4341 22.183 28.4575 22.3039 28.4565 22.4258C28.4555 22.5477 28.4301 22.6682 28.3817 22.7803C28.3334 22.8924 28.2631 22.9937 28.175 23.0785L21.1499 30.0805L41.0757 30.0671C41.3205 30.0667 41.5554 30.1632 41.7288 30.3351C41.9021 30.5071 41.9997 30.7406 42 30.9841C42.0003 31.2276 41.9034 31.4613 41.7305 31.6338C41.5576 31.8062 41.323 31.9033 41.0782 31.9036L21.1474 31.9158L28.1762 38.9216C28.2644 39.0063 28.3346 39.1077 28.383 39.2197C28.4313 39.3318 28.4567 39.4523 28.4577 39.5742C28.4587 39.6961 28.4353 39.817 28.3888 39.9299C28.3424 40.0427 28.2738 40.1452 28.1871 40.2314C28.1004 40.3175 27.9973 40.3857 27.8838 40.4318C27.7703 40.4779 27.6488 40.5011 27.5262 40.5C27.4037 40.4989 27.2825 40.4735 27.1699 40.4253C27.0574 40.3771 26.9555 40.3071 26.8704 40.2194L18.27 31.6489Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+                        </button>
+                        <button class="swiper-arrow__next news__btn-next" aria-label="Следующий слайд">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="60" height="60" rx="30" fill="#F2F2FE" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M41.73 28.3511C41.9029 28.5233 42 28.7567 42 29C42 29.2433 41.9029 29.4767 41.73 29.6489L33.1308 38.2194C33.0457 38.3071 32.9439 38.3771 32.8313 38.4253C32.7187 38.4735 32.5976 38.4988 32.475 38.5C32.3525 38.5011 32.2309 38.4779 32.1174 38.4318C32.004 38.3857 31.9009 38.3175 31.8142 38.2314C31.7275 38.1452 31.6589 38.0427 31.6124 37.9299C31.5659 37.817 31.5425 37.6961 31.5435 37.5742C31.5445 37.4523 31.57 37.3318 31.6183 37.2197C31.6666 37.1077 31.7369 37.0063 31.825 36.9215L38.8501 29.9195L18.9243 29.933C18.6795 29.9333 18.4446 29.8368 18.2712 29.6649C18.0979 29.4929 18.0003 29.2595 18 29.0159C17.9997 28.7724 18.0966 28.5387 18.2695 28.3663C18.4424 28.1938 18.677 28.0968 18.9218 28.0964L38.8526 28.0842L31.8238 21.0785C31.7356 20.9937 31.6654 20.8923 31.617 20.7803C31.5687 20.6682 31.5433 20.5477 31.5423 20.4258C31.5413 20.3039 31.5647 20.183 31.6112 20.0701C31.6576 19.9573 31.7262 19.8548 31.8129 19.7686C31.8997 19.6825 32.0027 19.6143 32.1162 19.5682C32.2297 19.5221 32.3512 19.4989 32.4738 19.5C32.5964 19.5012 32.7175 19.5265 32.8301 19.5747C32.9427 19.6229 33.0445 19.6929 33.1296 19.7806L41.73 28.3511Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="news__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide_long">
+                            <div class="news__block arrow-card" style="background-image: url(../img/news-1.webp);">
+                                <div class="arrow-card__arrow">
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                            fill="#346C9A" />
+                                    </svg>
+
+                                    <span>Подробнее</span>
+                                </div>
+                                <div class="news__content">
+                                    <span class="news__date">29 октября 2025</span>
+                                    <h3 class="news__subtitle h3-title">Выставка Металлообработка<br> 2026</h3>
+                                </div>
+                                <a class="news__link" href="#" aria-label="открыть новсоть"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news__block arrow-card" style="background-image: url(../img/news-2.webp);">
+                                <div class="arrow-card__arrow">
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                            fill="#346C9A" />
+                                    </svg>
+
+                                    <span>Подробнее</span>
+                                </div>
+                                <div class="news__content">
+                                    <span class="news__date">29 октября 2025</span>
+                                    <h3 class="news__subtitle h3-title">Выставка Металлообработка<br> 2026</h3>
+                                </div>
+                                <a class="news__link" href="#" aria-label="открыть новсоть"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news__block arrow-card" style="background-image: url(../img/news-3.webp);">
+                                <div class="arrow-card__arrow">
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                            fill="#346C9A" />
+                                    </svg>
+
+                                    <span>Подробнее</span>
+                                </div>
+                                <div class="news__content">
+                                    <span class="news__date">29 октября 2025</span>
+                                    <h3 class="news__subtitle h3-title">Выставка Металлообработка<br> 2026</h3>
+                                </div>
+                                <a class="news__link" href="#" aria-label="открыть новсоть"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news__block arrow-card" style="background-image: url(../img/news-3.webp);">
+                                <div class="arrow-card__arrow">
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                            fill="#346C9A" />
+                                    </svg>
+
+                                    <span>Подробнее</span>
+                                </div>
+                                <div class="news__content">
+                                    <span class="news__date">29 октября 2025</span>
+                                    <h3 class="news__subtitle h3-title">Выставка Металлообработка<br> 2026</h3>
+                                </div>
+                                <a class="news__link" href="#" aria-label="открыть новсоть"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="callback">
+            <div class="container">
+                <div class="callback__block">
+
+                    <div class="callback__block-2">
+                        <h2 class="h2-title callback__title">Нужна <span>помощь?</span></h2>
+                        <span class="callback__text text-20-30">Оставьте заявку и наши инженеры помогут<br> разобраться
+                            в
+                            инструменте и оборудовании</span>
+                        <form action="#" class="callback__form">
+                            <input type="text" class="callback__input" placeholder="Имя">
+                            <div class="callback__flexbox">
+                                <input type="tel" class="callback__input" placeholder="Телефон*">
+                                <input type="email" class="callback__input" placeholder="Email">
+                            </div>
+                            <input type="text" class="callback__input" placeholder="Компания*">
+                            <button type="submit" class="callback__btn blue-btn" aria-label="Отправить форму">Заказать
+                                обратный звонок</button>
+                        </form>
+                        <div class="callback__flex-2">
+                            <div class="callback__checkbox checkbox">
+                                <span class="callback__policy">Согласие на обработку <a href="#"
+                                        aria-label="Перейти на страницу">персональных
+                                        данных</a></span>
+                            </div>
+                            <span class="callback__text-2">
+                                <span>*</span> — поля, обязательные для заполнения
+                            </span>
+                        </div>
+                    </div>
+                    <img class="callback__img" src="./img/callback-img.webp" alt="Сотрудник" loading="lazy">
+
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <div class="contatcs__map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/intertulmash/66584699242/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Интертулмаш</a><a href="https://yandex.ru/maps/213/moscow/category/tool_industry/184106542/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Инструментальная промышленность в Москве</a><a href="https://yandex.ru/maps/213/moscow/category/labeling_bar_coding/184106970/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Маркировка товаров, штриховое кодирование в Москве</a><iframe src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=37.597810%2C55.704808&mode=search&oid=66584699242&ol=biz&z=16.99" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                <div class="contatcs__flex">
+                    <div class="contacts__block">
+                        <span class="contatcs__text ">г. Москва</span>
+                        <span class="contatcs__text-2">г. Москва</span>
+                        <a class="contatcs__link" href="#" aria-label="Открыть яндекс карту">Показать на карте</a>
+                    </div>
+                    <div class="contacts__block">
+                        <span class="contatcs__text ">Телефон</span>
+                        <a href="tel:+74956681358" class="contatcs__text-2 contatcs__text-2_link">+7 (495) 668-13-58</a>
+                        <button class="contatcs__btn contatcs__link" href="#"
+                            aria-label="Открыть модальное окно">Заказать
+                            звонок</button>
+                    </div>
+                    <div class="contacts__block">
+                        <span class="contatcs__text ">График работы</span>
+                        <span class="contatcs__text-2">08:15 - 18:30</span>
+                        <span class="contatcs__text ">c ПН по ПТ</span>
+                    </div>
+                    <div class="contacts__block">
+                        <span class="contatcs__text ">E-mail</span>
+                        <a href="mailto:inbox@itmash.ru"
+                            class="contatcs__text-2 contatcs__text-2_color">inbox@itmash.ru</a>
+                    </div>
+                    <div class="contacts__block">
+                        <span class="contatcs__text ">Мы в соцсетях</span>
+                        <div class="contatcs__socials socials">
+
+                            <a href="#" class="socials__link" aria-label="Перейти в whatsapp">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2049_767)">
+                                        <path
+                                            d="M18.3129 4.74728C15.393 0.220805 9.41359 -1.12037 4.78933 1.68772C0.276828 4.49581 -1.17611 10.6149 1.74374 15.1274L1.98124 15.4907L1.0033 19.151L4.66359 18.173L5.02683 18.4105C6.6055 19.2627 8.32389 19.7517 10.0283 19.7517C11.8584 19.7517 13.6886 19.2627 15.2673 18.2848C19.7798 15.351 21.1209 9.35757 18.3129 4.71933V4.74728ZM15.7562 14.1635C15.2673 14.8899 14.6526 15.3789 13.8004 15.5046C13.3114 15.5046 12.6967 15.7421 10.2658 14.7782C8.19815 13.8002 6.47977 12.2076 5.26433 10.3774C4.53786 9.52522 4.16065 8.42154 4.04889 7.31786C4.04889 6.33992 4.41212 5.48772 5.02683 4.87301C5.26433 4.63551 5.5158 4.50978 5.7533 4.50978H6.368C6.6055 4.50978 6.85698 4.50978 6.98271 4.99875C7.22021 5.61345 7.83492 7.08036 7.83492 7.2061C7.96065 7.33184 7.90477 8.26786 7.34595 8.79875C7.03859 9.14801 6.98271 9.16198 7.10845 9.41345C7.59742 10.1399 8.21212 10.8804 8.81286 11.4951C9.53933 12.1098 10.2798 12.5987 11.132 12.962C11.3695 13.0877 11.6209 13.0877 11.7467 12.8362C11.8724 12.5987 12.4732 11.984 12.7246 11.7326C12.9621 11.4951 13.0879 11.4951 13.3393 11.6068L15.2952 12.5848C15.5327 12.7105 15.7842 12.8223 15.9099 12.948C16.0357 13.3112 16.0357 13.8002 15.7842 14.1635H15.7562Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2049_767">
+                                            <rect width="20" height="20" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                            <a href="#" class="socials__link" aria-label="Перейти в telegram">
+                                <svg width="19" height="17" viewBox="0 0 19 17" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                                        fill="white" />
+                                </svg>
+
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__flex">
+            <a href="./index.html" class="footer__logo logo" aria-label="Перейти на главную">
+                <img сlass="logo__img" src="./img/svg/footer-logo.svg" alt="лого">
+            </a>
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#" aria-label="Перейти на страницу">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#" aria-label="Перейти на страницу">
+                            Каталоги
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#" aria-label="Перейти на страницу">
+                            ПРОДУКЦИЯ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#" aria-label="Перейти на страницу">
+                            О КОМПАНИИ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#" aria-label="Перейти на страницу">
+                            НОВОСТИ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#" aria-label="Перейти на страницу">
+                            БРЕНДЫ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#" aria-label="Перейти на страницу">
+                            Контакты
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__flex-2">
+            <span class="footer__text">© Компания "ИНТЕРТУЛМАШ", 2026. Все права защищены.</span>
+            <a href="#" class="footer__text footer__link-2" aria-label="Открыть страницу">Политика
+                конфиденциальности</a>
+            <a href="#" class="footer__text footer__link-2" aria-label="Открыть страницу">Пользовательское
+                соглашение</a>
+            <a href="#" class="footer__text footer__link-2 footer__link-2_ml" aria-label="Открыть страницу">Старая
+                версия
+                сайта</a>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script defer src="./js/script.js"></script>
 </body>
 
 </html>
