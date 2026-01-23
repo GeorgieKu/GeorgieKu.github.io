@@ -93,16 +93,20 @@
             openAcc(toggleButton, contents[index], toggleArrow);
         });
     });
+    let modal = document.querySelector('.modal');
 
     function openModal() {
-        let modal = document.querySelector('.modal');
+
         modal.showModal();
 
         modal.addEventListener('click', handleOutsideClick);
     }
 
+    function closeModal() {
+        modal.close();
+    }
+
     function handleOutsideClick(event) {
-        let modal = document.querySelector('.modal');
         if (event.target === modal) {
             modal.close();
         }

@@ -1677,6 +1677,26 @@ button {
   padding: 0;
   border: 0;
 }
+.modal__close {
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 3;
+}
+.modal__close svg path {
+  transition: fill 0.25s ease;
+}
+.modal__close:hover svg path {
+  fill: #EE6322;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
