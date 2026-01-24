@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Интертулмаш">
     <link rel="shortcut icon" href="./img/svg/fav.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preload" href="./fonts/Mulish-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="./fonts/Mulish-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
@@ -111,7 +111,7 @@
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="./catalog.html" aria-label="Перейти на страницу">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
                             Каталоги
                         </a>
                     </li>
@@ -131,7 +131,7 @@
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="./brands.html" aria-label="Перейти на страницу">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
                             БРЕНДЫ
                         </a>
                     </li>
@@ -221,7 +221,7 @@
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="./catalog.html" aria-label="Перейти на страницу">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
                             Каталоги
                         </a>
                     </li>
@@ -241,7 +241,7 @@
                         </a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link" href="./brands.html" aria-label="Перейти на страницу">
+                        <a class="menu__link" href="#" aria-label="Перейти на страницу">
                             БРЕНДЫ
                         </a>
                     </li>
@@ -314,14 +314,178 @@
     </div>
 </div>
     <main>
-        <div class="container">
-            <div class="bread-crumbs">
-                <a class="bread-crumbs__link" href="./index.html" aria-label="Перейти на ">Главная /</a>
-                <a class="bread-crumbs__link bread-crumbs__link_active" href="./production.html"
-                    aria-label="Перейти на ">Продукция</a>
+        <section class="hero">
+
+            <div class="hero__swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="hero__block">
+                            <div class="container">
+                                <h1>Технологический партнер&nbsp;№1:<br> инструмент, оснастка и оборудование</h1>
+                                <button class="hero__btn blue-btn" aria-label="Открыть модальное окно"
+                                    onclick="openModal()">Получить
+                                    консультацию</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero__block">
+                            <div class="container">
+                                <h1>Технологический партнер&nbsp;№1:<br> инструмент, оснастка и оборудование</h1>
+                                <button class="hero__btn blue-btn" aria-label="Открыть модальное окно"
+                                    onclick="openModal()">Получить
+                                    консультацию</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="hero__block">
+                            <div class="container">
+                                <h1>Технологический партнер&nbsp;№1:<br> инструмент, оснастка и оборудование</h1>
+                                <button class="hero__btn blue-btn" aria-label="Открыть модальное окно"
+                                    onclick="openModal()">Получить
+                                    консультацию</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="hero__pagination"></div>
             </div>
-        </div>
-        <section class="production production-page-production">
+            <div class="container hero__container">
+                <div class="hero__flex">
+                    <div class="hero__card text-16-20">
+                        <strong>20+</strong>
+                        <span>Штат технологов с опытом более 15 лет в отрасли</span>
+                        <img class="hero__icon" src="./img/svg/hero-1.svg" alt="Иконка">
+                    </div>
+                    <div class="hero__card text-16-20">
+                        <strong>До 5 лет</strong>
+                        <span>Гарантия, постпродажное обслуживание и тех поддержка </span>
+                        <img class="hero__icon" src="./img/svg/hero-2.svg" alt="Иконка">
+                    </div>
+                    <div class="hero__card text-16-20">
+                        <strong>Проектирование </strong>
+                        <span>Индивидуальное под специфику предприятия</span>
+                        <img class="hero__icon" src="./img/svg/hero-3.svg" alt="Иконка">
+                    </div>
+                    <div class="hero__card text-16-20">
+                        <strong>Аудит</strong>
+                        <span>Бесплатный аудит производственных участков</span>
+                        <img class="hero__icon" src="./img/svg/hero-4.svg" alt="Иконка">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="container">
+                <h2 class="visually-hidden">Каталог</h2>
+                <div class="catalog__grid">
+                    <div class="catalog__card blue-card text-16-20 catalog__card_wide">
+                        <h3 class="h3-title">Комплексное<br> оснащение</h3>
+                        <span>От инструмента и оснастки<br> до автоматизированных комплексов</span>
+                        <img class="catalog__img" src="./img/catalog-1.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Технологический <br> аудит</h3>
+                        <span>Анализ существующей технологии, разработка плана улучшения производства</span>
+                        <img class="catalog__img" src="./img/catalog-2.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Технология <br> «под&nbsp;ключ»</h3>
+                        <span>Проектирование и внедрение производственных линий</span>
+                        <img class="catalog__img" src="./img/catalog-3.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Оборудование <br> под задачи</h3>
+                        <span>Подбор и поставка<br> оборудования</span>
+                        <img class="catalog__img" src="./img/catalog-4.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Обучение персонала<br> и поддержка внедрения</h3>
+                        <span>Пуско-наладка, запуск<br> производства и обучение<br> персонала</span>
+                        <img class="catalog__img" src="./img/catalog-5.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card_wide">
+                        <h3 class="h3-title">Сервис и модернизация <br> оборудования</h3>
+                        <span>Продление ресурса и повышение<br> эффективности</span>
+                        <img class="catalog__img" src="./img/catalog-6.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                <div class="about__flex">
+                    <div class="about__block text-20-30">
+                        <h2 class="about__title h2-title">ИНТЕРТУЛМАШ</h2>
+                        <strong>Российская инжиниринговая компания, основанная в 2004 году.
+                            Наша специализация — оснащение промышленных предприятий инструментом, оснасткой, станочным и
+                            технологическим оборудованием.</strong>
+                        <p>Наша экспертиза — это не просто поставка современного оборудования, а глубокий инжиниринг: мы
+                            анализируем ваш техпроцесс, подбираемоптимальные инструмент, станки и технологическую
+                            оснастку, обеспечиваем полную адаптацию решения под ваши задачи и обучаем персонал. Ваш
+                            результат — это увеличение производительности и сокращение издержек с первого дня работы с
+                            нами.</p>
+                    </div>
+                    <ul class="about__list">
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Экспертиза в<br> металлообработке</h3>
+                            </div>
+                            <p>Мы не просто продаем инструмент — <br>
+                                мы разбираемся в нем</p>
+                        </li>
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Ассортимент<br> «под ключ»</h3>
+                            </div>
+                            <p>Подберем, проведем испытания и внедрим<br> инструмент и оборудование</p>
+                        </li>
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Гарантированные<br> сроки поставки</h3>
+                            </div>
+                            <p>Для нас договор — это обязательство,<br>
+                                а не формальность</p>
+                        </li>
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Цены<br> без переплат</h3>
+                            </div>
+                            <p>Адекватное соотношение цены-качества<br> за счет прямых поставок</p>
+                        </li>
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Качество<br> под контролем</h3>
+                            </div>
+                            <p>Сертифицированная продукция<br> от проверенных производителеи</p>
+                        </li>
+                        <li class="about__item text-16-20">
+                            <div class="about__flex-2">
+                                <img class="about__img" src="./img/svg/about-1.svg" alt="Иконка" loading="lazy">
+                                <h3 class="h3-title">Гибкие<br>
+                                    условия</h3>
+                            </div>
+                            <p>Бонусная система для постоянных<br> закзачиков и гибкие условия оплаты</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="about__text">ИНТЕРТУЛМАШ</div>
+            </div>
+        </section>
+        <section class="production">
             <div class="container">
                 <h2 class="h2-title production__title">Каталог продукции</h2>
                 <div class="production__grid">
@@ -424,9 +588,8 @@
                 </div>
                 <div class="production__flex">
                     <div class="production__block">
-                        <h2 class="h2-title production__title-2">Бренды</h2>
-                        <span class="text-20-30 production__text">Компания «ИНТЕРТУЛМАШ» — поставщик следующих
-                            производителей пневмо — и электроинструмента</span>
+                        <h2 class="h2-title production__title-2">50+ производителей </h2>
+                        <span class="text-20-30 production__text">работаем с проверенными заводами по всему миру</span>
                     </div>
                     <div class="production__block-3">
                         <a href="#" class="production__link" aria-label="">
@@ -492,6 +655,11 @@
                                 <img src="./img/prod-logo-4.webp" loading="lazy" alt="Логотип">
                             </div>
                         </div>
+                        <div class="swiper-slide">
+                            <div class="production__swiper-block">
+                                <img src="./img/prod-logo-1.webp" loading="lazy" alt="Логотип">
+                            </div>
+                        </div>
 
 
                     </div>
@@ -510,6 +678,410 @@
                 </a>
             </div>
 
+        </section>
+        <section class="reviews">
+            <div class="container">
+                <div class="reviews__flex">
+                    <div class="reviews__texts">
+                        <h2 class="h2-title reviews__title">
+                            Отзывы<br> и опыт
+                        </h2>
+                        <div class="reviews__block">
+                            <strong class="reviews__strong">300+</strong>
+                            <span class="reviews__text text-20-30">ГОС заказов ежегодно
+                                и более <span>500&nbsp;000 заказов в год</span></span>
+                        </div>
+                        <div class="reviews__arrows swiper-arrows">
+                            <button class="swiper-arrow__prev reviews__btn-prev" aria-label="Предыдущий слайд">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="60" y="60" width="60" height="60" rx="30" transform="rotate(-180 60 60)"
+                                        fill="#F2F2FE" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M18.27 31.6489C18.0971 31.4767 18 31.2433 18 31C18 30.7567 18.0971 30.5233 18.27 30.3511L26.8692 21.7807C26.9543 21.6929 27.0561 21.6229 27.1687 21.5747C27.2813 21.5266 27.4024 21.5012 27.525 21.5C27.6475 21.4989 27.7691 21.5221 27.8826 21.5682C27.996 21.6143 28.0991 21.6825 28.1858 21.7687C28.2725 21.8548 28.3411 21.9573 28.3876 22.0702C28.4341 22.183 28.4575 22.3039 28.4565 22.4258C28.4555 22.5477 28.4301 22.6682 28.3817 22.7803C28.3334 22.8924 28.2631 22.9937 28.175 23.0785L21.1499 30.0805L41.0757 30.0671C41.3205 30.0667 41.5554 30.1632 41.7288 30.3351C41.9021 30.5071 41.9997 30.7406 42 30.9841C42.0003 31.2276 41.9034 31.4613 41.7305 31.6338C41.5576 31.8062 41.323 31.9033 41.0782 31.9036L21.1474 31.9158L28.1762 38.9216C28.2644 39.0063 28.3346 39.1077 28.383 39.2197C28.4313 39.3318 28.4567 39.4523 28.4577 39.5742C28.4587 39.6961 28.4353 39.817 28.3888 39.9299C28.3424 40.0427 28.2738 40.1452 28.1871 40.2314C28.1004 40.3175 27.9973 40.3857 27.8838 40.4318C27.7703 40.4779 27.6488 40.5011 27.5262 40.5C27.4037 40.4989 27.2825 40.4735 27.1699 40.4253C27.0574 40.3771 26.9555 40.3071 26.8704 40.2194L18.27 31.6489Z"
+                                        fill="#346C9A" />
+                                </svg>
+
+                            </button>
+                            <button class="swiper-arrow__next reviews__btn-next" aria-label="Следующий слайд">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="60" height="60" rx="30" fill="#F2F2FE" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M41.73 28.3511C41.9029 28.5233 42 28.7567 42 29C42 29.2433 41.9029 29.4767 41.73 29.6489L33.1308 38.2194C33.0457 38.3071 32.9439 38.3771 32.8313 38.4253C32.7187 38.4735 32.5976 38.4988 32.475 38.5C32.3525 38.5011 32.2309 38.4779 32.1174 38.4318C32.004 38.3857 31.9009 38.3175 31.8142 38.2314C31.7275 38.1452 31.6589 38.0427 31.6124 37.9299C31.5659 37.817 31.5425 37.6961 31.5435 37.5742C31.5445 37.4523 31.57 37.3318 31.6183 37.2197C31.6666 37.1077 31.7369 37.0063 31.825 36.9215L38.8501 29.9195L18.9243 29.933C18.6795 29.9333 18.4446 29.8368 18.2712 29.6649C18.0979 29.4929 18.0003 29.2595 18 29.0159C17.9997 28.7724 18.0966 28.5387 18.2695 28.3663C18.4424 28.1938 18.677 28.0968 18.9218 28.0964L38.8526 28.0842L31.8238 21.0785C31.7356 20.9937 31.6654 20.8923 31.617 20.7803C31.5687 20.6682 31.5433 20.5477 31.5423 20.4258C31.5413 20.3039 31.5647 20.183 31.6112 20.0701C31.6576 19.9573 31.7262 19.8548 31.8129 19.7686C31.8997 19.6825 32.0027 19.6143 32.1162 19.5682C32.2297 19.5221 32.3512 19.4989 32.4738 19.5C32.5964 19.5012 32.7175 19.5265 32.8301 19.5747C32.9427 19.6229 33.0445 19.6929 33.1296 19.7806L41.73 28.3511Z"
+                                        fill="#346C9A" />
+                                </svg>
+
+                            </button>
+                        </div>
+                    </div>
+                    <div class="reviews__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews__slide arrow-card"
+                                    style="background-image: url(./img/reviews-1.webp);">
+                                    <h3 class="reviews__subtitle">Комплексное оснащение цеха в г. Москва</h3>
+                                    <a href="#" class="reviews__link" aria-label="Открыть статью"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide arrow-card"
+                                    style="background-image: url(./img/reviews-2.webp);">
+                                    <h3 class="reviews__subtitle">Обучение сотрудников компании Северсталь</h3>
+                                    <a href="#" class="reviews__link" aria-label="Открыть статью"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide arrow-card"
+                                    style="background-image: url(./img/reviews-3.webp);">
+                                    <h3 class="reviews__subtitle">Комплексное оснащение цеха в г. Москва</h3>
+                                    <a href="#" class="reviews__link" aria-label="Открыть статью"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq">
+            <div class="container">
+                <div class="faq__flex">
+                    <h2 class="h2-title faq__title">Вопрос/Ответ</h2>
+                    <button class="faq__btn" aria-label="Открыть модальное окно" onclick="openModal()">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.875 8.12538L21.875 13.1254M23.75 27.5004V27.5129M23.75 23.7504C24.3104 23.7486 24.8539 23.5589 25.2937 23.2116C25.7335 22.8643 26.0441 22.3795 26.1757 21.8348C26.3073 21.2901 26.2524 20.717 26.0198 20.2072C25.7872 19.6974 25.3902 19.2804 24.8925 19.0229C24.3952 18.7681 23.8264 18.6892 23.2785 18.7988C22.7306 18.9084 22.236 19.2002 21.875 19.6266M10 25.0004L17.5 17.5004L21.25 13.7504L23.125 11.8754C23.4533 11.5471 23.7137 11.1573 23.8914 10.7284C24.0691 10.2994 24.1605 9.83967 24.1605 9.37538C24.1605 8.91109 24.0691 8.45134 23.8914 8.02239C23.7137 7.59344 23.4533 7.20368 23.125 6.87538C22.7967 6.54707 22.4069 6.28665 21.978 6.10897C21.549 5.93129 21.0893 5.83984 20.625 5.83984C20.1607 5.83984 19.701 5.93129 19.272 6.10897C18.8431 6.28665 18.4533 6.54707 18.125 6.87538L5 20.0004V25.0004H10Z"
+                                stroke="#B3253E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Задать вопрос
+                    </button>
+                </div>
+
+                <div class="faq__flexbox">
+                    <div class="faq__question acc-container">
+                        <div class="start__acc acc faq__acc">
+
+
+                            <h3 class="h3-title faq__subtitle"> Какие условия доставки?</h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="white" />
+                                <g clip-path="url(#clip0_2010_5111)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                        fill="#346C9A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2010_5111">
+                                        <rect width="29.6329" height="31.4953" fill="white"
+                                            transform="translate(45.4951 15.5) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <div class="text-wrapper">
+                                <div class="faq__block">
+                                    <p class="start__text-5 faq__text text-20-30">Мы осуществляем доставку на территории
+                                        России
+                                        и СНГ через
+                                        транспортные
+                                        компании. При заказе от 50 000 рублей без дополнительных скидок доставка
+                                        осуществляется
+                                        бесплатно.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__question acc-container">
+                        <div class="start__acc acc faq__acc">
+
+
+                            <h3 class="h3-title faq__subtitle"> Можно ли получить оборудование на испытания?</h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="white" />
+                                <g clip-path="url(#clip0_2010_5112)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                        fill="#346C9A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2010_5112">
+                                        <rect width="29.6329" height="31.4953" fill="white"
+                                            transform="translate(45.4951 15.5) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <div class="text-wrapper">
+                                <div class="faq__block">
+                                    <p class="start__text-5 faq__text text-20-30">Мы осуществляем доставку на территории
+                                        России
+                                        и СНГ через
+                                        транспортные
+                                        компании. При заказе от 50 000 рублей без дополнительных скидок доставка
+                                        осуществляется
+                                        бесплатно.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__question acc-container">
+                        <div class="start__acc acc faq__acc">
+
+
+                            <h3 class="h3-title faq__subtitle">Как оформить заказ? </h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="white" />
+                                <g clip-path="url(#clip0_2010_5113)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                        fill="#346C9A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2010_5113">
+                                        <rect width="29.6329" height="31.4953" fill="white"
+                                            transform="translate(45.4951 15.5) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <div class="text-wrapper">
+                                <div class="faq__block">
+                                    <p class="start__text-5 faq__text text-20-30">Мы осуществляем доставку на территории
+                                        России
+                                        и СНГ через
+                                        транспортные
+                                        компании. При заказе от 50 000 рублей без дополнительных скидок доставка
+                                        осуществляется
+                                        бесплатно.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__question acc-container">
+                        <div class="start__acc acc faq__acc">
+
+
+                            <h3 class="h3-title faq__subtitle">Можете ли вы подобрать хорошие альтернативы ушедшим
+                                брендам?
+                            </h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="white" />
+                                <g clip-path="url(#clip0_2010_5114)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                        fill="#346C9A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2010_5114">
+                                        <rect width="29.6329" height="31.4953" fill="white"
+                                            transform="translate(45.4951 15.5) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <div class="text-wrapper">
+                                <div class="faq__block">
+                                    <p class="start__text-5 faq__text text-20-30">Мы осуществляем доставку на территории
+                                        России
+                                        и СНГ через
+                                        транспортные
+                                        компании. При заказе от 50 000 рублей без дополнительных скидок доставка
+                                        осуществляется
+                                        бесплатно.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="faq__question acc-container">
+                        <div class="start__acc acc faq__acc">
+
+
+                            <h3 class="h3-title faq__subtitle">Какие гарантии на оборудование и инструмент вы
+                                предоставляете?
+                            </h3>
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="30" fill="white" />
+                                <g clip-path="url(#clip0_2010_5115)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                        fill="#346C9A" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2010_5115">
+                                        <rect width="29.6329" height="31.4953" fill="white"
+                                            transform="translate(45.4951 15.5) rotate(90)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </div>
+                        <div class="content">
+                            <div class="text-wrapper">
+                                <div class="faq__block">
+                                    <p class="start__text-5 faq__text text-20-30">Мы осуществляем доставку на территории
+                                        России
+                                        и СНГ через
+                                        транспортные
+                                        компании. При заказе от 50 000 рублей без дополнительных скидок доставка
+                                        осуществляется
+                                        бесплатно.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="faq__btn faq__btn-576" aria-label="Открыть модальное окно">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M16.875 8.12538L21.875 13.1254M23.75 27.5004V27.5129M23.75 23.7504C24.3104 23.7486 24.8539 23.5589 25.2937 23.2116C25.7335 22.8643 26.0441 22.3795 26.1757 21.8348C26.3073 21.2901 26.2524 20.717 26.0198 20.2072C25.7872 19.6974 25.3902 19.2804 24.8925 19.0229C24.3952 18.7681 23.8264 18.6892 23.2785 18.7988C22.7306 18.9084 22.236 19.2002 21.875 19.6266M10 25.0004L17.5 17.5004L21.25 13.7504L23.125 11.8754C23.4533 11.5471 23.7137 11.1573 23.8914 10.7284C24.0691 10.2994 24.1605 9.83967 24.1605 9.37538C24.1605 8.91109 24.0691 8.45134 23.8914 8.02239C23.7137 7.59344 23.4533 7.20368 23.125 6.87538C22.7967 6.54707 22.4069 6.28665 21.978 6.10897C21.549 5.93129 21.0893 5.83984 20.625 5.83984C20.1607 5.83984 19.701 5.93129 19.272 6.10897C18.8431 6.28665 18.4533 6.54707 18.125 6.87538L5 20.0004V25.0004H10Z"
+                            stroke="#B3253E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    Задать вопрос
+                </button>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                <div class="news__flex">
+                    <div class="news__texts">
+                        <h2 class="h2-title news__title">Новости</h2>
+                        <span class="news__text text-20-122">Здесь мы рассказываем о последних новостях компании,
+                            событиях отрасли и особенностях продукции</span>
+                    </div>
+                    <div class="news__arrows swiper-arrows">
+                        <button class="swiper-arrow__prev news__btn-prev" aria-label="Предыдущий слайд">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect x="60" y="60" width="60" height="60" rx="30" transform="rotate(-180 60 60)"
+                                    fill="#F2F2FE" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.27 31.6489C18.0971 31.4767 18 31.2433 18 31C18 30.7567 18.0971 30.5233 18.27 30.3511L26.8692 21.7807C26.9543 21.6929 27.0561 21.6229 27.1687 21.5747C27.2813 21.5266 27.4024 21.5012 27.525 21.5C27.6475 21.4989 27.7691 21.5221 27.8826 21.5682C27.996 21.6143 28.0991 21.6825 28.1858 21.7687C28.2725 21.8548 28.3411 21.9573 28.3876 22.0702C28.4341 22.183 28.4575 22.3039 28.4565 22.4258C28.4555 22.5477 28.4301 22.6682 28.3817 22.7803C28.3334 22.8924 28.2631 22.9937 28.175 23.0785L21.1499 30.0805L41.0757 30.0671C41.3205 30.0667 41.5554 30.1632 41.7288 30.3351C41.9021 30.5071 41.9997 30.7406 42 30.9841C42.0003 31.2276 41.9034 31.4613 41.7305 31.6338C41.5576 31.8062 41.323 31.9033 41.0782 31.9036L21.1474 31.9158L28.1762 38.9216C28.2644 39.0063 28.3346 39.1077 28.383 39.2197C28.4313 39.3318 28.4567 39.4523 28.4577 39.5742C28.4587 39.6961 28.4353 39.817 28.3888 39.9299C28.3424 40.0427 28.2738 40.1452 28.1871 40.2314C28.1004 40.3175 27.9973 40.3857 27.8838 40.4318C27.7703 40.4779 27.6488 40.5011 27.5262 40.5C27.4037 40.4989 27.2825 40.4735 27.1699 40.4253C27.0574 40.3771 26.9555 40.3071 26.8704 40.2194L18.27 31.6489Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+                        </button>
+                        <button class="swiper-arrow__next news__btn-next" aria-label="Следующий слайд">
+                            <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="60" height="60" rx="30" fill="#F2F2FE" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M41.73 28.3511C41.9029 28.5233 42 28.7567 42 29C42 29.2433 41.9029 29.4767 41.73 29.6489L33.1308 38.2194C33.0457 38.3071 32.9439 38.3771 32.8313 38.4253C32.7187 38.4735 32.5976 38.4988 32.475 38.5C32.3525 38.5011 32.2309 38.4779 32.1174 38.4318C32.004 38.3857 31.9009 38.3175 31.8142 38.2314C31.7275 38.1452 31.6589 38.0427 31.6124 37.9299C31.5659 37.817 31.5425 37.6961 31.5435 37.5742C31.5445 37.4523 31.57 37.3318 31.6183 37.2197C31.6666 37.1077 31.7369 37.0063 31.825 36.9215L38.8501 29.9195L18.9243 29.933C18.6795 29.9333 18.4446 29.8368 18.2712 29.6649C18.0979 29.4929 18.0003 29.2595 18 29.0159C17.9997 28.7724 18.0966 28.5387 18.2695 28.3663C18.4424 28.1938 18.677 28.0968 18.9218 28.0964L38.8526 28.0842L31.8238 21.0785C31.7356 20.9937 31.6654 20.8923 31.617 20.7803C31.5687 20.6682 31.5433 20.5477 31.5423 20.4258C31.5413 20.3039 31.5647 20.183 31.6112 20.0701C31.6576 19.9573 31.7262 19.8548 31.8129 19.7686C31.8997 19.6825 32.0027 19.6143 32.1162 19.5682C32.2297 19.5221 32.3512 19.4989 32.4738 19.5C32.5964 19.5012 32.7175 19.5265 32.8301 19.5747C32.9427 19.6229 33.0445 19.6929 33.1296 19.7806L41.73 28.3511Z"
+                                    fill="#346C9A" />
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+                <div class="news__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide_long">
+                            <div class="news__block arrow-card" style="background-image: url(./img/news-1.webp);">
+                                <div class="arrow-card__arrow">
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                            fill="#346C9A" />
+                                    </svg>
+
+                                    <span>Подробнее</span>
+                                </div>
+                                <div class="news__content">
+                                    <span class="news__date">29 октября 2025</span>
+                                    <h3 class="news__subtitle h3-title">Выставка Металлообработка<br> 2026</h3>
+                                </div>
+                                <a class="news__link" href="#" aria-label="открыть новсоть"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news__block arrow-card" style="background-image: url(./img/news-2.webp);">
+                                <div class="arrow-card__arrow">
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                            fill="#346C9A" />
+                                    </svg>
+
+                                    <span>Подробнее</span>
+                                </div>
+                                <div class="news__content">
+                                    <span class="news__date">29 октября 2025</span>
+                                    <h3 class="news__subtitle h3-title">Выставка Металлообработка<br> 2026</h3>
+                                </div>
+                                <a class="news__link" href="#" aria-label="открыть новсоть"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news__block arrow-card" style="background-image: url(./img/news-3.webp);">
+                                <div class="arrow-card__arrow">
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                            fill="#346C9A" />
+                                    </svg>
+
+                                    <span>Подробнее</span>
+                                </div>
+                                <div class="news__content">
+                                    <span class="news__date">29 октября 2025</span>
+                                    <h3 class="news__subtitle h3-title">Выставка Металлообработка<br> 2026</h3>
+                                </div>
+                                <a class="news__link" href="#" aria-label="открыть новсоть"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="news__block arrow-card" style="background-image: url(./img/news-3.webp);">
+                                <div class="arrow-card__arrow">
+                                    <svg width="21" height="17" viewBox="0 0 21 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M20.235 3.18041C20.47 3.24353 20.6703 3.39736 20.792 3.6081C20.9137 3.81884 20.9467 4.06926 20.8839 4.30434L17.7607 16.0038C17.7312 16.1222 17.6785 16.2334 17.6056 16.3312C17.5327 16.4289 17.441 16.5111 17.336 16.573C17.2309 16.635 17.1146 16.6754 16.9938 16.6919C16.873 16.7084 16.7501 16.7006 16.6323 16.6691C16.5145 16.6376 16.4042 16.583 16.3078 16.5084C16.2113 16.4338 16.1307 16.3407 16.0706 16.2346C16.0105 16.1285 15.9721 16.0115 15.9577 15.8905C15.9433 15.7694 15.9532 15.6466 15.9868 15.5294L18.538 5.97116L1.3782 15.8939C1.16745 16.016 0.916852 16.0493 0.681527 15.9866C0.446203 15.9239 0.245432 15.7703 0.123382 15.5595C0.00133086 15.3488 -0.0320012 15.0982 0.0307172 14.8628C0.0934362 14.6275 0.247068 14.4267 0.457816 14.3047L17.6225 4.38052L8.06415 1.80951C7.94585 1.77995 7.83463 1.72712 7.73698 1.65412C7.63932 1.58111 7.55718 1.48939 7.49535 1.3843C7.43351 1.27921 7.39323 1.16285 7.37685 1.04203C7.36047 0.921205 7.36831 0.798327 7.39992 0.680566C7.43154 0.562805 7.48629 0.452519 7.56098 0.356144C7.63567 0.259769 7.72881 0.179234 7.83496 0.119238C7.9411 0.0592424 8.05814 0.0209881 8.17923 0.00670639C8.30032 -0.00757536 8.42304 0.00240227 8.54024 0.0360564L20.235 3.18041Z"
+                                            fill="#346C9A" />
+                                    </svg>
+
+                                    <span>Подробнее</span>
+                                </div>
+                                <div class="news__content">
+                                    <span class="news__date">29 октября 2025</span>
+                                    <h3 class="news__subtitle h3-title">Выставка Металлообработка<br> 2026</h3>
+                                </div>
+                                <a class="news__link" href="#" aria-label="открыть новсоть"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="news__btn-2" aria-label="Перейти на страницу">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2145_4082)">
+                            <path
+                                d="M5 6L1 4.5V18.443L12 23L23 18.443V4L19 6M11.95 5V19M5 16V2L12 5L19 2V16L12 19L5 16Z"
+                                stroke="#B3253E" stroke-width="2" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2145_4082">
+                                <rect width="24" height="24" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    Все новости
+                </a>
+            </div>
         </section>
         <section class="callback">
     <div class="container">
@@ -628,7 +1200,7 @@
                         </a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="./catalog.html" aria-label="Перейти на страницу">
+                        <a class="footer__link" href="#" aria-label="Перейти на страницу">
                             Каталоги
                         </a>
                     </li>
@@ -648,7 +1220,7 @@
                         </a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="./brands.html" aria-label="Перейти на страницу">
+                        <a class="footer__link" href="#" aria-label="Перейти на страницу">
                             БРЕНДЫ
                         </a>
                     </li>
