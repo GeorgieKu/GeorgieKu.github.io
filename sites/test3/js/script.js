@@ -273,7 +273,8 @@ if (popup && innerWidth > 993) {
 
 // Список и карта на странице контактов в мобилке
 const paths = document.querySelectorAll('path.show-popup');
-if (paths) {
+const customSelect = document.querySelector('.custom-select');
+if (customSelect) {
     paths.forEach(path => {
         path.addEventListener('mouseenter', evt => {
             const text = path.getAttribute('data-popup') || 'Нет описания';
@@ -287,7 +288,7 @@ if (paths) {
     });
 
     (function () {
-        const customSelect = document.querySelector('.custom-select');
+
         const selected = customSelect.querySelector('.select-selected');
         const itemsContainer = customSelect.querySelector('.select-items');
         const options = itemsContainer.querySelectorAll('.select-item');
