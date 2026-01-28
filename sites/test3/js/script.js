@@ -363,6 +363,10 @@ if (customSelect) {
 
     })();
 }
+function showOld() {
+    let old = document.querySelector('.old');
+    old.classList.toggle('show')
+}
     document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("burger").addEventListener("click", function () {
             document.querySelector("header").classList.toggle("open")
