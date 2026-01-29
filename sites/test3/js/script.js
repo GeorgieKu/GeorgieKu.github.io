@@ -24,10 +24,15 @@ if (prdouctionSwiper) {
         breakpoints: {
             300: {
                 spaceBetween: 10,
+                slidesPerView: "auto",
             },
             576: {
                 spaceBetween: 20,
-            }
+            },
+            // 1640: {
+            //     slidesPerView: 4,
+            // },
+
         }
 
     });

@@ -136,6 +136,10 @@ button {
   margin-left: auto;
 }
 
+.container-big {
+  max-width: 1648px;
+}
+
 .overflow {
   overflow: auto;
 }
@@ -1665,9 +1669,8 @@ button {
   }
 }
 .production__swiper {
-  padding: 10px 0;
-  padding: 10px 5px;
-  max-width: calc(100% - 20px);
+  padding: 10px 0 10px;
+  max-width: 100%;
 }
 @media (max-width: 993px) {
   .production__swiper {
@@ -1679,10 +1682,14 @@ button {
     max-width: 100%;
   }
 }
+.production .swiper-wrapper {
+  box-sizing: border-box;
+}
 .production .swiper-slide {
-  max-width: 362px;
   width: 100%;
   min-height: 200px;
+  max-width: 372px;
+  padding: 0 4px;
 }
 @media (max-width: 576px) {
   .production .swiper-slide {
