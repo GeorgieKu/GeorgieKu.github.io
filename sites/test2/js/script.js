@@ -52,7 +52,8 @@ if (heroSwiper) {
         },
 
         pagination: {
-            el: '.hero__pagination'
+            el: '.hero__pagination',
+            clickable: true,
         }
 
     });

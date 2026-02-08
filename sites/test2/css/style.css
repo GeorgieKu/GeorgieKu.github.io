@@ -140,7 +140,7 @@ button {
   font-style: SemiBold;
   font-size: 14px;
   color: #000000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
 }
 
@@ -157,7 +157,7 @@ button {
   font-style: SemiBold;
   font-size: 18px;
   color: #000000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
 }
 .flex a {
@@ -166,7 +166,7 @@ button {
   font-style: SemiBold;
   font-size: 14px;
   color: #000000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
   padding-bottom: 3px;
   border-bottom: 1px solid #000;
@@ -180,14 +180,15 @@ button {
 .swiper-btns {
   max-width: 83px;
   width: 100%;
-  padding: 8px 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
   border-radius: 18px;
   -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
+}
+.swiper-btns .swiper-btn {
+  padding: 8px 14px;
 }
 
 .main-flex {
@@ -301,7 +302,7 @@ button {
   font-style: SemiBold;
   font-size: 18px;
   color: #000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
 }
 .aside__link-2 {
@@ -333,7 +334,7 @@ button {
   font-style: Regular;
   font-size: 16px;
   color: #000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
 }
 .aside__block svg {
@@ -353,6 +354,13 @@ button {
   z-index: 2;
   border-radius: 0 0 12px 0;
 }
+@media (max-width: 576px) {
+  .hero__img {
+    border-radius: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
 .hero__card {
   min-height: 400px;
   padding: 30px 35px 72px;
@@ -370,6 +378,10 @@ button {
     min-height: 404px;
     padding: 46px 18px 30px 30px;
     background-position: top;
+    border: unset;
+    border-top: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9;
+    border-radius: 0;
   }
 }
 .hero__card p {
@@ -381,7 +393,7 @@ button {
   font-style: SemiBold;
   font-size: 24px;
   color: #000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
   margin-bottom: 26px;
   position: relative;
@@ -425,7 +437,7 @@ button {
   font-style: SemiBold;
   font-size: 16px;
   color: #000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
 }
 @media (max-width: 576px) {
@@ -502,7 +514,7 @@ button {
   font-style: SemiBold;
   font-size: 18px;
   color: #000000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
   margin-bottom: 14px;
 }
@@ -515,6 +527,7 @@ button {
   display: flex;
   align-items: center;
   gap: 6px;
+  position: relative;
 }
 .birthday__block li img {
   width: 46px;
@@ -527,9 +540,10 @@ button {
   font-style: SemiBold;
   font-size: 14px;
   color: #000000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
   margin-bottom: 4px;
+  transition: color 0.25s ease;
 }
 .birthday__block li span {
   font-family: Open Sans;
@@ -537,20 +551,31 @@ button {
   font-style: SemiBold;
   font-size: 12px;
   color: #B0B0B0;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
+}
+.birthday__block li a {
+  position: absolute;
+  inset: 0;
+}
+.birthday__block li:hover h3 {
+  color: #EE7300;
 }
 .birthday .header__initials {
   font-size: 16px;
 }
 
-@media (max-width: 576px) {
-  .objects {
-    padding-left: 15px;
-  }
-}
 .objects .swiper-slide {
   max-width: 257px;
+}
+.objects__block {
+  padding-right: 0;
+}
+.objects__swiper {
+  padding-right: 15px;
+}
+.objects__flex {
+  padding-right: 15px;
 }
 .objects__card {
   position: relative;
@@ -561,9 +586,10 @@ button {
   font-style: SemiBold;
   font-size: 16px;
   color: #000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
   margin-bottom: 1px;
+  transition: color 0.25s ease;
 }
 .objects__card span {
   display: block;
@@ -572,9 +598,12 @@ button {
   font-style: Regular;
   font-size: 14px;
   color: #000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
   margin-bottom: 10px;
+}
+.objects__card:hover h3 {
+  color: #EE7300;
 }
 .objects__img-block {
   position: relative;
@@ -598,7 +627,7 @@ button {
   font-style: SemiBold;
   font-size: 12px;
   color: #fff;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
   padding: 3px 9px;
   border-radius: 18px;
@@ -684,7 +713,7 @@ button {
   font-style: Regular;
   font-size: 14px;
   color: #000000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
   max-width: -moz-min-content;
   max-width: min-content;
@@ -698,7 +727,7 @@ button {
 .news__date strong {
   display: block;
   font-size: 32px;
-  line-height: 100%;
+  line-height: 150%;
   font-weight: 600;
 }
 @media (max-width: 768px) {
@@ -712,9 +741,10 @@ button {
   font-style: SemiBold;
   font-size: 16px;
   color: #000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
   margin-bottom: 12px;
+  transition: color 0.25s ease;
 }
 @media (max-width: 768px) {
   .news__texts h3 {
@@ -729,7 +759,7 @@ button {
   font-style: Regular;
   font-size: 14px;
   color: #000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
 }
 @media (max-width: 768px) {
@@ -737,13 +767,16 @@ button {
     order: 4;
   }
 }
+.news__card:hover h3 {
+  color: #EE7300;
+}
 .news__tag {
   font-family: Open Sans;
   font-weight: 600;
   font-style: SemiBold;
   font-size: 14px;
   color: #000000;
-  line-height: 100%;
+  line-height: 150%;
   letter-spacing: 0%;
   text-align: right;
 }
@@ -1120,6 +1153,11 @@ summary {
     display: block;
   }
 }
+@media (max-width: 576px) {
+  .header .menu__item-1293 .white-block {
+    padding: 30px;
+  }
+}
 .header__profile {
   display: flex;
   align-items: center;
@@ -1189,6 +1227,7 @@ summary {
   display: flex;
   align-items: center;
   gap: 3px;
+  cursor: pointer;
 }
 @media (max-width: 576px) {
   .header__job {
