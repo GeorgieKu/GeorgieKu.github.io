@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iron Star">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+    <link rel="stylesheet" href="./style/normalize.min.css">
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/media.css">
+    <title>Iron Star</title>
+</head>
+
+<body>
+    <div class="separator"></div>
+    <header class="header">
+        <div class="header__block">
+            <nav class="header__navbar navbar navbar-expand-lg">
+
+
+                <a class="logo header__logo navbar-brand" href="#" aria-label="logo">
+                    <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" width="45" height="40" viewBox="0 0 45 40"
+                        fill="none">
+                        <g clip-path="url(#clip0_1107_646)">
+                            <path
+                                d="M38.1493 18.1788L38.1647 7.85431L34.0697 16.1214L33.0856 12.1523L31.9452 12.1325L32.5682 10.7373L33.8187 10.7528L34.193 11.7174L39.981 0L40.0162 10.9007L42.11 6.76159L43.6885 10.7439H44.6176L44.0562 12.1391H42.5877L41.9867 10.6269L38.1493 18.1788Z"
+                                fill="#E2E000" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M21.111 6.60928V13.4879C21.111 16.4305 19.7306 17.691 17.1437 17.691C14.5568 17.691 13.4296 16.3974 13.4296 13.5166V6.53202C13.4296 3.66888 14.9994 2.41943 17.2758 2.41943C19.5523 2.41943 21.111 3.64901 21.111 6.60928ZM16.3071 6.28698V13.8654C16.3071 14.7815 16.6197 15.2583 17.256 15.2583C17.8923 15.2583 18.2203 14.8256 18.2203 13.8499V6.26491C18.2203 5.33776 17.9649 4.86535 17.2494 4.86535C16.644 4.86535 16.3093 5.30464 16.3093 6.28698H16.3071ZM3.57525 2.64018V17.468H0.735191V2.64018H3.57525ZM22.377 17.4658V17.468L22.3726 17.4658H22.377ZM22.377 17.4658V2.64018H25.5231C25.992 4.45034 27.4737 11.1656 27.5926 11.8168H27.6608C27.5023 9.84328 27.4011 7.1457 27.4011 5.07727V2.64018H30.0408V17.468H26.8639C26.5578 16.0574 24.9397 8.38412 24.845 7.9095H24.7679C24.878 9.65564 24.9661 12.6027 24.9661 14.9338V17.4658H22.377ZM12.483 6.85873V6.32451C12.483 3.7329 11.259 2.64018 8.77996 2.64018H5.09008V17.468H7.93014V11.0221H8.26478C9.34797 11.0221 9.53731 11.3069 9.53731 12.9757C9.53731 14.8676 9.54391 17.468 9.54391 17.468H12.3554V13.3046L12.3598 13.0927C12.3598 11.0243 11.9282 10.3466 11.008 9.90067C11.642 9.60045 12.483 8.97131 12.483 6.85873ZM8.289 8.77484H7.93674V4.88743H8.38147C9.42723 4.88743 9.62757 5.38191 9.62757 6.37749V7.09272C9.62757 8.47242 9.24009 8.77264 8.2912 8.77264L8.289 8.77484ZM6.25034 27.6049C4.51328 26.3378 4.28211 25.7528 4.28211 24.5695C4.28211 23.457 4.52208 22.8565 5.26843 22.8565C6.06761 22.8565 6.27676 23.4459 6.27676 24.638V26.0861H10.0921V24.6843C10.0921 22.4349 9.46908 19.7373 5.24201 19.7373C1.26152 19.7373 0.268595 22.3245 0.268595 25.1325C0.268595 27.9404 1.48608 29.1391 3.8528 31.0133C5.99716 32.6932 6.37143 33.2296 6.37143 35.0839C6.37143 36.011 6.15347 36.9007 5.22219 36.9007C4.29092 36.9007 3.95847 36.3002 3.95847 35.0066V33.3753H0V34.8234C0 37.7351 1.14263 39.9978 5.15174 39.9978C9.16085 39.9978 10.4488 37.4614 10.4488 34.3841C10.4488 31.1479 9.33918 29.872 6.25034 27.6004V27.6049ZM44.7762 25.6424V24.936C44.7762 21.4989 43.0348 20.053 39.5144 20.053H34.2724V39.7086H38.3079V31.1634H38.7835C40.3224 31.1634 40.5932 31.5409 40.5932 33.7506C40.5932 36.2583 40.602 39.7064 40.602 39.7064H44.5957V34.1877L44.6001 33.9073C44.6001 31.1656 43.9858 30.2671 42.6803 29.6755C43.5807 29.2782 44.7762 28.4459 44.7762 25.6446V25.6424ZM38.8187 28.1832H38.3189V23.0309H38.9486C40.4347 23.0309 40.7187 23.6865 40.7187 25.0066V25.9559C40.7187 27.7859 40.1683 28.1832 38.8187 28.1832ZM23.5043 20.0508H29.53L32.5727 39.7064H28.3698L27.7908 35.0287H25.1731L24.6557 39.7064H20.5343L23.5043 20.0508ZM26.373 23.4724C26.3003 24.8433 25.8005 29.2649 25.5231 31.6954H27.4451C27.1457 29.181 26.7274 25.3554 26.5315 23.4724H26.373ZM21.1331 23.6225L21.7122 20.0508H21.4414H11.2678V23.3929V23.6225H14.0374V39.7064H18.0729V23.6225H21.1331Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_1107_646">
+                                <rect width="44.7761" height="40" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <svg class="logo-svg-991" xmlns="http://www.w3.org/2000/svg" width="57" height="24"
+                        viewBox="0 0 57 24" fill="none">
+                        <path d="M2.81645 0.564697V11.3974H0.74707V0.564697H2.81645Z" fill="white" />
+                        <path
+                            d="M15.5954 3.46307V8.48877C15.5954 10.6378 14.5891 11.5603 12.7053 11.5603C10.8214 11.5603 9.99902 10.616 9.99902 8.51062V3.40594C9.99902 1.314 11.1424 0.401611 12.8022 0.401611C14.4621 0.401611 15.5971 1.29888 15.5971 3.46307H15.5954ZM12.0952 3.22783V8.76602C12.0952 9.43477 12.3242 9.78426 12.7872 9.78426C13.2502 9.78426 13.4892 9.46837 13.4892 8.75594V3.21271C13.4892 2.53556 13.3037 2.18942 12.7822 2.18942C12.3409 2.18942 12.0968 2.51036 12.0968 3.22783H12.0952Z"
+                            fill="white" />
+                        <path
+                            d="M16.5181 11.3974V0.564697H18.8114C19.1541 1.88707 20.2339 6.79347 20.3192 7.26899H20.3693C20.254 5.82732 20.1804 3.85635 20.1804 2.34411V0.564697H22.1044V11.3974H19.7893C19.5653 10.3674 18.3869 4.76202 18.3183 4.41421H18.2632C18.3434 5.68953 18.4069 7.84365 18.4069 9.54576V11.3957H16.5181V11.3974Z"
+                            fill="white" />
+                        <path
+                            d="M57 3.64632V3.2565C57 1.36283 56.1074 0.564697 54.3021 0.564697H51.6125V11.3974H53.6819V6.68762H53.926C54.715 6.68762 54.8537 6.89597 54.8537 8.11417C54.8537 9.49704 54.8587 11.3974 54.8587 11.3974H56.9064V8.35445L56.9097 8.19986C56.9097 6.68762 56.5955 6.19362 55.9252 5.86764C56.3865 5.64753 57 5.18881 57 3.64464V3.64632ZM53.9444 5.04599H53.6869V2.20633H54.0112C54.7735 2.20633 54.9189 2.56758 54.9189 3.29514V3.81771C54.9189 4.82587 54.6364 5.04599 53.9444 5.04599Z"
+                            fill="white" />
+                        <path
+                            d="M37.2405 4.72671C36.3496 4.02772 36.2309 3.7051 36.2309 3.05316C36.2309 2.43986 36.3546 2.10884 36.7374 2.10884C37.1469 2.10884 37.2539 2.43314 37.2539 3.0918V3.88993H39.2113V3.11701C39.2113 1.87696 38.892 0.391602 36.724 0.391602C34.683 0.391602 34.1732 1.81815 34.1732 3.36569C34.1732 4.91322 34.7967 5.57357 36.0119 6.60694C37.1118 7.53277 37.304 7.8285 37.304 8.8501C37.304 9.36091 37.192 9.85155 36.714 9.85155C36.2359 9.85155 36.0654 9.52053 36.0654 8.8081V7.90915H34.0361V8.70728C34.0361 10.3119 34.6228 11.5587 36.6789 11.5587C38.7349 11.5587 39.3968 10.1607 39.3968 8.46532C39.3968 6.68087 38.8285 5.97851 37.2438 4.72671H37.2405Z"
+                            fill="white" />
+                        <path
+                            d="M49.1804 0.564697H46.0896L44.5652 11.3974H46.678L46.9438 8.81989H48.2861L48.5836 11.3974H50.7399L49.1804 0.564697ZM47.126 6.98167C47.2681 5.64249 47.5238 3.20441 47.5623 2.44997H47.6442C47.7445 3.48669 47.9601 5.59544 48.1122 6.98167H47.126Z"
+                            fill="white" />
+                        <path
+                            d="M44.8728 2.53398L45.1703 0.564697H45.0316H39.813V2.40628V2.53398H41.2338V11.3974H43.3049V2.53398H44.8728Z"
+                            fill="white" />
+                        <path
+                            d="M9.30881 3.64632V3.2565C9.30881 1.36283 8.4162 0.564697 6.61092 0.564697H3.92139V11.3974H5.99077V6.68762H6.23482C7.02379 6.68762 7.16253 6.89597 7.16253 8.11417C7.16253 9.49704 7.16755 11.3974 7.16755 11.3974H9.2152V8.35445L9.21854 8.19986C9.21854 6.68762 8.90429 6.19362 8.234 5.86764C8.69535 5.64753 9.30881 5.18881 9.30881 3.64464V3.64632ZM6.25321 5.04599H5.99579V2.20633H6.32007C7.0823 2.20633 7.22772 2.56758 7.22772 3.29514V3.81771C7.22772 4.82587 6.94523 5.04599 6.25321 5.04599Z"
+                            fill="white" />
+                        <path
+                            d="M27.0457 23.6667L27.0625 10.2262L22.1431 20.9883L20.9579 15.8198L0 15.7963L0.747185 13.9799L21.8405 13.9984L22.2902 15.2552L29.2472 0L29.2906 14.1916L31.8063 8.80128L33.7035 13.9883H56.9281L56.2528 15.8047H32.3814L31.6592 13.8337L27.0457 23.6667Z"
+                            fill="#E2E000" />
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="1-line"></span>
+                    <span class="2-line"></span>
+                    <span class="3-line"></span>
+
+                </button>
+               
+                <div class="header__collapse collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav header__list">
+                        <li class="header__item">
+                            <a class="header__link active" aria-label="соревнования" aria-current="page"
+                                href="#">соревнования</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" aria-label="результаты" href="#">результаты</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" aria-label="рейтинг" href="#">рейтинг</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" aria-label="сертификаты" href="#">сертификаты</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" aria-label="фото" href="#">фото</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" aria-label="faq" href="#">faq</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" aria-label="об ironstar" href="#">об ironstar</a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" aria-label="контакты" href="#">контакты</a>
+                        </li>
+
+                    </ul>
+                    <div class="burger__flex">
+                        <div class="social social-576">
+                            <a href="#" aria-label="telegram">
+                                <svg class="tg" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 16 16" fill="none">
+                                    <path
+                                        d="M4.88739 8.62648L6.37988 12.2651L8.32291 10.3701L11.6543 12.9525L14 2.66675L2 7.54139L4.88739 8.62648ZM10.571 5.61782L6.89798 8.88505L6.44049 10.5666L5.59537 8.50568L10.571 5.61782Z"
+                                        fill="#E2E000" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="vk">
+                                <svg class="vk" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    viewBox="0 0 16 16" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M2 4C2.09744 8.997 4.43598 12 8.53591 12H8.76827V9.14114C10.2748 9.3013 11.4141 10.4785 11.8713 12H14C13.4154 9.72573 11.8788 8.46847 10.9194 7.98799C11.8788 7.3954 13.228 5.95395 13.5503 4H11.6165C11.1968 5.58559 9.95253 7.02703 8.76827 7.16316V4H6.83448V9.54154C5.63523 9.22122 4.12117 7.66767 4.05372 4H2Z"
+                                        fill="#E2E000" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="union">
+                                <svg class="union" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39032 8.39251C3.24681 8.63251 1.82211 8.70751 0 8.73001C0.138721 3.97125 3.97041 0.13875 8.7319 0C8.72815 0.29625 8.7244 0.5775 8.7169 0.855001C8.63817 3.97125 8.32323 5.80875 7.06725 7.06501C6.38489 7.74751 5.53008 8.15251 4.39032 8.39251ZM18 8.73001C14.352 8.68126 12.3012 8.43376 10.9327 7.06501C10.764 6.89251 10.6103 6.7125 10.4716 6.5175C9.50427 5.16375 9.30931 3.19125 9.26807 0C14.0258 0.13875 17.8575 3.97125 18 8.73001ZM7.0635 10.935C5.69504 9.56625 3.64423 9.31874 0 9.26999C0.138721 14.0287 3.97041 17.8613 8.72815 18C8.68691 14.8087 8.49195 12.8362 7.52465 11.4825C7.38593 11.2875 7.23222 11.1075 7.0635 10.935ZM9.26807 17.9963C9.31681 14.3513 9.56426 12.3038 10.9327 10.935V10.9313C11.6151 10.2488 12.4699 9.84377 13.6097 9.60376C14.7494 9.36376 16.1741 9.28876 17.9962 9.26626C17.8575 14.025 14.0258 17.8575 9.26807 17.9963Z" fill="white"/>
+                                    </svg>
+                                    
+                            </a>
+                            <a href="#" aria-label="youtube">
+                                <svg class="youtube" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.6319 1.98254C17.4251 1.20676 16.8151 0.595775 16.0461 0.387887C14.6369 0 9.00248 0 9.00248 0C9.00248 0 3.36805 0 1.95881 0.372676C1.20252 0.580563 0.579829 1.20676 0.373108 1.98254C0 3.39972 0 6.33803 0 6.33803C0 6.33803 0 9.29155 0.370587 10.6935C0.577308 11.4693 1.18739 12.0803 1.95629 12.2882C3.38066 12.6761 8.99996 12.6761 8.99996 12.6761C8.99996 12.6761 14.6344 12.6761 16.0436 12.3034C16.8151 12.0955 17.4226 11.482 17.6293 10.7087C17.9999 9.29155 17.9999 6.35324 17.9999 6.35324C17.9999 6.35324 18.015 3.39972 17.6293 1.98254H17.6319ZM7.20753 9.05324V3.62282L11.8941 6.33803L7.20753 9.05324Z" fill="white"/>
+                                    </svg>
+                                    
+                            </a>
+                        </div>
+                        <div class="lang lang-576">
+                            <button class="lang__ru btn-reset" aria-label="русский язык">RUS</button>
+                            <button class="lang__eng btn-reset" aria-label="англиский язык">ENG</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </nav>
+            <div class="header__right">
+                <button class="login__btn btn-reset" id="modalOpen" aria-label="login">
+                    <svg class="login-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                    fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8.13337 3.2C7.13926 3.2 6.33337 4.00589 6.33337 5C6.33337 5.99411 7.13926 6.8 8.13337 6.8C9.12749 6.8 9.93337 5.99411 9.93337 5C9.93337 4.00589 9.12749 3.2 8.13337 3.2ZM5.13337 5C5.13337 3.34315 6.47652 2 8.13337 2C9.79023 2 11.1334 3.34315 11.1334 5C11.1334 6.65685 9.79023 8 8.13337 8C6.47652 8 5.13337 6.65685 5.13337 5ZM4.58315 12.8H11.6836C11.398 11.0974 9.91717 9.8 8.13337 9.8C6.34958 9.8 4.8688 11.0974 4.58315 12.8ZM3.33337 13.4C3.33337 10.749 5.48241 8.6 8.13337 8.6C10.7843 8.6 12.9334 10.749 12.9334 13.4C12.9334 13.7314 12.6647 14 12.3334 14H3.93337C3.602 14 3.33337 13.7314 3.33337 13.4Z"
+                        fill="black" />
+                </svg>
+                </button>
+                <div class="social">
+                    <a href="#" aria-label="telegram">
+                        <svg class="tg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path
+                                d="M4.88739 8.62648L6.37988 12.2651L8.32291 10.3701L11.6543 12.9525L14 2.66675L2 7.54139L4.88739 8.62648ZM10.571 5.61782L6.89798 8.88505L6.44049 10.5666L5.59537 8.50568L10.571 5.61782Z"
+                                fill="#E2E000" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="vk">
+                        <svg class="vk" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                            fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M2 4C2.09744 8.997 4.43598 12 8.53591 12H8.76827V9.14114C10.2748 9.3013 11.4141 10.4785 11.8713 12H14C13.4154 9.72573 11.8788 8.46847 10.9194 7.98799C11.8788 7.3954 13.228 5.95395 13.5503 4H11.6165C11.1968 5.58559 9.95253 7.02703 8.76827 7.16316V4H6.83448V9.54154C5.63523 9.22122 4.12117 7.66767 4.05372 4H2Z"
+                                fill="#E2E000" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="union">
+                        <svg class="union" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39032 8.39251C3.24681 8.63251 1.82211 8.70751 0 8.73001C0.138721 3.97125 3.97041 0.13875 8.7319 0C8.72815 0.29625 8.7244 0.5775 8.7169 0.855001C8.63817 3.97125 8.32323 5.80875 7.06725 7.06501C6.38489 7.74751 5.53008 8.15251 4.39032 8.39251ZM18 8.73001C14.352 8.68126 12.3012 8.43376 10.9327 7.06501C10.764 6.89251 10.6103 6.7125 10.4716 6.5175C9.50427 5.16375 9.30931 3.19125 9.26807 0C14.0258 0.13875 17.8575 3.97125 18 8.73001ZM7.0635 10.935C5.69504 9.56625 3.64423 9.31874 0 9.26999C0.138721 14.0287 3.97041 17.8613 8.72815 18C8.68691 14.8087 8.49195 12.8362 7.52465 11.4825C7.38593 11.2875 7.23222 11.1075 7.0635 10.935ZM9.26807 17.9963C9.31681 14.3513 9.56426 12.3038 10.9327 10.935V10.9313C11.6151 10.2488 12.4699 9.84377 13.6097 9.60376C14.7494 9.36376 16.1741 9.28876 17.9962 9.26626C17.8575 14.025 14.0258 17.8575 9.26807 17.9963Z" fill="white"/>
+                            </svg>
+                            
+                    </a>
+                    <a href="#" aria-label="youtube">
+                        <svg class="youtube" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.6319 1.98254C17.4251 1.20676 16.8151 0.595775 16.0461 0.387887C14.6369 0 9.00248 0 9.00248 0C9.00248 0 3.36805 0 1.95881 0.372676C1.20252 0.580563 0.579829 1.20676 0.373108 1.98254C0 3.39972 0 6.33803 0 6.33803C0 6.33803 0 9.29155 0.370587 10.6935C0.577308 11.4693 1.18739 12.0803 1.95629 12.2882C3.38066 12.6761 8.99996 12.6761 8.99996 12.6761C8.99996 12.6761 14.6344 12.6761 16.0436 12.3034C16.8151 12.0955 17.4226 11.482 17.6293 10.7087C17.9999 9.29155 17.9999 6.35324 17.9999 6.35324C17.9999 6.35324 18.015 3.39972 17.6293 1.98254H17.6319ZM7.20753 9.05324V3.62282L11.8941 6.33803L7.20753 9.05324Z" fill="white"/>
+                            </svg>
+                            
+                    </a>
+                </div>
+                <div class="lang">
+                    <button class="lang__ru btn-reset" aria-label="русский язык">RUS</button>
+                    <button class="lang__eng btn-reset" aria-label="англиский язык">ENG</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="login-overflow" id="loginOverflow">
+        <div class="login__modal" id="loginModal">
+            <div class="modal__flex">
+                <button class="modal__btn modal__btn_active btn-reset" id="enterBtn">Вход</button>
+                <button class="modal__btn btn-reset" id="registrBtn">Регистрация</button>
+            </div>
+            <form action="#" class="modal__form modalLogin__form" id="modalLoginForm">
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Логин"><i>*</i>
+           
+                </div>
+                <div class="modal__flexbox">
+                    <input type="password" class="modal__input" placeholder="Пароль"><i>*</i>
+                
+                </div>
+                <div class="modal__checkbox">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="modalCheck" checked>
+                      </div>
+                    <label for="modalCheck">
+                        <span class="modal__text">Запомнить</span>
+                    </label>
+                </div>
+                <div class="modal__flex-2">
+                    <a href="#" class="modal__link">
+                        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C0.146159 7.4955 3.65397 12 9.80387 12H10.1524V7.71171C12.4122 7.95195 14.1212 9.71772 14.807 12H18C17.123 8.58859 14.8182 6.7027 13.3791 5.98198C14.8182 5.09309 16.842 2.93093 17.3254 0H14.4247C13.7951 2.37838 11.9288 4.54054 10.1524 4.74474V0H7.25172V8.31231C5.45284 7.83183 3.18176 5.5015 3.08057 0H0Z" fill="black"/>
+                            </svg>                            
+                        войти через вк
+                    </a>
+                    <button href="#"  class="modal__link-2 btn-reset" id="resetBtn">
+                        Восстановить пароль
+                    </button>
+                </div>
+                <span class="big-error" id="bigError"></span>
+                <button class="modal__btn-2 black-btn btn-reset" id="loginBtn">Войти</button>
+                <button class="modal__btn-3 btn-reset" >Отменить</button>
+            </form>
+            <form action="" class="modal__form modalRegiserForm" id="modalRegisterForm" onsubmit="return false">
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Фамилия"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="text" class="modal__input" placeholder="Имя"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="tel" class="modal__input" placeholder="Телефон"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="email" class="modal__input" placeholder="E-mail"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="password" class="modal__input" id="modalInputRegistrPassword" placeholder="Пароль"><i>*</i>
+                </div>
+                <div class="modal__flexbox">
+                    <input type="password" class="modal__input" id="modalInputRegistrPasswordRepeat" placeholder="Повторите пароль"><i>*</i>
+                </div>
+                <div class="modal__checkbox modal__checkbox_mb">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="modalCheck-2" checked>
+                      </div>
+                    <label for="modalCheck">
+                        <span class="modal__text">Я ознакомлен и согласен <a href="#">с политикой конфиденциальности</a></span>
+                    </label>
+                </div>
+                <span class="modal__text">Нажимая на кнопку «Зарегистрироваться», вы соглашаетесь с условиями <a href="#">пользовательского соглашения</a></span>
+                <span class="big-error" id="bigError-2"></span>
+                <span class="big-error" id="bigError-3"></span>
+                <span class="big-error" id="bigError-4"></span>
+                <div class="modal__flex-3">
+                    <button class="modal__btn-3 btn-reset">Отменить</button>
+                    <button class="modal__btn-2 black-btn modal__btn-2_mb btn-reset" id="modalRegistrBtn">зарегистрироваться</button>
+                </div>
+            </form>
+        </div>
+        <div class="login__modal" id="passwodResetModal">
+            <h2 class="password__title">Восстановление пароля</h2>
+            <p class="password__text">Введите почту, которую вы указывали при регистрации</p>
+            <form class="needs-validation" novalidate>
+                <div class="modal__flexbox">
+                    <input type="email" class="modal__input form-control" id="email" placeholder="Email" required>
+                    <span class="invalid-feedback">Пожалуйста, введите действительный адрес электронной почты.</span>
+                    <button type="submit" class="modal__btn-2 btn-reset" id="passwordResetBtn">восстановить пароль</button>
+                    <button class="modal__btn-3 btn-reset" id="cancelBtn">Отменить</button>
+                </div>
+            </form>
+            
+        </div>
+        <div class="succsess__modal" id="succsessModal">
+            <p class="success__text">Ура! Вы успешно зарегистрировались. Чтобы продолжить оформление слота, авторизуйтесь со своим логином и паролем.</p>
+            <div class="success__btns">
+                <button class="modal__btn-3 succsess__btn-1 btn-reset" id="cancelBtn-2">Отменить</button>
+                <button class="succsess__btn-2 black-btn btn-reset" id="succsessModalBtn">авторизоваться</button>
+            </div>
+        </div>
+    </div>
+    <main>
+      <section class="race-hero race-swimstar-hero">
+        <div class="race__hero-block">
+            <div class="container">
+                <nav class="race__hero-nav">
+                    <ul class="race__hero-list list-reset">
+                        <li class="race__hero-item">
+                            <a href="#start" class="race__hero-link">О ГОНКЕ</a>
+                        </li>
+                        <li class="race__hero-item">
+                            <a href="#member" class="race__hero-link">что получает участник</a>
+                        </li>
+                        <li class="race__hero-item">
+                            <a href="#format" class="race__hero-link">ФОРМАТЫ УЧАСТИЯ</a>
+                        </li>
+                        <li class="race__hero-item">
+                            <a href="#scheme" class="race__hero-link">карты и схемы</a>
+                        </li>
+                        <li class="race__hero-item">
+                            <a href="#doc" class="race__hero-link">ДОКУМЕНТЫ</a>
+                        </li>
+                        <li class="race__hero-item">
+                            <a href="#part" class="race__hero-link">участники</a>
+                        </li>
+                        <li class="race__hero-item">
+                            <a href="#faq" class="race__hero-link">f.a.q.</a>
+                        </li>
+                        <li class="race__hero-item">
+                            <a href="#gid" class="race__hero-link">о локации</a>
+                        </li>
+                    </ul>
+               
+                <button class="race__hero-btn black-btn btn-reset">УЧАСТВОВАТЬ
+                </button>
+            </nav>
+            </div>
+        </div> 
+        <div class="bread-crumbs race-bread-crumbs">
+            <a href="#" class="arrowback" aria-label="back"><img src="./img/svg/Arrowback.svg" alt=""></a>
+            <a href="./index.html" class="home" aria-label="home"><img src="./img/svg/home.svg" alt=""></a>
+            /
+            <a href="#" aria-label="сорвенования">Соревнования</a>
+            /
+            <a class="" aria-label="Нижний Новгород" href="#">Нижний Новгород</a>
+            /
+            <a class="bread-crumbs_active" aria-label="STARKIDS NIZHNY NOVGOROD 2024" href="./ironlady.html">STARKIDS NIZHNY NOVGOROD 2024</a>
+        </div>
+        <div class="container">    
+            <div class="race__hero-abs-block">
+                <p class="race__hero-date black-bg">24.06.2024</p>
+                <h1 class="race__hero-title">STARKIDS NIZHNY NOVGOROD 2024</h1>
+                <p class="race__hero-text">САМЫЙ ЭМОЦИОНАЛЬНЫЙ И ТРОГАТЕЛЬНЫЙ ЗАБЕГ!</p>
+            </div>
+        </div>
+      </section>
+      <section class="start" id="start">
+        <div class="container">
+           <div class="start__flex ironlady-start__flex">
+            <div class="start__block ironlady__start__block">
+                <h2 class="start__title">Традиционный детский забег STARKIDS в рамках соревнований IRONSTAR. Дистанции: 500 м и 1000 м. Возраст участия — от 0 до 12 лет.</h2>
+                <p class="start__text">Приводите на старт своих юных спортсменов! Самые маленькие могут "бежать" на руках у родителей или в коляске.</p>
+
+                <div class="start__acc acc">
+                    <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.70711 7.70711C7.31658 8.09763 6.68342 8.09763 6.29289 7.70711L0.292894 1.70711C-0.0976309 1.31658 -0.0976308 0.683417 0.292894 0.292893C0.683418 -0.0976317 1.31658 -0.0976316 1.70711 0.292893L7 5.58579L12.2929 0.292894C12.6834 -0.0976306 13.3166 -0.0976306 13.7071 0.292894C14.0976 0.683418 14.0976 1.31658 13.7071 1.70711L7.70711 7.70711Z" fill="black"/>
+                        </svg>
+                        
+                    подробнее
+                </div>
+                <div class="content">
+                     <div class="text-wrapper">
+                        <p class="start__text-5">Нижний Новгород — один из самых популярных туристических городов России. Здесь вы сможете посетить:</p>
+                         <ul class="start__list ">
+                            <li class="start__item">памятники архитектуры разных эпох за 800 лет истории города</li>
+                            <li class="start__item">музеи старины и современные галереи искусства</li>
+                            <li class="start__item">неприступный Кремль и монументальную Чкаловскую лестницу</li>
+                            <li class="start__item">набережные Волги и Оки с панорамными видами и живописными закатами</li>
+                            <li class="start__item"> самую протяженную в Европе канатную дорогу над водой</li> 
+                         </ul>
+                    </div>
+                </div>
+                  
+            </div>
+            <div class="start__block_overflow ironlady-start__block_overflow">
+                <div class="start__block start__flex-2 ironlady__start__flex-2 starkids__start__flex-2">
+                        <div class="start__card">
+                            <p class="start__text-2">Бег</p>
+                            <div class="start__flex-3">
+                                <div class="start__block-2 start__block-2_border">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M14.1443 21.5705C13.4691 20.6369 12.8682 19.8129 12.2744 18.9813C11.9943 18.588 11.6639 18.212 11.4676 17.7763C11.0534 16.8577 11.3263 15.8842 12.1308 15.2618C13.4404 14.2486 14.7691 13.2577 16.0811 12.2469C16.2439 12.1224 16.366 11.9407 16.5073 11.7863C16.3349 11.6793 16.1721 11.5548 15.9902 11.4701C15.6478 11.3108 15.2839 11.1988 14.9511 11.022C14.0485 10.5415 13.1722 10.8029 12.2912 11.0768C11.6663 11.271 11.0462 11.4876 10.419 11.6668C9.94252 11.8013 9.22906 11.3731 9.06386 10.8851C8.86754 10.3125 9.14047 9.4685 9.65522 9.30418C11.0343 8.86103 12.4133 8.39547 13.8234 8.10667C14.3214 8.0046 14.9224 8.35564 15.4611 8.54734C16.8784 9.05522 18.267 9.65273 19.7011 10.0984C20.9221 10.4768 21.3483 11.4502 21.7242 12.5332C22.1264 13.6884 22.5382 14.8411 22.9859 15.9764C23.0457 16.1307 23.3666 16.29 23.5342 16.2577C24.0752 16.1606 24.6139 16.0062 25.1358 15.817C26.2372 15.4187 27.1589 16.0361 26.977 17.1465C26.9195 17.5 26.5723 17.9606 26.2587 18.0776C25.0712 18.5183 23.8526 18.8817 22.6268 19.1855C21.8918 19.3672 21.3603 18.7871 21.0179 17.7091C20.721 16.7755 20.381 15.8569 20.0147 14.9506C19.9669 14.8336 19.5742 14.7216 19.4689 14.7963C18.2742 15.6676 17.1082 16.5788 15.9303 17.4726C15.6191 17.7091 15.7627 17.9033 15.9303 18.1373C16.7156 19.2153 17.4793 20.3108 18.279 21.3763C18.7027 21.944 18.7794 22.5714 18.5399 23.1813C18.279 23.851 17.7571 24.1821 17.0077 24.2469C15.0469 24.4162 13.0908 24.6601 11.1372 24.8942C10.4405 24.9763 9.81801 24.8942 9.38706 24.2543C9.10455 23.8336 8.96091 23.4029 9.21708 22.8726C9.47326 22.3448 9.82999 22.0112 10.383 21.9564C11.4317 21.8494 12.4851 21.7747 13.5361 21.6826C13.699 21.6676 13.8594 21.6228 14.1419 21.568L14.1443 21.5705Z" fill="#E2E000"/>
+                                        <path d="M22.2676 10.549C21.0179 10.5415 20.053 9.52327 20.0722 8.22867C20.0914 6.9739 21.061 6.02535 22.2964 6.00046C23.7185 5.97307 24.5493 7.17805 24.5301 8.29091C24.511 9.47347 23.6658 10.6062 22.27 10.5465L22.2676 10.549Z" fill="#E2E000"/>
+                                        <path d="M15.1259 25.641C14.75 26.2012 14.3789 26.7639 13.9934 27.319C13.5433 27.9663 13.0717 28.5987 12.6216 29.2435C12.0997 29.9904 11.1875 30.2244 10.5482 29.7639C9.85153 29.2609 9.7438 28.3348 10.2897 27.5257C10.3016 27.5083 10.316 27.4933 10.3256 27.4759C11.0247 26.1589 12.0015 25.4244 13.5385 25.6535C14.0078 25.7232 14.5106 25.544 14.9966 25.4792L15.1283 25.6435L15.1259 25.641Z" fill="#E2E000"/>
+                                        </svg>
+                                        
+                                    <span class="start__text-3">1/0.5 км</span>
+                                </div>
+                                <div class="start__line"></div>
+                                <div class="start__block-2">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3825 17.9706C23.3825 17.1584 24.0409 16.5 24.8531 16.5H31.5294C32.3416 16.5 33 17.1584 33 17.9706C33 18.7827 32.3416 19.4411 31.5294 19.4411H24.8531C24.0409 19.4411 23.3825 18.7827 23.3825 17.9706Z" fill="#E2E000"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 17.9706C3 17.1584 3.65839 16.5 4.47056 16.5H19.8821C20.6942 16.5 21.3526 17.1584 21.3526 17.9706C21.3526 18.7827 20.6942 19.4411 19.8821 19.4411H4.47056C3.65839 19.4411 3 18.7827 3 17.9706Z" fill="#E2E000"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3 26.8675C3 26.0554 3.65839 25.397 4.47056 25.397H31.5289C32.3411 25.397 32.9995 26.0554 32.9995 26.8675C32.9995 27.6797 32.3411 28.3381 31.5289 28.3381H4.47056C3.65839 28.3381 3 27.6797 3 26.8675Z" fill="#E2E000"/>
+                                        </svg>
+                                        
+                                    <span class="start__text-3">
+                                        Плоский
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="start__text-4">Лимит: 1 часа</span>
+                        </div>
+                        <div class="start__card">
+                            <p class="start__text-2">Температура</p>
+                            <svg class="start__svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1237 6.8324C10.1237 5.91983 10.8588 5.1768 11.7946 5.1768C12.2424 5.1768 12.6625 5.3583 12.9777 5.66107C13.2856 5.97193 13.4655 6.38624 13.4655 6.8324V23.3883C13.4655 23.7366 13.6321 24.0638 13.9137 24.2686C14.8244 24.9309 15.4124 26.0045 15.4124 27.2054C15.4124 29.2103 13.7995 30.8232 11.7946 30.8232C9.79197 30.8232 8.1768 29.1973 8.1768 27.2054C8.1768 26.0045 8.76473 24.9309 9.67542 24.2686C9.95704 24.0638 10.1237 23.7366 10.1237 23.3883V6.8324ZM11.7946 3C9.66448 3 7.94686 4.70971 7.94686 6.8324V22.8694C6.75334 23.933 6 25.4855 6 27.2054C6 30.3949 8.58514 33 11.7946 33C15.0017 33 17.5892 30.4126 17.5892 27.2054C17.5892 25.4855 16.8358 23.933 15.6423 22.8694V20.4298H17.1295C17.7306 20.4298 18.2179 19.9425 18.2179 19.3414C18.2179 18.7402 17.7306 18.253 17.1295 18.253H15.6423V16.6127H17.1295C17.7306 16.6127 18.2179 16.1254 18.2179 15.5243C18.2179 14.9232 17.7306 14.4359 17.1295 14.4359H15.6423V12.7956H17.1295C17.7306 12.7956 18.2179 12.3083 18.2179 11.7072C18.2179 11.1061 17.7306 10.6188 17.1295 10.6188H15.6423V8.96316H17.1295C17.7306 8.96316 18.2179 8.47587 18.2179 7.87476C18.2179 7.27366 17.7306 6.78636 17.1295 6.78636H15.642C15.6297 5.75106 15.2011 4.80596 14.5111 4.11592L14.5111 4.11583L14.4991 4.10418C13.8032 3.42935 12.8462 3 11.7946 3ZM12.5301 9.08583V25.7184C13.1893 25.9944 13.6492 26.6535 13.6492 27.42C13.6492 28.4471 12.8214 29.2749 11.7943 29.2749C10.7672 29.2749 9.93943 28.4471 9.93943 27.42C9.93943 26.6535 10.3993 26.0097 11.0585 25.7184V9.08583C11.0585 8.68726 11.3957 8.35001 11.7943 8.35001C12.1929 8.35001 12.5301 8.67193 12.5301 9.08583Z" fill="#E2E000"/>
+                                <path d="M26.3201 17.4657C25.8746 17.7075 25.4801 17.7966 24.971 17.7966C23.6982 17.7966 23.1255 17.1221 23.1255 15.1366C23.1255 13.0493 23.7873 12.4766 24.9964 12.4766C25.4419 12.4766 25.9128 12.5784 26.3073 12.7438V10.8347C25.9891 10.6947 25.4291 10.542 24.6655 10.542C22.0818 10.542 21 11.9547 21 15.2511C21 18.3566 22.1073 19.7312 24.5382 19.7312C25.3528 19.7312 25.9764 19.5657 26.3201 19.3748V17.4657Z" fill="#E2E000"/>
+                                <path d="M29.1707 13.6691C28.9035 13.6691 28.8053 13.44 28.8053 12.48C28.8053 11.5036 28.9035 11.2691 29.1544 11.2691C29.4217 11.2691 29.5198 11.4982 29.5198 12.48C29.5198 13.4564 29.4107 13.6691 29.1707 13.6691ZM29.1653 14.4382C29.9835 14.4382 30.4144 13.9473 30.4144 12.4691C30.4144 11.0018 30.0326 10.5 29.1544 10.5C28.3362 10.5 27.9053 10.9909 27.9053 12.4691C27.9053 13.9364 28.3198 14.4382 29.1653 14.4382Z" fill="#E2E000"/>
+                                </svg>
+                                
+                            <div class="start__flex-3">
+                                <div class="start__block-2 start__block-2_border">
+                                    <span class="start__text-4">20</span>
+                                    <span class="start__text-3">Вода</span>
+                                </div>
+                                <div class="start__line start__line_min"></div>
+                                <div class="start__block-2">
+                                    <span class="start__text-4">25</span>
+                                    <span class="start__text-3">Воздух</span>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+           </div>
+           <button class="black-btn start-btn btn-reset">УЧАСТВОВАТЬ</button>
+        </div>
+           <div class="support__block">
+                <p class="about__text-2">ПРИ ПОДДЕРЖКЕ:</p>
+                <img src="./img/location/support.webp" alt="img">
+           </div>
+       
+      </section>
+      <section class="member" id="member">
+        <div class="container">
+            <h2 class="member__title">ЧТО ПОЛУЧАТ УЧАСТНИКИ?</h2>
+            <div class="relative">
+                <div class="swiper member__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-1.svg" alt="icon">
+                                <span class="member__text">СТАРТОВЫЙ ПАКЕТ</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-2.svg" alt="icon">
+                                <span class="member__text">ФУТБОЛКА ФИНИШЕРА</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-3.svg" alt="icon">
+                                <span class="member__text">МЕДАЛЬ ФИНИШЕРА</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-4.svg" alt="icon">
+                                <span class="member__text">РЮКЗАК<br><br></span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-5.svg" alt="icon">
+                                <span class="member__text">КОМПЛИМЕНТЫ ОТ ПАРТНЁРОВ</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-6.svg" alt="icon">
+                                <span class="member__text">ЭМОЦИИ БЕСЦЕННЫ</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-1.svg" alt="icon">
+                                <span class="member__text">СТАРТОВЫЙ ПАКЕТ</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-2.svg" alt="icon">
+                                <span class="member__text">ФУТБОЛКА ФИНИШЕРА</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-3.svg" alt="icon">
+                                <span class="member__text">МЕДАЛЬ ФИНИШЕРА</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-4.svg" alt="icon">
+                                <span class="member__text">РЮКЗАК<br><br></span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-5.svg" alt="icon">
+                                <span class="member__text">КОМПЛИМЕНТЫ ОТ ПАРТНЁРОВ</span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="member__block">
+                                <img src="./img/race/starkids/member-violet-6.svg" alt="icon">
+                                <span class="member__text">ЭМОЦИИ БЕСЦЕННЫ</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="member__btns">
+            <div class="member-btn-prev member-arrows">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="46" height="46" stroke="#A8A8A7" stroke-width="2"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.7071 18.2929C24.0976 18.6834 24.0976 19.3166 23.7071 19.7071L20.4142 23H30C30.5523 23 31 23.4477 31 24C31 24.5523 30.5523 25 30 25H20.4142L23.7071 28.2929C24.0976 28.6834 24.0976 29.3166 23.7071 29.7071C23.3166 30.0976 22.6834 30.0976 22.2929 29.7071L17.2929 24.7071C16.9024 24.3166 16.9024 23.6834 17.2929 23.2929L22.2929 18.2929C22.6834 17.9024 23.3166 17.9024 23.7071 18.2929Z" fill="#A8A8A7"/>
+                    </svg>
+                    
+                    
+                    
+            </div>
+            <div class="member-btn-next member-arrows">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1" y="1" width="46" height="46" stroke="#A8A8A7" stroke-width="2"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.7071 18.2929C24.0976 18.6834 24.0976 19.3166 23.7071 19.7071L20.4142 23H30C30.5523 23 31 23.4477 31 24C31 24.5523 30.5523 25 30 25H20.4142L23.7071 28.2929C24.0976 28.6834 24.0976 29.3166 23.7071 29.7071C23.3166 30.0976 22.6834 30.0976 22.2929 29.7071L17.2929 24.7071C16.9024 24.3166 16.9024 23.6834 17.2929 23.2929L22.2929 18.2929C22.6834 17.9024 23.3166 17.9024 23.7071 18.2929Z" fill="#A8A8A7"/>
+                    </svg>
+                    
+                    
+                    
+            </div>
+        </div>
+      </section>
+      <section class="team ironlady__team">
+        <div class="container">
+            <h2 class="visually-hidden">123</h2>
+            <p class="team__text">Если вы не хотите проходить всю гонку целиком или сильны в каком‑то одном виде, но поучаствовать все равно очень хотите, то можно пройти гонку в составе эстафетной команды. В команде должно быть минимум два человека. Вы можете собрать свою команду или найти партнёров с помощью нашего сервиса.</p>
+            <button class="team__btn white-btn btn-reset">Найти команду</button>
+        </div>
+      </section>
+      <section class="format" id="format">
+        <div class="container">
+            <h2 class="format__title">ФОРМАТЫ УЧАСТИЯ</h2>
+            <div class="format__flex ironlady__format__flex">
+                <div class="relative">
+                    <div class="format__card">
+                        <h3 class="format__subtitle">Индивидуальное</h3>
+                        <p class="format__price violet">1 400 ₽</p>
+                        <p class="format__text">(от 1780Р/мес.)</p>
+                        <button class="format__btn white-btn btn-reset">купить слот</button>
+                        <div class="events__buttons">
+                            <div class="events__button">
+                                <button class="events__btn-violet events__btn btn-reset" aria-label="1">1</button>
+                                <span class="events__text-7 format__text-7">9 000&nbsp;₽</span>
+                            </div>
+                            <div class="events__button">
+                                <button class="events__btn-violet events__btn btn-reset" aria-label="2">2</button>
+                                <span class="events__text-7 format__text-7">11 000&nbsp;₽</span>
+                            </div>
+                            <div class="events__button">
+                                <button class="events__btn-violet events__btn events__btn-violet_active events__btn_active btn-reset" aria-label="3">3</button>
+                                <span class="events__text-7 format__text-7">12 500&nbsp;₽</span>
+                            </div>
+                            <div class="events__button">
+                                <button class="events__btn-violet events__btn btn-reset" aria-label="4">4</button>
+                                <span class="events__text-7 format__text-7">15 000&nbsp;₽</span>
+                            </div>
+                            <div class="events__button format__button">
+                                <button class="events__btn-violet events__btn btn-reset" aria-label="5">5</button>
+                                <span class="events__text-7 format__text-7">17 000&nbsp;₽</span>
+                            </div>
+                            <div class="events__button format__button">
+                                <button class="events__btn-violet events__btn btn-reset" aria-label="6">6</button>
+                                <span class="events__text-7 format__text-7">19 000&nbsp;₽</span>
+                            </div>
+                        </div>
+                        <div class="format__age starkids__age">16+</div>
+                    </div>
+                    <svg class="format-card-bg starkids-format-card-bg" width="177" height="48" viewBox="0 0 177 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M176.632 48V2.89011L140.996 15.0164V0L0 48H176.632Z" fill="#E2E000"/>
+                        </svg>
+                </div>
+                <div class="relative">
+                    <div class="format__card">
+                        <h3 class="format__subtitle format__subtitle_mb">Подарить эмоции</h3>
+                        <p class="format__text">Сертификат на любую сумму, которым можно будет оплатить слот</p>
+                        <button class="format__btn white-btn btn-reset">купить сертификат</button>
+                        <div class="format__age starkids__age">16+</div>
+                    </div>
+                    <svg class="format-card-bg starkids-format-card-bg" width="177" height="48" viewBox="0 0 177 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M176.632 48V2.89011L140.996 15.0164V0L0 48H176.632Z" fill="#E2E000"/>
+                        </svg>
+                </div>
+                <div class="relative">
+                    <div class="format__card format__card_gray">
+                        <h3 class="format__subtitle format__subtitle_mb">Корпоративное участие</h3>
+                        <p class="format__text">Стоимость корпоративного участия обговаривается индивидуально.</p>
+                        <button class="format__btn white-btn btn-reset">отправить заявку</button>
+                        <a href="#" class="format__link">подробнее</a>
+                        <div class="format__age starkids__age">16+</div>
+                    </div>
+                    <svg class="format-card-bg starkids-format-card-bg" width="177" height="48" viewBox="0 0 177 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M176.632 48V2.89011L140.996 15.0164V0L0 48H176.632Z" fill="#E2E000"/>
+                        </svg>
+                </div>
+            </div>
+        </div>
+        <svg class="format-bg" width="640" height="174" viewBox="0 0 640 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M640 174V10.4766L510.878 54.4345V0L0 174H640Z" fill="white"/>
+            </svg>
+            
+            
+      </section>
+      <section class="gallery">
+        <h2 class="visually-hidden">1232</h2>
+        <div class="swiper gallery__swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./img/race/starkids/gallery1.webp" alt="photo" class="gallery__img"></div>
+                <div class="swiper-slide"><img src="./img/race/starkids/gallery2.webp" alt="photo" class="gallery__img"></div>
+                <div class="swiper-slide"><img src="./img/race/starkids/gallery3.webp" alt="photo" class="gallery__img"></div>
+                <div class="swiper-slide"><img src="./img/race/starkids/gallery1.webp" alt="photo" class="gallery__img"></div>
+                <div class="swiper-slide"><img src="./img/race/starkids/gallery2.webp" alt="photo" class="gallery__img"></div>
+                <div class="swiper-slide"><img src="./img/race/starkids/gallery3.webp" alt="photo" class="gallery__img"></div>
+            </div>
+        </div>
+        <div class="gallery__btns">
+            <div class="gallery-btn-next swiper-arrow">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="black"/>
+                    </svg>
+                    
+            </div>
+            <div class="gallery-btn-prev swiper-arrow">
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="black"/>
+                    </svg>
+                    
+            </div>
+        </div>
+        <svg class="gallery-bg" width="640" height="174" viewBox="0 0 640 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M640 174V10.4766L510.878 54.4345V0L0 174H640Z" fill="white"/>
+            </svg>
+            
+      </section>
+      <section class="scheme" id="scheme">
+        <div class="container">
+            <h2 class="scheme__title">КАРТЫ И СХЕМЫ</h2>
+            <div class="tabs">
+                <div class="tabs_overflow ironlady__tabs_overflow">
+                    <button class="scheme__btn scheme__btn_br btn-reset tab-btn tab-btn-active" onclick="openTab(event, 'tab3')">МАРШРУТ</button>
+                    <button class="scheme__btn btn-reset tab-btn" onclick="openTab(event, 'tab6')">СТАРТОВЫЙ ГОРОДОК</button>
+                    <button class="scheme__btn btn-reset tab-btn" onclick="openTab(event, 'tab7')">ПАРКОВКИ</button>
+                    <button class="scheme__btn scheme__btn_br-last btn-reset tab-btn" onclick="openTab(event, 'tab8')">ФАН-ЗОНЫ БОЛЕЛЬЩИКОВ</button>
+
+       
+  
+                </div>
+            </div>
+            
+            <div id="tab3" class="tab">        <div class="scheme__flex">
+                <div class="relative">
+                    <img class="scheme__map" src="./img/race/starkids/scheme.webp" alt="scheme">
+                    <img class="scheme__search" src="./img/location/search.svg" alt="search">
+                </div>
+                <div class="scheme__block">
+                    <h3 class="scheme__subtitle">МАРШРУТ</h3>
+                <p class="scheme__text">После выхода из воды вам необходимо проследовать в транзитную зону 1 (Т1), где вы сможете сменить
+                    плавательную экипировку на велосипедную и взять свой велосипед. Вся ваша экипировка будет
+                    находиться в контейнере у вашего велосипеда. Вы переодеваетесь в раздевалке или прямо у своего
+                    велосипеда (полное оголение строго запрещено!), складывая плавательную экипировку в ящик, и
+                    убегаете на велоэтап.</p>
+                    <button class="scheme__btn-2 black-btn btn-reset">
+                        <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 0C7.55228 0 8 0.447715 8 1V10.5858L11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289C13.0976 7.68342 13.0976 8.31658 12.7071 8.70711L7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L1.29289 8.70711C0.902369 8.31658 0.902369 7.68342 1.29289 7.29289C1.68342 6.90237 2.31658 6.90237 2.70711 7.29289L6 10.5858V1C6 0.447715 6.44772 0 7 0Z" fill="black"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17C0 16.4477 0.447715 16 1 16H13C13.5523 16 14 16.4477 14 17C14 17.5523 13.5523 18 13 18H1C0.447715 18 0 17.5523 0 17Z" fill="black"/>
+                            </svg>                            
+                        скачать карту
+                    </button>
+                </div>
+            </div></div>
+  
+            <div id="tab6" class="tab">Content for Tab 6</div>
+            <div id="tab7" class="tab">Content for Tab 7</div>
+            <div id="tab8" class="tab">Content for Tab 8</div>
+            
+        </div>
+        <svg class="scheme-bg" width="640" height="174" viewBox="0 0 640 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M640 174V10.4766L510.878 54.4345V0L0 174H640Z" fill="white"/>
+            </svg>
+      </section>
+      <section class="doc" id="doc">
+        <div class="container">
+            <h2 class="doc__title">ДОКУМЕНТЫ</h2>
+            <div class="doc__flex">
+                <div class="doc__block">
+                    <h3 class="doc__subtitle">РАСПИСАНИЕ IRONLADY NIZHNY NOVGOROD 2024</h3>
+                    <div class="doc__table">
+                        <p class="doc__header doc__header_br">Пятница 21 апреля</p>
+                        <ul class="doc__list list-reset">
+                            <li class="doc__item">
+                                <span class="doc__time">11:00</span>
+                                <span class="doc__time doc-time-2">12:45</span>
+                                <span class="doc__text doc__name">Работа инфостойки IRONSTAR</span>
+                                <span class="doc__text doc__geo">Зона ЭКСПО (вход D6 стадиона Лужники)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">11:00</span>
+                                <span class="doc__time doc-time-2">12:45</span>
+                                <span class="doc__text doc__name">Технический сервис велосипедов</span>
+                                <span class="doc__text doc__geo">Зона ЭКСПО (вход D6 стадиона Лужники)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">16:00</span>
+                                <span class="doc__time doc-time-2">19:30</span>
+                                <span class="doc__text doc__name">Выдача стартовых пакетов IRONSTAR 1/8</span>
+                                <span class="doc__text doc__geo">Зона ЭКСПО (вход D6 стадиона Лужники)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">11:00</span>
+                                <span class="doc__time doc-time-2">20:00</span>
+                                <span class="doc__text doc__name">Работа раздевалок и камеры хранения</span>
+                                <span class="doc__text doc__geo">Балкон Аквакомплекса Лужники (улица Лужники, 24с4)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">11:00</span>
+                                <span class="doc__time doc-time-2">12:45</span>
+                                <span class="doc__text doc__name">Открыта транзитная зона. Постановка велосипедов и сдача экипировки IRONSTAR 1/8</span>
+                                <span class="doc__text doc__geo">Парковка № 5 рядом с ЭКСПО</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="doc__table doc__table_mb">
+                        <p class="doc__header">Субботаа 22 апреля</p>
+                        <ul class="doc__list list-reset">
+                            <li class="doc__item">
+                                <span class="doc__time">06:00</span>
+                                <span class="doc__time doc-time-2"></span>
+                                <span class="doc__text doc__name">Открытие территории СК Лужники</span>
+                                <span class="doc__text doc__geo">КПП № 1,2,3,4</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">06:45</span>
+                                <span class="doc__time doc-time-2">07:45</span>
+                                <span class="doc__text doc__name">Работа инфостойки IRONSTAR</span>
+                                <span class="doc__text doc__geo">Зона ЭКСПО (вход D6 стадиона Лужники)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">07:00</span>
+                                <span class="doc__time doc-time-2">17:00</span>
+                                <span class="doc__text doc__name">Технический сервис велосипедов</span>
+                                <span class="doc__text doc__geo">Зона ЭКСПО (вход D6 стадиона Лужники)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">07:00</span>
+                                <span class="doc__time doc-time-2">17:00</span>
+                                <span class="doc__text doc__name">Работа раздевалок и камеры хранения</span>
+                                <span class="doc__text doc__geo">Балкон Аквакомплекса Лужники (улица Лужники, 24с4)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">09:00</span>
+                                <span class="doc__time doc-time-2">17:00</span>
+                                <span class="doc__text doc__name">Гравировка медалей финишера</span>
+                                <span class="doc__text doc__geo">Зона ЭКСПО (вход D6 стадиона Лужники)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">08:00</span>
+                                <span class="doc__time doc-time-2"></span>
+                                <span class="doc__text doc__name">Старт IRONSTAR 1/8, мужчины 1 волна</span>
+                                <span class="doc__text doc__geo">Вход в Аквакомплекс Лужники (Лужнецкая набережная, 24с4)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">08:15</span>
+                                <span class="doc__time doc-time-2"></span>
+                                <span class="doc__text doc__name">Старт IRONSTAR 1/8, мужчины 2 волна</span>
+                                <span class="doc__text doc__geo">Вход в Аквакомплекс Лужники (Лужнецкая набережная, 24с4)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">08:30</span>
+                                <span class="doc__time doc-time-2"></span>
+                                <span class="doc__text doc__name">Старт IRONSTAR 1/8, мужчины 3 волна</span>
+                                <span class="doc__text doc__geo">Вход в Аквакомплекс Лужники (Лужнецкая набережная, 24с4)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">08:45</span>
+                                <span class="doc__time doc-time-2"></span>
+                                <span class="doc__text doc__name">Старт IRONSTAR 1/8, мужчины 4 волна</span>
+                                <span class="doc__text doc__geo">Вход в Аквакомплекс Лужники (Лужнецкая набережная, 24с4)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">09:00</span>
+                                <span class="doc__time doc-time-2"></span>
+                                <span class="doc__text doc__name">Старт IRONSTAR 1/8, мужчины 5 волна</span>
+                                <span class="doc__text doc__geo">Вход в Аквакомплекс Лужники (Лужнецкая набережная, 24с4)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">09:15</span>
+                                <span class="doc__time doc-time-2"></span>
+                                <span class="doc__text doc__name">Старт IRONSTAR 1/8, мужчины 6 волна</span>
+                                <span class="doc__text doc__geo">Вход в Аквакомплекс Лужники (Лужнецкая набережная, 24с4)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">09:30</span>
+                                <span class="doc__time doc-time-2"></span>
+                                <span class="doc__text doc__name">Старт IRONSTAR 1/8, мужчины 7 волна</span>
+                                <span class="doc__text doc__geo">Вход в Аквакомплекс Лужники (Лужнецкая набережная, 24с4)</span>
+                            </li>
+                            <li class="doc__item">
+                                <span class="doc__time">09:45</span>
+                                <span class="doc__time doc-time-2"></span>
+                                <span class="doc__text doc__name">Старт IRONSTAR 1/8, мужчины 8 волна</span>
+                                <span class="doc__text doc__geo">Вход в Аквакомплекс Лужники (Лужнецкая набережная, 24с4)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="doc__btn trans-btn btn-reset">показать еще</button>
+                </div>
+                <div class="doc__block-2">
+                    <div class="doc__block-3">
+                        <p class="doc__text-2">Полное расписание фестиваля спорта IRONSTAR NIZHNY NOVGOROD 2024</p>
+                        <div class="doc__btns">
+                            <button class="doc__btn-2 black-btn btn-reset">
+                                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 0C7.55228 0 8 0.447715 8 1V10.5858L11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289C13.0976 7.68342 13.0976 8.31658 12.7071 8.70711L7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L1.29289 8.70711C0.902369 8.31658 0.902369 7.68342 1.29289 7.29289C1.68342 6.90237 2.31658 6.90237 2.70711 7.29289L6 10.5858V1C6 0.447715 6.44772 0 7 0Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 17C0 16.4477 0.447715 16 1 16H13C13.5523 16 14 16.4477 14 17C14 17.5523 13.5523 18 13 18H1C0.447715 18 0 17.5523 0 17Z" fill="black"/>
+</svg>
+
+                                скачать 
+                            </button>
+                            <button class="doc__btn-3 btn-reset">
+                                СМОТРЕТЬ
+                            </button>
+                        </div>
+                    </div>
+                    <div class="doc__block-3">
+                        <p class="doc__text-2">Регламент соревнований IRONLADY NIZHNY NOVGOROD 2024</p>
+     
+                            <button class="doc__btn-2 black-btn btn-reset">
+                                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 0C7.55228 0 8 0.447715 8 1V10.5858L11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289C13.0976 7.68342 13.0976 8.31658 12.7071 8.70711L7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L1.29289 8.70711C0.902369 8.31658 0.902369 7.68342 1.29289 7.29289C1.68342 6.90237 2.31658 6.90237 2.70711 7.29289L6 10.5858V1C6 0.447715 6.44772 0 7 0Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 17C0 16.4477 0.447715 16 1 16H13C13.5523 16 14 16.4477 14 17C14 17.5523 13.5523 18 13 18H1C0.447715 18 0 17.5523 0 17Z" fill="black"/>
+</svg>
+
+                                скачать 
+                            </button>
+                     
+                        
+                    </div>
+                    <div class="doc__block-3">
+                        <p class="doc__text-2">Инфокаталог участника соревнований IRONSTAR NIZHNY NOVGOROD 2024</p>
+     
+                            <button class="doc__btn-2 black-btn btn-reset">
+                                <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 0C7.55228 0 8 0.447715 8 1V10.5858L11.2929 7.29289C11.6834 6.90237 12.3166 6.90237 12.7071 7.29289C13.0976 7.68342 13.0976 8.31658 12.7071 8.70711L7.70711 13.7071C7.31658 14.0976 6.68342 14.0976 6.29289 13.7071L1.29289 8.70711C0.902369 8.31658 0.902369 7.68342 1.29289 7.29289C1.68342 6.90237 2.31658 6.90237 2.70711 7.29289L6 10.5858V1C6 0.447715 6.44772 0 7 0Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 17C0 16.4477 0.447715 16 1 16H13C13.5523 16 14 16.4477 14 17C14 17.5523 13.5523 18 13 18H1C0.447715 18 0 17.5523 0 17Z" fill="black"/>
+</svg>
+
+                                скачать 
+                            </button>
+                     
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg class="doc-bg" width="640" height="174" viewBox="0 0 640 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M640 174V10.4766L510.878 54.4345V0L0 174H640Z" fill="white"/>
+            </svg>
+      </section>
+      <div class="overlay"></div>
+      <section class="participants" id="part">
+        <div class="container">
+            <h2 class="participants__title">УЧАСТНИЦЫ</h2>
+            <div class="participants__flex">
+                <div class="perticipants__btns ironlady__perticipants__btns">
+                    <button class="perticipants__btn perticipants__btn_active btn-reset tab-btn tab-btn-active" onclick="openTab(event, 'tab9')">индивидуальное</button>
+                    <button class="perticipants__btn btn-reset tab-btn" onclick="openTab(event, 'tab10')">ЭСТАФЕТА</button>
+                </div>
+                <div class="perticipants__block ironlady__perticipants__block">
+                    <div class="relative">
+                        <input class="perticipants__input" type="text" placeholder="Введите имя или номер">
+                        <img class="perticipants__icon" src="./img/race/search.svg" alt="">
+                    </div>
+                    <div class="dropdown">
+                        <button class="perticipants__select dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                          Категория
+                        </button>
+                 
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li>
+                                <div class="participants__select-option dropdown-title">
+                                  Категория
+                                </div>
+                              </li>
+                          <li>
+                            <div class="participants__select-option">
+                              <input class="form-check-input" type="checkbox" value="" id="checkbox1">
+                              <label class="form-check-label" for="checkbox1">
+                                M18-24
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="participants__select-option">
+                              <input class="form-check-input" type="checkbox" value="" id="checkbox2">
+                              <label class="form-check-label" for="checkbox2">
+                                M25-29
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="participants__select-option">
+                              <input class="form-check-input" type="checkbox" value="" id="checkbox3">
+                              <label class="form-check-label" for="checkbox3">
+                                M30-34
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="participants__select-option">
+                              <input class="form-check-input" type="checkbox" value="" id="checkbox4">
+                              <label class="form-check-label" for="checkbox4">
+                                M35-39
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="participants__select-option">
+                              <input class="form-check-input" type="checkbox" value="" id="checkbox5">
+                              <label class="form-check-label" for="checkbox5">
+                                M40-44
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="participants__select-option">
+                              <input class="form-check-input" type="checkbox" value="" id="checkbox6">
+                              <label class="form-check-label" for="checkbox6">
+                                M45-49
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="participants__select-option">
+                              <input class="form-check-input" type="checkbox" value="" id="checkbox7">
+                              <label class="form-check-label" for="checkbox7">
+                                M50-54
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="participants__select-option">
+                             <button class="dropdown__btn btn-reset">применить</button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                </div>
+            </div>
+      
+            <div class="participants__table">
+                <div>
+                    <ul class="participants__list list-reset">
+                        <li class="participants__item">Номер</li>
+                        <li class="participants__item">Фамилия Имя</li>
+                        <li class="participants__item">Страна</li>
+                        <li class="participants__item">Клуб</li>
+                    </ul>
+                    <div class="participants_mb">
+                        <div class="participants__acc participants__acc-1 acc">
+                            Ж18-24 (женщины 18-24 лет)
+                           <svg class="rotate" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="#8F8E00"/>
+</svg>
+
+                        </div>
+                        <div class="content contentOpen">
+                             <div class="text-wrapper">
+                                <ul class="participants__list-2 list-reset">
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5004</span>
+                                        <span class="participants__name">Владимиров Марк</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Грустные комарики</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5083</span>
+                                        <span class="participants__name">Гребнов Даниил</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Макарена</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5098</span>
+                                        <span class="participants__name">Дикий Борис</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Пыльнаые гантели</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">55569</span>
+                                        <span class="participants__name">Ежиков Владлен</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Команда А</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5369</span>
+                                        <span class="participants__name">Конкистадоров Влад</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Hope</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5745</span>
+                                        <span class="participants__name">Петров Николай</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Stels factory race team</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="participants_mb">
+                        <div class="participants__acc participants__acc-2 acc">
+                            Ж25-34 (женщины 25-34 лет)
+                           <svg class="rotate" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="#8F8E00"/>
+</svg>
+
+                        </div>
+                        <div class="content contentOpen">
+                             <div class="text-wrapper">
+                                <ul class="participants__list-2 list-reset">
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5002</span>
+                                        <span class="participants__name">Некий Александр</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Древнее зло</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5009</span>
+                                        <span class="participants__name">Кумушкин Савелий</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team"></span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5115</span>
+                                        <span class="participants__name">Камазов Даниил</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Трансгазплатинумбанк triathlon team</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5777</span>
+                                        <span class="participants__name">Обоев Рулон</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Грустные комарики</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5964</span>
+                                        <span class="participants__name">Федоров-Лесов-Полянский Станислав</span>
+                                        <span class="participants__country">Молдова</span>
+                                        <span class="participants__team">Грустные комарики</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5632</span>
+                                        <span class="participants__name">Ковальский Яков</span>
+                                        <span class="participants__country">Латвия</span>
+                                        <span class="participants__team">Бывшие саперы</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="participants_mb">
+                        <div class="participants__acc participants__acc-3 acc">
+                            М35-39 (женщины 35-39 лет)
+                           <svg class="rotate" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="#8F8E00"/>
+</svg>
+
+                        </div>
+                        <div class="content contentOpen">
+                             <div class="text-wrapper">
+                                <ul class="participants__list-2 list-reset">
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5002</span>
+                                        <span class="participants__name">Некий Александр</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Древнее зло</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5009</span>
+                                        <span class="participants__name">Кумушкин Савелий</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team"></span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5115</span>
+                                        <span class="participants__name">Камазов Даниил</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Трансгазплатинумбанк triathlon team</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5777</span>
+                                        <span class="participants__name">Обоев Рулон</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Грустные комарики</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5964</span>
+                                        <span class="participants__name">Федоров-Лесов-Полянский Станислав</span>
+                                        <span class="participants__country">Молдова</span>
+                                        <span class="participants__team">Грустные комарики</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5632</span>
+                                        <span class="participants__name">Ковальский Яков</span>
+                                        <span class="participants__country">Латвия</span>
+                                        <span class="participants__team">Бывшие саперы</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="participants_mb">
+                        <div class="participants__acc participants__acc-4 acc">
+                            Ж40-44 (женщины 40-44 лет)
+                           <svg class="rotate" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="#8F8E00"/>
+</svg>
+
+                        </div>
+                        <div class="content contentOpen">
+                             <div class="text-wrapper">
+                                <ul class="participants__list-2 list-reset">
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5002</span>
+                                        <span class="participants__name">Некий Александр</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Повстанцы</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5009</span>
+                                        <span class="participants__name">Кумушкин Савелий</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team"></span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5115</span>
+                                        <span class="participants__name">Камазов Даниил</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Росатом тим</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5777</span>
+                                        <span class="participants__name">Обоев Рулон</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Куклуксклан</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5964</span>
+                                        <span class="participants__name">Федоров-Лесов-Полянский Станислав</span>
+                                        <span class="participants__country">Молдова</span>
+                                        <span class="participants__team">Дети кукурзузы</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5632</span>
+                                        <span class="participants__name">Ковальский Яков</span>
+                                        <span class="participants__country">Латвия</span>
+                                        <span class="participants__team"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="participants_mb-32">
+                        <div class="participants__acc participants__acc-5 acc participants__acc_mb">
+                            Ж45-49 (женщины 45-49 лет)
+                           <svg class="rotate" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="#8F8E00"/>
+</svg>
+
+                        </div>
+                        <div class="content contentOpen">
+                             <div class="text-wrapper">
+                                <ul class="participants__list-2 list-reset">
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5004</span>
+                                        <span class="participants__name">Владимиров Марк</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Грустные комарики</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5083</span>
+                                        <span class="participants__name">Гребнов Даниил</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Макарена</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5098</span>
+                                        <span class="participants__name">Дикий Борис</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Пыльнаые гантели</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">55569</span>
+                                        <span class="participants__name">Ежиков Владлен</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Команда А</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5369</span>
+                                        <span class="participants__name">Конкистадоров Влад</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Hope</span>
+                                    </li>
+                                    <li class="participants__item-2">
+                                        <span class="participants__id">5745</span>
+                                        <span class="participants__name">Петров Николай</span>
+                                        <span class="participants__country">Россия</span>
+                                        <span class="participants__team">Stels factory race team</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="participants__btn black-btn btn-reset open-btn">Раскрыть все категории</div>
+                    <div class="participants__pag">
+                        <button class="participants__arrow swiper-arrow btn-reset">
+                            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="black"/>
+                                </svg>
+                                
+                        </button>
+                        <button class="participants__btn-2 participants__btn-2_active btn-reset">
+                            1
+                        </button>
+                        <button class="participants__btn-2 btn-reset">
+                            2
+                        </button>
+                        <button class="participants__btn-2 btn-reset">
+                            ...
+                        </button>
+                        <button class="participants__btn-2 btn-reset">
+                            6
+                        </button>
+                        <button class="participants__btn-2 btn-reset">
+                            7
+                        </button>
+                        <button class="participants__arrow swiper-arrow participants__arrow_reverse btn-reset">
+                            <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="black"/>
+                                </svg>
+                                
+                        </button>
+                    </div>
+
+            </div>
+        </div>
+      </section>
+      <section class="faq" id="faq">
+        <h2 class="visually-hidden">1232</h2>
+        <div class="container">
+            <div class="faq__title">F.A.Q.</div>
+            <ul class="faq__list list-reset">
+                <li class="faq__item">
+                    <div class="faq__acc acc">
+                        ТРЕБОВАНИЯ К ДОКУМЕНТАМ
+                 <svg class="rotate" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="#8F8E00"/>
+</svg>
+            </div>
+            <div class="content">
+                 <div class="text-wrapper">
+                    <p class="faq__text-2 faq__text-2_pt">Для допуска к старту и получения стартового пакета необходимы следующие документы:</p>
+                    <ul class="faq__list-2">
+                        <li class="faq__item-2 faq__text-2">Удостоверение личности</li>
+                        <li class="faq__item-2 faq__text-2">Медицинская справка о допуске к соревнованиям (подробнее о <a class="faq__link" href="#">требованиях к справке и образец</a>)</li>
+                        <li class="faq__item-2 faq__text-2">Лицензия ФТР или страховой полис с покрытием риска не менее 1 млн рублей (на основании Положения "<a class="faq__link" href="#">О лицензировании триатлетов-любителей Общероссийской общественной организации "Федерации триатлона России</a>")</li>
+                        <li class="faq__item-2 faq__text-2">Доверенность, если участник поручил забрать его стартовый пакет третьему лицу</li>
+                        <li class="faq__item-2 faq__text-2">Разрешение от родителей для участника младше 18 лет (распечатайте образец и заполните разрешение заранее, чтобы быстрее получить стартовый пакет)</li>
+                        <li class="faq__item-2 faq__text-2">Внимательно изучите <a class="faq__link" href="#">требования к документам для допуска к старту.</a></li>
+                    </ul>
+                </div>
+            </div>
+                </li>
+                <li class="faq__item">
+                    <div class="faq__acc acc">
+                        ФОРМАТЫ УЧАСТИЯ
+                 <svg class="rotate" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="#8F8E00"/>
+</svg>
+            </div>
+            <div class="content">
+                 <div class="text-wrapper">
+                  123
+                </div>
+            </div>
+                </li>
+                <li class="faq__item">
+                    <div class="faq__acc acc">
+                        НАГРАЖДЕНИЕ
+                 <svg class="rotate" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="#8F8E00"/>
+</svg>
+            </div>
+            <div class="content ">
+                 <div class="text-wrapper">
+                  123
+                </div>
+            </div>
+                </li>
+                <li class="faq__item">
+                    <div class="faq__acc acc">
+                        ПРЕДСТАРТОВЫЙ ЧЕК-ЛИСТ И ПОЛЕЗНЫЕ СОВЕТЫ
+                 <svg class="rotate" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="#8F8E00"/>
+</svg>
+            </div>
+            <div class="content">
+                 <div class="text-wrapper">
+                  123
+                </div>
+            </div>
+                </li>
+                <li class="faq__item">
+                    <div class="faq__acc acc">
+                        ВОЗВРАТ И ОБМЕН
+                 <svg class="rotate" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 0.292893C6.68342 -0.0976311 7.31658 -0.0976311 7.70711 0.292893L13.7071 6.29289C14.0976 6.68342 14.0976 7.31658 13.7071 7.70711C13.3166 8.09763 12.6834 8.09763 12.2929 7.70711L7 2.41421L1.70711 7.70711C1.31658 8.09763 0.683417 8.09763 0.292893 7.70711C-0.0976311 7.31658 -0.0976311 6.68342 0.292893 6.29289L6.29289 0.292893Z" fill="#8F8E00"/>
+</svg>
+            </div>
+            <div class="content">
+                 <div class="text-wrapper">
+                  123
+                </div>
+            </div>
+                </li>
+            </ul>
+            <p class="faq__text">Если у вас возникли другие вопросы, то посмотрите полный раздел F.A.Q.</p>
+            <button class="faq__btn black-btn btn-reset">перейти в раздел f.a.q.</button>
+        </div>
+      </section>
+      <section class="gid" id="gid">
+        <div class="container">
+            <h2 class="gid__title">О ЛОКАЦИИ</h2>
+            <p class="gid__text">Полный гид как добраться, что посмотреть, где жить и какие еще мероприятия пройдут в рамках фестиваля спорта IRONSTAR NIZHNY NOVGOROD</p>
+            <button class="gid__btn white-btn btn-reset">ПЕРЕЙТИ НА СТРАНИЦУ ЛОКАЦИИ</button>
+        </div>
+      </section>
+      <section class="recommendations">
+        <h2 class="recommendations__title">РЕКОМЕНДАЦИИ</h2>
+        <p class="recommendations__text">Помимо триатлона в рамках фестиваля спорта IRONSTAR пройдут соревнования по плаванию на открытой воде, женский и детский забеги</p>
+        <div class="recommendations__swiper swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a class="recommendations__link" href="#">
+                        <div class="rec__block">
+                            <svg width="140" height="127" viewBox="0 0 140 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M140 0V98.5461L0 126.087V0H140Z" fill="#E2E000"/>
+                                <path d="M97.8997 51.4495L97.9255 34.156L91.0664 48.0034L89.418 41.3551L87.5078 41.3219L88.5514 38.985L90.646 39.0109L91.2729 40.6267L100.968 21L101.027 39.2586L104.534 32.3257L107.178 38.9961H108.734L107.794 41.3329H105.334L104.327 38.8001L97.8997 51.4495Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M69.3609 43.5924V32.0707C69.3609 27.1123 66.75 25.0527 62.937 25.0527C59.1239 25.0527 56.4946 27.1456 56.4946 31.9413V43.6404C56.4946 48.4658 58.3827 50.6325 62.7157 50.6325C67.0487 50.6325 69.3609 48.5212 69.3609 43.5924ZM61.3144 44.2246V31.5309H61.3181C61.3181 29.8855 61.8786 29.1496 62.8927 29.1496C64.0912 29.1496 64.519 29.9409 64.519 31.4939V44.1988C64.519 45.8331 63.9695 46.5578 62.9038 46.5578C61.838 46.5578 61.3144 45.7591 61.3144 44.2246ZM39.9886 50.2591V25.4225H35.2314V50.2591H39.9886ZM71.4813 50.2591V50.2554H75.818V46.0143C75.818 42.1096 75.6705 37.1734 75.4861 34.2486H75.6152C75.7738 35.0436 78.4842 47.8963 78.9968 50.2591H84.3181V25.4225H79.8966V29.5046C79.8966 32.9692 80.0662 37.4877 80.3318 40.7933H80.2174C80.0183 39.7025 77.5365 28.4545 76.751 25.4225H71.4813V50.2554H71.4739L71.4813 50.2591ZM54.9089 31.5937V32.4886C54.9089 36.0271 53.5002 37.0809 52.4382 37.5838C53.9796 38.3307 54.7024 39.4659 54.7024 42.9305L54.695 43.2855V50.2591H49.9858C49.9858 50.2591 49.9748 45.9033 49.9748 42.7345C49.9748 39.9392 49.6576 39.4622 47.8433 39.4622H47.2828V50.2591H42.5257V25.4225H48.7062C52.8585 25.4225 54.9089 27.2528 54.9089 31.5937ZM47.2938 35.698H47.8839L47.8876 35.6943C49.4769 35.6943 50.126 35.1915 50.126 32.8805V31.6825C50.126 30.0149 49.7904 29.1866 48.0388 29.1866H47.2938V35.698ZM109 63.9512V62.768C109 57.0108 106.083 54.5889 100.187 54.5889H91.4062V87.5121H98.1658V73.1988H98.9623C101.54 73.1988 101.994 73.8311 101.994 77.5324C101.994 81.7328 102.008 87.5084 102.008 87.5084H108.698V78.2645L108.705 77.7949C108.705 73.2025 107.676 71.6976 105.489 70.7066C106.998 70.0411 109 68.6471 109 63.9549V63.9512ZM99.0213 68.2071H98.1842V59.577H99.2389C101.728 59.577 102.204 60.6751 102.204 62.8863V64.4762C102.204 67.5415 101.282 68.2071 99.0213 68.2071ZM41.1725 62.1542C41.1725 64.1361 41.5597 65.1159 44.4693 67.2383V67.2309C49.6431 71.0357 51.5017 73.1729 51.5017 78.5936C51.5017 83.748 49.3444 87.9965 42.6292 87.9965C35.9139 87.9965 34 84.2065 34 79.3294V76.9038H40.6304V79.6363C40.6304 81.8031 41.1873 82.8088 42.7472 82.8088C44.3071 82.8088 44.6721 81.3187 44.6721 79.7657C44.6721 76.6597 44.0452 75.7612 40.4534 72.9474C36.4892 69.8081 34.4499 67.8004 34.4499 63.097C34.4499 58.3937 36.113 54.0602 42.7804 54.0602C49.8607 54.0602 50.9043 58.5786 50.9043 62.3464V64.6944H44.5136V62.2688C44.5136 60.2721 44.1632 59.2848 42.8246 59.2848C41.5745 59.2848 41.1725 60.2906 41.1725 62.1542ZM83.4628 54.5852H73.3697L68.395 87.5084H75.2983L76.1649 79.6733H80.5496L81.5194 87.5084H88.5592L83.4628 54.5852ZM76.7513 74.0899C77.2159 70.0189 78.053 62.6127 78.1747 60.3165H78.4402C78.7684 63.4705 79.4691 69.8784 79.9706 74.0899H76.7513ZM70.3679 54.5852L69.398 60.5679H64.2722V87.5084H57.5126V60.5679H52.8735V60.1834V54.5852H69.9143H70.3679Z" fill="black"/>
+                                </svg>
+                                
+                            <div class="recommendations__block">
+                                <span class="recommendations__text-2">IRONSTAR 113 NIZHNY NOVGOROD 2024</span>
+                                <span class="recommendations__text-3">Триатлон: плавание 1.93 км, велогонка 90 км, бег 21.1км</span>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="recommendations__link" href="#">
+                        <div class="rec__block rec__block-6">
+                            <svg width="140" height="127" viewBox="0 0 140 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M140 0V98.5461L0 126.087V0H140Z" fill="#E2E000"/>
+                                <path d="M97.8997 51.4495L97.9255 34.156L91.0664 48.0034L89.418 41.3551L87.5078 41.3219L88.5514 38.985L90.646 39.0109L91.2729 40.6267L100.968 21L101.027 39.2586L104.534 32.3257L107.178 38.9961H108.734L107.794 41.3329H105.334L104.327 38.8001L97.8997 51.4495Z" fill="black"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M69.3609 43.5924V32.0707C69.3609 27.1123 66.75 25.0527 62.937 25.0527C59.1239 25.0527 56.4946 27.1456 56.4946 31.9413V43.6404C56.4946 48.4658 58.3827 50.6325 62.7157 50.6325C67.0487 50.6325 69.3609 48.5212 69.3609 43.5924ZM61.3144 44.2246V31.5309H61.3181C61.3181 29.8855 61.8786 29.1496 62.8927 29.1496C64.0912 29.1496 64.519 29.9409 64.519 31.4939V44.1988C64.519 45.8331 63.9695 46.5578 62.9038 46.5578C61.838 46.5578 61.3144 45.7591 61.3144 44.2246ZM39.9886 50.2591V25.4225H35.2314V50.2591H39.9886ZM71.4813 50.2591V50.2554H75.818V46.0143C75.818 42.1096 75.6705 37.1734 75.4861 34.2486H75.6152C75.7738 35.0436 78.4842 47.8963 78.9968 50.2591H84.3181V25.4225H79.8966V29.5046C79.8966 32.9692 80.0662 37.4877 80.3318 40.7933H80.2174C80.0183 39.7025 77.5365 28.4545 76.751 25.4225H71.4813V50.2554H71.4739L71.4813 50.2591ZM54.9089 31.5937V32.4886C54.9089 36.0271 53.5002 37.0809 52.4382 37.5838C53.9796 38.3307 54.7024 39.4659 54.7024 42.9305L54.695 43.2855V50.2591H49.9858C49.9858 50.2591 49.9748 45.9033 49.9748 42.7345C49.9748 39.9392 49.6576 39.4622 47.8433 39.4622H47.2828V50.2591H42.5257V25.4225H48.7062C52.8585 25.4225 54.9089 27.2528 54.9089 31.5937ZM47.2938 35.698H47.8839L47.8876 35.6943C49.4769 35.6943 50.126 35.1915 50.126 32.8805V31.6825C50.126 30.0149 49.7904 29.1866 48.0388 29.1866H47.2938V35.698ZM109 63.9512V62.768C109 57.0108 106.083 54.5889 100.187 54.5889H91.4062V87.5121H98.1658V73.1988H98.9623C101.54 73.1988 101.994 73.8311 101.994 77.5324C101.994 81.7328 102.008 87.5084 102.008 87.5084H108.698V78.2645L108.705 77.7949C108.705 73.2025 107.676 71.6976 105.489 70.7066C106.998 70.0411 109 68.6471 109 63.9549V63.9512ZM99.0213 68.2071H98.1842V59.577H99.2389C101.728 59.577 102.204 60.6751 102.204 62.8863V64.4762C102.204 67.5415 101.282 68.2071 99.0213 68.2071ZM41.1725 62.1542C41.1725 64.1361 41.5597 65.1159 44.4693 67.2383V67.2309C49.6431 71.0357 51.5017 73.1729 51.5017 78.5936C51.5017 83.748 49.3444 87.9965 42.6292 87.9965C35.9139 87.9965 34 84.2065 34 79.3294V76.9038H40.6304V79.6363C40.6304 81.8031 41.1873 82.8088 42.7472 82.8088C44.3071 82.8088 44.6721 81.3187 44.6721 79.7657C44.6721 76.6597 44.0452 75.7612 40.4534 72.9474C36.4892 69.8081 34.4499 67.8004 34.4499 63.097C34.4499 58.3937 36.113 54.0602 42.7804 54.0602C49.8607 54.0602 50.9043 58.5786 50.9043 62.3464V64.6944H44.5136V62.2688C44.5136 60.2721 44.1632 59.2848 42.8246 59.2848C41.5745 59.2848 41.1725 60.2906 41.1725 62.1542ZM83.4628 54.5852H73.3697L68.395 87.5084H75.2983L76.1649 79.6733H80.5496L81.5194 87.5084H88.5592L83.4628 54.5852ZM76.7513 74.0899C77.2159 70.0189 78.053 62.6127 78.1747 60.3165H78.4402C78.7684 63.4705 79.4691 69.8784 79.9706 74.0899H76.7513ZM70.3679 54.5852L69.398 60.5679H64.2722V87.5084H57.5126V60.5679H52.8735V60.1834V54.5852H69.9143H70.3679Z" fill="black"/>
+                                </svg>
+                                
+                            <div class="recommendations__block">
+                                <span class="recommendations__text-2">IRONSTAR OLYMPIC NIZHNY NOVGOROD 2024</span>
+                                <span class="recommendations__text-3">Триатлон: плавание 1.5 км, велогонка 40 км, бег 10 км</span>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="recommendations__link" href="#">
+                        <div class="rec__block rec__block-3">
+                            <svg width="140" height="127" viewBox="0 0 140 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M140 0V98.5461L0 126.087V0H140Z" fill="#00ABC8"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M38.3575 42.9222V44.5389C38.3575 46.0224 38.739 46.7502 39.7407 46.7502C40.7425 46.7502 41.0216 45.7158 41.0216 44.6102C41.0216 42.436 40.606 41.8135 38.2551 39.8437C35.6282 37.6324 34.3132 36.3223 34.3132 32.9372C34.3132 29.5521 35.3863 26.6191 39.7779 26.6191C44.4114 26.6191 45.103 29.7968 45.103 32.42V33.7332H40.9192V32.3519C40.9192 30.9706 40.6773 30.2799 39.812 30.2799C38.9467 30.2799 38.7048 30.9706 38.7048 32.2837C38.7048 33.665 38.9809 34.3557 40.882 35.8392C44.2719 38.4996 45.4814 40.0172 45.4814 43.7832C45.4814 47.5493 44.2378 50.38 39.6725 50.38C35.1072 50.38 34 47.7196 34 44.3035V42.9222H38.3575ZM40.4416 61.1828C40.4416 63.01 40.7735 63.9113 43.2856 65.8687H43.2887C47.7548 69.3746 49.3582 71.3412 49.3582 76.3368C49.3582 81.0878 47.4942 84.9994 41.6977 84.9994C35.9012 84.9994 34.2481 81.509 34.2481 77.0151V74.779H39.9702V77.2969C39.9702 79.2915 40.454 80.2175 41.8001 80.2175C43.1461 80.2175 43.4624 78.8424 43.4624 77.4115C43.4624 74.5467 42.9228 73.7198 39.8214 71.1275C36.3974 68.2317 34.6389 66.3828 34.6389 62.0499C34.6389 57.7171 36.078 53.725 41.8311 53.725C47.9408 53.725 48.8433 57.8874 48.8433 61.3593V63.5242H43.3259V61.2881C43.3259 59.4484 43.0251 58.5378 41.8683 58.5378C40.789 58.5378 40.4416 59.4639 40.4416 61.1828ZM64.431 84.5503L68.7265 54.2143H77.4383L81.8361 84.5503H75.7574L74.92 77.331H71.1363L70.3888 84.5503H64.431ZM72.8731 59.4917C72.7676 61.6071 72.0481 68.4331 71.6449 72.1836H74.4238C73.9927 68.2999 73.3879 62.3968 73.1026 59.4917H72.8731ZM99.4831 62.8428V61.7526C99.4831 56.4504 96.9679 54.2143 91.8754 54.2143H84.2955V84.5503H90.1293V71.3629H90.8178C93.0415 71.3629 93.4323 71.9452 93.4323 75.3582C93.4323 79.2295 93.4447 84.5503 93.4447 84.5503H99.2195V76.0302L99.2288 75.5966C99.2288 71.3629 98.3418 69.9785 96.4531 69.0649C97.7557 68.4516 99.4831 67.1663 99.4831 62.8428ZM93.6184 63.3259C93.6184 66.1505 92.8213 66.7637 90.8705 66.7637H90.1479V58.8104H91.0597C93.209 58.8104 93.6184 59.8231 93.6184 61.8579V63.3228V63.3259ZM65.8856 54.2143L65.0513 59.7271H60.6256V84.5472H54.7919V59.7271H50.7879V59.3709V54.2143H65.4979H65.8856ZM45.9683 26.997L48.5952 50.0301H48.5983H53.2318C53.4213 48.3928 53.6426 46.719 53.8688 45.0084C54.2202 42.3506 54.5834 39.6042 54.857 36.7683H55.0306C55.3071 40.2514 55.6963 43.5675 56.0612 46.6778C56.1957 47.8238 56.3269 48.9419 56.448 50.0301H61.0474L63.9875 26.997H59.5959C59.2858 30.794 58.8702 38.1837 58.6624 42.467H58.4887C58.3442 40.9242 58.1926 39.2388 58.0374 37.5128L58.0374 37.5127C57.7096 33.868 57.3656 30.0424 57.0373 26.997H53.2318C53.027 29.0149 52.8094 31.3054 52.5898 33.6165L52.5898 33.6166L52.5898 33.6169C52.2907 36.7646 51.988 39.9506 51.709 42.5382H51.5695C51.464 38.9115 50.9802 31.1068 50.6701 26.997H45.9683ZM69.8275 26.997V50.0301H65.4017V26.997H69.8275ZM84.28 31.2431C84.2118 34.0769 84.1777 39.119 84.1777 42.6745V50.0301H88.4669V26.997H82.1028C81.8366 28.9507 81.5603 30.8687 81.2994 32.6801C80.8824 35.5749 80.5045 38.1975 80.2699 40.2587H80.2017C79.9256 37.1152 79.234 31.3825 78.6448 26.997H72.2807V50.0301H76.2908V42.8479C76.2908 38.8743 76.1853 33.8694 76.1171 31.175H76.2567C76.7405 35.4923 77.7453 44.988 78.2633 50.0301H82.0315C82.6518 45.1614 83.6566 35.8361 84.1404 31.2431H84.28Z" fill="white"/>
+                                <path d="M100.308 51.0497L100.33 36.2579L94.5706 48.1043L93.1811 42.415L90.8271 42.3871L91.7017 40.3864L94.217 40.408L94.7411 41.7924L102.885 25L102.935 40.6217L105.881 34.6877L108.102 40.3988H110L109.212 42.3964H106.554L105.708 40.2284L100.308 51.0497Z" fill="white"/>
+                                </svg>
+                                
+                                
+                            <div class="recommendations__block">
+                                <span class="recommendations__text-2">SWIMSTAR ONE MILE NIZHNY NOVGOROD 2024</span>
+                                <span class="recommendations__text-3">Заплыв на открытой воде на 1 морскую милю</span>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="recommendations__link" href="#">
+                        <div class="rec__block rec__block-2">
+                            <svg width="140" height="127" viewBox="0 0 140 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M140 0V98.5461L0 126.087V0H140Z" fill="#00ABC8"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M38.3575 42.9222V44.5389C38.3575 46.0224 38.739 46.7502 39.7407 46.7502C40.7425 46.7502 41.0216 45.7158 41.0216 44.6102C41.0216 42.436 40.606 41.8135 38.2551 39.8437C35.6282 37.6324 34.3132 36.3223 34.3132 32.9372C34.3132 29.5521 35.3863 26.6191 39.7779 26.6191C44.4114 26.6191 45.103 29.7968 45.103 32.42V33.7332H40.9192V32.3519C40.9192 30.9706 40.6773 30.2799 39.812 30.2799C38.9467 30.2799 38.7048 30.9706 38.7048 32.2837C38.7048 33.665 38.9809 34.3557 40.882 35.8392C44.2719 38.4996 45.4814 40.0172 45.4814 43.7832C45.4814 47.5493 44.2378 50.38 39.6725 50.38C35.1072 50.38 34 47.7196 34 44.3035V42.9222H38.3575ZM40.4416 61.1828C40.4416 63.01 40.7735 63.9113 43.2856 65.8687H43.2887C47.7548 69.3746 49.3582 71.3412 49.3582 76.3368C49.3582 81.0878 47.4942 84.9994 41.6977 84.9994C35.9012 84.9994 34.2481 81.509 34.2481 77.0151V74.779H39.9702V77.2969C39.9702 79.2915 40.454 80.2175 41.8001 80.2175C43.1461 80.2175 43.4624 78.8424 43.4624 77.4115C43.4624 74.5467 42.9228 73.7198 39.8214 71.1275C36.3974 68.2317 34.6389 66.3828 34.6389 62.0499C34.6389 57.7171 36.078 53.725 41.8311 53.725C47.9408 53.725 48.8433 57.8874 48.8433 61.3593V63.5242H43.3259V61.2881C43.3259 59.4484 43.0251 58.5378 41.8683 58.5378C40.789 58.5378 40.4416 59.4639 40.4416 61.1828ZM64.431 84.5503L68.7265 54.2143H77.4383L81.8361 84.5503H75.7574L74.92 77.331H71.1363L70.3888 84.5503H64.431ZM72.8731 59.4917C72.7676 61.6071 72.0481 68.4331 71.6449 72.1836H74.4238C73.9927 68.2999 73.3879 62.3968 73.1026 59.4917H72.8731ZM99.4831 62.8428V61.7526C99.4831 56.4504 96.9679 54.2143 91.8754 54.2143H84.2955V84.5503H90.1293V71.3629H90.8178C93.0415 71.3629 93.4323 71.9452 93.4323 75.3582C93.4323 79.2295 93.4447 84.5503 93.4447 84.5503H99.2195V76.0302L99.2288 75.5966C99.2288 71.3629 98.3418 69.9785 96.4531 69.0649C97.7557 68.4516 99.4831 67.1663 99.4831 62.8428ZM93.6184 63.3259C93.6184 66.1505 92.8213 66.7637 90.8705 66.7637H90.1479V58.8104H91.0597C93.209 58.8104 93.6184 59.8231 93.6184 61.8579V63.3228V63.3259ZM65.8856 54.2143L65.0513 59.7271H60.6256V84.5472H54.7919V59.7271H50.7879V59.3709V54.2143H65.4979H65.8856ZM45.9683 26.997L48.5952 50.0301H48.5983H53.2318C53.4213 48.3928 53.6426 46.719 53.8688 45.0084C54.2202 42.3506 54.5834 39.6042 54.857 36.7683H55.0306C55.3071 40.2514 55.6963 43.5675 56.0612 46.6778C56.1957 47.8238 56.3269 48.9419 56.448 50.0301H61.0474L63.9875 26.997H59.5959C59.2858 30.794 58.8702 38.1837 58.6624 42.467H58.4887C58.3442 40.9242 58.1926 39.2388 58.0374 37.5128L58.0374 37.5127C57.7096 33.868 57.3656 30.0424 57.0373 26.997H53.2318C53.027 29.0149 52.8094 31.3054 52.5898 33.6165L52.5898 33.6166L52.5898 33.6169C52.2907 36.7646 51.988 39.9506 51.709 42.5382H51.5695C51.464 38.9115 50.9802 31.1068 50.6701 26.997H45.9683ZM69.8275 26.997V50.0301H65.4017V26.997H69.8275ZM84.28 31.2431C84.2118 34.0769 84.1777 39.119 84.1777 42.6745V50.0301H88.4669V26.997H82.1028C81.8366 28.9507 81.5603 30.8687 81.2994 32.6801C80.8824 35.5749 80.5045 38.1975 80.2699 40.2587H80.2017C79.9256 37.1152 79.234 31.3825 78.6448 26.997H72.2807V50.0301H76.2908V42.8479C76.2908 38.8743 76.1853 33.8694 76.1171 31.175H76.2567C76.7405 35.4923 77.7453 44.988 78.2633 50.0301H82.0315C82.6518 45.1614 83.6566 35.8361 84.1404 31.2431H84.28Z" fill="white"/>
+                                <path d="M100.308 51.0497L100.33 36.2579L94.5706 48.1043L93.1811 42.415L90.8271 42.3871L91.7017 40.3864L94.217 40.408L94.7411 41.7924L102.885 25L102.935 40.6217L105.881 34.6877L108.102 40.3988H110L109.212 42.3964H106.554L105.708 40.2284L100.308 51.0497Z" fill="white"/>
+                                </svg>
+                                
+                                
+                            <div class="recommendations__block">
+                                <span class="recommendations__text-2">SWIMSTAR DOUBLE MILE NIZHNY NOVGOROD 2024</span>
+                                <span class="recommendations__text-3">Заплыв на открытой воде на 2 морские милю</span>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+                
+                <div class="swiper-slide">
+                    <a class="recommendations__link" href="#">
+                        <div class="rec__block rec__block-4">
+                            <svg width="140" height="127" viewBox="0 0 140 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M140 0V98.5461L0 126.087V0H140Z" fill="#EB0045"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M69.6718 42.2693V30.432C69.6718 25.3359 66.9983 23.2227 63.0908 23.2227C59.1834 23.2227 56.4888 25.3724 56.4888 30.2983V42.3179C56.4888 47.2772 58.4274 49.503 62.864 49.503C67.3007 49.503 69.6718 47.332 69.6718 42.2693ZM61.4275 42.92V29.8786C61.4275 28.185 62.0021 27.4309 63.0425 27.4309C64.2703 27.4309 64.7089 28.2458 64.7089 29.8391V42.8957C64.7089 44.5741 64.1433 45.3191 63.0546 45.3191C61.9658 45.3191 61.4275 44.4951 61.4275 42.92ZM38.9538 49.1199V23.6058H34.0786V49.1199H38.9538ZM72.2606 49.1199V23.6058H77.662C78.4665 26.7195 81.0099 38.277 81.2125 39.3959H81.3305C81.0613 36.0026 80.8859 31.3595 80.8859 27.7989V23.6058H85.4163V49.1199H79.9665C79.4403 46.6935 76.667 33.491 76.5037 32.6731H76.3706C76.5611 35.6772 76.7093 40.7521 76.7093 44.7627V49.1199H72.2606ZM54.2387 29.9425V30.8607C54.2387 34.4973 52.7961 35.5768 51.7074 36.0937C53.2861 36.863 54.027 38.0275 54.027 41.5881L54.021 41.953V49.1198H49.1972C49.1972 49.1198 49.1881 44.644 49.1881 41.3875C49.1881 38.5171 48.8615 38.0275 47.0016 38.0275H46.4269V49.1198H41.5517V23.6027H47.8847C52.1368 23.6027 54.2387 25.4818 54.2387 29.9425ZM46.439 34.1598H47.0439V34.1568C48.674 34.1568 49.3393 33.6399 49.3393 31.2651V30.0337C49.3393 28.3218 48.9976 27.4704 47.2012 27.4704H46.439V34.1598ZM34 53.2612H40.4388V81.3325H48.5893L47.9844 86.9973H34V53.2612ZM56.9727 87.0003L57.7772 78.9578H57.7802H61.9568L62.9125 87.0003H69.6022L64.721 53.2612H55.1127L50.3827 87.0003H56.9727ZM60.6969 66.414C60.941 68.8072 61.1918 71.2649 61.4003 73.2414H58.3336C58.7873 69.0422 59.5918 61.4558 59.6916 59.1297H59.9426C60.1321 60.8775 60.4099 63.6007 60.6968 66.4131L60.6969 66.414ZM71.5227 53.2612H79.4706C86.363 53.2612 88.728 56.3961 88.728 63.3775V76.0722C88.728 81.889 87.5213 86.9973 79.8728 86.9973H71.5227V53.2612ZM77.9614 81.7886H79.2196C81.7842 81.7886 82.1864 80.1193 82.1864 77.4891V62.3649C82.1864 59.8868 81.633 58.5216 79.1682 58.5216H77.9614V81.7886ZM95.3664 76.1756V87.0003L95.3724 86.9973H101.811V76.4249C101.811 75.7195 101.863 75.4154 101.962 74.9593L107.999 53.2612H101.358C101.318 53.478 101.278 53.6961 101.238 53.9155C100.359 58.7142 99.3706 64.1109 98.8413 67.981H98.6387C98.2492 63.865 97.2444 58.4718 96.3601 53.7254L96.2737 53.2612H89.23L95.1154 74.4546C95.2666 75.011 95.3664 75.6191 95.3664 76.1756Z" fill="white"/>
+                                <path d="M98.4726 50.4848L98.4938 34.3086L92.2395 47.2617L90.7334 41.0406L88.1748 41.0102L89.1244 38.8239L91.8554 38.8482L92.427 40.3595L101.273 22L101.328 39.0793L104.524 32.5936L106.938 38.8361H109L108.141 41.0223H105.256L104.337 38.6506L98.4726 50.4848Z" fill="white"/>
+                                </svg>
+                                
+                                
+                                
+                            <div class="recommendations__block">
+                                <span class="recommendations__text-2">SWIMSTAR DOUBLE MILE NIZHNY NOVGOROD 2024</span>
+                                <span class="recommendations__text-3">Заплыв на открытой воде на 2 морские милю</span>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="recommendations__link" href="#">
+                        <div class="rec__block rec__block-5">
+                            <svg width="141" height="127" viewBox="0 0 141 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M140.5 0V98.5461L0.5 126.087V0H140.5Z" fill="#773DBD"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M39.5738 31.3984C39.5738 32.8346 39.8344 33.5439 41.8153 35.0843L41.8182 35.0814C45.3368 37.8408 46.5994 39.3869 46.5994 43.316C46.5994 47.0511 45.1283 50.129 40.5642 50.129C36.0002 50.129 34.697 47.3841 34.697 43.8488V42.0913H39.206V44.0717C39.206 45.6411 39.5854 46.3707 40.6453 46.3707C41.7052 46.3707 41.9543 45.2907 41.9543 44.1644C41.9543 41.9118 41.5315 41.2603 39.0873 39.2219C36.3911 36.9461 35.0039 35.4926 35.0039 32.0846C35.0039 28.6767 36.1334 25.5352 40.6685 25.5352C45.4845 25.5352 46.194 28.807 46.194 31.5374V33.2399H41.8471V31.4824C41.8471 30.0347 41.6068 29.3195 40.6974 29.3195C39.8489 29.3195 39.5738 30.0462 39.5738 31.3984ZM86.0948 32.7043V31.8472C86.0948 27.6749 84.111 25.9202 80.1001 25.9202H74.1286V49.7758H78.7245V39.4043H79.2661C81.0181 39.4043 81.328 39.8618 81.328 42.5459C81.328 45.5919 81.3367 49.7758 81.3367 49.7758H85.8863V43.0757L85.892 42.7341C85.892 39.4043 85.1941 38.3156 83.7056 37.5975C84.7308 37.114 86.0948 36.1035 86.0948 32.7043ZM79.3095 35.7879H78.739V29.5338H79.4572C81.1513 29.5338 81.4728 30.33 81.4728 31.9312V33.0836C81.4728 35.3044 80.8444 35.7879 79.3095 35.7879ZM88.9386 75.8491V75.8462L88.9444 75.8491H88.9386ZM88.9386 75.8491V78.0555C88.9386 80.0765 89.454 81.0638 90.8181 81.0638C92.1821 81.0638 92.5585 79.6537 92.5585 78.151C92.5585 75.189 91.9938 74.3435 88.7967 71.6652C85.223 68.6568 83.4391 66.8704 83.4391 62.2666C83.4391 57.6629 84.8958 53.6672 90.8673 53.6672C97.166 53.6672 98.1072 57.9901 98.1072 61.563V63.3495H92.4195V61.4704C92.4195 59.5912 92.0894 58.6502 90.9165 58.6502C89.7437 58.6502 89.4135 59.5912 89.4135 61.3748C89.4135 63.254 89.79 64.195 92.3761 66.216C96.9836 69.8353 98.6285 71.9026 98.6285 77.0247C98.6285 82.1467 96.9373 86.0005 90.7312 86.0005C84.5251 86.0005 83.0221 82.3812 83.0221 77.7283V75.8491H88.9386ZM64.3836 54.1797H64.3865V85.5257H72.1882C79.3326 85.5257 80.462 80.7801 80.462 75.3743V63.5783C80.462 57.0925 78.2524 54.1797 71.8118 54.1797H64.3865V54.1768L64.3836 54.1797ZM70.4014 80.6874H71.5772C73.9751 80.6874 74.3515 79.1354 74.3515 76.6917V62.6401C74.3515 60.3383 73.8332 59.0672 71.5309 59.0672H70.4014V80.6874ZM40.3267 54.1797H34.5V85.5286H40.3296V76.3182L42.1164 72.3225L45.218 85.5286H51.7513L46.2982 66.3058L51.5631 54.1797H44.8879C44.3128 55.9234 43.6285 58.0266 42.9526 60.1038L42.9523 60.1049L42.9517 60.1067L42.9514 60.1077C41.9701 63.1236 41.0069 66.0841 40.4223 67.8085H40.3267V54.1797ZM60.7318 85.5286V54.1797H54.7139V85.5286H60.7318ZM68.7247 25.9173H61.8612L58.4758 49.7729H63.1702L63.7581 44.0949H66.741L67.4012 49.7729H72.1912L68.7276 25.9173H68.7247ZM64.1606 40.05C64.4763 37.0995 65.0468 31.7314 65.1279 30.0694H65.3103C65.5333 32.3539 66.0112 36.9982 66.3529 40.05H64.1635H64.1606ZM59.6227 25.9173L58.9653 30.2518H55.4785V49.7729H50.8826V30.2518H47.726V29.9739V25.9173H59.3157H59.6227Z" fill="white"/>
+                                <path d="M99.4189 51.1216L99.4421 35.7207L93.4503 48.0524L92.0081 42.1312L89.5581 42.1023L90.4674 40.0205L93.0825 40.0407L93.6298 41.4827L102.101 24L102.153 40.2637L105.217 34.0848L107.525 40.0291H109.5L108.68 42.1139H105.915L105.034 39.8525L99.4189 51.1216Z" fill="white"/>
+                                </svg>
+                                
+                                
+                                
+                                
+                            <div class="recommendations__block">
+                                <span class="recommendations__text-2">STARKIDS NIZHNY NOVGOROD 2024</span>
+                                <span class="recommendations__text-3">Детские забеги на 0,5 и 1 км</span>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+            </div>
+            <div class="recommendations__swiper-bg"></div>
+        </div>
+    </section>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <nav class="footer__nav">
+                    <h2 class="footer__title">СОРЕВНОВАНИЯ</h2>
+                    <ul class="footer__list list-reset">
+                        <li class="footer__item">
+                            <a href="#" aria-label="link" >Триатлон</a>
+                        </li>
+                        <li class="footer__item"><a href="#" aria-label="link">Плавание</a></li>
+                        <li class="footer__item"><a href="#" aria-label="link">Бег</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="footer__title">РЕЗУЛЬТАТЫ</h2>
+
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="footer__title">РЕЙТИНГ</h2>
+                    <ul class="footer__list list-reset">
+                        <li class="footer__item">
+                            <a href="#" aria-label="link">Правила</a>
+                        </li>
+                        <li class="footer__item"><a href="#" aria-label="link">Рейтинг участников</a></li>
+                        <li class="footer__item"><a href="#" aria-label="link">Рейтинг клубов</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="footer__title">СЕРТИФИКАТЫ</h2>
+                    <ul class="footer__list list-reset">
+                        <li class="footer__item">
+                            <a href="#" aria-label="link">Триатлон</a>
+                        </li>
+                        <li class="footer__item"><a href="#" aria-label="link">Плавание</a></li>
+                        <li class="footer__item"><a href="#" aria-label="link">Бег</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="footer__title">ФОТО</h2>
+
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="footer__title">FAQ</h2>
+
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="footer__title">ОБ IRONSTAR</h2>
+                    <ul class="footer__list list-reset">
+                        <li class="footer__item">
+                            <a href="#" aria-label="link">История</a>
+                        </li>
+                        <li class="footer__item"><a href="#" aria-label="link">Учредители</a></li>
+                        <li class="footer__item"><a href="#" aria-label="link">Команда</a></li>
+                        <li class="footer__item"><a href="#" aria-label="link">ROSA RUN</a></li>
+                        <li class="footer__item"><a href="#" aria-label="link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="footer__title">МЕРЧ</h2>
+
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="footer__title">ПОЛЕЗНОЕ</h2>
+                    <ul class="footer__list list-reset">
+                        <li class="footer__item">
+                            <a href="#" aria-label="link">История</a>
+                        </li>
+                        <li class="footer__item"><a href="#" aria-label="link">Найти команду</a></li>
+                        <li class="footer__item"><a href="#" aria-label="link">Кэмпы</a></li>
+                        <li class="footer__item"><a href="#" aria-label="link">Турпакеты</a></li>
+                        <li class="footer__item"><a href="#" aria-label="link">Стать волонтером</a></li>
+                    </ul>
+                </nav>
+                <nav class="footer__nav">
+                    <h2 class="footer__title">ОБРАТНАЯ СВЯЗЬ</h2>
+
+                </nav>
+            </div>
+            <div class="footer__flex">
+                <form action="#" class="footer__form">
+                    <input class="footer__input" type="email" name="emailInput" id="emailInput" placeholder="E-mail">
+                    <button class="footer__btn btn-reset" aria-label="подписаться">подписаться на рассылку</button>
+                </form>
+                <div class="footer__socials">
+                    <span class="footer__text">ПОДПИСЫВАЙТЕСЬ НА НАШИ СОЦСЕТИ</span>
+                    <div class="footer__socials-flex">
+                        <span>IRONSTAR</span>
+                        <a href="#" aria-label="tg">
+                            <svg  width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.33109 8.9396L6.56982 14.3975L9.48436 11.5551L14.4815 15.4286L18 0L0 7.31196L4.33109 8.9396ZM12.8565 4.42661L7.34697 9.32745L6.66074 11.8497L5.39305 8.75839L12.8565 4.42661Z" fill="white"/>
+                                </svg>
+                                
+                        </a>
+                        <a href="#" aria-label="vk">
+                            <svg  width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C0.146159 7.4955 3.65397 12 9.80387 12H10.1524V7.71171C12.4122 7.95195 14.1212 9.71772 14.807 12H18C17.123 8.58859 14.8182 6.7027 13.3791 5.98198C14.8182 5.09309 16.842 2.93093 17.3254 0H14.4247C13.7951 2.37838 11.9288 4.54054 10.1524 4.74474V0H7.25172V8.31231C5.45284 7.83183 3.18176 5.5015 3.08057 0H0Z" fill="white"/>
+                                </svg>
+                                
+                        </a>
+                        <a href="#" aria-label="unoin">
+                            <svg class="footer__union" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.39032 8.39251C3.24681 8.63251 1.82211 8.70751 0 8.73001C0.138721 3.97125 3.97041 0.13875 8.7319 0C8.72815 0.29625 8.7244 0.5775 8.7169 0.855001C8.63817 3.97125 8.32323 5.80875 7.06725 7.06501C6.38489 7.74751 5.53008 8.15251 4.39032 8.39251ZM18 8.73001C14.352 8.68126 12.3012 8.43376 10.9327 7.06501C10.764 6.89251 10.6103 6.7125 10.4716 6.5175C9.50427 5.16375 9.30931 3.19125 9.26807 0C14.0258 0.13875 17.8575 3.97125 18 8.73001ZM7.0635 10.935C5.69504 9.56625 3.64423 9.31874 0 9.26999C0.138721 14.0287 3.97041 17.8613 8.72815 18C8.68691 14.8087 8.49195 12.8362 7.52465 11.4825C7.38593 11.2875 7.23222 11.1075 7.0635 10.935ZM9.26807 17.9963C9.31681 14.3513 9.56426 12.3038 10.9327 10.935V10.9313C11.6151 10.2488 12.4699 9.84377 13.6097 9.60376C14.7494 9.36376 16.1741 9.28876 17.9962 9.26626C17.8575 14.025 14.0258 17.8575 9.26807 17.9963Z" fill="white"/>
+                                </svg>
+                                
+                                
+                        </a>
+                        <a href="#" aria-label="unoin">
+                            <svg class="footer__yt" width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.6319 1.98254C17.4251 1.20676 16.8151 0.595775 16.0461 0.387887C14.6369 0 9.00248 0 9.00248 0C9.00248 0 3.36805 0 1.95881 0.372676C1.20252 0.580563 0.579829 1.20676 0.373108 1.98254C0 3.39972 0 6.33803 0 6.33803C0 6.33803 0 9.29155 0.370587 10.6935C0.577308 11.4693 1.18739 12.0803 1.95629 12.2882C3.38066 12.6761 8.99996 12.6761 8.99996 12.6761C8.99996 12.6761 14.6344 12.6761 16.0436 12.3034C16.8151 12.0955 17.4226 11.482 17.6293 10.7087C17.9999 9.29155 17.9999 6.35324 17.9999 6.35324C17.9999 6.35324 18.015 3.39972 17.6293 1.98254H17.6319ZM7.20753 9.05324V3.62282L11.8941 6.33803L7.20753 9.05324Z" fill="white"/>
+                                </svg>
+                     
+                                
+                        </a>
+                    </div>
+                        <div class="footer__line"></div>
+                    <div class="footer__socials-flex">
+                        <span>SWIMSTAR</span>
+                        <a href="#" aria-label="tg">
+                            <svg  width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.33109 8.9396L6.56982 14.3975L9.48436 11.5551L14.4815 15.4286L18 0L0 7.31196L4.33109 8.9396ZM12.8565 4.42661L7.34697 9.32745L6.66074 11.8497L5.39305 8.75839L12.8565 4.42661Z" fill="white"/>
+                                </svg>
+                                
+                        </a>
+                        <a href="#" aria-label="vk">
+                            <svg  width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0C0.146159 7.4955 3.65397 12 9.80387 12H10.1524V7.71171C12.4122 7.95195 14.1212 9.71772 14.807 12H18C17.123 8.58859 14.8182 6.7027 13.3791 5.98198C14.8182 5.09309 16.842 2.93093 17.3254 0H14.4247C13.7951 2.37838 11.9288 4.54054 10.1524 4.74474V0H7.25172V8.31231C5.45284 7.83183 3.18176 5.5015 3.08057 0H0Z" fill="white"/>
+                                </svg>
+                                
+                        </a>
+                    </div>
+                </div>
+            </div>
+           <div class="footer__contacts">
+                <div class="footer__block">
+                    <span class="footer__text-2">Юридический / фактический адрес:</span>
+                    <span class="footer__text-3">129164, г. Москва, Ракетный бульвар, д. 16, этаж 4, офис 401  |  ОГРН: 1167746111191 ИНН: 9717014483</span>
+                    <span class="footer__text-3">По общим вопросам: <a href="#">Помощь</a></span>
+                    <span class="footer__text-3">Аккредитация СМИ и информационное партнерство: <a href="mailto:elena.eremicheva@iron-star.com">elena.eremicheva@iron-star.com</a></span>
+                    <span class="footer__text-3">Спонсорам и партнерам: <a href="mailto:dmitry.belskiy@iron-star.com">dmitry.belskiy@iron-star.com</a></span>
+                    <span class="footer__text-3">По вопросам корпоративного участия: <a href="mailto:sales@iron-star.com">sales@iron-star.com</a></span>
+                </div>
+                <div class="footer__block-2">
+                    <a href="#">СОУТ</a>
+                    <span>ООО Архитектура Спорта © 2017</span>
+                </div>
+           </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/race.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Интертулмаш">
+    <link rel="shortcut icon" href="./img/svg/fav.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/style.css?ver=2">
+    <link rel="preload" href="./fonts/Mulish-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Mulish-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Mulish-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Mulish-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Mulish-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Jost-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <title>Интертулмаш</title>
+</head>
+
+<body>
+    <header class="header">
+    <div class="container">
+        <div class="header__flex">
+            <a href="./index.html" class="header__logo logo" aria-label="Перейти на главную">
+                <img class="logo__img" src="./img/svg/logo.svg" alt="лого">
+            </a>
+            <form action="#" class="header__form">
+                <input type="text" class="header__input" placeholder="Например, штангенциркуль">
+                <svg class="header__icon" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.2502 19.2502L14.9072 14.9072M14.9072 14.9072C15.6501 14.1643 16.2394 13.2824 16.6414 12.3118C17.0435 11.3411 17.2504 10.3008 17.2504 9.25021C17.2504 8.1996 17.0435 7.15929 16.6414 6.18866C16.2394 5.21803 15.6501 4.33609 14.9072 3.59321C14.1643 2.85032 13.2824 2.26103 12.3118 1.85898C11.3411 1.45693 10.3008 1.25 9.25021 1.25C8.1996 1.25 7.15929 1.45693 6.18866 1.85898C5.21803 2.26103 4.33609 2.85032 3.59321 3.59321C2.09288 5.09354 1.25 7.12842 1.25 9.25021C1.25 11.372 2.09288 13.4069 3.59321 14.9072C5.09354 16.4075 7.12842 17.2504 9.25021 17.2504C11.372 17.2504 13.4069 16.4075 14.9072 14.9072Z"
+                        stroke="#9FB1BC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+            </form>
+            <div class="header__socials socials">
+                <a href="#" class="socials__link" aria-label="Перейти в вк">
+                    <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.9825 14C4.46596 14 0.178638 8.74474 0 0H3.76515C3.88882 6.41842 6.66458 9.13714 8.86321 9.6977V0H12.4085V5.53554C14.5796 5.2973 16.8607 2.77477 17.6302 0H21.1755C20.8855 1.43908 20.3075 2.80165 19.4776 4.0025C18.6477 5.20335 17.5837 6.21663 16.3523 6.97898C17.7269 7.67556 18.941 8.6615 19.9145 9.87175C20.888 11.082 21.5988 12.489 22 14H18.0974C17.7373 12.6876 17.0054 11.5128 15.9934 10.6228C14.9814 9.73284 13.7343 9.16728 12.4085 8.997V14H11.9825Z"
+                            fill="white" />
+                    </svg>
+                </a>
+                <a href="#" class="socials__link" aria-label="Перейти в whatsapp">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2049_7671)">
+                            <path
+                                d="M18.3129 4.74728C15.393 0.220805 9.41359 -1.12037 4.78933 1.68772C0.276828 4.49581 -1.17611 10.6149 1.74374 15.1274L1.98124 15.4907L1.0033 19.151L4.66359 18.173L5.02683 18.4105C6.6055 19.2627 8.32389 19.7517 10.0283 19.7517C11.8584 19.7517 13.6886 19.2627 15.2673 18.2848C19.7798 15.351 21.1209 9.35757 18.3129 4.71933V4.74728ZM15.7562 14.1635C15.2673 14.8899 14.6526 15.3789 13.8004 15.5046C13.3114 15.5046 12.6967 15.7421 10.2658 14.7782C8.19815 13.8002 6.47977 12.2076 5.26433 10.3774C4.53786 9.52522 4.16065 8.42154 4.04889 7.31786C4.04889 6.33992 4.41212 5.48772 5.02683 4.87301C5.26433 4.63551 5.5158 4.50978 5.7533 4.50978H6.368C6.6055 4.50978 6.85698 4.50978 6.98271 4.99875C7.22021 5.61345 7.83492 7.08036 7.83492 7.2061C7.96065 7.33184 7.90477 8.26786 7.34595 8.79875C7.03859 9.14801 6.98271 9.16198 7.10845 9.41345C7.59742 10.1399 8.21212 10.8804 8.81286 11.4951C9.53933 12.1098 10.2798 12.5987 11.132 12.962C11.3695 13.0877 11.6209 13.0877 11.7467 12.8362C11.8724 12.5987 12.4732 11.984 12.7246 11.7326C12.9621 11.4951 13.0879 11.4951 13.3393 11.6068L15.2952 12.5848C15.5327 12.7105 15.7842 12.8223 15.9099 12.948C16.0357 13.3112 16.0357 13.8002 15.7842 14.1635H15.7562Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2049_7671">
+                                <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="#" class="socials__link" aria-label="Перейти в telegram">
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                            fill="white" />
+                    </svg>
+
+                </a>
+                <a href="#" class="socials__link" aria-label="Перейти в dzen">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.9286 11.9286C10.3571 13.55 10.2429 15.5714 10.1071 20C14.2357 20 17.0857 19.9857 18.5571 18.5571C19.9857 17.0857 20 14.1 20 10.1071C15.5714 10.25 13.55 10.3571 11.9286 11.9286ZM0 10.1071C0 14.1 0.0142857 17.0857 1.44286 18.5571C2.91429 19.9857 5.76429 20 9.89286 20C9.75 15.5714 9.64286 13.55 8.07143 11.9286C6.45 10.3571 4.42857 10.2429 0 10.1071ZM9.89286 0C5.77143 0 2.91429 0.0142857 1.44286 1.44286C0.0142857 2.91429 0 5.9 0 9.89286C4.42857 9.75 6.45 9.64286 8.07143 8.07143C9.64286 6.45 9.75714 4.42857 9.89286 0ZM11.9286 8.07143C10.3571 6.45 10.2429 4.42857 10.1071 0C14.2357 0 17.0857 0.0142857 18.5571 1.44286C19.9857 2.91429 20 5.9 20 9.89286C15.5714 9.75 13.55 9.64286 11.9286 8.07143Z"
+                            fill="white" />
+                        <path class="color-change"
+                            d="M20 10.1071V9.89286C15.5714 9.75 13.55 9.64286 11.9286 8.07143C10.3571 6.45 10.2429 4.42857 10.1071 0H9.89286C9.75 4.42857 9.64286 6.45 8.07143 8.07143C6.45 9.64286 4.42857 9.75714 0 9.89286V10.1071C4.42857 10.25 6.45 10.3571 8.07143 11.9286C9.64286 13.55 9.75714 15.5714 9.89286 20H10.1071C10.25 15.5714 10.3571 13.55 11.9286 11.9286C13.55 10.3571 15.5714 10.2429 20 10.1071Z"
+                            fill="#B3253E" />
+                    </svg>
+
+                </a>
+            </div>
+            <div class="header__contatcs header__contatcs-1">
+                <a class="header__link" href="mailto:inbox@itmash.ru" aria-label="Написать на почту">inbox@itmash.ru</a>
+                <span class="header__text">Пн-Пт 08:15 - 18:30</span>
+            </div>
+            <div class="header__contatcs">
+                <a class="header__link" href="tel:+74956681358" aria-label="Позвонить">+7 495 668-13-58</a>
+                <button class="header__btn" aria-label="Открыть модальное окно" onclick="openModal()">Заказать
+                    звонок</button>
+            </div>
+            <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="container">
+            <nav class="header__nav menu">
+                <form action="#" class="header__form header__form-576">
+                    <input type="text" class="header__input" placeholder="Например, штангенциркуль">
+                    <svg class="header__icon" width="21" height="21" viewBox="0 0 21 21" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19.2502 19.2502L14.9072 14.9072M14.9072 14.9072C15.6501 14.1643 16.2394 13.2824 16.6414 12.3118C17.0435 11.3411 17.2504 10.3008 17.2504 9.25021C17.2504 8.1996 17.0435 7.15929 16.6414 6.18866C16.2394 5.21803 15.6501 4.33609 14.9072 3.59321C14.1643 2.85032 13.2824 2.26103 12.3118 1.85898C11.3411 1.45693 10.3008 1.25 9.25021 1.25C8.1996 1.25 7.15929 1.45693 6.18866 1.85898C5.21803 2.26103 4.33609 2.85032 3.59321 3.59321C2.09288 5.09354 1.25 7.12842 1.25 9.25021C1.25 11.372 2.09288 13.4069 3.59321 14.9072C5.09354 16.4075 7.12842 17.2504 9.25021 17.2504C11.372 17.2504 13.4069 16.4075 14.9072 14.9072Z"
+                            stroke="#9FB1BC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                </form>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="./index.html" aria-label="Перейти на страницу">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./catalog.html" aria-label="Перейти на страницу">
+                            Каталоги
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./production.html" aria-label="Перейти на страницу">
+                            ПРОДУКЦИЯ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./about.html" aria-label="Перейти на страницу">
+                            О КОМПАНИИ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./news.html" aria-label="Перейти на страницу">
+                            НОВОСТИ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./brands.html" aria-label="Перейти на страницу">
+                            БРЕНДЫ
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item_bb">
+                        <a class="menu__link" href="./contacts.html" aria-label="Перейти на страницу">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="menu__item-1080">
+                        <div class="contacts__block">
+                            <span class="contacts__text ">г. Москва</span>
+                            <span class="contacts__text-2">г. Москва</span>
+                            <a class="contacts__link" href="#" aria-label="Открыть яндекс карту">Показать на карте</a>
+                        </div>
+                        <div class="contacts__block">
+                            <span class="contacts__text ">Телефон</span>
+                            <a href="tel:+74956681358" class="contacts__text-2 contacts__text-2_link"
+                                aria-label="Позвонить">+7 (495)
+                                668-13-58</a>
+                            <button class="contacts__btn contacts__link" aria-label="Открыть модальное окно"
+                                onclick="openModal()">Заказать
+                                звонок</button>
+                        </div>
+                        <div class="contacts__block">
+                            <span class="contacts__text ">График работы</span>
+                            <span class="contacts__text-2">08:15 - 18:30</span>
+                            <span class="contacts__text ">c ПН по ПТ</span>
+                        </div>
+                        <div class="contacts__block">
+                            <span class="contacts__text ">E-mail</span>
+                            <a href="mailto:inbox@itmash.ru"
+                                class="contacts__text-2 contacts__text-2_color">inbox@itmash.ru</a>
+                        </div>
+                        <div class="contacts__block">
+                            <span class="contacts__text ">Мы в соцсетях</span>
+                            <div class="contacts__socials socials">
+
+                                <a href="#" class="socials__link" aria-label="Перейти в whatsapp">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2049_7672)">
+                                            <path
+                                                d="M18.3129 4.74728C15.393 0.220805 9.41359 -1.12037 4.78933 1.68772C0.276828 4.49581 -1.17611 10.6149 1.74374 15.1274L1.98124 15.4907L1.0033 19.151L4.66359 18.173L5.02683 18.4105C6.6055 19.2627 8.32389 19.7517 10.0283 19.7517C11.8584 19.7517 13.6886 19.2627 15.2673 18.2848C19.7798 15.351 21.1209 9.35757 18.3129 4.71933V4.74728ZM15.7562 14.1635C15.2673 14.8899 14.6526 15.3789 13.8004 15.5046C13.3114 15.5046 12.6967 15.7421 10.2658 14.7782C8.19815 13.8002 6.47977 12.2076 5.26433 10.3774C4.53786 9.52522 4.16065 8.42154 4.04889 7.31786C4.04889 6.33992 4.41212 5.48772 5.02683 4.87301C5.26433 4.63551 5.5158 4.50978 5.7533 4.50978H6.368C6.6055 4.50978 6.85698 4.50978 6.98271 4.99875C7.22021 5.61345 7.83492 7.08036 7.83492 7.2061C7.96065 7.33184 7.90477 8.26786 7.34595 8.79875C7.03859 9.14801 6.98271 9.16198 7.10845 9.41345C7.59742 10.1399 8.21212 10.8804 8.81286 11.4951C9.53933 12.1098 10.2798 12.5987 11.132 12.962C11.3695 13.0877 11.6209 13.0877 11.7467 12.8362C11.8724 12.5987 12.4732 11.984 12.7246 11.7326C12.9621 11.4951 13.0879 11.4951 13.3393 11.6068L15.2952 12.5848C15.5327 12.7105 15.7842 12.8223 15.9099 12.948C16.0357 13.3112 16.0357 13.8002 15.7842 14.1635H15.7562Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2049_7672">
+                                                <rect width="20" height="20" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                                <a href="#" class="socials__link" aria-label="Перейти в telegram">
+                                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                                            fill="white" />
+                                    </svg>
+
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</header>
+<div class="header header-fixed">
+    <div class="container">
+        <div class="header__flex">
+            <a href="./index.html" class="header__logo logo" aria-label="Перейти на главную">
+                <picture>
+                    <source media="(max-width: 1440px)" srcset="./img/svg/logo-small.svg">
+                    <img class="logo__img" src="./img/svg/footer-logo.svg" alt="лого">
+                </picture>
+            </a>
+            <nav class="header__nav menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="./index.html" aria-label="Перейти на страницу">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./catalog.html" aria-label="Перейти на страницу">
+                            Каталоги
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./production.html" aria-label="Перейти на страницу">
+                            ПРОДУКЦИЯ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./about.html" aria-label="Перейти на страницу">
+                            О КОМПАНИИ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./news.html" aria-label="Перейти на страницу">
+                            НОВОСТИ
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="./brands.html" aria-label="Перейти на страницу">
+                            БРЕНДЫ
+                        </a>
+                    </li>
+                    <li class="menu__item menu__item_bb">
+                        <a class="menu__link" href="./contacts.html" aria-label="Перейти на страницу">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+                <form action="#" class="header__form">
+                    <input type="text" class="header__input" placeholder="Например, штангенциркуль">
+
+
+
+                    <svg class="header__icon" width="40" height="38" viewBox="0 0 40 38" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="38" fill="#F2F2FE" />
+                        <path
+                            d="M29.0002 28.0002L24.6572 23.6572M24.6572 23.6572C25.4001 22.9143 25.9894 22.0324 26.3914 21.0618C26.7935 20.0911 27.0004 19.0508 27.0004 18.0002C27.0004 16.9496 26.7935 15.9093 26.3914 14.9387C25.9894 13.968 25.4001 13.0861 24.6572 12.3432C23.9143 11.6003 23.0324 11.011 22.0618 10.609C21.0911 10.2069 20.0508 10 19.0002 10C17.9496 10 16.9093 10.2069 15.9387 10.609C14.968 11.011 14.0861 11.6003 13.3432 12.3432C11.8429 13.8435 11 15.8784 11 18.0002C11 20.122 11.8429 22.1569 13.3432 23.6572C14.8435 25.1575 16.8784 26.0004 19.0002 26.0004C21.122 26.0004 23.1569 25.1575 24.6572 23.6572Z"
+                            stroke="#9FB1BC" stroke-width="2.5" stroke-linejoin="round" />
+                    </svg>
+
+
+
+                </form>
+            </nav>
+            <div class="header__socials socials">
+                <a href="#" class="socials__link" aria-label="Перейти в вк">
+                    <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.9825 14C4.46596 14 0.178638 8.74474 0 0H3.76515C3.88882 6.41842 6.66458 9.13714 8.86321 9.6977V0H12.4085V5.53554C14.5796 5.2973 16.8607 2.77477 17.6302 0H21.1755C20.8855 1.43908 20.3075 2.80165 19.4776 4.0025C18.6477 5.20335 17.5837 6.21663 16.3523 6.97898C17.7269 7.67556 18.941 8.6615 19.9145 9.87175C20.888 11.082 21.5988 12.489 22 14H18.0974C17.7373 12.6876 17.0054 11.5128 15.9934 10.6228C14.9814 9.73284 13.7343 9.16728 12.4085 8.997V14H11.9825Z"
+                            fill="white" />
+                    </svg>
+                </a>
+                <a href="#" class="socials__link" aria-label="Перейти в whatsapp">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2049_7673)">
+                            <path
+                                d="M18.3129 4.74728C15.393 0.220805 9.41359 -1.12037 4.78933 1.68772C0.276828 4.49581 -1.17611 10.6149 1.74374 15.1274L1.98124 15.4907L1.0033 19.151L4.66359 18.173L5.02683 18.4105C6.6055 19.2627 8.32389 19.7517 10.0283 19.7517C11.8584 19.7517 13.6886 19.2627 15.2673 18.2848C19.7798 15.351 21.1209 9.35757 18.3129 4.71933V4.74728ZM15.7562 14.1635C15.2673 14.8899 14.6526 15.3789 13.8004 15.5046C13.3114 15.5046 12.6967 15.7421 10.2658 14.7782C8.19815 13.8002 6.47977 12.2076 5.26433 10.3774C4.53786 9.52522 4.16065 8.42154 4.04889 7.31786C4.04889 6.33992 4.41212 5.48772 5.02683 4.87301C5.26433 4.63551 5.5158 4.50978 5.7533 4.50978H6.368C6.6055 4.50978 6.85698 4.50978 6.98271 4.99875C7.22021 5.61345 7.83492 7.08036 7.83492 7.2061C7.96065 7.33184 7.90477 8.26786 7.34595 8.79875C7.03859 9.14801 6.98271 9.16198 7.10845 9.41345C7.59742 10.1399 8.21212 10.8804 8.81286 11.4951C9.53933 12.1098 10.2798 12.5987 11.132 12.962C11.3695 13.0877 11.6209 13.0877 11.7467 12.8362C11.8724 12.5987 12.4732 11.984 12.7246 11.7326C12.9621 11.4951 13.0879 11.4951 13.3393 11.6068L15.2952 12.5848C15.5327 12.7105 15.7842 12.8223 15.9099 12.948C16.0357 13.3112 16.0357 13.8002 15.7842 14.1635H15.7562Z"
+                                fill="white" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2049_7673">
+                                <rect width="20" height="20" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </a>
+                <a href="#" class="socials__link" aria-label="Перейти в telegram">
+                    <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                            fill="white" />
+                    </svg>
+
+                </a>
+                <a href="#" class="socials__link" aria-label="Перейти в dzen">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.9286 11.9286C10.3571 13.55 10.2429 15.5714 10.1071 20C14.2357 20 17.0857 19.9857 18.5571 18.5571C19.9857 17.0857 20 14.1 20 10.1071C15.5714 10.25 13.55 10.3571 11.9286 11.9286ZM0 10.1071C0 14.1 0.0142857 17.0857 1.44286 18.5571C2.91429 19.9857 5.76429 20 9.89286 20C9.75 15.5714 9.64286 13.55 8.07143 11.9286C6.45 10.3571 4.42857 10.2429 0 10.1071ZM9.89286 0C5.77143 0 2.91429 0.0142857 1.44286 1.44286C0.0142857 2.91429 0 5.9 0 9.89286C4.42857 9.75 6.45 9.64286 8.07143 8.07143C9.64286 6.45 9.75714 4.42857 9.89286 0ZM11.9286 8.07143C10.3571 6.45 10.2429 4.42857 10.1071 0C14.2357 0 17.0857 0.0142857 18.5571 1.44286C19.9857 2.91429 20 5.9 20 9.89286C15.5714 9.75 13.55 9.64286 11.9286 8.07143Z"
+                            fill="white" />
+                        <path class="color-change"
+                            d="M20 10.1071V9.89286C15.5714 9.75 13.55 9.64286 11.9286 8.07143C10.3571 6.45 10.2429 4.42857 10.1071 0H9.89286C9.75 4.42857 9.64286 6.45 8.07143 8.07143C6.45 9.64286 4.42857 9.75714 0 9.89286V10.1071C4.42857 10.25 6.45 10.3571 8.07143 11.9286C9.64286 13.55 9.75714 15.5714 9.89286 20H10.1071C10.25 15.5714 10.3571 13.55 11.9286 11.9286C13.55 10.3571 15.5714 10.2429 20 10.1071Z"
+                            fill="#B3253E" />
+                    </svg>
+
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+    <main>
+        <div class="container">
+            <div class="bread-crumbs">
+                <a class="bread-crumbs__link" href="./index.html" aria-label="Перейти на ">Главная /</a>
+                <a class="bread-crumbs__link" href="./index.html" aria-label="Перейти на ">Услуги /</a>
+                <a class="bread-crumbs__link bread-crumbs__link_active" href="./services.html"
+                    aria-label="Перейти на ">Модернизация, сервис и обслуживание станков</a>
+            </div>
+        </div>
+        <section class="services-hero pb-100">
+
+            <div class="hero__block">
+                <div class="container">
+                    <h1 class="h1-title hero__title">Модернизация, сервис и обслуживание станков</h1>
+                    <button class="blue-btn hero__btn" aria-label="Открыть модальное окно"
+                        onclick="openModal()">Оставить
+                        заявку</button>
+                </div>
+
+
+            </div>
+            <ul class="services__list">
+                <li class="services__item">
+                    <img src="./img/svg/services-icon-1.svg" alt="Иконка">
+                    <span>Ремонт станков<br> любой сложности</span>
+                </li>
+                <li class="services__item">
+                    <img src="./img/svg/services-icon-2.svg" alt="Иконка">
+                    <span>Срок от 1 дня</span>
+                </li>
+                <li class="services__item">
+                    <img src="./img/svg/services-icon-3.svg" alt="Иконка">
+                    <span>Гарантия 1 год</span>
+                </li>
+                <li class="services__item">
+                    <img src="./img/svg/services-icon-4.svg" alt="Иконка">
+                    <span>Бесплатная<br> диагностика</span>
+                </li>
+            </ul>
+        </section>
+        <section class="catalog catalog-services-detail">
+            <div class="container">
+                <h2 class="h2-title catalog__title">Ремонтируем и обслуживаем станки по всей РФ</h2>
+                <div class="catalog__grid">
+                    <div class="catalog__card blue-card text-16-20">
+                        <h3 class="h3-title">Ремонт крупногабаритного<br> оборудования мобильными станками</h3>
+                        <img class="catalog__img" src="./img/catalog-11.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Ремонт механических гильотин</h3>
+                        <img class="catalog__img" src="./img/catalog-12.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Ремонт станков ЧПУ</h3>
+                        <img class="catalog__img" src="./img/catalog-13.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Ремонт лазерного оборудования</h3>
+                        <img class="catalog__img" src="./img/catalog-14.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Ремонт механических гильотин</h3>
+                        <img class="catalog__img" src="./img/catalog-11.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                    <div class="catalog__card blue-card text-16-20 catalog__card">
+                        <h3 class="h3-title">Ремонт крупногабаритного<br> оборудования мобильными станками</h3>
+                        <img class="catalog__img" src="./img/catalog-12.webp" alt="Картинка">
+                        <a class="catalog__link" href="#" aria-label="Перейти к товару"></a>
+                    </div>
+                </div>
+                <div class="catalog-texts">
+                    <div class="catalog__texts texts text-20-30 list">
+                        <strong>Компания «ИНТЕРТУЛМАШ» осуществляет обработку фланцев и других цилиндрических изделий
+                            с помощью мобильных станков, адаптированных под требуемые операции.</strong>
+                        <p>Диаметры обработки фланцев от 0 до 8000 мм и более (с использованием специального
+                            оборудования).</p>
+                        <strong>Мы осуществляем следующие операции:</strong>
+                        <ul>
+                            <li>токарная обработка плоских, конических поверхностей, внутренних и внешних сторон,
+                                а также канавок для фланцевых уплотнений, уплотнительных линз и прокладок различной
+                                формы (в том числе RTJ),</li>
+                            <li>шлифовка, фрезерование,</li>
+                            <li>снятие фаски (в том числе с обратной стороны),</li>
+                            <li>сверление отверстий.</li>
+                        </ul>
+                        <p>Токарная обработка поверхностей фланцев может проводится в соответствиями с требованиями
+                            стандартов ASME, API по качеству поверхности. Наше оборудование позволяет достигать
+                            повторяемости получаемого рисунка канавок за счет технологических особенностей и доработок.
+                        </p>
+                    </div>
+                    <img class="catalog-texts__img" src="./img/catalog-texts-img.webp" loading="lazy" alt="Картинка">
+                </div>
+                <div class="catalog-block">
+                    <div class="catalog-block__texts">
+                        <h2 class="h2-title catalog-block__title">Помогаем производствам России</h2>
+                        <strong class="catalog-block__text">в ремонте, пуско-наладке и обслуживании
+                            оборудования</strong>
+                    </div>
+                    <ul class="catalog-block__list">
+                        <li class="catalog-block__item">
+                            <img class="catalog-block__img" src="./img/svg/catalog-blog-1.svg" alt="Иконка"
+                                loading="lazy">
+                            <span>Машиностроение</span>
+                        </li>
+                        <li class="catalog-block__item">
+                            <img class="catalog-block__img" src="./img/svg/catalog-blog-2.svg" alt="Иконка"
+                                loading="lazy">
+                            <span>Авиакосмическая отрасль</span>
+                        </li>
+                        <li class="catalog-block__item">
+                            <img class="catalog-block__img" src="./img/svg/catalog-blog-3.svg" alt="Иконка"
+                                loading="lazy">
+                            <span>Металлургия</span>
+                        </li>
+                        <li class="catalog-block__item">
+                            <img class="catalog-block__img" src="./img/svg/catalog-blog-4.svg" alt="Иконка"
+                                loading="lazy">
+                            <span>АПК</span>
+                        </li>
+                        <li class="catalog-block__item">
+                            <img class="catalog-block__img" src="./img/svg/catalog-blog-5.svg" alt="Иконка"
+                                loading="lazy">
+                            <span>Химическая промышленность</span>
+                        </li>
+                        <li class="catalog-block__item">
+                            <img class="catalog-block__img" src="./img/svg/catalog-blog-6.svg" alt="Иконка"
+                                loading="lazy">
+                            <span>Нефтегазовая промышленность</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="catalog-texts catalog-texts_reverse">
+                    <div class="catalog__texts texts text-20-30 list">
+                        <strong>Компания «ИНТЕРТУЛМАШ» осуществляет поставки металлообрабатывающих станков различных
+                            типов.</strong>
+                        <strong>Среди основных производителей можно выделить:</strong>
+                        <ul>
+                            <li>METROM Mechatronische Maschinen GmbH (Германия). 5-осевые станки с параллельной
+                                кинематикой мобильного и портального исполнений.</li>
+                            <li>SNCM (Китай). Оборудование и станки для обработки металлоконструкций.</li>
+                            <li>HACO (Евросоюз). Токарные станки FAT и другое оборудование.</li>
+                            <li>MIRAGE MACHINES (Enerpac). Мобильные станки различных типов.</li>
+                            <li>Copier Bevelmachines (Голландия). Производитель и проектировщик стационарного
+                                оборудования для черновой и чистовой обработки металлических труб</li>
+                            <li>TRACTO-TECHNIK (Германия). Небольшие стационарные станки для снятия фаски с труб.</li>
+                        </ul>
+                        <p>Компания «ИНТЕРТУЛМАШ» готова поставить для Вашего предприятия новое, а также бывшее
+                            в употреблении (б/у) оборудование из Европы, Китая, Тайваня, Кореи, Японии, США, России
+                            и других стран СНГ. Постоянно актуализируется наш каталог предложений по б/у станкам
+                            на основе данных от зарубежных предприятий-банкротов и ремонтных предприятий. 
+                        </p>
+                        <p>Мы обязательно подберем то, что нужно именно Вам, так как за годы работы у нас сложились
+                            партнерские отношения с ведущими поставщиками и производителями оборудования Европы, Китая,
+                            Тайваня, Кореи, Японии и США. 
+                        </p>
+                    </div>
+                    <img class="catalog-texts__img" src="./img/catalog-texts-img-2.webp" loading="lazy" alt="Картинка">
+                </div>
+            </div>
+        </section>
+        <section class="reviews catalog-services-reviews">
+            <div class="container">
+                <div class="reviews__flex">
+                    <div class="reviews__texts">
+                        <h2 class="h2-title reviews__title">
+                            Наши <br> работы
+                        </h2>
+                        <div class="reviews__arrows swiper-arrows">
+                            <button class="swiper-arrow__prev reviews__btn-prev" aria-label="Предыдущий слайд">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="60" y="60" width="60" height="60" rx="30" transform="rotate(-180 60 60)"
+                                        fill="#F2F2FE" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M18.27 31.6489C18.0971 31.4767 18 31.2433 18 31C18 30.7567 18.0971 30.5233 18.27 30.3511L26.8692 21.7807C26.9543 21.6929 27.0561 21.6229 27.1687 21.5747C27.2813 21.5266 27.4024 21.5012 27.525 21.5C27.6475 21.4989 27.7691 21.5221 27.8826 21.5682C27.996 21.6143 28.0991 21.6825 28.1858 21.7687C28.2725 21.8548 28.3411 21.9573 28.3876 22.0702C28.4341 22.183 28.4575 22.3039 28.4565 22.4258C28.4555 22.5477 28.4301 22.6682 28.3817 22.7803C28.3334 22.8924 28.2631 22.9937 28.175 23.0785L21.1499 30.0805L41.0757 30.0671C41.3205 30.0667 41.5554 30.1632 41.7288 30.3351C41.9021 30.5071 41.9997 30.7406 42 30.9841C42.0003 31.2276 41.9034 31.4613 41.7305 31.6338C41.5576 31.8062 41.323 31.9033 41.0782 31.9036L21.1474 31.9158L28.1762 38.9216C28.2644 39.0063 28.3346 39.1077 28.383 39.2197C28.4313 39.3318 28.4567 39.4523 28.4577 39.5742C28.4587 39.6961 28.4353 39.817 28.3888 39.9299C28.3424 40.0427 28.2738 40.1452 28.1871 40.2314C28.1004 40.3175 27.9973 40.3857 27.8838 40.4318C27.7703 40.4779 27.6488 40.5011 27.5262 40.5C27.4037 40.4989 27.2825 40.4735 27.1699 40.4253C27.0574 40.3771 26.9555 40.3071 26.8704 40.2194L18.27 31.6489Z"
+                                        fill="#346C9A" />
+                                </svg>
+
+                            </button>
+                            <button class="swiper-arrow__next reviews__btn-next" aria-label="Следующий слайд">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="60" height="60" rx="30" fill="#F2F2FE" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M41.73 28.3511C41.9029 28.5233 42 28.7567 42 29C42 29.2433 41.9029 29.4767 41.73 29.6489L33.1308 38.2194C33.0457 38.3071 32.9439 38.3771 32.8313 38.4253C32.7187 38.4735 32.5976 38.4988 32.475 38.5C32.3525 38.5011 32.2309 38.4779 32.1174 38.4318C32.004 38.3857 31.9009 38.3175 31.8142 38.2314C31.7275 38.1452 31.6589 38.0427 31.6124 37.9299C31.5659 37.817 31.5425 37.6961 31.5435 37.5742C31.5445 37.4523 31.57 37.3318 31.6183 37.2197C31.6666 37.1077 31.7369 37.0063 31.825 36.9215L38.8501 29.9195L18.9243 29.933C18.6795 29.9333 18.4446 29.8368 18.2712 29.6649C18.0979 29.4929 18.0003 29.2595 18 29.0159C17.9997 28.7724 18.0966 28.5387 18.2695 28.3663C18.4424 28.1938 18.677 28.0968 18.9218 28.0964L38.8526 28.0842L31.8238 21.0785C31.7356 20.9937 31.6654 20.8923 31.617 20.7803C31.5687 20.6682 31.5433 20.5477 31.5423 20.4258C31.5413 20.3039 31.5647 20.183 31.6112 20.0701C31.6576 19.9573 31.7262 19.8548 31.8129 19.7686C31.8997 19.6825 32.0027 19.6143 32.1162 19.5682C32.2297 19.5221 32.3512 19.4989 32.4738 19.5C32.5964 19.5012 32.7175 19.5265 32.8301 19.5747C32.9427 19.6229 33.0445 19.6929 33.1296 19.7806L41.73 28.3511Z"
+                                        fill="#346C9A" />
+                                </svg>
+
+                            </button>
+                        </div>
+                    </div>
+                    <div class="reviews__swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="reviews__slide arrow-card"
+                                    style="background-image: url(./img/reviews-4.webp);">
+                                    <h3 class="reviews__subtitle">Ремонт станка ЧПУ</h3>
+                                    <a href="#" class="reviews__link" aria-label="Открыть статью"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide arrow-card"
+                                    style="background-image: url(./img/reviews-5.webp);">
+                                    <h3 class="reviews__subtitle">Выравнивание фланцев конусной дробилки</h3>
+                                    <a href="#" class="reviews__link" aria-label="Открыть статью"></a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="reviews__slide arrow-card"
+                                    style="background-image: url(./img/reviews-6.webp);">
+                                    <h3 class="reviews__subtitle">Восстановление шабота парового пресса</h3>
+                                    <a href="#" class="reviews__link" aria-label="Открыть статью"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="callback">
+    <div class="container">
+        <div class="callback__block callback-form-ver-2">
+
+            <div class="callback__block-2">
+                <h2 class="h2-title callback__title">Нужна <span>помощь?</span></h2>
+                <span class="callback__text text-20-30">Оставьте заявку и наши инженеры помогут<br> разобраться
+                    в
+                    инструменте и оборудовании</span>
+                <form action="#" class="callback__form">
+                    <input type="text" class="callback__input" name="name" placeholder="Имя*">
+                    <div class="callback__flexbox">
+                        <input type="tel" class="callback__input" name="phone" placeholder="Телефон*">
+                        <input type="email" class="callback__input" name="email" placeholder="Email*">
+                    </div>
+                    <input type="text" class="callback__input" name="company" placeholder="Компания*">
+                    <button type="submit" class="callback__bwtn blue-btn" aria-label="Отправить форму">Заказать
+                        обратный звонок</button>
+                </form>
+                <div class="callback__flex-2">
+                    <div class="callback__checkbox checkbox">
+                        <label class="checkbox__label">
+                            <input type="checkbox" class="checkbox__input" name="policy" checked>
+                            <span class="checkbox__box"></span>
+                            <span class="callback__policy">Согласие на обработку <a href="#"
+                                    aria-label="Перейти на страницу">персональных
+                                    данных</a></span>
+                        </label>
+                    </div>
+                    <span class="callback__text-2">
+                        <span>*</span> — поля, обязательные для заполнения
+                    </span>
+                </div>
+            </div>
+            <img class="callback__img" src="./img/callback-img.webp" alt="Сотрудник" loading="lazy">
+            <img class="callback__img-2" src="./img/svg/callback-576.svg" alt="Сотрудник" loading="lazy">
+        </div>
+    </div>
+</section>
+        <section class="contacts">
+    <div class="container">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__map" id="map2">
+
+
+
+        </div>
+        <div class="contacts__flex">
+            <div class="contacts__block">
+                <span class="contacts__text ">г. Москва</span>
+                <span class="contacts__text-2">5-й Донской проезд, 17</span>
+                <a class="contacts__link" href="#" aria-label="Открыть яндекс карту">Показать на карте</a>
+            </div>
+            <div class="contacts__block">
+                <span class="contacts__text ">Телефон</span>
+                <a href="tel:+74956681358" class="contacts__text-2 contacts__text-2_link">+7 (495) 668-13-58</a>
+                <button class="contacts__btn contacts__link" aria-label="Открыть модальное окно"
+                    onclick="openModal()">Заказать
+                    звонок</button>
+            </div>
+            <div class="contacts__block">
+                <span class="contacts__text ">График работы</span>
+                <span class="contacts__text-2">08:15 - 18:30</span>
+                <span class="contacts__text ">c ПН по ПТ</span>
+            </div>
+            <div class="contacts__block">
+                <span class="contacts__text ">E-mail</span>
+                <a href="mailto:inbox@itmash.ru" class="contacts__text-2 contacts__text-2_color">inbox@itmash.ru</a>
+            </div>
+            <div class="contacts__block">
+                <span class="contacts__text ">Мы в соцсетях</span>
+                <div class="contacts__socials socials">
+
+                    <a href="#" class="socials__link" aria-label="Перейти в whatsapp">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_2049_7676)">
+                                <path
+                                    d="M18.3129 4.74728C15.393 0.220805 9.41359 -1.12037 4.78933 1.68772C0.276828 4.49581 -1.17611 10.6149 1.74374 15.1274L1.98124 15.4907L1.0033 19.151L4.66359 18.173L5.02683 18.4105C6.6055 19.2627 8.32389 19.7517 10.0283 19.7517C11.8584 19.7517 13.6886 19.2627 15.2673 18.2848C19.7798 15.351 21.1209 9.35757 18.3129 4.71933V4.74728ZM15.7562 14.1635C15.2673 14.8899 14.6526 15.3789 13.8004 15.5046C13.3114 15.5046 12.6967 15.7421 10.2658 14.7782C8.19815 13.8002 6.47977 12.2076 5.26433 10.3774C4.53786 9.52522 4.16065 8.42154 4.04889 7.31786C4.04889 6.33992 4.41212 5.48772 5.02683 4.87301C5.26433 4.63551 5.5158 4.50978 5.7533 4.50978H6.368C6.6055 4.50978 6.85698 4.50978 6.98271 4.99875C7.22021 5.61345 7.83492 7.08036 7.83492 7.2061C7.96065 7.33184 7.90477 8.26786 7.34595 8.79875C7.03859 9.14801 6.98271 9.16198 7.10845 9.41345C7.59742 10.1399 8.21212 10.8804 8.81286 11.4951C9.53933 12.1098 10.2798 12.5987 11.132 12.962C11.3695 13.0877 11.6209 13.0877 11.7467 12.8362C11.8724 12.5987 12.4732 11.984 12.7246 11.7326C12.9621 11.4951 13.0879 11.4951 13.3393 11.6068L15.2952 12.5848C15.5327 12.7105 15.7842 12.8223 15.9099 12.948C16.0357 13.3112 16.0357 13.8002 15.7842 14.1635H15.7562Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_2049_7676">
+                                    <rect width="20" height="20" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="#" class="socials__link" aria-label="Перейти в telegram">
+                        <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M19 0.602225L15.9946 16.2923C15.9946 16.2923 15.5741 17.3801 14.4189 16.8584L7.48458 11.3526L7.45242 11.3364C8.38909 10.4654 15.6524 3.70266 15.9698 3.39612C16.4613 2.92136 16.1562 2.63873 15.5856 2.99736L4.85679 10.053L0.717638 8.61077C0.717638 8.61077 0.0662573 8.37083 0.00359284 7.84911C-0.0598962 7.32653 0.739076 7.0439 0.739076 7.0439L17.6131 0.188948C17.6131 0.188948 19 -0.44207 19 0.602225Z"
+                                fill="white" />
+                        </svg>
+
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <div class="old">
+    <div class="container">
+
+        <div class="faq__flexbox">
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Режущий инструмент</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Мобильные станки</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Станочная и инструментальная оснастка</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Лазерные станки</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Металлорежущие станки</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Фаскосниматели. Фрезеры по металлу</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Специальный слесарный инструмент</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Пневмоинструмент и оборудование</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Электромонтажный инструмент и соединители</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Гидравлическое оборудование</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Слесарно-монтажный инструмент</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Вспомогательные инструмент и средства производства</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Кузнечно-прессовое оборудование</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Оборудование для обработки труб</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="faq__question acc-container">
+                <div class="start__acc acc faq__acc">
+
+
+                    <h3 class="h3-title faq__subtitle">Оборудование для маркирования</h3>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white" />
+                        <g clip-path="url(#clip0_2010_5111)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M39.9563 23.6404C40.2016 23.7063 40.4107 23.8668 40.5377 24.0868C40.6646 24.3067 40.6991 24.5681 40.6336 24.8135L37.3738 37.0242C37.3431 37.1477 37.2881 37.2639 37.212 37.3659C37.1359 37.4679 37.0402 37.5537 36.9306 37.6183C36.821 37.6829 36.6996 37.7251 36.5735 37.7423C36.4474 37.7595 36.3192 37.7515 36.1962 37.7186C36.0733 37.6857 35.9581 37.6287 35.8575 37.5508C35.7568 37.473 35.6727 37.3758 35.6099 37.2651C35.5472 37.1544 35.5072 37.0323 35.4921 36.9059C35.4771 36.7795 35.4874 36.6514 35.5224 36.5291L38.1852 26.5531L20.2755 36.9095C20.0555 37.0369 19.7939 37.0717 19.5483 37.0062C19.3027 36.9408 19.0932 36.7804 18.9658 36.5605C18.8384 36.3405 18.8036 36.079 18.8691 35.8334C18.9346 35.5878 19.0949 35.3782 19.3149 35.2508L37.2296 24.893L27.2536 22.2096C27.1301 22.1787 27.014 22.1236 26.9121 22.0474C26.8102 21.9712 26.7245 21.8755 26.6599 21.7658C26.5954 21.6561 26.5534 21.5347 26.5363 21.4086C26.5192 21.2825 26.5273 21.1542 26.5603 21.0313C26.5933 20.9084 26.6505 20.7933 26.7284 20.6927C26.8064 20.5921 26.9036 20.5081 27.0144 20.4455C27.1252 20.3828 27.2473 20.3429 27.3737 20.328C27.5001 20.3131 27.6282 20.3235 27.7505 20.3586L39.9563 23.6404Z"
+                                fill="#346C9A" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2010_5111">
+                                <rect width="29.6329" height="31.4953" fill="white"
+                                    transform="translate(45.4951 15.5) rotate(90)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <div class="faq__block">
+                            <div class="old__links">
+                                <a class="old__link" href="#" aria-label="Открыть">5-ти осевые мобильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки
+                                    фланцев</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные расточные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для обработки труб
+                                    (труборезы)</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные токарные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Орбитальные фрезерные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные ленточные, дисковые,
+                                    проволочные пильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные резьбонарезные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные наплавочные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Магнитные сверлильные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Специальные проекты</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для врезки в
+                                    трубопровод</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные шлифовальные станки</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Мобильные станки для снятия фаски</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Обработка мобильными станками</a>
+                                <a class="old__link" href="#" aria-label="Открыть">Аренда мобильных станков</a>
+                            </div>
+                            <div class="old__block">
+                                <span>Производители</span>
+                                <div class="old__links">
+                                    <a class="old__link" href="#" aria-label="Открыть">METROM (МЕТРОМ)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">MIRAGE MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">CHAMFO (ЧАМФО)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">БУЛАВА</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KRAIS</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">NKO MACHINES</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">VED (EUREKA)</a>
+                                    <a class="old__link" href="#" aria-label="Открыть">KOTEC</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__flex">
+            <a href="./index.html" class="footer__logo logo" aria-label="Перейти на главную">
+                <img class="logo__img" src="./img/svg/footer-logo.svg" alt="лого">
+            </a>
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="./index.html" aria-label="Перейти на страницу">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="./catalog.html" aria-label="Перейти на страницу">
+                            Каталоги
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="./production.html" aria-label="Перейти на страницу">
+                            ПРОДУКЦИЯ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="./about.html" aria-label="Перейти на страницу">
+                            О КОМПАНИИ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="./news.html" aria-label="Перейти на страницу">
+                            НОВОСТИ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="./brands.html" aria-label="Перейти на страницу">
+                            БРЕНДЫ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="./contacts.html" aria-label="Перейти на страницу">
+                            Контакты
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__flex-2">
+            <span class="footer__text">© Компания "ИНТЕРТУЛМАШ", 2026. Все права защищены.</span>
+            <a href="#" class="footer__text footer__link-2" aria-label="Открыть страницу">Политика
+                конфиденциальности</a>
+            <a href="#" class="footer__text footer__link-2" aria-label="Открыть страницу">Пользовательское
+                соглашение</a>
+            <button onclick="showOld()" class="footer__text footer__link-2 footer__link-2_ml"
+                aria-label="Открыть страницу">Старая
+                версия
+                сайта</button>
+        </div>
+    </div>
+</footer>
+    <dialog class="modal">
+    <div class="callback__block">
+        <button class="modal__close" onclick="closeModal()">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.800667 23.9576C0.085445 23.2344 0.085445 22.0619 0.800667 21.3387L20.8735 1.04243C21.5888 0.319243 22.7484 0.319243 23.4636 1.04243C24.1788 1.76561 24.1788 2.93812 23.4636 3.6613L3.39071 23.9576C2.67549 24.6808 1.51589 24.6808 0.800667 23.9576Z"
+                    fill="#9FB1BC" />
+                <path
+                    d="M0.536416 1.04239C1.25164 0.319204 2.41124 0.319204 3.12646 1.04239L23.1993 21.3387C23.9146 22.0619 23.9146 23.2344 23.1993 23.9576C22.4841 24.6808 21.3245 24.6808 20.6093 23.9576L0.536416 3.66127C-0.178806 2.93808 -0.178805 1.76557 0.536416 1.04239Z"
+                    fill="#9FB1BC" />
+            </svg>
+
+        </button>
+        <div class="callback__block-2">
+            <h2 class="h2-title callback__title">Оставить <span>заявку</span></h2>
+            <span class="callback__text text-20-30">Оставьте заявку и наши инженеры помогут разобраться
+                в
+                инструменте и оборудовании, а так же приобрести нужные позиции</span>
+            <form action="#" class="callback__form">
+                <input type="text" class="callback__input" name="name" placeholder="Имя*">
+                <input type="tel" class="callback__input" name="phone" placeholder="Телефон*">
+                <input type="email" class="callback__input" name="email" placeholder="Email*">
+                <input type="text" class="callback__input" name="company" placeholder="Компания*">
+                <button type="submit" class="callback__bwtn blue-btn" aria-label="Отправить форму">Оставить
+                    заявку</button>
+            </form>
+            <div class="callback__flex-2">
+                <div class="callback__checkbox checkbox">
+                    <label class="checkbox__label">
+                        <input type="checkbox" class="checkbox__input" name="policy" checked>
+                        <span class="checkbox__box"></span>
+                        <span class="callback__policy">Согласие на обработку <a href="#"
+                                aria-label="Перейти на страницу">персональных
+                                данных</a></span>
+                    </label>
+                </div>
+                <span class="callback__text-2">
+                    <span>*</span> — поля, обязательные для заполнения
+                </span>
+            </div>
+            <img class="modal__img" src="./img/svg/logo.svg" alt="Лого" loading="lazy">
+        </div>
+    </div>
+</dialog>
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=8a46f8eb-07d7-47c1-89d9-abcb48972898&lang=ru_RU"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script defer src="./js/map.js"></script>
+    <script defer src="./js/script.js"></script>
+</body>
+
+</html>
