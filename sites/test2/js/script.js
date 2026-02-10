@@ -72,6 +72,34 @@ if (objectSwiper) {
 
     });
 }
+
+let objectDetailSwiper = document.querySelector('.objects-detail__swiper');
+if (objectDetailSwiper) {
+    var swiper = new Swiper(".objects-detail__swiper", {
+        slidesPerView: 'auto',
+        breakpoints: {
+            320: {
+                slidesPerView: 'auto',
+                spaceBetween: 10,
+                allowTouchMove: true,
+            },
+            768: {
+                spaceBetween: 0,
+                allowTouchMove: false
+            },
+        }
+    });
+}
+
+let objectDetailSwiper2 = document.querySelector('.objects-detail__swiper-2');
+if (objectDetailSwiper2) {
+    var swiper2 = new Swiper(".objects-detail__swiper-2", {
+        spaceBetween: 10,
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
 /**
  * Swiper 11.2.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
