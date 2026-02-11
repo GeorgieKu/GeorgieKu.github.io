@@ -100,6 +100,34 @@ if (objectDetailSwiper2) {
         },
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleButtons = document.querySelectorAll('.acc .structure__btn');
+
+    toggleButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const accItem = btn.closest('.acc');
+            if (!accItem) return;
+
+            let content = accItem.nextElementSibling;
+            if (!content || !content.classList.contains('content')) {
+                content = accItem.querySelector('.content');
+            }
+
+            if (content) {
+                const wasOpen = content.classList.toggle('open');
+
+                if (wasOpen) {
+                    btn.textContent = 'Свернуть';
+                } else {
+                    btn.textContent = 'Развернуть';
+                }
+
+                btn.setAttribute('aria-expanded', wasOpen);
+            }
+        });
+    });
+});
 /**
  * Swiper 11.2.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
