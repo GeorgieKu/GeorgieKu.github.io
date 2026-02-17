@@ -18,28 +18,11 @@ document.addEventListener('click', function (e) {
     }
 });
 
-let asideSwiper = document.querySelector('.aside__swiper');
 
-if (asideSwiper) {
-    const swiper1 = new Swiper('.aside__swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: false,
-        spaceBetween: 10,
-        slidesPerView: 'auto',
-
-        navigation: {
-            nextEl: '.aside-swiper-next',
-            prevEl: '.aside-swiper-prev',
-        },
-
-    });
-}
-
-let heroSwiper = document.querySelector('.hero__swiper');
+let heroSwiper = document.querySelector('.hero__swiper-1');
 
 if (heroSwiper) {
-    const swiper2 = new Swiper('.hero__swiper', {
+    const swiper2 = new Swiper('.hero__swiper-1', {
         // Optional parameters
         direction: 'horizontal',
         loop: false,
@@ -47,87 +30,92 @@ if (heroSwiper) {
         slidesPerView: 1,
 
         navigation: {
-            nextEl: '.hero-swiper-next',
-            prevEl: '.hero-swiper-prev',
+            nextEl: '.hero__btn-next',
+            prevEl: '.hero__btn-prev',
         },
 
         pagination: {
-            el: '.hero__pagination',
+            el: '.hero__swiper-1-pagination',
             clickable: true,
         }
 
     });
 }
 
+let heroSwiper2 = document.querySelector('.hero__swiper-2');
 
-let objectSwiper = document.querySelector('.objects__swiper');
-
-if (objectSwiper) {
-    const swiper1 = new Swiper('.objects__swiper', {
-        // Optional parameters
+if (heroSwiper2) {
+    const swiper2 = new Swiper('.hero__swiper-2', {
         direction: 'horizontal',
         loop: false,
-        spaceBetween: 30,
-        slidesPerView: 'auto',
-
-    });
-}
-
-let objectDetailSwiper = document.querySelector('.objects-detail__swiper');
-if (objectDetailSwiper) {
-    var swiper = new Swiper(".objects-detail__swiper", {
-        slidesPerView: 'auto',
-        breakpoints: {
-            320: {
-                slidesPerView: 'auto',
-                spaceBetween: 10,
-                allowTouchMove: true,
-            },
-            768: {
-                spaceBetween: 0,
-                allowTouchMove: false
-            },
+        spaceBetween: 10,
+        slidesPerView: 1,
+        navigation: {
+            nextEl: '.hero__btn-next-2',
+            prevEl: '.hero__btn-prev-2',
+        },
+        pagination: {
+            el: '.hero__swiper-2-pagination',
+            clickable: true,
         }
     });
 }
 
-let objectDetailSwiper2 = document.querySelector('.objects-detail__swiper-2');
-if (objectDetailSwiper2) {
-    var swiper2 = new Swiper(".objects-detail__swiper-2", {
-        spaceBetween: 10,
-        thumbs: {
-            swiper: swiper,
-        },
-    });
+// Параллакс при скролле для hero-2
+function initHero2ScrollParallax() {
+    const parallaxBg = document.querySelectorAll('.hero-2-swiper__card-bg');
+    if (!parallaxBg.length) return;
+
+    const parallaxSpeed = 0.25;
+    let ticking = false;
+
+    function updateParallax() {
+        const viewportCenter = window.innerHeight / 2;
+        parallaxBg.forEach(bg => {
+            const card = bg.closest('.hero-2-swiper__card');
+            if (!card) return;
+            const rect = card.getBoundingClientRect();
+            const cardCenter = rect.top + rect.height / 2;
+            const offset = (viewportCenter - cardCenter) * parallaxSpeed;
+            bg.style.transform = `translate3d(0, ${offset}px, 0)`;
+        });
+        ticking = false;
+    }
+
+    function onScroll() {
+        if (!ticking) {
+            requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    updateParallax();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const toggleButtons = document.querySelectorAll('.acc .structure__btn');
+initHero2ScrollParallax();
 
-    toggleButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const accItem = btn.closest('.acc');
-            if (!accItem) return;
+let objectSwiper = document.querySelector('.objects__swiper');
 
-            let content = accItem.nextElementSibling;
-            if (!content || !content.classList.contains('content')) {
-                content = accItem.querySelector('.content');
+if (objectSwiper) {
+    const swiper3 = new Swiper('.objects__swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 50,
+        slidesPerView: 'auto',
+        breakpoints: {
+            320: {
+                spaceBetween: 20,
+            },
+            576: {
+                spaceBetween: 50,
             }
+        }
 
-            if (content) {
-                const wasOpen = content.classList.toggle('open');
-
-                if (wasOpen) {
-                    btn.textContent = 'Свернуть';
-                } else {
-                    btn.textContent = 'Развернуть';
-                }
-
-                btn.setAttribute('aria-expanded', wasOpen);
-            }
-        });
     });
-});
+}
 /**
  * Swiper 11.2.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions
