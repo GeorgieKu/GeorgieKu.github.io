@@ -141,21 +141,34 @@ var Swiper=function(){"use strict";function e(e){return null!==e&&"object"==type
         const header = document.querySelector('.header');
 
 
+        headerSearch.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+
         headerSearchBtn.addEventListener('click', function (e) {
+            e.preventDefault();
             if (header.classList.contains('active')) {
-                // добавить логику отправки формы
                 return;
             }
-
-            e.preventDefault();
             header.classList.add('active');
         });
 
+        let closeSearch = document.querySelector('.close-search');
         document.addEventListener('click', function (e) {
-            if (!headerSearch.contains(e.target) && !headerSearchBtn.contains(e.target)) {
+            const isInsideSearch = headerSearch.contains(e.target) || headerSearchBtn.contains(e.target);
+            const isCloseBtn = closeSearch && closeSearch.contains(e.target);
+            if (!isInsideSearch && !isCloseBtn) {
                 header.classList.remove('active');
             }
         });
+
+        if (closeSearch) {
+            closeSearch.addEventListener('click', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                header.classList.remove('active');
+            });
+        }
         headerSearch.addEventListener('click', function (e) {
             e.stopPropagation();
         })
