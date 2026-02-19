@@ -89,7 +89,9 @@ function initHero2ScrollParallax() {
         }
     }
 
-    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('scroll', onScroll, {
+        passive: true
+    });
     window.addEventListener('resize', onScroll);
     updateParallax();
 }
@@ -115,6 +117,62 @@ if (objectSwiper) {
         }
 
     });
+}
+
+function openModal() {
+    let modal = document.querySelector('.modal');
+
+    modal.showModal()
+}
+
+function closeModal() {
+    modal.close()
+}
+
+let modal = document.querySelector('.modal');
+let closeModalBtn = document.querySelector('.modal__close');
+if (modal) {
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', function () {
+            modal.close();
+        });
+    }
+    modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+            modal.close();
+        }
+    });
+}
+
+// Прикрепление файла в модалке резюме (work)
+let modalFileBtn = document.querySelector('.modal__file-btn');
+let modalFileInput = document.querySelector('.modal__file-input');
+let modalFileName = document.querySelector('.modal__file-name');
+let modalFileNameText = document.querySelector('.modal__file-name-text');
+let modalFileRemove = document.querySelector('.modal__file-remove');
+
+if (modalFileBtn && modalFileInput && modalFileName) {
+    modalFileBtn.addEventListener('click', function () {
+        modalFileInput.click();
+    });
+
+    modalFileInput.addEventListener('change', function () {
+        const file = this.files[0];
+        if (file) {
+            modalFileNameText.textContent = file.name;
+            modalFileBtn.hidden = true;
+            modalFileName.hidden = false;
+        }
+    });
+
+    if (modalFileRemove) {
+        modalFileRemove.addEventListener('click', function () {
+            modalFileInput.value = '';
+            modalFileNameText.textContent = '';
+            modalFileName.hidden = true;
+            modalFileBtn.hidden = false;
+        });
+    }
 }
 /**
  * Swiper 11.2.6
