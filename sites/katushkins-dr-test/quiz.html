@@ -484,6 +484,16 @@
     .muted {
       color: var(--text-muted);
     }
+
+    .offline-notice {
+      margin-top: 8px;
+      padding: 6px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+      background: rgba(248, 250, 252, 0.95);
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+    }
   </style>
 </head>
 <body>
@@ -564,6 +574,9 @@
       </div>
 
       <div id="statusLine" class="status-line"></div>
+      <div id="offlineNotice" class="offline-notice" style="display: none;">
+        Синхронизация между устройствами недоступна. Квиз работает на этом устройстве.
+      </div>
 
       <div class="reveal-box" id="revealBox">
         <div class="reveal-title" id="revealTitle">Правильный ответ</div>
@@ -793,6 +806,7 @@
       ];
 
       const NAME_STORAGE_KEY = "birthday-quiz-player-name-v1";
+      const STATE_STORAGE_KEY = "birthday-quiz-state-v1";
 
       const playerNameInput = document.getElementById("playerNameInput");
       const quizQuestionTitle = document.getElementById("quizQuestionTitle");
@@ -821,13 +835,36 @@
       }
 
       let currentPlayerName = null;
+      var serverAvailable = true;
+      var pollIntervalStarted = false;
 
-      // Состояние квиза приходит с сервера
+      // Состояние квиза (с сервера или из localStorage при работе без сервера)
       let appState = {
         currentIndex: 0,
         answersByQuestion: {}
       };
       let selectedOptionKeys = [];
+
+      function loadStateFromLocalStorage() {
+        try {
+          var raw = localStorage.getItem(STATE_STORAGE_KEY);
+          if (!raw) return { currentIndex: 0, answersByQuestion: {} };
+          var parsed = JSON.parse(raw);
+          if (!parsed || typeof parsed !== "object") return { currentIndex: 0, answersByQuestion: {} };
+          var idx = typeof parsed.currentIndex === "number" && parsed.currentIndex >= 0 && parsed.currentIndex < QUIZ_DATA.length
+            ? parsed.currentIndex : 0;
+          var byQ = parsed.answersByQuestion && typeof parsed.answersByQuestion === "object" ? parsed.answersByQuestion : {};
+          return { currentIndex: idx, answersByQuestion: byQ };
+        } catch (e) {
+          return { currentIndex: 0, answersByQuestion: {} };
+        }
+      }
+
+      function saveStateToLocalStorage(state) {
+        try {
+          localStorage.setItem(STATE_STORAGE_KEY, JSON.stringify(state || appState));
+        } catch (e) {}
+      }
 
       function setStatus(message, type) {
         statusLine.textContent = message || "";
@@ -858,32 +895,48 @@
         appState.answersByQuestion[key] = answers;
       }
 
-      // --- Работа с сервером ---
+      // --- Работа с сервером / без сервера (статический хостинг) ---
       async function fetchStateFromServer(forceFullRender) {
+        if (!serverAvailable) {
+          if (forceFullRender) {
+            appState = loadStateFromLocalStorage();
+            renderQuestion();
+          }
+          return;
+        }
         try {
           const res = await fetch("/api/state");
           if (!res.ok) {
+            serverAvailable = false;
+            var notice = document.getElementById("offlineNotice");
+            if (notice) notice.style.display = "block";
             if (forceFullRender) {
+              appState = loadStateFromLocalStorage();
               renderQuestion();
             }
             return;
           }
           const newState = await res.json();
-
+          if (!pollIntervalStarted) {
+            pollIntervalStarted = true;
+            setInterval(function () { fetchStateFromServer(false); }, 2500);
+          }
           const prevIndex = appState.currentIndex;
           appState = newState || appState;
-
           if (forceFullRender || appState.currentIndex !== prevIndex) {
             renderQuestion();
           } else {
             renderParticipantsChips();
             renderRevealBox();
             updateButtonsState();
+            renderResultsSection();
           }
         } catch (e) {
-          // если сервер недоступен (открыли файл напрямую или не запущен сервер) —
-          // просто показываем локальный вариант без синхронизации
+          serverAvailable = false;
+          var notice = document.getElementById("offlineNotice");
+          if (notice) notice.style.display = "block";
           if (forceFullRender) {
+            appState = loadStateFromLocalStorage();
             renderQuestion();
           }
         }
@@ -1276,7 +1329,11 @@
         answersMap[normalized] = valueToSend;
         setAnswersForCurrentQuestion(answersMap);
 
-        await sendAnswerToServer(normalized, appState.currentIndex, valueToSend);
+        if (serverAvailable) {
+          await sendAnswerToServer(normalized, appState.currentIndex, valueToSend);
+        } else {
+          saveStateToLocalStorage(appState);
+        }
 
         const displayName =
           rawName.trim() ||
@@ -1299,16 +1356,30 @@
           setStatus("Это был последний вопрос квиза.", "ok");
           return;
         }
-
-        await goToNextQuestionOnServer();
+        if (serverAvailable) {
+          await goToNextQuestionOnServer();
+        } else {
+          appState.currentIndex += 1;
+          saveStateToLocalStorage(appState);
+          selectedOptionKeys = [];
+          setStatus("Переходим к следующему вопросу.", "ok");
+          renderQuestion();
+        }
       }
 
       async function handleResetQuiz() {
         if (!confirm("Сбросить все ответы и начать квиз сначала?")) {
           return;
         }
-
-        await resetQuizOnServer();
+        if (serverAvailable) {
+          await resetQuizOnServer();
+        } else {
+          appState = { currentIndex: 0, answersByQuestion: {} };
+          saveStateToLocalStorage(appState);
+          selectedOptionKeys = [];
+          setStatus("Квиз сброшен. Можно проходить заново.", "ok");
+          renderQuestion();
+        }
         playerNameInput.value = "";
       }
 
@@ -1353,11 +1424,8 @@
         // ignore
       }
 
-      // Первый запрос состояния и периодический опрос сервера
+      // Первый запрос: при успехе дальше опрос по таймеру; при ошибке — режим без сервера (localStorage)
       fetchStateFromServer(true);
-      setInterval(function () {
-        fetchStateFromServer(false);
-      }, 2500);
     })();
   </script>
 </body>
