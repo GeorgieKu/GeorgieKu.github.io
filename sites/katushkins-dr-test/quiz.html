@@ -807,6 +807,8 @@
 
       const NAME_STORAGE_KEY = "birthday-quiz-player-name-v1";
       const STATE_STORAGE_KEY = "birthday-quiz-state-v1";
+      // Если фронт и сервер на разных доменах — укажи URL сервера: window.QUIZ_API_BASE = "https://твой-сервер.railway.app";
+      var API_BASE = (typeof window !== "undefined" && window.QUIZ_API_BASE) ? String(window.QUIZ_API_BASE).replace(/\/$/, "") : "";
 
       const playerNameInput = document.getElementById("playerNameInput");
       const quizQuestionTitle = document.getElementById("quizQuestionTitle");
@@ -905,7 +907,7 @@
           return;
         }
         try {
-          const res = await fetch("/api/state");
+          const res = await fetch(API_BASE + "/api/state");
           if (!res.ok) {
             serverAvailable = false;
             var notice = document.getElementById("offlineNotice");
@@ -944,7 +946,7 @@
 
       async function sendAnswerToServer(name, questionIndex, optionKey) {
         try {
-          const res = await fetch("/api/answer", {
+          const res = await fetch(API_BASE + "/api/answer", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
@@ -967,7 +969,7 @@
 
       async function goToNextQuestionOnServer() {
         try {
-          const res = await fetch("/api/next-question", {
+          const res = await fetch(API_BASE + "/api/next-question", {
             method: "POST"
           });
           if (!res.ok) {
@@ -989,7 +991,7 @@
 
       async function resetQuizOnServer() {
         try {
-          const res = await fetch("/api/reset", {
+          const res = await fetch(API_BASE + "/api/reset", {
             method: "POST"
           });
           if (!res.ok) return;
