@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Тайные миссии — День рождения</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg-gradient: radial-gradient(circle at top left, #ffb6c1 0, #ffecd2 35%, #fcb69f 60%, #a1c4fd 100%);
+      --card-bg: rgba(255, 255, 255, 0.92);
+      --accent: #ff6f91;
+      --accent-dark: #e05576;
+      --accent-soft: rgba(255, 111, 145, 0.16);
+      --text-main: #222222;
+      --text-muted: #666666;
+      --border-soft: rgba(0, 0, 0, 0.06);
+      --radius-lg: 18px;
+      --radius-full: 999px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.22);
+      --transition-fast: 0.18s ease-out;
+      --transition-med: 0.25s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background-image: var(--bg-gradient);
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .app-shell {
+      width: 100%;
+      max-width: 980px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.9));
+      border-radius: 28px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(18px);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+      gap: 18px;
+    }
+
+    @media (max-width: 820px) {
+      .app-shell {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 18px;
+      }
+    }
+
+    .app-left {
+      padding: 16px 16px 12px;
+      border-radius: 22px;
+      background: radial-gradient(circle at top left, rgba(255, 111, 145, 0.16), rgba(161, 196, 253, 0.08));
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .app-left::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 255, 255, 0.9) 0, transparent 60%),
+        radial-gradient(circle at 100% 10%, rgba(255, 255, 255, 0.4) 0, transparent 65%),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
+    .app-left-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 111, 145, 0.26);
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #11c96f;
+      box-shadow: 0 0 0 6px rgba(17, 201, 111, 0.35);
+    }
+
+    .title {
+      margin: 16px 0 10px;
+      font-size: 28px;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+    }
+
+    .title span {
+      background: linear-gradient(135deg, #ff6f91, #ff9a9e);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      margin: 0 0 10px;
+      font-size: 14px;
+      line-height: 1.4;
+      color: var(--text-muted);
+    }
+
+    .players-badge {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border-soft);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .players-badge-title {
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .players-list {
+      font-size: 13px;
+    }
+
+    .rules-card {
+      margin-top: 14px;
+      padding: 10px 12px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      font-size: 12px;
+      line-height: 1.4;
+      color: var(--text-muted);
+    }
+
+    .rules-card strong {
+      color: var(--text-main);
+    }
+
+    .app-right {
+      padding: 16px;
+      border-radius: 22px;
+      background: var(--card-bg);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.14);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 13px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .hint-names {
+      font-size: 11px;
+      color: var(--text-muted);
+      opacity: 0.9;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 9px 12px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(255, 255, 255, 0.96);
+      font-size: 14px;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+      outline: none;
+    }
+
+    input[type="text"]::placeholder {
+      color: rgba(148, 163, 184, 0.85);
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(255, 111, 145, 0.4), 0 10px 24px rgba(248, 113, 131, 0.25);
+      background: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-top: 2px;
+    }
+
+    button {
+      appearance: none;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      padding: 9px 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast), color var(--transition-fast);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff6f91, #ff9a9e);
+      color: #ffffff;
+      box-shadow: 0 10px 30px rgba(248, 113, 131, 0.55);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 38px rgba(248, 113, 131, 0.68);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: 0 7px 20px rgba(248, 113, 131, 0.55);
+    }
+
+    .btn-ghost {
+      padding: 6px 12px;
+      font-size: 12px;
+      border-radius: var(--radius-full);
+      background: rgba(248, 250, 252, 0.95);
+      color: var(--text-muted);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      box-shadow: none;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(241, 245, 249, 0.98);
+      color: var(--text-main);
+    }
+
+    .status-line {
+      min-height: 18px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .status-error {
+      color: #b91c1c;
+    }
+
+    .status-ok {
+      color: #166534;
+    }
+
+    .role-card {
+      margin-top: 2px;
+      padding: 12px 12px 10px;
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      background: linear-gradient(145deg, #ffffff, #f9fafb);
+      max-height: 360px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .role-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .role-title {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .role-tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-weight: 600;
+    }
+
+    .role-body {
+      margin-top: 4px;
+      padding-top: 4px;
+      border-top: 1px dashed rgba(203, 213, 225, 0.9);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(148, 163, 184, 0.9) transparent;
+    }
+
+    .role-body::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .role-body::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .role-body::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.9);
+      border-radius: 999px;
+    }
+
+    .role-body p {
+      margin: 0 0 8px;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #111827;
+    }
+
+    .role-body ul {
+      margin: 0 0 8px 18px;
+      padding: 0;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #111827;
+    }
+
+    .role-body li {
+      margin-bottom: 4px;
+    }
+
+    .role-body .section-title {
+      font-weight: 600;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+
+    .role-placeholder {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .visibility-note {
+      margin-top: 6px;
+      font-size: 11px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .dot-secret {
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #0f172a;
+      box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.32);
+      flex-shrink: 0;
+    }
+
+    .role-hidden {
+      filter: blur(10px);
+      pointer-events: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-left">
+      <div class="app-left-inner">
+        <div class="pill">
+          <span class="pill-dot"></span>
+          <span>Тайные миссии · Только сегодня</span>
+        </div>
+        <h1 class="title">
+          Вечер <span>тайных ролей</span>
+        </h1>
+        <p class="subtitle">
+          Введите своё имя, получите секретную роль и играйте всю вечеринку так, чтобы никто не догадался.
+        </p>
+        <div class="players-badge">
+          <div class="players-badge-title">Участники сегодня:</div>
+          <div class="players-list">Катя · Гера · Алиса · Миша · Рита · Нармин · Юля · Саша · Даша</div>
+        </div>
+        <div class="rules-card">
+          <p><strong>Правила игры:</strong></p>
+          <ul>
+            <li>Каждый получает только <strong>одну</strong> роль на вечер.</li>
+            <li>Роли <strong>не повторяются</strong> между участниками.</li>
+            <li>Свою роль <strong>никому не показывать</strong> и не озвучивать до конца вечера.</li>
+            <li>Играть мягко и ненавязчиво — главное, чтобы всем было комфортно и весело.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-right">
+      <div class="form-row">
+        <label for="nameInput">
+          Введите своё имя
+          <span class="hint-names">из списка: Катя, Гера, Алиса, Миша, Рита, Нармин, Юля, Саша, Даша</span>
+        </label>
+        <input
+          id="nameInput"
+          type="text"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="Например: Алиса"
+        />
+        <div class="btn-row">
+          <button class="btn-primary" id="btnGetRole">
+            Получить мою тайную роль
+          </button>
+          <button class="btn-ghost" id="btnToggleBlur" type="button">
+            Размыть / показать текст
+          </button>
+        </div>
+        <div id="statusLine" class="status-line"></div>
+      </div>
+
+      <div class="role-card" id="roleCard">
+        <div class="role-header">
+          <div class="role-title">
+            <span id="roleIcon">🎭</span>
+            <span id="roleTitle">Секретная роль ещё не выбрана</span>
+          </div>
+          <span class="role-tag" id="roleTag">Только для твоих глаз</span>
+        </div>
+        <div class="role-body" id="roleBody">
+          <p class="role-placeholder">
+            Поднеси экран к себе, введи своё имя и нажми «Получить мою тайную роль». Не показывай текст другим — это твоя личная миссия на вечер.
+          </p>
+        </div>
+      </div>
+      <div class="visibility-note">
+        <span class="dot-secret"></span>
+        <span>Если кто-то подсматривает, нажми «Размыть текст», чтобы никто не успел прочитать твою роль.</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const allowedNames = [
+        "катя",
+        "гера",
+        "алиса",
+        "миша",
+        "рита",
+        "нармин",
+        "юля",
+        "саша",
+        "даша"
+      ];
+
+      const roles = [
+        {
+          id: 1,
+          icon: "🎭",
+          title: "Оратор странных фактов",
+          shortTag: "Говорит «научные» глупости",
+          html: `
+            <p><strong>Твоя миссия:</strong> время от времени уверенно сообщать «научные» факты, которые звучат правдоподобно, но абсолютно бесполезны. Для тебя это серьёзные знания, на которых держится вселенная.</p>
+
+            <p class="section-title">Как себя вести</p>
+            <ul>
+              <li>Говори спокойно и уверенно, будто цитируешь серьёзное исследование.</li>
+              <li>Не смейся после фразы — ты абсолютно серьёзен.</li>
+              <li>Если спрашивают источник, отвечай расплывчато: «Недавнее исследование», «Это давно известно».</li>
+              <li>Иногда чуть кивай, будто подтверждаешь самому себе важность сказанного.</li>
+            </ul>
+
+            <p class="section-title">Когда особенно играть роль</p>
+            <ul>
+              <li>В разговоре возникает пауза.</li>
+              <li>Кто-то ест или пьёт.</li>
+              <li>Обсуждают погоду, настроение, усталость.</li>
+              <li>Кто-то говорит «кстати», «интересно», «почему».</li>
+            </ul>
+
+            <p class="section-title">Мини‑задания на вечер</p>
+            <ul>
+              <li>Сообщи минимум 5 странных «фактов».</li>
+              <li>Один раз свяжи факт с конкретным гостем («у людей в синем чаще…»).</li>
+              <li>Один раз начни фразу словами: «Учёные давно заметили…».</li>
+              <li>Один раз сделай из факта жизненный совет.</li>
+            </ul>
+
+            <p class="section-title">Примеры странных фактов</p>
+            <ul>
+              <li>«Учёные доказали, что люди моргают синхронно, когда им наливают напиток».</li>
+              <li>«Запах праздника повышает точность выбора закусок на 12%».</li>
+              <li>«Мозг быстрее принимает решения, если держать что-то в правой руке».</li>
+              <li>«Лёгкое покачивание ногой улучшает усвоение десерта».</li>
+              <li>«Люди запоминают разговор лучше, если рядом стоит тарелка».</li>
+              <li>«Смех на кухне усиливает вкус еды».</li>
+              <li>«Чем круглее стол, тем длиннее разговоры».</li>
+              <li>«Организм легче соглашается на торт после 19:00».</li>
+              <li>«Если посмотреть на еду 3 секунды, она кажется вкуснее».</li>
+            </ul>
+
+            <p class="section-title">Ещё варианты</p>
+            <ul>
+              <li>«Люди на 27% харизматичнее, когда держат в руке что-то бесполезное».</li>
+              <li>«Организм путает аплодисменты с лёгким массажем ауры».</li>
+              <li>«Пельмени повышают уровень доверия к людям с одинаковыми носками».</li>
+              <li>«Если кивнуть еде перед тем как попробовать, она раскрывается быстрее».</li>
+              <li>«Стаканы с напитком испаряют сомнения примерно за 4 минуты».</li>
+              <li>«Если сделать серьёзное лицо во время перекуса, калории теряются от неловкости».</li>
+              <li>«Чем дольше смотришь на торт, тем сильнее торт смотрит на тебя».</li>
+              <li>«Мозг автоматически уважает людей, которые знают, где лежат вилки».</li>
+            </ul>
+
+            <p><strong>Главное правило:</strong> говори так, будто мир держится на этих знаниях.</p>
+          `
+        },
+        {
+          id: 2,
+          icon: "🎭",
+          title: "Тайный ведущий кулинарного шоу",
+          shortTag: "Гастрошоу в голове",
+          html: `
+            <p><strong>Твоя миссия:</strong> вести себя так, будто весь вечер — это выпуск гастрономического шоу, а все вокруг участвуют в приготовлении изысканного блюда.</p>
+
+            <p class="section-title">Как себя вести</p>
+            <ul>
+              <li>Комментируй любые действия с едой и напитками как профессиональный шеф или ведущий.</li>
+              <li>Иногда как будто обращайся к воображаемой камере.</li>
+              <li>Пробуй еду с видом эксперта и делай короткие выводы.</li>
+              <li>Давай «кулинарные советы», даже если момент странный.</li>
+              <li>Иногда оценивай действия гостей как судья шоу.</li>
+            </ul>
+
+            <p class="section-title">Когда особенно играть роль</p>
+            <ul>
+              <li>Кто-то ест, пьёт, режет, передаёт еду.</li>
+              <li>Появляется новое блюдо или напиток.</li>
+              <li>Кто-то сомневается, что выбрать.</li>
+              <li>Общий разговор за столом.</li>
+            </ul>
+
+            <p class="section-title">Фразы‑подсказки</p>
+            <ul>
+              <li>«Обратите внимание на текстуру…»</li>
+              <li>«Очень смелое решение».</li>
+              <li>«Главное — не торопиться».</li>
+              <li>«Это интересная интерпретация классики».</li>
+              <li>«И сейчас мы узнаем… удалось ли».</li>
+              <li>«Финальный штрих — и можно подавать».</li>
+            </ul>
+
+            <p class="section-title">Мини‑задания на вечер</p>
+            <ul>
+              <li>Проведи хотя бы 3 «дегустации» с комментариями.</li>
+              <li>Объяви 2 воображаемые рубрики шоу.</li>
+              <li>Похвали минимум 3 «участников» за их кулинарные решения.</li>
+              <li>Один раз сделай маленький торжественный «финал блюда».</li>
+            </ul>
+
+            <p><strong>Главное правило:</strong> всё серьёзно, но тихо и ненавязчиво — будто камеры действительно где‑то рядом.</p>
+          `
+        },
+        {
+          id: 3,
+          icon: "🎭",
+          title: "Человек с невидимым питомцем",
+          shortTag: "У тебя есть тот, кого никто не видит",
+          html: `
+            <p><strong>Твоя миссия:</strong> весь вечер вести себя так, будто у тебя есть невидимый питомец. Ты его видишь, понимаешь и заботишься о нём — для тебя он абсолютно реален.</p>
+
+            <p class="section-title">Как себя вести</p>
+            <ul>
+              <li>Иногда гладь его или будто держи на руках.</li>
+              <li>Следи, чтобы на него «не наступили» — посматривай под ноги других.</li>
+              <li>Реагируй на его поведение, будто он активный и своенравный.</li>
+              <li>Говори с ним тихо и естественно, как с настоящим питомцем.</li>
+            </ul>
+
+            <p class="section-title">Мини‑задания на вечер</p>
+            <ul>
+              <li>Периодически проверяй «миску с водой»: смотри на пол, вздыхай: «Ну опять разлил…», можешь попросить салфетку.</li>
+              <li>Командуй ему шёпотом «Сидеть», «Фу», «Ко мне» — особенно эффектно во время чужого разговора.</li>
+              <li>Иногда извиняйся перед гостями: «Прости, он обычно не прыгает на людей…», «Не бойся, он просто обнюхивает тебя».</li>
+              <li>Иногда «угощай» его со стола: отламывай маленький кусочек и клади вниз, следя за его «поведением».</li>
+              <li>Один‑два раза «потеряй» его и ищи: «Вы его не видели? Он маленький такой…», заглядывай под стол или за диван.</li>
+              <li>Реагируй на его «настроение»: «Он тебя полюбил», «Ему тут не нравится музыка…».</li>
+            </ul>
+
+            <p class="section-title">Фразы‑помощники</p>
+            <ul>
+              <li>«Тихо‑тихо, всё хорошо».</li>
+              <li>«Нет, туда нельзя».</li>
+              <li>«Подожди, он сейчас успокоится».</li>
+              <li>«Он просто волнуется».</li>
+            </ul>
+
+            <p><strong>Главное правило:</strong> ты единственный, кто его видит — и в этом нет ничего странного.</p>
+          `
+        },
+        {
+          id: 4,
+          icon: "🎭",
+          title: "Тайный ведущий комплиментов",
+          shortTag: "Раздаёт тёплые комплименты",
+          html: `
+            <p><strong>Твоя миссия:</strong> незаметно сделать минимум 5 искренних комплиментов разным людям за вечер. Комплименты должны звучать естественно, будто это просто спонтанные наблюдения.</p>
+
+            <p class="section-title">Как себя вести</p>
+            <ul>
+              <li>Говори спокойно и уверенно, как будто делишься очевидным фактом.</li>
+              <li>Встраивай комплимент в любой разговор или говори его мимоходом.</li>
+              <li>Не подчёркивай, что это «миссия» — ты просто очень наблюдательный человек.</li>
+              <li>После комплимента веди себя обычно, без пафоса.</li>
+            </ul>
+
+            <p class="section-title">Когда особенно уместно</p>
+            <ul>
+              <li>Кто-то что-то рассказывает или объясняет.</li>
+              <li>Возникает пауза в разговоре.</li>
+              <li>Человек что-то делает: наливает, режет, выбирает, шутит.</li>
+              <li>Встреча взглядом.</li>
+            </ul>
+
+            <p class="section-title">Мини‑задания на вечер</p>
+            <ul>
+              <li>Сделай минимум 5 комплиментов разным людям.</li>
+              <li>Один комплимент скажи как бы «между делом», проходя мимо.</li>
+              <li>Один комплимент свяжи с атмосферой вечера.</li>
+              <li>Один комплимент дай в ответ на обычное действие (передача тарелки, выбор напитка и т.п.).</li>
+            </ul>
+
+            <p class="section-title">Фразы‑подсказки</p>
+            <ul>
+              <li>«Ты выглядишь так, будто умеешь договариваться с лифтом, чтобы он приезжал быстрее».</li>
+              <li>«В твоём присутствии даже салат ощущает себя полноценным блюдом».</li>
+              <li>«У тебя настолько правильная аура, что Wi‑Fi рядом с тобой ловит увереннее».</li>
+              <li>«Ты из тех людей, рядом с которыми печенье добровольно становится вкуснее».</li>
+              <li>«Есть ощущение, что если дать тебе карту, ты найдёшь сокровище даже в супермаркете».</li>
+              <li>«С тобой рядом даже неловкие паузы выглядят как продуманный художественный приём».</li>
+              <li>«У тебя взгляд человека, который может победить в споре с инструкцией».</li>
+              <li>«Ты излучаешь спокойствие уровня “этот человек знает, где лежат запасные батарейки”».</li>
+            </ul>
+
+            <p><strong>Главное правило:</strong> комплименты звучат искренне и по‑доброму — будто ты просто замечаешь хорошее.</p>
+          `
+        },
+        {
+          id: 5,
+          icon: "🎭",
+          title: "Человек‑эхо",
+          shortTag: "Тихо повторяет важные слова",
+          html: `
+            <p><strong>Твоя миссия:</strong> иногда (не каждый раз!) повторять последнее слово собеседника в разговоре — тихо, задумчиво или так, будто ты осмысляешь услышанное.</p>
+
+            <p class="section-title">Как себя вести</p>
+            <ul>
+              <li>Повторяй слово спокойно и естественно, без улыбки и объяснений.</li>
+              <li>Делай это изредка, чтобы не вызывать подозрений.</li>
+              <li>Можешь слегка менять интонацию: удивление, согласие, задумчивость.</li>
+              <li>Сразу после повтора продолжай разговор как обычно.</li>
+            </ul>
+
+            <p class="section-title">Когда особенно уместно</p>
+            <ul>
+              <li>Кто-то эмоционально заканчивает фразу.</li>
+              <li>В разговоре возникает пауза.</li>
+              <li>Слово звучит необычно или важно.</li>
+              <li>Тебе задали вопрос — повтори ключевое слово перед ответом.</li>
+            </ul>
+
+            <p class="section-title">Мини‑задания на вечер</p>
+            <ul>
+              <li>Повтори минимум 7 слов за вечер.</li>
+              <li>Один раз повтори слово шёпотом.</li>
+              <li>Один раз повтори слово с серьёзным кивком.</li>
+              <li>Один раз повтори слово и сразу задай уточняющий вопрос.</li>
+            </ul>
+
+            <p class="section-title">Примеры</p>
+            <ul>
+              <li>— «Я принесу торт позже.» — «Позже…»</li>
+              <li>— «Музыка сегодня отличная.» — «Отличная».</li>
+              <li>— «Нам нужен план.» — «План…»</li>
+            </ul>
+
+            <p><strong>Главное правило:</strong> ты не пародируешь — ты как будто резонируешь с важными словами.</p>
+          `
+        },
+        {
+          id: 6,
+          icon: "🎭",
+          title: "Человек, который всё рекламирует",
+          shortTag: "Из всего делает люксовый бренд",
+          html: `
+            <p><strong>Твоя миссия:</strong> случайные вещи вокруг тебя — это люксовые товары. Ты презентуешь их людям так, будто продаёшь премиальный продукт.</p>
+
+            <p class="section-title">Как себя вести</p>
+            <ul>
+              <li>Говори уверенно и вдохновлённо, как консультант элитного бутика.</li>
+              <li>Используй слова: «коллекция», «эксклюзив», «концепция», «ограниченный выпуск».</li>
+              <li>Рекламируй самые обычные предметы: салфетки, стулья, стаканы, выключатель и т.п.</li>
+              <li>Делись этим ненавязчиво, будто просто рассказываешь об открытии.</li>
+            </ul>
+
+            <p class="section-title">Когда особенно уместно</p>
+            <ul>
+              <li>Человек берёт любой предмет в руки.</li>
+              <li>Возникает пауза в разговоре.</li>
+              <li>Кто-то спрашивает: «Где это взять?».</li>
+              <li>Ты просто стоишь рядом с каким‑то предметом.</li>
+            </ul>
+
+            <p class="section-title">Мини‑задания на вечер</p>
+            <ul>
+              <li>«Продай» минимум 5 разных предметов.</li>
+              <li>Один раз предложи «ограниченную серию».</li>
+              <li>Один раз подчеркни «уникальную технологию».</li>
+              <li>Один раз похвали «вкус владельца».</li>
+            </ul>
+
+            <p class="section-title">Примеры рекламных реплик</p>
+            <ul>
+              <li>«Эта салфетка — итальянский минимализм в чистом виде».</li>
+              <li>«Обратите внимание на форму этого стакана — баланс эстетики и уверенности».</li>
+              <li>«Этот стул — про комфорт, который не нуждается в объяснениях».</li>
+              <li>«Это не просто тарелка, это концепция подачи».</li>
+              <li>«Очень редкий экземпляр, почти невозможно встретить в обычных домах».</li>
+              <li>«Это выбор людей, которые ценят детали».</li>
+            </ul>
+
+            <p><strong>Главное правило:</strong> для тебя здесь нет обычных вещей — только премиальные решения.</p>
+          `
+        },
+        {
+          id: 7,
+          icon: "🎭",
+          title: "Суперважный человек",
+          shortTag: "Живёт в атмосфере секретности",
+          html: `
+            <p><strong>Твоя миссия:</strong> иногда делать вид, что получаешь сверхсекретные сообщения из надёжных источников. Веди себя так, будто от тебя зависят очень серьёзные решения.</p>
+
+            <p class="section-title">Как себя вести</p>
+            <ul>
+              <li>Реагируй на «сообщения» сдержанно и сосредоточенно.</li>
+              <li>Иногда читай что‑то в телефоне, даже если он пустой.</li>
+              <li>Говори коротко, намёками, без объяснений.</li>
+              <li>После «сообщения» возвращайся к обычному разговору.</li>
+            </ul>
+
+            <p class="section-title">Примеры действий на вечер</p>
+            <ul>
+              <li><strong>Срочное уведомление:</strong> вдруг замирай, смотри на телефон и тихо: «Понял. Принято».</li>
+              <li><strong>Короткий секретный ответ:</strong> наберёшь пару слов и отправь: «Действуем по плану Б».</li>
+              <li><strong>Проверка обстановки:</strong> оглянись, понизь голос: «Здесь безопасно».</li>
+              <li><strong>Смена настроения:</strong> после «сообщения» стань чуть серьёзнее или, наоборот, заметно выдохни с облегчением.</li>
+              <li><strong>Загадочное уточнение:</strong> спроси: «Сколько сейчас времени?» — и кивни, будто это важно.</li>
+              <li><strong>Фраза “из источников”:</strong> «Информация подтверждена. Из надёжных источников».</li>
+              <li><strong>Мини‑пауза для анализа:</strong> на секунду прикрой глаза, как будто принимаешь решение, затем коротко кивни.</li>
+              <li><strong>Секретное завершение темы:</strong> в подходящий момент тихо: «Пока без комментариев».</li>
+            </ul>
+
+            <p class="section-title">Фразы‑помощники</p>
+            <ul>
+              <li>«Ситуация под контролем».</li>
+              <li>«Подробности позже».</li>
+              <li>«Я вас понял».</li>
+              <li>«Работаем».</li>
+            </ul>
+
+            <p><strong>Главное правило:</strong> никакой драмы — только спокойная уверенность человека, у которого всё под контролем.</p>
+          `
+        },
+        {
+          id: 8,
+          icon: "🎭",
+          title: "Персонаж из параллельной реальности",
+          shortTag: "Вежливый гость из «другого мира»",
+          html: `
+            <p><strong>Твоя миссия:</strong> иногда вести себя так, будто ты попал(а) сюда из похожего, но немного другого мира. Люди, правила общения и вещи тебе знакомы… но не до конца.</p>
+
+            <p><strong>Главный принцип:</strong> ты не странный — ты искренне пытаешься разобраться, как тут всё устроено, мягко и с уважением.</p>
+
+            <p class="section-title">Как себя вести</p>
+            <ul>
+              <li>Говори спокойно, с любопытством и уважением.</li>
+              <li>Удивляйся мелочам, которые обычно никто не замечает.</li>
+              <li>Иногда уточняй «правила этого мира».</li>
+              <li>Не ставь людей в неловкое положение — ты мягкий наблюдатель.</li>
+            </ul>
+
+            <p class="section-title">Когда особенно играть роль</p>
+            <ul>
+              <li>При знакомстве или представлении.</li>
+              <li>Когда кто‑то объясняет что‑то очевидное.</li>
+              <li>Во время бытовых действий (есть, наливать, выбирать место).</li>
+              <li>Когда возникает пауза в разговоре.</li>
+            </ul>
+
+            <p class="section-title">Варианты действий</p>
+            <ul>
+              <li><strong>Осторожное “изучение ритуалов”:</strong> с интересом наблюдай, как люди здороваются, садятся, выбирают еду.</li>
+              <li><strong>Проверка норм поведения:</strong> тихо уточни: «Здесь принято сначала улыбаться или говорить?».</li>
+              <li><strong>Сравнение с “твоим миром”:</strong> «У нас это делают наоборот… но ваш способ тоже работает».</li>
+              <li><strong>Реакция на обычные вещи:</strong> внимательно рассмотри стакан, салфетку, выключатель как что‑то любопытное.</li>
+              <li><strong>Ощущение “узнавания”:</strong> иногда смотри на человека и спокойно: «Вы здесь главный по атмосфере, да?».</li>
+              <li><strong>Лёгкая проверка реальности:</strong> оглянись вокруг, кивни себе, будто всё совпадает с ожиданиями.</li>
+              <li><strong>Документирование:</strong> иногда говори: «Хорошо… я это запомню».</li>
+              <li><strong>Адаптация:</strong> после странного вопроса быстро принимай правила: «Понял. Так здесь правильно».</li>
+            </ul>
+
+            <p class="section-title">Вопросы‑подсказки</p>
+            <ul>
+              <li>«Вы давно знакомы друг с другом… или это случайное собрание?»</li>
+              <li>«Если человек молчит, это знак уважения или размышления?»</li>
+              <li>«Этот напиток выбирают по вкусу или по настроению?»</li>
+              <li>«Если еда вкусная, это сообщают вслух?»</li>
+              <li>«Музыка здесь влияет на разговор или просто сопровождает?»</li>
+            </ul>
+
+            <p class="section-title">Мини‑задания на вечер</p>
+            <ul>
+              <li>Задай минимум 5 аккуратных «уточняющих» вопросов.</li>
+              <li>Один раз сравни что‑то с «твоим миром».</li>
+              <li>Один раз искренне поблагодари кого‑то за объяснение правил.</li>
+              <li>Один раз сделай вывод: «Теперь я лучше понимаю, как у вас принято».</li>
+            </ul>
+
+            <p><strong>Главное правило:</strong> ты вежливый гость из чуть другой версии реальности, который хочет понять людей.</p>
+          `
+        },
+        {
+          id: 9,
+          icon: "🎭",
+          title: "Человек‑саундтрек",
+          shortTag: "Добавляет звуки к моментам",
+          html: `
+            <p><strong>Твоя миссия:</strong> быть живым саундтреком вечера. Тихо добавляй звуковые эффекты и маленькие «заставки» к происходящему — как будто ты озвучиваешь сериал про этот праздник.</p>
+
+            <p class="section-title">Как себя вести</p>
+            <ul>
+              <li>Иногда сопровождай события короткими звуками: «та‑дам», «тын‑дын», «ооо‑о», «па‑па‑паам».</li>
+              <li>Делай это негромко и с серьёзным видом, будто так и должно быть.</li>
+              <li>Можешь озвучивать свои движения: аккуратный «скрип‑скрип» стула, «топ‑топ» шагов, «щелк» выключателя.</li>
+              <li>Иногда комментируй момент как диктор: «Лёгкое напряжение в комнате усиливается…».</li>
+            </ul>
+
+            <p class="section-title">Когда особенно играть роль</p>
+            <ul>
+              <li>Кто-то поднимает тост или говорит важную фразу.</li>
+              <li>Возникает неловкая пауза.</li>
+              <li>Кто‑то что‑то роняет, промахивается, ошибается.</li>
+              <li>Кто‑то делает что‑то героическое: несёт торт, много тарелок, открывает дверь и т.п.</li>
+            </ul>
+
+            <p class="section-title">Мини‑задания на вечер</p>
+            <ul>
+              <li>Сделай минимум 7 разных звуковых эффектов в подходящие моменты.</li>
+              <li>Один раз изобрази тихую «барабанную дробь» перед каким‑то решением.</li>
+              <li>Один раз сделай звук «ошибки системы» после какой‑нибудь мелкой неловкости (но доброжелательно).</li>
+              <li>Один раз придумай романтическую «мелодию» двумя‑тремя звуками, когда кто‑то кого‑то о чём‑то заботливо спрашивает.</li>
+            </ul>
+
+            <p class="section-title">Фразы и звуки‑подсказки</p>
+            <ul>
+              <li>«Та‑дам… официально зафиксировано».</li>
+              <li>«И в этот момент заиграла музыка судьбы…».</li>
+              <li>«Ошибка 404: ложка не найдена».</li>
+              <li>Тихое: «пум‑пум‑пум… разворачивается драматическая сцена».</li>
+            </ul>
+
+            <p><strong>Главное правило:</strong> твои звуки смешные, но тёплые — ты не высмеиваешь людей, а добавляешь весёлый саундтрек к вечеру.</p>
+          `
+        }
+      ];
+
+      const nameInput = document.getElementById("nameInput");
+      const btnGetRole = document.getElementById("btnGetRole");
+      const btnToggleBlur = document.getElementById("btnToggleBlur");
+      const statusLine = document.getElementById("statusLine");
+      const roleCard = document.getElementById("roleCard");
+      const roleBody = document.getElementById("roleBody");
+      const roleTitle = document.getElementById("roleTitle");
+      const roleIcon = document.getElementById("roleIcon");
+      const roleTag = document.getElementById("roleTag");
+
+      const STORAGE_KEY = "secret-birthday-roles-v1";
+
+      function loadAssignments() {
+        try {
+          const raw = localStorage.getItem(STORAGE_KEY);
+          if (!raw) return {};
+          const parsed = JSON.parse(raw);
+          if (parsed && typeof parsed === "object") return parsed;
+          return {};
+        } catch (e) {
+          return {};
+        }
+      }
+
+      function saveAssignments(assignments) {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(assignments));
+        } catch (e) {
+          // ignore storage errors
+        }
+      }
+
+      function normalizeName(name) {
+        return name
+          .trim()
+          .toLowerCase()
+          .replace(/\s+/g, " ");
+      }
+
+      function chooseRoleFor(nameKey, assignments) {
+        if (assignments[nameKey]) {
+          const existingRole = roles.find((r) => r.id === assignments[nameKey].roleId);
+          return existingRole || null;
+        }
+
+        const usedRoleIds = new Set(
+          Object.values(assignments).map((entry) => entry.roleId)
+        );
+        const available = roles.filter((r) => !usedRoleIds.has(r.id));
+        if (!available.length) {
+          return null;
+        }
+
+        const idx = Math.floor(Math.random() * available.length);
+        const selected = available[idx];
+        assignments[nameKey] = { roleId: selected.id, assignedAt: Date.now() };
+        saveAssignments(assignments);
+        return selected;
+      }
+
+      function setStatus(message, type) {
+        statusLine.textContent = message || "";
+        statusLine.classList.remove("status-error", "status-ok");
+        if (type === "error") statusLine.classList.add("status-error");
+        if (type === "ok") statusLine.classList.add("status-ok");
+      }
+
+      function showRole(role, displayName) {
+        if (!role) {
+          roleTitle.textContent = "Роли закончились";
+          roleIcon.textContent = "✨";
+          roleTag.textContent = "Все миссии уже розданы";
+          roleBody.innerHTML =
+            '<p>Кажется, все тайные миссии уже нашли своих хозяев. Можно просто наслаждаться вечером и пытаться разгадать роли остальных.</p>';
+          setStatus(
+            "Кажется, все роли уже розданы. Можно просто наблюдать за другими и угадывать их миссии.",
+            "ok"
+          );
+          return;
+        }
+
+        roleIcon.textContent = role.icon || "🎭";
+        roleTitle.textContent = role.title;
+        roleTag.textContent = role.shortTag || "Твоя личная миссия";
+        roleBody.innerHTML = role.html;
+
+        if (displayName && displayName.trim()) {
+          setStatus(
+            "Роль сохранена за именем «" +
+              displayName.trim() +
+              "». При повторном вводе будет выдана та же миссия.",
+            "ok"
+          );
+        } else {
+          setStatus("Роль выдана и сохранена за этим именем.", "ok");
+        }
+      }
+
+      function handleGetRole() {
+        const rawName = nameInput.value || "";
+        const normalized = normalizeName(rawName);
+
+        if (!normalized) {
+          setStatus("Сначала введи своё имя из списка.", "error");
+          nameInput.focus();
+          return;
+        }
+
+        if (!allowedNames.includes(normalized)) {
+          setStatus(
+            "Это имя не в списке участников. Введи одно из имён: Катя, Гера, Алиса, Миша, Рита, Нармин, Юля, Саша.",
+            "error"
+          );
+          nameInput.focus();
+          return;
+        }
+
+        const assignments = loadAssignments();
+        const role = chooseRoleFor(normalized, assignments);
+        showRole(role, rawName.trim());
+      }
+
+      let isBlurred = false;
+
+      function updateBlur() {
+        if (isBlurred) {
+          roleCard.classList.add("role-hidden");
+          btnToggleBlur.textContent = "Показать текст";
+        } else {
+          roleCard.classList.remove("role-hidden");
+          btnToggleBlur.textContent = "Размыть текст";
+        }
+      }
+
+      btnGetRole.addEventListener("click", function (e) {
+        e.preventDefault();
+        handleGetRole();
+      });
+
+      nameInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          handleGetRole();
+        }
+      });
+
+      btnToggleBlur.addEventListener("click", function () {
+        isBlurred = !isBlurred;
+        updateBlur();
+      });
+
+      // Небольшое начальное состояние
+      updateBlur();
+    })();
+  </script>
+</body>
+</html>
+
