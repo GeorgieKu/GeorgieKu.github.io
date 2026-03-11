@@ -484,16 +484,6 @@
     .muted {
       color: var(--text-muted);
     }
-
-    .offline-notice {
-      margin-top: 8px;
-      padding: 6px 10px;
-      border-radius: 10px;
-      font-size: 12px;
-      color: var(--text-muted);
-      background: rgba(248, 250, 252, 0.95);
-      border: 1px dashed rgba(148, 163, 184, 0.6);
-    }
   </style>
 </head>
 <body>
@@ -574,9 +564,6 @@
       </div>
 
       <div id="statusLine" class="status-line"></div>
-      <div id="offlineNotice" class="offline-notice" style="display: none;">
-        Синхронизация между устройствами недоступна. Квиз работает на этом устройстве.
-      </div>
 
       <div class="reveal-box" id="revealBox">
         <div class="reveal-title" id="revealTitle">Правильный ответ</div>
@@ -806,9 +793,6 @@
       ];
 
       const NAME_STORAGE_KEY = "birthday-quiz-player-name-v1";
-      const STATE_STORAGE_KEY = "birthday-quiz-state-v1";
-      // Если фронт и сервер на разных доменах — укажи URL сервера: window.QUIZ_API_BASE = "https://твой-сервер.railway.app";
-      var API_BASE = (typeof window !== "undefined" && window.QUIZ_API_BASE) ? String(window.QUIZ_API_BASE).replace(/\/$/, "") : "";
 
       const playerNameInput = document.getElementById("playerNameInput");
       const quizQuestionTitle = document.getElementById("quizQuestionTitle");
@@ -837,36 +821,13 @@
       }
 
       let currentPlayerName = null;
-      var serverAvailable = true;
-      var pollIntervalStarted = false;
 
-      // Состояние квиза (с сервера или из localStorage при работе без сервера)
+      // Состояние квиза приходит с сервера
       let appState = {
         currentIndex: 0,
         answersByQuestion: {}
       };
       let selectedOptionKeys = [];
-
-      function loadStateFromLocalStorage() {
-        try {
-          var raw = localStorage.getItem(STATE_STORAGE_KEY);
-          if (!raw) return { currentIndex: 0, answersByQuestion: {} };
-          var parsed = JSON.parse(raw);
-          if (!parsed || typeof parsed !== "object") return { currentIndex: 0, answersByQuestion: {} };
-          var idx = typeof parsed.currentIndex === "number" && parsed.currentIndex >= 0 && parsed.currentIndex < QUIZ_DATA.length
-            ? parsed.currentIndex : 0;
-          var byQ = parsed.answersByQuestion && typeof parsed.answersByQuestion === "object" ? parsed.answersByQuestion : {};
-          return { currentIndex: idx, answersByQuestion: byQ };
-        } catch (e) {
-          return { currentIndex: 0, answersByQuestion: {} };
-        }
-      }
-
-      function saveStateToLocalStorage(state) {
-        try {
-          localStorage.setItem(STATE_STORAGE_KEY, JSON.stringify(state || appState));
-        } catch (e) {}
-      }
 
       function setStatus(message, type) {
         statusLine.textContent = message || "";
@@ -897,48 +858,32 @@
         appState.answersByQuestion[key] = answers;
       }
 
-      // --- Работа с сервером / без сервера (статический хостинг) ---
+      // --- Работа с сервером ---
       async function fetchStateFromServer(forceFullRender) {
-        if (!serverAvailable) {
-          if (forceFullRender) {
-            appState = loadStateFromLocalStorage();
-            renderQuestion();
-          }
-          return;
-        }
         try {
-          const res = await fetch(API_BASE + "/api/state");
+          const res = await fetch("/api/state");
           if (!res.ok) {
-            serverAvailable = false;
-            var notice = document.getElementById("offlineNotice");
-            if (notice) notice.style.display = "block";
             if (forceFullRender) {
-              appState = loadStateFromLocalStorage();
               renderQuestion();
             }
             return;
           }
           const newState = await res.json();
-          if (!pollIntervalStarted) {
-            pollIntervalStarted = true;
-            setInterval(function () { fetchStateFromServer(false); }, 2500);
-          }
+
           const prevIndex = appState.currentIndex;
           appState = newState || appState;
+
           if (forceFullRender || appState.currentIndex !== prevIndex) {
             renderQuestion();
           } else {
             renderParticipantsChips();
             renderRevealBox();
             updateButtonsState();
-            renderResultsSection();
           }
         } catch (e) {
-          serverAvailable = false;
-          var notice = document.getElementById("offlineNotice");
-          if (notice) notice.style.display = "block";
+          // если сервер недоступен (открыли файл напрямую или не запущен сервер) —
+          // просто показываем локальный вариант без синхронизации
           if (forceFullRender) {
-            appState = loadStateFromLocalStorage();
             renderQuestion();
           }
         }
@@ -946,7 +891,7 @@
 
       async function sendAnswerToServer(name, questionIndex, optionKey) {
         try {
-          const res = await fetch(API_BASE + "/api/answer", {
+          const res = await fetch("/api/answer", {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
@@ -969,7 +914,7 @@
 
       async function goToNextQuestionOnServer() {
         try {
-          const res = await fetch(API_BASE + "/api/next-question", {
+          const res = await fetch("/api/next-question", {
             method: "POST"
           });
           if (!res.ok) {
@@ -991,7 +936,7 @@
 
       async function resetQuizOnServer() {
         try {
-          const res = await fetch(API_BASE + "/api/reset", {
+          const res = await fetch("/api/reset", {
             method: "POST"
           });
           if (!res.ok) return;
@@ -1331,11 +1276,7 @@
         answersMap[normalized] = valueToSend;
         setAnswersForCurrentQuestion(answersMap);
 
-        if (serverAvailable) {
-          await sendAnswerToServer(normalized, appState.currentIndex, valueToSend);
-        } else {
-          saveStateToLocalStorage(appState);
-        }
+        await sendAnswerToServer(normalized, appState.currentIndex, valueToSend);
 
         const displayName =
           rawName.trim() ||
@@ -1358,30 +1299,16 @@
           setStatus("Это был последний вопрос квиза.", "ok");
           return;
         }
-        if (serverAvailable) {
-          await goToNextQuestionOnServer();
-        } else {
-          appState.currentIndex += 1;
-          saveStateToLocalStorage(appState);
-          selectedOptionKeys = [];
-          setStatus("Переходим к следующему вопросу.", "ok");
-          renderQuestion();
-        }
+
+        await goToNextQuestionOnServer();
       }
 
       async function handleResetQuiz() {
         if (!confirm("Сбросить все ответы и начать квиз сначала?")) {
           return;
         }
-        if (serverAvailable) {
-          await resetQuizOnServer();
-        } else {
-          appState = { currentIndex: 0, answersByQuestion: {} };
-          saveStateToLocalStorage(appState);
-          selectedOptionKeys = [];
-          setStatus("Квиз сброшен. Можно проходить заново.", "ok");
-          renderQuestion();
-        }
+
+        await resetQuizOnServer();
         playerNameInput.value = "";
       }
 
@@ -1426,8 +1353,11 @@
         // ignore
       }
 
-      // Первый запрос: при успехе дальше опрос по таймеру; при ошибке — режим без сервера (localStorage)
+      // Первый запрос состояния и периодический опрос сервера
       fetchStateFromServer(true);
+      setInterval(function () {
+        fetchStateFromServer(false);
+      }, 2500);
     })();
   </script>
 </body>
