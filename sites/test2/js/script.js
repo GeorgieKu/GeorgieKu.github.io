@@ -49,5 +49,41 @@ var Swiper=function(){"use strict";function e(e){return null!==e&&"object"==type
                     item.querySelector(".menu__link--trigger")?.setAttribute("aria-expanded", "false");
                 });
             }
+            if (!e.target.closest(".news-standart__filter--dropdown")) {
+                document.querySelectorAll(".news-standart__filter--dropdown.is-open").forEach(function (item) {
+                    item.classList.remove("is-open");
+                    item.querySelector(".news-standart__filter-btn")?.setAttribute("aria-expanded", "false");
+                });
+            }
+        });
+
+        document.querySelectorAll(".news-standart__filter-btn").forEach(function (btn) {
+            btn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                const filter = this.closest(".news-standart__filter--dropdown");
+                const wasOpen = filter.classList.contains("is-open");
+
+                document.querySelectorAll(".news-standart__filter--dropdown.is-open").forEach(function (openFilter) {
+                    openFilter.classList.remove("is-open");
+                    openFilter.querySelector(".news-standart__filter-btn")?.setAttribute("aria-expanded", "false");
+                });
+
+                if (!wasOpen) {
+                    filter.classList.add("is-open");
+                    this.setAttribute("aria-expanded", "true");
+                }
+            });
+        });
+
+        document.querySelectorAll(".news-standart__filter-option").forEach(function (option) {
+            option.addEventListener("click", function () {
+                const filter = this.closest(".news-standart__filter--dropdown");
+                const textEl = filter.querySelector(".news-standart__filter-text");
+                if (textEl) {
+                    textEl.textContent = this.textContent;
+                }
+                filter.classList.remove("is-open");
+                filter.querySelector(".news-standart__filter-btn")?.setAttribute("aria-expanded", "false");
+            });
         });
     });
