@@ -1263,10 +1263,39 @@ h2 span {
   border: none;
 }
 
-.fond .overflow--scroll-visible {
-  max-width: 100%;
+.fond .fond__table-wrap {
   margin-top: 24px;
   margin-bottom: 60px;
+}
+.fond .fond__scroll-top {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: 17px;
+  margin-bottom: 4px;
+  cursor: grab;
+}
+.fond .fond__scroll-top::-webkit-scrollbar {
+  display: block;
+  height: 8px;
+}
+.fond .fond__scroll-top::-webkit-scrollbar-track {
+  background: #EEF5FB;
+  border-radius: 4px;
+}
+.fond .fond__scroll-top::-webkit-scrollbar-thumb {
+  background: #013159;
+  border-radius: 4px;
+}
+.fond .fond__scroll-top::-webkit-scrollbar-thumb:hover {
+  background: #A6A03C;
+}
+.fond .fond__scroll-inner {
+  height: 1px;
+  pointer-events: none;
+}
+.fond .overflow--scroll-visible {
+  max-width: 100%;
 }
 .fond table {
   width: -moz-max-content;

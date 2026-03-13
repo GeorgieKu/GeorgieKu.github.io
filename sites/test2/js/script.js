@@ -1,5 +1,35 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var scrollEl = document.querySelector('.overflow--scroll-visible');
+    var scrollTop = document.getElementById('fondScrollTop');
+    var scrollMain = document.getElementById('fondScrollMain');
+    var scrollInner = document.getElementById('fondScrollInner');
+    if (scrollTop && scrollMain && scrollInner) {
+        function setScrollWidth() {
+            var table = scrollMain.querySelector('table');
+            if (table) scrollInner.style.width = table.offsetWidth + 'px';
+        }
+        setScrollWidth();
+        window.addEventListener('resize', setScrollWidth);
+        scrollTop.addEventListener('scroll', function() {
+            scrollMain.scrollLeft = scrollTop.scrollLeft;
+        });
+        scrollMain.addEventListener('scroll', function() {
+            scrollTop.scrollLeft = scrollMain.scrollLeft;
+        });
+        var isDown = false, startX, startScroll;
+        scrollTop.addEventListener('mousedown', function(e) {
+            isDown = true;
+            startX = e.pageX;
+            startScroll = scrollTop.scrollLeft;
+        });
+        document.addEventListener('mouseup', function() { isDown = false; });
+        document.addEventListener('mousemove', function(e) {
+            if (isDown) {
+                scrollTop.scrollLeft = startScroll - (e.pageX - startX);
+            }
+        });
+    }
+
+    var scrollEl = document.querySelector('.overflow--scroll-visible:not(.fond__scroll-top)');
     if (scrollEl) {
         var isDown = false, startX, scrollLeft;
         scrollEl.addEventListener('mousedown', function(e) {
