@@ -1,3 +1,72 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var scrollEl = document.querySelector('.overflow--scroll-visible');
+    if (scrollEl) {
+        var isDown = false, startX, scrollLeft;
+        scrollEl.addEventListener('mousedown', function(e) {
+            isDown = true;
+            scrollEl.style.cursor = 'grabbing';
+            scrollEl.style.userSelect = 'none';
+            startX = e.pageX - scrollEl.offsetLeft;
+            scrollLeft = scrollEl.scrollLeft;
+        });
+        scrollEl.addEventListener('mouseleave', function() {
+            isDown = false;
+            scrollEl.style.cursor = 'grab';
+            scrollEl.style.userSelect = '';
+        });
+        scrollEl.addEventListener('mouseup', function() {
+            isDown = false;
+            scrollEl.style.cursor = 'grab';
+            scrollEl.style.userSelect = '';
+        });
+        scrollEl.addEventListener('mousemove', function(e) {
+            if (!isDown) return;
+            e.preventDefault();
+            var x = e.pageX - scrollEl.offsetLeft;
+            scrollEl.scrollLeft = scrollLeft - (x - startX);
+        });
+        scrollEl.style.cursor = 'grab';
+    }
+
+    document.querySelectorAll('.tabs').forEach(function(tabs) {
+        var btns = tabs.querySelectorAll('.tabs__btn');
+        var contents = tabs.querySelectorAll('.tabs__content');
+        btns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var tabId = this.getAttribute('data-tab');
+                btns.forEach(function(b) { b.classList.remove('tabs__btn--active'); });
+                contents.forEach(function(c) { c.classList.remove('tabs__content--active'); });
+                this.classList.add('tabs__btn--active');
+                tabs.querySelector('.tabs__content[data-tab="' + tabId + '"]').classList.add('tabs__content--active');
+            });
+        });
+    });
+});
+let filters = document.getElementById('filters');
+let filtersForm = document.getElementById('filtersForm');
+function openFilters() {
+    filters.showModal();
+}
+function closeFilters() {
+    filters.close();
+}
+function resetFilters() {
+    document.getElementById('filtersForm').reset();
+}
+
+if (filters) {
+    filters.addEventListener('click', function(e) {
+        if (e.target === this) closeFilters();
+    });
+ }
+
+ if (filtersForm) {
+    filtersForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        closeFilters();
+    });
+ }
+
 
 /**
  * Swiper 11.2.6
