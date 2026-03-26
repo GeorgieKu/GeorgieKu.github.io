@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading English Version...</title>
+</head>
+<body>
+    <script>
+        fetch('/index-en.html')
+            .then((response) => response.text())
+            .then((html) => {
+                const withBase = html.replace('<head>', '<head><base href="/">');
+                document.open();
+                document.write(withBase);
+                document.close();
+            })
+            .catch(() => {
+                document.body.innerHTML = '<p>Failed to load English version. Open <a href="/index-en.html">/index-en.html</a>.</p>';
+            });
+    </script>
+    <noscript>
+        <p>JavaScript is required. Open <a href="/index-en.html">/index-en.html</a>.</p>
+    </noscript>
+</body>
+</html>

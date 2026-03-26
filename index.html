@@ -7,21 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Сайт-визитка Георгия Кузнецова.">
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/media.css">
+    <link rel="stylesheet" href="./style/style.min.css">
 
     <title>Сайт-визитка Георгия Кузнецова</title>
 </head>
 
 <body class="body">
-    <button class="switch-lang-btn btn-reset" onclick="switchToEnglish()">Переключить на английский</button>
+    <!-- <button class="switch-lang-btn btn-reset" onclick="switchToEnglish()">Переключить на английский</button> -->
     <div class="container">
 
         <div class="flexbox">
             <header class="header animate__animated animate__fadeInDownBig">
                 <div>
                     <h1 class="header__title title" id="name">Георгий Кузнецов</h1>
-                    <h2 class="header__subtitle" id="work">Фронтенд-разрабочтик</h2>
+                    <h2 class="header__subtitle" id="work">Frontend-разработчик</h2>
                     <p class="header__descr" id="how">Адаптивно, кроссбраузерно, быстро!
 
                     </p>
@@ -34,7 +33,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="header__link transition-all" href="#expirience" aria-label="expirience-block">
+                                <a class="header__link transition-all" href="#experience" aria-label="experience-block">
                                     <span class="header__line transition-all"></span>
                                     <span class="header__link-text">Опыт</span>
                                 </a>
@@ -50,7 +49,7 @@
 
                 </div>
                 <ul class="list-reset social">
-                    <li><a href="https://github.com/GeorgieKu" target="_blank" aria-label="github-link">
+                    <li><a href="https://github.com/GeorgieKu" target="_blank" rel="noopener noreferrer" aria-label="github-link">
                             <svg class="social__link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
                                 fill="currentColor" aria-hidden="true">
                                 <path
@@ -60,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://t.me/gera0610" target="_blank" aria-label="telegram-link">
+                        <a href="https://t.me/gera0610" target="_blank" rel="noopener noreferrer" aria-label="telegram-link">
                             <svg class="social__link social__link-tg" xmlns="http://www.w3.org/2000/svg"
                                 aria-label="Telegram" role="img" viewBox="0 0 512 512">
                                 <rect rx="15%" fill="#37aee2" />
@@ -81,10 +80,17 @@
                     <h2 class="visually-hidden">123</h2>
                     <div>
                         <h3 class="about__title title">Привет!</h3>
-                        <p class="about__descr"> Я - фронтенд-разрабочтик, увлеченный созданием красивых и интерактивных
-                            веб-сайтов. Я нацелен на то, чтобы сделать интернет лучше, одна веб-страница за другой.</p>
+                        <p class="about__descr"> Я - frontend-разработчик, увлеченный созданием удобных и интерактивных
+                            веб-продуктов. Мой фокус - не только верстка, но и полноценная клиентская разработка: логика
+                            интерфейсов, интеграции и производительность.</p>
                         <h3 class="about__title title">Мои навыки</h3>
                         <ul class="about__list list-reset">
+                            <li class="about__item">
+                                Vue 3
+                            </li>
+                            <li class="about__item">
+                                React native
+                            </li>
                             <li class="about__item">
                                 SCSS
                             </li>
@@ -110,9 +116,10 @@
                                 Bootstrap 5
                             </li>
                         </ul>
-                        <p class="about__descr">В данный момент я активно занимаюсь версткой веб-страниц, делая их
-                            быстрыми и привлекательными для пользователей. Моя цель - создавать сайты, которые не только
-                            красиво выглядят, но и легко взаимодействуют с посетителями.<br><br>
+                        <p class="about__descr">Я разрабатываю интерфейсы от пиксельной точности до продуктовых
+                            сценариев: работаю с API, реализую бизнес-логику, улучшаю UX и оптимизирую скорость
+                            загрузки. Моя цель - создавать сайты и веб-приложения, которые не только выглядят
+                            современно, но и решают задачи бизнеса.<br><br>
                         </p>
                         <h3 class="about__title title">Моя миссия</h3>
                         <p class="about__descr">Моя главная цель - обеспечить вашему бизнесу или проекту сильное
@@ -120,24 +127,26 @@
                             функциональной.</p>
                     </div>
                 </section>
-                <section class="expirience animate__animated animate__fadeInUpBig" id="expirience">
+                <section class="expirience animate__animated animate__fadeInUpBig" id="experience">
                     <h2 class="about__title title">Опыт работы</h2>
                     <div>
                         <ul class="list-reset">
                             <li class="expirience__item">
                                 <div class="expirience__left">
-                                    <span class="expirience__date">2023 - today</span>
+                                    <span class="expirience__date">2024 - today</span>
                                 </div>
                                 <div class="expirience__right">
                                     <span class="expirience__title">Creative Mind Bureau</span>
-                                    <span class="expirience__job expirience__job_margin">Веб-разрабочтик</span>
+                                    <span class="expirience__job expirience__job_margin">Frontend-разработчик</span>
 
                                     <ul class="expirience__list list-reset">
                                         <li class="expirience__tech">HTML</li>
                                         <li class="expirience__tech">CSS</li>
                                         <li class="expirience__tech">JavaScript</li>
+                                        <li class="expirience__tech">Vue 3</li>
+                                        <li class="expirience__tech">React native</li>
                                         <li class="expirience__tech">Gulp</li>
-                                        <li class="expirience__tech">Bitrix</li>
+                                        <li class="expirience__tech">CMS Bitrix</li>
                                         <li class="expirience__tech">Figma</li>
                                     </ul>
                                 </div>
@@ -145,11 +154,11 @@
                             </li>
                             <li class="expirience__item">
                                 <div class="expirience__left">
-                                    <span class="expirience__date">2022 - 2023</span>
+                                    <span class="expirience__date">2023 - 2024</span>
                                 </div>
                                 <div class="expirience__right">
                                     <span class="expirience__title">Атлас Медиабаинг</span>
-                                    <span class="expirience__job expirience__job_margin">Верстка</span>
+                                    <span class="expirience__job expirience__job_margin">Frontend-разработка</span>
 
                                     <ul class="expirience__list list-reset">
                                         <li class="expirience__tech">HTML</li>
@@ -1065,7 +1074,7 @@
         </div>
     </div>
 
-    <script defer src="./js/index.js"></script>
+    <script defer src="./js/index.min.js"></script>
 </body>
 
 </html>
