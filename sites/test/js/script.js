@@ -1,75 +1,62 @@
-function openModal() {
-    const dialog = document.getElementById('requestDialog');
-    if (!dialog) return;
+document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.getElementById("burger");
+    const header = document.querySelector("header");
+    const menuLinks = document.querySelectorAll(".menu__link");
 
-    // showModal доступен в большинстве современных браузеров
-    if (typeof dialog.showModal === 'function') {
-        if (!dialog.open) dialog.showModal();
-    } else {
-        dialog.setAttribute('open', '');
+    function setMenuState(isOpen) {
+        if (!header) return;
+        header.classList.toggle("open", isOpen);
+        document.body.classList.toggle("overflow", isOpen);
     }
 
-    const closeBtn = dialog.querySelector('[data-close-dialog]');
-    if (closeBtn) closeBtn.focus();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    const swiper = new Swiper('.relaized__swiper', {
-        loop: false,
-        spaceBetween: 24,
-        navigation: {
-            nextEl: '.realized__btn_next',
-            prevEl: '.realized__btn_prev',
-        },
+    if (burger) {
+        burger.addEventListener("click", function () {
+            setMenuState(!header.classList.contains("open"));
+        });
+    }
+    menuLinks.forEach((link) => {
+        link.addEventListener("click", () => setMenuState(false));
     });
 
-    // Поддерживаем несколько одинаковых форм на одной странице
-    document.querySelectorAll('.callback__form').forEach((form) => {
-        const connectSelect = form.querySelector('select[name="connect"]');
-        const contactLabel = form.querySelector('[data-contact-label]');
-        const contactInput = form.querySelector('input[name="number"]');
+    const requestFileInputs = document.querySelectorAll(".request__file-input");
+    requestFileInputs.forEach((input) => {
+        const label = input.closest("label");
+        const fileWrap = label ? label.querySelector(".request__file-wrap") : null;
+        const fileText = label ? label.querySelector(".request__file") : null;
+        if (!fileWrap || !fileText) return;
 
-        if (!connectSelect || !contactLabel) return;
-
-        const updateLabel = () => {
-            const isEmail = connectSelect.value === 'email';
-            contactLabel.textContent = isEmail ? 'Почта:' : 'Телефон:';
-
-            if (contactInput) {
-                contactInput.placeholder = isEmail ? 'Почта' : 'Телефон';
-            }
-        };
-
-        connectSelect.addEventListener('change', updateLabel);
-        updateLabel(); // корректная подпись при первой отрисовке
+        fileWrap.addEventListener("click", () => input.click());
+        input.addEventListener("change", function () {
+            const fileName = this.files && this.files[0] ? this.files[0].name : "Файл не загружен";
+            fileText.textContent = fileName;
+        });
     });
 
-    // Управление dialog-окном (закрытие по крестику и клику по фону)
-    const dialog = document.getElementById('requestDialog');
-    if (dialog) {
-        const closeBtn = dialog.querySelector('[data-close-dialog]');
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => {
-                dialog.close();
-            });
-        }
-
-        dialog.addEventListener('click', (e) => {
-            if (e.target === dialog && typeof dialog.close === 'function') {
-                dialog.close();
+    const requestModal = document.getElementById("requestModal");
+    const requestModalClose = document.getElementById("requestModalClose");
+    if (requestModal && requestModalClose) {
+        requestModalClose.addEventListener("click", () => requestModal.close());
+        requestModal.addEventListener("click", (event) => {
+            if (event.target === requestModal) {
+                requestModal.close();
             }
+        });
+        requestModal.addEventListener("close", () => {
+            document.body.classList.remove("overflow");
         });
     }
 });
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const header = document.querySelector("header");
-        const burger = document.getElementById("burger");
+function openModal() {
+    const requestModal = document.getElementById("requestModal");
+    const header = document.querySelector("header");
+    if (header) {
+        header.classList.remove("open");
+    }
+    document.body.classList.remove("overflow");
+    if (requestModal && typeof requestModal.showModal === "function" && !requestModal.open) {
+        requestModal.showModal();
+    }
+}
 
-        if (burger) {
-            burger.addEventListener("click", function () {
-                header.classList.toggle("open");
-            });
-        }
-
-    });    
+window.openModal = openModal;
