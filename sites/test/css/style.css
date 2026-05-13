@@ -199,6 +199,8 @@ button {
 .header {
   padding: 42px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.0509803922);
+  position: relative;
+  z-index: 10;
 }
 .header .header__flex {
   display: flex;
@@ -277,8 +279,35 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero {
+  position: relative;
+  z-index: 2;
+}
 .hero .hero__flex {
   margin-top: auto;
   display: flex;
@@ -732,7 +761,7 @@ button {
 }
 .process .process__flex {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: space-between;
   gap: 30px;
 }
@@ -740,12 +769,40 @@ button {
   max-width: 661px;
   width: 100%;
   padding-top: 100px;
+  position: relative;
+  z-index: 2;
+}
+.process .process__left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 5px;
+  height: 100%;
+  z-index: 1;
+  background-color: #151515;
+}
+.process .process__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  z-index: 1;
 }
 .process .process__text {
   color: #DD5C21;
+  position: relative;
+  z-index: 2;
+  padding-left: 60px;
 }
 .process .process__title {
   color: #fff;
+  position: relative;
+  z-index: 2;
+  padding-left: 60px;
 }
 .process .process__title span {
   color: #DD5C21;
@@ -827,6 +884,17 @@ button {
     flex-direction: column;
     gap: 24px;
   }
+  .process .process__video {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+  }
+  .process .process__text {
+    padding-left: 0;
+  }
+  .process .process__title {
+    padding-left: 0;
+  }
   .process .process__left {
     max-width: 100%;
     padding-top: 80px;
@@ -869,6 +937,9 @@ button {
 @media (max-width: 576px) {
   .process .process__left {
     padding-top: 48px;
+  }
+  .process .process__video {
+    width: 100%;
   }
   .process .process__title {
     font-size: 30px;
@@ -1523,16 +1594,35 @@ button {
 
 .request {
   padding: 120px 0;
-  background-image: url(../img/form-bg.webp);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: relative;
+}
+.request::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.request .request__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: 1;
 }
 .request .request__container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 480px;
   gap: 40px;
   align-items: start;
+  position: relative;
+  z-index: 2;
 }
 .request .request__title {
   color: #fff;
