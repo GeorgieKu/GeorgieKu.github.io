@@ -1,584 +1,1565 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Производство металлоконструкций в Перми">
-    <!-- <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preload" href="./fonts/Onest-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Onest-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Onest-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <title>ЗМК Эссен</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Методика «Производство и маркетинг 360» — для региональных FMCG-производителей. Найдите узкое место своей воронки: от загрузки линий до лояльности покупателей.">
+<title>Производство и маркетинг 360 | VVM-маркетинг</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#070432;
+  --navy-deep:#050124;
+  --purple:#2B2171;
+  --purple-light:#4B4283;
+  --green:#5CB885;
+  --green-dark:#51A46E;
+  --green-light:#ECF5F0;
+  --mint:#D4EBDE;
+  --lavender:#E5E3F1;
+  --white:#FFFFFF;
+  --bg-light:#F3F3F3;
+  --text:#1A1A2E;
+  --muted:#9392A0;
+  --border:#E4E2EF;
+  --warn:#F59E0B;
+  --warn-bg:#FFFBEB;
+  --danger:#EF4444;
+  --danger-bg:#FEF2F2;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;color:var(--text);background:var(--white);line-height:1.6;font-size:16px}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.2}
+.container{max-width:1160px;margin:0 auto;padding:0 24px}
+.section{padding:80px 0}
+.section--light{background:#070432}
+.section--dark{background:var(--navy);color:var(--white)}
+/* Фирменная рамка из угловых скобок [ ] */
+.bracket-frame{position:relative;overflow:hidden}
+.bracket-frame>.container{position:relative;z-index:1}
+.bracket-frame::before,.bracket-frame::after{content:"";position:absolute;top:50%;transform:translateY(-50%);;pointer-events:none;z-index:0;width: 239px;
+    height: 100%;
+    background-repeat: no-repeat;background-size: contain;max-width: 200px;width: 100%;}
+.bracket-frame::before{left: 0px;background-image: url(/photo.svg);}
+.bracket-frame::after{right:0px;background-image: url(/photo-2.svg);}
+@media(max-width:1100px){.bracket-frame::before,.bracket-frame::after{display:none} .hero{min-height: unset;}}
+
+/* Typography helpers */
+.label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.label--white{color:var(--green)}
+.section-title{font-size:66px;font-weight:800;margin-bottom:16px}
+.section-title--white{color:var(--white)}
+.section-sub{font-size:26px;color:var(--muted);max-width:620px;line-height:1.7;margin-bottom:40px}
+.section-sub--white{color:rgba(255,255,255,.72)}
+.bracket{color:var(--green)}
+@media(max-width:1100px){.section-title{font-size:44px;}}
+@media(max-width:600px){.section-title{font-size:24px;} .section-sub{font-size:18px;}}
+/* Buttons */
+.btn{display:inline-block;padding:14px 28px;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;text-decoration:none;border:none;cursor:pointer;border-radius:2px;transition:all .18s;line-height:1}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-dark)}
+.btn-outline-w{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+.btn-outline-w:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-outline-d{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+.btn-outline-d:hover{background:var(--navy);color:#fff}
+
+/* ═══════════════════════════ HEADER ═══════════════════════════ */
+.header{background:var(--navy);position:sticky;top:0;z-index:100;height:64px}
+.header-inner{height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo{text-decoration:none;display:flex;align-items:center}
+.logo-crop{height:48px;width:130px;overflow:hidden;position:relative;flex-shrink:0}
+.logo-crop img{position:absolute;height:160px;width:160px;top:-52px;left:-15px}
+.header-nav{display:flex;align-items:center;gap:24px}
+.header-link{color:rgba(255,255,255,.72);text-decoration:none;font-size:14px;transition:color .15s}
+.header-link:hover{color:#fff}
+.header-burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;background:transparent;border:0;color:#fff;cursor:pointer;padding:0}
+.header-burger span{position:relative;display:block;width:24px;height:2px;background:currentColor;border-radius:2px;transition:background .18s}
+.header-burger span::before,.header-burger span::after{content:"";position:absolute;left:0;width:24px;height:2px;background:currentColor;border-radius:2px;transition:transform .18s,top .18s}
+.header-burger span::before{top:-8px}
+.header-burger span::after{top:8px}
+.header.is-menu-open .header-burger span{background:transparent}
+.header.is-menu-open .header-burger span::before{top:0;transform:rotate(45deg)}
+.header.is-menu-open .header-burger span::after{top:0;transform:rotate(-45deg)}
+.services-dropdown{position:relative;display:inline-flex;align-items:center}
+.services-summary{display:inline-flex;align-items:center;gap:7px;background:transparent;border:0;font:inherit;font-size:14px;cursor:pointer;white-space:nowrap}
+.services-summary::after{content:"";width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .18s}
+.services-dropdown:hover .services-summary,
+.services-dropdown:focus-within .services-summary,
+.services-dropdown.is-open .services-summary{color:#fff}
+.services-dropdown:hover .services-summary::after,
+.services-dropdown:focus-within .services-summary::after,
+.services-dropdown.is-open .services-summary::after{transform:rotate(225deg) translateY(-1px)}
+.services-menu{
+  position:absolute;top:calc(100% + 18px);left:50%;width:310px;
+  padding:8px;background:#fff;border:1px solid rgba(7,4,50,.08);
+  border-radius:6px;box-shadow:0 18px 45px rgba(0,0,0,.18);
+  opacity:0;visibility:hidden;pointer-events:none;
+  transform:translate(-50%,-6px);transition:opacity .18s,transform .18s,visibility .18s;
+}
+.services-menu::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+.services-menu-link{display:block;padding:12px 14px;border-radius:4px;color:var(--navy);text-decoration:none;font-size:13px;font-weight:600;line-height:1.35;transition:background .16s,color .16s}
+.services-menu-link:hover,
+.services-menu-link:focus{background:var(--green-light);color:var(--navy);outline:none}
+.services-menu-link+.services-menu-link{margin-top:2px}
+.services-dropdown:hover .services-menu,
+.services-dropdown:focus-within .services-menu,
+.services-dropdown.is-open .services-menu{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}
+.header-cta-btn{font-size:13px;padding:10px 20px}
+
+/* ═══════════════════════════ HERO ═══════════════════════════ */
+.hero{background:#fff;padding:96px 0 80px;overflow:hidden;position:relative;background-image: url('bg_5.jpg');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+  min-height: calc(100vh - 64px);
+  }
+.hero-wrap{position:relative;max-width:700px;z-index:1}
+
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(92,184,133,.14);border-radius:3px;
+  color:var(--green);font-size:12px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;padding:7px 14px;margin-bottom:28px
+}
+.hero-title{font-size:clamp(38px,5.5vw,64px);font-weight:800;color:#070432;line-height:1.1;margin-bottom:24px}
+.hero-sub{font-size:18px;color:#070432;line-height:1.7;max-width:560px;margin-bottom:40px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px}
+.hero-stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.1);padding-top:40px}
+.hero-stat{flex:1;padding:0 32px 0 0}
+.hero-stat:first-child{padding-left:0}
+.hero-stat-val{font-family:'Montserrat',sans-serif;font-size:40px;font-weight:800;color:var(--green);display:block;line-height:1;margin-bottom:6px}
+.hero-stat-lbl{display:block;font-size:13px;color:rgba(255,255,255,.5);line-height:1.2;max-width:110px}
+
+/* ═══════════════════════════ PAIN ═══════════════════════════ */
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:40px}
+.pain-title{text-align: center;}
+.pain-card{border-radius:3px;padding:28px 24px}
+.pain-num{font-family:'Montserrat',sans-serif;font-size:48px;font-weight:800;line-height:1;margin-bottom:12px}
+.pain-sub {
+  text-align: center;
+}
+.pain-card h3{font-size:16px;font-weight:700;margin-bottom:8px;line-height:1.4}
+.pain-card p{font-size:14px;line-height:1.6}
+/* Цветные карточки в стиле секции «как мы работаем» на сайте */
+.pain-card:nth-child(1){background:var(--navy)}
+.pain-card:nth-child(2){background:var(--purple)}
+.pain-card:nth-child(1) h3,.pain-card:nth-child(2) h3{color:#fff}
+.pain-card:nth-child(1) p,.pain-card:nth-child(2) p{color:rgba(255,255,255,.70)}
+.pain-card:nth-child(1) .pain-num,.pain-card:nth-child(2) .pain-num{color:rgba(255,255,255,.20)}
+.pain-card:nth-child(3){background:var(--lavender)}
+.pain-card:nth-child(3) h3{color:var(--navy)}
+.pain-card:nth-child(3) p{color:#5B5A6B}
+.pain-card:nth-child(3) .pain-num{color:rgba(43,33,113,.20)}
+.pain-card:nth-child(4){background:var(--green)}
+.pain-card:nth-child(4) h3{color:var(--navy)}
+.pain-card:nth-child(4) p{color:rgba(7,4,50,.72)}
+.pain-card:nth-child(4) .pain-num{color:rgba(255,255,255,.45)}
+
+/* ═══════════════════════════ THREE UNKNOWNS ═══════════════════════════ */
+.unknowns{text-align:center}
+.unknowns .section-sub{margin-left:auto;margin-right:auto}
+.unknowns-row{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;align-items:center;gap:0;margin:48px auto;max-width:880px}
+.u-card{background:var(--purple);color:#fff;padding:36px 20px;border-radius:3px; height: 100%;}
+.u-card-2 {background:var(--lavender);}
+.u-card-2 .u-q {
+  color: var(--navy);
+}
+.u-card-2 .u-hint {
+  color: var(--navy);
+}
+.u-card-3 {    background: var(--green);}
+.u-card-3 .u-q {
+  color: var(--navy);
+}
+.u-card-3 .u-hint {
+  color: var(--navy);
+}
+
+.u-num{font-family:'Montserrat',sans-serif;font-size:52px;font-weight:800;    color: rgba(255, 255, 255, .45);line-height:1;margin-bottom:14px;display:block}
+.u-q{font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.4}
+.u-hint{font-size:13px;color:rgba(255,255,255,.5);line-height:1.5}
+.u-sep{font-family:'Montserrat',sans-serif;font-size:28px;font-weight:800;color:var(--green);text-align:center}
+.unknowns-result{
+  display:inline-block;background:var(--green);
+  padding:20px 32px;
+  font-size:17px;font-weight:600;text-align:left;
+  border-radius:3px;margin-top:8px
+}
+
+/* ═══════════════════════════ FUNNEL LEVELS ═══════════════════════════ */
+.funnel-intro-row{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;margin-bottom:48px}
+.funnel-visual{display:flex;flex-direction:column;gap:4px;padding-top:8px}
+.fv-bar{display:flex;align-items:center;gap:12px}
+.fv-fill{height:36px;background:var(--navy);border-radius:2px;display:flex;align-items:center;padding:0 14px;transition:width .4s}
+.fv-fill span{font-size:12px;font-weight:700;color:#fff;white-space:nowrap}
+.fv-label{font-size:12px;color:var(--muted);white-space:nowrap}
+.funnel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.funnel-card{display:flex;gap:18px;padding:26px;border:1px solid var(--border);border-radius:3px;transition:box-shadow .2s}
+.funnel-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.07)}
+.funnel-icon{width:46px;height:46px;background:var(--green-light);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px}
+.funnel-lv{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:5px}
+.funnel-card h3{font-size:16px;font-weight:700;margin-bottom:7px}
+.funnel-card p{font-size:13px;color:var(--muted);line-height:1.6}
+.funnel-title {
+  text-align: center;
+}
+.funnel-label {
+  text-align: center;
+}
+
+/* ═══════════════════════════ FUNNEL SVG INTERACTIVE ═══════════════════════════ */
+.funnel-interactive{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:start;margin-top:48px}
+.funnel-svg-col{position:relative}
+.funnel-svg{width:100%;cursor:pointer;overflow:visible;display:block}
+.fv-g{cursor:pointer;outline:none}
+.fv-poly{transition:fill .22s,filter .22s}
+.fv-g:hover .fv-poly{filter:brightness(1.25)}
+.fv-g.active .fv-poly{fill:var(--green)}
+.fv-name-txt{fill:#fff;font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;text-anchor:middle;dominant-baseline:middle;pointer-events:none;letter-spacing:.01em}
+.fv-hint{text-align:center;font-size:12px;color:var(--muted);margin-top:10px}
+/* Detail card */
+.fv-detail-col{position:sticky;top:80px}
+.fv-card{position:relative;background:#fff;border:2px solid rgba(92,184,133,.35);border-radius:6px;padding:34px;box-shadow:0 18px 42px rgba(7,4,50,.13);transition:opacity .2s}
+.fv-card::before{content:"";position:absolute;left:0;right:0;top:0;height:7px;background:var(--green)}
+.fv-card-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px}
+.fv-d-num{font-family:Montserrat,sans-serif;font-size:64px;font-weight:800;color:var(--green);line-height:.9}
+.fv-d-icon{font-size:38px;line-height:1}
+.fv-d-title{font-size:25px;font-weight:800;margin-bottom:16px;line-height:1.18;color:var(--navy)}
+.fv-question{background:var(--green-light);border-left:7px solid var(--green);padding:15px 18px;font-size:16px;font-weight:800;color:var(--navy);margin-bottom:16px;border-radius:3px;line-height:1.45}
+.fv-d-text{font-size:15px;color:var(--text);line-height:1.72;margin-bottom:18px;font-weight:500}
+.fv-kpis{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.fv-kpi{background:var(--navy);color:#fff;font-size:12px;font-weight:700;padding:7px 11px;border-radius:3px;line-height:1.35}
+.fv-case{background:var(--navy);border-radius:5px;padding:20px 20px 18px;border:1px solid rgba(92,184,133,.45);box-shadow:inset 7px 0 0 var(--green)}
+.fv-case-lbl{font-size:11px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:#7bd29f;margin-bottom:9px}
+.fv-case-txt{font-size:14px;color:rgba(255,255,255,.9);line-height:1.65;margin-bottom:13px;font-weight:500}
+.fv-metrics{display:flex;flex-wrap:wrap;gap:8px}
+.fv-met{background:#fff;color:var(--navy);font-size:12px;font-weight:800;padding:6px 10px;border-radius:3px;line-height:1.3}
+/* Точка 0 — всегда зелёная, остальные — тёмно-синие по умолчанию */
+.fv-g[data-idx="0"] 
+.fv-g[data-idx="0"]:hover .fv-poly{filter:brightness(1.08)}
+.fv-g[data-idx="0"] .fv-poly{fill:#281E70;}
+.fv-g[data-idx="1"] .fv-poly{fill:#6252D0;}
+.fv-g[data-idx="2"] .fv-poly{fill:#968CDE;}
+.fv-g[data-idx="3"] .fv-poly{fill:#5E4E9A;}
+.fv-g[data-idx="4"] .fv-poly{fill:#A094C8;}
+.fv-g[data-idx="5"] .fv-poly{fill:#98CCB0;}
+.fv-g[data-idx="6"] .fv-poly{fill:#54AA7A;}
+.fv-g[data-idx="7"] .fv-poly{fill:#3E9062;}
+/* Три потенциала */
+.three-pot{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:18px 0 6px;border:1px solid var(--border);border-radius:4px;overflow:hidden}
+.tp{padding:13px 10px;text-align:center;border-right:1px solid var(--border)}
+.tp:last-child{border-right:none}
+.tp-0{background:var(--green-light)}
+.tp-q{font-family:Montserrat,sans-serif;font-size:20px;font-weight:800;color:var(--green);line-height:1;margin-bottom:3px}
+.tp-name{font-size:11px;font-weight:700;color:var(--text);margin-bottom:2px;line-height:1.3}
+.tp-lvl{font-size:10px;color:var(--green);font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.tp-hint{font-size:10px;color:var(--muted);line-height:1.4}
+.tp-eq{text-align:center;font-size:13px;font-weight:600;background:var(--green-light);padding:9px 16px;border-radius:3px;margin-bottom:0}
+@media(max-width:960px){
+  .funnel-interactive{grid-template-columns:1fr}
+  .fv-detail-col{position:static}
+}
+@media(max-width:480px){
+  .three-pot{grid-template-columns:1fr}
+  .tp{border-right:none;border-bottom:1px solid var(--border)}
+  .tp:last-child{border-bottom:none}
+}
+
+/* ═══════════════════════════ VIDEO ═══════════════════════════ */
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;border-radius:4px;overflow:hidden;margin-top:40px}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-title {text-align: center;} .video-sub{text-align: center; margin: 0 auto 40px;max-width: unset;font-size: 20px;}
+.video-section {
+  min-height: 100vh;
+}
+
+/* ═══════════════════════════ CASES ═══════════════════════════ */
+.cases-section{background:var(--navy);color:#fff}
+.cases-section .label,.cases-section .section-title{text-align:center}
+.cases-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;margin-top:56px}
+.case-card{background:#fff;border-radius:5px;overflow:hidden;display:flex;flex-direction:column;min-height:100%;box-shadow:none;transition:transform .2s ease,box-shadow .2s ease}
+.case-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(0,0,0,.24)}
+.case-head{position:relative;min-height:250px;padding:24px;background:#eef0f6 center/cover no-repeat;display:flex;align-items:flex-end}
+.case-head::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,4,50,.08),rgba(7,4,50,.58))}
+.case-card:nth-child(1) .case-head{background-image:url("https://static.tildacdn.com/tild3163-6164-4133-b531-383663383266/20.jpg")}
+.case-card:nth-child(2) .case-head{background-image:url("https://static.tildacdn.com/tild6132-3738-4436-a164-663464646637/16.jpg")}
+.case-card:nth-child(3) .case-head{background-image:url("https://static.tildacdn.com/tild3239-6237-4464-b762-363931373966/22.jpg")}
+.case-ind{position:relative;z-index:1;display:inline-flex;align-items:center;min-height:34px;padding:8px 12px;background:rgba(7,4,50,.86);border-left:4px solid var(--green);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:0;line-height:1.25}
+.case-name{font-family:'Montserrat',sans-serif;font-size:24px;font-weight:800;color:var(--navy);line-height:1.25;text-transform:lowercase;margin-bottom:14px}
+.case-body{background:#fff;padding:28px;flex:1;display:flex;flex-direction:column}
+.case-label{display:none}
+.case-body p::before{content:"Задача: ";font-weight:800;color:var(--navy)}
+.case-body p{font-size:15px;color:var(--navy);line-height:1.55;font-weight:500;margin-bottom:24px}
+.case-more{align-self:flex-start;margin-top:auto;display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:0 24px;border:2px solid var(--navy);border-radius:5px;color:var(--navy);font-size:14px;font-weight:700;text-decoration:none;text-transform:lowercase;transition:background-color .2s ease,color .2s ease,border-color .2s ease}
+.case-more:hover,.case-more:focus-visible{background:var(--navy);color:#fff;text-decoration:none;outline:none}
+@media(max-width:760px){
+  .cases-grid{grid-template-columns:1fr;margin-top:36px}
+  .case-head{min-height:220px}
+  .case-name{font-size:20px}
+}
+
+/* ═══════════════════════════ CHECKLIST ═══════════════════════════ */
+
+.checklist-title {
+  text-align: center;
+}
+.checklist-sub {
+  text-align: center;
+  margin: 0 auto 40px;
+}
+.cl-layout{display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start;margin-top:48px}
+.cl-sidebar h3{font-size:15px;font-weight:700;margin-bottom:16px}
+.cl-steps-nav{display:flex;flex-direction:column;gap:6px}
+.clsn-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:3px;font-size:14px;color:var(--muted);transition:all .2s}
+.clsn-item.active{background:#fff;color:var(--text);font-weight:600;box-shadow:0 1px 8px rgba(0,0,0,.08)}
+.clsn-item.done{color:var(--green-dark)}
+.clsn-dot{width:24px;height:24px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;transition:all .2s}
+.clsn-item.active .clsn-dot{border-color:var(--green);background:var(--green);color:#fff}
+.clsn-item.done .clsn-dot{border-color:var(--green);background:var(--green);color:#fff}
+.cl-box{background:#fff;border-radius:6px;padding:40px;box-shadow:0 4px 32px rgba(0,0,0,.08)}
+
+/* Progress bar */
+.cl-progress{margin-bottom:32px}
+.cl-progress-bar{height:4px;background:var(--border);border-radius:2px;margin-bottom:10px;overflow:hidden}
+.cl-progress-fill{height:100%;background:var(--green);border-radius:2px;transition:width .4s ease}
+.cl-progress-text{font-size:13px;color:var(--muted)}
+
+/* Step */
+.step-tag{display:inline-block;background:var(--green-light);color:var(--green);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:2px;margin-bottom:10px}
+.step-icon-lg{font-family:'Montserrat',sans-serif;font-size:46px;font-weight:800;color:var(--green);line-height:1;display:block;margin-bottom:8px}
+.step-title{font-size:22px;font-weight:800;margin-bottom:6px}
+.step-desc{font-size:15px;color:var(--muted);margin-bottom:28px}
+.questions{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+.q-item{background:var(--bg-light);border-radius:4px;padding:18px 20px}
+.q-text{font-size:15px;font-weight:500;margin-bottom:12px;line-height:1.5;color:var(--text)}
+.q-opts{display:flex;gap:8px}
+.qo{flex:1;padding:10px 6px;border:2px solid var(--border);background:#fff;border-radius:3px;font-size:14px;font-weight:600;cursor:pointer;text-align:center;color:var(--muted);transition:all .15s;font-family:'Montserrat',sans-serif}
+.qo:hover{border-color:var(--green);color:var(--text)}
+.qo.yes{border-color:var(--green);background:var(--green-light);color:var(--green-dark)}
+.qo.partly{border-color:var(--warn);background:var(--warn-bg);color:#B45309}
+.qo.no{border-color:var(--danger);background:var(--danger-bg);color:#B91C1C}
+.step-footer{display:flex;justify-content:space-between;align-items:center}
+
+/* Result */
+#cl-result{display:none}
+.result-title{font-size:26px;font-weight:800;margin-bottom:6px}
+.result-sub{font-size:15px;color:var(--muted);margin-bottom:32px}
+.bars{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.bar-row{display:flex;align-items:center;gap:14px}
+.bar-lbl{font-size:14px;font-weight:500;width:200px;flex-shrink:0}
+.bar-track{flex:1;height:10px;background:var(--border);border-radius:5px;overflow:hidden}
+.bar-fill{height:100%;border-radius:5px;transition:width 1.1s ease;width:0}
+.bar-fill.g{background:var(--green)}
+.bar-fill.m{background:var(--warn)}
+.bar-fill.b{background:var(--danger)}
+.bar-score{font-size:13px;font-weight:700;width:32px;text-align:right}
+.bottleneck{background:var(--danger-bg);border:1px solid #FBD5D5;border-radius:3px;padding:20px 24px;margin-bottom:28px}
+.bottleneck h3{font-size:16px;font-weight:700;color:#B91C1C;margin-bottom:6px}
+.bottleneck p{font-size:14px;color:var(--text);line-height:1.6}
+
+/* Lead form */
+.lead-form{background:var(--navy);border-radius:6px;padding:36px;color:#fff}
+.lead-form h3{font-size:20px;font-weight:700;margin-bottom:6px}
+.lead-form .lf-sub{font-size:14px;color:rgba(255,255,255,.65);margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group{display:flex;flex-direction:column;gap:5px}
+.form-group label{font-size:12px;color:rgba(255,255,255,.6)}
+.form-input{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:12px 14px;font-size:14px;border-radius:3px;outline:none;transition:border-color .2s;font-family:'Montserrat',sans-serif;width:100%}
+.form-input:focus{border-color:var(--green)}
+.form-input::placeholder{color:rgba(255,255,255,.35)}
+.form-note{font-size:11px;color:rgba(255,255,255,.35);margin-top:8px}
+#cl-success{display:none;text-align:center;padding:40px 0}
+#cl-success .check{width:64px;height:64px;border-radius:50%;background:var(--green);color:#fff;font-size:34px;font-weight:700;line-height:1;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+#cl-success h3{font-size:22px;font-weight:700;margin-bottom:8px}
+#cl-success p{color:var(--muted);font-size:15px;margin-bottom:24px}
+
+/* ═══════════════════════════ ABOUT ═══════════════════════════ */
+.about-section{padding:0;overflow:hidden}
+.author-stage{
+  position:relative;
+  width: 100%;
+}
+.about-svg {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+.about-section-inner {
+  display: flex;
+  overflow: hidden;
+  background:#CCC7CC;
+}
+.author-title{    position: absolute;
+    z-index: 3;
+    top: 68px;
+    left: -34px;
+    width: 540px;
+    color: var(--purple);
+    font-size: 53px;
+    font-weight: 800;
+    line-height: 1;}
+.author-title span{display:block;color:#fff}
+.author-portrait{position:absolute;z-index:2;left:112px;bottom:-36px;max-width:800px;width:100%;pointer-events:none}
+.author-action{position:absolute;z-index:4;top:320px;left:-34px;width:300px;height:55px;display:flex;align-items:center;justify-content:center;background:var(--green);border-radius:10px;color:var(--purple);font-size:16px;font-weight:700;text-decoration:none;text-transform:lowercase;transition:background-color .2s ease}
+.author-action:hover,.author-action:focus-visible{background:var(--green-dark);text-decoration:none;outline:none}
+.author-quote{position:absolute;z-index:4;left:-34px;bottom:96px;width:510px;margin:0;color:var(--purple);font-size:20px;font-weight:700;line-height:1.45;isolation:isolate}
+.author-quote::before{content:"";position:absolute;z-index:-1;left:0;top:-42px;width:490px;height:331px;background:#CCC7CC;filter:blur(50px);pointer-events:none}
+.author-stats{    position: absolute;
+    z-index: 4;
+    right: -99px;
+    top: 79px;
+    width: 210px;
+    display: grid;
+    gap: 47px;}
+.author-stat-value{display:block;color:var(--purple);font-size:77px;font-weight:800;line-height:.9}
+.author-stat-label{margin-top:14px;color:var(--purple-light);font-size:20px;font-weight:800;line-height:1}
+.author-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(7,4,50,.58)}
+.author-modal:target{display:flex}
+.author-modal-card{position:relative;width:min(760px,100%);max-height:calc(100vh - 48px);overflow:auto;background:#fcfcfc;border-radius:5px;padding:42px 46px;box-shadow:0 24px 100px rgba(7,4,50,.22);color:var(--navy)}
+.author-modal-title{font-size:24px;font-weight:800;margin-bottom:28px}
+.author-modal-card strong{display:block;margin:22px 0 8px;color:var(--purple);font-size:16px;text-transform:uppercase}
+.author-modal-card ul{padding-left:20px;margin:0}
+.author-modal-card li{font-size:16px;font-weight:500;line-height:1.5;margin-bottom:6px}
+.author-modal-close{position:absolute;top:16px;right:18px;width:32px;height:32px;display:flex;align-items:center;justify-content:center;color:var(--navy);font-size:28px;line-height:1;text-decoration:none}
+.author-modal-close:hover,.author-modal-close:focus-visible{color:var(--green);outline:none}
+.final-cta .bracket-frame::before {max-width: 74px;}
+.final-cta .bracket-frame::after {max-width: 74px;}
+/* ═══════════════════════════ FINAL CTA ═══════════════════════════ */
+.final-cta{background:var(--navy);padding:100px 0;text-align:center;position:relative;overflow:hidden}
+.final-cta .container{position:relative;z-index:1}
+
+.final-cta h2{font-size:clamp(28px,4vw,50px);font-weight:800;color:#fff;margin-bottom:16px;line-height:1.2}
+.final-cta p{font-size:18px;color:rgba(255,255,255,.65);max-width:520px;margin:0 auto 40px;line-height:1.6}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ═══════════════════════════ FOOTER ═══════════════════════════ */
+.footer{background:var(--navy);color:#f3f3f3;    padding-top: 150px;
+  padding-bottom: 90px;}
+.footer-stage{position:relative;display: flex; align-items: center; justify-content: space-between; gap: 20px;margin-bottom: 20px; flex-wrap: wrap;}
+.footer-logo{display:block;text-decoration:none}
+.footer-logo img{width:220px;height:56px;}
+.footer-nav{display:flex;gap:20px}
+.footer-link{color:#f3f3f3;text-decoration:none;font-size:18px;font-weight:500;line-height:1;transition:color .15s}
+.footer-link:hover{color:var(--green)}
+.footer-channel{width:260px;height:55px;display:flex;align-items:center;justify-content:center;border-radius:5px;background:#27a7e7;color:#fff;text-decoration:none;font-size:16px;font-weight:400;transition:background .18s}
+.footer-channel:hover{background:#249bd7}
+.footer-requisites{max-width:280px;width: 100%;color:#f3f3f3;font-size:14px;font-weight:400;line-height:1.4}
+.footer-requisites a{color:#f3f3f3;text-decoration:none}
+.footer-requisites a:hover{color:var(--green)}
+.footer-legal{display:flex;flex-direction:column;align-items:flex-start;gap:8px;max-width: 260px;width: 100%;}
+.footer-legal .footer-link{font-size:14px;line-height:1.4;border-bottom:1px solid currentColor}
+
+
+.white-text {
+  color: #fff;
+}
+/* ═══════════════════════════ RESPONSIVE ═══════════════════════════ */
+
+@media(max-width:1100px){
+  .header{height:auto;min-height:64px}
+  .header-inner{height:auto;min-height:64px;gap:18px;padding:8px 0}
+  .header-nav{gap:16px}
+  .services-menu{left:0;transform:translateY(-6px)}
+  .services-dropdown:hover .services-menu,
+  .services-dropdown:focus-within .services-menu,
+  .services-dropdown.is-open .services-menu{transform:translateY(0)}
+  .footer{padding-top:110px;padding-bottom:72px}
+  .footer-stage{align-items:flex-start;gap:28px 40px}
+  .footer-nav{gap:18px;flex-wrap:wrap}
+
+  .author-quote{display: none;bottom:76px;width:420px;font-size:20px}
+  .author-stat-value{font-size: 50px;}
+  .author-stat-label{font-size: 18px;
+    max-width: 187px;}
+}
+@media(max-width:900px){
+  .header-inner{justify-content:space-between}
+  .header-nav{gap:18px}
+  .footer{padding-top:90px;padding-bottom:64px}
+  .footer-stage{display:grid;grid-template-columns:minmax(180px,1fr) minmax(260px,1.4fr);align-items:start}
+  .footer-logo img{width:200px;height:auto}
+  .footer-nav{justify-content:flex-start}
+  .footer-channel{width:260px;justify-self:start}
+  .footer-requisites,.footer-legal{max-width:none}
+  .hero-stats{flex-direction:column;gap:20px;border-top:1px solid rgba(255,255,255,.1);padding-top:32px}
+  .hero-stat{padding:0}
+  .unknowns-row{grid-template-columns:1fr;gap:8px}
+  .u-sep{display:none}
+  .funnel-intro-row{grid-template-columns:1fr;gap:32px}
+  .cl-layout{grid-template-columns:1fr}
+  .cl-sidebar{display:none}
+  .author-title{        max-width: 373px;
+    font-size: 36px;}
+  .author-portrait{left:110px;max-width:700px}
+  .author-action{top:320px;left:-34px}
+  .author-stats{top:75px;width:160px;gap:52px}
+.about-section .container {display: contents;}
+
+}
+@media(max-width:760px){
+  .header{height:64px;min-height:64px}
+  .header .container{width:100%;max-width:none}
+  .header-inner{height:64px;min-height:64px;padding:0;gap:12px}
+  .header-burger{display:flex}
+  .header-nav{position:absolute;top:100%;left:0;right:0;z-index:90;display:grid;width:100%;gap:0;padding:12px 24px 20px;background:var(--navy);border-top:1px solid rgba(255,255,255,.08);box-shadow:0 22px 42px rgba(0,0,0,.24);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-8px);transition:opacity .18s,visibility .18s,transform .18s}
+  .header.is-menu-open .header-nav{opacity:1!important;visibility:visible!important;pointer-events:auto;transform:translateY(0)}
+  .header-link,.services-summary{width:100%;min-height:44px;display:flex;align-items:center;color:#fff;font-size:15px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .services-dropdown{display:block;width:100%}
+  .services-summary{justify-content:space-between}
+  .services-menu{position:static;width:100%;margin:4px 0 8px;padding:6px;background:rgba(255,255,255,.96);box-shadow:none;transform:none}
+  .services-dropdown:hover .services-menu,
+  .services-dropdown:focus-within .services-menu,
+  .services-dropdown.is-open .services-menu{transform:none}
+  .services-dropdown:not(.is-open) .services-menu{display:none}
+  .header-cta-btn{width:100%;margin-top:12px;padding:14px 18px;font-size:13px;text-align:center}
+  .footer-stage{grid-template-columns:1fr;gap:24px;margin-bottom:28px}
+  .footer-logo img{width:190px}
+  .footer-nav{gap:16px 22px}
+  .footer-link{font-size:17px}
+  .footer-channel{width:min(300px,100%)}
+}
+@media(max-width:600px){
+  .section{padding:56px 0}
+  .hero{padding:64px 0 56px}
+  .header{height:64px;min-height:64px}
+  .header-nav{padding-left:24px;padding-right:24px}
+  .footer{padding-top:64px;padding-bottom:46px}
+  .footer-stage{gap:20px;margin-bottom:26px}
+  .footer-logo img{width:176px}
+  .footer-nav{gap:14px 18px}
+  .footer-link{font-size:16px;line-height:1.15}
+  .footer-channel{height:52px;font-size:15px}
+  .footer-requisites{font-size:13px;line-height:1.45}
+  .footer-legal{gap:10px}
+  .footer-legal .footer-link{font-size:13px}
+  .cl-box{padding:24px 20px}
+  .q-opts{flex-direction:column}
+  .form-row{grid-template-columns:1fr}
+  .bar-lbl{width:120px;font-size:13px}
+  .about-section{padding:0}
+  .author-title{top:124px;left:-35px;width:310px;font-size: 28px;}
+  .author-portrait{top:unset;bottom: 0;left:50%;width:370px;transform:translateX(-50%)}
+  .author-action{top:526px;left:24px;width:300px;max-width:calc(100% - 48px)}
+  .author-stats{top: 50px;width:auto;left: 50%;transform:translateX(-50%);grid-template-columns:repeat(3,1fr);gap:20px;right: unset;}
+  .author-stat-value{font-size:32px}
+  .author-stat-label{margin-top:8px;font-size:10px}
+
+
+}
+@media(max-width:480px){
+  .header-inner{gap:8px;padding:0}
+  .logo-crop{height:42px;width:112px}
+  .logo-crop img{height:140px;width:140px;top:-45px;left:-13px}
+  .header-nav{padding-left:24px;padding-right:24px}
+  .footer{padding-top:56px;padding-bottom:40px}
+  .footer-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:14px 20px}
+  .footer-channel{width:100%}
+  .author-title{font-size: 18px;}
+  .author-portrait {
+    height: 240px;
+    object-fit: contain;
+  }
+  .author-stat-value {font-size: 24px;}
+  .author-title {top: 130px;}
+}
+@media(max-width:380px){
+  .header .container,.footer .container{padding-left:16px;padding-right:16px}
+  .logo-crop{width:104px}
+  .header-nav{padding-left:16px;padding-right:16px}
+  .footer-logo img{width:164px}
+  .footer-nav{gap:12px 16px}
+  .footer-link{font-size:15px}
+  .footer-channel{font-size:14px}
+}
+</style>
 </head>
-
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="container header__container">
-                <div class="header__flex">
-                    <a class="header__logo" href="./index.html" aria-label="Перейти на главную">
-                        ЗМК Эссен<span>.</span>
-                    </a>
-                    <span class="header__city">
-                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00001 16C9.625 16 14 11.0384 14 7.11109C14 3.18374 10.866 0 7.00001 0C3.13401 0 0 3.18374 0 7.11109C0 11.0384 4.375 16 7.00001 16ZM7.00001 9.59997C8.28867 9.59997 9.33334 8.52545 9.33334 7.19998C9.33334 5.8745 8.28867 4.79999 7.00001 4.79999C5.71133 4.79999 4.66666 5.8745 4.66666 7.19998C4.66666 8.52545 5.71133 9.59997 7.00001 9.59997Z" fill="#DD5C21"/>
-                            </svg>
-                            
-                        г. Пермь
-                    </span>
-                    <nav class="menu">
-                        <ul class="menu__list">
-                            <li class="menu__item">
-                                <a class="menu__link" href="#" aria-label="Перейти в раздел Услуги">
-                                    Услуги
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#" aria-label="Перейти в раздел Каталог">
-                                    Каталог
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#" aria-label="Перейти в раздел О компании">
-                                    О компании
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#" aria-label="Перейти в раздел Проекты">
-                                    Проекты
-                                </a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#" aria-label="Перейти в раздел Контакты">
-                                    Контакты
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="menu__contacts">
-                            <a class="menu__phone" href="tel:+79785578082" aria-label="Позвонить по номеру +7 978 557-80-82">+7 978 557-80-82</a>
-                            <a class="menu__email" href="mailto:info@site.ru" aria-label="Написать на почту info@site.ru">info@site.ru</a>
-                            <button class="menu__btn btn" onclick="openModal()" aria-label="Открыть форму связи">Связаться с нами</button>
-                        </div>
-                    </nav>
-                    <div class="header__contacts">
-                        <a class="header__phone" href="tel:+79785578082" aria-label="Позвонить по номеру +7 978 557-80-82">
-                            +7 978 557-80-82
-                        </a>
-                        <a class="header__email" href="mailto:info@site.ru" aria-label="Написать на почту info@site.ru">
-                            info@site.ru
-                        </a>
-                        <button class="header__btn btn" onclick="openModal()" aria-label="Открыть форму связи">
-                            Связаться с нами
-                        </button>
-                    </div>
-                    <button class="header__burger-btn" id="burger" aria-label="Открыть меню">
-                        <span></span><span></span><span></span>
-                    </button>
-                </div>
-            </div>
-        </header>
-        <section class="hero">
-            <div class="container hero__container">
-                <div class="hero__flex">
-                    <div class="hero__content">
-                        <h1 class="hero__title">
-                            Производство<br>
-                            металлоконструкций в Перми
-                        </h1>
-                        <p class="hero__text text-16-22">
-                            Изготавливаем по вашим чертежам или разрабатываем КМД под производство
-                        </p>
-                    </div>
-                    <button class="hero__btn orange-btn btn" onclick="openModal()" aria-label="Открыть форму расчета стоимости">
-                        Рассчитать стоимость
-                    </button>
-                </div>
-                <ul class="hero__list">
-                    <li class="hero__item">
-                        <img class="hero__img" src="./img/svg/black-gal.svg" width="46" height="46" alt="Иконка преимущества">
-                        Рассчитать стоимость
-                    </li>
-                    <li class="hero__item">
-                        <img class="hero__img" src="./img/svg/black-gal.svg" width="46" height="46" alt="Иконка преимущества">
-                        Работаем с любыми объемами
-                    </li>
-                    <li class="hero__item">
-                        <img class="hero__img" src="./img/svg/black-gal.svg" width="46" height="46" alt="Иконка преимущества">
-                        Сроки от 5 дней
-                    </li>
-                    <li class="hero__item">
-                        <img class="hero__img" src="./img/svg/black-gal.svg" width="46" height="46" alt="Иконка преимущества">
-                        Доставка и монтаж
-                    </li>   
-                </ul>
-            </div>
-        </section>
-        <video class="hero__bg" src="./video/3.mp4" autoplay muted loop playsinline></video>
-    </div>
-    <main>
-        <section class="services padding-140">
-            <div class="container">
-                <span class="services__text preview-text">Услуги</span>
-                <h2 class="services__title h2-title">
-                    Что мы делаем:
-                </h2>
-                <ul class="services__list">
-                    <li class="services__item">
-                        <div class="services__flex">
-                            <img class="services__img" src="./img/svg/services-1.svg" width="56" height="56" loading="lazy" alt="Иконка услуги Разработка КМД">
-                            <img class="services__arrow" src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </div>
-                        <h3 class="services__subtitle h3-title">Разработка КМД</h3>
-                        <p class="services__text text-16-22">Подготовим комплект рабочих чертежей 
-                            для производства металлоконструкций. 
-                            Учитываем технологию изготовления, чтобы 
-                            сократить сроки и избежать ошибок 
-                            на производстве.
-                        </p>
-                        <a href="#" class="services__link" aria-label="Подробнее об услуге Разработка КМД"></a>
-                    </li>
-                    <li class="services__item">
-                        <div class="services__flex">
-                            <img class="services__img" src="./img/svg/services-2.svg" width="56" height="56" loading="lazy" alt="Иконка услуги Изготовление металлоконструкций">
-                            <img class="services__arrow" src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </div>
-                        <h3 class="services__subtitle h3-title">Изготовление металлоконструкций</h3>
-                        <p class="services__text text-16-22">Производим конструкции любой сложности: 
-                            от типовых изделий до нестандартных решений 
-                            под задачи заказчика.
-                        </p>
-                        <a href="#" class="services__link" aria-label="Подробнее об услуге Изготовление металлоконструкций"></a>
-                    </li>
-                    <li class="services__item">
-                        <div class="services__flex">
-                            <img class="services__img" src="./img/svg/services-3.svg" width="56" height="56" loading="lazy" alt="Иконка услуги Работа по вашим чертежам">
-                            <img class="services__arrow" src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </div>
-                        <h3 class="services__subtitle h3-title">Работа по вашим чертежам</h3>
-                        <p class="services__text text-16-22">Изготавливаем металлоконструкции строго 
-                            по предоставленной документации (КМ / КМД) 
-                            с соблюдением требований и сроков.
-                        </p>
-                        <a href="#" class="services__link" aria-label="Подробнее об услуге Работа по вашим чертежам"></a>
-                    </li>
-                    <li class="services__item">
-                        <div class="services__flex">
-                            <img class="services__img" src="./img/svg/services-4.svg" width="56" height="56" loading="lazy" alt="Иконка услуги Доставка">
-                            <img class="services__arrow" src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </div>
-                        <h3 class="services__subtitle h3-title">Доставка</h3>
-                        <p class="services__text text-16-22">Организуем доставку металлоконструкций на объект 
-                            по Перми и в другие регионы.
-                        </p>
-                        <a href="#" class="services__link" aria-label="Подробнее об услуге Доставка"></a>
-                    </li>
-                    <li class="services__item">
-                        <div class="services__flex">
-                            <img class="services__img" src="./img/svg/services-5.svg" width="56" height="56" loading="lazy" alt="Иконка услуги Монтаж">
-                            <img class="services__arrow" src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </div>
-                        <h3 class="services__subtitle h3-title">Монтаж</h3>
-                        <p class="services__text text-16-22">Выполняем монтаж металлоконструкций на объекте 
-                            с соблюдением сроков и требований безопасности.
-                        </p>
-                        <a href="#" class="services__link" aria-label="Подробнее об услуге Монтаж"></a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="process ">
-            <div class="container">
-                <div class="process__flex">
-                    <div class="process__left">
-                        <span class="process__text preview-text">Процесс</span>
-                        <h2 class="process__title h2-title">Как мы работаем<span>.</span></h2>
-                        <video class="process__video" src="./video/1.mp4" autoplay muted loop playsinline></video>
-                    </div>
-                    <ul class="procees__list">
-                        <li class="process__item process__item_difference">
-                            <span class="process__number">1</span>
-                            <span class="process__text-2">Вы оставляете заявку</span>
-                            <button class="process__btn btn orange-btn" onclick="openModal()" aria-label="Открыть форму заявки">Оставить заявку</button>
-                        </li>
-                        <li class="process__item">
-                            <span class="process__number">2</span>
-                            <span class="process__text-2">Отправляете чертежи или описание задачи</span>
-                        </li>
-                        <li class="process__item">
-                            <span class="process__number">3</span>
-                            <span class="process__text-2">Мы рассчитываем стоимость</span>
-                        </li>
-                        <li class="process__item">
-                            <span class="process__number">4</span>
-                            <span class="process__text-2">Согласуем сроки и условия</span>
-                        </li>
-                        <li class="process__item">
-                            <span class="process__number">5</span>
-                            <span class="process__text-2">Производим металлоконструкции</span>
-                        </li>
-                        <li class="process__item">
-                            <span class="process__number">6</span>
-                            <span class="process__text-2">Доставляем и при необходимости монтируем</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="catalog padding-140">
-            <div class="container">
-                <span class="catalog__text preview-text">Каталог</span>
-                <h2 class="catalog__title h2-title">Производим широкий спектр<br> 
-                    металлоконструкций:</h2>
-                    <ul class="catalog__list">
-                        <li class="catalog__item catalog__item-1">
-                            <h3 class="catalog__subtitle h3-title">Металлические<br> каркасы</h3>
-                            <img src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </li>
-                        <li class="catalog__item catalog__item-2">
-                            <h3 class="catalog__subtitle h3-title">Ангары из металло-<br>
-                                конструкций</h3>
-                            <img src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </li>
-                        <li class="catalog__item catalog__item-3">
-                            <h3 class="catalog__subtitle h3-title">Фермы
-                            </h3>
-                            <img src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </li>
-                        <li class="catalog__item catalog__item-4">
-                            <h3 class="catalog__subtitle h3-title">Колонны
-                            </h3>
-                            <img src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </li>
-                        <li class="catalog__item catalog__item-5">
-                            <h3 class="catalog__subtitle h3-title">Балки</h3>
-                            <img src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </li>
-                        <li class="catalog__item catalog__item-6">
-                            <h3 class="catalog__subtitle h3-title">Рамные опоры</h3>
-                            <img src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </li>
-                        <li class="catalog__item catalog__item-7">
-                            <h3 class="catalog__subtitle h3-title">Промышленные <br>
-                                винтовые сваи</h3>
-                            <img src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </li>
-                        <li class="catalog__item catalog__item-8">
-                            <h3 class="catalog__subtitle h3-title">Трубошпунт</h3>
-                            <img src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </li>
-                        <li class="catalog__item catalog__item-9">
-                            <h3 class="catalog__subtitle h3-title">Нестандартные<br> металлоконструкции</h3>
-                            <img src="./img/svg/services-arrow.svg" width="50" height="50" loading="lazy" alt="Стрелка перехода">
-                        </li>
-                        <li class="catalog__item catalog__item-10">
-                            <span class="catalog__text-2"><span>Не нашли нужное решение —</span><br> 
-                                изготовим по вашему проекту.</span>
-                                <button class="catalog__btn btn orange-btn" onclick="openModal()" aria-label="Открыть форму для просмотра каталога">Смотреть каталог</button>
-                        </li>
-                    </ul>
-            </div>
-        </section>
-        <section class="objects">
-            <div class="container">
-                <div class="objects__flex">
-                    <div class="objects__left">
-                        <h2 class="objects__title h2-title">Производственная компания<br>
-                            металлоконструкций в Перми<span>.</span></h2>
-                        <span class="objects__text text-16-22">Для каких объектов изготавливаем металлоконструкции:</span>
-                    </div>
-                    <p class="objects__text-2">Работаем с частными 
-                        и корпоративными заказчиками.
-                        </p>
-                </div>
-                <ul class="objects__list">
-                    <li class="objects__item">
-                        <img src="./img/svg/objects-1.svg" width="56" height="56" loading="lazy" alt="Иконка промышленных объектов">
-                        <h3 class="objects__subtitle h3-title">Промышленные объекты</h3>
-                    </li>
-                    <li class="objects__item">
-                        <img src="./img/svg/objects-2.svg" width="56" height="56" loading="lazy" alt="Иконка складов и логистических комплексов">
-                        <h3 class="objects__subtitle h3-title">Склады и логистические
-                            комплексы</h3>
-                    </li>
-                    <li class="objects__item">
-                        <img src="./img/svg/objects-3.svg" width="56" height="56" loading="lazy" alt="Иконка торговых и коммерческих помещений">
-                        <h3 class="objects__subtitle h3-title">Торговые и коммерческие 
-                            помещения</h3>
-                    </li>
-                    <li class="objects__item">
-                        <img src="./img/svg/objects-4.svg" width="56" height="56" loading="lazy" alt="Иконка производственных зданий">
-                        <h3 class="objects__subtitle h3-title">Производственные здания
-                        </h3>
-                    </li>
-                    <li class="objects__item">
-                        <img src="./img/svg/objects-5.svg" width="56" height="56" loading="lazy" alt="Иконка ангаров и каркасных сооружений">
-                        <h3 class="objects__subtitle h3-title">Ангары и каркасные 
-                            сооружения</h3>
-                    </li>
-                    <li class="objects__item">
-                        <img src="./img/svg/objects-6.svg" width="56" height="56" loading="lazy" alt="Иконка лестниц и ограждений">
-                        <h3 class="objects__subtitle h3-title">Лестницы, площадки, 
-                            ограждения</h3>
-                    </li>
-                    <li class="objects__item">
-                        <img src="./img/svg/objects-7.svg" width="56" height="56" loading="lazy" alt="Иконка нестандартных конструкций">
-                        <h3 class="objects__subtitle h3-title">Нестандартные конструкции 
-                            по чертежам</h3>
-                    </li>
-                    <li class="objects__item">
-                        <img src="./img/svg/objects-8.svg" width="56" height="56" loading="lazy" alt="Иконка частного строительства">
-                        <h3 class="objects__subtitle h3-title">Объекты частного 
-                            строительства</h3>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="map">
-            <div class="container">
-                <div class="map__bg">
-                    <h2 class="map__title h2-title">Работаем по всей России<span>.</span></h2>
-                    <div class="map__grid">
-                        <div class="map__item">
-                            <span class="map__text">10+</span>
-                            <span class="map__text-2 text-16-22">Лет опыта</span>
-                        </div>
-                        <div class="map__item map__item_top">
-                            <span class="map__text">Производство</span>
-                            <span class="map__text-2 text-16-22">Собственный производственный цех</span>
-                        </div>
-                        <div class="map__item">
-                            <span class="map__text">Поставки</span>
-                            <span class="map__text-2 text-16-22">По Перми, Пермскому краю<br>
-                                и в другие регионы</span>
-                        </div>
-                        <div class="map__item map__item_top">
-                            <span class="map__text">500+</span>
-                            <span class="map__text-2 text-16-22">Выполненных проектов</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <section class="production padding-140">
-            <div class="container">
-                <h2 class="production__title h2-title">Производство<span>.</span></h2>
-                <div class="production__flex">
-                    <img class="production__img" src="./img/production-1.webp" width="560" height="360" loading="lazy" alt="Фото производства металлоконструкций">
-                    <div class="production__content">
-                        <p class="production__text">Собственное производство позволяет нам контролировать весь процесс изготовления металлоконструкций — от поступления металла и подготовки деталей до сборки, обработки и отгрузки готовых изделий. Такой подход дает возможность соблюдать сроки, поддерживать стабильное качество и оперативно решать производственные задачи без зависимости от сторонних подрядчиков.</p>
-                        <div class="production__flex-2 production__flex-2_mb">
-                            <div class="production__block">
-                                <img class="production__img-2" src="./img/svg/production-1.svg" width="56" height="56" loading="lazy" alt="Иконка точности">
-                                <span class="production__text-3">Точность</span>
-                            </div>
-                            <p class="production__text-2">На каждом этапе работ учитываются требования проекта, особенности конструкции и условия дальнейшей эксплуатации. Это особенно важно 
-                                при изготовлении элементов, где критична точность размеров, качество сварных соединений и соответствие документации.
-                                </p>
-                        </div>
-                        <div class="production__flex-2">
-                            <div class="production__block">
-                                <img class="production__img-2" src="./img/svg/production-2.svg" width="56" height="56" loading="lazy" alt="Иконка профессионализма">
-                                <span class="production__text-3">Профессионализм</span>
-                            </div>
-                            
-                            <p class="production__text-2">Производственный процесс выстроен так, чтобы заказчик получал готовое решение в понятные сроки 
-                                и с прогнозируемым результатом. 
-                                В работе используем оборудование для резки, обработки, сборки 
-                                и окраски металла, а готовые изделия проходят контроль перед отгрузкой.
-                                
-                                </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="works">
-            <div class="container">
-                <span class="works__preview preview-text">Проекты</span>
-                <h2 class="works__title h2-title">Реализованные проекты, <br>наш опыт в действии<span>.</span></h2>
-                <p class="works__text text-16-22">Реализуем проекты различной сложности - от отдельных конструкций до комплексных объектов. Выполняем:</p>
-                <ul class="works__tags">
-                    <li class="works__tag">Проектирование</li>
-                    <li class="works__tag">Изготовление</li>
-                    <li class="works__tag">Поставку</li>
-                    <li class="works__tag">Монтаж</li>
-                </ul>
-               
-                  
-                        <article class="works-card">
-                            <img class="works__img" src="./img/works-1.webp"  loading="lazy" alt="Фото реализованного проекта">
-                            <div class="works-card__content">
-                                <h3 class="works-card__title">ФКП «Нижнетагильский институт<br> испытания металлов»</h3>
-                                <p class="works-card__desc">За период многолетнего сотрудничества реализовано несколько объектов для собственных нужд ГК «Металл Профиль», в том числе крытая крановая эстакада, г. Тюмень, пос. Рощино, ул. Сергея Ильюшина 1. Размеры данного объекта - 24х54х8 м. Вес поставляемых металлических конструкций - 130 т.</p>
-                                <ul class="works-card__meta">
-                                    <li><span>Год реализации</span><strong>2017 г.</strong></li>
-                                    <li><span>Площадь</span><strong>24x54x8 м.</strong></li>
-                                    <li><span>Вес конструкций</span><strong>130 тонн</strong></li>
-                                    <li><span>Заказчик</span><strong>ГК «Металл Профиль»</strong></li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="works-card">
-                            <img class="works__img" src="./img/works-1.webp" loading="lazy" alt="Фото реализованного проекта">
-                            <div class="works-card__content">
-                                <h3 class="works-card__title">ФКП «Нижнетагильский институт<br> испытания металлов»</h3>
-                                <p class="works-card__desc">За период многолетнего сотрудничества реализовано несколько объектов для собственных нужд ГК «Металл Профиль», в том числе крытая крановая эстакада, г. Тюмень, пос. Рощино, ул. Сергея Ильюшина 1. Размеры данного объекта - 24х54х8 м. Вес поставляемых металлических конструкций - 130 т.</p>
-                                <ul class="works-card__meta">
-                                    <li><span>Год реализации</span><strong>2017 г.</strong></li>
-                                    <li><span>Площадь</span><strong>24x54x8 м.</strong></li>
-                                    <li><span>Вес конструкций</span><strong>130 тонн</strong></li>
-                                    <li><span>Заказчик</span><strong>ГК «Металл Профиль»</strong></li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="works-card">
-                            <img class="works__img" src="./img/works-1.webp" loading="lazy" alt="Фото реализованного проекта">
-                            <div class="works-card__content">
-                                <h3 class="works-card__title">ФКП «Нижнетагильский институт<br> испытания металлов»</h3>
-                                <p class="works-card__desc">За период многолетнего сотрудничества реализовано несколько объектов для собственных нужд ГК «Металл Профиль», в том числе крытая крановая эстакада, г. Тюмень, пос. Рощино, ул. Сергея Ильюшина 1. Размеры данного объекта - 24х54х8 м. Вес поставляемых металлических конструкций - 130 т.</p>
-                                <ul class="works-card__meta">
-                                    <li><span>Год реализации</span><strong>2017 г.</strong></li>
-                                    <li><span>Площадь</span><strong>24x54x8 м.</strong></li>
-                                    <li><span>Вес конструкций</span><strong>130 тонн</strong></li>
-                                    <li><span>Заказчик</span><strong>ГК «Металл Профиль»</strong></li>
-                                </ul>
-                            </div>
-                        </article>
-                        <button class="works__btn btn orange-btn" aria-label="Показать дополнительные проекты">Показать еще проекты</button>
-                 
-              
-        
-            </div>
-        </section>
-        <section class="request" id="request">
-            <div class="container request__container">
-                <div class="request__left">
-                    <h2 class="request__title h2-title">Рассчитаем стоимость металлоконструкций под ваш проект<span>.</span></h2>
-                    <p class="request__text text-16-22">Отправьте чертежи или опишите задачу - подготовим расчет стоимости и сроков. <u>Ответим в течение рабочего дня</u>.</p>
-                    <ul class="request__list">
-                        <li>Собственное производство</li>
-                        <li>Работаем с любыми объемами</li>
-                        <li>Сроки от 5 дней</li>
-                        <li>Доставка и монтаж</li>
-                    </ul>
-                </div>
-                <div class="request__form-wrap">
-                    <form class="request__form" action="#">
-                        <label>
-                            Ваше имя:
-                            <input type="text" placeholder="Андрей Петров">
-                        </label>
-                        <label>
-                            Телефон:
-                            <input type="tel" placeholder="+7 (978) 557-80-82">
-                        </label>
-                        <label>
-                            Опишите задачу:
-                            <textarea placeholder="Текст"></textarea>
-                        </label>
-                        <label>
-                            Прикрепите чертежи или фото - это ускорит расчет:
-                            <input class="visually-hidden request__file-input" type="file" id="requestFileMain">
-                            <div class="request__file-wrap">
-                                <span class="request__file" id="requestFileMainLabel">Файл не загружен</span>
-                                <img class="request__file-icon" src="./img/svg/file.svg" width="19" height="19" loading="lazy" alt="Иконка файла">
-                            </div>
-                        </label>
-                        <button class="request__btn btn orange-btn" type="submit" aria-label="Отправить заявку из формы">Отправить заявку</button>
-                        <p class="request__policy">Нажимая кнопку «Отправить заявку», вы даёте согласие на <a href="#" aria-label="Открыть политику обработки персональных данных">Обработку персональных данных</a>.</p>
-                    </form>
-                </div>
-            </div>
-            <dialog class="request-modal" id="requestModal">
-                <button class="request-modal__close" type="button" id="requestModalClose" aria-label="Закрыть окно">×</button>
-                <div class="request__form-wrap">
-                    <form class="request__form" action="#">
-                        <label>
-                            Ваше имя:
-                            <input type="text" placeholder="Андрей Петров">
-                        </label>
-                        <label>
-                            Телефон:
-                            <input type="tel" placeholder="+7 (978) 557-80-82">
-                        </label>
-                        <label>
-                            Опишите задачу:
-                            <textarea placeholder="Текст"></textarea>
-                        </label>
-                        <label>
-                            Прикрепите чертежи или фото - это ускорит расчет:
-                            <input class="visually-hidden request__file-input" type="file" id="requestFileModal">
-                            <div class="request__file-wrap">
-                                <span class="request__file" id="requestFileModalLabel">Файл не загружен</span>
-                                <img class="request__file-icon" src="./img/svg/file.svg" width="19" height="19" loading="lazy" alt="Иконка файла">
-                            </div>
-                        </label>
-                        <button class="request__btn btn orange-btn" type="submit" aria-label="Отправить заявку из модального окна">Отправить заявку</button>
-                        <p class="request__policy">Нажимая кнопку «Отправить заявку», вы даёте согласие на <a href="#" aria-label="Открыть политику обработки персональных данных">Обработку персональных данных</a>.</p>
-                    </form>
-                </div>
-            </dialog>
-            <video class="request__video" src="./video/2.mp4" autoplay muted loop playsinline></video>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container footer__container">
-            <div class="footer__top">
-                <a class="footer__logo" href="./index.html" aria-label="Перейти на главную страницу">ЗМК Эссен<span>.</span></a>
-                <div class="footer__right">
-                    <nav class="footer__nav">
-                        <a href="#" aria-label="Перейти в раздел Услуги">Услуги</a>
-                        <a href="#" aria-label="Перейти в раздел Каталог">Каталог</a>
-                        <a href="#" aria-label="Перейти в раздел О компании">О компании</a>
-                        <a href="#" aria-label="Перейти в раздел Проекты">Проекты</a>
-                        <a href="#" aria-label="Перейти в раздел Контакты">Контакты</a>
-                    </nav>
-                    <div class="footer__middle">
-                        <div class="footer__contacts">
-                            <a class="footer__phone" href="tel:+79785578082" aria-label="Позвонить по номеру +7 978 557-80-82">+7 978 557-80-82</a>
-                            <span class="footer__caption">Адрес производства:</span>
-                            <p class="footer__address">г. Пермь, Мелитопольская улица,<br> 7 строение 10 Округ ЮАО, Район<br> Бирюлёво Западное</p>
-                        </div>
-                        <button class="footer__btn btn orange-btn" type="button" onclick="openModal()" aria-label="Открыть форму заказа звонка">Заказать звонок</button>
-                    </div>
-                    <div class="footer__extra">
-                        <a class="footer__mail" href="mailto:info@site.ru" aria-label="Написать на почту info@site.ru"><svg width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path opacity="0.6" fill-rule="evenodd" clip-rule="evenodd" d="M0.245235 1.31042C0 1.82381 0 2.49587 0 3.84V8.16C0 9.50416 0 10.1762 0.245235 10.6896C0.460951 11.1412 0.805155 11.5083 1.22852 11.7384C1.70982 12 2.33988 12 3.6 12H11.4C12.6601 12 13.2901 12 13.7715 11.7384C14.1949 11.5083 14.5391 11.1412 14.7548 10.6896C15 10.1762 15 9.50416 15 8.16V3.84C15 2.49587 15 1.82381 14.7548 1.31042C14.5391 0.858832 14.1949 0.491681 13.7715 0.261584C13.2901 0 12.6601 0 11.4 0H3.6C2.33988 0 1.70982 0 1.22852 0.261584C0.805155 0.491681 0.460951 0.858832 0.245235 1.31042ZM3.31202 3.50077C3.05353 3.31696 2.7043 3.39146 2.53197 3.66718C2.35965 3.9429 2.4295 4.31542 2.68798 4.49923L3.43798 5.03256L3.52525 5.09463C4.64898 5.8939 5.3177 6.36955 6.03956 6.60154C6.99204 6.90765 8.00797 6.90765 8.96047 6.60154C9.68227 6.36954 10.351 5.8939 11.4748 5.09463L11.562 5.03256L12.312 4.49923C12.5705 4.31542 12.6404 3.9429 12.468 3.66718C12.2957 3.39146 11.9464 3.31696 11.688 3.50077L10.938 4.0341C9.70027 4.91425 9.17752 5.2785 8.63587 5.45255C7.8951 5.69064 7.10492 5.69064 6.3641 5.45255C5.8225 5.2785 5.29973 4.91425 4.06202 4.0341L3.31202 3.50077Z" fill="white"/>
-                            </svg>
-                             info@site.ru</a>
-                        <div class="footer__socials">
-                            <a href="#" aria-label="Мессенджер"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66114 14.9572C6.18908 14.9572 5.50499 14.7414 4.31589 13.878C3.56374 14.8493 1.18195 15.6083 1.07808 14.3097C1.07808 13.3349 0.863175 12.5111 0.619621 11.6118C0.329515 10.5038 0 9.27 0 7.4822C0 3.21231 3.48854 0 7.62176 0C11.7585 0 15 3.37059 15 7.52176C15.0138 11.6087 11.7304 14.9354 7.66114 14.9572ZM7.72204 3.69073C5.70916 3.58642 4.14038 4.98574 3.79297 7.18003C3.50643 8.99663 4.01503 11.2089 4.44841 11.324C4.65614 11.3744 5.17907 10.9499 5.50499 10.6226C6.04394 10.9965 6.67154 11.2211 7.32449 11.2737C9.41016 11.3744 11.1923 9.77969 11.3323 7.68726C11.4139 5.59037 9.80801 3.81434 7.72204 3.69434V3.69073Z" fill="white"/>
-                                </svg>
-                                </a>
-                            <a href="#" aria-label="Отправить"><svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8409 11.9624C12.8214 12.1767 12.7384 12.3802 12.6029 12.5467C12.4673 12.7131 12.2854 12.8348 12.0805 12.8961C11.8755 12.9575 11.6571 12.9555 11.4533 12.8906C11.2495 12.8258 11.0695 12.7009 10.9369 12.5321C9.7709 11.5983 7.95252 10.2543 7.95252 10.2543C7.95252 10.2543 6.63672 12.5881 6.40139 12.8272C6.32371 12.8931 6.23331 12.9419 6.1358 12.9706C6.03828 12.9992 5.93577 13.0071 5.83508 12.9936C5.73438 12.9801 5.63763 12.9456 5.55094 12.8923C5.46426 12.8389 5.38957 12.768 5.3317 12.6839C5.31969 12.6472 5.30549 12.6112 5.289 12.5762L6.02703 8.85853L11.2899 3.65357L4.11224 7.77726C4.11224 7.77726 0.871109 6.80155 0.389749 6.61092C0.265575 6.54264 0.163175 6.4403 0.0943835 6.31582C0.0255921 6.19133 -0.00668464 6.04978 0.00115147 5.90755C0.00898758 5.76531 0.0566056 5.62823 0.138649 5.51217C0.220693 5.39611 0.333787 5.30581 0.4647 5.25177C1.1493 4.90067 13.226 0.256798 13.6325 0.137255C14.039 0.0177111 15.1087 -0.293535 14.991 0.754355C14.8734 1.80224 12.9586 11.3873 12.8409 11.9624Z" fill="white"/>
-                                </svg>
-                                </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <div class="footer__copy">
-                    <p>Производство металлоконструкций в Перми</p>
-                    <span>© 2012-2026 г. Все права защищены.</span>
-                </div>
-                <div class="footer__legal">
-                    <a href="#" aria-label="Открыть политику конфиденциальности">Политика конфиденциальности</a>
-                    <a href="#" aria-label="Перейти к информации о разработке сайта">Разработка сайта</a>
-                </div>
-            </div>
+<!-- ══════ HEADER ══════ -->
+<header class="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="https://nt-marketolog.ru/" class="logo">
+        <div class="logo-crop">
+          <img src="1.png" alt="ВВМ Маркетинг">
         </div>
-    </footer>
+      </a>
+      <button type="button" class="header-burger" aria-label="Открыть меню" aria-controls="header-nav" aria-expanded="false">
+        <span aria-hidden="true"></span>
+      </button>
+      <nav class="header-nav" id="header-nav">
+        <div class="services-dropdown">
+          <button type="button" class="header-link services-summary" aria-haspopup="true" aria-expanded="false">Услуги</button>
+          <div class="services-menu" role="menu" aria-label="Услуги">
+            <a href="https://nt-marketolog.ru/issledovaniya-rynka-i-strategii-dlya-fmcg" class="services-menu-link" role="menuitem">Исследования рынка и стратегии</a>
+            <a href="https://nt-marketolog.ru/retail-consulting-fmcg" class="services-menu-link" role="menuitem">Ритейл-консалтинг</a>
+            <a href="https://nt-marketolog.ru/product-development-fmcg" class="services-menu-link" role="menuitem">Разработка продуктов питания</a>
+            <a href="https://nt-marketolog.ru/functional-product-development" class="services-menu-link" role="menuitem">Функциональность в продуктах</a>
+          </div>
+        </div>
+        <a href="https://nt-marketolog.ru/#portfolio" class="header-link">Портфолио</a>
+        <a href="https://nt-marketolog.ru/#contacts" class="header-link">Контакты</a>
+        <a href="https://nt-marketolog.ru/#contacts" class="header-link">Блог</a>
+        <a href="#checklist" class="btn btn-green header-cta-btn">Обсудить задачу</a>
+      </nav>
+    </div>
+  </div>
+</header>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer src="./js/script.js"></script>
+<!-- ══════ HERO ══════ -->
+<section class="hero">
+
+  <!-- Декоративная звезда-астериск (форма из Star.svg через CSS mask) -->
+  <!-- <div class="hero-star" aria-hidden="true"></div> -->
+
+  <div class="container">
+    <div class="hero-wrap">
+      <div class="hero-tag">Авторская методика · VVM-маркетинг</div>
+      <h1 class="hero-title">
+        <span class="bracket">[производство]</span><br>
+        и маркетинг 360
+      </h1>
+      <p class="hero-sub">
+        Линии недозагружены. Ассортимент растёт, а выручка — нет. Где теряются возможности?
+      </p>
+      <div class="hero-btns">
+        <a href="#checklist" class="btn btn-green">Пройти бесплатную диагностику</a>
+        <!-- <a href="#contact" class="btn btn-outline-w">Обсудить задачу</a> -->
+      </div>
+      <!-- <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-val">20+</span>
+          <span class="hero-stat-lbl">лет в стратегическом маркетинге</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-val">200+</span>
+          <span class="hero-stat-lbl">реализованных проектов</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-val">25+</span>
+          <span class="hero-stat-lbl">брендов выведено на рынок</span>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PAIN ══════ -->
+<section class="section">
+  <div class="container">
+    
+    <h2 class="section-title pain-title">четыре ситуации,<br><span class="bracket">[где теряется прибыль]</span></h2>
+    <p class="section-sub pain-sub" style="margin:0 auto 0">
+      Узнаете ситуацию своего предприятия?
+    </p>
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-num">01</div>
+        <h3>Мощности есть — загрузки нет</h3>
+        <p>Оборудование куплено, команда работает, качество в норме. Линии стоят на 30–40%. Деньги заморожены, прибыль не масштабируется.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">02</div>
+        <h3>SKU прибавляются, деньги нет</h3>
+        <p>Запускаете новые позиции, выходите в новые форматы. Оборот чуть подрос, но маржа на единицу упала.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">03</div>
+        <h3>Единственный аргумент — цена</h3>
+        <p>Ретейлер ждёт скидку. Покупатель ждёт промо. Маржа уходит, бренд не запоминается. Цикл повторяется.</p>
+      </div>
+      <div class="pain-card">
+        <div class="pain-num">04</div>
+        <h3>Непонятно, где проблема</h3>
+        <p>Продукт качественный, стоит на полке, рекламу давали. Продажи не идут. Что поменять — непонятно.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ THREE UNKNOWNS ══════ -->
+<section class="section section--dark ">
+  <div class="container unknowns bracket-frame">
+    <!-- <div class="label">Суть методики</div> -->
+    <h2 class="section-title white-text">задача <span class="bracket">[с тремя неизвестными]</span></h2>
+    <p class="section-sub" style="margin:0 auto 0">
+      На стыке производства и рынка — три вопроса. Ответить на каждый по отдельности недостаточно: прибыль возникает только на пересечении всех трёх.
+    </p>
+    <div class="unknowns-row">
+      <div class="u-card">
+        <span class="u-num">?₁</span>
+        <div class="u-q">Сколько мы реально можем производить?</div>
+        <div class="u-hint">Максимальная загрузка линий, целевая себестоимость, сезонные ограничения</div>
+      </div>
+      <div class="u-sep">×</div>
+      <div class="u-card u-card-2">
+        <span class="u-num">?₂</span>
+        <div class="u-q">Сколько рынок готов купить?</div>
+        <div class="u-hint">Ёмкость сегмента, платёжеспособный спрос, расстановка сил у конкурентов</div>
+      </div>
+      <div class="u-sep">×</div>
+      <div class="u-card u-card-3">
+        <span class="u-num">?₃</span>
+        <div class="u-q">Сколько мы продадим на практике?</div>
+        <div class="u-hint">Дистрибьюция, узнаваемость, сила бренда на полке</div>
+      </div>
+    </div>
+    <div class="unknowns-result">
+      Пересечение трёх ответов — <strong>ваша реальная прибыль</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FUNNEL ══════ -->
+<section class="section">
+  <div class="container">
+    <div class="label funnel-label">Структура методики</div>
+    <h2 class="section-title funnel-title">воронка «360»: от <span class="bracket">[производства]</span><br>до лояльности покупателей</h2>
+    <p class="section-sub">
+      Классическая воронка начинается с потребителя. Наша — с производственных возможностей. Не зная своих реальных ограничений, легко вложить деньги в рынок, которого нет или ёмкости которого не хватит. Этапы воронки кликабельны и содержат описание каждого этапа.
+    </p>
+    <div class="funnel-interactive">
+
+      <!-- ── SVG FUNNEL ── -->
+      <div class="funnel-svg-col">
+        <svg viewBox="0 0 560 535" xmlns="http://www.w3.org/2000/svg"
+             class="funnel-svg" id="funnel-svg"
+             role="list" aria-label="Воронка Производство и маркетинг 360">
+
+          <!-- ══ ТОЧКА 0 — ПРОИЗВОДСТВЕННЫЕ ВОЗМОЖНОСТИ (зелёная, самая широкая) ══ -->
+          <g class="fv-g fv-t0 active" data-idx="0" onclick="pickLevel(0)"
+             role="listitem" tabindex="0" aria-label="Точка 0: Производственные возможности">
+            <polygon class="fv-poly" points="0,0 560,0 536,52 24,52"/>
+            <text class="fv-name-txt" x="280" y="19" font-size="14" font-weight="800">ТОЧКА 0</text>
+            <text x="280" y="37" text-anchor="middle" dominant-baseline="middle"
+                  fill="rgba(255,255,255,.82)" font-family="Montserrat,sans-serif" font-size="10.5">
+              Производственные возможности
+            </text>
+          </g>
+
+          <!-- ── УРОВЕНЬ 1 — Известность бренда ── -->
+          <g class="fv-g" data-idx="1" onclick="pickLevel(1)"
+             role="listitem" tabindex="0" aria-label="Уровень 1: Осведомленность">
+            <polygon class="fv-poly" points="24,57 536,57 512,109 48,109"/>
+            <text class="fv-name-txt" x="280" y="83">Осведомлённость</text>
+          </g>
+
+          <!-- ── УРОВЕНЬ 2 — Релевантность ── -->
+          <g class="fv-g" data-idx="2" onclick="pickLevel(2)"
+             role="listitem" tabindex="0" aria-label="Уровень 2: Релевантность">
+            <polygon class="fv-poly" points="48,114 512,114 488,166 72,166"/>
+            <text class="fv-name-txt" x="280" y="140">Релевантность</text>
+          </g>
+
+          <!-- ── УРОВЕНЬ 3 — Функциональность ── -->
+          <g class="fv-g" data-idx="3" onclick="pickLevel(3)"
+             role="listitem" tabindex="0" aria-label="Уровень 3: Функциональность">
+            <polygon class="fv-poly" points="72,171 488,171 464,223 96,223"/>
+            <text class="fv-name-txt" x="280" y="197">Функциональность</text>
+          </g>
+
+          <!-- ── УРОВЕНЬ 4 — Восприятие ── -->
+          <g class="fv-g" data-idx="4" onclick="pickLevel(4)"
+             role="listitem" tabindex="0" aria-label="Уровень 4: Восприятие">
+            <polygon class="fv-poly" points="96,228 464,228 440,280 120,280"/>
+            <text class="fv-name-txt" x="280" y="254">Восприятие</text>
+          </g>
+
+          <!-- ── УРОВЕНЬ 5 — Доступность ── -->
+          <g class="fv-g" data-idx="5" onclick="pickLevel(5)"
+             role="listitem" tabindex="0" aria-label="Уровень 5: Доступность">
+            <polygon class="fv-poly" points="120,285 440,285 416,337 144,337"/>
+            <text class="fv-name-txt" x="280" y="311">Доступность</text>
+          </g>
+
+          <!-- ── УРОВЕНЬ 6 — Предпочтение ── -->
+          <g class="fv-g" data-idx="6" onclick="pickLevel(6)"
+             role="listitem" tabindex="0" aria-label="Уровень 6: Предпочтение">
+            <polygon class="fv-poly" points="144,342 416,342 392,394 168,394"/>
+            <text class="fv-name-txt" x="280" y="368">Предпочтение</text>
+          </g>
+
+          <!-- ── УРОВЕНЬ 7 — Лояльность ── -->
+          <g class="fv-g" data-idx="7" onclick="pickLevel(7)"
+             role="listitem" tabindex="0" aria-label="Уровень 7: Лояльность">
+            <polygon class="fv-poly" points="168,399 392,399 368,451 192,451"/>
+            <text class="fv-name-txt" x="280" y="425">Лояльность</text>
+          </g>
+
+          <!-- Стрелка вниз — возврат к Точке 0 -->
+          <line x1="280" y1="455" x2="280" y2="479"
+                stroke="#3DBD5E" stroke-width="2.5" stroke-dasharray="5,3"/>
+          <polygon points="272,473 288,473 280,487" fill="#3DBD5E"/>
+
+          <!-- Круг Точка 0 (замыкание воронки) -->
+          <circle cx="280" cy="506" r="16" fill="none"
+                  stroke="#3DBD5E" stroke-width="1.8"/>
+          <text x="280" y="506" text-anchor="middle" dominant-baseline="middle"
+                fill="#3DBD5E" font-family="Montserrat,sans-serif"
+                font-size="8.5" font-weight="800" letter-spacing=".04em">↺ Т·0</text>
+
+          <text x="303" y="506" dominant-baseline="middle"
+                fill="#9CA3AF" font-family="Montserrat,sans-serif" font-size="11">
+            Системное планирование загрузки
+          </text>
+        </svg>
+
+        <!-- Три потенциала -->
+        <!-- <div class="three-pot">
+          <div class="tp tp-0">
+            <div class="tp-q">?₁</div>
+            <div class="tp-name">Производственный потенциал</div>
+            <div class="tp-lvl">Точка 0</div>
+            <div class="tp-hint">Загрузка линий, себестоимость, маржинальность, сезонность</div>
+          </div>
+          <div class="tp">
+            <div class="tp-q">?₂</div>
+            <div class="tp-name">Потенциал рынка</div>
+            <div class="tp-lvl">Уровни 1–4</div>
+            <div class="tp-hint">Осведомлённость, релевантность, функциональность, восприятие</div>
+          </div>
+          <div class="tp">
+            <div class="tp-q">?₃</div>
+            <div class="tp-name">Потенциал продаж</div>
+            <div class="tp-lvl">Уровни 5–7</div>
+            <div class="tp-hint">УТП, полочная дистрибьюция, лояльность</div>
+          </div>
+        </div>
+        <div class="tp-eq">На пересечении трёх потенциалов — <strong>ваша реальная прибыль</strong></div>
+
+        <p class="fv-hint" style="margin-top:12px">Нажмите на любой уровень воронки, чтобы узнать подробнее</p> -->
+      </div>
+
+      <!-- ── DETAIL PANEL ── -->
+      <div class="fv-detail-col">
+        <div class="fv-card" id="fv-detail">
+          <!-- populated by JS on init -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════ VIDEO ══════ -->
+<section class="section video-section section--dark">
+  <div class="container">
+    <!-- <div class="label label--white">Практический разбор</div> -->
+    <h2 class="section-title video-title section-title--white">методика <span class="bracket">[в работе]</span></h2>
+    <p class="section-sub video-sub section-sub--white">
+      Марина Панфилова, автор методики и управляющий партнер VVM-маркетинг, разбирает реальный кейс: федеральный производитель против регионального по семи уровням воронки — с живыми данными потребительских исследований молочного рынка.
+
+    </p>
+    <div class="video-wrap">
+      <iframe src="https://rutube.ru/play/embed/8254d00696e3f338c2b7d2723c5360ed"
+              title="Производство и маркетинг 360 — практический разбор для молочной отрасли"
+              frameborder="0"
+              allow="clipboard-write; autoplay; fullscreen; picture-in-picture"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CASES ══════ -->
+<section class="section">
+  <div class="container">
+    <div class="label">Реальные результаты</div>
+    <h2 class="section-title">кейсы из практики — <br><span class="bracket">[говорят цифры]</span></h2>
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="case-head">
+          <div class="case-ind">ЗОЖ-продукты · FMCG</div>
+        </div>
+        <div class="case-body">
+          <div class="case-name">WowFoods: новые линейки для разных мотиваций</div>
+          <div class="case-label">Задача</div>
+          <p>Большой портфель полезной продукции — но непонятно, куда расти дальше. Нужно было найти новые возможности для бренда и определить вектор развития.</p>
+          <a href="https://nt-marketolog.ru/#portfolio" class="case-more" target="_blank" rel="noopener">подробнее</a>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-head">
+          <div class="case-ind">Мясная отрасль</div>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Оценка рынка баранины: спасённые инвестиции</div>
+          <div class="case-label">Задача</div>
+          <p>Клиент готовился строить цех под баранину. Прежде чем тратить деньги — оценили рынок: ёмкость, сезонность, культурные циклы спроса.</p>
+          <a href="https://nt-marketolog.ru/#portfolio" class="case-more" target="_blank" rel="noopener">подробнее</a>
+        </div>
+      </div>
+      <div class="case-card">
+        <div class="case-head">
+          <div class="case-ind">Птицеводство · Полуфабрикаты</div>
+        </div>
+        <div class="case-body">
+          <div class="case-name">Бренд «Куркод»: выход в премиальный ритейл</div>
+          <div class="case-label">Задача</div>
+          <p>Небольшому производителю нужно занять полку рядом с «Петелинкой» и «Черкизово». Конкурировать ценой — невозможно. Нужно УТП.</p>
+          <a href="https://nt-marketolog.ru/#portfolio" class="case-more" target="_blank" rel="noopener">подробнее</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ CHECKLIST ══════ -->
+<section class="section section--dark" id="checklist">
+  <div class="container">
+    <div class="label checklist-label">Бесплатный инструмент</div>
+    <h2 class="section-title checklist-title">диагностика воронки<br><span class="bracket">[вашего производства]</span></h2>
+    <p class="section-sub checklist-sub">
+      21 вопрос — и вы увидите, на каком уровне теряются ваши продажи. Занимает 4–6 минут.
+    </p>
+    <div class="cl-layout">
+      <div class="cl-sidebar">
+        <h3>Уровни диагностики</h3>
+        <div class="cl-steps-nav" id="cl-nav">
+          <!-- Generated by JS -->
+        </div>
+      </div>
+      <div class="cl-box" id="cl-box">
+        <div class="cl-progress">
+          <div class="cl-progress-bar">
+            <div class="cl-progress-fill" id="cl-progress-fill" style="width:0%"></div>
+          </div>
+          <div class="cl-progress-text" id="cl-progress-text">Шаг 1 из 7</div>
+        </div>
+        <div id="cl-step-content"></div>
+        <div id="cl-result">
+          <h2 class="result-title">Диагностика готова</h2>
+          <p class="result-sub">Результат по уровням вашей воронки:</p>
+          <div class="bars" id="cl-bars"></div>
+          <div class="bottleneck" id="cl-bottleneck"></div>
+          <div id="cl-lead-form" class="lead-form">
+            <h3>Хотите разбор узких мест вашей воронки?</h3>
+            <p class="lf-sub">Пришлём конкретные шаги по вашей ситуации — на почту, в течение 1–2 рабочих дней</p>
+            <form id="cl-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-name">Ваше имя *</label>
+                  <input type="text" id="f-name" class="form-input" placeholder="Имя" required>
+                </div>
+                <div class="form-group">
+                  <label for="f-company">Компания</label>
+                  <input type="text" id="f-company" class="form-input" placeholder="Название компании">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-email">Email *</label>
+                  <input type="email" id="f-email" class="form-input" placeholder="mail@company.ru" required>
+                </div>
+                <div class="form-group">
+                  <label for="f-phone">Телефон *</label>
+                  <input type="tel" id="f-phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-green" style="width:100%;padding:16px;font-size:15px">
+                Получить разбор бесплатно →
+              </button>
+              <p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Мы не рассылаем спам.</p>
+            </form>
+          </div>
+          <div id="cl-success">
+            <div class="check">✓</div>
+            <h3>Получили. Разбор пришлём в ближайшие 1–2 дня</h3>
+            <p>Марина Панфилова изучит результаты и подготовит рекомендации под вашу ситуацию.</p>
+            <a href="#contact" class="btn btn-outline-d">Обсудить лично</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ ABOUT ══════ -->
+
+<section class="section about-section" id="about">
+  <div class="container">
+    <div class="about-section-inner">
+      <svg class="about-svg" xmlns="http://www.w3.org/2000/svg" width="239" height="927" viewBox="0 0 239 927" fill="none"><path d="M0 927V0H239V99.0385H125V827.962H239V927H0Z" fill="#5CB885"></path></svg> 
+    <div class="author-stage">
+      <h2 class="author-title"><span>управляющий партнер</span>Марина Панфилова</h2>
+      <img class="author-portrait" src="./author-marina.png" alt="Марина Панфилова">
+      <a class="author-action" href="#author-expertise">Экспертиза</a>
+      <blockquote class="author-quote">
+        «В каждом проекте моя задача — максимально погрузиться в его специфику, обеспечить предпосылки для цельного, последовательного и логичного развития бренда, креатива и коммуникаций»
+      </blockquote>
+      <div class="author-stats" aria-label="Опыт Марины Панфиловой">
+        <div class="author-stat">
+          <span class="author-stat-value">&gt;20</span>
+          <div class="author-stat-label">лет в стратегическом маркетинге</div>
+        </div>
+        <div class="author-stat">
+          <span class="author-stat-value">200</span>
+          <div class="author-stat-label">проектов реализовано</div>
+        </div>
+        <div class="author-stat">
+          <span class="author-stat-value">&gt;25</span>
+          <div class="author-stat-label">брендов выпущено на рынок</div>
+        </div>
+      </div>
+    </div>
+    <svg class="about-svg" width="239" height="927" viewBox="0 0 239 927" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_2016_593)">
+      <path d="M239 0V927H0V827.962H114V99.038H0V0H239Z" fill="#5CB885"/>
+      </g>
+      <defs>
+      <clipPath id="clip0_2016_593">
+      <rect width="239" height="927" fill="white" transform="matrix(-1 0 0 -1 239 927)"/>
+      </clipPath>
+      </defs>
+      </svg>
+      
+    </div>
+  </div>
+  <div class="author-modal" id="author-expertise" aria-label="Экспертиза Марины Панфиловой">
+    <div class="author-modal-card">
+      <a class="author-modal-close" href="#about" aria-label="Закрыть">×</a>
+      <div class="author-modal-title">[Марина Панфилова]</div>
+      <strong>Экспертиза</strong>
+      <ul>
+        <li>маркетинговый анализ и стратегии</li>
+        <li>стратегическое планирование в коммуникациях</li>
+        <li>разработка и сопровождение запуска брендов с нуля</li>
+      </ul>
+      <strong>Опыт</strong>
+      <ul>
+        <li>успешная реализация комплексных проектов</li>
+        <li>стратегические проекты на рынках России и СНГ, Европы и Ближнего Востока</li>
+        <li>кросс-культурный и кросс-категорийный опыт</li>
+        <li>работа в ведущих маркетинговых агентствах России</li>
+      </ul>
+      <strong>Результат</strong>
+      <ul>
+        <li>более 200 реализованных проектов для бизнесов разного масштаба в разных отраслях</li>
+        <li>более 25 брендов выпущено на рынок</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FINAL CTA ══════ -->
+<section class="final-cta" id="contact">
+  <div class="container bracket-frame">
+    <h2><span class="bracket">[найдем узкое место]</span><br>и что с ним делать</h2>
+    <p>Разберём воронку вашего производства по конкретным данным. Первая консультация бесплатна.</p>
+    <div class="cta-btns">
+      <a href="#checklist" class="btn btn-green" style="font-size:16px;padding:16px 36px">Пройти диагностику</a>
+      <a href="https://nt-marketolog.ru/#contact" class="btn btn-outline-w" style="font-size:16px;padding:16px 36px">связаться с нами</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-stage">
+      <a href="https://nt-marketolog.ru/" class="footer-logo" aria-label="VVM-маркетинг">
+        <img src="1.webp" alt="VVM-маркетинг">
+      </a>
+
+      <nav class="footer-nav" aria-label="Навигация в футере">
+        <a href="https://nt-marketolog.ru/#services" class="footer-link">Услуги</a>
+        <a href="https://nt-marketolog.ru/#portfolio" class="footer-link">Портфолио</a>
+        <a href="https://nt-marketolog.ru/#contacts" class="footer-link">Контакты</a>
+        <a href="https://nt-marketolog.ru/blog" class="footer-link">Блог</a>
+      </nav>
+
+      <a href="https://t.me/tyutikova_your_external_marketer" class="footer-channel">Канал Ваш_внештатный</a>
+
+      
+    </div>
+    <div class="footer-stage">
+      <div class="footer-requisites">
+        Индивидуальный предприниматель Тютикова Наталья Сергеевна<br>
+        ИНН: 165100317403<br>
+        <a href="mailto:naty@nt-marketolog.ru">naty@nt-marketolog.ru</a><br>
+        +7 (985) 188 1513
+      </div>
+
+      <div class="footer-legal">
+        <a href="https://nt-marketolog.ru/privacy" class="footer-link">Политика конфиденциальности</a>
+        <a href="https://nt-marketolog.ru/sitemap" class="footer-link">Карта сайта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+
+const STEPS = [
+  {
+    icon:'👁', tag:'Уровень 1 из 7', title:'Осведомлённость',
+    desc:'Покупатель знает о вас до входа в магазин?',
+    navLabel:'Осведомлённость',
+    questions:[
+      'Большинство покупателей в вашем целевом регионе знают ваш бренд',
+      'Бренд входит в ТОП-3 по спонтанному упоминанию в категории — покупатель называет вас без подсказки',
+      'У вас есть коммуникационная стратегия: реклама, digital или PR'
+    ]
+  },
+  {
+    icon:'📊', tag:'Уровень 2 из 7', title:'Релевантность',
+    desc:'Достаточен ли платёжеспособный спрос на вашу категорию в регионе?',
+    navLabel:'Релевантность',
+    questions:[
+      'Перед выводом продукта или выходом в регион вы оценивали ёмкость рынка',
+      'Вы знаете объём платёжеспособного спроса в своём целевом сегменте в рублях',
+      'Вы отслеживаете динамику и тренды своей категории за последние 2 года'
+    ]
+  },
+  {
+    icon:'🥛', tag:'Уровень 3 из 7', title:'Функциональность',
+    desc:'Продукт делает то, за чем покупатель его берёт?',
+    navLabel:'Функциональность',
+    questions:[
+      'Вы проводили потребительские тесты — слепые или открытые — с реальными покупателями',
+      'Продукт закрывает конкретный сценарий потребления, покупатель понимает «для чего это»',
+      'Вкус, упаковка и состав соответствуют ожиданиям целевой аудитории'
+    ]
+  },
+  {
+    icon:'💡', tag:'Уровень 4 из 7', title:'Восприятие',
+    desc:'Какой образ вашего бренда живёт в голове покупателя?',
+    navLabel:'Восприятие',
+    questions:[
+      'Вы знаете, как покупатели воспринимают атрибуты вашего бренда в сравнении с конкурентами',
+      'Бренд ассоциируется с чёткими характеристиками — «премиальный», «натуральный», «для семьи» — а не воспринимается как один из многих',
+      'Покупатель готов платить за ваш бренд больше, чем за аналоги, без скидки'
+    ]
+  },
+  {
+    icon:'🏪', tag:'Уровень 5 из 7', title:'Доступность',
+    desc:'Покупатель находит ваш товар, когда за ним приходит?',
+    navLabel:'Доступность',
+    questions:[
+      'Продукт представлен во всех ключевых каналах сбыта вашего региона: сети, опт, фирменные точки',
+      'Уровень out-of-stock — отсутствия товара на полке — не превышает 5–7%',
+      'Выкладка соответствует стандартам для вашей категории'
+    ]
+  },
+  {
+    icon:'⭐', tag:'Уровень 6 из 7', title:'Предпочтение',
+    desc:'Ваш бренд — первый выбор покупателя или берут только по акции?',
+    navLabel:'Предпочтение',
+    questions:[
+      'Покупатели называют конкретные причины, почему берут именно ваш бренд, а не аналоги по схожей цене',
+      'В ответ на «Что вы обычно покупаете?» ваш бренд называют в числе первых в категории',
+      'Уровень удовлетворённости (CSAT) — готовность купить повторно по обычной цене — выше среднего по категории'
+    ]
+  },
+  {
+    icon:'❤️', tag:'Уровень 7 из 7', title:'Лояльность',
+    desc:'Покупатели возвращаются или снова нужна акция?',
+    navLabel:'Лояльность',
+    questions:[
+      'Вы отслеживаете долю повторных покупок и динамику лояльной аудитории',
+      'Есть программа или механика удержания покупателей',
+      'Доля продаж по промо не превышает 30% от оборота'
+    ]
+  }
+];
+
+const BOTTLENECK_MSG = [
+  {h:'Узкое место: Осведомлённость', t:'Покупатели не знают о вас. Если бренда нет в «шорт-листе» в голове покупателя — он не попадёт в корзину. Нужна коммуникационная стратегия под ваш регион и канал сбыта, а не разовые акции.'},
+  {h:'Узкое место: Релевантность', t:'Риск — вложить деньги в рынок, ёмкости которого не хватит. Без честной оценки платёжеспособного спроса производство простаивает или уходит в демпинг. Нужен анализ рынка до принятия инвестиционных решений.'},
+  {h:'Узкое место: Функциональность', t:'После первой покупки — разочарование. Реклама приводит покупателей, они не возвращаются. Нужны потребительские тесты и корректировка продукта или сценария потребления до масштабирования.'},
+  {h:'Узкое место: Восприятие', t:'Бренд не удерживает цену без скидки — единственный рычаг спроса уже промо. Слабый имидж делает производство заложником акций ритейла. Нужна работа с позиционированием и атрибутами восприятия.'},
+  {h:'Узкое место: Доступность', t:'Товара нет на полке — нет продаж. Реклама сработала, покупатель пришёл, а полка пустая. Нужна работа с нумерической дистрибуцией, ISA и стандартами выкладки: это прямые потери, устраняемые быстрее, чем кажется.'},
+  {h:'Узкое место: Предпочтение', t:'Продают только по акции — бренд не стал «основным» для покупателя. Промозависимость даёт «пилообразный» график загрузки: перегрузка линий во время акции и простой между ними. Нужна механика перевода покупателей из пробных в регулярных.'},
+  {h:'Узкое место: Лояльность', t:'Нестабильная покупательская база — нестабильная загрузка линий. Деньги постоянно уходят на привлечение новых покупателей, а не на удержание тех, кто уже купил. Нужна механика повторных покупок и работа с NPS.'}
+];
+
+let currentStep = 0;
+let answers = Array.from({length:7}, () => [null,null,null]);
+let scores = new Array(7).fill(0);
+
+function init(){
+  buildNav();
+  renderStep(0);
+}
+
+function buildNav(){
+  const nav = document.getElementById('cl-nav');
+  if(!nav) return;
+  nav.innerHTML = STEPS.map((s,i) => `
+    <div class="clsn-item" id="nav-${i}">
+      <div class="clsn-dot" id="dot-${i}">${i+1}</div>
+      <span>${s.navLabel}</span>
+    </div>
+  `).join('');
+  updateNav();
+}
+
+function updateNav(){
+  STEPS.forEach((_,i) => {
+    const item = document.getElementById('nav-'+i);
+    const dot  = document.getElementById('dot-'+i);
+    if(!item) return;
+    const allDone = answers[i].every(a => a !== null);
+    item.className = 'clsn-item' + (i===currentStep?' active':allDone?' done':'');
+    dot.textContent = allDone && i!==currentStep ? '✓' : (i+1);
+  });
+}
+
+function updateProgress(){
+  const pct = ((currentStep)/7)*100;
+  const fill = document.getElementById('cl-progress-fill');
+  const txt  = document.getElementById('cl-progress-text');
+  if(fill) fill.style.width = pct+'%';
+  if(txt)  txt.textContent  = 'Шаг '+(currentStep+1)+' из 7';
+}
+
+function renderStep(idx){
+  const s   = STEPS[idx];
+  const ans = answers[idx];
+  const el  = document.getElementById('cl-step-content');
+  if(!el) return;
+  el.innerHTML = `
+    <div class="step-tag">${s.tag}</div>
+    <span class="step-icon-lg">${('0'+(idx+1)).slice(-2)}</span>
+    <h2 class="step-title">${s.title}</h2>
+    <p class="step-desc">${s.desc}</p>
+    <div class="questions">
+      ${s.questions.map((q,qi) => `
+        <div class="q-item">
+          <div class="q-text">${q}</div>
+          <div class="q-opts">
+            <button class="qo ${ans[qi]===2?'yes':''}" onclick="setAnswer(${qi},2)">Да</button>
+            <button class="qo ${ans[qi]===1?'partly':''}" onclick="setAnswer(${qi},1)">Частично</button>
+            <button class="qo ${ans[qi]===0?'no':''}"  onclick="setAnswer(${qi},0)">Нет</button>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="step-footer">
+      ${idx>0
+        ? '<button class="btn btn-outline-d" onclick="prevStep()">← Назад</button>'
+        : '<span></span>'}
+      <button class="btn btn-green" onclick="nextStep()" style="min-width:200px">
+        ${idx<6 ? 'Следующий уровень →' : 'Получить результат'}
+      </button>
+    </div>
+  `;
+  updateProgress();
+  updateNav();
+}
+
+window.setAnswer = function(qi, val){
+  answers[currentStep][qi] = val;
+  const opts = document.querySelectorAll(`.q-item:nth-child(${qi+1}) .qo`);
+  const classes = ['yes','partly','no'];
+  opts.forEach((btn, i) => {
+    btn.className = 'qo' + ([2,1,0][i]===val ? ' '+classes[i] : '');
+  });
+};
+
+window.nextStep = function(){
+  const unanswered = answers[currentStep].filter(a => a===null).length;
+  if(unanswered > 0){
+    alert('Пожалуйста, ответьте на все вопросы уровня (' + unanswered + ' осталось)');
+    return;
+  }
+  scores[currentStep] = answers[currentStep].reduce((s,v) => s+v, 0);
+  if(currentStep < 6){
+    currentStep++;
+    renderStep(currentStep);
+    document.getElementById('cl-box').scrollIntoView({behavior:'smooth',block:'start'});
+  } else {
+    scores[currentStep] = answers[currentStep].reduce((s,v) => s+v, 0);
+    showResult();
+  }
+};
+
+window.prevStep = function(){
+  if(currentStep > 0){
+    currentStep--;
+    renderStep(currentStep);
+  }
+};
+
+function showResult(){
+  document.getElementById('cl-step-content').style.display = 'none';
+  document.querySelector('.cl-progress').style.display = 'none';
+  const result = document.getElementById('cl-result');
+  result.style.display = 'block';
+
+  // Find bottleneck
+  let minScore = 999, minIdx = 0;
+  scores.forEach((s,i) => { if(s < minScore){ minScore=s; minIdx=i; } });
+
+  // Render bars
+  const barsEl = document.getElementById('cl-bars');
+  barsEl.innerHTML = scores.map((score, i) => {
+    const pct  = Math.round((score/6)*100);
+    const cls  = pct >= 67 ? 'g' : pct >= 34 ? 'm' : 'b';
+    const isB  = i === minIdx;
+    return `
+      <div class="bar-row">
+        <div class="bar-lbl" style="${isB?'font-weight:700;color:#B91C1C':''}">
+          ${isB?'⚠ ':''}${STEPS[i].navLabel}
+        </div>
+        <div class="bar-track">
+          <div class="bar-fill ${cls}" data-w="${pct}%" style="width:0%"></div>
+        </div>
+        <div class="bar-score" style="${isB?'color:#B91C1C':''}">${score}/6</div>
+      </div>
+    `;
+  }).join('');
+
+  // Animate bars after paint
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      document.querySelectorAll('.bar-fill').forEach(el => {
+        el.style.width = el.dataset.w;
+      });
+    }, 80);
+  });
+
+  // Bottleneck message
+  const msg = BOTTLENECK_MSG[minIdx];
+  document.getElementById('cl-bottleneck').innerHTML = `
+    <h3>${msg.h}</h3><p>${msg.t}</p>
+  `;
+
+  updateNav();
+  document.getElementById('cl-result').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// Form submit
+document.addEventListener('DOMContentLoaded', function(){
+  const form = document.getElementById('cl-form');
+  if(!form) return;
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    const name    = document.getElementById('f-name').value.trim();
+    const company = document.getElementById('f-company').value.trim();
+    const email   = document.getElementById('f-email').value.trim();
+    const phone   = document.getElementById('f-phone').value.trim();
+    if(!name || !email || !phone){
+      alert('Пожалуйста, заполните обязательные поля: имя, email и телефон');
+      return;
+    }
+    const btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    const origText = btn.textContent;
+    btn.textContent = 'Отправляем…';
+    const scoreSummary = LEVELS.map(function(l,i){ return l.title + ': ' + scores[i] + '/6'; }).join('; ');
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/marina.panfilowa@gmail.com', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify({
+          'Имя': name,
+          'Компания': company || '—',
+          'Email': email,
+          'Телефон': phone,
+          'Диагностика': scoreSummary,
+          _subject: 'Новая заявка — Технология 360: ' + name,
+          _template: 'table',
+          _captcha: 'false'
+        })
+      });
+      const data = await res.json();
+      if(data.success === 'true' || data.success === true){
+        document.getElementById('cl-lead-form').style.display = 'none';
+        document.getElementById('cl-success').style.display  = 'block';
+      } else {
+        throw new Error('send failed');
+      }
+    } catch(err) {
+      btn.disabled = false;
+      btn.textContent = origText;
+      alert('Не удалось отправить заявку. Пожалуйста, попробуйте ещё раз.');
+    }
+  });
+});
+
+init();
+
+})();
+
+/* ═══ FUNNEL INTERACTIVE ═══ */
+const LEVELS = [
+  /* ── ТОЧКА 0 ── */
+  { icon:'⚙️', title:'Точка 0 — Производственные возможности',
+    question:'Каков реальный потолок вашего производства прямо сейчас?',
+    text:'Стартовая точка. Текущая загрузка линий, себестоимость единицы, маржа по SKU, сезонные пики и провалы. Не «можем больше», а «что есть на самом деле». Без этих данных любой маркетинговый план — расчёт на бумаге.',
+    kpi:['Производственные мощности и загрузка','Себестоимость и целевая маржа по SKU','Точка безубыточности и структура продаж'],
+    caseLabel:'Логика методики «360»',
+    caseTxt:'Классические воронки строятся от потребителя: «что хочет рынок». Воронка «360» идёт от обратного: «что вы реально способны произвести и по какой цене». Это защищает от дорогостоящих ошибок планирования.',
+    mets:['Реалистичный план продаж','Без кассовых разрывов'] },
+
+  /* ── УРОВНИ 1–7 ── */
+  { icon:'👁', title:'Осведомлённость',
+    question:'Покупатель знает о вас до входа в магазин?',
+    text:'Если бренд не входит в «шорт-лист» в голове покупателя — он не попадёт в корзину. Низкая спонтанная известность вынуждает «перекупать» клиента у конкурентов через скидки. Лидеры категории достигают 30–40% спонтанного знания и 80–90% наведённого.',
+    kpi:['Спонтанное знание бренда (unaided)','Наведённая известность (aided)','Охват и частота коммуникации'],
+    caseLabel:'ЛебедяньМолоко — выход в регионы',
+    caseTxt:'Бренд был известен в домашних регионах, но слабо — за их пределами; digital использовался фрагментарно. Кросс-форматная кампания в Яндексе с таргетингом по данным ритейлеров дала измеримый результат.',
+    mets:['+36% запоминаемость рекламы','+14% намерение купить'] },
+
+  { icon:'📊', title:'Релевантность',
+    question:'Достаточно ли велик платёжеспособный спрос на вашу категорию в регионе?',
+    text:'Мощности могут быть готовы — а рынок нет. Ошибка в оценке ёмкости сегмента ведёт к простою линий или к демпингу. Критично для нишевых продуктов: без честной оценки платёжеспособного спроса производство становится убыточным вне зависимости от качества.',
+    kpi:['Платёжеспособный спрос в сегменте','Объём рынка в рублях и тоннах','Маржинальность при целевой цене'],
+    caseLabel:'Анализ рынка мяса баранины',
+    caseTxt:'Производитель готовился строить цех. Исследование показало: спрос на баранину привязан к культурным и религиозным циклам, нестабилен по месяцам, объём сегмента не покрывает инвестиции. Цех не построили.',
+    mets:['2–20 млн ₽ инвестиций сохранено','Нерентабельный цех не построен'] },
+
+  { icon:'🥛', title:'Функциональность',
+    question:'Продукт делает то, для чего покупатель его берёт?',
+    text:'При слабой функциональности первая покупка (проба) происходит, но повторных — нет. Реклама приводит покупателей, они уходят разочарованными. Пиковая загрузка линий в первые месяцы сменяется глубоким простоем и возвратами продукции.',
+    kpi:['Слепые и брендированные тесты vs конкуренты','Ключевые драйверы покупки','Индекс удовлетворённости (CSI)'],
+    caseLabel:'WowFoods — архитектура бренда',
+    caseTxt:'Большой портфель полезной продукции — но непонятно, куда расти. Исследование рынка и архитектура бренда выявили три мотивации покупателя: похудеть, быть здоровым, быть в тренде. Под каждую — отдельная линейка.',
+    mets:['>33 тыс. заказов на Ozon','3 линейки — 3 мотивации'] },
+
+  { icon:'💡', title:'Восприятие',
+    question:'Какой образ вашего бренда живёт в голове покупателя?',
+    text:'Имидж бренда — «премиальный», «надёжный» или «дешёвая замена» — определяет способность удерживать цену без постоянных скидок. Слабое восприятие делает производство заложником акций ритейла: всплески во время промо и простой между ними.',
+    kpi:['Атрибуты бренда vs конкуренты','Воспринимаемое (не фактическое) качество','Brand Sentiment в соцсетях и СМИ'],
+    caseLabel:'Куркод — создание бренда с нуля',
+    caseTxt:'Небольшой производитель курицы не мог войти в сети без сильного бренда. Исследование рынка вскрыло свободную нишу; разработан уникальный бренд с чётким позиционированием. Бренд вошёл в сети, включая «Азбуку Вкуса».',
+    mets:['+300% объём продаж','Вход в «Азбуку Вкуса»'] },
+
+  { icon:'🏪', title:'Доступность',
+    question:'Ваш товар есть на полке, когда покупатель за ним приходит?',
+    text:'Физическое наличие товара на полке — самостоятельный уровень. Высокая известность и сильный бренд не конвертируются в деньги, если покупатель не находит продукт в своём магазине. Дистрибуция даёт присутствие, работа с доступностью превращает его в продажи.',
+    kpi:['Numeric Distribution (ND)','In-Stock Availability (ISA)','SLT — полнота и своевременность поставок'],
+    caseLabel:'Mondelēz и «Магнит» — повышение OSA',
+    caseTxt:'Виртуальные остатки не совпадали с реальными: товар числился, полка была пустой. Настроен обмен данными, внедрены OSA-алерты и фотораспознавание SKU. Мерчандайзеры стали устранять конкретные причины OOS.',
+    mets:['OSA 86% → 94%','+7,8% продажи (национальный запуск)'] },
+
+  { icon:'⭐', title:'Предпочтение',
+    question:'Ваш бренд — первый выбор покупателя или берут только по акции?',
+    text:'Стал ли бренд «основным» для потребителя? Без сильного предпочтения во время промо конкурента теряется до 36% продаж. Промозависимость порождает «пилообразный» график загрузки: перегрузка линий во время акций и простой между ними.',
+    kpi:['Доля промо-продаж в обороте','«Что вы обычно покупаете?» — позиция бренда','CSAT — готовность купить повторно по регулярной цене'],
+    caseLabel:'Простоквашино — рост регулярности покупки',
+    caseTxt:'Кешбэк-акция в приложении Т-Банка переводила покупателей из пробных в регулярных. Сегментированные условия кешбэка — для тех, кто брал впервые, и для тех, кто уже покупал. 93% участников до акции не покупали кефир в категории.',
+    mets:['+31% продажи кефира','ROMI ~200%'] },
+
+  { icon:'❤️', title:'Лояльность',
+    question:'Покупатели возвращаются сами или снова нужна акция?',
+    text:'Стабильная приверженность и готовность рекомендовать — «базис» спроса, малочувствительный к акциям конкурентов. Рост NPS на 7–10 п.п. даёт до 3% роста выручки. Здесь воронка замыкается: лояльная база позволяет строить долгосрочный производственный план.',
+    kpi:['NPS (Net Promoter Score)','Доля повторных покупок','Доля промо-продаж < 30%'],
+    caseLabel:'Synergetic — лояльность через ценности',
+    caseTxt:'Нужно было удерживать аудиторию и дифференцироваться через эко-ценности. Боксы для сбора одежды, начисление баллов программы лояльности за эко-действия, конвертация баллов в покупки.',
+    mets:['121 тыс. участников ПЛ','+70 тыс. новых пользователей в 2025'] }
+];
+
+window.pickLevel = function(idx){
+  document.querySelectorAll('#funnel-svg .fv-g').forEach(function(g, i){
+    g.classList.toggle('active', i === idx);
+  });
+  const lv = LEVELS[idx];
+  const el = document.getElementById('fv-detail');
+  if(!el) return;
+  el.innerHTML =
+    '<div class="fv-card-top">' +
+      '<span class="fv-d-num">' + ('0'+idx) + '</span>' +
+    '</div>' +
+    '<h3 class="fv-d-title">' + lv.title + '</h3>' +
+    '<div class="fv-question">' + lv.question + '</div>' +
+    '<p class="fv-d-text">' + lv.text + '</p>' +
+    '<div class="fv-kpis">' +
+      lv.kpi.map(function(k){ return '<span class="fv-kpi">'+k+'</span>'; }).join('') +
+    '</div>' +
+    '<div class="fv-case">' +
+      '<div class="fv-case-lbl">Пример · ' + lv.caseLabel + '</div>' +
+      '<p class="fv-case-txt">' + lv.caseTxt + '</p>' +
+      '<div class="fv-metrics">' +
+        lv.mets.map(function(m){ return '<span class="fv-met">'+m+'</span>'; }).join('') +
+      '</div>' +
+    '</div>';
+};
+
+document.addEventListener('DOMContentLoaded', function(){
+  const header = document.querySelector('.header');
+  const burger = document.querySelector('.header-burger');
+  const headerNav = document.querySelector('.header-nav');
+  const closeHeaderMenu = function(){
+    if(!header) return;
+    header.classList.remove('is-menu-open');
+    if(burger){
+      burger.setAttribute('aria-expanded', 'false');
+      burger.setAttribute('aria-label', 'Открыть меню');
+    }
+  };
+
+  if(header && burger && headerNav){
+    burger.addEventListener('click', function(e){
+      e.preventDefault();
+      const isOpen = header.classList.toggle('is-menu-open');
+      burger.setAttribute('aria-expanded', String(isOpen));
+      burger.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+    });
+
+    headerNav.addEventListener('click', function(e){
+      const link = e.target.closest('a');
+      if(link && !link.classList.contains('services-menu-link')){
+        closeHeaderMenu();
+      }
+    });
+  }
+
+  const servicesDropdown = document.querySelector('.services-dropdown');
+  if(servicesDropdown){
+    const servicesToggle = servicesDropdown.querySelector('.services-summary');
+    const closeServices = function(){
+      servicesDropdown.classList.remove('is-open');
+      if(servicesToggle) servicesToggle.setAttribute('aria-expanded', 'false');
+    };
+    const toggleServices = function(){
+      const isOpen = servicesDropdown.classList.toggle('is-open');
+      if(servicesToggle) servicesToggle.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    if(servicesToggle){
+      servicesToggle.addEventListener('click', function(e){
+        e.preventDefault();
+        toggleServices();
+      });
+    }
+    document.addEventListener('click', function(e){
+      if(header && header.classList.contains('is-menu-open') && !header.contains(e.target)){
+        closeHeaderMenu();
+      }
+      if(servicesDropdown.classList.contains('is-open') && !servicesDropdown.contains(e.target)){
+        closeServices();
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && header && header.classList.contains('is-menu-open')){
+        closeHeaderMenu();
+        if(burger) burger.focus();
+      }
+      if(e.key === 'Escape' && servicesDropdown.classList.contains('is-open')){
+        closeServices();
+        if(servicesToggle) servicesToggle.focus();
+      }
+    });
+  }
+
+  /* Init funnel detail on first level */
+  window.pickLevel(0);
+  /* Keyboard navigation for SVG levels */
+  document.querySelectorAll('#funnel-svg .fv-g').forEach(function(g, i){
+    g.addEventListener('keydown', function(e){
+      if(e.key==='Enter' || e.key===' '){ e.preventDefault(); window.pickLevel(i); }
+      if(e.key==='ArrowDown' && i < 7){ e.preventDefault(); window.pickLevel(i+1); }
+      if(e.key==='ArrowUp'   && i > 0){ e.preventDefault(); window.pickLevel(i-1); }
+    });
+  });
+});
+
+</script>
+
 </body>
-
 </html>
