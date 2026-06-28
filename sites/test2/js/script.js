@@ -1,53 +1,168 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // SLIDERS
-    new Swiper(".certificates__slider", {
-        loop: true,
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.slider-control__next_certificates',
-            prevEl: '.slider-control__prev_certificates'
-        },
-        breakpoints: {
-            991: {spaceBetween: 20},
-            0: {spaceBetween: 10},
-        }
-    });
+    if (document.querySelector(".certificates__slider")) {
+        new Swiper(".certificates__slider", {
+            loop: true,
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.slider-control__next_certificates',
+                prevEl: '.slider-control__prev_certificates'
+            },
+            breakpoints: {
+                991: {
+                    spaceBetween: 20
+                },
+                0: {
+                    spaceBetween: 10
+                },
+            }
+        });
+    }
 
-    new Swiper(".parnters__slider", {
-        loop: true,
-        slidesPerView: 6,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: '.slider-control__next_parnters',
-            prevEl: '.slider-control__prev_parnters'
-        },
-        breakpoints: {
-            1600: {slidesPerView: 6,spaceBetween: 30},
-            991: {slidesPerView: 5,spaceBetween: 30},
-            575: {slidesPerView: 6,spaceBetween: 30},
-            0: {slidesPerView: 3,spaceBetween: 10},
-        }
-    });
+    if (document.querySelector(".parnters__slider")) {
+        new Swiper(".parnters__slider", {
+            loop: true,
+            slidesPerView: 6,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.slider-control__next_parnters',
+                prevEl: '.slider-control__prev_parnters'
+            },
+            breakpoints: {
+                1600: {
+                    slidesPerView: 6,
+                    spaceBetween: 30
+                },
+                991: {
+                    slidesPerView: 5,
+                    spaceBetween: 30
+                },
+                575: {
+                    slidesPerView: 6,
+                    spaceBetween: 30
+                },
+                0: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+            }
+        });
+    }
 
-    new Swiper(".news__slider", {
-        loop: false,
-        slidesPerView: 6,
-        spaceBetween: 40,
-        breakpoints: {
-            1600: {spaceBetween: 40,slidesPerView: 6},
-            1199: {spaceBetween: 40,slidesPerView: 5},
-            997: {spaceBetween: 40,slidesPerView: 4},
-            0: {spaceBetween: 20,slidesPerView: 'auto'}
-        }
-    });
+    if (document.querySelector(".news__slider")) {
+        new Swiper(".news__slider", {
+            loop: false,
+            slidesPerView: 6,
+            spaceBetween: 40,
+            breakpoints: {
+                1600: {
+                    spaceBetween: 40,
+                    slidesPerView: 6
+                },
+                1199: {
+                    spaceBetween: 40,
+                    slidesPerView: 5
+                },
+                997: {
+                    spaceBetween: 40,
+                    slidesPerView: 4
+                },
+                0: {
+                    spaceBetween: 20,
+                    slidesPerView: 'auto'
+                }
+            }
+        });
+    }
+
+    if (document.querySelector(".tidings__slider")) {
+        new Swiper(".tidings__slider", {
+            loop: false,
+            slidesPerView: 3,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.tidings__next',
+                prevEl: '.tidings__prev'
+            },
+            breakpoints: {
+                1400: {
+                    slidesPerView: 4,
+                    spaceBetween: 30
+                },
+                576: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                }
+            }
+        });
+    }
     // END SLIDERS
+
+    // ARTICLES CLAMP
+    function adjustArticlesClamp() {
+        document.querySelectorAll('.articles .tidings__text').forEach(function(textEl) {
+            var item = textEl.closest('.tidings__item');
+            var h3 = item ? item.querySelector('.tidings__name h3') : null;
+            if (!h3) return;
+            var lineHeight = parseFloat(getComputedStyle(h3).lineHeight);
+            var lines = Math.round(h3.offsetHeight / lineHeight);
+            if (lines <= 2) {
+                textEl.style.webkitLineClamp = '4';
+            } else if (lines === 3) {
+                textEl.style.webkitLineClamp = '3';
+            } else {
+                textEl.style.webkitLineClamp = '1';
+            }
+        });
+    }
+    adjustArticlesClamp();
+    window.addEventListener('resize', adjustArticlesClamp);
+    // END ARTICLES CLAMP
+
+    // PHONE MASK
+    var phoneInput = document.querySelector('.js-hotel-phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+            var digits = this.value.replace(/\D/g, '');
+            if (digits.startsWith('7') || digits.startsWith('8')) {
+                digits = digits.slice(1);
+            }
+            digits = digits.slice(0, 10);
+            var result = '+7';
+            if (digits.length > 0) result += ' (' + digits.slice(0, 3);
+            if (digits.length >= 3) result += ') ' + digits.slice(3, 6);
+            if (digits.length >= 6) result += '-' + digits.slice(6, 8);
+            if (digits.length >= 8) result += '-' + digits.slice(8, 10);
+            this.value = result;
+        });
+
+        phoneInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Backspace' && this.value === '+7') {
+                e.preventDefault();
+                this.value = '';
+            }
+        });
+
+        phoneInput.addEventListener('focus', function() {
+            if (!this.value) this.value = '+7';
+        });
+
+        phoneInput.addEventListener('blur', function() {
+            if (this.value === '+7') this.value = '';
+        });
+    }
+    // END PHONE MASK
 
     // TOOLS TABS
     document.querySelectorAll('.tools__link').forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
             const toolsWrap = document.querySelector('.tools__wrap');
-            
+
             const currentActive = toolsWrap.querySelector('.tools__link-wrap.active');
             if (currentActive) {
                 currentActive.classList.remove('active');
@@ -63,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // SEARCH
     document.querySelectorAll('.search-button').forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.stopPropagation();
             const parent = this.closest('.search-wrap');
             if (parent) {
@@ -73,12 +188,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.querySelectorAll('.search-wrap').forEach(wrap => {
-        wrap.addEventListener('click', function(e) {
+        wrap.addEventListener('click', function (e) {
             e.stopPropagation();
         });
     });
 
-    document.body.addEventListener('click', function() {
+    document.body.addEventListener('click', function () {
         document.querySelectorAll('.search-wrap.open').forEach(openWrap => {
             openWrap.classList.remove('open');
         });
@@ -86,22 +201,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // END SEARCH
 
     // menu
-    document.querySelector('.menu-button').addEventListener('click', function() {
+    document.querySelector('.menu-button').addEventListener('click', function () {
         document.querySelector('.menu').classList.add('open');
     });
 
-    document.querySelector('.menu__close').addEventListener('click', function() {
+    document.querySelector('.menu__close').addEventListener('click', function () {
         document.querySelector('.menu').classList.remove('open');
     });
 
     document.querySelectorAll('.menu__nav-item').forEach(item => {
-        item.addEventListener('click', function() {
+        item.addEventListener('click', function () {
             this.classList.toggle('open');
         });
     });
 
     document.querySelectorAll('.menu__nav-sec').forEach(sec => {
-        sec.addEventListener('click', function(e) {
+        sec.addEventListener('click', function (e) {
             e.stopPropagation();
         });
     });
@@ -114,13 +229,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const phoneInput = form.querySelector('.js-hotel-phone');
 
         if (nameInput) {
-            nameInput.addEventListener('input', function() {
+            nameInput.addEventListener('input', function () {
                 this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '').replace(/\s{2,}/g, ' ');
             });
         }
 
         if (hotelInput) {
-            hotelInput.addEventListener('input', function() {
+            hotelInput.addEventListener('input', function () {
                 if (this.value.length > 100) {
                     this.value = this.value.slice(0, 100);
                 }
@@ -176,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 phoneInput.setCustomValidity(digits.length === 11 ? '' : 'Введите телефон в формате +7 (999) 999-99-99');
             };
 
-            phoneInput.addEventListener('input', function() {
+            phoneInput.addEventListener('input', function () {
                 this.value = formatPhone(this.value);
                 validatePhone();
             });
@@ -184,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
             phoneInput.addEventListener('blur', validatePhone);
         }
 
-        form.addEventListener('submit', function(e) {
+        form.addEventListener('submit', function (e) {
             if (phoneInput) {
                 const digits = phoneInput.value.replace(/\D/g, '');
                 phoneInput.setCustomValidity(digits.length === 11 ? '' : 'Введите телефон в формате +7 (999) 999-99-99');
