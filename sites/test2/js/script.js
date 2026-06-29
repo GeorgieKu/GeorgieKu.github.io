@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     spaceBetween: 20
                 },
                 0: {
-                    slidesPerView: 2,
+                    slidesPerView: 2.2,
                     spaceBetween: 10
                 }
             }
@@ -223,15 +223,37 @@ document.addEventListener('DOMContentLoaded', function () {
     // end menu
 
     // HOTEL FORM VALIDATION
-    document.querySelectorAll('.hotel-price__form').forEach(form => {
+    document.querySelectorAll('.hotel-price__form, .contacts__form').forEach(form => {
         const nameInput = form.querySelector('.js-hotel-name');
+        const emailInput = form.querySelector('.js-hotel-email');
         const hotelInput = form.querySelector('.js-hotel-title');
         const phoneInput = form.querySelector('.js-hotel-phone');
 
         if (nameInput) {
+            const validateName = () => {
+                nameInput.setCustomValidity(nameInput.value.trim() ? '' : '\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0438\u043c\u044f');
+            };
+
             nameInput.addEventListener('input', function () {
-                this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё\s]/g, '').replace(/\s{2,}/g, ' ');
+                this.value = this.value.replace(/[^A-Za-z\u0410-\u042F\u0430-\u044F\u0401\u0451\s]/g, '').replace(/\s{2,}/g, ' ');
+                validateName();
             });
+
+            nameInput.addEventListener('blur', validateName);
+        }
+
+        if (emailInput) {
+            const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+            const validateEmail = () => {
+                emailInput.setCustomValidity(emailPattern.test(emailInput.value.trim()) ? '' : '\u0412\u0432\u0435\u0434\u0438\u0442\u0435 email \u043b\u0430\u0442\u0438\u043d\u0438\u0446\u0435\u0439');
+            };
+
+            emailInput.addEventListener('input', function () {
+                this.value = this.value.replace(/[^A-Za-z0-9@._%+-]/g, '');
+                validateEmail();
+            });
+
+            emailInput.addEventListener('blur', validateEmail);
         }
 
         if (hotelInput) {
@@ -300,6 +322,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         form.addEventListener('submit', function (e) {
+            if (nameInput) {
+                nameInput.setCustomValidity(nameInput.value.trim() ? '' : '\u0412\u0432\u0435\u0434\u0438\u0442\u0435 \u0438\u043c\u044f');
+            }
+
+            if (emailInput) {
+                const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+                emailInput.setCustomValidity(emailPattern.test(emailInput.value.trim()) ? '' : '\u0412\u0432\u0435\u0434\u0438\u0442\u0435 email \u043b\u0430\u0442\u0438\u043d\u0438\u0446\u0435\u0439');
+            }
+
             if (phoneInput) {
                 const digits = phoneInput.value.replace(/\D/g, '');
                 phoneInput.setCustomValidity(digits.length === 11 ? '' : 'Введите телефон в формате +7 (999) 999-99-99');

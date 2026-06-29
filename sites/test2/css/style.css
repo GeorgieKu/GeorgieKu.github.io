@@ -6039,9 +6039,6 @@ a.profit__item-desc:hover {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -7015,7 +7012,7 @@ a.profit__item-desc:hover {
     font-family: Lato;
     font-weight: 400;
     font-style: Regular;
-    font-size: 15px;
+    font-size: 13px;
     color: #FFFFFF;
     line-height: 100%;
     letter-spacing: 0%;
@@ -7064,15 +7061,14 @@ a.profit__item-desc:hover {
     }
 }
 
-@media(max-width: 991px) {
-    .articles .tidings__tags {
-        display: none;
-    }
-}
 
 @media(max-width: 576px) {
     .events .tidings__date {
         margin-bottom: 16px;
+    }
+
+    .articles .tidings__tags {
+        display: none;
     }
 
     .events .news__grid {
@@ -7200,6 +7196,11 @@ a.profit__item-desc:hover {
 .news-detail__block a {
     color: #097CFF;
     text-decoration: underline;
+    transition: color .3s;
+}
+
+.news-detail__block a:hover {
+    color: #000;
 }
 
 
