@@ -1,394 +1,324 @@
-let heroSwiper = document.querySelector('.hero__swiper')
-if (heroSwiper) {
-    const heroSwiper = new Swiper('.hero__swiper', {
+let heroSwiper;
+const heroSwiperMedia = window.matchMedia('(max-width: 1280px)');
+let stepsSwiper;
+let banksSwiper;
+const banksSwiperMedia = window.matchMedia('(max-width: 1319px)');
+let aboutSwiper;
+const aboutSwiperMedia = window.matchMedia('(max-width: 1319px)');
 
+function initHeroSwiper() {
+    if (heroSwiper || !document.querySelector('.hero__swiper')) {
+        return;
+    }
+
+    heroSwiper = new Swiper('.hero__swiper', {
         direction: 'horizontal',
-
+        loop: true,
+        slidesPerView: 1.15,
+        spaceBetween: 10,
         pagination: {
             el: '.hero__pagination',
-        },
-    });
-}
-
-let prdouctionSwiper = document.querySelector('.production__swiper')
-if (prdouctionSwiper) {
-    const prdouctionSwiper = new Swiper('.production__swiper', {
-
-        direction: 'horizontal',
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.production__btn-next',
-            prevEl: '.production__btn-prev',
+            clickable: true,
         },
         breakpoints: {
-            300: {
-                spaceBetween: 10,
-                slidesPerView: "auto",
-            },
-            576: {
-                spaceBetween: 20,
-            },
-            // 1640: {
-            //     slidesPerView: 4,
-            // },
+            600: {
+                slidesPerView: 2,
 
-        }
 
+
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        },
     });
 }
 
+function destroyHeroSwiper() {
+    if (!heroSwiper) {
+        return;
+    }
 
-let reviewsSwiper = document.querySelector('.reviews__swiper')
-if (reviewsSwiper) {
-    const reviewsSwiper = new Swiper('.reviews__swiper', {
+    heroSwiper.destroy(true, true);
+    heroSwiper = null;
+}
 
+function toggleHeroSwiper(event) {
+    if (event.matches) {
+        initHeroSwiper();
+    } else {
+        destroyHeroSwiper();
+    }
+}
+
+toggleHeroSwiper(heroSwiperMedia);
+heroSwiperMedia.addEventListener('change', toggleHeroSwiper);
+
+function initStepsSwiper() {
+    if (stepsSwiper || !document.querySelector('.steps__swiper')) {
+        return;
+    }
+
+    stepsSwiper = new Swiper('.steps__swiper', {
         direction: 'horizontal',
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.reviews__btn-next',
-            prevEl: '.reviews__btn-prev',
+        loop: false,
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        pagination: {
+            el: '.steps__pagination',
+            clickable: true,
         },
         breakpoints: {
-            300: {
-                spaceBetween: 10,
-            },
             576: {
+                spaceBetween: 16,
+            },
+            900: {
                 spaceBetween: 20,
-            }
-        }
-
+            },
+        },
     });
 }
 
-let newsSwiper = document.querySelector('.reviews__swiper')
-if (newsSwiper) {
-    const newsSwiper = new Swiper('.news__swiper', {
+function destroyStepsSwiper() {
+    if (!stepsSwiper) {
+        return;
+    }
 
+    stepsSwiper.destroy(true, true);
+    stepsSwiper = null;
+}
+
+function toggleStepsSwiper() {
+    const stepsSlider = document.querySelector('.steps__swiper');
+
+    if (!stepsSlider) {
+        return;
+    }
+
+    const slides = stepsSlider.querySelectorAll('.swiper-slide');
+    const firstSlide = slides[0];
+    const minSlideWidth = firstSlide ? parseFloat(getComputedStyle(firstSlide).minWidth) : 0;
+    const gap = 20;
+    const minStaticWidth = slides.length * minSlideWidth + (slides.length - 1) * gap;
+
+    if (stepsSlider.clientWidth < minStaticWidth) {
+        initStepsSwiper();
+    } else {
+        destroyStepsSwiper();
+    }
+}
+
+toggleStepsSwiper();
+window.addEventListener('resize', toggleStepsSwiper);
+
+function initBanksSwiper() {
+    if (banksSwiper || !document.querySelector('.banks__swiper')) {
+        return;
+    }
+
+    banksSwiper = new Swiper('.banks__swiper', {
         direction: 'horizontal',
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        navigation: {
-            nextEl: '.news__btn-next',
-            prevEl: '.news__btn-prev',
+        loop: false,
+        slidesPerView: 1.15,
+        spaceBetween: 12,
+        pagination: {
+            el: '.banks__pagination',
+            clickable: true,
         },
         breakpoints: {
-            300: {
-                direction: 'vertical',
-                spaceBetween: 10,
-
-            },
             576: {
-                direction: 'horizontal',
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 16,
+            },
+            1024: {
+                slidesPerView: 4,
                 spaceBetween: 20,
-            }
+            },
+            1200: {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+        },
+    });
+}
+
+function destroyBanksSwiper() {
+    if (!banksSwiper) {
+        return;
+    }
+
+    banksSwiper.destroy(true, true);
+    banksSwiper = null;
+}
+
+function toggleBanksSwiper(event) {
+    if (event.matches) {
+        initBanksSwiper();
+    } else {
+        destroyBanksSwiper();
+    }
+}
+
+toggleBanksSwiper(banksSwiperMedia);
+banksSwiperMedia.addEventListener('change', toggleBanksSwiper);
+
+function initAboutSwiper() {
+    if (aboutSwiper || !document.querySelector('.about__swiper')) {
+        return;
+    }
+
+    aboutSwiper = new Swiper('.about__swiper', {
+        direction: 'horizontal',
+        loop: false,
+        slidesPerView: 'auto',
+        spaceBetween: 10,
+        pagination: {
+            el: '.about__pagination',
+            clickable: true,
+        },
+    });
+}
+
+function destroyAboutSwiper() {
+    if (!aboutSwiper) {
+        return;
+    }
+
+    aboutSwiper.destroy(true, true);
+    aboutSwiper = null;
+}
+
+function toggleAboutSwiper(event) {
+    if (event.matches) {
+        initAboutSwiper();
+    } else {
+        destroyAboutSwiper();
+    }
+}
+
+toggleAboutSwiper(aboutSwiperMedia);
+aboutSwiperMedia.addEventListener('change', toggleAboutSwiper);
+
+document.querySelectorAll('.price__range').forEach((range) => {
+    const output = document.querySelector(`.price__range-value[for="${range.id}"]`);
+
+    function updateRange() {
+        const min = Number(range.min) || 0;
+        const max = Number(range.max) || 100;
+        const value = Number(range.value);
+        const progress = ((value - min) / (max - min)) * 100;
+
+        range.style.setProperty('--range-progress', `${progress}%`);
+
+        if (output) {
+            output.value = value;
+            output.textContent = value;
         }
+    }
 
-    });
-}
-
-function openAcc(toggleButton, content, toggleArrow) {
-    toggleButton.addEventListener('click', function () {
-        content.classList.toggle('open');
-        toggleArrow.classList.toggle('rotate');
-
-    });
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    let toggleButtons = document.querySelectorAll('.acc');
-    let contents = document.querySelectorAll('.acc-container');
-
-    toggleButtons.forEach((toggleButton, index) => {
-        let toggleArrow = toggleButton.querySelector('svg');
-        openAcc(toggleButton, contents[index], toggleArrow);
-    });
+    updateRange();
+    range.addEventListener('input', updateRange);
 });
 
+const houseAreaInput = document.querySelector('#house-area');
 
-document.querySelectorAll('.callback__form').forEach(function (callbackForm) {
-    const inputs = callbackForm.querySelectorAll('.callback__input');
-    const phoneInput = callbackForm.querySelector('input[name="phone"]');
-    const emailInput = callbackForm.querySelector('input[name="email"]');
-    const checkbox = callbackForm.querySelector('.checkbox__input');
-
-    const phoneRegExp = /^\+?\d[\d\s\-()]{7,}$/;
-    const emailRegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    function setError(input) {
-        input.classList.add('callback__input_error');
-        input.classList.remove('callback__input_success');
+if (houseAreaInput) {
+    function getAreaNumber() {
+        return houseAreaInput.value.replace(/\D/g, '').slice(0, 4);
     }
 
-    function setSuccess(input) {
-        input.classList.remove('callback__input_error');
-        input.classList.add('callback__input_success');
-    }
-
-    function clearState(input) {
-        input.classList.remove('callback__input_error');
-        input.classList.remove('callback__input_success');
-    }
-
-    function validateInput(input) {
-        const value = input.value.trim();
-
-        if (!value) {
-            setError(input);
-            return false;
-        }
-
-        if (input === phoneInput) {
-            if (!phoneRegExp.test(value)) {
-                setError(input);
-                return false;
-            }
-        }
-
-        if (input === emailInput) {
-            if (!emailRegExp.test(value)) {
-                setError(input);
-                return false;
-            }
-        }
-
-        setSuccess(input);
-        return true;
-    }
-
-    inputs.forEach(input => {
-        input.addEventListener('blur', () => validateInput(input));
-        input.addEventListener('input', () => clearState(input));
+    houseAreaInput.addEventListener('focus', () => {
+        houseAreaInput.value = getAreaNumber();
     });
 
-    callbackForm.addEventListener('submit', function (evt) {
-        let isValid = true;
-
-        inputs.forEach(input => {
-            const ok = validateInput(input);
-            if (!ok) isValid = false;
-        });
-
-        if (!checkbox || !checkbox.checked) {
-            isValid = false;
-        }
-
-        if (!isValid) {
-            evt.preventDefault();
-        }
+    houseAreaInput.addEventListener('input', () => {
+        houseAreaInput.value = getAreaNumber();
     });
-});
 
+    houseAreaInput.addEventListener('blur', () => {
+        const value = getAreaNumber();
 
-let ddButton = document.querySelector('.links');
-
-if (ddButton && window.innerWidth < 993) {
-    ddButton.addEventListener('click', function () {
-        ddButton.classList.toggle('active')
-    })
-}
-
-let sortBtn = document.querySelector('.sort__selected');
-let sort = document.querySelector('.sort');
-let sortBtns = document.querySelectorAll('.sort__btn')
-if (sort) {
-    sort.addEventListener('click', function () {
-        sort.classList.toggle('active');
-    })
-
-    sortBtns.forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            let sortBtnText = btn.textContent;
-            sortBtn.textContent = sortBtnText;
-        })
-    })
-}
-
-
-
-let videoCards = document.querySelectorAll('.video-gallery__card')
-
-if (videoCards) {
-    videoCards.forEach(function (videoCard) {
-        let video = videoCard.querySelector('.video-gallery__video');
-        let videoPlayBtn = videoCard.querySelector('.video-gallery__btn');
-        videoPlayBtn.addEventListener('click', function () {
-            if (videoPlayBtn.classList.contains('played')) {
-                video.load()
-                videoPlayBtn.classList.remove('played')
-            } else {
-                videoPlayBtn.classList.add('played')
-                video.play()
-            }
-
-        })
-
-        video.addEventListener("ended", function () {
-            this.src = this.src
-        });
-    })
-}
-
-let videoSwiper = document.querySelector('.video-gallery__swiper')
-if (videoSwiper) {
-    const videoSwiper = new Swiper('.video-gallery__swiper', {
-        direction: 'horizontal',
-        slidesPerView: "auto",
-        spaceBetween: 20,
-        breakpoints: {
-            300: {
-                spaceBetween: 10,
-            },
-            576: {
-                spaceBetween: 20,
-            }
-        }
-
+        houseAreaInput.value = value ? `${value} м²` : '';
     });
 }
 
+document.querySelectorAll('[data-select]').forEach((select) => {
+    const button = select.querySelector('.price__select-btn');
+    const buttonText = button?.querySelector('span');
+    const input = select.querySelector('input[type="hidden"]');
+    const options = select.querySelectorAll('.price__select-option');
 
-let contactsPageSwiper = document.querySelector('.contacts-page__swiper')
-if (contactsPageSwiper) {
-    const contactsPageSwiper = new Swiper('.contacts-page__swiper', {
-        direction: 'horizontal',
-        slidesPerView: "auto",
-        spaceBetween: 20,
-    });
-}
-//  карта на странице контактов в дестктопе
-const popup = document.getElementById('popup');
-
-if (popup && innerWidth > 993) {
-    function showPopup(evt, text) {
-        popup.textContent = text;
-        popup.style.left = (evt.pageX + 10) + 'px';
-        popup.style.top = (evt.pageY + 10) + 'px';
-        popup.classList.add('visible');
+    if (!button || !buttonText || !input) {
+        return;
     }
 
-    function hidePopup() {
-        popup.classList.remove('visible');
+    function closeSelect() {
+        select.classList.remove('is-open');
+        button.setAttribute('aria-expanded', 'false');
     }
-}
 
+    button.addEventListener('click', () => {
+        const isOpen = select.classList.contains('is-open');
 
-
-
-// Список и карта на странице контактов в мобилке
-const paths = document.querySelectorAll('path.show-popup');
-const customSelect = document.querySelector('.custom-select');
-if (customSelect) {
-    paths.forEach(path => {
-        path.addEventListener('mouseenter', evt => {
-            const text = path.getAttribute('data-popup') || 'Нет описания';
-            showPopup(evt, text);
+        document.querySelectorAll('[data-select].is-open').forEach((openedSelect) => {
+            if (openedSelect !== select) {
+                openedSelect.classList.remove('is-open');
+                openedSelect.querySelector('.price__select-btn')?.setAttribute('aria-expanded', 'false');
+            }
         });
-        path.addEventListener('mousemove', evt => {
-            popup.style.left = (evt.pageX + 10) + 'px';
-            popup.style.top = (evt.pageY + 10) + 'px';
-        });
-        path.addEventListener('mouseleave', hidePopup);
+
+        select.classList.toggle('is-open', !isOpen);
+        button.setAttribute('aria-expanded', String(!isOpen));
     });
 
-    (function () {
-
-        const selected = customSelect.querySelector('.select-selected');
-        const itemsContainer = customSelect.querySelector('.select-items');
-        const options = itemsContainer.querySelectorAll('.select-item');
-        const svgPaths = document.querySelectorAll('svg path[data-value]');
-
-        function openDropdown() {
-            itemsContainer.classList.add('open');
-            selected.classList.add('open');
-            customSelect.setAttribute('aria-expanded', 'true');
-        }
-
-        function closeDropdown() {
-            itemsContainer.classList.remove('open');
-            selected.classList.remove('open');
-            customSelect.setAttribute('aria-expanded', 'false');
-        }
-
-        function toggleDropdown() {
-            if (itemsContainer.classList.contains('open')) {
-                closeDropdown();
-            } else {
-                openDropdown();
-            }
-        }
-
-        function clearHighlight() {
-            svgPaths.forEach(path => path.classList.remove('highlighted'));
-        }
-
-        function highlightPath(value) {
-            clearHighlight();
-            const pathToHighlight = document.querySelector(`svg path[data-value="${value}"]`);
-            if (pathToHighlight) {
-                pathToHighlight.classList.add('highlighted');
-            }
-        }
-
-        function selectOption(option) {
-            options.forEach(opt => opt.classList.remove('selected'));
-            option.classList.add('selected');
-
-            selected.textContent = option.textContent;
-            selected.dataset.value = option.dataset.value;
-
-            highlightPath(option.dataset.value);
-        }
-
-
-        let initialSelected = itemsContainer.querySelector('.select-item.selected');
-        if (initialSelected) {
-            highlightPath(initialSelected.dataset.value);
-        }
-
-        selected.addEventListener('click', () => {
-            toggleDropdown();
-        });
-
-        options.forEach(option => {
-            option.addEventListener('click', () => {
-                selectOption(option);
-                closeDropdown();
+    options.forEach((option) => {
+        option.addEventListener('click', () => {
+            options.forEach((currentOption) => {
+                currentOption.classList.remove('is-active');
+                currentOption.setAttribute('aria-selected', 'false');
             });
+
+            option.classList.add('is-active');
+            option.setAttribute('aria-selected', 'true');
+            input.value = option.dataset.value || option.textContent.trim();
+            buttonText.textContent = option.textContent.trim();
+            closeSelect();
         });
-
-
-        document.addEventListener('click', e => {
-            if (!customSelect.contains(e.target)) {
-                closeDropdown();
-            }
-        });
-
-
-    })();
-}
-function showOld() {
-    let old = document.querySelector('.old');
-    old.classList.toggle('show')
-}
-    document.addEventListener("DOMContentLoaded", function () {
-        document.getElementById("burger").addEventListener("click", function () {
-            document.querySelector("header").classList.toggle("open")
-        })
-    })
-let modal = document.querySelector('.modal')
-
-function openModal() {
-    modal.showModal()
-}
-
-function closeModal() {
-    modal.close()
-}
-
-modal.addEventListener('click', function (event) {
-    if (event.target === modal) {
-        closeModal();
-    }
+    });
 });
+
+document.addEventListener('click', (event) => {
+    if (event.target.closest('[data-select]')) {
+        return;
+    }
+
+    document.querySelectorAll('[data-select].is-open').forEach((select) => {
+        select.classList.remove('is-open');
+        select.querySelector('.price__select-btn')?.setAttribute('aria-expanded', 'false');
+    });
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') {
+        return;
+    }
+
+    document.querySelectorAll('[data-select].is-open').forEach((select) => {
+        select.classList.remove('is-open');
+        select.querySelector('.price__select-btn')?.setAttribute('aria-expanded', 'false');
+    });
+});
+
+document.querySelector('.price__form')?.addEventListener('submit', (event) => {
+    event.preventDefault();
+});
+
+  document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("burger").addEventListener("click", function () {
+          document.querySelector("header").classList.toggle("open")
+      })
+  })
