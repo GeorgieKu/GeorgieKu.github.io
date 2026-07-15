@@ -949,6 +949,9 @@ const revealSections = document.querySelectorAll(`
 
 if (revealSections.length) {
     if ('IntersectionObserver' in window) {
+        const viewportHeight = window.visualViewport?.height
+            || window.innerHeight
+            || document.documentElement.clientHeight;
         const sectionObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach((entry) => {
                 if (!entry.isIntersecting) {
@@ -965,6 +968,17 @@ if (revealSections.length) {
 
         revealSections.forEach((section) => {
             section.classList.add('section-reveal');
+
+            const sectionRect = section.getBoundingClientRect();
+
+            // Mobile browsers may postpone the first observer callback until
+            // the viewport changes. Keep the initially visible content visible
+            // without waiting for the user to start scrolling.
+            if (sectionRect.bottom > 0 && sectionRect.top < viewportHeight) {
+                section.classList.add('is-visible');
+                return;
+            }
+
             sectionObserver.observe(section);
         });
     } else {
