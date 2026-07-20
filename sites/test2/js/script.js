@@ -101,11 +101,90 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+    if (document.querySelector(".client-results__slider")) {
+        new Swiper(".client-results__slider", {
+            slidesPerView: 5,
+            spaceBetween: 30,
+            watchOverflow: true,
+            pagination: {
+                el: '.client-results__pagination',
+                clickable: true
+            },
+            breakpoints: {
+                1200: {
+                    slidesPerView: 5,
+                    spaceBetween: 30
+                },
+                576: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                0: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                }
+            }
+        });
+    }
     // END SLIDERS
+
+    // CASES: tabs + sliders
+    if (document.querySelector(".cases")) {
+        var caseSwipers = {};
+        document.querySelectorAll(".cases__panel").forEach(function (panel) {
+            var key = panel.getAttribute("data-panel");
+            caseSwipers[key] = new Swiper(panel.querySelector(".cases__slider"), {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                watchOverflow: true,
+                observer: true,
+                observeParents: true,
+                pagination: {
+                    el: panel.querySelector(".cases__pagination"),
+                    clickable: true
+                },
+                breakpoints: {
+
+                    1200: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    576: {
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 10
+                    }
+                }
+            });
+        });
+
+        var caseTabs = document.querySelectorAll(".cases__tab");
+        var casePanels = document.querySelectorAll(".cases__panel");
+        caseTabs.forEach(function (tab) {
+            tab.addEventListener("click", function () {
+                var key = tab.getAttribute("data-tab");
+                caseTabs.forEach(function (t) {
+                    var active = t === tab;
+                    t.classList.toggle("is-active", active);
+                    t.setAttribute("aria-selected", active ? "true" : "false");
+                });
+                casePanels.forEach(function (panel) {
+                    var active = panel.getAttribute("data-panel") === key;
+                    panel.classList.toggle("is-active", active);
+                    if (active && caseSwipers[key]) {
+                        caseSwipers[key].update();
+                    }
+                });
+            });
+        });
+    }
 
     // ARTICLES CLAMP
     function adjustArticlesClamp() {
-        document.querySelectorAll('.articles .tidings__text').forEach(function(textEl) {
+        document.querySelectorAll('.articles .tidings__text').forEach(function (textEl) {
             var item = textEl.closest('.tidings__item');
             var h3 = item ? item.querySelector('.tidings__name h3') : null;
             if (!h3) return;
@@ -127,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // PHONE MASK
     var phoneInput = document.querySelector('.js-hotel-phone');
     if (phoneInput) {
-        phoneInput.addEventListener('input', function(e) {
+        phoneInput.addEventListener('input', function (e) {
             var digits = this.value.replace(/\D/g, '');
             if (digits.startsWith('7') || digits.startsWith('8')) {
                 digits = digits.slice(1);
@@ -141,18 +220,18 @@ document.addEventListener('DOMContentLoaded', function () {
             this.value = result;
         });
 
-        phoneInput.addEventListener('keydown', function(e) {
+        phoneInput.addEventListener('keydown', function (e) {
             if (e.key === 'Backspace' && this.value === '+7') {
                 e.preventDefault();
                 this.value = '';
             }
         });
 
-        phoneInput.addEventListener('focus', function() {
+        phoneInput.addEventListener('focus', function () {
             if (!this.value) this.value = '+7';
         });
 
-        phoneInput.addEventListener('blur', function() {
+        phoneInput.addEventListener('blur', function () {
             if (this.value === '+7') this.value = '';
         });
     }
