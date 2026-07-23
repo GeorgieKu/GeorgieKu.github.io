@@ -182,6 +182,36 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // HOTEL MODULES: tag tabs (swap images + detail block)
+    if (document.querySelector(".hotel-modules")) {
+        var hmTags = [].slice.call(document.querySelectorAll(".hotel-modules__tag"));
+        var hmBlock = document.querySelector(".hotel-modules__block");
+        var hmDetailTitle = document.querySelector(".hotel-modules__detail-title");
+        var hmDetailText = document.querySelector(".hotel-modules__detail-text");
+
+        var hmPics = ["module-1.webp", "module-2.webp", "module-3.webp", "module-4.webp", "module-5.webp", "module-6.webp"];
+        var hmLorem = "Office ipsum you must be muted. Out pushback wheel savvy gmail 4-blocker by contribution back-end individual. Reach rundown community my ground wheel helicopter. Seat switch baseline every illustration elephant we've moving chime.";
+
+        function hmRender(index) {
+            if (hmBlock) {
+                var imgs = hmBlock.querySelectorAll("img");
+                for (var k = 0; k < imgs.length; k++) {
+                    imgs[k].src = "images/page-2/" + hmPics[(index + k) % hmPics.length];
+                }
+            }
+            if (hmDetailTitle) hmDetailTitle.textContent = "h3 " + hmTags[index].textContent.trim();
+            if (hmDetailText) hmDetailText.textContent = hmLorem;
+        }
+
+        hmTags.forEach(function (tag, index) {
+            tag.addEventListener("click", function () {
+                hmTags.forEach(function (t) { t.classList.remove("is-active"); });
+                tag.classList.add("is-active");
+                hmRender(index);
+            });
+        });
+    }
+
     // ARTICLES CLAMP
     function adjustArticlesClamp() {
         document.querySelectorAll('.articles .tidings__text').forEach(function (textEl) {
