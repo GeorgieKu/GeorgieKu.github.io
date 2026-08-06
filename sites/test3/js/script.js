@@ -277,6 +277,41 @@
     });
 })();
 
+(function () {
+    const KEY = 'orthospace_cookies_accepted';
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const banner = document.getElementById('cookies');
+        if (!banner) return;
+
+        let accepted = false;
+        try { accepted = localStorage.getItem(KEY) === '1'; } catch (e) { }
+        if (accepted) return;
+
+        banner.hidden = false;
+        void banner.offsetWidth;
+        banner.classList.add('is-visible');
+
+        const btn = banner.querySelector('[data-cookies-accept]');
+        if (!btn) return;
+
+        btn.addEventListener('click', () => {
+            try { localStorage.setItem(KEY, '1'); } catch (e) { }
+            banner.classList.remove('is-visible');
+
+            let finished = false;
+            const done = () => {
+                if (finished) return;
+                finished = true;
+                banner.removeEventListener('transitionend', done);
+                banner.hidden = true;
+            };
+            banner.addEventListener('transitionend', done);
+            setTimeout(done, 450);
+        });
+    });
+})();
+
 document.addEventListener("DOMContentLoaded", function () {
     const btn = document.getElementById("filtersBtn");
     const panel = document.getElementById("filtersPanel");
@@ -696,7 +731,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.key === "Escape") setOpen(false);
     });
 
-    window.matchMedia("(min-width: 993px)").addEventListener("change", function (e) {
+    window.matchMedia("(min-width: 1121px)").addEventListener("change", function (e) {
         if (e.matches) setOpen(false);
     });
 });
