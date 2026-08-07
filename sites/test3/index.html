@@ -49,7 +49,8 @@
                             <span class="price__title price__title_big">Итого: </span>
                             <span class="price__value price__value_big">11.990₽ <span>26.370₽</span></span>
                         </div>
-                        <button class="orange-btn hero__btn" aria-label="Записаться на бесплатный осмотр">Записаться на
+                        <button class="orange-btn hero__btn" aria-label="Записаться на бесплатный осмотр"
+                            onclick="openModal()">Записаться на
                             бесплатный осмотр</button>
                     </div>
                 </div>
@@ -183,9 +184,10 @@
                 <div class="results__block">
                     <span class="results__text">Хотите записаться на встречу пациентов в клинике и получить консультацию
                         врача?</span>
-                    <form action="#" class="results__form">
-                        <input type="text" placeholder="Введите ваше имя" class="results__input">
-                        <input type="tel" placeholder="Введите ваш телефон" class="results__input results__input_mb">
+                    <form action="./php/send.php" method="POST" class="results__form">
+                        <input type="text" name="name" placeholder="Введите ваше имя" class="results__input" required>
+                        <input type="tel" name="phone" placeholder="Введите ваш телефон" class="results__input results__input_mb" required>
+                        <input type="text" name="website" class="visually-hidden" tabindex="-1" autocomplete="off">
                         <button class="orange-btn results__btn" aria-label="Оставить заявку">Оставить заявку</button>
                         <div class="results__agreement agreement">
                             <div class="checkbox">
@@ -800,9 +802,10 @@
                 </button>
                 <h2 class="modal__title">Запись на бесплатную
                     консультацию</h2>
-                <form action="#" class="modal__form">
-                    <input type="text" placeholder="Введите ваше имя" class="modal__input">
-                    <input type="tel" placeholder="Введите ваш телефон" class="modal__input modal__input_mb">
+                <form action="./php/send.php" method="POST" class="modal__form">
+                    <input type="text" name="name" placeholder="Введите ваше имя" class="modal__input" required>
+                    <input type="tel" name="phone" placeholder="Введите ваш телефон" class="modal__input modal__input_mb" required>
+                    <input type="text" name="website" class="visually-hidden" tabindex="-1" autocomplete="off">
                     <button class="orange-btn modal__btn" aria-label="Оставить заявку">Оставить заявку</button>
                     <div class="modal__agreement agreement">
                         <div class="checkbox">
