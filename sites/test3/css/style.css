@@ -1,1190 +1,63 @@
-.blog {
-  padding-top: 70px;
-  padding-bottom: 90px;
-  background-color: #fff;
-}
-@media (max-width: 576px) {
-  .blog {
-    padding-top: 30px;
-    padding-bottom: 45px;
-  }
-}
-
-.blog__title {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 100%;
-}
-@media (max-width: 993px) {
-  .blog__title {
-    font-size: 36px;
-  }
-}
-@media (max-width: 576px) {
-  .blog__title {
-    font-size: 26px;
-  }
-}
-
-.blog__intro {
-  display: grid;
-  grid-template-columns: minmax(0, 478px) minmax(0, 488px);
-  justify-content: space-between;
-  gap: 30px;
-  margin-top: 48px;
-}
-.blog__intro p {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 18px;
+@font-face {
+  font-family: "Inter";
   font-weight: 400;
-  line-height: 145%;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
 }
-.blog__intro p span {
-  color: #000;
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
 }
-.blog__intro p:first-child {
-  color: #000;
-}
-.blog__intro p:first-child span {
-  color: #737373;
-}
-@media (max-width: 993px) {
-  .blog__intro {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 32px;
-  }
-}
-@media (max-width: 576px) {
-  .blog__intro {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: 20px;
-  }
-  .blog__intro p {
-    font-size: 15px;
-  }
-}
-
-.blog__filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 42px;
-}
-@media (max-width: 576px) {
-  .blog__filters {
-    margin-top: 24px;
-  }
-}
-
-.blog__filter {
-  height: 32px;
-  padding: 0 14px;
-  color: #000;
-  background-color: #fff;
-  border: 1px solid #CAC5C5;
-  border-radius: 6px;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  line-height: 100%;
-}
-.blog__filter:hover {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
-}
-
-.post {
-  margin-top: 68px;
-}
-@media (max-width: 576px) {
-  .post {
-    margin-top: 32px;
-  }
-}
-
-.post__cover {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  aspect-ratio: 1200/497;
-  padding: 34px 46px;
-  border-radius: 16px;
-}
-.post__cover:hover {
-  text-decoration: none;
-}
-.post__cover:hover .post__cover-img {
-  transform: scale(1.03);
-}
-@media (max-width: 768px) {
-  .post__cover {
-    padding: 22px 24px;
-  }
-}
-@media (max-width: 576px) {
-  .post__cover {
-    aspect-ratio: 4/3;
-    padding: 16px 18px;
-  }
-}
-
-.post__cover-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.post__cover-brand {
-  position: relative;
-  color: #fff;
-  font-family: "Suisse Intl";
-  font-size: 17px;
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: 0.02em;
-}
-@media (max-width: 576px) {
-  .post__cover-brand {
-    font-size: 13px;
-  }
-}
-
-.post__cover-title {
-  position: absolute;
-  top: 34px;
-  right: 46px;
-  color: #fff;
-  font-family: "Suisse Intl";
-  font-size: 34px;
+@font-face {
+  font-family: "Inter";
   font-weight: 500;
-  line-height: 110%;
-  text-align: right;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
 }
-@media (max-width: 993px) {
-  .post__cover-title {
-    font-size: 26px;
-  }
-}
-@media (max-width: 768px) {
-  .post__cover-title {
-    top: 22px;
-    right: 24px;
-  }
-}
-@media (max-width: 576px) {
-  .post__cover-title {
-    position: relative;
-    top: auto;
-    right: auto;
-    margin-top: 14px;
-    font-size: 20px;
-    text-align: left;
-  }
-}
-
-.post__cover-note {
-  position: relative;
-  color: #fff;
-  font-family: "Suisse Intl";
-  font-size: 13px;
-  line-height: 100%;
-}
-@media (max-width: 576px) {
-  .post__cover-note {
-    font-size: 11px;
-  }
-}
-
-.post__title {
-  margin-top: 66px;
-  font-family: "Suisse Intl";
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 115%;
-}
-.post__title a {
-  color: #000;
-  text-decoration: underline;
-}
-.post__title a:hover {
-  color: #737373;
-}
-@media (max-width: 576px) {
-  .post__title {
-    margin-top: 28px;
-    font-size: 17px;
-  }
-}
-
-.post__meta {
-  margin-top: 21px;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 17px;
-  line-height: 100%;
-}
-.post__meta a {
-  color: #737373;
-  text-decoration: underline;
-}
-.post__meta a:hover {
-  color: #000;
-}
-@media (max-width: 576px) {
-  .post__meta {
-    margin-top: 14px;
-    font-size: 14px;
-    line-height: 150%;
-  }
-}
-
-.post__excerpt {
-  position: relative;
-  max-width: 1050px;
-  margin-top: 42px;
-  padding-left: 28px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 19px;
-  line-height: 140%;
-}
-@media (max-width: 576px) {
-  .post__excerpt {
-    margin-top: 22px;
-    padding-left: 22px;
-    font-size: 15px;
-  }
-}
-
-.post__star {
-  position: absolute;
-  top: 6px;
-  left: 0;
-  color: #000;
-}
-@media (max-width: 576px) {
-  .post__star {
-    top: 4px;
-    width: 11px;
-    height: 11px;
-  }
-}
-
-.post__more {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 282px;
-  max-width: 100%;
-  height: 40px;
-  margin-top: 37px;
-  color: #fff;
-  background-color: #67778B;
-  border-radius: 4px;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  line-height: 100%;
-}
-.post__more:hover {
-  background-color: #000;
-  text-decoration: none;
-}
-@media (max-width: 576px) {
-  .post__more {
-    margin-top: 24px;
-  }
-}
-.cart__head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-  height: 69px;
-  padding: 0 16px;
-  border-bottom: 1px solid #EFEEEE;
-}
-.cart__back {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 34px;
-  height: 33px;
-  color: #000;
-  border: 1px solid #CAC5C5;
-  border-radius: 7px;
-}
-.cart__back:hover {
-  background-color: #F3F2F0;
-}
-.cart__head-title {
-  flex: 1;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  line-height: 120%;
-  text-align: center;
-}
-.cart__count {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 34px;
-  height: 34px;
-  color: #fff;
-  background-color: #67778B;
-  border-radius: 7px;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 100%;
+@font-face {
+  font-family: "Noto Sans";
   font-weight: 500;
+  src: url("../fonts/NotoSans-Medium.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
 }
-.cart__count[hidden] {
-  display: none;
-}
-.cart__body {
-  flex: 1;
-  overflow-y: auto;
-}
-.cart__empty {
-  padding: 40px 24px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 150%;
-  text-align: center;
-}
-.cart__list {
-  display: flex;
-  flex-direction: column;
-}
-.cart__list[hidden] {
-  display: none;
-}
-.cart__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 16px;
-  border-bottom: 1px solid #EFEEEE;
-}
-.cart__item-img {
-  flex-shrink: 0;
-  width: 64px;
-  height: 64px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: 3px;
-}
-.cart__item-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  min-width: 0;
-  flex: 1;
-}
-.cart__item-title {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 120%;
-}
-.cart__item-cat {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 130%;
-}
-.cart__item-price {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 14px;
+@font-face {
+  font-family: "Inter";
   font-weight: 600;
-  line-height: 130%;
-}
-.cart__item-remove {
-  align-self: flex-start;
-  margin-top: 2px;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 100%;
-  text-decoration: underline;
-}
-.cart__item-remove:hover {
-  color: #000;
-}
-.cart__stepper {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex-shrink: 0;
-}
-.cart__step, .cart__qty {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 29px;
-  height: 29px;
-  line-height: 100%;
-  color: #000;
-  border: 1px solid #CAC5C5;
-  border-radius: 7px;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-weight: 500;
-}
-.cart__step:hover {
-  background-color: #F3F2F0;
-}
-.cart__qty {
-  cursor: default;
-}
-.cart__foot {
-  flex-shrink: 0;
-  background-color: #fff;
-  box-shadow: 0 -1px 6.5px rgba(0, 0, 0, 0.1);
-}
-.cart__promo {
-  display: block;
-  width: 100%;
-  padding: 17px 22px;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 100%;
-  text-align: left;
-}
-.cart__promo:hover {
-  color: #000;
-}
-.cart__row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 22px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 100%;
-  border-bottom: 1px solid #EFEEEE;
-}
-.cart__checkout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  width: calc(100% - 34px);
-  height: 46px;
-  margin: 19px 17px 16px;
-  color: #fff;
-  background-color: #67778B;
-  border-radius: 5px;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  font-weight: 500;
-}
-.cart__checkout:hover {
-  background-color: #000;
-}
-.cart__checkout:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-.modal__window.checkout {
-  max-width: 1215px;
-}
-
-.checkout__title {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 23px;
-  font-weight: 700;
-  line-height: 120%;
-  margin-bottom: 40px;
-}
-.checkout__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 320px;
-  gap: 60px;
-}
-@media (max-width: 993px) {
-  .checkout__grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
-.checkout__form {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  min-width: 0;
-}
-.checkout__section {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.checkout__section-head {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-}
-.checkout__section-title {
-  margin-bottom: 8px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 23px;
-  font-weight: 400;
-  line-height: 120%;
-}
-@media (max-width: 576px) {
-  .checkout__section-title {
-    font-size: 20px;
-  }
-}
-.checkout__section-head .checkout__section-title {
-  margin-bottom: 0;
-}
-.checkout__login {
-  flex-shrink: 0;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 100%;
-}
-.checkout__login:hover {
-  text-decoration: underline;
-}
-.checkout__input {
-  display: block;
-  width: 100%;
-  height: 50px;
-  padding: 0 16px;
-  color: #000;
-  background-color: transparent;
-  border: 1px solid #CAC5C5;
-  border-radius: 5px;
-  outline: none;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-}
-.checkout__input::-moz-placeholder {
-  color: #737373;
-}
-.checkout__input::placeholder {
-  color: #737373;
-}
-.checkout__input:focus {
-  border-color: #67778B;
-}
-.checkout__row2 {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 12px;
-}
-@media (max-width: 480px) {
-  .checkout__row2 {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-}
-.checkout__select {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50px;
-  padding: 6px 16px;
-  border: 1px solid #CAC5C5;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.checkout__select-label {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 10px;
-  line-height: 100%;
-}
-.checkout__select-control {
-  width: 100%;
-  margin-top: 2px;
-  padding-right: 20px;
-  color: #000;
-  background-color: transparent;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23000' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right center;
-  border: 0;
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  cursor: pointer;
-}
-.checkout__addline {
-  align-self: flex-start;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 100%;
-}
-.checkout__addline:hover {
-  color: #67778B;
-}
-.checkout__note {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 100%;
-}
-.checkout__check {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  cursor: pointer;
-}
-.checkout__check input {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  accent-color: #67778B;
-}
-.checkout__check span {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 100%;
-}
-.checkout__delivery {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 62px;
-  padding: 12px 20px;
-  color: #000;
-  background-color: #F6F6F6;
-  border-radius: 5px;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 130%;
-  text-align: center;
-}
-.checkout__radio {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-height: 56px;
-  padding: 0 18px;
-  border: 1px solid #CAC5C5;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.checkout__radio input {
-  flex-shrink: 0;
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  accent-color: #67778B;
-}
-.checkout__radio span {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 130%;
-}
-.checkout__divider {
-  height: 1px;
-  margin: 8px 0;
-  background: linear-gradient(90deg, #3088DF 0%, #4225A5 25.12%, #4620A5 100%);
-}
-.checkout__terms {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 150%;
-}
-.checkout__terms a {
-  color: #000;
-  text-decoration: underline;
-}
-.checkout__terms a:hover {
-  color: #67778B;
-}
-.checkout__actions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 10px;
-}
-.checkout__return {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 100%;
-}
-.checkout__return:hover {
-  color: #000;
-}
-.checkout__buttons {
-  display: flex;
-  gap: 12px;
-}
-@media (max-width: 480px) {
-  .checkout__buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-}
-.checkout__manager, .checkout__submit {
-  min-width: 220px;
-  height: 48px;
-  padding: 0 20px;
-  color: #fff;
-  background-color: #67778B;
-  border-radius: 5px;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  line-height: 100%;
-}
-.checkout__manager:hover, .checkout__submit:hover {
-  background-color: #000;
-}
-@media (max-width: 480px) {
-  .checkout__manager, .checkout__submit {
-    min-width: 0;
-    width: 100%;
-  }
-}
-.checkout__summary {
-  align-self: start;
-  padding: 20px;
-  border: 1px solid #CAC5C5;
-  border-radius: 15px;
-}
-@media (max-width: 993px) {
-  .checkout__summary {
-    max-width: 420px;
-  }
-}
-.checkout__summary-title {
-  margin-bottom: 20px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 120%;
-}
-.checkout__items {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 4px;
-}
-.checkout__item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-.checkout__item-media {
-  position: relative;
-  flex-shrink: 0;
-  width: 76px;
-}
-.checkout__item-img {
-  display: block;
-  width: 76px;
-  height: 51px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: 3px;
-}
-.checkout__item-badge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 20px;
-  height: 20px;
-  padding: 0 5px;
-  color: #fff;
-  background-color: #000;
-  border-radius: 100px;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 1;
-}
-.checkout__item-body {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 0;
-}
-.checkout__item-name {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 130%;
-}
-.checkout__item-price {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 100%;
-}
-.checkout__coupon {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 16px 0;
-  margin-top: 16px;
-  color: #737373;
-  border-top: 1px solid #EFEEEE;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 100%;
-  cursor: pointer;
-  transition: color 0.25s ease;
-}
-.checkout__coupon:hover {
-  color: #000;
-}
-.checkout__sumrow {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 8px 0;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 130%;
-}
-.checkout__coupon + .checkout__sumrow {
-  padding-top: 16px;
-  border-top: 1px solid #EFEEEE;
-}
-.checkout__sumlabel {
-  color: #737373;
-  flex-shrink: 0;
-}
-.checkout__sumvalue {
-  color: #000;
-  font-weight: 500;
-  white-space: nowrap;
-}
-.checkout__sumnote {
-  color: #737373;
-  text-align: right;
-}
-.checkout__sumtotal {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: 8px;
-  padding-top: 16px;
-  border-top: 1px solid #EFEEEE;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 120%;
-}
-.cookies {
-  position: fixed;
-  left: 50%;
-  bottom: 0px;
-  z-index: 90;
-  width: 100%;
-  max-width: 1280px;
-  padding: 20px;
-  background-color: #67778B;
-  border-radius: 8px;
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
-  opacity: 0;
-  transform: translateY(16px) translateX(-50%);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-  pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.cookies[hidden] {
-  display: none;
-}
-.cookies.is-visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-@media (max-width: 576px) {
-  .cookies {
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    width: 100%;
-    max-width: 335px;
-    padding: 16px;
-    transform: unset;
-    flex-direction: column;
-  }
-}
-
-.cookies__text {
-  max-width: 722px;
-  color: #fff;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 17px;
-}
-
-.cookie-banner__link {
-  text-decoration: underline;
-}
-
-.cookies__accept {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 227px;
-  width: 100%;
-  height: 52px;
-  color: #000;
-  background-color: #fff;
-  border-radius: 10px;
-  font-family: "Suisse Intl";
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 100%;
-}
-.cookies__accept:hover {
-  color: #fff;
-  background-color: #000;
-}
-@media (max-width: 576px) {
-  .cookies__accept {
-    height: 46px;
-    max-width: 100%;
-    font-size: 17px;
-  }
-}
-.filters {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: max-height 0.35s ease, opacity 0.25s ease, margin-bottom 0.35s ease;
-}
-
-.filters.is-open {
-  opacity: 1;
-  margin-bottom: 25px;
-}
-
-.filters__inner {
-  padding: 40px;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.07);
-}
-@media (max-width: 768px) {
-  .filters__inner {
-    padding: 24px 20px;
-  }
-}
-
-.filters__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 36px 46px;
-}
-@media (max-width: 1120px) {
-  .filters__grid {
-    gap: 30px 26px;
-  }
-}
-@media (max-width: 993px) {
-  .filters__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 28px 30px;
-  }
-}
-@media (max-width: 576px) {
-  .filters__grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 22px;
-  }
-}
-
-.filters__label {
-  display: block;
-  margin-bottom: 10px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 100%;
-}
-
-.filters .select {
-  width: 100%;
-}
-
-.filters .select__toggle {
-  height: 45px;
-  padding: 0 14px;
-  border-radius: 8px;
-}
-
-.filters__price {
-  display: block;
-  margin-top: 14px;
-  color: #67778B;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  line-height: 100%;
-}
-.filters__price b {
-  font-weight: 400;
-}
-
-.filters__submit {
-  display: block;
-  min-width: 200px;
-  height: 48px;
-  margin-top: 40px;
-  margin-left: auto;
-  padding: 0 30px;
-  color: #fff;
-  background-color: #000;
-  border-radius: 8px;
-  font-family: "Suisse Intl";
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 100%;
-}
-.filters__submit:hover {
-  background-color: #67778B;
-}
-@media (max-width: 576px) {
-  .filters__submit {
-    width: 100%;
-    margin-top: 26px;
-  }
-}
-
-.catalog__btn.is-active {
-  border-color: #CAC5C5;
-}
-
-.range {
-  position: relative;
-  height: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.range__track {
-  position: absolute;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background-color: #DDDBDB;
-  border-radius: 2px;
-}
-
-.range__fill {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  background-color: #67778B;
-  border-radius: 2px;
-}
-
-.range__input {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  margin: 0;
-  padding: 0;
-  background: none;
-  pointer-events: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-.range__input:focus {
-  outline: none;
-}
-.range__input::-webkit-slider-thumb {
-  pointer-events: auto;
-  -webkit-appearance: none;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  border: 4px solid #67778B;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.range__input::-moz-range-thumb {
-  pointer-events: auto;
-  width: 16px;
-  height: 16px;
-  background-color: #fff;
-  border: 4px solid #67778B;
-  border-radius: 50%;
-  cursor: pointer;
-}
-@font-face {
-  font-family: "Suisse Intl";
-  font-weight: 400;
-  src: url("../fonts/SuisseIntl-Regular.woff2") format("woff2");
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Suisse Intl";
-  font-weight: 500;
-  src: url("../fonts/SuisseIntl-Medium.woff2") format("woff2");
+  font-family: "Montserrat";
+  font-weight: 600;
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Suisse Intl";
+  font-family: "Source Serif Pro";
+  font-weight: 600;
+  src: url("../fonts/SourceSerifPro-SemiboldIt.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
   font-weight: 700;
-  src: url("../fonts/SuisseIntl-Bold.woff2") format("woff2");
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: 800;
+  src: url("../fonts/Inter-Black.woff2") format("woff2");
   font-style: normal;
   font-display: swap;
 }
@@ -1201,7 +74,7 @@ html {
 }
 
 body {
-  font-family: "Vela Sans", "Arial", "Helvetica", sans-serif;
+  font-family: "Inter", "Arial", "Helvetica", sans-serif;
   margin-right: auto;
   margin-left: auto;
   min-width: 375px;
@@ -1217,6 +90,10 @@ a {
   color: inherit;
   text-decoration: none;
   transition: color 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+a:hover {
+  opacity: 0.72;
 }
 
 :focus-visible {
@@ -1276,1435 +153,1095 @@ button {
   background-color: transparent;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+button:hover {
+  opacity: 0.85;
 }
 
 .container {
-  max-width: 1280px;
+  max-width: 1166px;
   padding: 0 40px;
   margin-right: auto;
   margin-left: auto;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .container {
-    padding: 0 15px;
+    padding: 0 20px;
   }
 }
 
-.section-title {
-  display: inline-block;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 65px;
-  font-weight: 500;
-  line-height: 120%;
+.orange-btn {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 17.567px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-radius: 8px;
+  border: 1.464px solid rgba(202, 64, 0, 0.55);
+  background: #ED4B00;
 }
-@media (max-width: 993px) {
-  .section-title {
-    font-size: 36px;
+@media (max-width: 576px) {
+  .orange-btn {
+    font-size: 14px;
+  }
+}
+
+.orange-btn:hover {
+  opacity: 1;
+  background: #D64200;
+  transform: translateY(-1px);
+}
+.wrapper {
+  background-image: url(../img/hero.webp);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  padding-bottom: 30px;
+  padding-top: 23px;
+}
+
+.hero {
+  padding-top: 87px;
+}
+
+.hero__content {
+  max-width: 586px;
+  width: 100%;
+}
+
+.hero__descr {
+  display: block;
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .hero__descr {
+    text-align: left;
   }
 }
 @media (max-width: 576px) {
-  .section-title {
+  .hero__descr {
+    font-size: 14px;
+  }
+}
+
+.hero__title {
+  color: #1B140F;
+  font-family: Inter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  margin-bottom: 20px;
+}
+.hero__title span {
+  display: block;
+  color: #1B140F;
+  font-family: Inter;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .hero__title span {
     font-size: 30px;
   }
 }
-.hero {
-  background-color: #F3F2F0;
-  padding-bottom: 44px;
-  padding-top: 100px;
-  background-image: url(../img/hero.webp);
-  background-repeat: no-repeat;
-  background-position: bottom right;
-}
 @media (max-width: 576px) {
-  .hero {
-    padding-bottom: 10px;
-    padding-top: 40px;
-    background-size: 150px;
-    background-position: bottom 100px right;
-    background-image: url(../img/hero-576.webp);
-  }
-}
-.hero h1 {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 55px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 110%;
-  margin-bottom: 60px;
-  max-width: 870px;
-}
-@media (max-width: 993px) {
-  .hero h1 {
-    font-size: 40px;
-  }
-}
-@media (max-width: 576px) {
-  .hero h1 {
-    font-size: 26px;
-    margin-bottom: 160px;
-  }
-}
-.hero h1 span {
-  display: block;
-  font-size: 100px;
-  font-weight: 700;
-  line-height: 100%;
-}
-@media (max-width: 993px) {
-  .hero h1 span {
-    font-size: 60px;
-  }
-}
-@media (max-width: 576px) {
-  .hero h1 span {
-    font-size: 41px;
-  }
-}
-.hero p {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 110%;
-  margin-bottom: 80px;
-  max-width: 516px;
-}
-@media (max-width: 576px) {
-  .hero p {
-    font-size: 12px;
-    margin-bottom: 30px;
-  }
-}
-.hero p span {
-  color: #000;
-}
-
-.hero__btn {
-  display: block;
-  color: #000;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  font-family: "Suisse Intl";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 56px;
-  padding: 5px 30px;
-  margin-bottom: 106px;
-  background-color: #fff;
-  border-radius: 20px;
-}
-@media (max-width: 576px) {
-  .hero__btn {
-    max-width: 100%;
-    text-align: center;
-    margin-bottom: 35px;
-    line-height: 160%;
-    border-radius: 10px;
-  }
-}
-
-.hero__marquee {
-  max-width: 1440px;
-  width: 100%;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.hero__marquee-track {
-  display: flex;
-  flex-wrap: nowrap;
-  width: -moz-max-content;
-  width: max-content;
-  gap: 20px;
-  animation: hero-marquee 60s linear infinite;
-  will-change: transform;
-}
-
-.hero__marquee-track > * {
-  flex: 0 0 auto;
-  max-width: -moz-max-content;
-  max-width: max-content;
-}
-
-@keyframes hero-marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-.hero__marquee:hover .hero__marquee-track {
-  animation-play-state: paused;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero__marquee-track {
-    animation: none;
-  }
-}
-.hero__brand {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 110%;
-  text-transform: uppercase;
-}
-@media (max-width: 576px) {
-  .hero__brand {
-    font-size: 12px;
-  }
-}
-
-.categories {
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-@media (max-width: 576px) {
-  .categories {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
-.categories__title {
-  margin-bottom: 40px;
-}
-@media (max-width: 576px) {
-  .categories__title {
-    margin-bottom: 20px;
-  }
-}
-
-.categories__swiper {
-  overflow: hidden;
-}
-
-.categories__swiper .swiper-slide {
-  height: auto;
-}
-
-.slider-nav {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 40px;
-}
-@media (max-width: 576px) {
-  .slider-nav {
-    margin-top: 24px;
-  }
-}
-
-.slider-arrow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  color: #000;
-  background-color: #F3F2F0;
-  border-radius: 50%;
-}
-.slider-arrow:hover {
-  color: #fff;
-  background-color: #000;
-}
-.slider-arrow.swiper-button-disabled {
-  opacity: 0.35;
-  pointer-events: none;
-}
-@media (max-width: 576px) {
-  .slider-arrow {
-    width: 44px;
-    height: 44px;
-  }
-}
-
-.category-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-  background-color: #F6F6F6;
-  border-radius: 16px;
-}
-.category-card:hover {
-  text-decoration: none;
-}
-.category-card:hover .category-card__img img {
-  transform: scale(1.04);
-}
-
-.category-card__img {
-  overflow: hidden;
-  aspect-ratio: 3/2;
-}
-.category-card__img img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.category-card__body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 20px 18px 22px;
-}
-
-.category-card__title {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 120%;
-}
-@media (max-width: 576px) {
-  .category-card__title {
-    font-size: 15px;
-  }
-}
-
-.category-card__count {
-  margin-top: auto;
-  padding-top: 16px;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 100%;
-}
-
-.news {
-  padding-top: 40px;
-  padding-bottom: 74px;
-  background-color: #F6F6F6;
-}
-@media (max-width: 576px) {
-  .news {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
-.news__title {
-  margin-bottom: 40px;
-}
-@media (max-width: 576px) {
-  .news__title {
-    margin-bottom: 20px;
-  }
-}
-
-.news__swiper {
-  overflow: hidden;
-}
-
-.news__swiper .swiper-slide {
-  height: auto;
-}
-
-.new-card {
-  position: relative;
-  display: block;
-  min-height: 455px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-.new-card:hover {
-  text-decoration: none;
-}
-.new-card:hover .new-card__img {
-  transform: scale(1.03);
-}
-@media (max-width: 576px) {
-  .new-card {
-    display: flex;
-    flex-direction: column;
-    min-height: unset;
-    border-radius: 16px;
-    height: 100%;
-  }
-}
-
-.new-card__img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-@media (max-width: 576px) {
-  .new-card__img {
-    position: relative;
-    min-height: 225px;
-    border-radius: 15px;
-    z-index: 2;
-    height: auto;
-  }
-}
-
-.new-card__overlay {
-  position: absolute;
-  top: 48px;
-  left: 48px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 374px;
-  padding: 32px;
-  border-radius: 15px;
-  border: 0 solid #FFF;
-  background: linear-gradient(169deg, rgba(255, 253, 253, 0.1) 8.12%, rgba(8, 8, 8, 0.1) 89.42%);
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-@media (max-width: 993px) {
-  .new-card__overlay {
-    top: 30px;
-    left: 30px;
-    padding: 24px 26px;
-  }
-}
-@media (max-width: 576px) {
-  .new-card__overlay {
-    position: static;
-    background: #fff;
-    -webkit-backdrop-filter: unset;
-    backdrop-filter: unset;
-    max-width: 100%;
-    gap: 12px;
-    border-radius: 0;
-    padding: 35px 16px 20px;
-    transform: translateY(-15px);
-    height: 100%;
-    border-radius: 0 0 15px 15px;
-  }
-}
-
-.new-card__title {
-  color: #fff;
-  font-family: "Suisse Intl";
-  font-size: 36px;
-  font-weight: 500;
-  line-height: 110%;
-}
-@media (max-width: 993px) {
-  .new-card__title {
+  .hero__title span {
     font-size: 24px;
   }
 }
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 40px;
+  }
+}
 @media (max-width: 576px) {
-  .new-card__title {
-    font-size: 20px;
-    font-weight: 700;
-    color: #000;
+  .hero__title {
+    font-size: 30px;
+    margin-bottom: 10px;
   }
 }
 
-.new-card__flex {
-  display: contents;
+.hero__price {
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(4.4282317162px);
+  backdrop-filter: blur(4.4282317162px);
+  margin-bottom: 84px;
+  max-width: 463px;
 }
 @media (max-width: 576px) {
-  .new-card__flex {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-    gap: 20px;
-    margin-top: auto;
-  }
-}
-
-.new-card__specs {
-  color: #fff;
-  font-family: "Suisse Intl";
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 130%;
-}
-@media (max-width: 576px) {
-  .new-card__specs {
-    font-size: 12px;
-    color: #000;
-  }
-}
-
-.new-card__cat {
-  color: #D1D1D1;
-  font-family: "Suisse Intl";
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 130%;
-}
-@media (max-width: 576px) {
-  .new-card__cat {
-    font-size: 12px;
-    color: #737373;
-  }
-}
-
-.new-card__price {
-  padding: 10px 30px;
-  color: #fff;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 100%;
-  white-space: nowrap;
-  background-color: #000;
-  border-radius: 5px;
-}
-@media (max-width: 576px) {
-  .new-card__price {
-    font-size: 16px;
-  }
-}
-
-.choose {
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-@media (max-width: 576px) {
-  .choose {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
-.choose__title {
-  margin-bottom: 40px;
-}
-@media (max-width: 576px) {
-  .choose__title {
+  .hero__price {
     margin-bottom: 20px;
+    padding: 16px 10px;
   }
 }
 
-.choose__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+.price__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 20px;
+  margin-bottom: 17px;
+}
+
+.price__item_mb {
+  margin-bottom: 30px;
+}
+
+.price__title {
+  color: #000;
+  font-family: Inter;
+  font-size: 17.567px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 @media (max-width: 576px) {
-  .choose__grid {
-    display: flex;
-    gap: unset;
+  .price__title {
+    font-size: 14px;
   }
 }
-.choose__grid .swiper-wrapper {
-  display: contents;
+
+.price__value {
+  color: #000;
+  font-family: "Source Serif Pro";
+  font-size: 23.422px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: grid;
+  grid-template-columns: auto 55px;
+  gap: 5px;
 }
 @media (max-width: 576px) {
-  .choose__grid .swiper-wrapper {
-    display: flex;
+  .price__value {
+    font-size: 18px;
   }
+}
+.price__value span {
+  color: rgba(0, 0, 0, 0.4);
+  font-family: "Source Serif Pro";
+  font-size: 15.417px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  position: relative;
+  overflow: hidden;
+  bottom: 5px;
+  flex-shrink: 0;
+}
+@media (max-width: 576px) {
+  .price__value span {
+    font-size: 13px;
+  }
+}
+.price__value span::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  background-color: #F00;
+  transform: rotate(-20deg);
+  top: 7px;
+}
+@media (max-width: 576px) {
+  .price__value span::before {
+    width: 80%;
+  }
+}
+
+.price__title_big {
+  font-size: 26.35px;
+}
+
+.price__value_big {
+  font-size: 29.668px;
+}
+
+.hero__btn {
+  width: 100%;
+  padding: 22px 24px;
+}
+
+.hero__text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: #1B140F;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about {
+  padding-top: 55px;
+  padding-bottom: 80px;
+}
+
+.section-title {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.section-title span {
+  color: #285B9D;
+}
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 34px;
+  }
+}
+
+.about__title {
+  margin-bottom: 55px;
+}
+
+.about__flex {
+  display: flex;
+  align-items: stretch;
+  gap: 30px;
+}
+@media (max-width: 768px) {
+  .about__flex {
+    flex-direction: column;
+  }
+}
+
+.about__left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 420px;
+  width: 100%;
+  min-width: 370px;
+}
+@media (max-width: 576px) {
+  .about__left {
+    min-width: unset;
+  }
+}
+
+.about__relative {
+  position: relative;
+  border-radius: 8px;
+}
+
+.about__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about__play:hover {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.about__btn {
+  width: 100%;
+  padding: 22px 28px;
+}
+
+.about__right {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: space-between;
+  gap: 27px;
+  max-width: 629px;
+}
+@media (max-width: 768px) {
+  .about__right {
+    max-width: 100%;
+  }
+}
+
+.normal-text {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.normal-text span {
+  color: #285B9D;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
 }
 @media (max-width: 993px) {
-  .choose__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .about__grid {
+    grid-template-columns: 1fr;
   }
 }
-.choose__grid .swiper-slide {
-  height: auto;
+@media (max-width: 768px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
-
-@media (min-width: 577px) {
-  .choose__nav {
-    display: none;
+@media (max-width: 576px) {
+  .about__grid {
+    grid-template-columns: 1fr;
   }
 }
 
-.person-card {
+.about__video {
+  max-width: 100%;
+  width: 100%;
+}
+
+.about__card {
+  border-radius: 8px;
+  background: #E8F2FF;
+  padding: 10px 30px;
+}
+.about__card strong {
+  display: block;
+  color: #265B9C;
+  font-family: Montserrat;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 8px;
+}
+.about__card span {
+  color: #285B9D;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.results {
+  padding: 34px 0;
+  background: rgba(232, 242, 255, 0.7);
+}
+
+.results__title {
+  margin-bottom: 30px;
+}
+
+.results__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 31px;
+  margin-bottom: 57px;
+}
+@media (max-width: 993px) {
+  .results__flex {
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+}
+
+.results__wrapper {
+  position: relative;
+  margin-bottom: 42px;
+}
+
+.results__swiper {
+  max-width: 1086px;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+.results__card {
+  position: relative;
+}
+.results__card span {
+  color: #FFF;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 5px;
+  border-radius: 8px;
+  background: #265B9C;
+  max-width: 140px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.results__card img {
+  border-radius: 8px;
+}
+
+.results__btns {
+  position: absolute;
+  top: 50%;
+  left: -7%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 115%;
+}
+@media (max-width: 1280px) {
+  .results__btns {
+    position: static;
+    transform: unset;
+    width: 100%;
+    max-width: 130px;
+    margin: 20px auto 0;
+  }
+}
+
+.results__btn-prev:hover,
+.results__btn-next:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.results__block {
+  border-radius: 8px;
+  background: #FFF;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.results__text {
+  display: block;
+  color: #285B9D;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.results__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 993px) {
+  .results__form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.results__input {
+  border-radius: 8px;
+  background: rgba(110, 110, 110, 0.2);
+  height: 50px;
+  text-align: center;
+  text-decoration: unset;
+  border: 0;
+}
+
+.results__input::-moz-placeholder {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.results__input::placeholder {
+  color: #000;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.5;
+}
+
+.results__btn {
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.results__agreement {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  grid-column: span 3;
+}
+@media (max-width: 993px) {
+  .results__agreement {
+    grid-column: span 1;
+  }
+}
+
+.results__agreement-text {
+  color: #265B9C;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.results__agreement-text a {
+  text-decoration: underline;
+}
+
+.team {
+  padding: 44px 0;
+}
+
+.team__title {
+  margin-bottom: 74px;
+}
+@media (max-width: 993px) {
+  .team__title {
+    margin-bottom: 30px;
+  }
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 78px;
+  margin-bottom: 45px;
+}
+@media (max-width: 993px) {
+  .team__grid {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .team__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.team__card {
+  border-radius: 16px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow: hidden;
-  background-color: #F6F6F6;
-  border-radius: 16px;
+  max-width: 315px;
 }
 
-.person-card__img img {
+.team__relative {
+  position: relative;
+}
+.team__relative span {
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 83.99%;
+  /* 13.438px */
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  background: #265B9C;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team__texts {
+  padding: 8px 2px 15px;
+  background: #EFF6FF;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.team__texts h3 {
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.team__texts span {
+  display: block;
+  color: #265B9C;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: auto;
+}
+
+.team__btn {
+  padding: 22px 28px;
+  max-width: 420px;
   width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.stories {
+  padding: 44px 0 66px;
+  background: #EFF6FF;
+}
+
+.stories__swiper .swiper-slide {
+  max-width: 278px;
+}
+.stories__swiper .swiper-slide video {
+  max-width: 100%;
+}
+
+.stories__title {
+  margin-bottom: 13px;
+  font-size: 48px;
+}
+@media (max-width: 768px) {
+  .stories__title {
+    font-size: 34px;
+  }
+}
+
+.stories__text {
+  margin-bottom: 32px;
+}
+
+.stories__card video {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: left;
+  object-position: left;
+  border-radius: 8px;
+}
+
+.about__relative video {
+  max-width: 100%;
+}
+
+.photo {
+  background-color: #fff;
+}
+
+.photo__swiper .swiper-slide {
+  height: auto;
+}
+@media (max-width: 993px) {
+  .photo__swiper .swiper-slide {
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+}
+.photo__swiper .swiper-slide img {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
-.person-card__body {
-  padding: 54px 16px 30px;
+.swiper-pagination-bullet-active {
+  background-color: rgb(38, 91, 156);
 }
 
-.person-card__name {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 120%;
-  margin-bottom: 18px;
+.photo__pagination {
+  display: none;
+  margin: 0 auto;
+  position: static;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+@media (max-width: 993px) {
+  .photo__pagination {
+    display: block;
+  }
 }
 
-.person-card__desc {
-  color: #737373;
-  font-family: "Suisse Intl";
+.reputation {
+  padding: 56px 0;
+  background: #EFF6FF;
+}
+
+.reputation__title {
+  margin-bottom: 11px;
+  font-size: 50px;
+}
+@media (max-width: 768px) {
+  .reputation__title {
+    font-size: 34px;
+  }
+}
+
+.reputation__text {
+  margin-bottom: 35px;
+}
+
+.reputation__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 26px;
+}
+@media (max-width: 1280px) {
+  .reputation__grid {
+    grid-template-columns: 344px 344px;
+    justify-self: anchor-center;
+  }
+}
+@media (max-width: 768px) {
+  .reputation__grid {
+    grid-template-columns: 344px;
+  }
+}
+
+.reputation__card {
+  background-color: #fff;
+  padding: 17px 0;
+  border-radius: 17.77px;
+  position: relative;
+}
+
+.reputation__swiper {
+  max-width: 344px;
+}
+.reputation__swiper .swiper-wrapper {
+  box-sizing: border-box;
+}
+
+.reputation__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #DEE2E6;
+  padding-bottom: 20px;
+  width: 80%;
+  margin: 0 35px 20px;
+}
+
+.reputation__rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--style-black, #000);
+  leading-trim: both;
+  text-edge: cap;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.reputation__content {
+  padding: 0 35px;
+}
+
+.reputation__flex-2 {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.reputation__flex-2 img {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.reputation__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reputation__name {
+  color: var(--style-text, #212529);
+  text-align: right;
+  font-family: Montserrat;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 130%;
-}
-
-.about {
-  padding-top: 72px;
-  padding-bottom: 85px;
-  background-color: #F8F8F8;
-}
-.about h1 {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 55px;
   font-style: normal;
   font-weight: 500;
-  line-height: 110%;
-  margin-bottom: 80px;
-  max-width: 100%;
+  line-height: 21.324px;
+  /* 133.273% */
 }
-@media (max-width: 993px) {
-  .about h1 {
-    font-size: 40px;
-  }
-}
-@media (max-width: 576px) {
-  .about h1 {
-    font-size: 26px;
-    margin-bottom: 160px;
-  }
-}
-.about h1 span {
-  display: block;
-  font-size: 100px;
-  font-weight: 700;
-  line-height: 100%;
-}
-@media (max-width: 993px) {
-  .about h1 span {
-    font-size: 60px;
-  }
-}
-@media (max-width: 576px) {
-  .about h1 span {
-    font-size: 41px;
-  }
-}
-.about p {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 24px;
+
+.reputation__date {
+  color: var(--style-text-gray, #6C757D);
+  font-family: Inter;
+  font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 110%;
-  max-width: 516px;
-  margin-left: auto;
-}
-@media (max-width: 576px) {
-  .about p {
-    font-size: 12px;
-  }
-}
-.about p span {
-  color: #000;
+  line-height: 19.547px;
+  /* 150.359% */
 }
 
-.breadcrumbs {
-  margin-bottom: 50px;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-}
-
-.whyus {
-  padding-top: 62px;
-  padding-bottom: 62px;
-}
-
-.whyus__title {
-  margin-bottom: 50px;
-}
-
-.whyus__flex {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.whus__img {
-  border-radius: 15px;
-}
-
-.whyus__list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 520px;
-}
-
-.whyus__item {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  position: relative;
-  padding-left: 27px;
-}
-.whyus__item strong {
-  font-weight: 600;
-}
-
-.whyus__item::before {
-  content: "";
-  background-image: url(../img/svg/list-item.svg);
-  background-repeat: no-repeat;
-  width: 17px;
-  height: 17px;
+.reputation__btns {
   position: absolute;
-  top: 4px;
-  left: 0;
-}
-
-.manager {
-  padding-bottom: 70px;
-}
-
-.manager__title {
-  margin-bottom: 58px;
-}
-
-.manager__grid {
   display: flex;
-  align-items: flex-start;
-  gap: 25px;
-}
-
-.manager__img {
-  margin-right: auto;
-}
-
-.manager__card {
-  border-radius: 15px;
-  background: #F6F6F6;
-  -webkit-backdrop-filter: blur(50px);
-  backdrop-filter: blur(50px);
-  max-width: 285px;
-  width: 100%;
-  padding: 16px 0px 30px 16px;
-  min-height: 375px;
-  display: flex;
-  flex-direction: column;
-}
-
-.manger__name {
-  display: block;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
-  margin-bottom: 15px;
-  margin-top: auto;
-}
-
-.manger__tel {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-.products {
-  padding-top: 70px;
-  padding-bottom: 100px;
-}
-.products p {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  margin-bottom: 45px;
-}
-.products p span {
-  color: #000;
-}
-.products strong {
-  display: block;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 26px;
-  margin-bottom: 34px;
-}
-.products ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-.products li {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #CAC5C5;
-}
-
-.products__title {
-  margin-bottom: 90px;
-}
-
-.products__flex {
-  display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  max-width: calc(100% - 16px);
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
-@media (max-width: 768px) {
-  .products__img {
-    display: none;
-  }
+.stars_mb {
+  margin-bottom: 10px;
 }
 
-.products__texts {
-  max-width: 730px;
+.reputation__text-2 {
+  color: var(--style-text, #212529);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 21.324px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #DEE2E6;
+  margin: 0 0px 15px;
+  padding-bottom: 15px;
   width: 100%;
 }
 
-.requsites {
-  padding-top: 84px;
-  padding-bottom: 114px;
-}
-.requsites strong {
+.reputation__link {
   display: block;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 24px;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 30px;
-  margin-bottom: 12px;
-}
-
-.requsites__title {
-  margin-bottom: 50px;
+  font-weight: 500;
+  line-height: normal;
+  padding: 13px 17px;
+  border-radius: 7.108px;
+  background: #265B9C;
+  max-width: 205px;
+  width: 100%;
+  margin: 0 35px;
 }
 
 .contacts {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 44px 0;
+}
+
+.contacts__title {
+  margin-bottom: 30px;
 }
 
 .contacts__flex {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 60px;
+  gap: 30px;
+  margin-bottom: 32px;
 }
-.contacts__flex h1 {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 55px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 72px;
-  max-width: 660px;
+@media (max-width: 993px) {
+  .contacts__flex {
+    flex-direction: column;
+  }
 }
-.contacts__flex p {
-  color: #737373;
-  font-family: "Suisse Intl";
+
+.contacts__map {
+  border-radius: 8px 8px 0 0;
+  background: #E8F2FF;
+  max-width: 734px;
+  width: 100%;
+}
+@media (max-width: 993px) {
+  .contacts__map {
+    max-width: 100%;
+  }
+}
+
+.contacts__text {
+  display: flex;
+  align-items: center;
+  color: #285B9D;
+  font-family: Inter;
   font-size: 24px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  max-width: 518px;
+  font-weight: 600;
+  line-height: normal;
+  padding: 15px 28px;
 }
-.contacts__flex p span {
-  color: #000;
+@media (max-width: 576px) {
+  .contacts__text {
+    padding: 12px 20px;
+    font-size: 18px;
+  }
 }
-
-.contacts__flex-2 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 160px;
-  flex-wrap: wrap;
-}
-.contacts__flex-2 h2 {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 110%;
-  margin-bottom: 40px;
+.contacts__text svg {
+  flex-shrink: 0;
 }
 
-.contacts__left {
+.contacts__info {
   display: flex;
   flex-direction: column;
-  max-width: 518px;
-  gap: 28px;
+  gap: 18px;
+  max-width: 458px;
+}
+@media (max-width: 576px) {
+  .contacts__info {
+    max-width: 100%;
+  }
 }
 
 .contacts__block {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.contacts__block strong {
-  display: block;
-  color: #000;
-  font-family: "Suisse Intl";
+  align-items: center;
+  gap: 21px;
+  color: #265B9C;
+  font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 30px;
+  line-height: normal;
+  border-radius: 8px;
+  background: #E8F2FF;
+  padding: 16px 20px;
 }
-.contacts__block span {
-  display: block;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
+@media (max-width: 576px) {
+  .contacts__block {
+    padding: 12px 16px;
+    gap: 12px;
+    font-size: 18px;
+  }
 }
-.contacts__block a {
-  display: block;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-}
-
-.contacts__right {
-  width: 100%;
-  max-width: 486px;
-}
-
-.contacts__form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.contacts__form label {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 110%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.contacts__form input {
-  border-radius: 5px;
-  border: 1px solid #CAC5C5;
-  background: rgba(217, 217, 217, 0);
-  height: 36px;
-  padding-left: 13px;
-}
-.contacts__form textarea {
-  border-radius: 5px;
-  border: 1px solid #CAC5C5;
-  background: rgba(217, 217, 217, 0);
-  padding-left: 13px;
-  height: 117px;
-  padding-top: 10px;
-}
-.contacts__form input::-moz-placeholder {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 34px;
-}
-.contacts__form input::placeholder {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 34px;
-}
-.contacts__form button {
-  color: #FFF;
-  text-align: center;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 110%;
-  border-radius: 5px;
-  border: 0 solid #67778B;
-  background: #67778B;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  padding: 14px 24px;
-}
-
-.contacts__map {
-  border-radius: 15px;
-  background: #D9D9D9;
-  min-height: 497px;
-  width: 100%;
-}
-
-.catalog h1 {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 55px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 72px;
-  margin-bottom: 37px;
-}
-
-.catalog__sort {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.catalog__select {
-  width: 200px;
-  margin-right: 4px;
-}
-
-.catalog__sort-btn {
-  width: 41px;
-  height: 33px;
+.contacts__block svg {
   flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 7px;
-  border: 1px solid #CAC5C5;
 }
 
-.catalog__tags {
-  display: flex;
-  align-items: flex-start;
-  gap: 5px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+.contacts__block_wa {
+  color: #fff;
+  background: #2CB742;
 }
 
-.catalog__top {
-  padding-top: 60px;
-  padding-bottom: 85px;
-  background-color: rgb(246, 246, 246);
+.contacts__block_tg {
+  color: #fff;
+  background: rgb(0, 136, 204);
 }
 
-.tag__btn {
-  color: #737373;
-  font-family: "Suisse Intl";
+.contacts__text-2 {
+  color: #212529;
+  font-family: Montserrat;
   font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  padding: 5px;
-  border-radius: 7px;
-  border: 1px solid #CAC5C5;
-}
-
-.tag__btn_active {
-  color: #FFF;
-  background: #67778B;
-  border: 1px solid #67778B;
-}
-
-.catalog__search {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 30px;
-}
-.catalog__search input {
-  background-color: transparent;
-  max-width: 216px;
-  height: 33px;
-  width: 100%;
-  border-radius: 7px 0 0 7px;
-  border: 1px solid #CAC5C5;
-  padding-left: 10px;
-  text-decoration: unset;
-}
-.catalog__search button {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 110%;
-  padding: 12px 30px;
-  background-color: #fff;
-  border-radius: 0 7px 0 7px;
-  height: 33px;
-}
-
-.catalog__tags-2 {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-bottom: 63px;
-}
-
-.tags-2__btn {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  padding: 5px;
-  border-radius: 7px;
-  border: 1px solid #CAC5C5;
-  background: transparent;
-}
-.tags-2__btn span {
-  color: #B7B6B6;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-}
-
-.tags-2__btn_all {
-  background-color: #fff;
-  border-color: #fff;
-  color: #000;
-}
-
-.catalog__btn {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  white-space: nowrap;
-  padding: 5px 10px;
-  background-color: #fff;
-  border-radius: 7px;
-  border: 1px solid rgba(202, 197, 197, 0);
-  margin-bottom: 25px;
-}
-
-.catalog__line {
-  content: "";
-  width: 100%;
-  display: block;
-  height: 3px;
-  background: linear-gradient(90deg, #3088DF 0%, #4225A5 25.12%, #4620A5 100%);
-}
-
-.acc {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  width: 100%;
-}
-
-.content {
-  display: grid;
-  grid-template-rows: 0fr;
-  overflow: hidden;
-  transition: grid-template-rows 0.3s ease;
-  padding-left: 22px;
-  border-bottom: 1px solid #EFEEEE;
-}
-
-.promocode {
-  background-color: transparent;
-  max-width: 216px;
-  height: 33px;
-  width: 100%;
-  border-radius: 7px;
-  border: 1px solid #CAC5C5;
-  padding-left: 10px;
-  text-decoration: unset;
-  margin-bottom: 10px;
-}
-
-.rotate {
-  transform: rotate(180deg);
-}
-
-.content.open {
-  grid-template-rows: 1fr;
-}
-
-.acc img {
-  transition: transform 0.3s ease;
-}
-
-.text-wrapper {
-  min-height: 0;
-}
-
-.catalog__bottom {
-  background-color: #fff;
-  padding-top: 30px;
-  padding-bottom: 68px;
-}
-
-.catalog__flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 60px;
-}
-
-.catalog__display {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-}
-
-.catalog__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 95px 20px;
-  margin-bottom: 60px;
-}
-
-.catalog__card {
-  border-radius: 15px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 420px;
-}
-
-.catalog__wrap {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(246, 246, 246);
-  height: 100%;
-}
-
-.catalog__img {
-  max-height: 208px;
-  width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-.catalog__title {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
-  padding: 0 16px;
-}
-
-.catalog__text {
-  display: block;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
-  margin-top: auto;
-  padding: 0 16px;
+  /* 162.5% */
 }
 
-.catalog__price {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
+.map iframe {
+  width: 100%;
+  height: 594px;
+  border: 0;
+}
+
+.contacts__links {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+@media (max-width: 768px) {
+  .contacts__links {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+.contacts__links a {
+  color: #285B9D;
+  font-family: Inter;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 26px;
-  margin-bottom: 18px;
-  padding: 0 16px;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
 }
 
-.catalog__link {
-  position: absolute;
+.video-modal {
+  position: fixed;
   inset: 0;
-}
-
-.catalog__btn-2 {
-  color: #FFF;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  text-align: left;
-  font-weight: 500;
-  line-height: 110%;
-  padding: 9px 16px;
-  background-color: #67778B;
-  border-radius: 0 0 15px 15px;
-}
-
-.catalog__navigation {
   display: flex;
-  align-items: center;
-  gap: 75px;
-}
-
-.catalog__pagination {
-  display: flex;
-  gap: 4px;
-}
-
-.catalog__page {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  width: 34px;
-  height: 34px;
-  border-radius: 7px;
-  border: 1px solid #CAC5C5;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9999;
 }
 
-.catalog__showmore {
-  color: #FFF;
-  text-align: center;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  white-space: nowrap;
-  height: 48px;
-  border-radius: 5px;
-  background: #000;
-  max-width: 227px;
+.video-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.video-modal__content {
+  position: relative;
+  width: min(90vw, 1000px);
+}
+
+.video-modal video {
   width: 100%;
-}
-.catalog__showmore:hover {
-  background: #67778B;
+  display: block;
 }
 
-.hero__btn:hover {
+.video-modal__close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 32px;
   color: #fff;
-  background-color: #000;
-}
-
-.breadcrumbs a:hover {
-  color: #000;
-}
-
-.catalog__sort-btn:hover {
-  border-color: #737373;
-}
-
-.tag__btn:hover {
-  color: #000;
-  border-color: #737373;
-}
-
-.tag__btn_active:hover {
-  color: #fff;
-  background: #556270;
-  border-color: #556270;
-}
-
-.tags-2__btn:hover {
-  color: #000;
-  border-color: #737373;
-}
-
-.catalog__search button:hover {
-  background-color: #F3F2F0;
-}
-
-.catalog__btn:hover {
-  background-color: #F3F2F0;
-}
-
-.catalog__img {
-  transition: transform 0.4s ease;
-}
-
-.catalog__card:hover .catalog__img {
-  transform: scale(1.04);
-}
-
-.catalog__btn-2:hover {
-  background-color: #556270;
-}
-
-.catalog__page {
-  transition: color 0.25s ease, border-color 0.25s ease;
-}
-
-.catalog__page:hover {
-  color: #000;
-  border-color: #737373;
-}
-
-.contacts__block a:hover {
-  color: #000;
-}
-
-.contacts__form button:hover {
-  background: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 html {
   line-height: 1.15;
@@ -2847,1851 +1384,197 @@ summary {
 [hidden], template {
   display: none;
 }
-.product__top {
-  padding-top: 60px;
-  padding-bottom: 145px;
-  background-color: #F6F6F6;
-}
-@media (max-width: 993px) {
-  .product__top {
-    padding-bottom: 80px;
-  }
-}
-@media (max-width: 576px) {
-  .product__top {
-    padding-top: 20px;
-    padding-bottom: 40px;
-  }
-}
-
-.product__inner {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 90px;
-}
-@media (max-width: 1266px) {
-  .product__inner {
-    flex-direction: column;
-    gap: 40px;
-  }
-}
-@media (max-width: 768px) {
-  .product__inner {
-    gap: 20px;
-  }
-}
-
-.product__gallery {
-  display: flex;
-  align-items: flex-start;
-  gap: 50px;
-  max-width: 610px;
-  min-width: 0;
-}
-@media (max-width: 768px) {
-  .product__gallery {
-    flex-direction: column-reverse;
-    gap: 16px;
-    flex: 1 1 auto;
-    max-width: 100%;
-    order: 3;
-  }
-}
-
-.product__thumbs {
-  width: 93px;
-  height: 315px;
-  flex-shrink: 0;
-}
-@media (max-width: 768px) {
-  .product__thumbs {
-    width: 100%;
-    height: auto;
-  }
-}
-.product__thumbs .swiper-slide {
-  cursor: pointer;
-  opacity: 0.5;
-  transition: opacity 0.25s ease;
-}
-.product__thumbs .swiper-slide-thumb-active {
-  opacity: 1;
-}
-
-.product__thumb-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 93/63;
-  -o-object-fit: cover;
-  object-fit: cover;
-  border-radius: 3px;
-}
-
-.product__main {
-  width: 100%;
-  min-width: 0;
-}
-
-.product__slider {
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.product__slide-img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 467/317;
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .product__description {
-    order: 8;
-  }
-}
-.product__description span {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 30px;
-  /* 187.5% */
-}
-@media (max-width: 768px) {
-  .product__description span {
-    font-size: 16px;
-  }
-}
-.product__description p {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%;
-  margin-bottom: 20px;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  /* 160% */
-}
-@media (max-width: 768px) {
-  .product__description p {
-    font-size: 12px;
-  }
-}
-.product__description p.expanded {
-  display: block;
-  overflow: visible;
-}
-.product__description button {
-  color: #000;
-  text-align: center;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  padding: 3px 20px;
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 7px;
-  background-color: #fff;
-  /* 187.5% */
-}
-
-.product__pagination {
-  --swiper-pagination-bullet-horizontal-gap: 1.7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 43px;
-}
-@media (max-width: 768px) {
-  .product__pagination {
-    display: none;
-  }
-}
-@media (max-width: 576px) {
-  .product__pagination {
-    margin-top: 20px;
-  }
-}
-.product__pagination .swiper-pagination-bullet {
-  width: 5px;
-  height: 5px;
-  background: #D9D9D9;
-  opacity: 1;
-}
-.product__pagination .swiper-pagination-bullet-active {
-  background: #4D4D4D;
-}
-
-.product__info {
-  max-width: 486px;
-  width: 100%;
-  flex-shrink: 0;
-}
-@media (max-width: 1266px) {
-  .product__info {
-    max-width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  .product__info {
-    display: contents;
-  }
-}
-
-.product__breadcrumbs {
-  margin-bottom: 12px;
-}
-@media (max-width: 768px) {
-  .product__breadcrumbs {
-    order: 1;
-    margin-bottom: unset !important;
-  }
-}
-
-.product__cat {
-  display: inline-block;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  text-decoration: underline;
-  margin-bottom: 12px;
-}
-@media (max-width: 768px) {
-  .product__cat {
-    display: none;
-  }
-}
-
-.product__title {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 23px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 34px;
-  margin-bottom: 12px;
-}
-@media (max-width: 768px) {
-  .product__title {
-    order: 2;
-    margin-bottom: unset;
-  }
-}
-@media (max-width: 576px) {
-  .product__title {
-    font-size: 12px;
-    line-height: 130%;
-  }
-}
-
-.product__price {
-  display: block;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 23px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
-  margin-bottom: 34px;
-}
-.product__price span {
-  color: #737373;
-  font-size: 16px;
-  font-weight: 400;
-}
-@media (max-width: 768px) {
-  .product__price {
-    order: 4;
-    margin-bottom: unset;
-  }
-}
-
-.product__buy {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  -moz-column-gap: 18px;
-  column-gap: 18px;
-  row-gap: 30px;
-  margin-bottom: 12px;
-}
-@media (max-width: 768px) {
-  .product__buy {
-    order: 5;
-    margin-bottom: unset;
-  }
-}
-@media (max-width: 576px) {
-  .product__buy {
-    -moz-column-gap: 10px;
-    column-gap: 10px;
-    row-gap: 14px;
-  }
-}
-
-.product__qty {
-  width: 34px;
-  height: 33px;
-  flex-shrink: 0;
-  padding: 0;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 7px;
-  border: 1px solid #CAC5C5;
-  background: rgba(255, 255, 255, 0);
-}
-@media (max-width: 576px) {
-  .product__qty {
-    order: 3;
-    width: 44px;
-    height: 44px;
-  }
-}
-
-.product__cart {
-  width: 207px;
-  height: 33px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  background-color: #fff;
-  border-radius: 7px;
-  border: 1px solid rgba(202, 197, 197, 0);
-}
-@media (max-width: 576px) {
-  .product__cart {
-    order: 1;
-    width: 100%;
-    height: 44px;
-    border-color: #CAC5C5;
-  }
-}
-
-.product__oneclick {
-  width: 209px;
-  height: 33px;
-  color: #FFF;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  background-color: #000;
-  border-radius: 7px;
-  border: 1px solid rgba(202, 197, 197, 0);
-}
-@media (max-width: 576px) {
-  .product__oneclick {
-    order: 2;
-    width: 100%;
-    height: 44px;
-  }
-}
-
-.product__fav {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-}
-.product__fav svg {
-  transform: translateY(-2px);
-}
-@media (max-width: 576px) {
-  .product__fav {
-    order: 4;
-    flex: 1;
-    justify-content: flex-start;
-    height: 44px;
-  }
-}
-
-.product__line {
-  height: 1px;
-  margin-bottom: 12px;
-  background: linear-gradient(90deg, #3088DF 0%, #4225A5 25.12%, #4620A5 100%);
-}
-@media (max-width: 768px) {
-  .product__line {
-    order: 6;
-    width: 100%;
-    margin-bottom: unset;
-  }
-}
-
-.product__meta {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0 20px;
-}
-@media (max-width: 768px) {
-  .product__meta {
-    order: 7;
-  }
-}
-@media (max-width: 576px) {
-  .product__meta {
-    flex-wrap: wrap;
-  }
-}
-
-.product__sku {
-  white-space: nowrap;
-}
-
-.product__sku,
-.product__category {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-}
-
-.product__category a {
-  color: #000;
-  text-decoration: underline;
-}
-
-.similar {
-  padding-top: 76px;
-}
-@media (max-width: 993px) {
-  .similar {
-    padding-top: 50px;
-  }
-}
-@media (max-width: 576px) {
-  .similar {
-    padding-top: 35px;
-  }
-}
-
-.bought {
-  padding-top: 116px;
-}
-@media (max-width: 993px) {
-  .bought {
-    padding-top: 60px;
-  }
-}
-@media (max-width: 576px) {
-  .bought {
-    padding-top: 40px;
-  }
-}
-
-.similar__title,
-.bought__title {
-  display: block;
-  margin-bottom: 84px;
-}
-@media (max-width: 993px) {
-  .similar__title,
-  .bought__title {
-    margin-bottom: 40px;
-  }
-}
-@media (max-width: 576px) {
-  .similar__title,
-  .bought__title {
-    margin-bottom: 24px;
-  }
-}
-
-.similar__grid,
-.bought__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-@media (max-width: 993px) {
-  .similar__grid,
-  .bought__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 576px) {
-  .similar__grid,
-  .bought__grid {
-    display: block;
-    gap: 0;
-  }
-}
-.similar__grid .swiper-wrapper,
-.bought__grid .swiper-wrapper {
-  display: contents;
-}
-@media (max-width: 576px) {
-  .similar__grid .swiper-wrapper,
-  .bought__grid .swiper-wrapper {
-    display: flex;
-  }
-}
-.similar__grid .swiper-slide,
-.bought__grid .swiper-slide {
-  height: auto;
-}
-
-@media (min-width: 577px) {
-  .similar__nav,
-  .bought__nav {
-    display: none;
-  }
-}
-
-.description {
-  padding-top: 94px;
-  padding-bottom: 66px;
-}
-@media (max-width: 993px) {
-  .description {
-    padding-top: 60px;
-    padding-bottom: 50px;
-  }
-}
-@media (max-width: 576px) {
-  .description {
-    padding-top: 40px;
-    padding-bottom: 35px;
-  }
-}
-
-.description__line {
-  height: 3px;
-  background: linear-gradient(90deg, #3088DF 0%, #4225A5 25.12%, #4620A5 100%);
-}
-
-.description__text {
-  margin-top: 30px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  text-align: justify;
-}
-@media (max-width: 576px) {
-  .description__text {
-    display: none;
-  }
-}
-
-@media (max-width: 576px) {
-  .description.is-open .description__text {
-    -webkit-line-clamp: unset;
-    line-clamp: unset;
-    overflow: visible;
-  }
-}
-
-.product__cart:hover {
-  background-color: #F3F2F0;
-}
-
-.product__oneclick:hover {
-  background-color: #67778B;
-}
-
-.product__fav:hover {
-  color: #000;
-}
-
-.product__cat:hover {
-  color: #67778B;
-}
-
-.product__category a:hover {
-  color: #67778B;
-}
-@media (max-width: 993px) {
-  .about {
-    padding-top: 48px;
-    padding-bottom: 55px;
-  }
-  .about h1 {
-    margin-bottom: 40px;
-  }
-  .about p {
-    max-width: 100%;
-    margin-left: 0;
-    font-size: 18px;
-  }
-  .breadcrumbs {
-    margin-bottom: 30px;
-  }
-  .whyus__flex {
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  .whyus__list {
-    max-width: 100%;
-  }
-  .whyus__item {
-    font-size: 20px;
-    line-height: 140%;
-  }
-  .manager__grid {
-    flex-wrap: wrap;
-  }
-  .manager__img {
-    margin-right: 0;
-  }
-  .products p {
-    font-size: 18px;
-    line-height: 145%;
-    margin-bottom: 28px;
-  }
-  .products strong {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  .products li {
-    font-size: 16px;
-    line-height: 130%;
-  }
-  .requsites strong {
-    font-size: 18px;
-    line-height: 140%;
-  }
-}
-@media (max-width: 768px) {
-  .whyus {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .whyus__title {
-    margin-bottom: 30px;
-  }
-  .whyus__flex {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .whus__img {
-    width: 100%;
-  }
-  .manager {
-    padding-bottom: 40px;
-  }
-  .manager__title {
-    margin-bottom: 30px;
-  }
-  .manager__img {
-    width: 100%;
-  }
-  .manager__card {
-    max-width: none;
-    flex: 1 1 240px;
-    min-height: 260px;
-  }
-  .products {
-    padding-top: 40px;
-    padding-bottom: 55px;
-  }
-  .products__title {
-    margin-bottom: 40px;
-  }
-  .products__flex {
-    flex-direction: column;
-    gap: 28px;
-  }
-  .products__texts {
-    max-width: 100%;
-  }
-  .products__flex img {
-    width: 100%;
-    border-radius: 15px;
-  }
-  .requsites {
-    padding-top: 45px;
-    padding-bottom: 60px;
-  }
-  .requsites__title {
-    margin-bottom: 28px;
-  }
-}
-@media (max-width: 576px) {
-  .about {
-    padding-top: 30px;
-    padding-bottom: 35px;
-  }
-  .about h1 {
-    margin-bottom: 24px;
-  }
-  .breadcrumbs {
-    margin-bottom: 20px;
-    font-size: 10px;
-    line-height: 120%;
-  }
-  .whyus {
-    padding-top: 30px;
-    padding-bottom: 30px;
-  }
-  .whyus__title {
-    margin-bottom: 20px;
-  }
-  .whyus__list {
-    gap: 14px;
-  }
-  .whyus__item {
-    font-size: 16px;
-    padding-left: 24px;
-  }
-  .whyus__item::before {
-    width: 14px;
-    height: 14px;
-    background-size: contain;
-    top: 3px;
-  }
-  .manager {
-    padding-bottom: 30px;
-  }
-  .manager__title {
-    margin-bottom: 20px;
-  }
-  .manager__grid {
-    flex-direction: column;
-    gap: 14px;
-  }
-  .manager__card {
-    min-height: 0;
-    padding: 16px;
-  }
-  .manger__name {
-    margin-top: 0;
-    font-size: 20px;
-    line-height: 120%;
-    margin-bottom: 8px;
-  }
-  .products {
-    padding-top: 30px;
-    padding-bottom: 35px;
-  }
-  .products__title {
-    margin-bottom: 24px;
-  }
-  .products p {
-    font-size: 15px;
-    margin-bottom: 20px;
-  }
-  .products strong {
-    font-size: 16px;
-    margin-bottom: 16px;
-  }
-  .products ul {
-    gap: 10px;
-  }
-  .products li {
-    font-size: 14px;
-    line-height: 125%;
-  }
-  .requsites {
-    padding-top: 30px;
-    padding-bottom: 40px;
-  }
-  .requsites__title {
-    margin-bottom: 20px;
-  }
-  .requsites strong {
-    font-size: 15px;
-    margin-bottom: 8px;
-  }
-}
-@media (max-width: 993px) {
-  .contacts__flex h1 {
-    max-width: 100%;
-    font-size: 40px;
-    line-height: 120%;
-  }
-  .contacts__flex p {
-    max-width: 100%;
-    font-size: 18px;
-    line-height: 145%;
-  }
-  .contacts__flex-2 {
-    margin-bottom: 80px;
-  }
-  .contacts__flex-2 h2 {
-    font-size: 28px;
-    margin-bottom: 28px;
-  }
-  .contacts__block strong,
-  .contacts__block span,
-  .contacts__block a {
-    font-size: 18px;
-    line-height: 145%;
-  }
-}
-@media (max-width: 768px) {
-  .contacts {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .contacts__flex {
-    margin-bottom: 40px;
-  }
-  .contacts__flex-2 {
-    margin-bottom: 50px;
-    gap: 40px;
-  }
-  .contacts__left,
-  .contacts__right {
-    max-width: 100%;
-    width: 100%;
-  }
-  .contacts__map {
-    min-height: 320px;
-  }
-}
-@media (max-width: 576px) {
-  .contacts {
-    padding-top: 30px;
-    padding-bottom: 35px;
-  }
-  .contacts__flex {
-    margin-bottom: 28px;
-  }
-  .contacts__flex h1 {
-    font-size: 26px;
-  }
-  .contacts__flex p {
-    font-size: 15px;
-  }
-  .contacts__flex-2 {
-    margin-bottom: 35px;
-    gap: 30px;
-  }
-  .contacts__flex-2 h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  .contacts__left {
-    gap: 20px;
-  }
-  .contacts__block {
-    gap: 6px;
-  }
-  .contacts__block strong,
-  .contacts__block span,
-  .contacts__block a {
-    font-size: 15px;
-  }
-  .contacts__form button {
-    max-width: 100%;
-    width: 100%;
-  }
-  .contacts__map {
-    min-height: 220px;
-  }
-}
-@media (max-width: 993px) {
-  .catalog h1 {
-    font-size: 40px;
-    line-height: 120%;
-    margin-bottom: 28px;
-  }
-  .catalog__top {
-    padding-top: 40px;
-    padding-bottom: 55px;
-  }
-  .catalog__tags {
-    margin-bottom: 24px;
-  }
-  .catalog__tags-2 {
-    margin-bottom: 40px;
-  }
-  .catalog__grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px 20px;
-  }
-}
-@media (max-width: 768px) {
-  .catalog__bottom {
-    padding-top: 24px;
-    padding-bottom: 45px;
-  }
-  .catalog__flex {
-    margin-bottom: 34px;
-  }
-  .catalog__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 16px;
-  }
-  .catalog__navigation {
-    gap: 24px;
-  }
-}
-@media (max-width: 576px) {
-  .catalog h1 {
-    font-size: 26px;
-    margin-bottom: 20px;
-  }
-  .catalog__top {
-    padding-top: 30px;
-    padding-bottom: 35px;
-  }
-  .catalog__tags {
-    margin-bottom: 20px;
-  }
-  .catalog__tags-2 {
-    margin-bottom: 30px;
-  }
-  .tag__btn,
-  .tags-2__btn {
-    font-size: 14px;
-  }
-  .catalog__search {
-    margin-bottom: 20px;
-  }
-  .catalog__search input {
-    max-width: none;
-    flex: 1 1 auto;
-    min-width: 0;
-  }
-  .catalog__search button {
-    flex-shrink: 0;
-    padding: 12px 20px;
-  }
-  .catalog__btn {
-    width: 100%;
-  }
-  .catalog__bottom {
-    padding-top: 20px;
-    padding-bottom: 35px;
-  }
-  .catalog__flex {
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-bottom: 24px;
-  }
-  .catalog__sort {
-    width: 100%;
-  }
-  .catalog__select {
-    width: auto;
-    flex: 1 1 auto;
-    min-width: 0;
-    margin-right: 0;
-  }
-  .catalog__display {
-    font-size: 14px;
-    line-height: 150%;
-  }
-  .catalog__grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    margin-bottom: 40px;
-  }
-  .catalog__navigation {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 20px;
-  }
-  .catalog__showmore {
-    max-width: 100%;
-  }
-}
-.select {
-  position: relative;
-  width: 200px;
-  flex-shrink: 0;
-  font-family: "Suisse Intl";
-}
-
-.select__toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  width: 100%;
-  height: 33px;
-  padding: 0 12px;
-  color: #737373;
-  background-color: #fff;
-  border: 1px solid #DDDBDB;
-  border-radius: 7px;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  line-height: 100%;
-  text-align: left;
-  cursor: pointer;
-}
-.select__toggle:hover {
-  border-color: #737373;
-}
-
-.select.is-open .select__toggle {
-  border-color: #000;
-}
-
-.select__value {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.select__arrow {
-  flex-shrink: 0;
-  color: #737373;
-  transition: transform 0.2s ease;
-}
-
-.select.is-open .select__arrow {
-  transform: rotate(180deg);
-}
-
-.select__list {
-  position: absolute;
-  top: calc(100% + 4px);
-  left: 0;
-  right: 0;
-  z-index: 30;
-  max-height: 260px;
-  overflow-y: auto;
-  padding: 4px;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(-6px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-  background-color: #fff;
-  border: 1px solid #DDDBDB;
-  border-radius: 7px;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.1);
-}
-
-.select.is-open .select__list {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.select__option {
-  padding: 9px 10px;
-  color: #737373;
-  border-radius: 5px;
-  font-size: 14px;
-  line-height: 130%;
-  cursor: pointer;
-}
-.select__option:hover, .select__option.is-current {
-  color: #000;
-  background-color: #F6F6F6;
-}
-.select__option[aria-selected=true] {
-  color: #000;
-  font-weight: 500;
-}
-.footer {
-  padding-top: 70px;
-  padding-bottom: 40px;
-}
-@media (max-width: 576px) {
-  .footer {
-    padding-top: 40px;
-    padding-bottom: 24px;
-  }
-}
-
-.footer__top {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  padding-bottom: 25px;
-  flex-wrap: wrap;
-}
-@media (max-width: 768px) {
-  .footer__top {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
-}
-@media (max-width: 576px) {
-  .footer__top {
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-  }
-}
-
-.footer__title {
-  margin-bottom: 10px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 100%;
-}
-
-.footer__label,
-.footer__text {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 140%;
-}
-.footer__label a:hover,
-.footer__text a:hover {
-  color: #737373;
-}
-
-.footer__label {
-  margin-bottom: 5px;
-}
-
-.footer__text {
-  margin-bottom: 10px;
-}
-
-.footer__phones {
-  margin: 24px 0;
-}
-.footer__phones li {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 8px;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 100%;
-  white-space: nowrap;
-}
-.footer__phones a {
-  font-weight: 500;
-  color: #000;
-}
-.footer__phones a:hover {
-  opacity: 0.6;
-}
-
-.footer__socials {
-  display: flex;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.footer__social {
-  display: inline-flex;
-  transition: opacity 0.25s ease;
-}
-.footer__social:hover {
-  opacity: 0.6;
-}
-
-.footer__about {
-  max-width: 270px;
-}
-@media (max-width: 576px) {
-  .footer__about {
-    max-width: 100%;
-    grid-column: span 2;
-  }
-}
-
-.footer__nav ul {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.footer__nav ul a {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 12px;
-  line-height: 100%;
-}
-.footer__nav ul a:hover {
-  color: #737373;
-}
-
-.footer__logo {
-  display: inline-block;
-  margin-bottom: 18px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-.footer__logo:hover {
-  opacity: 0.6;
-}
-.footer__logo::after {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-left: 5px;
-  vertical-align: 0.7em;
-  background-color: currentColor;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z'/%3E%3C/svg%3E") center/contain no-repeat;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z'/%3E%3C/svg%3E") center/contain no-repeat;
-}
-
-.footer__bottom {
-  padding-top: 62px;
-  border-top: 3px solid #3088DF;
-}
-
-.footer__copy {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  line-height: 100%;
-}
 .modal {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  margin: 0;
-  padding: 0;
   border: 0;
-  overflow: hidden;
   background-color: transparent;
 }
 
-.modal:not([open]) {
-  display: none;
-}
-
-.modal[open] {
-  display: flex;
-}
-
 .modal::backdrop {
-  background-color: rgba(0, 0, 0, 0.45);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  background-color: rgba(40, 54, 72, 0.9);
 }
 
-.modal.is-open::backdrop {
-  opacity: 1;
-}
-
-.modal--drawer {
-  justify-content: flex-end;
-}
-
-.modal__drawer {
-  position: relative;
+.modal__flex {
   display: flex;
-  flex-direction: column;
-  width: 448px;
-  max-width: 100%;
-  height: 100%;
-  background-color: #fff;
-  transform: translateX(100%);
-  transition: transform 0.35s ease;
-}
-
-.modal.is-open .modal__drawer {
-  transform: translateX(0);
-}
-
-.modal--center {
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-  overflow: auto;
-}
-
-.modal__window {
+  align-items: stretch;
   position: relative;
-  width: 100%;
-  max-width: 1198px;
-  padding: 60px 60px 70px;
-  background-color: #fff;
-  border-radius: 16px;
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-@media (max-width: 768px) {
-  .modal__window {
-    padding: 40px 20px 45px;
-  }
+  margin-bottom: 38px;
+  max-width: 632px;
 }
 
-.modal.is-open .modal__window {
-  opacity: 1;
-  transform: translateY(0);
+.modal__texts {
+  padding: 15px 40px 26px 30px;
+  background-color: #fff;
+  border-radius: 0 8px 8px 0;
 }
 
 .modal__close {
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: -10px;
+  right: -10px;
+}
+
+.modal__img {
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+@media (max-width: 576px) {
+  .modal__img {
+    display: none;
+  }
+}
+
+.modal__title {
+  color: #285B9D;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.modal__input {
+  border-radius: 8px;
+  background: rgba(110, 110, 110, 0.2);
+  height: 50px;
+  border: unset;
+  text-align: center;
+  text-decoration: unset;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  width: 19px;
+  height: 19px;
+}
+
+.custom__checkbox {
+  display: block;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #6C757D;
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.custom__checkbox_active {
+  background-image: url(../img/svg/modal-gal.svg);
+  background-repeat: no-repeat;
+  background-size: 10.5px 6.5px;
+  background-position: center center;
+}
+
+.modal__input_mb {
+  margin-bottom: 8px;
+}
+
+.modal__input::-moz-placeholder {
+  color: #000;
+  opacity: 0.5;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.modal__input::placeholder {
+  color: #000;
+  opacity: 0.5;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.modal__btn {
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.modal__agreement {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  color: #737373;
-  border-radius: 50%;
+  text-decoration: unset;
+  gap: 8px;
+  color: #265B9C;
+  font-family: Montserrat;
+  font-size: 12.8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 230px;
+  margin: 0 auto;
 }
-.modal__close:hover {
-  color: #fff;
-  background-color: #000;
-}
-
-.account-modal__title {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 100%;
+.modal__agreement a {
+  text-decoration: underline;
 }
 
-.account-modal__subtitle {
-  margin-top: 46px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 100%;
-}
-
-.account-modal__form {
-  margin-top: 26px;
-  padding: 34px 40px 42px;
-  border: 1px solid #DDDBDB;
-  border-radius: 8px;
-}
-@media (max-width: 768px) {
-  .account-modal__form {
-    padding: 24px 18px 30px;
-  }
-}
-
-.account-modal__label {
-  display: block;
-  margin-bottom: 8px;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  line-height: 100%;
-}
-.account-modal__label span {
-  color: #7B3FE4;
-}
-
-.account-modal__input {
-  display: block;
-  width: 100%;
-  height: 48px;
-  padding: 0 16px;
-  color: #000;
-  background-color: #fff;
-  border: 1px solid #DDDBDB;
-  border-radius: 6px;
-  outline: none;
-  font-family: "Suisse Intl";
-  font-size: 15px;
-}
-.account-modal__input:focus {
-  border-color: #67778B;
-}
-.account-modal__input + .account-modal__label {
-  margin-top: 22px;
-}
-
-.account-modal__pass {
-  position: relative;
-}
-.account-modal__pass + .account-modal__check {
-  margin-top: 22px;
-}
-
-.account-modal__eye {
-  position: absolute;
-  top: 50%;
-  right: 14px;
-  display: flex;
-  color: #737373;
-  transform: translateY(-50%);
-}
-.account-modal__eye:hover {
-  color: #000;
-}
-
-.account-modal__check {
+.modal__bottom {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  -webkit-backdrop-filter: blur(6.0500001907px);
+  backdrop-filter: blur(6.0500001907px);
+  padding: 8px 15px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  cursor: pointer;
-}
-.account-modal__check input {
-  width: 20px;
-  height: 20px;
-  margin: 0;
-  accent-color: #67778B;
-}
-.account-modal__check span {
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  line-height: 100%;
-  transition: color 0.25s ease;
-}
-.account-modal__check:hover span {
-  color: #67778B;
-}
-
-.account-modal__submit {
-  display: block;
-  width: 434px;
-  max-width: 100%;
-  height: 52px;
-  margin-top: 20px;
-  color: #fff;
-  background-color: #67778B;
-  border-radius: 6px;
-  font-family: "Suisse Intl";
+  gap: 11px;
+  color: #FFF;
+  font-family: Inter;
   font-size: 15px;
-  line-height: 100%;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 424px;
+  margin: 0 auto;
 }
-.account-modal__submit:hover {
-  background-color: #000;
-}
-
-.account-modal__forgot {
-  display: inline-block;
-  margin-top: 18px;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 14px;
-  line-height: 100%;
-}
-.account-modal__forgot:hover {
-  color: #737373;
-}
-
-body.modal-open,
-body.menu-open {
-  overflow: hidden;
+.modal__bottom span span {
+  font-weight: 700;
 }
 .header {
-  position: relative;
-  z-index: 20;
-  padding-top: 52px;
-  padding-bottom: 30px;
-  background-color: #F3F2F0;
-}
-@media (max-width: 1120px) {
-  .header {
-    padding-top: 27px;
-    padding-bottom: 24px;
-  }
-}
-
-.header__inner {
+  padding: 8px 8px 8px 16px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.6);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
-}
-@media (max-width: 576px) {
-  .header__inner {
-    flex-wrap: wrap;
-    row-gap: 16px;
-  }
+  max-width: 1227px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 .header__logo {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  margin-right: 44px;
-  width: 133px;
-  height: 61px;
-  bottom: 23px;
-  flex-shrink: 0;
-}
-.header__logo:hover {
-  text-decoration: none;
-  opacity: 0.75;
-}
-@media (max-width: 1120px) {
-  .header__logo {
-    margin-right: auto;
-  }
-}
-@media (max-width: 576px) {
-  .header__logo {
-    width: 133px;
-    height: 42px;
-    bottom: unset;
-  }
-}
-
-.header__logo-text {
   color: #000;
-  font-family: "Suisse Intl";
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 100%;
-}
-@media (max-width: 1120px) {
-  .header__logo-text {
-    font-size: 17px;
-  }
-}
-
-.header__menu {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-.header__menu a {
-  display: inline-flex;
-  align-items: center;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 100%;
-  white-space: nowrap;
-}
-.header__menu a:hover {
-  color: #000;
-  text-decoration: none;
-}
-@media (max-width: 1200px) {
-  .header__menu {
-    gap: 24px;
-  }
-}
-
-.header__menu a.header__menu-link--active {
-  color: #000;
-  font-weight: 500;
-}
-
-.header__star {
-  flex-shrink: 0;
-  margin-left: 6px;
-  color: #000;
-}
-
-.header__search {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  max-width: 245px;
-  width: 100%;
-  height: 64px;
-  margin-left: auto;
-  padding: 0 0 0 10px;
-  background-color: #fff;
-  border-radius: 20px;
-}
-@media (max-width: 1200px) {
-  .header__search {
-    width: 210px;
-    height: 56px;
-  }
-}
-@media (max-width: 1120px) {
-  .header__search {
-    width: 100%;
-    max-width: 260px;
-    height: 50px;
-    margin-left: 24px;
-  }
-}
-@media (max-width: 576px) {
-  .header__search {
-    order: 20;
-    max-width: none;
-    height: 46px;
-    margin-left: 0;
-  }
-}
-
-.header__search-btn {
-  display: flex;
-  flex-shrink: 0;
-  color: #737373;
-}
-.header__search-btn:hover {
-  color: #000;
-}
-
-.header__search-input {
-  width: 100%;
-  min-width: 0;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: #000;
-  font-family: "Suisse Intl";
-  font-size: 18px;
-  line-height: 100%;
-  text-decoration: unset;
-}
-.header__search-input::-moz-placeholder {
-  color: #737373;
-}
-.header__search-input::placeholder {
-  color: #737373;
-}
-.header__search-input::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-}
-@media (max-width: 1120px) {
-  .header__search-input {
-    font-size: 14px;
-  }
-}
-
-.header__search-input::-moz-placeholder {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 18px;
+  font-family: "Noto Sans";
+  font-size: 35.133px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 56px;
-}
-
-.header__search-input::placeholder {
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 56px;
-}
-
-.header__actions {
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 1120px) {
-  .header__actions {
-    margin-left: 20px;
-  }
-}
-@media (max-width: 576px) {
-  .header__actions {
-    margin-left: 16px;
-  }
-}
-
-.header__star--actions {
-  margin-left: 0;
-  margin-right: 33px;
-}
-@media (max-width: 1266px) {
-  .header__star--actions {
-    display: none;
-  }
-}
-
-.header__total {
-  margin-right: 24px;
-  color: #737373;
-  font-family: "Suisse Intl";
-  font-size: 20px;
-  line-height: 100%;
-  white-space: nowrap;
-}
-@media (max-width: 768px) {
-  .header__total {
-    display: none;
-  }
-}
-
-.header__icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 30px;
-  height: 30px;
-}
-.header__icon:hover {
-  text-decoration: none;
-}
-.header__icon + .header__icon {
-  margin-left: 16px;
-}
-@media (max-width: 576px) {
-  .header__icon + .header__icon {
-    margin-left: 10px;
-  }
-}
-
-.header__badge {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 16px;
-  height: 16px;
-  padding: 0 4px;
-  color: #fff;
-  background-color: #000;
-  border-radius: 100px;
-  font-family: "Suisse Intl";
-  font-size: 10px;
   font-weight: 500;
-  line-height: 1;
+  line-height: normal;
 }
-.header__badge[hidden] {
-  display: none;
-}
-
-.header__burger {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  margin-left: 16px;
-  background-color: #fff;
-  border-radius: 50%;
-}
-.header__burger:hover {
-  background-color: #F3F2F0;
-}
-.header__burger span {
-  display: block;
-  width: 16px;
-  height: 1px;
-  background-color: #000;
-  border-radius: 2px;
-  transition: transform 0.25s ease, opacity 0.2s ease;
-}
-@media (max-width: 1120px) {
-  .header__burger {
-    display: flex;
-    order: 20;
-  }
-}
-
-.header__nav-account {
-  display: none;
-  color: #737373;
-}
-
-@media (max-width: 1120px) {
+@media (max-width: 576px) {
   .header__logo {
-    margin-right: auto;
+    font-size: 25px;
   }
-  .header__logo-text {
-    display: none;
-  }
-  .header__logo {
-    bottom: 0;
-  }
-  .header__search,
-  .header__actions {
-    display: none;
-  }
-  .header__nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 60;
-    width: 287px;
-    max-width: 85%;
-    padding: 27px 20px 28px;
-    overflow-y: auto;
-    visibility: hidden;
-    transform: translateX(100%);
-    transition: transform 0.3s ease, visibility 0.3s;
-    background-color: #fff;
-    border-radius: 20px 0 0 20px;
-    box-shadow: -12px 0 40px rgba(0, 0, 0, 0.12);
-  }
-  .header__nav-account {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    margin-bottom: 16px;
-    color: #fff;
-    background-color: #737373;
-    border-radius: 50%;
-  }
-  .header__nav-account:hover {
-    background-color: #000;
-    text-decoration: none;
-  }
-  .header__menu {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
-  .header__menu li + li {
-    border-top: 1px solid #E4E2E2;
-  }
-  .header__menu a {
-    justify-content: space-between;
-    width: 100%;
-    height: 39px;
-    font-size: 15px;
-  }
-  .header__menu a.header__menu-link--active {
-    font-weight: 700;
-  }
-  .header__star {
-    margin-left: auto;
-  }
-  .header.open .header__nav {
-    visibility: visible;
-    transform: translateX(0);
-  }
-  .header__burger {
-    position: relative;
-    z-index: 70;
-  }
-  .header.open .header__burger span:nth-child(1) {
-    transform: translateY(5.5px) rotate(45deg);
-  }
-  .header.open .header__burger span:nth-child(2) {
-    opacity: 0;
-  }
-  .header.open .header__burger span:nth-child(3) {
-    transform: translateY(-5.5px) rotate(-45deg);
-  }
+}
+
+.header__btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 11px 10px;
 }

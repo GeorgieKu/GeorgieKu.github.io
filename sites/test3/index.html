@@ -5,814 +5,839 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ORTHOSPACE - стоматологическая продукция ведущих мировых брендов">
-    <link rel="shortcut icon" href="./img/svg/fav.ico" type="image/x-icon">
+    <meta name="description" content="Безболезненное лечение кариеса">
+
     <link rel="stylesheet" href="./css/swiper-bundle.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="preload" href="./fonts/SuisseIntl-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/SuisseIntl-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/SuisseIntl-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <title>ORTHOSPACE</title>
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <title>Just Smile</title>
 </head>
 
 <body>
-    <header class="header">
-    <div class="container">
-        <div class="header__inner">
-            <a class="header__logo" href="./index.html" aria-label="ORTHOSPACE — на главную">
-                <picture>
-                    <source media="(max-width: 576px)" srcset="./img/svg/logo-576.svg">
-                    <img class="header__logo-icon" src="./img/svg/logo.svg" alt="ORTHOSPACE" width="133" height="61">
-                </picture>
-            </a>
-
-            <button class="header__burger" id="burger" type="button" aria-label="Меню" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <nav class="header__nav">
-                <a class="header__nav-account" href="#" data-modal="accountModal" aria-label="Личный кабинет">
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true">
-                        <circle cx="10" cy="6.6" r="3.6" fill="currentColor" />
-                        <path d="M2.8 18c0-3.6 3.2-6 7.2-6s7.2 2.4 7.2 6" fill="currentColor" />
-                    </svg>
-                </a>
-
-                <ul class="header__menu">
-                    <li><a href="./index.html">Главная</a></li>
-                    <li>
-                        <a class="header__menu-link--active" href="./catalog.html">
-                            Каталог
-                            <svg class="header__star" width="9" height="9" viewBox="0 0 24 24" aria-hidden="true">
-                                <path
-                                    d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z"
-                                    fill="currentColor" />
-                            </svg>
-                        </a>
-                    </li>
-                    <li><a href="./about.html">О нас</a></li>
-                    <li><a href="./contacts.html">Контакты</a></li>
-                    <li><a href="./blog.html">Блог</a></li>
-                </ul>
-            </nav>
-
-            <form class="header__search" role="search" action="#" method="get">
-                <button class="header__search-btn" type="submit" aria-label="Найти">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="23" viewBox="0 0 20 23" fill="none">
-                        <g clip-path="url(#clip0_283_564)">
-                            <path
-                                d="M8.64 17.28C3.87 17.28 0 13.4 0 8.64C0 3.88 3.87 0 8.64 0C13.41 0 17.28 3.87 17.28 8.64C17.28 13.41 13.41 17.28 8.64 17.28ZM8.64 0.62C4.22 0.62 0.62 4.22 0.62 8.64C0.62 13.06 4.22 16.66 8.64 16.66C13.06 16.66 16.66 13.06 16.66 8.64C16.66 4.22 13.06 0.62 8.64 0.62Z"
-                                fill="black" />
-                            <path
-                                d="M19.52 22.76C19.43 22.76 19.35 22.72 19.28 22.65L13.27 15.59C13.16 15.46 13.18 15.27 13.3 15.15C13.43 15.04 13.62 15.06 13.74 15.19L19.75 22.25C19.86 22.38 19.84 22.57 19.72 22.69C19.66 22.74 19.59 22.76 19.52 22.76Z"
-                                fill="black" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_283_564">
-                                <rect width="19.82" height="22.76" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </button>
-                <input class="header__search-input" type="search" name="q" placeholder="Поиск по каталогу"
-                    aria-label="Поиск по каталогу">
-            </form>
-
-            <div class="header__actions">
-                <svg class="header__star header__star--actions" xmlns="http://www.w3.org/2000/svg" width="18"
-                    height="18" viewBox="0 0 18 18" fill="none">
-                    <path
-                        d="M9.00127 18.0025C9.00127 13.0306 4.97191 9.00127 0 9.00127C4.97191 9.00127 9.00127 4.97191 9.00127 0C9.00127 4.97191 13.0306 9.00127 18.0025 9.00127C13.0306 9.00127 9.00127 13.0306 9.00127 18.0025Z"
-                        fill="#737373" />
-                </svg>
-
-                <span class="header__total">0,00 ₽</span>
-
-                <button class="header__icon header__cart" type="button" data-modal="cartModal" aria-label="Корзина">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                        <circle cx="14.5" cy="14.5" r="14.5" fill="#737373" />
-                        <path
-                            d="M20.8562 17.5857L22.9465 11.3578C23.1404 10.7802 22.7836 10.1522 22.2616 10.1522H9.19777L8.44448 7.13505C8.27776 6.46684 7.75262 6 7.16785 6H5.55574C5.24862 6 5 6.29657 5 6.66231C5 7.02806 5.24862 7.32463 5.55574 7.32463H7.16785C7.26482 7.32463 7.35167 7.40212 7.37935 7.5126L10.6738 20.7109C10.8351 21.3568 11.3314 21.8146 11.8932 21.8443C11.6367 22.106 11.4741 22.4943 11.4741 22.9284C11.4741 23.7168 12.0107 24.3563 12.6722 24.3563C13.3337 24.3563 13.8703 23.7168 13.8703 22.9284C13.8703 22.4954 13.7081 22.1077 13.4527 21.8457H17.7281C17.4725 22.1077 17.3105 22.4954 17.3105 22.9284C17.3105 23.7168 17.8467 24.3563 18.5086 24.3563C19.1706 24.3563 19.7065 23.7168 19.7065 22.9284C19.7065 22.4954 19.5445 22.1077 19.2891 21.8457H20.71C21.0171 21.8457 21.2657 21.5494 21.2657 21.1834C21.2657 20.8173 21.0171 20.521 20.71 20.521H11.9508C11.8539 20.521 11.767 20.4438 11.7391 20.3331L11.2693 18.4499H19.7855C20.2573 18.4499 20.6814 18.1078 20.8565 17.5857H20.8562ZM14.0541 16.1927C14.0541 16.415 13.9029 16.5954 13.7162 16.5954C13.5294 16.5954 13.3782 16.415 13.3782 16.1927V12.5564C13.3782 12.3338 13.5294 12.1536 13.7162 12.1536C13.8095 12.1536 13.8939 12.1987 13.9551 12.2716C14.0163 12.3445 14.0541 12.4451 14.0541 12.5564V16.1927ZM17.8224 16.1927C17.8224 16.415 17.6709 16.5954 17.4844 16.5954C17.2979 16.5954 17.1463 16.415 17.1463 16.1927V12.5564C17.1463 12.3338 17.2977 12.1536 17.4844 12.1536C17.5778 12.1536 17.6622 12.1987 17.7234 12.2716C17.7846 12.3445 17.8224 12.4451 17.8224 12.5564V16.1927Z"
-                            fill="white" />
-                    </svg>
-                    <span class="header__badge">1</span>
-                </button>
-
-                <button class="header__icon header__account" type="button" data-modal="accountModal"
-                    aria-label="Личный кабинет">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
-                        <path
-                            d="M15 29.5558C23.2843 29.5558 30 22.9395 30 14.7779C30 6.61629 23.2843 0 15 0C6.71573 0 0 6.61629 0 14.7779C0 22.9395 6.71573 29.5558 15 29.5558Z"
-                            fill="#737373" />
-                        <path
-                            d="M24.8464 25.9021V26.72C22.2713 28.7714 18.993 30 15.423 30C11.8531 30 8.57479 28.7714 6 26.7207V25.9025C6 21.4848 9.6351 17.9032 14.1192 17.9032H16.7273C21.2113 17.9032 24.8464 21.4848 24.8464 25.9025V25.9021Z"
-                            fill="white" />
-                        <path
-                            d="M15.4231 15.7284C18.1748 15.7284 20.4054 13.5307 20.4054 10.8198C20.4054 8.10881 18.1748 5.91115 15.4231 5.91115C12.6714 5.91115 10.4407 8.10881 10.4407 10.8198C10.4407 13.5307 12.6714 15.7284 15.4231 15.7284Z"
-                            fill="white" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </div>
+    <div class="wrapper">
+        <header class="header">
+    <a class="header__logo" href="./index.html" aria-label="Just Smile — на главную">
+        Just Smile
+    </a>
+    <button class="header__btn orange-btn" onclick="openModal()" aria-label="Записаться на прием">Записаться на прием</button>
 </header>
 
 
-    <main>
         <section class="hero">
             <div class="container">
-                <h1><span>ORTHOSPACE —</span>стоматологическая продукция ведущих мировых брендов</h1>
-                <p>Мы поставляем <span>товары,<br> инструменты и расходные материалы</span><br> для профессионального
-                    использования</p>
-                <a class="white-btn btn hero__btn" href="./catalog.html">Перейти в каталог</a>
-            </div>
-            <div class="hero__marquee">
-                <div class="hero__marquee-track">
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Ivoclar</span>
+                <div class="hero__content">
+                    <span class="hero__descr">Сохраняем зубы даже в сложных случаях </span>
+                    <h1 class="hero__title">Безболезненное лечение кариеса<span>за 1 сеанс</span></h1>
+                    <div class="hero__price price">
+                        <div class="price__item">
+                            <span class="price__title">Консультация 35 мин</span>
+                            <span class="price__value">0₽ <span>2.500₽</span></span>
+                        </div>
+                        <div class="price__item">
+                            <span class="price__title">3D cканирование и исследование челюсти</span>
+                            <span class="price__value">1.190₽ <span>11.990₽</span></span>
+                        </div>
+                        <div class="price__item price__item_mb">
+                            <span class="price__title">Лечение кариеса</span>
+                            <span class="price__value">10.000₽ <span>2.500₽</span></span>
+                        </div>
+                        <div class="price__item price__item_mb">
+                            <span class="price__title price__title_big">Итого: </span>
+                            <span class="price__value price__value_big">11.990₽ <span>26.370₽</span></span>
+                        </div>
+                        <button class="orange-btn hero__btn" aria-label="Записаться на бесплатный осмотр">Записаться на
+                            бесплатный осмотр</button>
                     </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Primotech</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">BJM</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Dentaurum</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Dynaflex</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Pesitro</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">RODER</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Protect</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Shiney</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">3М</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Dentsply</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Hahnenkratt</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">YDM</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Кассис</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">G&H</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">IOS</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">GCO</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Lewa</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Dentos</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Astar</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Chifa</span>
-                    </div>
-                    <div class="swiper-slide">
-                        <span class="hero__brand">Ormco</span>
-                    </div>
-
+                </div>
+                <div class="hero__text">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="31" height="23" viewBox="0 0 31 23" fill="none">
+                        <rect width="30.4014" height="22.6603" rx="2.65328" fill="#FF0000" />
+                        <path
+                            d="M17.7686 9.16113H22.2012V14.0869H17.7686V18.6855H13.0186V14.0869H8.58398V9.16113H13.0186V4.56348H17.7686V9.16113Z"
+                            fill="white" />
+                    </svg>
+                    Используем цифровую диагностику и швейцарский протокол
                 </div>
             </div>
         </section>
-
-        <section class="categories">
+    </div>
+    <main>
+        <section class="about">
             <div class="container">
-                <h2 class="section-title categories__title">Категории</h2>
-
-                <div class="categories__swiper swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a class="category-card" href="./catalog.html">
-                                <div class="category-card__img">
-                                    <img src="./img/category-1.webp" alt="Внеротовые и внутриротовые приспособления"
-                                        loading="lazy">
-                                </div>
-                                <div class="category-card__body">
-                                    <h3 class="category-card__title">Внеротовые<br>и внутриротовые<br>приспособления
-                                    </h3>
-                                    <span class="category-card__count">28 товаров</span>
-                                </div>
-                            </a>
+                <h2 class="section-title about__title">О клинике <span>Just Smile</span></h2>
+                <div class="about__flex">
+                    <div class="about__left">
+                        <div class="about__relative">
+                            <video src="./video/1.mp4" poster="./img/video.webp"></video>
+                            <button class="about__play" aria-label="Воспроизвести видео">
+                                <img src="./img/svg/play.svg" width="91" height="91" loading="lazy" alt="">
+                            </button>
                         </div>
-                        <div class="swiper-slide">
-                            <a class="category-card" href="./catalog.html">
-                                <div class="category-card__img">
-                                    <img src="./img/category-2.webp" alt="Гигиена и профилактика в ортодонтии"
-                                        loading="lazy">
-                                </div>
-                                <div class="category-card__body">
-                                    <h3 class="category-card__title">Гигиена<br>и профилактика<br>в ортодонтии</h3>
-                                    <span class="category-card__count">17 товаров</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="category-card" href="./catalog.html">
-                                <div class="category-card__img">
-                                    <img src="./img/category-3.webp" alt="Замки, щечные трубки" loading="lazy">
-                                </div>
-                                <div class="category-card__body">
-                                    <h3 class="category-card__title">Замки,<br>щечные трубки</h3>
-                                    <span class="category-card__count">32 товара</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="category-card" href="./catalog.html">
-                                <div class="category-card__img">
-                                    <img src="./img/category-4.webp" alt="Зеркала и контрастеры" loading="lazy">
-                                </div>
-                                <div class="category-card__body">
-                                    <h3 class="category-card__title">Зеркала<br>и контрастеры</h3>
-                                    <span class="category-card__count">18 товаров</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="category-card" href="./catalog.html">
-                                <div class="category-card__img">
-                                    <img src="./img/category-5.webp" alt="Кнопки, крючки и стопоры ортодонтические"
-                                        loading="lazy">
-                                </div>
-                                <div class="category-card__body">
-                                    <h3 class="category-card__title">Кнопки, крючки<br>и стопоры<br>ортодонтические</h3>
-                                    <span class="category-card__count">29 товаров</span>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="category-card" href="./catalog.html">
-                                <div class="category-card__img">
-                                    <img src="./img/category-6.webp" alt="Материалы для фиксации брекетов"
-                                        loading="lazy">
-                                </div>
-                                <div class="category-card__body">
-                                    <h3 class="category-card__title">Материалы<br>для фиксации<br>брекетов</h3>
-                                    <span class="category-card__count">29 товаров</span>
-                                </div>
-                            </a>
-                        </div>
+                        <button onclick="openModal()" class="orange-btn about__btn"
+                            aria-label="Записаться на бесплатный осмотр">Записаться на бесплатный
+                            осмотр</button>
                     </div>
-                </div>
-
-                <div class="slider-nav categories__nav">
-                    <button class="slider-arrow slider-arrow--prev" type="button" aria-label="Предыдущие категории">
-                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true">
-                            <path d="M8 1 1 8l7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    <button class="slider-arrow slider-arrow--next" type="button" aria-label="Следующие категории">
-                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true">
-                            <path d="M1 1 8 8l-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
+                    <div class="about__right">
+                        <p class="normal-text">
+                            Наша клиника - это команда опытных <span>высококвалифицированных</span> специалистов,
+                            передовые
+                            <span>технологии</span> и уютная <span>атмосфера</span>. Мы заботимся о вашем комфорте на
+                            каждом этапе лечения.
+                        </p>
+                        <p class="normal-text">
+                            <span>Современные технологии и 3D-диагностика помогают нам достигать идеального результата
+                                без боли и дискомфорта.</span>
+                        </p>
+                        <ul class="about__grid">
+                            <li class="about__card">
+                                <strong>10+</strong>
+                                <span>лет успешной работы</span>
+                            </li>
+                            <li class="about__card">
+                                <strong>13</strong>
+                                <span>опытных специалистов</span>
+                            </li>
+                            <li class="about__card">
+                                <strong>7000</strong>
+                                <span>довольных пациентов</span>
+                            </li>
+                            <li class="about__card">
+                                <strong>81%</strong>
+                                <span>пациентов возвращаются
+                                    к нам снова</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <section class="news">
+        <section class="results">
             <div class="container">
-                <h2 class="section-title news__title">Новинки</h2>
-
-                <div class="news__swiper swiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a class="new-card" href="./product.html">
-                                <img class="new-card__img" src="./img/new-1.webp" alt="Накусочные брекеты"
-                                    loading="lazy">
-                                <div class="new-card__overlay">
-                                    <h3 class="new-card__title">Накусочные брекеты</h3>
-                                    <div class="new-card__flex">
-                                        <span class="new-card__cat">Расходные материалы для ортодонтии</span>
-                                        <span class="new-card__price">350,00 ₽</span>
-                                    </div>
+                <h2 class="section-title results__title">Результаты <span>наших пациентов</span></h2>
+                <div class="results__flex">
+                    <img src="./img/yandex.webp" loading="lazy" width="402" height="98" alt="">
+                    <p class="normal-text">Наша средняя оценка на Яндекс.Картах = 5.0<br>
+                        Посмотрите результаты лечения кариеса наших клиентов</p>
+                </div>
+                <div class="results__wrapper">
+                    <div class="results__swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="results__card">
+                                    <span>До</span>
+                                    <img src="./img/do.webp" loading="lazy" alt="">
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="new-card" href="./product.html">
-                                <img class="new-card__img" src="./img/new-2.webp" alt="Брекеты керамические"
-                                    loading="lazy">
-                                <div class="new-card__overlay">
-                                    <h3 class="new-card__title">Брекеты керамические</h3>
-                                    <span class="new-card__specs">С металл пазом РОТ 018 верх/низ 5-5 крючки на 3
-                                        (набор)</span>
-                                    <div class="new-card__flex">
-                                        <span class="new-card__cat">Металлические брекеты</span>
-                                        <span class="new-card__price">4800,00 ₽</span>
-                                    </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="results__card">
+                                    <span>После</span>
+                                    <img src="./img/posle.webp" loading="lazy" alt="">
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="new-card" href="./product.html">
-                                <img class="new-card__img" src="./img/new-3.webp" alt="Дуги G&H" loading="lazy">
-                                <div class="new-card__overlay">
-                                    <h3 class="new-card__title">Дуги G&H</h3>
-                                    <span class="new-card__specs">Никель-титановые круглого сечения</span>
-                                    <div class="new-card__flex">
-                                        <span class="new-card__cat">Расходные материалы для ортодонтии</span>
-                                        <span class="new-card__price">86,00 ₽</span>
-                                    </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="results__card">
+                                    <span>До</span>
+                                    <img src="./img/do.webp" loading="lazy" alt="">
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="new-card" href="./product.html">
-                                <img class="new-card__img" src="./img/new-4.webp"
-                                    alt="High-Q-Bond Light Cure Band Cement Kit" loading="lazy">
-                                <div class="new-card__overlay">
-                                    <h3 class="new-card__title">High-Q-Bond Light Cure Band Cement Kit</h3>
-                                    <div class="new-card__flex">
-                                        <span class="new-card__cat">уп/4 шпр. х 4 гр</span>
-                                        <span class="new-card__price">20 620,00 ₽</span>
-                                    </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="results__card">
+                                    <span>После</span>
+                                    <img src="./img/posle.webp" loading="lazy" alt="">
                                 </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="new-card" href="./product.html">
-                                <img class="new-card__img" src="./img/new-5.webp" alt="Ортодонтический воск (мятный)"
-                                    loading="lazy">
-                                <div class="new-card__overlay">
-                                    <h3 class="new-card__title">Ортодонтический воск (мятный)</h3>
-                                    <div class="new-card__flex">
-                                        <span class="new-card__cat">Гигиена и профилактика в ортодонтии</span>
-                                        <span class="new-card__price">150,00 ₽</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="new-card" href="./product.html">
-                                <img class="new-card__img" src="./img/new-6.webp"
-                                    alt="Опорный винт (SS D:2.0 mm L:14 mm)Astar" loading="lazy">
-                                <div class="new-card__overlay">
-                                    <h3 class="new-card__title">Опорный винт (SS D:2.0 mm L:14 mm)Astar</h3>
-                                    <span class="new-card__specs">6-ти гранная головка</span>
-                                    <div class="new-card__flex">
-                                        <span class="new-card__cat">Ортодонтические минивинты</span>
-                                        <span class="new-card__price">4 212,00 ₽</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="new-card" href="./product.html">
-                                <img class="new-card__img" src="./img/new-7.webp"
-                                    alt="Замок для небного бюгеля, наклеиваемый, UL" loading="lazy">
-                                <div class="new-card__overlay">
-                                    <h3 class="new-card__title">Замок для небного бюгеля, наклеиваемый, UL</h3>
-                                    <div class="new-card__flex">
-                                        <span class="new-card__cat">Расходные материалы для ортодонтии</span>
-                                        <span class="new-card__price">100,00 ₽</span>
-                                    </div>
-                                </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="results__btns">
+                        <button class="results__btn-prev" aria-label="Предыдущий слайд">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56C43.464 56 56 43.464 56 28Z"
+                                    fill="#265B9C" />
+                                <path
+                                    d="M19.2194 28.5306L25.9694 35.2806C26.1101 35.4213 26.301 35.5003 26.5 35.5003C26.699 35.5003 26.8899 35.4213 27.0306 35.2806C27.1714 35.1398 27.2504 34.949 27.2504 34.7499C27.2504 34.5509 27.1714 34.36 27.0306 34.2193L21.5603 28.7499H36.25C36.4489 28.7499 36.6397 28.6709 36.7803 28.5303C36.921 28.3896 37 28.1988 37 27.9999C37 27.801 36.921 27.6103 36.7803 27.4696C36.6397 27.3289 36.4489 27.2499 36.25 27.2499H21.5603L27.0306 21.7806C27.1714 21.6398 27.2504 21.449 27.2504 21.2499C27.2504 21.0509 27.1714 20.86 27.0306 20.7193C26.8899 20.5786 26.699 20.4995 26.5 20.4995C26.301 20.4995 26.1101 20.5786 25.9694 20.7193L19.2194 27.4693C19.1496 27.539 19.0943 27.6217 19.0566 27.7127C19.0188 27.8038 18.9994 27.9014 18.9994 27.9999C18.9994 28.0985 19.0188 28.1961 19.0566 28.2871C19.0943 28.3782 19.1496 28.4609 19.2194 28.5306Z"
+                                    fill="#F5F0E8" />
+                            </svg>
 
-                <div class="slider-nav news__nav">
-                    <button class="slider-arrow slider-arrow--prev" type="button" aria-label="Предыдущие новинки">
-                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true">
-                            <path d="M8 1 1 8l7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    <button class="slider-arrow slider-arrow--next" type="button" aria-label="Следующие новинки">
-                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true">
-                            <path d="M1 1 8 8l-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </button>
+                        </button>
+                        <button class="results__btn-next" aria-label="Следующий слайд">
+                            <svg width="56" height="56" viewBox="0 0 56 56" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0 28C0 12.536 12.536 0 28 0C43.464 0 56 12.536 56 28C56 43.464 43.464 56 28 56C12.536 56 0 43.464 0 28Z"
+                                    fill="#265B9C" />
+                                <path
+                                    d="M36.7806 28.5306L30.0306 35.2806C29.8899 35.4213 29.699 35.5003 29.5 35.5003C29.301 35.5003 29.1101 35.4213 28.9694 35.2806C28.8286 35.1398 28.7496 34.949 28.7496 34.7499C28.7496 34.5509 28.8286 34.36 28.9694 34.2193L34.4397 28.7499H19.75C19.5511 28.7499 19.3603 28.6709 19.2197 28.5303C19.079 28.3896 19 28.1988 19 27.9999C19 27.801 19.079 27.6103 19.2197 27.4696C19.3603 27.3289 19.5511 27.2499 19.75 27.2499H34.4397L28.9694 21.7806C28.8286 21.6398 28.7496 21.449 28.7496 21.2499C28.7496 21.0509 28.8286 20.86 28.9694 20.7193C29.1101 20.5786 29.301 20.4995 29.5 20.4995C29.699 20.4995 29.8899 20.5786 30.0306 20.7193L36.7806 27.4693C36.8504 27.539 36.9057 27.6217 36.9434 27.7127C36.9812 27.8038 37.0006 27.9014 37.0006 27.9999C37.0006 28.0985 36.9812 28.1961 36.9434 28.2871C36.9057 28.3782 36.8504 28.4609 36.7806 28.5306Z"
+                                    fill="#F5F0E8" />
+                            </svg>
+
+
+                        </button>
+                    </div>
+                </div>
+                <div class="results__block">
+                    <span class="results__text">Хотите записаться на встречу пациентов в клинике и получить консультацию
+                        врача?</span>
+                    <form action="#" class="results__form">
+                        <input type="text" placeholder="Введите ваше имя" class="results__input">
+                        <input type="tel" placeholder="Введите ваш телефон" class="results__input results__input_mb">
+                        <button class="orange-btn results__btn" aria-label="Оставить заявку">Оставить заявку</button>
+                        <div class="results__agreement agreement">
+                            <div class="checkbox">
+                                <input type="checkbox" name="" hidden id="">
+                                <div class="custom__checkbox">
+
+                                </div>
+                            </div>
+                            <span class="results__agreement-text">Согласие на сбор и обработку
+                                <a href="#" aria-label="Политика обработки персональных данных">персональных
+                                    данных</a></span>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
-
-        <section class="choose">
+        <section class="team">
             <div class="container">
-                <h2 class="section-title choose__title">Нас выбирают</h2>
-
-                <div class="choose__swiper swiper choose__grid">
-                    <div class="swiper-wrapper">
-                        <article class="person-card swiper-slide">
-                            <div class="person-card__img">
-                                <img src="./img/person-1.webp" alt="Ильяр Нуртдинов" loading="lazy">
-                            </div>
-                            <div class="person-card__body">
-                                <h3 class="person-card__name">Ильяр Нуртдинов</h3>
-                                <p class="person-card__desc">Ортодонт. Стаж работы - 17 лет. Врач высшей категории.</p>
-                            </div>
-                        </article>
-                        <article class="person-card swiper-slide">
-                            <div class="person-card__img">
-                                <img src="./img/person-2.webp" alt="Захар Долгин" loading="lazy">
-                            </div>
-                            <div class="person-card__body">
-                                <h3 class="person-card__name">Захар Долгин</h3>
-                                <p class="person-card__desc">Врач стоматолог - ортодонт.</p>
-                            </div>
-                        </article>
-                        <article class="person-card swiper-slide">
-                            <div class="person-card__img">
-                                <img src="./img/person-3.webp" alt="Евгений Волвянкин" loading="lazy">
-                            </div>
-                            <div class="person-card__body">
-                                <h3 class="person-card__name">Евгений Волвянкин</h3>
-                                <p class="person-card__desc">Врач стоматолог - ортодонт, ортопед, гнатолог.</p>
-                            </div>
-                        </article>
-                        <article class="person-card swiper-slide">
-                            <div class="person-card__img">
-                                <img src="./img/person-4.webp" alt="Александр Плаксин" loading="lazy">
-                            </div>
-                            <div class="person-card__body">
-                                <h3 class="person-card__name">Александр Плаксин</h3>
-                                <p class="person-card__desc">Стоматолог - ортодонт.</p>
-                            </div>
-                        </article>
+                <h2 class="team__title section-title">Команда <span>профильных специалистов</span> для любой задачи</h2>
+                <div class="team__grid">
+                    <div class="team__card">
+                        <div class="team__relative">
+                            <img src="./img/team1-.webp" loading="lazy" class="team__img" alt="">
+                            <span>10 лет
+                                стажа</span>
+                        </div>
+                        <div class="team__texts">
+                            <h3>Хекилаев Алан Хаджи-Муратович</h3>
+                            <span>Врач-стоматолог, ортопед-гнатолог</span>
+                        </div>
+                    </div>
+                    <div class="team__card">
+                        <div class="team__relative">
+                            <img src="./img/team-2.webp" loading="lazy" class="team__img" alt="">
+                            <span>10 лет
+                                стажа</span>
+                        </div>
+                        <div class="team__texts">
+                            <h3>Савкуева Асия Хаджимуратовна</h3>
+                            <span>Врач-стоматолог, терапевт</span>
+                        </div>
+                    </div>
+                    <div class="team__card">
+                        <div class="team__relative">
+                            <img src="./img/team-3.webp" loading="lazy" class="team__img" alt="">
+                            <span>10 лет
+                                стажа</span>
+                        </div>
+                        <div class="team__texts">
+                            <h3>Гусейнов Маил Эльбаевич</h3>
+                            <span>Врач-стоматолог, хирург</span>
+                        </div>
+                    </div>
+                    <div class="team__card">
+                        <div class="team__relative">
+                            <img src="./img/team-4.webp" loading="lazy" class="team__img" alt="">
+                            <span>10 лет
+                                стажа</span>
+                        </div>
+                        <div class="team__texts">
+                            <h3>Кулиев Рахим Муталлимович</h3>
+                            <span>Врач-стоматолог, ортопед</span>
+                        </div>
+                    </div>
+                    <div class="team__card">
+                        <div class="team__relative">
+                            <img src="./img/team-5.webp" loading="lazy" class="team__img" alt="">
+                            <span>10 лет
+                                стажа</span>
+                        </div>
+                        <div class="team__texts">
+                            <h3>Текеев Казбек Алимуратович</h3>
+                            <span>Врач-стоматолог, терапевт</span>
+                        </div>
+                    </div>
+                    <div class="team__card">
+                        <div class="team__relative">
+                            <img src="./img/team-6.webp" loading="lazy" class="team__img" alt="">
+                            <span>10 лет
+                                стажа</span>
+                        </div>
+                        <div class="team__texts">
+                            <h3>Гахраманов Гахраман Эльданиз Оглы</h3>
+                            <span>Врач-стоматолог, хирург-имплантолог</span>
+                        </div>
                     </div>
                 </div>
+                <button class="team__btn orange-btn" onclick="openModal()"
+                    aria-label="Записаться на прием к врачу">Записаться на прием к врачу</button>
+            </div>
+        </section>
+        <section class="stories">
+            <div class="container">
+                <h2 class="stories__title section-title">Послушайте истории от <span>первого лица</span></h2>
+                <p class="normal-text stories__text">Читайте более 300 отзывов о нашей клинике в любом удобном отзовике
+                </p>
+                <div class="stories__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="stories__card about__relative">
+                                <video src="./video/1.mp4" poster="./img/video.webp" height="389"></video>
+                                <button class="about__play" aria-label="Воспроизвести видео">
+                                    <img src="./img/svg/play.svg" width="73" height="73" alt="" loading="lazy">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="stories__card about__relative">
+                                <video src="./video/1.mp4" poster="./img/video.webp" height="389"></video>
+                                <button class="about__play" aria-label="Воспроизвести видео">
+                                    <img src="./img/svg/play.svg" width="73" height="73" alt="" loading="lazy">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="stories__card about__relative">
+                                <video src="./video/1.mp4" poster="./img/video.webp" height="389"></video>
+                                <button class="about__play" aria-label="Воспроизвести видео">
+                                    <img src="./img/svg/play.svg" width="73" height="73" alt="" loading="lazy">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="stories__card about__relative">
+                                <video src="./video/1.mp4" poster="./img/video.webp" height="389"></video>
+                                <button class="about__play" aria-label="Воспроизвести видео">
+                                    <img src="./img/svg/play.svg" width="73" height="73" alt="" loading="lazy">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="photo">
+            <div class="container">
+                <h2 class="visually-hidden">Фото</h2>
+                <div class="photo__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/1.webp" loading="lazy" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/2.webp" loading="lazy" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/3.webp" loading="lazy" alt="">
+                        </div>
+                    </div>
+                    <div class="photo__pagination">
 
-                <div class="slider-nav choose__nav">
-                    <button class="slider-arrow slider-arrow--prev" type="button" aria-label="Предыдущие">
-                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M8 1 1 8l7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    <button class="slider-arrow slider-arrow--next" type="button" aria-label="Следующие">
-                        <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                            <path d="M1 1 8 8l-7 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reputation">
+            <div class="container">
+                <h2 class="reputation__title section-title">Мы дорожим своей <span>репутацией</span></h2>
+                <p class="normal-text reputation__text">Читайте более 300 отзывов о нашей клинике в любом удобном
+                    отзовике</p>
+                <div class="reputation__grid">
+                    <div class="reputation__card">
+                        <div class="reputation__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="reputation__flex">
+                                        <img class="reputation__img" src="./img/svg/yandex.svg" loading="lazy" alt="">
+                                        <div class="reputation__rating">
+                                            <span>5.0</span>
+                                            <div class="stars">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reputation__content">
+                                        <div class="reputation__flex-2">
+                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
+                                                alt="">
+                                            <div class="reputation__info">
+                                                <span class="reputation__name">Ирина Жигалина</span>
+                                                <span class="reputation__date">7 декабря 2024</span>
+                                            </div>
+                                        </div>
+                                        <div class="stars stars_mb">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                        </div>
+                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
+                                            дружелюбный
+                                            персонал. Удобная
+                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
+                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reputation__flex">
+                                        <img class="reputation__img" src="./img/svg/yandex.svg" loading="lazy" alt="">
+                                        <div class="reputation__rating">
+                                            <span>5.0</span>
+                                            <div class="stars">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reputation__content">
+                                        <div class="reputation__flex-2">
+                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
+                                                alt="">
+                                            <div class="reputation__info">
+                                                <span class="reputation__name">Ирина Жигалина</span>
+                                                <span class="reputation__date">7 декабря 2024</span>
+                                            </div>
+                                        </div>
+                                        <div class="stars stars_mb">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                        </div>
+                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
+                                            дружелюбный
+                                            персонал. Удобная
+                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
+                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reputation__btns">
+                                <button class="reputation__btn reputation__btn-prev" aria-label="Предыдущий отзыв">
+                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.8838 0.888672L0.888345 10.8841L10.8838 20.8796" stroke="black"
+                                            stroke-width="1.77697" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                                <button class="reputation__btn reputation__btn-next" aria-label="Следующий отзыв">
+                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.888672 20.8794L10.8841 10.884L0.888672 0.888507" stroke="black"
+                                            stroke-width="1.77697" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                        </div>
+                        <a class="reputation__link" href="#" aria-label="Посмотреть все отзывы">Посмотреть все
+                            отзывы</a>
+                    </div>
+                    <div class="reputation__card">
+                        <div class="reputation__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="reputation__flex">
+                                        <img class="reputation__img" src="./img/svg/yandex.svg" loading="lazy" alt="">
+                                        <div class="reputation__rating">
+                                            <span>5.0</span>
+                                            <div class="stars">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reputation__content">
+                                        <div class="reputation__flex-2">
+                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
+                                                alt="">
+                                            <div class="reputation__info">
+                                                <span class="reputation__name">Ирина Жигалина</span>
+                                                <span class="reputation__date">7 декабря 2024</span>
+                                            </div>
+                                        </div>
+                                        <div class="stars stars_mb">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                        </div>
+                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
+                                            дружелюбный
+                                            персонал. Удобная
+                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
+                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reputation__flex">
+                                        <img class="reputation__img" src="./img/svg/yandex.svg" loading="lazy" alt="">
+                                        <div class="reputation__rating">
+                                            <span>5.0</span>
+                                            <div class="stars">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reputation__content">
+                                        <div class="reputation__flex-2">
+                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
+                                                alt="">
+                                            <div class="reputation__info">
+                                                <span class="reputation__name">Ирина Жигалина</span>
+                                                <span class="reputation__date">7 декабря 2024</span>
+                                            </div>
+                                        </div>
+                                        <div class="stars stars_mb">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                        </div>
+                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
+                                            дружелюбный
+                                            персонал. Удобная
+                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
+                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reputation__btns">
+                                <button class="reputation__btn reputation__btn-prev" aria-label="Предыдущий отзыв">
+                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.8838 0.888672L0.888345 10.8841L10.8838 20.8796" stroke="black"
+                                            stroke-width="1.77697" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                                <button class="reputation__btn reputation__btn-next" aria-label="Следующий отзыв">
+                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.888672 20.8794L10.8841 10.884L0.888672 0.888507" stroke="black"
+                                            stroke-width="1.77697" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                        </div>
+                        <a class="reputation__link" href="#" aria-label="Посмотреть все отзывы">Посмотреть все
+                            отзывы</a>
+                    </div>
+                    <div class="reputation__card">
+                        <div class="reputation__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="reputation__flex">
+                                        <img class="reputation__img" src="./img/svg/yandex.svg" loading="lazy" alt="">
+                                        <div class="reputation__rating">
+                                            <span>5.0</span>
+                                            <div class="stars">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reputation__content">
+                                        <div class="reputation__flex-2">
+                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
+                                                alt="">
+                                            <div class="reputation__info">
+                                                <span class="reputation__name">Ирина Жигалина</span>
+                                                <span class="reputation__date">7 декабря 2024</span>
+                                            </div>
+                                        </div>
+                                        <div class="stars stars_mb">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                        </div>
+                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
+                                            дружелюбный
+                                            персонал. Удобная
+                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
+                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reputation__flex">
+                                        <img class="reputation__img" src="./img/svg/yandex.svg" loading="lazy" alt="">
+                                        <div class="reputation__rating">
+                                            <span>5.0</span>
+                                            <div class="stars">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reputation__content">
+                                        <div class="reputation__flex-2">
+                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
+                                                alt="">
+                                            <div class="reputation__info">
+                                                <span class="reputation__name">Ирина Жигалина</span>
+                                                <span class="reputation__date">7 декабря 2024</span>
+                                            </div>
+                                        </div>
+                                        <div class="stars stars_mb">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                        </div>
+                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
+                                            дружелюбный
+                                            персонал. Удобная
+                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
+                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reputation__btns">
+                                <button class="reputation__btn reputation__btn-prev" aria-label="Предыдущий отзыв">
+                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.8838 0.888672L0.888345 10.8841L10.8838 20.8796" stroke="black"
+                                            stroke-width="1.77697" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                                <button class="reputation__btn reputation__btn-next" aria-label="Следующий отзыв">
+                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.888672 20.8794L10.8841 10.884L0.888672 0.888507" stroke="black"
+                                            stroke-width="1.77697" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                        </div>
+                        <a class="reputation__link" href="#" aria-label="Посмотреть все отзывы">Посмотреть все
+                            отзывы</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <h2 class="contacts__title section-title"><span>Контакты</span> клиники</h2>
+                <div class="contacts__flex">
+                    <div class="contacts__map">
+                        <span class="contacts__text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"
+                                fill="none">
+                                <path
+                                    d="M15.4945 10.1369C15.3706 10.5556 15.3066 10.9884 15.3066 11.4232C15.3066 13.9454 17.4251 16.0205 20 16.0205C22.5749 16.0205 24.6934 13.9454 24.6934 11.4232C24.6934 8.90114 22.5749 6.82601 20 6.82601C19.2959 6.82601 18.6021 6.98175 17.9661 7.27906M14.4249 38.3332H25.5751M30 11.4617C30 16.872 20 33.3051 20 33.3051C20 33.3051 10 16.872 10 11.4617C10 6.05138 14.4766 1.6665 20 1.6665C25.5234 1.6665 30 6.05138 30 11.4617Z"
+                                    stroke="#265B9C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            Москва, ул. Кутузовский пр., 26, корп. 1
+                        </span>
+                        <div class="map">
+                            <div style="position:relative;overflow:hidden;"><a
+                                    href="https://yandex.ru/maps/org/just_smile/54166834490/?utm_medium=mapframe&utm_source=maps"
+                                    style="color:#eee;font-size:12px;position:absolute;top:0px;"
+                                    aria-label="Открыть карту Just Smile на Яндекс Картах">Just Smile</a><iframe
+                                    src="https://yandex.ru/map-widget/v1/?ll=37.542626%2C55.743411&mode=search&oid=54166834490&ol=biz&z=16.99"
+                                    frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                        </div>
+                    </div>
+                    <div class="contacts__info">
+                        <div class="contacts__block">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36"
+                                fill="none">
+                                <path
+                                    d="M18 33C26.2843 33 33 26.2843 33 18C33 9.71573 26.2843 3 18 3C9.71573 3 3 9.71573 3 18C3 26.2843 9.71573 33 18 33Z"
+                                    stroke="#265B9C" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M18 9V18L24 21" stroke="#265B9C" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            Ежедневно 10:00 - 21:00
+                        </div>
+                        <a href="tel+79990242424" class="contacts__block"
+                            aria-label="Позвонить по номеру +7 (999) 024 24-24">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34"
+                                fill="none">
+                                <path
+                                    d="M31.1238 25.9677C31.1238 26.4777 31.0105 27.0018 30.7697 27.5118C30.5288 28.0218 30.2172 28.5035 29.8063 28.9568C29.1122 29.7218 28.3472 30.2743 27.483 30.6285C26.633 30.9827 25.7122 31.1668 24.7205 31.1668C23.2755 31.1668 21.7313 30.8268 20.1022 30.1327C18.473 29.4385 16.8438 28.5035 15.2288 27.3277C13.5997 26.1377 12.0555 24.8202 10.5822 23.361C9.12301 21.8877 7.80551 20.3435 6.62967 18.7285C5.46801 17.1135 4.53301 15.4985 3.85301 13.8977C3.17301 12.2827 2.83301 10.7385 2.83301 9.26516C2.83301 8.30183 3.00301 7.381 3.34301 6.531C3.68301 5.66683 4.22134 4.8735 4.97217 4.16516C5.87884 3.27266 6.87051 2.8335 7.91884 2.8335C8.31551 2.8335 8.71217 2.9185 9.06634 3.0885C9.43467 3.2585 9.76051 3.5135 10.0155 3.88183L13.3022 8.51433C13.5572 8.8685 13.7413 9.19433 13.8688 9.506C13.9963 9.8035 14.0672 10.101 14.0672 10.3702C14.0672 10.7102 13.968 11.0502 13.7697 11.376C13.5855 11.7018 13.3163 12.0418 12.9763 12.3818L11.8997 13.501C11.7438 13.6568 11.673 13.841 11.673 14.0677C11.673 14.181 11.6872 14.2802 11.7155 14.3935C11.758 14.5068 11.8005 14.5918 11.8288 14.6768C12.0838 15.1443 12.523 15.7535 13.1463 16.4902C13.7838 17.2268 14.4638 17.9777 15.2005 18.7285C15.9655 19.4793 16.7022 20.1735 17.453 20.811C18.1897 21.4343 18.7988 21.8593 19.2805 22.1143C19.3513 22.1427 19.4363 22.1852 19.5355 22.2277C19.6488 22.2702 19.7622 22.2843 19.8897 22.2843C20.1305 22.2843 20.3147 22.1993 20.4705 22.0435L21.5472 20.981C21.9013 20.6268 22.2413 20.3577 22.5672 20.1877C22.893 19.9893 23.2188 19.8902 23.573 19.8902C23.8422 19.8902 24.1255 19.9468 24.4372 20.0743C24.7488 20.2018 25.0747 20.386 25.4288 20.6268L30.118 23.956C30.4863 24.211 30.7413 24.5085 30.8972 24.8627C31.0388 25.2168 31.1238 25.571 31.1238 25.9677Z"
+                                    stroke="#265B9C" stroke-width="2.5" stroke-miterlimit="10" />
+                                <path
+                                    d="M26.2083 12.7498C26.2083 11.8998 25.5425 10.5965 24.5508 9.534C23.6442 8.5565 22.44 7.7915 21.25 7.7915"
+                                    stroke="#265B9C" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M31.1667 12.7502C31.1667 7.26766 26.7325 2.8335 21.25 2.8335" stroke="#265B9C"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            +7 (999) 024 24-24
+                        </a>
+                        <a href="mailto:justsmilestom@yandex.ru" class="contacts__block"
+                            aria-label="Написать на почту justsmilestom@yandex.ru">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"
+                                fill="none">
+                                <path
+                                    d="M31.4537 24.5331L37.3845 31.5273V24.5331H38.8212C40.669 24.5331 42.1663 22.9599 42.1663 21.0185V9.01459C42.1663 7.07324 40.669 5.5 38.8212 5.5H21.8548C20.0071 5.5 18.5097 7.07324 18.5097 9.01459M22.1445 33.3391H12.5456L6.61483 40.3333V33.3391H5.17813C3.33039 33.3391 1.83301 31.7659 1.83301 29.8245V17.8227C1.83301 15.8813 3.33039 14.3081 5.17813 14.3081H22.1445C23.9923 14.3081 25.4896 15.8813 25.4896 17.8227V29.8245C25.4896 31.7659 23.9923 33.3391 22.1445 33.3391Z"
+                                    stroke="#265B9C" stroke-width="2.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            justsmilestom@yandex.ru
+                        </a>
+                        <a href="#" class="contacts__block contacts__block_wa" aria-label="Написать в WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="41" height="41" viewBox="0 0 41 41"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M32.9089 8.60242C29.6632 5.36854 25.347 3.58684 20.7483 3.58496C11.2729 3.58496 3.56095 11.2595 3.55726 20.6925C3.55593 23.7079 4.34754 26.6511 5.85197 29.2457L3.41309 38.1113L12.5263 35.7322C15.0372 37.0952 17.8643 37.8136 20.7415 37.8146H20.7484C20.7479 37.8146 20.749 37.8146 20.7484 37.8146C30.2228 37.8146 37.9354 30.1393 37.9394 20.7061C37.9411 16.1346 36.1546 11.8362 32.9089 8.60242ZM20.7484 34.9252H20.7426C18.1788 34.9242 15.664 34.2386 13.4702 32.9431L12.9485 32.6349L7.54063 34.0467L8.98414 28.7993L8.64437 28.2612C7.21412 25.9971 6.45873 23.3803 6.45984 20.6934C6.46291 12.8531 12.8728 6.47451 20.7542 6.47451C24.5705 6.47569 28.1581 7.95682 30.8558 10.6447C33.5535 13.3326 35.0383 16.9053 35.0367 20.705C35.0335 28.5459 28.6238 34.9252 20.7484 34.9252Z"
+                                    fill="white" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M28.5859 24.275C28.1564 24.0611 26.0445 23.027 25.6508 22.8843C25.2571 22.7416 24.9707 22.6703 24.6844 23.0982C24.398 23.5261 23.5748 24.4891 23.3242 24.7744C23.0737 25.0596 22.8231 25.0955 22.3936 24.8813C21.9641 24.6673 20.58 24.216 18.9394 22.7596C17.6624 21.626 16.8004 20.2262 16.5497 19.7981C16.2992 19.3702 16.5231 19.1389 16.7381 18.9257C16.9313 18.7341 17.1677 18.4264 17.3825 18.1767C17.5972 17.9272 17.6688 17.7487 17.812 17.4636C17.9552 17.1783 17.8837 16.9286 17.7762 16.7147C17.6688 16.5007 16.8098 14.3966 16.4519 13.5405C16.1031 12.707 15.749 12.82 15.4853 12.8067C15.2352 12.7943 14.9484 12.7917 14.6621 12.7917C14.3758 12.7917 13.9103 12.8987 13.5167 13.3266C13.123 13.7546 12.0132 14.7889 12.0132 16.8928C12.0132 18.9971 13.5524 21.0298 13.7672 21.3151C13.9819 21.6005 16.7961 25.9183 21.105 27.77C22.1298 28.2105 22.93 28.4735 23.5537 28.6704C24.5828 28.9959 25.5192 28.9499 26.2593 28.8398C27.0846 28.7171 28.8007 27.8057 29.1586 26.8073C29.5166 25.8086 29.5166 24.9526 29.4091 24.7744C29.3018 24.5961 29.0154 24.4891 28.5859 24.275Z"
+                                    fill="white" />
+                            </svg>
+                            Написать в WhatsApp
+                        </a>
+                        <a href="#" class="contacts__block contacts__block_tg" aria-label="Написать в Telegram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37"
+                                fill="none">
+                                <path
+                                    d="M33.0218 8.14643L28.6138 29.6294C28.2812 31.1456 27.4139 31.5229 26.1814 30.8088L19.465 25.694L16.2243 28.9152C15.8657 29.2857 15.5657 29.5958 14.8745 29.5958L15.357 22.5268L27.8052 10.9025C28.3464 10.4039 27.6879 10.1276 26.964 10.6263L11.575 20.6399L4.94982 18.4971C3.50873 18.0321 3.48269 17.0078 5.24974 16.2935L31.1634 5.97661C32.3631 5.51167 33.4131 6.25281 33.0218 8.14643Z"
+                                    fill="white" />
+                            </svg>
+                            Написать в Telegram
+                        </a>
+                        <p class="contacts__text-2">
+                            ООО "ВАЙТ СМАЙЛ"<br>
+                            <strong>ОГРН:</strong> 1217700160017 от 10 марта 2015 г.<br>
+                            <strong>ИНН/КПП:</strong> 7730263534 / 7730263534<br>
+                            <strong>Юридический адрес:</strong> 121165, г. Москва, Кутузовский пр-кт, д. 26, корпус 1,
+                            кв.
+                            0/VII/11<br>
+                            <strong>Ген.директор:</strong> Хекилаев Алан Хаджи-Муратович<br>
+                            <strong>Государственная лицензия:</strong> № 52-19-0907/22-01
+                        </p>
+                    </div>
+                </div>
+                <div class="contacts__links">
+                    <a href="#" aria-label="Политика обработки персональных данных">Политика обработки персональных
+                        данных</a>
+                    <a href="#" aria-label="Пользовательское соглашение">Пользовательское соглашение</a>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="footer">
-    <div class="container">
-        <div class="footer__top">
-            <div class="footer__col footer__contacts">
-                <h2 class="footer__title">Контакты</h2>
-
-                <p class="footer__label">Адрес:</p>
-                <p class="footer__text">Москва, Столовый переулок 6, офис 119</p>
-
-                <ul class="footer__phones">
-                    <li>
-                        <a href="tel:+79255006797">+7 925 500 67 97</a>
-                        <span>Юлия</span>
-                    </li>
-                    <li>
-                        <a href="tel:+79958832656">+7 995 883 26 56</a>
-                        <span>Наталья</span>
-                    </li>
-                </ul>
-
-                <p class="footer__text">Email: <a href="mailto:info@orthospace.ru">info@orthospace.ru</a></p>
-                <p class="footer__text">Email: <a href="mailto:info@orthospace.ru">info@orthospace.ru</a></p>
-
-                <div class="footer__socials">
-                    <a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="ВКонтакте">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
-                            <path
-                                d="M9.45322 7.84961C10.2506 7.53779 11.0095 7.50896 11.7452 7.83691V7.83789C11.8317 7.87618 11.8878 7.96074 11.8878 8.05664V8.07324L12.0851 11.042L12.086 11.041C12.0956 11.3113 12.3458 11.5424 12.6378 11.4795L12.6368 11.4785C13.2292 11.3529 13.6608 10.8578 14.002 10.2676C14.3478 9.66942 14.6375 8.90852 14.9181 8.15625L14.919 8.1543C14.9514 8.06622 15.0343 8.00782 15.129 8.00781H17.2579C17.2703 8.00781 17.2819 8.01319 17.2892 8.02148C17.2926 8.02542 17.2942 8.02955 17.295 8.03223C17.2956 8.03446 17.2957 8.03728 17.295 8.04102C17.2038 8.5268 16.9066 9.10789 16.546 9.66602C16.1887 10.2189 15.7854 10.7248 15.5069 11.0557C15.2343 11.3779 15.2305 11.853 15.5069 12.1797L17.4102 14.4482L17.4093 14.4492H15.0001C14.873 14.4492 14.7493 14.3954 14.6622 14.3018L14.6515 14.29L14.6388 14.2793L12.9542 12.876C12.8725 12.7982 12.7666 12.7464 12.6563 12.7324C12.5324 12.7168 12.3772 12.7466 12.2677 12.876L12.2667 12.8779C12.1216 13.0527 12.063 13.2447 12.0255 13.4629C11.9913 13.6619 11.9658 13.9503 11.92 14.2803V14.2812C11.9081 14.3681 11.825 14.4462 11.713 14.4463H10.0645C9.86386 14.4463 9.67044 14.4061 9.49423 14.3223L9.49326 14.3213C8.60076 13.8989 6.08211 12.364 4.65146 8.01074H6.92197C7.45909 9.17715 8.11444 10.235 8.90439 11.1699C9.08605 11.4262 9.48871 11.3861 9.61044 11.0869C9.73702 10.7783 9.92067 10.2412 9.95712 9.64062C9.99205 9.06447 9.891 8.41046 9.45322 7.84961Z"
-                                fill="black" stroke="black" stroke-width="0.5" />
-                            <path
-                                d="M11.025 0.582101C16.7834 0.582101 21.4679 5.26656 21.4679 11.025C21.4679 16.7834 16.7834 21.4679 11.025 21.4679C5.26656 21.4679 0.582101 16.782 0.582101 11.025C0.582101 5.26802 5.26656 0.582101 11.025 0.582101ZM11.025 0C4.93622 0 0 4.93622 0 11.025C0 17.1138 4.93622 22.05 11.025 22.05C17.1138 22.05 22.05 17.1138 22.05 11.025C22.05 4.93622 17.1138 0 11.025 0Z"
-                                fill="black" />
-                        </svg>
-                    </a>
-                    <a class="footer__social" href="#" target="_blank" rel="noopener" aria-label="Telegram">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
-                            <path
-                                d="M11.025 0.582101C16.7834 0.582101 21.4679 5.26656 21.4679 11.025C21.4679 16.7834 16.7834 21.4679 11.025 21.4679C5.26656 21.4679 0.582101 16.782 0.582101 11.025C0.582101 5.26802 5.26656 0.582101 11.025 0.582101ZM11.025 0C4.93622 0 0 4.93622 0 11.025C0 17.1138 4.93622 22.05 11.025 22.05C17.1138 22.05 22.05 17.1138 22.05 11.025C22.05 4.93622 17.1138 0 11.025 0Z"
-                                fill="black" />
-                            <path d="M8.19641 12.1377L9.413 15.4222" stroke="black" stroke-width="0.5"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M9.55125 12.7458L9.43047 15.457L11.1739 13.977L9.55125 12.7458Z" stroke="black"
-                                stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M16.4186 6.28173L5.32374 10.4976C5.01086 10.6169 5.01814 11.0637 5.33684 11.1699L8.19786 12.1362L14.713 8.22304L9.55271 12.7445L13.5707 15.7933C13.9883 16.1105 14.5952 15.8966 14.7218 15.3887L16.893 6.7023C16.9629 6.42289 16.6893 6.17841 16.4186 6.28173Z"
-                                stroke="black" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <nav class="footer__col footer__nav">
-                <h2 class="footer__title">Навигация</h2>
-                <ul>
-                    <li><a href="./index.html">Главная</a></li>
-                    <li><a href="./about.html">О нас</a></li>
-                    <li><a href="./catalog.html">Каталог</a></li>
-                    <li><a href="./contacts.html">Контакты</a></li>
-                    <li><a href="./blog.html">Блог</a></li>
-                </ul>
-            </nav>
-
-            <div class="footer__col footer__about">
-                <a class="footer__logo" href="./index.html">ORTHOSPACE</a>
-                <p class="footer__text">Профессиональные материалы для ортодонтов.</p>
-                <p class="footer__text">Полный ассортимент брекетов, дуг, инструментов и расходных материалов.</p>
-            </div>
-        </div>
-
-        <div class="footer__bottom">
-            <p class="footer__copy">© 2026 ORTHOSPACE. Все права защищены.</p>
-        </div>
-    </div>
-</footer>
-
-<dialog class="modal modal--drawer" id="cartModal" aria-label="Корзина">
-    <div class="modal__drawer cart">
-        <div class="cart__head">
-            <button class="cart__back" type="button" data-modal-close aria-label="Продолжить покупки">
-                <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M12.5 1 16 4l-3.5 3M15.6 4H0" stroke="currentColor" stroke-width="1.2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-
-            <span class="cart__head-title">Отзыв о Вашей корзине</span>
-
-            <span class="cart__count" data-cart-count>0</span>
-        </div>
-
-        <div class="cart__body" data-cart-body>
-            <p class="cart__empty" data-cart-empty>Загляните в наш магазин, чтобы<br>посмотреть, что есть в наличие</p>
-            <ul class="cart__list" data-cart-list></ul>
-        </div>
-
-        <div class="cart__foot">
-            <button class="acc cart__promo">
-                <span data-cart-promo>У Вас есть код на скидку?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
-                    <path d="M0.333984 0.371643L5.33398 4.87164L10.334 0.371643" stroke="#737373" />
-                </svg>
-            </button>
-            <div class="content">
-                <div class="text-wrapper">
-                    <input class="promocode" type="text" placeholder="Промокод">
-                </div>
-            </div>
-
-            <div class="cart__totals">
-                <div class="cart__row">
-                    <span>Промежуточный итог</span>
-                    <span data-cart-subtotal>0,00 ₽</span>
-                </div>
-                <div class="cart__row">
-                    <span>Итого</span>
-                    <span data-cart-total>0,00 ₽</span>
-                </div>
-            </div>
-
-            <button class="cart__checkout" type="button" data-modal="checkoutModal">
-                Перейти к оформлению заказа
-                <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M12.5 1 16 4l-3.5 3M15.6 4H0" stroke="currentColor" stroke-width="1.2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-    </div>
-</dialog>
-
-<template id="cartItemTemplate">
-    <li class="cart__item" data-cart-item>
-        <img class="cart__item-img" src="" alt="Товар">
-        <div class="cart__item-info">
-            <span class="cart__item-title"></span>
-            <span class="cart__item-cat"></span>
-            <span class="cart__item-price"></span>
-            <button class="cart__item-remove" type="button" data-cart-remove>Удалить</button>
-        </div>
-        <div class="cart__stepper">
-            <button class="cart__step" type="button" data-cart-plus aria-label="Добавить">+</button>
-            <span class="cart__qty" data-cart-qty>1</span>
-            <button class="cart__step" type="button" data-cart-minus aria-label="Убавить">−</button>
-        </div>
-    </li>
-</template>
-
-<dialog class="modal modal--center" id="accountModal" aria-labelledby="accountModalTitle">
-    <div class="modal__window">
-        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-            </svg>
-        </button>
-
-        <h2 class="account-modal__title" id="accountModalTitle">Мой аккаунт</h2>
-        <h3 class="account-modal__subtitle">Вход</h3>
-
-        <form class="account-modal__form" action="#" method="post">
-            <label class="account-modal__label" for="accLogin">Имя пользователя или Email<span>*</span></label>
-            <input class="account-modal__input" id="accLogin" type="text" name="login" required>
-
-            <label class="account-modal__label" for="accPass">Пароль<span>*</span></label>
-            <div class="account-modal__pass">
-                <input class="account-modal__input" id="accPass" type="password" name="password" required>
-                <button class="account-modal__eye" type="button" aria-label="Показать пароль">
-                    <svg width="18" height="12" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true">
-                        <path d="M1 7s3.2-5.5 9-5.5S19 7 19 7s-3.2 5.5-9 5.5S1 7 1 7Z" stroke="currentColor"
-                            stroke-width="1.2" />
-                        <circle cx="10" cy="7" r="2.4" stroke="currentColor" stroke-width="1.2" />
-                    </svg>
+    <dialog class="modal">
+    <div class="modal__body">
+        <div class="modal__flex">
+            <img class="modal__img" src="./img/modal.webp" loading="lazy" width="252" height="350" alt="">
+            <div class="modal__texts">
+                <button class="modal__close" onclick="modalClose()" aria-label="Закрыть окно">
+                    <img src="./img/svg/modal-close.svg" width="27" height="27" alt="">
                 </button>
+                <h2 class="modal__title">Запись на бесплатную
+                    консультацию</h2>
+                <form action="#" class="modal__form">
+                    <input type="text" placeholder="Введите ваше имя" class="modal__input">
+                    <input type="tel" placeholder="Введите ваш телефон" class="modal__input modal__input_mb">
+                    <button class="orange-btn modal__btn" aria-label="Оставить заявку">Оставить заявку</button>
+                    <div class="modal__agreement agreement">
+                        <div class="checkbox">
+                            <input type="checkbox" name="" hidden id="">
+                            <div class="custom__checkbox">
+
+                            </div>
+                        </div>
+                        <span class="agreement-text">Согласие на сбор и обработку
+                            <a href="#" aria-label="Политика обработки персональных данных">персональных данных</a></span>
+                    </div>
+                </form>
             </div>
-
-            <label class="account-modal__check">
-                <input type="checkbox" name="remember">
-                <span>Запомнить меня</span>
-            </label>
-
-            <button class="account-modal__submit" type="submit">Войти</button>
-
-            <a class="account-modal__forgot" href="#">Забыли свой пароль?</a>
-        </form>
-    </div>
-</dialog>
-
-<dialog class="modal modal--center" id="checkoutModal" aria-labelledby="checkoutModalTitle">
-    <div class="modal__window checkout">
-        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-            </svg>
-        </button>
-
-        <h2 class="checkout__title" id="checkoutModalTitle">Оформление заказа</h2>
-
-        <div class="checkout__grid">
-            <form class="checkout__form" id="checkoutForm" action="#" method="post">
-                <div class="checkout__section">
-                    <div class="checkout__section-head">
-                        <h3 class="checkout__section-title">Контактная информация</h3>
-                        <a class="checkout__login" href="#" data-modal="accountModal">Войти</a>
-                    </div>
-                    <input class="checkout__input" type="email" name="email" placeholder="Email" required>
-                    <input class="checkout__input" type="text" name="inn" placeholder="ИНН организации">
-                    <p class="checkout__note">Вы оформляете заказ как гость</p>
-                </div>
-
-                <div class="checkout__section">
-                    <h3 class="checkout__section-title">Адрес доставки</h3>
-                    <div class="checkout__row2">
-                        <input class="checkout__input" type="text" name="firstname" placeholder="Имя" required>
-                        <input class="checkout__input" type="text" name="lastname" placeholder="Фамилия" required>
-                    </div>
-                    <label class="checkout__select">
-                        <span class="checkout__select-label">Страна/регион</span>
-                        <select class="checkout__select-control" name="country">
-                            <option value="ru" selected>Россия</option>
-                            <option value="by">Беларусь</option>
-                            <option value="kz">Казахстан</option>
-                        </select>
-                    </label>
-                    <input class="checkout__input" type="text" name="address" placeholder="Адрес" required>
-                    <button class="checkout__addline" type="button">+ Добавить крыло, подъезд, этаж и т.д.</button>
-                    <div class="checkout__row2">
-                        <input class="checkout__input" type="text" name="city" placeholder="Населенный пункт">
-                        <input class="checkout__input" type="text" name="region" placeholder="Область/район">
-                    </div>
-                    <div class="checkout__row2">
-                        <input class="checkout__input" type="text" name="zip" placeholder="Почтовый индекс">
-                        <input class="checkout__input" type="tel" name="phone" placeholder="Телефон">
-                    </div>
-                    <label class="checkout__check">
-                        <input type="checkbox" name="billing-same" checked>
-                        <span>Использовать этот адрес для выставления счета</span>
-                    </label>
-                </div>
-
-                <div class="checkout__section">
-                    <h3 class="checkout__section-title">Параметры доставки</h3>
-                    <div class="checkout__delivery">Укажите адрес, чтобы посмотреть варианты доставки</div>
-                </div>
-
-                <div class="checkout__section">
-                    <h3 class="checkout__section-title">Способ оплаты</h3>
-                    <label class="checkout__radio">
-                        <input type="radio" name="payment" value="card" checked>
-                        <span>Pay by debit/credit card (Alfa Bank)</span>
-                    </label>
-                    <label class="checkout__radio">
-                        <input type="radio" name="payment" value="cod">
-                        <span>Оплата при доставке</span>
-                    </label>
-                    <label class="checkout__check checkout__check--comment">
-                        <input type="checkbox" name="add-comment">
-                        <span>Добавить примечание к заказу</span>
-                    </label>
-                    <div class="checkout__divider"></div>
-                    <p class="checkout__terms">Продолжая покупку, вы соглашаетесь с нашими
-                        <a href="#">Правила и условия</a> и <a href="#">Политика конфиденциальности</a>
-                    </p>
-                </div>
-
-                <div class="checkout__actions">
-                    <button class="checkout__return" type="button" data-checkout-back>
-                        <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true">
-                            <path d="M4.5 1 1 4l3.5 3M1.4 4H17" stroke="currentColor" stroke-width="1.2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        Вернуться в корзину
-                    </button>
-                    <div class="checkout__buttons">
-                        <button class="checkout__manager" type="button">Связаться с менеджером</button>
-                        <button class="checkout__submit" type="submit">Оформить заказ</button>
-                    </div>
-                </div>
-            </form>
-
-            <aside class="checkout__summary">
-                <h3 class="checkout__summary-title">Детали заказа</h3>
-
-                <ul class="checkout__items" data-checkout-list></ul>
-
-
-                <button class="acc checkout__coupon">
-                    <span>Добавить купоны</span>
-                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true">
-                        <path d="M1 1l4.5 4L10 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </button>
-                <div class="content">
-                    <div class="text-wrapper">
-                        <input class="promocode" type="text" placeholder="Промокод">
-                    </div>
-                </div>
-
-                <div class="checkout__sumrow">
-                    <span class="checkout__sumlabel">Подытог</span>
-                    <span class="checkout__sumvalue" data-checkout-subtotal>0,00 ₽</span>
-                </div>
-                <div class="checkout__sumrow">
-                    <span class="checkout__sumlabel">Доставка</span>
-                    <span class="checkout__sumnote">Введите адрес, чтобы рассчитать стоимость</span>
-                </div>
-
-                <div class="checkout__sumtotal">
-                    <span>Итого</span>
-                    <span data-checkout-total>0,00 ₽</span>
-                </div>
-            </aside>
+        </div>
+        <div class="modal__bottom">
+            <img src="./img/svg/modal.svg" width="46" height="46" alt="">
+            <span>Действует специальное предложение:<br>
+                Лечение кариеса за 1 сеанс по цене <span>11.990₽</span></span>
         </div>
     </div>
 </dialog>
 
-<div class="cookies" id="cookies" hidden>
-    <p class="cookies__text">Мы используем файлы cookie, чтобы сайт работал лучше и удобнее. Продолжая пользоваться
-        сайтом, вы соглашаетесь с обработкой данных в соответствии с <a href="./policy.html" class="cookie-banner__link"
-            aria-label="Политика обработки персональных данных">Политикой конфиденциальности
-        </a>.</p>
-    <button class="cookies__accept" type="button" data-cookies-accept><span>Принять</span></button>
+<div class="video-modal" id="videoModal">
+    <div class="video-modal__overlay"></div>
+
+    <div class="video-modal__content">
+        <button class="video-modal__close" aria-label="Закрыть видео">&times;</button>
+        <video controls></video>
+    </div>
 </div>
+
+
+
+
+
     <script src="./js/swiper-bundle.min.js"></script>
     <script defer src="./js/script.js"></script>
 </body>
