@@ -483,6 +483,20 @@ if (chooseEl) {
     chooseMq.addEventListener('change', toggleChooseSwiper);
 }
 const productSliderEl = document.querySelector('.product__slider');
+document.querySelectorAll('.product__description').forEach(description => {
+    const button = description.querySelector('button');
+    const text = description.querySelector('p');
+
+    button.addEventListener('click', () => {
+        text.classList.toggle('expanded');
+
+        if (text.classList.contains('expanded')) {
+            button.textContent = 'Скрыть «';
+        } else {
+            button.textContent = 'Читать далее »';
+        }
+    });
+});
 
 if (productSliderEl) {
     const productThumbsEl = document.querySelector('.product__thumbs');
@@ -504,16 +518,16 @@ if (productSliderEl) {
             productThumbs = null;
         }
 
-        productThumbs = new Swiper(productThumbsEl, isDesktop
-            ? {
+        productThumbs = new Swiper(productThumbsEl, isDesktop ?
+            {
                 direction: 'vertical',
-                slidesPerView: 3,
+                slidesPerView: 4,
                 spaceBetween: 21,
                 watchSlidesProgress: true,
-            }
-            : {
+            } :
+            {
                 direction: 'horizontal',
-                slidesPerView: 4,
+                slidesPerView: 3,
                 spaceBetween: 10,
                 watchSlidesProgress: true,
             });
@@ -537,6 +551,48 @@ if (productSliderEl) {
     productMq.addEventListener('change', (e) => buildProductGallery(e.matches));
 }
 
+const initProductRelatedSlider = (containerSel, navSel) => {
+    const el = document.querySelector(containerSel);
+    if (!el) return;
+
+    let swiper = null;
+    const mq = window.matchMedia('(max-width: 576px)');
+
+    const toggle = (e) => {
+        if (e.matches) {
+            if (!swiper) {
+                swiper = new Swiper(el, {
+                    slidesPerView: 1,
+                    spaceBetween: 16,
+                    grabCursor: true,
+                    navigation: {
+                        prevEl: navSel + ' .slider-arrow--prev',
+                        nextEl: navSel + ' .slider-arrow--next',
+                    },
+                });
+            }
+        } else if (swiper) {
+            swiper.destroy(true, true);
+            swiper = null;
+        }
+    };
+
+    toggle(mq);
+    mq.addEventListener('change', toggle);
+};
+
+initProductRelatedSlider('.similar__swiper', '.similar__nav');
+initProductRelatedSlider('.bought__swiper', '.bought__nav');
+
+const descToggle = document.querySelector('[data-desc-toggle]');
+if (descToggle) {
+    const descSection = descToggle.closest('.description');
+    descToggle.addEventListener('click', () => {
+        const open = descSection.classList.toggle('is-open');
+        descToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        descToggle.setAttribute('aria-label', open ? 'Свернуть' : 'Читать далее');
+    });
+}
 document.addEventListener("DOMContentLoaded", function () {
     const selects = document.querySelectorAll("[data-select]");
     if (!selects.length) return;

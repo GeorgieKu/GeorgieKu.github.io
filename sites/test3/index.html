@@ -120,260 +120,7 @@
     </div>
 </header>
 
-<dialog class="modal modal--drawer" id="cartModal" aria-label="Корзина">
-    <div class="modal__drawer cart">
-        <div class="cart__head">
-            <button class="cart__back" type="button" data-modal-close aria-label="Продолжить покупки">
-                <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M12.5 1 16 4l-3.5 3M15.6 4H0" stroke="currentColor" stroke-width="1.2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
 
-            <span class="cart__head-title">Отзыв о Вашей корзине</span>
-
-            <span class="cart__count" data-cart-count>0</span>
-        </div>
-
-        <div class="cart__body" data-cart-body>
-            <p class="cart__empty" data-cart-empty>Загляните в наш магазин, чтобы<br>посмотреть, что есть в наличие</p>
-            <ul class="cart__list" data-cart-list></ul>
-        </div>
-
-        <div class="cart__foot">
-            <button class="acc cart__promo">
-                <span data-cart-promo>У Вас есть код на скидку?</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
-                    <path d="M0.333984 0.371643L5.33398 4.87164L10.334 0.371643" stroke="#737373" />
-                </svg>
-            </button>
-            <div class="content">
-                <div class="text-wrapper">
-                    <input class="promocode" type="text" placeholder="Промокод">
-                </div>
-            </div>
-
-            <div class="cart__totals">
-                <div class="cart__row">
-                    <span>Промежуточный итог</span>
-                    <span data-cart-subtotal>0,00 ₽</span>
-                </div>
-                <div class="cart__row">
-                    <span>Итого</span>
-                    <span data-cart-total>0,00 ₽</span>
-                </div>
-            </div>
-
-            <button class="cart__checkout" type="button" data-modal="checkoutModal">
-                Перейти к оформлению заказа
-                <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true">
-                    <path d="M12.5 1 16 4l-3.5 3M15.6 4H0" stroke="currentColor" stroke-width="1.2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </button>
-        </div>
-    </div>
-</dialog>
-
-<template id="cartItemTemplate">
-    <li class="cart__item" data-cart-item>
-        <img class="cart__item-img" src="" alt="Товар">
-        <div class="cart__item-info">
-            <span class="cart__item-title"></span>
-            <span class="cart__item-cat"></span>
-            <span class="cart__item-price"></span>
-            <button class="cart__item-remove" type="button" data-cart-remove>Удалить</button>
-        </div>
-        <div class="cart__stepper">
-            <button class="cart__step" type="button" data-cart-plus aria-label="Добавить">+</button>
-            <span class="cart__qty" data-cart-qty>1</span>
-            <button class="cart__step" type="button" data-cart-minus aria-label="Убавить">−</button>
-        </div>
-    </li>
-</template>
-
-<dialog class="modal modal--center" id="accountModal" aria-labelledby="accountModalTitle">
-    <div class="modal__window">
-        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-            </svg>
-        </button>
-
-        <h2 class="account-modal__title" id="accountModalTitle">Мой аккаунт</h2>
-        <h3 class="account-modal__subtitle">Вход</h3>
-
-        <form class="account-modal__form" action="#" method="post">
-            <label class="account-modal__label" for="accLogin">Имя пользователя или Email<span>*</span></label>
-            <input class="account-modal__input" id="accLogin" type="text" name="login" required>
-
-            <label class="account-modal__label" for="accPass">Пароль<span>*</span></label>
-            <div class="account-modal__pass">
-                <input class="account-modal__input" id="accPass" type="password" name="password" required>
-                <button class="account-modal__eye" type="button" aria-label="Показать пароль">
-                    <svg width="18" height="12" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true">
-                        <path d="M1 7s3.2-5.5 9-5.5S19 7 19 7s-3.2 5.5-9 5.5S1 7 1 7Z" stroke="currentColor"
-                            stroke-width="1.2" />
-                        <circle cx="10" cy="7" r="2.4" stroke="currentColor" stroke-width="1.2" />
-                    </svg>
-                </button>
-            </div>
-
-            <label class="account-modal__check">
-                <input type="checkbox" name="remember">
-                <span>Запомнить меня</span>
-            </label>
-
-            <button class="account-modal__submit" type="submit">Войти</button>
-
-            <a class="account-modal__forgot" href="#">Забыли свой пароль?</a>
-        </form>
-    </div>
-</dialog>
-
-<dialog class="modal modal--center" id="checkoutModal" aria-labelledby="checkoutModalTitle">
-    <div class="modal__window checkout">
-        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true">
-                <path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-            </svg>
-        </button>
-
-        <h2 class="checkout__title" id="checkoutModalTitle">Оформление заказа</h2>
-
-        <div class="checkout__grid">
-            <form class="checkout__form" id="checkoutForm" action="#" method="post">
-                <div class="checkout__section">
-                    <div class="checkout__section-head">
-                        <h3 class="checkout__section-title">Контактная информация</h3>
-                        <a class="checkout__login" href="#" data-modal="accountModal">Войти</a>
-                    </div>
-                    <input class="checkout__input" type="email" name="email" placeholder="Email" required>
-                    <input class="checkout__input" type="text" name="inn" placeholder="ИНН организации">
-                    <p class="checkout__note">Вы оформляете заказ как гость</p>
-                </div>
-
-                <div class="checkout__section">
-                    <h3 class="checkout__section-title">Адрес доставки</h3>
-                    <div class="checkout__row2">
-                        <input class="checkout__input" type="text" name="firstname" placeholder="Имя" required>
-                        <input class="checkout__input" type="text" name="lastname" placeholder="Фамилия" required>
-                    </div>
-                    <label class="checkout__select">
-                        <span class="checkout__select-label">Страна/регион</span>
-                        <select class="checkout__select-control" name="country">
-                            <option value="ru" selected>Россия</option>
-                            <option value="by">Беларусь</option>
-                            <option value="kz">Казахстан</option>
-                        </select>
-                    </label>
-                    <input class="checkout__input" type="text" name="address" placeholder="Адрес" required>
-                    <button class="checkout__addline" type="button">+ Добавить крыло, подъезд, этаж и т.д.</button>
-                    <div class="checkout__row2">
-                        <input class="checkout__input" type="text" name="city" placeholder="Населенный пункт">
-                        <input class="checkout__input" type="text" name="region" placeholder="Область/район">
-                    </div>
-                    <div class="checkout__row2">
-                        <input class="checkout__input" type="text" name="zip" placeholder="Почтовый индекс">
-                        <input class="checkout__input" type="tel" name="phone" placeholder="Телефон">
-                    </div>
-                    <label class="checkout__check">
-                        <input type="checkbox" name="billing-same" checked>
-                        <span>Использовать этот адрес для выставления счета</span>
-                    </label>
-                </div>
-
-                <div class="checkout__section">
-                    <h3 class="checkout__section-title">Параметры доставки</h3>
-                    <div class="checkout__delivery">Укажите адрес, чтобы посмотреть варианты доставки</div>
-                </div>
-
-                <div class="checkout__section">
-                    <h3 class="checkout__section-title">Способ оплаты</h3>
-                    <label class="checkout__radio">
-                        <input type="radio" name="payment" value="card" checked>
-                        <span>Pay by debit/credit card (Alfa Bank)</span>
-                    </label>
-                    <label class="checkout__radio">
-                        <input type="radio" name="payment" value="cod">
-                        <span>Оплата при доставке</span>
-                    </label>
-                    <label class="checkout__check checkout__check--comment">
-                        <input type="checkbox" name="add-comment">
-                        <span>Добавить примечание к заказу</span>
-                    </label>
-                    <div class="checkout__divider"></div>
-                    <p class="checkout__terms">Продолжая покупку, вы соглашаетесь с нашими
-                        <a href="#">Правила и условия</a> и <a href="#">Политика конфиденциальности</a>
-                    </p>
-                </div>
-
-                <div class="checkout__actions">
-                    <button class="checkout__return" type="button" data-checkout-back>
-                        <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true">
-                            <path d="M4.5 1 1 4l3.5 3M1.4 4H17" stroke="currentColor" stroke-width="1.2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        Вернуться в корзину
-                    </button>
-                    <div class="checkout__buttons">
-                        <button class="checkout__manager" type="button">Связаться с менеджером</button>
-                        <button class="checkout__submit" type="submit">Оформить заказ</button>
-                    </div>
-                </div>
-            </form>
-
-            <aside class="checkout__summary">
-                <h3 class="checkout__summary-title">Детали заказа</h3>
-
-                <ul class="checkout__items" data-checkout-list></ul>
-
-
-                <button class="acc checkout__coupon">
-                    <span>Добавить купоны</span>
-                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        aria-hidden="true">
-                        <path d="M1 1l4.5 4L10 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </button>
-                <div class="content">
-                    <div class="text-wrapper">
-                        <input class="promocode" type="text" placeholder="Промокод">
-                    </div>
-                </div>
-
-                <div class="checkout__sumrow">
-                    <span class="checkout__sumlabel">Подытог</span>
-                    <span class="checkout__sumvalue" data-checkout-subtotal>0,00 ₽</span>
-                </div>
-                <div class="checkout__sumrow">
-                    <span class="checkout__sumlabel">Доставка</span>
-                    <span class="checkout__sumnote">Введите адрес, чтобы рассчитать стоимость</span>
-                </div>
-
-                <div class="checkout__sumtotal">
-                    <span>Итого</span>
-                    <span data-checkout-total>0,00 ₽</span>
-                </div>
-            </aside>
-        </div>
-    </div>
-</dialog>
-
-<div class="cookies" id="cookies" hidden>
-    <p class="cookies__text">Мы используем файлы cookie, чтобы сайт работал лучше и удобнее. Продолжая пользоваться
-        сайтом, вы соглашаетесь с обработкой данных в соответствии с <a href="./policy.html" class="cookie-banner__link"
-            aria-label="Политика обработки персональных данных">Политикой конфиденциальности
-        </a>.</p>
-    <button class="cookies__accept" type="button" data-cookies-accept><span>Принять</span></button>
-</div>
     <main>
         <section class="hero">
             <div class="container">
@@ -811,6 +558,261 @@
         </div>
     </div>
 </footer>
+
+<dialog class="modal modal--drawer" id="cartModal" aria-label="Корзина">
+    <div class="modal__drawer cart">
+        <div class="cart__head">
+            <button class="cart__back" type="button" data-modal-close aria-label="Продолжить покупки">
+                <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <path d="M12.5 1 16 4l-3.5 3M15.6 4H0" stroke="currentColor" stroke-width="1.2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <span class="cart__head-title">Отзыв о Вашей корзине</span>
+
+            <span class="cart__count" data-cart-count>0</span>
+        </div>
+
+        <div class="cart__body" data-cart-body>
+            <p class="cart__empty" data-cart-empty>Загляните в наш магазин, чтобы<br>посмотреть, что есть в наличие</p>
+            <ul class="cart__list" data-cart-list></ul>
+        </div>
+
+        <div class="cart__foot">
+            <button class="acc cart__promo">
+                <span data-cart-promo>У Вас есть код на скидку?</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="6" viewBox="0 0 11 6" fill="none">
+                    <path d="M0.333984 0.371643L5.33398 4.87164L10.334 0.371643" stroke="#737373" />
+                </svg>
+            </button>
+            <div class="content">
+                <div class="text-wrapper">
+                    <input class="promocode" type="text" placeholder="Промокод">
+                </div>
+            </div>
+
+            <div class="cart__totals">
+                <div class="cart__row">
+                    <span>Промежуточный итог</span>
+                    <span data-cart-subtotal>0,00 ₽</span>
+                </div>
+                <div class="cart__row">
+                    <span>Итого</span>
+                    <span data-cart-total>0,00 ₽</span>
+                </div>
+            </div>
+
+            <button class="cart__checkout" type="button" data-modal="checkoutModal">
+                Перейти к оформлению заказа
+                <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true">
+                    <path d="M12.5 1 16 4l-3.5 3M15.6 4H0" stroke="currentColor" stroke-width="1.2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</dialog>
+
+<template id="cartItemTemplate">
+    <li class="cart__item" data-cart-item>
+        <img class="cart__item-img" src="" alt="Товар">
+        <div class="cart__item-info">
+            <span class="cart__item-title"></span>
+            <span class="cart__item-cat"></span>
+            <span class="cart__item-price"></span>
+            <button class="cart__item-remove" type="button" data-cart-remove>Удалить</button>
+        </div>
+        <div class="cart__stepper">
+            <button class="cart__step" type="button" data-cart-plus aria-label="Добавить">+</button>
+            <span class="cart__qty" data-cart-qty>1</span>
+            <button class="cart__step" type="button" data-cart-minus aria-label="Убавить">−</button>
+        </div>
+    </li>
+</template>
+
+<dialog class="modal modal--center" id="accountModal" aria-labelledby="accountModalTitle">
+    <div class="modal__window">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+        </button>
+
+        <h2 class="account-modal__title" id="accountModalTitle">Мой аккаунт</h2>
+        <h3 class="account-modal__subtitle">Вход</h3>
+
+        <form class="account-modal__form" action="#" method="post">
+            <label class="account-modal__label" for="accLogin">Имя пользователя или Email<span>*</span></label>
+            <input class="account-modal__input" id="accLogin" type="text" name="login" required>
+
+            <label class="account-modal__label" for="accPass">Пароль<span>*</span></label>
+            <div class="account-modal__pass">
+                <input class="account-modal__input" id="accPass" type="password" name="password" required>
+                <button class="account-modal__eye" type="button" aria-label="Показать пароль">
+                    <svg width="18" height="12" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M1 7s3.2-5.5 9-5.5S19 7 19 7s-3.2 5.5-9 5.5S1 7 1 7Z" stroke="currentColor"
+                            stroke-width="1.2" />
+                        <circle cx="10" cy="7" r="2.4" stroke="currentColor" stroke-width="1.2" />
+                    </svg>
+                </button>
+            </div>
+
+            <label class="account-modal__check">
+                <input type="checkbox" name="remember">
+                <span>Запомнить меня</span>
+            </label>
+
+            <button class="account-modal__submit" type="submit">Войти</button>
+
+            <a class="account-modal__forgot" href="#">Забыли свой пароль?</a>
+        </form>
+    </div>
+</dialog>
+
+<dialog class="modal modal--center" id="checkoutModal" aria-labelledby="checkoutModalTitle">
+    <div class="modal__window checkout">
+        <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+        </button>
+
+        <h2 class="checkout__title" id="checkoutModalTitle">Оформление заказа</h2>
+
+        <div class="checkout__grid">
+            <form class="checkout__form" id="checkoutForm" action="#" method="post">
+                <div class="checkout__section">
+                    <div class="checkout__section-head">
+                        <h3 class="checkout__section-title">Контактная информация</h3>
+                        <a class="checkout__login" href="#" data-modal="accountModal">Войти</a>
+                    </div>
+                    <input class="checkout__input" type="email" name="email" placeholder="Email" required>
+                    <input class="checkout__input" type="text" name="inn" placeholder="ИНН организации">
+                    <p class="checkout__note">Вы оформляете заказ как гость</p>
+                </div>
+
+                <div class="checkout__section">
+                    <h3 class="checkout__section-title">Адрес доставки</h3>
+                    <div class="checkout__row2">
+                        <input class="checkout__input" type="text" name="firstname" placeholder="Имя" required>
+                        <input class="checkout__input" type="text" name="lastname" placeholder="Фамилия" required>
+                    </div>
+                    <label class="checkout__select">
+                        <span class="checkout__select-label">Страна/регион</span>
+                        <select class="checkout__select-control" name="country">
+                            <option value="ru" selected>Россия</option>
+                            <option value="by">Беларусь</option>
+                            <option value="kz">Казахстан</option>
+                        </select>
+                    </label>
+                    <input class="checkout__input" type="text" name="address" placeholder="Адрес" required>
+                    <button class="checkout__addline" type="button">+ Добавить крыло, подъезд, этаж и т.д.</button>
+                    <div class="checkout__row2">
+                        <input class="checkout__input" type="text" name="city" placeholder="Населенный пункт">
+                        <input class="checkout__input" type="text" name="region" placeholder="Область/район">
+                    </div>
+                    <div class="checkout__row2">
+                        <input class="checkout__input" type="text" name="zip" placeholder="Почтовый индекс">
+                        <input class="checkout__input" type="tel" name="phone" placeholder="Телефон">
+                    </div>
+                    <label class="checkout__check">
+                        <input type="checkbox" name="billing-same" checked>
+                        <span>Использовать этот адрес для выставления счета</span>
+                    </label>
+                </div>
+
+                <div class="checkout__section">
+                    <h3 class="checkout__section-title">Параметры доставки</h3>
+                    <div class="checkout__delivery">Укажите адрес, чтобы посмотреть варианты доставки</div>
+                </div>
+
+                <div class="checkout__section">
+                    <h3 class="checkout__section-title">Способ оплаты</h3>
+                    <label class="checkout__radio">
+                        <input type="radio" name="payment" value="card" checked>
+                        <span>Pay by debit/credit card (Alfa Bank)</span>
+                    </label>
+                    <label class="checkout__radio">
+                        <input type="radio" name="payment" value="cod">
+                        <span>Оплата при доставке</span>
+                    </label>
+                    <label class="checkout__check checkout__check--comment">
+                        <input type="checkbox" name="add-comment">
+                        <span>Добавить примечание к заказу</span>
+                    </label>
+                    <div class="checkout__divider"></div>
+                    <p class="checkout__terms">Продолжая покупку, вы соглашаетесь с нашими
+                        <a href="#">Правила и условия</a> и <a href="#">Политика конфиденциальности</a>
+                    </p>
+                </div>
+
+                <div class="checkout__actions">
+                    <button class="checkout__return" type="button" data-checkout-back>
+                        <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path d="M4.5 1 1 4l3.5 3M1.4 4H17" stroke="currentColor" stroke-width="1.2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        Вернуться в корзину
+                    </button>
+                    <div class="checkout__buttons">
+                        <button class="checkout__manager" type="button">Связаться с менеджером</button>
+                        <button class="checkout__submit" type="submit">Оформить заказ</button>
+                    </div>
+                </div>
+            </form>
+
+            <aside class="checkout__summary">
+                <h3 class="checkout__summary-title">Детали заказа</h3>
+
+                <ul class="checkout__items" data-checkout-list></ul>
+
+
+                <button class="acc checkout__coupon">
+                    <span>Добавить купоны</span>
+                    <svg width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M1 1l4.5 4L10 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <div class="content">
+                    <div class="text-wrapper">
+                        <input class="promocode" type="text" placeholder="Промокод">
+                    </div>
+                </div>
+
+                <div class="checkout__sumrow">
+                    <span class="checkout__sumlabel">Подытог</span>
+                    <span class="checkout__sumvalue" data-checkout-subtotal>0,00 ₽</span>
+                </div>
+                <div class="checkout__sumrow">
+                    <span class="checkout__sumlabel">Доставка</span>
+                    <span class="checkout__sumnote">Введите адрес, чтобы рассчитать стоимость</span>
+                </div>
+
+                <div class="checkout__sumtotal">
+                    <span>Итого</span>
+                    <span data-checkout-total>0,00 ₽</span>
+                </div>
+            </aside>
+        </div>
+    </div>
+</dialog>
+
+<div class="cookies" id="cookies" hidden>
+    <p class="cookies__text">Мы используем файлы cookie, чтобы сайт работал лучше и удобнее. Продолжая пользоваться
+        сайтом, вы соглашаетесь с обработкой данных в соответствии с <a href="./policy.html" class="cookie-banner__link"
+            aria-label="Политика обработки персональных данных">Политикой конфиденциальности
+        </a>.</p>
+    <button class="cookies__accept" type="button" data-cookies-accept><span>Принять</span></button>
+</div>
     <script src="./js/swiper-bundle.min.js"></script>
     <script defer src="./js/script.js"></script>
 </body>
