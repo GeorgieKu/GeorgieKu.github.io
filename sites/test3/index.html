@@ -84,11 +84,15 @@
                 <div class="about__flex">
                     <div class="about__left">
                         <div class="about__relative">
-                            <video src="https://kinescope.io/tTy3xSd2FUznc9xWKAKDWB" poster="./img/video.webp"></video>
-                            <button class="about__play" aria-label="Воспроизвести видео">
+                            <img class="about__video" src="./img/video-prev.webp" width="420" height="488"
+                                loading="lazy" alt="Видео о клинике Just Smile">
+                            <button class="about__play" type="button"
+                                data-video-embed="https://kinescope.io/embed/tTy3xSd2FUznc9xWKAKDWB?autoplay=1"
+                                aria-label="Воспроизвести видео о клинике Just Smile">
                                 <img src="./img/svg/play.svg" width="91" height="91" loading="lazy" alt="">
                             </button>
                         </div>
+
                         <button onclick="openModal()" class="orange-btn about__btn"
                             aria-label="Записаться на бесплатный осмотр">Записаться на бесплатный
                             осмотр</button>
@@ -421,32 +425,40 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="stories__card about__relative">
-                                <video src="./video/1.mp4" poster="./img/video.webp" height="389"></video>
-                                <button class="about__play" aria-label="Воспроизвести видео">
+                                <video poster="./img/video-prev-2.webp" height="389" preload="none"></video>
+                                <button class="about__play" type="button"
+                                    data-video-embed="https://kinescope.io/embed/vrETWUtgTDSf7L6HaE3UPb?autoplay=1"
+                                    aria-label="Воспроизвести видео">
                                     <img src="./img/svg/play.svg" width="73" height="73" alt="" loading="lazy">
                                 </button>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="stories__card about__relative">
-                                <video src="./video/1.mp4" poster="./img/video.webp" height="389"></video>
-                                <button class="about__play" aria-label="Воспроизвести видео">
+                                <video poster="./img/video-prev-3.webp" height="389" preload="none"></video>
+                                <button class="about__play" type="button"
+                                    data-video-embed="https://kinescope.io/embed/0nqa2G3PiCD7kui3DA2WEg?autoplay=1"
+                                    aria-label="Воспроизвести видео">
                                     <img src="./img/svg/play.svg" width="73" height="73" alt="" loading="lazy">
                                 </button>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="stories__card about__relative">
-                                <video src="./video/1.mp4" poster="./img/video.webp" height="389"></video>
-                                <button class="about__play" aria-label="Воспроизвести видео">
+                                <video poster="./img/video-prev-4.webp" height="389" preload="none"></video>
+                                <button class="about__play" type="button"
+                                    data-video-embed="https://kinescope.io/embed/2FC436ZTtLRNN3BmgMBUuZ?autoplay=1"
+                                    aria-label="Воспроизвести видео">
                                     <img src="./img/svg/play.svg" width="73" height="73" alt="" loading="lazy">
                                 </button>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="stories__card about__relative">
-                                <video src="./video/1.mp4" poster="./img/video.webp" height="389"></video>
-                                <button class="about__play" aria-label="Воспроизвести видео">
+                                <video poster="./img/video-prev-5.webp" height="389" preload="none"></video>
+                                <button class="about__play" type="button"
+                                    data-video-embed="https://kinescope.io/embed/82F6t98Qrn8pBYiYz6qnGg?autoplay=1"
+                                    aria-label="Воспроизвести видео">
                                     <img src="./img/svg/play.svg" width="73" height="73" alt="" loading="lazy">
                                 </button>
                             </div>
@@ -461,13 +473,13 @@
                 <div class="photo__swiper swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="./img/1.webp" loading="lazy" alt="">
+                            <img src="./img/t1.webp" loading="lazy" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/2.webp" loading="lazy" alt="">
+                            <img src="./img/t2.webp" loading="lazy" alt="">
                         </div>
                         <div class="swiper-slide">
-                            <img src="./img/3.webp" loading="lazy" alt="">
+                            <img src="./img/t3.webp" loading="lazy" alt="">
                         </div>
                     </div>
                     <div class="photo__pagination">
@@ -961,14 +973,17 @@
     </div>
 </dialog>
 
-<div class="video-modal" id="videoModal">
+<div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Видео" aria-hidden="true">
     <div class="video-modal__overlay"></div>
 
     <div class="video-modal__content">
         <button class="video-modal__close" aria-label="Закрыть видео">&times;</button>
         <video controls></video>
+        <iframe class="video-modal__iframe" title="Видео Just Smile"
+            allow="autoplay; fullscreen; picture-in-picture; encrypted-media" allowfullscreen hidden></iframe>
     </div>
 </div>
+
 
 
 

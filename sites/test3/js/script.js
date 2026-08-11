@@ -146,31 +146,66 @@ const reputationSwiper = new Swiper('.reputation__swiper', {
 
 const modal2 = document.getElementById('videoModal');
 const modalVideo = modal2.querySelector('video');
+const modalIframe = modal2.querySelector('.video-modal__iframe');
+const modalContent = modal2.querySelector('.video-modal__content');
 const closeBtn = modal2.querySelector('.video-modal__close');
 const overlay = modal2.querySelector('.video-modal__overlay');
+let lastActiveElement = null;
+let videoResetTimer = null;
 
 document.querySelectorAll('.about__play').forEach(button => {
     button.addEventListener('click', () => {
+        clearTimeout(videoResetTimer);
+
+        const embedUrl = button.dataset.videoEmbed;
         const video = button.parentElement.querySelector('video');
 
-        modalVideo.src = video.src;
-        modalVideo.poster = video.poster;
+        lastActiveElement = button;
+
+        if (embedUrl) {
+            modalContent.classList.add('video-modal__content_embed');
+            modalVideo.pause();
+            modalVideo.removeAttribute('src');
+            modalVideo.hidden = true;
+            modalIframe.src = embedUrl;
+            modalIframe.hidden = false;
+        } else if (video) {
+            modalContent.classList.remove('video-modal__content_embed');
+            modalIframe.removeAttribute('src');
+            modalIframe.hidden = true;
+            modalVideo.src = video.src;
+            modalVideo.poster = video.poster;
+            modalVideo.hidden = false;
+        }
 
         modal2.classList.add('active');
+        modal2.setAttribute('aria-hidden', 'false');
+        closeBtn.focus();
 
-        modalVideo.play();
+        if (video) {
+            const playPromise = modalVideo.play();
+            if (playPromise) {
+                playPromise.catch(() => {});
+            }
+        }
     });
 });
 
 function closeModal() {
     modalVideo.pause();
+    modalIframe.removeAttribute('src');
     modal2.classList.remove('active');
+    modal2.setAttribute('aria-hidden', 'true');
 
-    setTimeout(() => {
+    videoResetTimer = setTimeout(() => {
         modalVideo.currentTime = 0;
         modalVideo.removeAttribute('src');
         modalVideo.load();
     }, 300);
+
+    if (lastActiveElement) {
+        lastActiveElement.focus();
+    }
 }
 
 closeBtn.addEventListener('click', closeModal);
@@ -181,6 +216,7 @@ document.addEventListener('keydown', e => {
         closeModal();
     }
 });
+
 let agreements = document.querySelectorAll('.agreement');
 
 let modal = document.querySelector('.modal')

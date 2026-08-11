@@ -535,6 +535,9 @@ button:disabled {
 .about__video {
   max-width: 100%;
   width: 100%;
+  border-radius: 8px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .about__card {
@@ -1248,11 +1251,35 @@ button:disabled {
 .video-modal__content {
   position: relative;
   width: min(90vw, 1000px);
+  z-index: 1;
+}
+
+.video-modal__content_embed {
+  width: min(90vw, 460px);
 }
 
 .video-modal video {
   width: 100%;
   display: block;
+}
+
+.video-modal__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.video-modal__iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 420/488;
+  border: 0;
+  border-radius: 8px;
+  background: #000;
+}
+
+.video-modal__iframe[hidden],
+.video-modal video[hidden] {
+  display: none;
 }
 
 .video-modal__close {
