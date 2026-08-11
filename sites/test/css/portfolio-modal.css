@@ -1,0 +1,345 @@
+.portfolio-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.portfolio-modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.portfolio-modal-dialog {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  max-height: 730px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure proper flexbox behavior for content */
+.portfolio-modal-content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  overflow-y: auto;
+  min-height: 0; /* Allow flex items to shrink */
+}
+
+.portfolio-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  z-index: 10;
+  background: #0000000a;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+  padding: 0;
+}
+
+.portfolio-modal-close svg {
+  width: 17px;
+  height: 17px;
+}
+
+.portfolio-modal-close:hover {
+  opacity: 0.7;
+}
+
+.portfolio-modal-content {
+  display: grid;
+  grid-template-columns: 1fr 470px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.portfolio-modal-image-container {
+  background: #f0f0f0;
+  position: relative;
+  min-height: 400px;
+  overflow: hidden; /* To contain hover effects or content */
+}
+
+.portfolio-modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 250px; /* Ensure minimum height for proper display */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio-modal-image.fade-out {
+  opacity: 0;
+}
+
+.portfolio-modal-image.fade-in {
+  opacity: 1;
+}
+
+/* Video Styles */
+.portfolio-modal-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  min-height: 250px;
+  transition: opacity 0.3s ease-in-out;
+  background: #000;
+}
+
+.portfolio-modal-video.fade-out {
+  opacity: 0;
+}
+
+.portfolio-modal-video.fade-in {
+  opacity: 1;
+}
+
+.portfolio-nav-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 15%; /* Or fixed width like 120px */
+  min-width: 80px;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+  padding: 0;
+}
+
+/* Adjust nav buttons when video is active to avoid covering controls */
+.portfolio-modal-image-container.video-active .portfolio-nav-btn {
+  height: calc(100% - 120px);
+  bottom: auto; /* Ensure height takes precedence over bottom: 0 */
+  background: none;
+}
+
+/* Compensate for the height change to keep the icon vertically centered relative to the full container height */
+.portfolio-modal-image-container.video-active .portfolio-nav-btn svg,
+.portfolio-modal-image-container.video-active .portfolio-nav-btn img {
+  transform: translateY(60px); /* Move down by half of the 120px space */
+}
+
+.portfolio-nav-btn.next svg {
+  transform: rotate(180deg);
+}
+
+.portfolio-modal-image-container.video-active .portfolio-nav-btn.next svg {
+  transform: translateY(60px) rotate(180deg);
+}
+
+.portfolio-nav-btn.prev {
+  left: 0;
+  justify-content: flex-start;
+  padding-left: 68px;
+  background: linear-gradient(
+    270deg,
+    rgba(26, 26, 26, 0) 0%,
+    rgba(26, 26, 26, 0.6) 100%
+  );
+}
+
+.portfolio-nav-btn.next {
+  right: 0;
+  justify-content: flex-end;
+  padding-right: 68px;
+  background: linear-gradient(
+    90deg,
+    rgba(26, 26, 26, 0) 0%,
+    rgba(26, 26, 26, 0.6) 100%
+  );
+}
+
+/* Button states: hide when disabled, pink when enabled */
+.portfolio-nav-btn.disabled {
+  display: none;
+}
+
+.portfolio-nav-btn.enabled img {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(94%) saturate(7450%)
+    hue-rotate(320deg) brightness(95%) contrast(105%); /* Pink color */
+  opacity: 1;
+}
+
+.portfolio-nav-btn img {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.portfolio-nav-btn:hover path {
+  fill: var(--color-pink);
+}
+
+.portfolio-modal-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  background: #fff;
+  position: relative;
+}
+
+.portfolio-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portfolio-detail-label {
+  font-size: 14px;
+  color: #00000099;
+  line-height: 1;
+}
+
+.portfolio-detail-value {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  line-height: 1;
+}
+
+.portfolio-detail-text {
+  font-size: 16px;
+  color: #000;
+  line-height: 1;
+}
+
+.portfolio-award {
+  background: #f5f5f5;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.portfolio-award img {
+  width: 32px;
+  height: 32px;
+}
+
+.portfolio-award p {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1;
+  color: #000000e5;
+}
+
+/* Medium screen styles - ensure minimum image width */
+@media (max-width: 1100px) {
+  .portfolio-modal-image-container {
+    min-width: 322px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 950px) {
+  .portfolio-modal-dialog {
+    max-width: 100%;
+    height: 100%;
+    max-height: 730px;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .portfolio-modal-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .portfolio-modal-image-container {
+    width: 100%;
+    max-width: none; /* Remove max-width constraint on mobile */
+    height: auto; /* Let height be determined by aspect ratio */
+    min-height: 250px;
+    aspect-ratio: 16/9; /* Maintain aspect ratio */
+  }
+
+  .portfolio-modal-image,
+  .portfolio-modal-video {
+    height: 100%;
+    min-height: 250px;
+  }
+
+  .portfolio-modal-details {
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .portfolio-detail-value {
+    font-size: 16px;
+  }
+
+  .portfolio-detail-text {
+    font-size: 16px;
+  }
+
+  .portfolio-detail-label {
+    font-size: 13px;
+  }
+
+  .portfolio-modal-close {
+    /* On mobile, close button might need to be visible on top of image or sticky header */
+    /* Based on design, it's just top right */
+    top: 16px;
+    right: 16px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .portfolio-nav-btn.next {
+    padding-right: 45px;
+  }
+
+  .portfolio-nav-btn.prev {
+    padding-left: 45px;
+  }
+}
+@media (max-width: 450px) {
+  .portfolio-nav-btn.next {
+    padding-right: 30px;
+  }
+
+  .portfolio-nav-btn.prev {
+    padding-left: 30px;
+  }
+}
