@@ -216,6 +216,37 @@ document.addEventListener('keydown', e => {
         closeModal();
     }
 });
+function initReviewToggles() {
+    document.querySelectorAll('.reputation__text-2').forEach((textEl) => {
+        const wrapper = document.createElement('div');
+        wrapper.className = 'reputation__review';
+        textEl.parentNode.insertBefore(wrapper, textEl);
+        wrapper.appendChild(textEl);
+
+        const isTruncated = textEl.scrollHeight - textEl.clientHeight > 1;
+        if (!isTruncated) {
+            return;
+        }
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'reputation__more';
+        button.textContent = 'Читать полностью';
+        button.setAttribute('aria-expanded', 'false');
+        button.setAttribute('aria-label', 'Показать отзыв полностью');
+
+        button.addEventListener('click', () => {
+            const expanded = textEl.classList.toggle('reputation__text-2_expanded');
+            button.textContent = expanded ? 'Свернуть' : 'Читать полностью';
+            button.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+            button.setAttribute('aria-label', expanded ? 'Свернуть отзыв' : 'Показать отзыв полностью');
+        });
+
+        wrapper.appendChild(button);
+    });
+}
+
+window.addEventListener('load', initReviewToggles);
 
 let agreements = document.querySelectorAll('.agreement');
 
@@ -239,4 +270,24 @@ function openModal() {
 
 function modalClose() {
     modal.close()
+}
+const burger = document.querySelector('.header__burger');
+const headerNav = document.querySelector('.header__nav');
+
+if (burger && headerNav) {
+    burger.addEventListener('click', () => {
+        const isActive = headerNav.classList.toggle('header__nav_active');
+        burger.classList.toggle('header__burger_active', isActive);
+        burger.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+        burger.setAttribute('aria-label', isActive ? 'Закрыть меню' : 'Открыть меню');
+    });
+
+    headerNav.querySelectorAll('.header__link').forEach((link) => {
+        link.addEventListener('click', () => {
+            headerNav.classList.remove('header__nav_active');
+            burger.classList.remove('header__burger_active');
+            burger.setAttribute('aria-expanded', 'false');
+            burger.setAttribute('aria-label', 'Открыть меню');
+        });
+    });
 }

@@ -34,11 +34,24 @@
     <a class="header__logo" href="./index.html" aria-label="Just Smile — на главную">
         Just Smile
     </a>
+    <nav class="header__nav">
+        <a class="header__link" href="#hero" aria-label="Акции">Акции</a>
+        <a class="header__link" href="#about" aria-label="О клинике">О клинике</a>
+        <a class="header__link" href="#results" aria-label="Результаты">Результаты</a>
+        <a class="header__link" href="#team" aria-label="Врачи">Врачи</a>
+        <a class="header__link" href="#reputation" aria-label="Отзывы">Отзывы</a>
+        <a class="header__link" href="#contacts" aria-label="Контакты">Контакты</a>
+    </nav>
     <button class="header__btn orange-btn" onclick="openModal()" aria-label="Записаться на прием">Записаться на прием</button>
+    <button class="header__burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </header>
 
 
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="container">
                 <div class="hero__content">
                     <span class="hero__descr">Сохраняем зубы даже в сложных случаях </span>
@@ -78,7 +91,7 @@
         </section>
     </div>
     <main>
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <h2 class="section-title about__title">О клинике <span>Just Smile</span></h2>
                 <div class="about__flex">
@@ -131,7 +144,7 @@
                 </div>
             </div>
         </section>
-        <section class="results">
+        <section class="results" id="results">
             <div class="container">
                 <h2 class="section-title results__title">Результаты <span>наших пациентов</span></h2>
                 <div class="results__flex">
@@ -274,18 +287,7 @@
                                     <img src="./img/22.webp" loading="lazy" alt="">
                                 </div>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="results__card">
-                                    <span>До</span>
-                                    <img src="./img/23.webp" loading="lazy" alt="">
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="results__card">
-                                    <span>После</span>
-                                    <img src="./img/23.webp" loading="lazy" alt="">
-                                </div>
-                            </div>
+
 
                         </div>
                     </div>
@@ -341,7 +343,7 @@
                 </div>
             </div>
         </section>
-        <section class="team">
+        <section class="team" id="team">
             <div class="container">
                 <h2 class="team__title section-title">Команда <span>профильных специалистов</span> для любой задачи</h2>
                 <div class="team__grid">
@@ -488,7 +490,7 @@
                 </div>
             </div>
         </section>
-        <section class="reputation">
+        <section class="reputation" id="reputation">
             <div class="container">
                 <h2 class="reputation__title section-title">Мы дорожим своей <span>репутацией</span></h2>
                 <p class="normal-text reputation__text">Читайте более 300 отзывов о нашей клинике в любом удобном
@@ -521,8 +523,8 @@
                                             <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
                                                 alt="">
                                             <div class="reputation__info">
-                                                <span class="reputation__name">Ирина Жигалина</span>
-                                                <span class="reputation__date">7 декабря 2024</span>
+                                                <span class="reputation__name">Светлана К.У</span>
+                                                <span class="reputation__date">31 мая</span>
                                             </div>
                                         </div>
                                         <div class="stars stars_mb">
@@ -532,11 +534,12 @@
                                             <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
                                             <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
                                         </div>
-                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
-                                            дружелюбный
-                                            персонал. Удобная
-                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
-                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+                                        <p class="reputation__text-2">Услуги выше всяких похвал. Очень качественное
+                                            обслуживание. Делают все, чтобы пациенту было комфортно и безболезненно.
+                                            Прекрасное внимание к пациенту. Все нужные аппараты под рукой. Далеко из
+                                            кабинета ходить не надо. Во время процедуры смотришь телевизор, делаемую
+                                            программу, что отвлекает от боли. Хороший подъезд к зданию. Свободно можно
+                                            поставить автомобиль. Просто не 5 , а целый Джокер. Цены выше похвал</p>
 
                                     </div>
                                 </div>
@@ -561,11 +564,11 @@
                                     </div>
                                     <div class="reputation__content">
                                         <div class="reputation__flex-2">
-                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
+                                            <img src="./img/reputation-1.webp" loading="lazy" width="35" height="35"
                                                 alt="">
                                             <div class="reputation__info">
-                                                <span class="reputation__name">Ирина Жигалина</span>
-                                                <span class="reputation__date">7 декабря 2024</span>
+                                                <span class="reputation__name">Елизавета Полякова</span>
+                                                <span class="reputation__date">24 июня</span>
                                             </div>
                                         </div>
                                         <div class="stars stars_mb">
@@ -575,80 +578,20 @@
                                             <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
                                             <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
                                         </div>
-                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
-                                            дружелюбный
-                                            персонал. Удобная
-                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
-                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+                                        <p class="reputation__text-2">Хочу сказать огромное спасибо всей клинике! Здесь
+                                            работают действительно хорошие люди и настоящие профессионалы. Мне здесь и
+                                            лечили зубы, и удаляли зубы — всё прошло максимально спокойно и комфортно.
+                                            Очень переживала перед процедурами, но врачи всё объясняли, поддерживали и
+                                            делали свою работу очень аккуратно.
+                                            Отдельное спасибо медицинским сёстрам за доброту, внимательность и заботу.
+                                            Всегда встречали с улыбкой и помогали чувствовать себя спокойно.
+                                            И особенно хочу поблагодарить главного врача за отличную организацию работы
+                                            клиники. Видно, что здесь заботятся о пациентах и собирают в команду
+                                            действительно грамотных специалистов.
 
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="reputation__btns">
-                                <button class="reputation__btn reputation__btn-prev" aria-label="Предыдущий отзыв">
-                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10.8838 0.888672L0.888345 10.8841L10.8838 20.8796" stroke="black"
-                                            stroke-width="1.77697" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </button>
-                                <button class="reputation__btn reputation__btn-next" aria-label="Следующий отзыв">
-                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0.888672 20.8794L10.8841 10.884L0.888672 0.888507" stroke="black"
-                                            stroke-width="1.77697" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-
-                                </button>
-                            </div>
-                        </div>
-                        <a class="reputation__link" href="#" aria-label="Посмотреть все отзывы">Посмотреть все
-                            отзывы</a>
-                    </div>
-                    <div class="reputation__card">
-                        <div class="reputation__swiper swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="reputation__flex">
-                                        <img class="reputation__img" src="./img/svg/yandex.svg" loading="lazy" alt="">
-                                        <div class="reputation__rating">
-                                            <span>5.0</span>
-                                            <div class="stars">
-                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
-                                                    alt="">
-                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
-                                                    alt="">
-                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
-                                                    alt="">
-                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
-                                                    alt="">
-                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
-                                                    alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="reputation__content">
-                                        <div class="reputation__flex-2">
-                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
-                                                alt="">
-                                            <div class="reputation__info">
-                                                <span class="reputation__name">Ирина Жигалина</span>
-                                                <span class="reputation__date">7 декабря 2024</span>
-                                            </div>
-                                        </div>
-                                        <div class="stars stars_mb">
-                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
-                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
-                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
-                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
-                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
-                                        </div>
-                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
-                                            дружелюбный
-                                            персонал. Удобная
-                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
-                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+                                            Очень рада, что обратилась именно сюда. Спасибо всему коллективу за ваш
+                                            труд, терпение и человеческое отношение. Теперь лечить зубы буду только у
+                                            вас и обязательно буду рекомендовать клинику своим знакомым!❤️❤️❤️</p>
 
                                     </div>
                                 </div>
@@ -673,11 +616,11 @@
                                     </div>
                                     <div class="reputation__content">
                                         <div class="reputation__flex-2">
-                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
+                                            <img src="./img/reputation-2.webp" loading="lazy" width="35" height="35"
                                                 alt="">
                                             <div class="reputation__info">
-                                                <span class="reputation__name">Ирина Жигалина</span>
-                                                <span class="reputation__date">7 декабря 2024</span>
+                                                <span class="reputation__name">Вячеслав Неважно</span>
+                                                <span class="reputation__date">27 июня</span>
                                             </div>
                                         </div>
                                         <div class="stars stars_mb">
@@ -687,11 +630,21 @@
                                             <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
                                             <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
                                         </div>
-                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
-                                            дружелюбный
-                                            персонал. Удобная
-                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
-                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+                                        <p class="reputation__text-2">Дорогие сотрудники Клиники Just Smile
+                                            Хочу выразить вам свою искреннюю благодарность за высокий уровень
+                                            обслуживания и профессионализм, который я ощутил во время посещения вашей
+                                            клиники. Каждый член вашего коллектива проявил заботу, внимание и
+                                            компетентность на всех этапах моего лечения.
+                                            С максимальной аккуратностью и вниманием к деталям и поблагодарить
+                                            специалистов высшего колфикации доброжелательность и готовность помочь
+                                            сделали мой визит комфортным и приятным.
+                                            Ваша клиника создала атмосферу, в которой я чувствовал себя спокойно и
+                                            уверенно. Все процедуры были проведены в чистом и уютном помещении, а
+                                            персонал был вежлив и обходителен.
+                                            Спасибо вам за вашу работу, за вашу преданность делу и за то, что делаете
+                                            здоровье наших улыбок вашим приоритетом. Желаю вашей клинике процветания, а
+                                            вашему коллективу – дальнейших успехов и профессионального роста!
+                                            С уважением . Вячеслав 5+++++++++++++++</p>
 
                                     </div>
                                 </div>
@@ -715,7 +668,9 @@
                                 </button>
                             </div>
                         </div>
-                        <a class="reputation__link" href="#" aria-label="Посмотреть все отзывы">Посмотреть все
+                        <a class="reputation__link"
+                            href="https://yandex.ru/maps/org/just_smile/54166834490/reviews/?ll=37.542626%2C55.743411&z=16"
+                            aria-label="Посмотреть все отзывы" rel="nofollow">Посмотреть все
                             отзывы</a>
                     </div>
                     <div class="reputation__card">
@@ -723,7 +678,8 @@
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <div class="reputation__flex">
-                                        <img class="reputation__img" src="./img/svg/yandex.svg" loading="lazy" alt="">
+                                        <img class="reputation__img" src="./img/2gis.webp" width="88" height="23"
+                                            loading="lazy" alt="">
                                         <div class="reputation__rating">
                                             <span>5.0</span>
                                             <div class="stars">
@@ -742,11 +698,11 @@
                                     </div>
                                     <div class="reputation__content">
                                         <div class="reputation__flex-2">
-                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
+                                            <img src="./img/reputation-3.webp" loading="lazy" width="35" height="35"
                                                 alt="">
                                             <div class="reputation__info">
-                                                <span class="reputation__name">Ирина Жигалина</span>
-                                                <span class="reputation__date">7 декабря 2024</span>
+                                                <span class="reputation__name">Раван Мамедзаде</span>
+                                                <span class="reputation__date">24 августа 2024</span>
                                             </div>
                                         </div>
                                         <div class="stars stars_mb">
@@ -756,17 +712,16 @@
                                             <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
                                             <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
                                         </div>
-                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
-                                            дружелюбный
-                                            персонал. Удобная
-                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
-                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+                                        <p class="reputation__text-2">Удалял зуб мудрости. Хирург Маил Эльбаивич быстро
+                                            и безболезненно удалил зубы, все супер! Буду рекомендовать всем друзьям и
+                                            знакомым, отличное обслуживание!</p>
 
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="reputation__flex">
-                                        <img class="reputation__img" src="./img/svg/yandex.svg" loading="lazy" alt="">
+                                        <img class="reputation__img" src="./img/2gis.webp" width="88" height="23"
+                                            loading="lazy" alt="">
                                         <div class="reputation__rating">
                                             <span>5.0</span>
                                             <div class="stars">
@@ -785,10 +740,10 @@
                                     </div>
                                     <div class="reputation__content">
                                         <div class="reputation__flex-2">
-                                            <img src="./img/reputation.webp" loading="lazy" width="35" height="35"
+                                            <img src="./img/reputation-4.jpg" loading="lazy" width="35" height="35"
                                                 alt="">
                                             <div class="reputation__info">
-                                                <span class="reputation__name">Ирина Жигалина</span>
+                                                <span class="reputation__name">Фарид Р.</span>
                                                 <span class="reputation__date">7 декабря 2024</span>
                                             </div>
                                         </div>
@@ -799,11 +754,223 @@
                                             <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
                                             <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
                                         </div>
-                                        <p class="reputation__text-2">Клиника отличная! Вежливый, добрый и
-                                            дружелюбный
-                                            персонал. Удобная
-                                            парковка, близко к дому. В самой клинике чисто, уютно, комфортно!
-                                            Спасибо большое врачам, после клиники была в отличном состоянии!</p>
+                                        <p class="reputation__text-2">Стоматологи высший пилотаж, цены более чем
+                                            приемлемые. Не навязывают всякий шлак и не выкачивают деньги. Рекомендую
+                                            однозначно!</p>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reputation__flex">
+                                        <img class="reputation__img" src="./img/2gis.webp" width="88" height="23"
+                                            loading="lazy" alt="">
+                                        <div class="reputation__rating">
+                                            <span>5.0</span>
+                                            <div class="stars">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reputation__content">
+                                        <div class="reputation__flex-2">
+                                            <img src="./img/reputation-4.jpg" loading="lazy" width="35" height="35"
+                                                alt="">
+                                            <div class="reputation__info">
+                                                <span class="reputation__name">Ксения Н</span>
+                                                <span class="reputation__date">10 декабря 2025</span>
+                                            </div>
+                                        </div>
+                                        <div class="stars stars_mb">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                        </div>
+                                        <p class="reputation__text-2">Это моя самая любимая стоматология. Врачи очень
+                                            внимательные, всё объясняют, никуда не торопят и создают спокойную
+                                            атмосферу, что даже самые тревожные процедуры проходят легче. Удаляла здесь
+                                            зубы мудрости, лечу кариес и делаю регулярно профессиональную чистку, а
+                                            также лечусь на брекетах.
+                                            Рекомендую однозначно</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reputation__btns">
+                                <button class="reputation__btn reputation__btn-prev" aria-label="Предыдущий отзыв">
+                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.8838 0.888672L0.888345 10.8841L10.8838 20.8796" stroke="black"
+                                            stroke-width="1.77697" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                                <button class="reputation__btn reputation__btn-next" aria-label="Следующий отзыв">
+                                    <svg width="12" height="22" viewBox="0 0 12 22" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.888672 20.8794L10.8841 10.884L0.888672 0.888507" stroke="black"
+                                            stroke-width="1.77697" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+
+                                </button>
+                            </div>
+                        </div>
+                        <a class="reputation__link"
+                            href="https://2gis.ru/moscow/firm/70000001058857131/tab/reviews?m=37.544559%2C55.741634%2F16"
+                            aria-label="Посмотреть все отзывы">Посмотреть все
+                            отзывы</a>
+                    </div>
+                    <div class="reputation__card">
+                        <div class="reputation__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="reputation__flex">
+                                        <img class="reputation__img" src="./img/SberHealth.svg.webp" width="115"
+                                            height="13" loading="lazy" alt="">
+                                        <div class="reputation__rating">
+                                            <span>5.0</span>
+                                            <div class="stars">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reputation__content">
+                                        <div class="reputation__flex-2">
+                                            <img src="./img/reputation-5.webp" loading="lazy" width="35" height="35"
+                                                alt="">
+                                            <div class="reputation__info">
+                                                <span class="reputation__name">Кристина</span>
+                                                <span class="reputation__date">22 декабря 2025</span>
+                                            </div>
+                                        </div>
+                                        <div class="stars stars_mb">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                        </div>
+                                        <p class="reputation__text-2">Хочу оставить честный отзыв о стоматологии, где
+                                            мне удалили все зубы мудрости и вылечили 26-й зуб, на который, откровенно
+                                            говоря, почти не было надежды. К каждому этапу подошли очень внимательно,
+                                            всё заранее объясняли, отвечали на вопросы, работали спокойно и аккуратно.
+                                            Удаление зубов мудрости прошло намного легче, чем я ожидала, восстановление
+                                            тоже без проблем. А 26-й зуб врачи действительно спасли, за что им отдельное
+                                            огромное спасибо. Чувствуется высокий уровень профессионализма и слаженная
+                                            работа всей команды. После лечения остались только хорошие впечатления.
+                                            Поэтому с удовольствием порекомендую данную клинику всем!</p>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reputation__flex">
+                                        <img class="reputation__img" src="./img/SberHealth.svg.webp" width="115"
+                                            height="13" loading="lazy" alt="">
+                                        <div class="reputation__rating">
+                                            <span>5.0</span>
+                                            <div class="stars">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reputation__content">
+                                        <div class="reputation__flex-2">
+                                            <img src="./img/reputation-5.webp" loading="lazy" width="35" height="35"
+                                                alt="">
+                                            <div class="reputation__info">
+                                                <span class="reputation__name">Ксения</span>
+                                                <span class="reputation__date">
+                                                    10 декабря 2025</span>
+                                            </div>
+                                        </div>
+                                        <div class="stars stars_mb">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                        </div>
+                                        <p class="reputation__text-2">Хожу в клинику не первый раз, и каждый раз выхожу
+                                            оттуда с ощущением, что обо мне реально позаботились. Врачи очень
+                                            внимательные, всё объясняют, никуда не торопят и создают спокойную
+                                            атмосферу, что даже самые тревожные процедуры проходят легче. Удаляла здесь
+                                            зубы мудрости, лечу кариес и делаю регулярно профессиональную чистку, а
+                                            также лечусь на брекетах. Очень нравится чистота, аккуратность и современное
+                                            оборудование — чувствуешь себя в надёжных руках.</p>
+
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="reputation__flex">
+                                        <img class="reputation__img" src="./img/SberHealth.svg.webp" width="115"
+                                            height="13" loading="lazy" alt="">
+                                        <div class="reputation__rating">
+                                            <span>5.0</span>
+                                            <div class="stars">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                                <img src="./img/svg/star.svg" loading="lazy" width="13" height="13"
+                                                    alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="reputation__content">
+                                        <div class="reputation__flex-2">
+                                            <img src="./img/reputation-6.webp" loading="lazy" width="35" height="35"
+                                                alt="">
+                                            <div class="reputation__info">
+                                                <span class="reputation__name">Александр</span>
+                                                <span class="reputation__date">
+                                                    3 декабря 2025</span>
+                                            </div>
+                                        </div>
+                                        <div class="stars stars_mb">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                            <img src="./img/svg/star.svg" loading="lazy" width="13" height="13" alt="">
+                                        </div>
+                                        <p class="reputation__text-2">Запустил зубы. Не делал никогда даже чистку,
+                                            обратился в клинику Just smile, сдкдали соимок, чистку, провели полное
+                                            обследование и составили план лечения. Первым этапом было удаление 8 (зубов
+                                            мудрости) прошло безболезненно, быстро зажило. Так же установил импланты,
+                                            жду пока приживутся, рекомендую врача-хирурга Гахраманова Гахрамана Так же
+                                            рекомендую клинику к посещению!</p>
 
                                     </div>
                                 </div>
@@ -833,7 +1000,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
                 <h2 class="contacts__title section-title"><span>Контакты</span> клиники</h2>
                 <div class="contacts__flex">
