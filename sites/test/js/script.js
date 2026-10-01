@@ -149,6 +149,14 @@
         el.addEventListener('click', closeAll);
     });
 
+    // клик по пустому месту в открытом меню (мимо плиток и ссылок) — закрываем
+    const menu = header.querySelector('.header__menu');
+    if (menu) {
+        menu.addEventListener('click', (e) => {
+            if (!e.target.closest('.header__tile, .header__mnav, .header__menu-contacts')) closeAll();
+        });
+    }
+
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeAll();
     });

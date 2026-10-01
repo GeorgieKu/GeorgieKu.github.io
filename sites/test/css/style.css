@@ -1694,17 +1694,21 @@ button.swiper-pagination-bullet {
   background-color: #fff;
   color: #383838;
   cursor: pointer;
-  transition: box-shadow 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 .doctor-card span {
   cursor: inherit;
 }
+.doctor-card__exp, .doctor-card__badges, .doctor-card__spec {
+  transition: color 0.2s ease;
+}
 @media (hover: hover) {
   .doctor-card:hover {
-    box-shadow: 0 10px 30px rgba(56, 56, 56, 0.08);
+    background-color: #34a99f;
+    color: #fff;
   }
-  .doctor-card:hover .doctor-card__name {
-    color: #34a99f;
+  .doctor-card:hover .doctor-card__exp, .doctor-card:hover .doctor-card__badges, .doctor-card:hover .doctor-card__spec {
+    color: #fff;
   }
 }
 .doctor-card__exp {
@@ -2998,7 +3002,9 @@ body:has(.modal[open]) {
   animation: modal-in 0.25s ease;
 }
 .modal::backdrop {
-  background-color: rgba(56, 56, 56, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 .modal[open]::backdrop {
   animation: modal-fade 0.25s ease;
@@ -3259,6 +3265,7 @@ body:has(.modal[open]) {
   background-color: #fff;
   overflow: hidden;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 .news .news-card__img {
   flex-shrink: 0;
@@ -3299,6 +3306,7 @@ body:has(.modal[open]) {
   letter-spacing: -0.32px;
   color: #7b7b7b;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
 .news .news-card__text {
   display: -webkit-box;
@@ -3317,11 +3325,11 @@ body:has(.modal[open]) {
   transition: background-color 0.2s ease;
 }
 @media (hover: hover) {
-  .news .news-card:hover .news-card__title {
-    color: #34a99f;
+  .news .news-card:hover {
+    background-color: #34a99f;
   }
-  .news .news-card:hover .news-card__btn {
-    background-color: #2c9188;
+  .news .news-card:hover .news-card__title, .news .news-card:hover .news-card__text, .news .news-card:hover .news-card__date {
+    color: #fff;
   }
 }
 .news .news-card:focus-visible {
