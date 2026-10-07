@@ -1,646 +1,332 @@
 
-// свайперы, которые нужны только на мобильной вёрстке:
-// создаём и уничтожаем по медиазапросу, чтобы на десктопе теги просто переносились строками
-function createResponsiveSwiper(selector, mediaQuery, options) {
-    if (!document.querySelector(selector)) return;
+// Слайдеры детальной страницы врача.
+// Swiper (js/libs/swiper-bundle.min.js) подгружается только когда слайдер
+// приближается к экрану — так он не мешает первой отрисовке страницы.
+(() => {
+    const scriptSrc = document.currentScript ? document.currentScript.src : '';
+    const swiperSrc = scriptSrc ? new URL('libs/swiper-bundle.min.js', scriptSrc).href : './js/libs/swiper-bundle.min.js';
 
-    const media = matchMedia(mediaQuery);
-    let instance = null;
-
-    function toggle() {
-        if (media.matches && !instance) {
-            instance = new Swiper(selector, options)
-        } else if (!media.matches && instance) {
-            instance.destroy(true, true)
-            instance = null
+    let swiperPromise = null;
+    const loadSwiper = () => {
+        if (typeof Swiper !== 'undefined') return Promise.resolve();
+        if (!swiperPromise) {
+            swiperPromise = new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = swiperSrc;
+                script.onload = resolve;
+                script.onerror = reject;
+                document.head.append(script);
+            });
         }
-    }
-
-    toggle()
-    media.addEventListener('change', toggle)
-}
-
-// «С какой задачей вы пришли?»: тег выбирает ролик из папки video.
-// Меняем src у превью и data-video у кнопки play, чтобы модалка открыла тот же ролик
-document.addEventListener('DOMContentLoaded', function () {
-    const tabs = Array.from(document.querySelectorAll('.services__tab'));
-    const block = document.querySelector('.services__video-block');
-
-    if (!tabs.length || !block) return;
-
-    const preview = block.querySelector('video');
-    const playButton = block.querySelector('.services__play');
-
-    function setVideo(src, title) {
-        if (preview && preview.getAttribute('src') !== src) {
-            // прячем кадр на время загрузки: размеры блока держит CSS, поэтому вёрстка не двигается
-            preview.classList.add('is-loading')
-
-            preview.addEventListener('loadeddata', function () {
-                preview.classList.remove('is-loading')
-            }, {
-                once: true
-            })
-
-            preview.addEventListener('error', function () {
-                preview.classList.remove('is-loading')
-            }, {
-                once: true
-            })
-
-            preview.setAttribute('src', src)
-            preview.load()
-        }
-
-        if (playButton) {
-            playButton.dataset.video = src
-            playButton.setAttribute('aria-label', 'Смотреть видео: ' + title)
-        }
-    }
-
-    tabs.forEach(function (tab) {
-        tab.addEventListener('click', function () {
-            tabs.forEach(function (item) {
-                const active = item === tab;
-
-                item.classList.toggle('services__tag_active', active)
-                item.setAttribute('aria-pressed', String(active))
-            })
-
-            setVideo(tab.dataset.video, tab.textContent.trim())
-        })
-    })
-
-    const initial = tabs.find(function (tab) {
-        return tab.classList.contains('services__tag_active')
-    }) || tabs[0];
-
-    setVideo(initial.dataset.video, initial.textContent.trim())
-});
-
-// пороги совпадают с медиазапросами в стилях
-createResponsiveSwiper('.services__swiper', '(max-width: 993px)', {
-    direction: 'horizontal',
-    loop: false,
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-})
-
-createResponsiveSwiper('.results__swiper', '(max-width: 768px)', {
-    direction: 'horizontal',
-    loop: false,
-    slidesPerView: 'auto',
-    spaceBetween: 10,
-})
-
-const resultsSwiper2 = new Swiper('.results__swiper-2', {
-    direction: 'horizontal',
-    loop: false,
-    // на мобилке слайд чуть уже экрана, чтобы был виден край следующего
-    slidesPerView: 1.1,
-    spaceBetween: 10,
-
-    breakpoints: {
-        769: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-    },
-    navigation: {
-        nextEl: '.results__btn-next',
-        prevEl: '.results__btn-prev',
-    },
-});
-
-// «Результаты пациенток»: теги фильтруют слайды по data-category.
-// Слайды не удаляем, а прячем классом и пересчитываем свайпер — так работают
-// и стрелки, и ленивая загрузка картинок
-document.addEventListener('DOMContentLoaded', function () {
-    const tabs = Array.from(document.querySelectorAll('.results__tag'));
-    const slides = Array.from(document.querySelectorAll('.results__slide'));
-    const empty = document.querySelector('.results__empty');
-    const navigation = document.querySelector('.results__navigation');
-
-    if (!tabs.length || !slides.length) return;
-
-    function applyFilter(category) {
-        let visible = 0;
-
-        slides.forEach(function (slide) {
-            const match = category === 'all' || slide.dataset.category === category;
-
-            slide.classList.toggle('results__slide_hidden', !match)
-
-            if (match) visible++
-        })
-
-        if (empty) empty.hidden = visible > 0
-        // одна работа — листать нечего, стрелки прячем
-        if (navigation) navigation.hidden = visible < 2
-
-        resultsSwiper2.update()
-        resultsSwiper2.slideTo(0, 0)
-    }
-
-    tabs.forEach(function (tab) {
-        tab.addEventListener('click', function () {
-            tabs.forEach(function (item) {
-                const active = item === tab;
-
-                item.classList.toggle('services__tag_active', active)
-                item.setAttribute('aria-pressed', String(active))
-            })
-
-            applyFilter(tab.dataset.category)
-        })
-    })
-
-    const initial = tabs.find(function (tab) {
-        return tab.classList.contains('services__tag_active')
-    }) || tabs[0];
-
-    applyFilter(initial.dataset.category)
-});
-
-const storiesSwiper2 = new Swiper('.stories__swiper', {
-    direction: 'horizontal',
-    loop: false,
-    // на мобилке слайд чуть уже экрана, чтобы был виден край следующего
-    slidesPerView: 'auto',
-    spaceBetween: 18,
-
-    breakpoints: {
-        769: {
-            slidesPerView: 'auto',
-            spaceBetween: 50,
-        },
-    },
-    navigation: {
-        nextEl: '.stories__btn-next',
-        prevEl: '.stories__btn-prev',
-    },
-});
-
-const doctorSwiper2 = new Swiper('.docotor__swiper', {
-    direction: 'horizontal',
-    loop: false,
-    // на мобилке слайд чуть уже экрана, чтобы был виден край следующего
-    slidesPerView: 'auto',
-    spaceBetween: 12,
-
-    breakpoints: {
-        769: {
-            slidesPerView: 4,
-            spaceBetween: 36,
-        },
-    },
-
-});
-
-const reviewsSwiper = new Swiper('.reviews__swiper', {
-    direction: 'horizontal',
-    loop: false,
-    // на мобилке слайд чуть уже экрана, чтобы был виден край следующего
-    slidesPerView: 'auto',
-    spaceBetween: 36,
-
-    navigation: {
-        nextEl: '.reviews__btn-next-2',
-        prevEl: '.reviews__btn-prev-2',
-    },
-
-});
-
-// внутренние слайдеры отзывов: по одному на каждую площадку.
-// Строковый селектор взял бы только первый блок, поэтому инициализируем каждый
-// со своими стрелками — иначе на 2ГИС и ydoc.kz листать было бы нечем
-const reviewsSwipers = Array.from(document.querySelectorAll('.reviews__swiper-2')).map(function (el) {
-    return new Swiper(el, {
-        direction: 'horizontal',
-        loop: false,
-        slidesPerView: 1,
-        spaceBetween: 12,
-
-        navigation: {
-            nextEl: el.querySelector('.reviews__btn_next'),
-            prevEl: el.querySelector('.reviews__btn_prev'),
-        },
-    })
-});
-
-// отзывы обрезаны по 8 строк — под теми, что не влезли, показываем «Читать полностью».
-// Кнопки создаём здесь, чтобы они появлялись и у отзывов, добавленных в разметку позже
-document.addEventListener('DOMContentLoaded', function () {
-    const texts = Array.from(document.querySelectorAll('.reviews__swiper-2 p'));
-
-    if (!texts.length) return;
-
-    const toggles = new Map();
-
-    function isClipped(text) {
-        return text.scrollHeight > text.clientHeight + 1;
-    }
-
-    function setState(text, opened) {
-        const button = toggles.get(text);
-
-        text.classList.toggle('reviews__text_full', opened)
-
-        if (button) {
-            button.textContent = opened ? 'Свернуть' : 'Читать полностью'
-            button.setAttribute('aria-expanded', String(opened))
-        }
-
-        // высота слайда изменилась — свайперу нужно пересчитать размеры
-        const swiperEl = text.closest('.reviews__swiper-2');
-
-        if (swiperEl && swiperEl.swiper) swiperEl.swiper.update()
-    }
-
-    function createToggle(text) {
-        const button = document.createElement('button');
-
-        button.type = 'button'
-        button.className = 'reviews__more'
-        button.textContent = 'Читать полностью'
-        button.setAttribute('aria-expanded', 'false')
-
-        button.addEventListener('click', function () {
-            setState(text, !text.classList.contains('reviews__text_full'))
-        })
-
-        text.insertAdjacentElement('afterend', button)
-        toggles.set(text, button)
-
-        return button;
-    }
-
-    // кнопка нужна только там, где текст реально не помещается в 8 строк
-    function refresh() {
-        texts.forEach(function (text) {
-            if (text.classList.contains('reviews__text_full')) return;
-
-            const button = toggles.get(text) || (isClipped(text) ? createToggle(text) : null);
-
-            if (button) button.hidden = !isClipped(text)
-        })
-    }
-
-    refresh()
-
-    // шрифты меняют высоту строк, поэтому пересчитываем после их загрузки
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh)
-
-    let resizeTimer = null;
-
-    window.addEventListener('resize', function () {
-        clearTimeout(resizeTimer)
-        resizeTimer = setTimeout(refresh, 150)
-    })
-
-    // при листании отзывов в карточке сворачиваем раскрытый текст обратно
-    document.querySelectorAll('.reviews__swiper-2').forEach(function (el) {
-        if (!el.swiper) return;
-
-        el.swiper.on('slideChange', function () {
-            el.querySelectorAll('p.reviews__text_full').forEach(function (text) {
-                setState(text, false)
-            })
-            refresh()
-        })
-    })
-});
-
-// аккордеон: контент ищем по aria-controls, порядок в разметке — запасной вариант
-function getAccContent(toggleButton, fallback) {
-    const controlled = toggleButton.getAttribute('aria-controls');
-
-    return (controlled && document.getElementById(controlled)) || fallback || null;
-}
-
-// иконка «плюс/минус» переключается в CSS по aria-expanded
-function setAccState(toggleButton, content, isOpen) {
-    content.classList.toggle('open', isOpen);
-    toggleButton.setAttribute('aria-expanded', String(isOpen));
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    const toggleButtons = document.querySelectorAll('.acc');
-    const contents = document.querySelectorAll('.content');
-
-    toggleButtons.forEach((toggleButton, index) => {
-        const content = getAccContent(toggleButton, contents[index]);
-
-        if (!content) return;
-
-        toggleButton.addEventListener('click', function () {
-            setAccState(toggleButton, content, !content.classList.contains('open'))
-        })
-    });
-});
-
-// «Раскрыть всю таблицу»: разворачиваем все пункты и снимаем ограничение по высоте
-document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.getElementById('price-toggle');
-    const accordions = document.getElementById('price-accordions');
-
-    if (!toggle || !accordions) return;
-
-    const items = Array.from(accordions.querySelectorAll('.acc'));
-    const label = toggle.querySelector('.price__btn-text');
-    const arrow = toggle.querySelector('svg');
-    const texts = {
-        open: 'Раскрыть всю таблицу',
-        close: 'Свернуть таблицу',
+        return swiperPromise;
     };
 
-    function isAllOpen() {
-        return items.length > 0 && items.every(function (item) {
-            return item.getAttribute('aria-expanded') === 'true'
-        })
-    }
+    // общий загрузчик — им пользуются и другие блоки (например, главная)
+    window.loadSwiper = loadSwiper;
 
-    // подпись и стрелка кнопки всегда отражают текущее состояние таблицы
-    function syncToggle() {
-        const expanded = isAllOpen();
+    const sliders = document.querySelectorAll('[data-reviews-slider], [data-services-slider], [data-doctors-slider]');
+    if (!sliders.length) return;
 
-        toggle.setAttribute('aria-expanded', String(expanded))
-        toggle.setAttribute('aria-label', expanded ? texts.close : texts.open)
-
-        if (label) label.textContent = expanded ? texts.close : texts.open
-        if (arrow) arrow.classList.toggle('rotate', expanded)
-    }
-
-    toggle.addEventListener('click', function () {
-        const expand = !isAllOpen();
-
-        items.forEach(function (item) {
-            const content = getAccContent(item);
-
-            if (content) setAccState(item, content, expand)
-        })
-
-        accordions.classList.toggle('price__accardeons_expanded', expand)
-        syncToggle()
-
-        // при сворачивании возвращаем пользователя к началу таблицы
-        if (!expand) {
-            window.scrollTo({
-                top: accordions.getBoundingClientRect().top + window.pageYOffset - 120,
-                behavior: 'smooth'
-            })
-        }
-    })
-
-    // одиночное раскрытие пункта тоже снимает обрезку, чтобы текст не прятался
-    items.forEach(function (item) {
-        item.addEventListener('click', function () {
-            if (item.getAttribute('aria-expanded') === 'true') {
-                accordions.classList.add('price__accardeons_expanded')
-            } else if (!items.some(function (el) {
-                    return el.getAttribute('aria-expanded') === 'true'
-                })) {
-                accordions.classList.remove('price__accardeons_expanded')
-            }
-
-            syncToggle()
-        })
-    })
-
-    syncToggle()
-});
-
-const operationsSwiper = new Swiper('.operations__swiper', {
-    direction: 'horizontal',
-    loop: false,
-    // на мобилке слайд чуть уже экрана, чтобы был виден край следующего
-    slidesPerView: 1.2,
-    spaceBetween: 12,
-
-    breakpoints: {
-        576: {
-            slidesPerView: 1,
-
+    const options = {
+        reviews: {
+            slidesPerView: 1.08,
+            spaceBetween: 16,
+            breakpoints: {
+                577: { slidesPerView: 2, spaceBetween: 20 },
+                1025: { slidesPerView: 3, spaceBetween: 30 },
+            },
         },
-    },
+        // по 5 услуг на слайде
+        services: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoHeight: true,
+        },
+        doctors: {
+            slidesPerView: 1.08,
+            spaceBetween: 16,
+            breakpoints: {
+                577: { slidesPerView: 2, spaceBetween: 20 },
+                1025: { slidesPerView: 3, spaceBetween: 30 },
+                1440: { slidesPerView: 4, spaceBetween: 30 },
+            },
+        },
+    };
 
-    navigation: {
-        nextEl: '.operations__btn-next',
-        prevEl: '.operations__btn-prev',
-    },
+    const initSlider = (el) => {
+        const name = Object.keys(options).find((key) => el.hasAttribute(`data-${key}-slider`));
+        if (!name || el.swiper) return;
 
-});
-let modal = document.querySelector('.modal');
-let videoModal = document.querySelector('.video-modal');
-let resetModalValidation = null;
+        new Swiper(el, {
+            speed: 500,
+            watchOverflow: true,
+            navigation: {
+                prevEl: `[data-${name}-prev]`,
+                nextEl: `[data-${name}-next]`,
+            },
+            ...options[name],
+        });
+    };
 
+    const start = (el) => loadSwiper().then(() => initSlider(el));
 
-function openModal() {
-    modal.showModal()
-}
+    if (!('IntersectionObserver' in window)) {
+        sliders.forEach(start);
+        return;
+    }
 
-function closeModal() {
-    modal.close()
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            observer.unobserve(entry.target);
+            start(entry.target);
+        });
+    }, { rootMargin: '300px 0px' });
 
-    if (resetModalValidation) resetModalValidation()
-}
+    sliders.forEach((el) => observer.observe(el));
+})();
 
-// видео берём из data-video кнопки, иначе — из <video> рядом с ней
-function openVideoModal(button) {
-    if (!videoModal) return;
+// Переключатель «Взрослым / Детям» в фильтре врачей
+(() => {
+    document.querySelectorAll('[data-audience]').forEach((group) => {
+        const buttons = group.querySelectorAll('.doctors__audience-btn');
+        const input = group.querySelector('input[type="hidden"]');
 
-    const player = videoModal.querySelector('.video-modal__video');
-    // превью лежит в одном контейнере с кнопкой: и в услугах, и в историях, и в реабилитации
-    const block = button.closest('.services__video-block, .stories__relative, .reabilitation__relative') ||
-        button.parentElement;
-    const preview = block ? block.querySelector('video') : null;
-    const src = button.dataset.video || (preview ? preview.getAttribute('src') : '') || '';
-    const poster = preview ? preview.getAttribute('poster') : '';
+        buttons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                buttons.forEach((b) => {
+                    const active = b === btn;
+                    b.classList.toggle('is-active', active);
+                    b.setAttribute('aria-pressed', String(active));
+                });
+                if (input) input.value = btn.value;
+            });
+        });
+    });
+})();
 
-    // у ролика без своего постера постер снимаем, иначе останется кадр от предыдущего
-    if (poster) {
-        player.setAttribute('poster', poster)
+// Меню по кнопке «Меню» и поиск по кнопке-лупе
+(() => {
+    const header = document.querySelector('[data-header]');
+    if (!header) return;
+
+    const panels = {
+        menu: { cls: 'is-menu-open', toggles: header.querySelectorAll('[data-menu-toggle]') },
+        search: { cls: 'is-search-open', toggles: header.querySelectorAll('[data-search-toggle]') },
+    };
+
+    const isOpen = (name) => header.classList.contains(panels[name].cls);
+
+    // картинки плиток меню грузим только при первом открытии
+    const loadMenuImages = () => {
+        header.querySelectorAll('.header__tile-img[data-src]').forEach((img) => {
+            img.src = img.dataset.src;
+            img.removeAttribute('data-src');
+        });
+    };
+
+    const setPanel = (name, open) => {
+        if (name === 'menu' && open) loadMenuImages();
+        header.classList.toggle(panels[name].cls, open);
+        panels[name].toggles.forEach((btn) => btn.setAttribute('aria-expanded', String(open)));
+    };
+
+    const closeAll = () => Object.keys(panels).forEach((name) => setPanel(name, false));
+
+    Object.keys(panels).forEach((name) => {
+        panels[name].toggles.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const open = !isOpen(name);
+                closeAll();
+                setPanel(name, open);
+
+                if (name === 'search' && open) {
+                    const input = header.querySelector('.header__search-input');
+                    if (input) setTimeout(() => input.focus(), 50);
+                }
+            });
+        });
+    });
+
+    header.querySelectorAll('[data-menu-close]').forEach((el) => {
+        el.addEventListener('click', closeAll);
+    });
+
+    // клик по пустому месту в открытом меню (мимо плиток и ссылок) — закрываем
+    const menu = header.querySelector('.header__menu');
+    if (menu) {
+        menu.addEventListener('click', (e) => {
+            if (!e.target.closest('.header__tile, .header__mnav, .header__menu-contacts')) closeAll();
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeAll();
+    });
+
+    // при открытии модалки из меню — закрываем меню
+    header.querySelectorAll('.header__menu .header__cta').forEach((btn) => {
+        btn.addEventListener('click', closeAll);
+    });
+})();
+
+// Главная: слайдеры первого экрана, направлений, полезных ссылок и партнёров + видео.
+// Swiper подгружается общим загрузчиком window.loadSwiper (blocks/doctor-page/doctor-page.js).
+(() => {
+    const load = () => (window.loadSwiper ? window.loadSwiper() : Promise.reject(new Error('loadSwiper не найден')));
+
+    const sliders = {
+        hero: {
+            loop: true,
+            speed: 700,
+            autoplay: { delay: 6000, disableOnInteraction: false, pauseOnMouseEnter: true },
+            pagination: { el: '[data-hero-dots]', clickable: true },
+        },
+        directions: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoHeight: true,
+        },
+        links: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            breakpoints: { 1025: { spaceBetween: 93 } },
+        },
+        partners: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            breakpoints: { 1025: { spaceBetween: 89 } },
+        },
+    };
+
+    const init = (el, name) => {
+        if (el.swiper) return;
+        new Swiper(el, {
+            speed: 500,
+            watchOverflow: true,
+            navigation: {
+                prevEl: `[data-${name}-prev]`,
+                nextEl: `[data-${name}-next]`,
+            },
+            ...sliders[name],
+        });
+    };
+
+    const items = Object.keys(sliders)
+        .map((name) => ({ name, el: document.querySelector(`[data-${name}-slider]`) }))
+        .filter((item) => item.el);
+
+    if (items.length) {
+        // первый экран — сразу, остальные — когда приблизятся к экрану
+        const start = ({ el, name }) => load().then(() => init(el, name)).catch(() => {});
+        const hero = items.find((item) => item.name === 'hero');
+        if (hero) start(hero);
+
+        const rest = items.filter((item) => item.name !== 'hero');
+        if (!('IntersectionObserver' in window)) {
+            rest.forEach(start);
+        } else {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    observer.unobserve(entry.target);
+                    start(rest.find((item) => item.el === entry.target));
+                });
+            }, { rootMargin: '300px 0px' });
+            rest.forEach((item) => observer.observe(item.el));
+        }
+    }
+
+    // ---------- видео на первом экране ----------
+    const box = document.querySelector('[data-hero-video]');
+    if (!box) return;
+
+    const video = box.querySelector('video');
+    const toggle = box.querySelector('[data-video-toggle]');
+    const label = box.querySelector('[data-video-label]');
+    const fullscreen = box.querySelector('[data-video-fullscreen]');
+    const hasSource = () => Boolean(video.currentSrc || video.querySelector('source'));
+
+    const setState = (paused) => {
+        box.classList.toggle('is-paused', paused);
+        label.textContent = paused ? 'Смотреть' : 'Пауза';
+    };
+
+    // состояние кнопки берём из событий самого видео — так оно не расходится с реальностью
+    video.addEventListener('play', () => setState(false));
+    video.addEventListener('pause', () => setState(true));
+
+    if (hasSource()) {
+        setState(video.paused && !video.autoplay);
+        const playing = video.play();
+        if (playing) playing.catch(() => setState(true));
     } else {
-        player.removeAttribute('poster')
+        // без файла видео показываем постер и кнопку «Смотреть»
+        setState(true);
     }
 
-    if (src && player.getAttribute('src') !== src) {
-        player.setAttribute('src', src)
-        player.load()
-    }
+    toggle.addEventListener('click', () => {
+        if (!hasSource()) return;
+        if (video.paused) {
+            const playing = video.play();
+            if (playing) playing.catch(() => {});
+        } else {
+            video.pause();
+        }
+    });
 
-    videoModal.showModal()
+    fullscreen.addEventListener('click', () => {
+        const target = hasSource() ? video : box;
+        if (target.requestFullscreen) target.requestFullscreen();
+        else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+    });
+})();
 
-    const played = src ? player.play() : null;
-
-    // автоплей может быть заблокирован браузером — тогда пользователь запустит ролик кнопкой плеера
-    if (played && typeof played.catch === 'function') played.catch(function () {})
+// Открыть модалку: onclick="openModal('modal-appointment')"
+function openModal(id) {
+    const modal = document.getElementById(id);
+    if (modal && !modal.open) modal.showModal();
 }
 
-function closeVideoModal() {
-    if (!videoModal) return;
-
-    const player = videoModal.querySelector('.video-modal__video');
-
-    player.pause()
-    player.currentTime = 0
-    videoModal.close()
+// Закрыть модалку: onclick="closeModal(this)" внутри неё или closeModal('modal-appointment')
+function closeModal(target) {
+    const modal = typeof target === 'string' ? document.getElementById(target) : target.closest('dialog');
+    if (modal) modal.close();
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('.modal__form');
-
-    if (!form) return;
-
-    const errorMessage = form.querySelector('.modal__form-error');
-    const fields = Array.from(form.querySelectorAll('input[required]'));
-    const formBlock = document.querySelector('.modal__form-block');
-    const success = document.querySelector('.modal__success');
-
-    // ссылки внутри label чекбокса не должны переключать сам чекбокс
-    form.querySelectorAll('.checkbox a').forEach(function (link) {
-        link.addEventListener('click', function (evt) {
-            evt.stopPropagation()
-        })
-    })
-
-    // рамку подсвечиваем у обёртки поля, а у чекбокса — у самого квадрата
-    function getFieldBox(field) {
-        return field.type === 'checkbox' ?
-            field.closest('.custom-checkbox') :
-            field.closest('.modal__input-wrapper')
+// Закрытие по клику на подложку (только если и нажали, и отпустили вне карточки)
+let modalPointerTarget = null;
+document.addEventListener('pointerdown', (e) => {
+    modalPointerTarget = e.target;
+});
+document.addEventListener('click', (e) => {
+    if (e.target.matches('dialog.modal') && modalPointerTarget === e.target) {
+        e.target.close();
     }
+});
 
-    function isFilled(field) {
-        return field.type === 'checkbox' ? field.checked : field.value.trim() !== ''
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    const shareBtn = document.querySelector('.news-detail__share');
+    if (!shareBtn) return;
 
-    function setFieldError(field, hasError) {
-        const box = getFieldBox(field);
+    shareBtn.addEventListener('click', async () => {
+        const data = { title: document.title, url: window.location.href };
 
-        if (box) box.classList.toggle('error', hasError)
-    }
-
-    function resetValidation() {
-        fields.forEach(function (field) {
-            setFieldError(field, false)
-        })
-        errorMessage.classList.remove('visible')
-    }
-
-    // возвращаем модалку к исходному состоянию: снова форма, без ошибок и старых значений
-    function resetModal() {
-        resetValidation()
-        form.reset()
-        formBlock.classList.remove('hidden')
-        success.classList.remove('visible')
-    }
-
-    // после успешной отправки вместо формы показываем блок «Ваша заявка отправлена»
-    function showSuccess() {
-        formBlock.classList.add('hidden')
-        success.classList.add('visible')
-    }
-
-    // как только поле заполнили — снимаем с него подсветку
-    fields.forEach(function (field) {
-        field.addEventListener(field.type === 'checkbox' ? 'change' : 'input', function () {
-            if (!isFilled(field)) return;
-
-            setFieldError(field, false)
-
-            if (!form.querySelector('.error')) {
-                errorMessage.classList.remove('visible')
+        if (navigator.share) {
+            try {
+                await navigator.share(data);
+            } catch (e) {
+                /* пользователь закрыл окно — ничего не делаем */
             }
-        })
-    })
-
-    form.addEventListener('submit', function (evt) {
-        let firstInvalid = null;
-
-        fields.forEach(function (field) {
-            const invalid = !isFilled(field);
-
-            setFieldError(field, invalid)
-
-            if (invalid && !firstInvalid) firstInvalid = field
-        })
-
-        evt.preventDefault()
-
-        if (firstInvalid) {
-            errorMessage.classList.add('visible')
-            firstInvalid.focus()
             return;
         }
 
-        errorMessage.classList.remove('visible')
-
-        // TODO: отправка данных формы на сервер
-        showSuccess()
-    })
-
-    // видео-модалка: закрытие по клику на подложку и остановка ролика по Esc
-    if (videoModal) {
-        videoModal.addEventListener('click', function (evt) {
-            if (evt.target === videoModal) closeVideoModal()
-        })
-
-        videoModal.addEventListener('cancel', function () {
-            const player = videoModal.querySelector('.video-modal__video');
-
-            player.pause()
-            player.currentTime = 0
-        })
-    }
-
-    // при закрытии модалки сбрасываем форму и блок успеха
-    resetModalValidation = resetModal;
-
-    if (modal) {
-        modal.addEventListener('close', resetModal)
-        modal.addEventListener('cancel', resetModal)
-
-        // клик по подложке закрывает окно записи
-        modal.addEventListener('click', function (evt) {
-            if (evt.target === modal) closeModal()
-        })
-    }
-})
-
-const headerEl = document.querySelector('.header');
-const burgerBtn = document.getElementById('burger');
-
-function setBurgerState(isOpen) {
-    if (!headerEl) return;
-
-    headerEl.classList.toggle('open', isOpen)
-    // при открытом меню страница под ним не должна прокручиваться
-    document.body.classList.toggle('menu-open', isOpen)
-
-    if (burgerBtn) {
-        burgerBtn.setAttribute('aria-expanded', String(isOpen))
-        burgerBtn.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню')
-    }
-}
-
-function closeBurger() {
-    setBurgerState(false)
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    if (!headerEl || !burgerBtn) return;
-
-    burgerBtn.addEventListener('click', function () {
-        setBurgerState(!headerEl.classList.contains('open'))
-    })
-
-    // после перехода по якорю бургер-меню закрываем, иначе оно перекрывает секцию
-    headerEl.querySelectorAll('.menu__link, .header__contact a').forEach(function (link) {
-        link.addEventListener('click', closeBurger)
-    })
-
-    document.addEventListener('keydown', function (evt) {
-        if (evt.key === 'Escape' && headerEl.classList.contains('open')) closeBurger()
-    })
-})
+        try {
+            await navigator.clipboard.writeText(data.url);
+            shareBtn.classList.add('is-copied');
+            setTimeout(() => shareBtn.classList.remove('is-copied'), 2000);
+        } catch (e) {
+            /* буфер обмена недоступен */
+        }
+    });
+});

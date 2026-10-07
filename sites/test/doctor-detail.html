@@ -343,293 +343,355 @@
     </div>
 </header>
 
-    <main class="home">
+    <main class="doctor-page">
         <div class="container">
-            <section class="home-hero">
-                <div class="home-hero__main">
-                    <div class="swiper home-hero__slider" data-hero-slider>
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img class="home-hero__img" src="./img/main/hero-1.webp" width="643" height="608" alt="Хирургический корпус больницы" fetchpriority="high"></div>
-                            <div class="swiper-slide"><img class="home-hero__img" src="./img/main/hero-2.webp" width="643" height="608" alt="Корпус перинатального центра" loading="lazy"></div>
-                        </div>
-                    </div>
-                    <div class="home-hero__caption">
-                        <h1 class="home-hero__title">ГБУЗ г. Москвы ГКБ №67 им. Л.А. Ворохобова ДЗМ</h1>
-                        <p class="home-hero__subtitle">С заботой о людях с 1959 года</p>
-                    </div>
-                    <button class="home-hero__arrow home-hero__arrow--prev" type="button" aria-label="Предыдущий слайд" data-hero-prev><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
-                    <button class="home-hero__arrow" type="button" aria-label="Следующий слайд" data-hero-next><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
-                    <a class="home-hero__more" href="#">Подробнее</a>
-                    <div class="home-hero__dots" data-hero-dots></div>
+            <nav class="breadcrumbs" aria-label="Хлебные крошки">
+    <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="./index.html">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+            <span class="breadcrumbs__current" aria-current="page">Специалисты больницы</span>
+        </li>
+    </ol>
+</nav>
+
+            <h1 class="doctor-page__title">Иванов Иван Иванович</h1>
+
+            <section class="doctor-page__hero">
+                <div class="doctor-page__main">
+                    <p class="doctor-page__spec">Хирург, Флеболог, Эндоскопист</p>
+                    <button class="doctor-page__btn" type="button" onclick="openModal('modal-appointment')">Записаться на прием</button>
+                    <p class="doctor-page__lead">Врач хирург, флеболог и эндоскопист с 9-летним стажем. Специализируется на лазерном лечении варикоза, эндоскопической диагностике и малоинвазивных операциях. Благодаря точной диагностике и индивидуальному подходу пациенты быстро возвращаются к активной жизни.</p>
+                    <nav class="doctor-page__anchors" aria-label="Разделы страницы">
+                        <a class="doctor-page__anchor" href="#specialization">Специализация</a>
+                        <a class="doctor-page__anchor" href="#education">Образование</a>
+                        <a class="doctor-page__anchor" href="#experience">Опыт работы</a>
+                        <a class="doctor-page__anchor" href="#reviews">Отзывы</a>
+                        <a class="doctor-page__anchor" href="#services">Услуги</a>
+                    </nav>
                 </div>
 
-                <div class="home-hero__video" data-hero-video>
-                    <video class="home-hero__video-media" poster="./img/main/hero-video.webp" autoplay muted loop playsinline preload="metadata">
-                        <source src="./video/123.mp4" type="video/mp4">
-                    </video>
-                    <p class="home-hero__video-title">Медицина высоких технологий <br>и человеческого участия</p>
-                    <div class="home-hero__video-actions">
-                        <button class="home-hero__video-btn" type="button" data-video-toggle>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path class="home-hero__icon-pause" d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path class="home-hero__icon-play" d="M8 5.5v13l11-6.5-11-6.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
-                            <span data-video-label>Пауза</span>
-                        </button>
-                        <button class="home-hero__video-btn" type="button" data-video-fullscreen>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 8V3h5M16 3h5v5M21 16v5h-5M8 21H3v-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            Увеличить
-                        </button>
-                    </div>
+                <div class="doctor-page__photo">
+                    <img src="./img/doctor-detail.webp" width="400" height="450" alt="Иванов Иван Иванович">
                 </div>
 
-                <a class="home-hero__card home-hero__card--paid" href="#">
-                    <span class="home-hero__card-title">Платные услуги</span>
-                    <span class="home-hero__card-text">Быстрая помощь без очередей, опытные врачи и современное оборудование. Забота о вашем здоровье!</span>
-                    <span class="home-corner" aria-hidden="true"></span>
-                </a>
-                <a class="home-hero__card home-hero__card--women" href="#">
-                    <span class="home-hero__card-title">Женское здоровье</span>
-                    <img class="home-hero__card-img" src="./img/main/women-health.webp" width="192" height="197" alt="" loading="lazy">
-                    <span class="home-corner" aria-hidden="true"></span>
-                </a>
+                <div class="doctor-page__info">
+                    <div class="doctor-page__facts">
+                        <p>Стаж 9 лет</p>
+                        <p>Кандидат медицинских наук</p>
+                    </div>
+                    <ul class="doctor-page__features">
+                        <li class="doctor-page__feature"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" aria-hidden="true"><path d="M4.29912 9.30763C2.5284 7.05513 2.03544 6.03124 1.89844 5.61801C2.0915 5.39188 2.34961 5.23078 2.63757 5.15669C2.92554 5.0826 3.22934 5.09912 3.50757 5.204L15.6681 9.67176C16.0486 9.81152 16.3941 10.0324 16.6807 10.319C16.9673 10.6056 17.1881 10.9511 17.3279 11.3315L21.7956 23.4921C21.9005 23.7703 21.917 24.0741 21.843 24.3621C21.7689 24.65 21.6078 24.9081 21.3816 25.1012C20.9706 24.9649 19.9445 24.4712 17.692 22.7005C15.5646 21.0281 13.0611 18.7756 10.6433 16.3578C8.22551 13.94 5.97159 11.435 4.29912 9.30763ZM9.79968 17.2007C7.18532 14.5863 4.70718 11.8089 3.00196 9.5809C2.76386 9.27068 2.53076 8.95666 2.30275 8.63896L4.82926 14.4314C5.70153 16.4316 5.78796 18.687 5.07131 20.7481L4.44208 22.5576L6.25155 21.9283C8.31262 21.2117 10.5681 21.2981 12.5682 22.1704L18.3607 24.6969C18.043 24.4689 17.729 24.2358 17.4187 23.9976C15.1916 22.291 12.4141 19.8128 9.79968 17.1985V17.2007ZM24.6476 2.35281C24.3567 2.0621 23.9623 1.8988 23.5511 1.8988C23.1399 1.8988 22.7455 2.0621 22.4546 2.35281L20.4256 4.38118L22.617 6.57261L24.6484 4.54128C24.9386 4.25049 25.1016 3.85642 25.1016 3.44557C25.1016 3.03472 24.9386 2.64065 24.6484 2.34985L24.6476 2.35281ZM17.8938 9.89889L21.0763 6.71637L20.2818 5.92482L17.0993 9.10434C17.4011 9.32947 17.6687 9.5971 17.8938 9.89889Z" fill="currentColor" /></svg><span>Дети</span></li>
+                        <li class="doctor-page__feature"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" aria-hidden="true"><path d="M15.6938 19.5162C13.8375 19.0943 12.5719 17.4068 12.5719 15.5506C14.0906 14.7068 15.1031 13.0193 15.1031 11.1631C15.1031 10.235 15.8625 9.47558 16.7906 9.47558V7.53496C16.7906 5.17246 15.0188 2.97871 12.6563 2.72558C10.9688 2.55683 9.45 3.23183 8.52188 4.49746C7.84688 4.32871 7.17188 4.41308 6.32813 5.00371C5.48438 5.67871 4.97813 6.69121 4.97813 7.78808V8.63183V9.89746V10.9943C4.97813 12.8506 5.99063 14.6225 7.50938 15.5506C7.50938 17.4912 6.15938 19.0943 4.30313 19.6006C2.10938 20.1912 0.50625 21.9631 0 24.1568C0 24.41 0.16875 24.6631 0.50625 24.6631H19.6594C19.9969 24.6631 20.1656 24.41 20.0813 24.0725C19.575 21.8787 17.8875 20.1068 15.6938 19.5162Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" /></svg><span>Взрослые</span></li>
+                        <li class="doctor-page__feature"><b>ДМС</b><span>Принимает по ДМС</span></li>
+                    </ul>
+                </div>
             </section>
+        </div>
 
-            <section class="home-section home-directions">
-                <div class="home-section__head">
-                    <h2 class="home-section__title">Медицинские направления</h2>
-                    <div class="home-section__actions">
-                        <a class="doctor-page__btn doctor-page__btn--outline" href="#">Все направления</a>
+        <div class="doctor-page__about">
+            <div class="container">
+                <section class="doctor-page__text" id="specialization">
+                    <h2 class="doctor-page__h2">Специализация</h2>
+                    <p><b>Для взрослых:</b></p>
+                    <ul>
+                        <li>Хирургия: амбулаторные операции, малоинвазивная хирургия, гнойная хирургия, хирургия мягких тканей.</li>
+                        <li>Флебология: диагностика и лечение варикозной болезни, тромбофлебита, хронической венозной недостаточности, лазерная коагуляция вен (ЭВЛК), склеротерапия.</li>
+                        <li>Эндоскопия: гастроскопия (ЭГДС), колоноскопия, бронхоскопия, эндоскопическая биопсия, удаление полипов.</li>
+                        <li>Дополнительно: проктология, онконастороженность, УЗИ-диагностика вен и органов.</li>
+                    </ul>
+                    <p><b>В педиатрии:</b></p>
+                    <ul>
+                        <li>Детская хирургия: врождённые патологии, пупочные и паховые грыжи, фимоз, водянка яичка.</li>
+                        <li>Детская флебология: сосудистые аномалии, гемангиомы, флебэктомия (редко), лечение венозных мальформаций.</li>
+                        <li>Детская эндоскопия: гастроскопия, колоноскопия под наркозом, инородные тела ЖКТ и дыхательных путей.</li>
+                        <li>Дополнительно: неонатальная хирургия, травматология, урология-андрология.</li>
+                    </ul>
+                </section>
+
+                <section class="doctor-page__text" id="education">
+                    <h2 class="doctor-page__h2">Образование</h2>
+                    <ul>
+                        <li>2016 г. — Педиатрия, Первый Московский государственный медицинский университет им. И.М. Сеченова, Москва.</li>
+                        <li>2018 г. — Ординатура по хирургии, Российский национальный исследовательский медицинский университет им. Н.И. Пирогова, Москва.</li>
+                        <li>2019 г. — Профессиональная переподготовка по эндоскопии, Новосибирский государственный медицинский университет, Новосибирск.</li>
+                        <li>2021 г. — Повышение квалификации по флебологии (лазерные методы лечения варикоза), Национальный медицинский исследовательский центр хирургии им. А.В. Вишневского, Москва.</li>
+                        <li>2023 г. — Повышение квалификации по детской эндоскопии, Национальный медицинский исследовательский центр здоровья детей, Москва.</li>
+                    </ul>
+                </section>
+
+                <section class="doctor-page__text" id="experience">
+                    <h2 class="doctor-page__h2">Опыт работы</h2>
+                    <ul>
+                        <li>2018–2020 гг. — Врач-хирург, Городская клиническая больница №1, Москва.</li>
+                        <li>2020–2022 гг. — Врач-хирург, флеболог, Клиническая больница «Медси», Москва.</li>
+                        <li>2022–2024 гг. — Врач-эндоскопист, Городская клиническая больница им. С.П. Боткина, Москва.</li>
+                        <li>2024 г. — н.в. — Врач-хирург, флеболог, эндоскопист, Клинический госпиталь «Лапино», Московская область.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+        <div class="container">
+            <section class="doctor-page__section" id="reviews">
+                <div class="doctor-page__head">
+                    <h2 class="doctor-page__h2">Отзывы пациентов</h2>
+                    <div class="doctor-page__actions">
+                        <a class="doctor-page__btn" href="#">Оставить отзыв</a>
                         <div class="doctor-page__arrows">
-                            <button class="doctor-page__arrow doctor-page__arrow--prev" type="button" aria-label="Назад" data-directions-prev><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
-                            <button class="doctor-page__arrow" type="button" aria-label="Вперёд" data-directions-next><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
+                            <button class="doctor-page__arrow doctor-page__arrow--prev" type="button" aria-label="Назад" data-reviews-prev><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
+                            <button class="doctor-page__arrow" type="button" aria-label="Вперёд" data-reviews-next><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
                         </div>
                     </div>
                 </div>
-                <div class="swiper home-directions__slider" data-directions-slider>
+                <div class="swiper doctor-page__slider" data-reviews-slider>
                     <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="home-directions__grid">
-                    <article class="direction-card direction-card--accent">
-                        <a class="direction-card__head" href="#">
-                            <span class="direction-card__icon direction-card__icon--gyn" aria-hidden="true"></span>
-                            <span class="direction-card__title">Гинекология <br>и акушерство</span>
-                        </a>
-                        <ul class="direction-card__list">
-                                <li><a class="direction-card__link" href="#">Ведение беременности</a></li>
-                                <li><a class="direction-card__link" href="#">Женская консультация</a></li>
-                                <li><a class="direction-card__link" href="#">Перинатальная диагностика</a></li>
-                                <li><a class="direction-card__link" href="#">Роды</a></li>
-                                <li><a class="direction-card__link" href="#">Партнерские роды</a></li>
-                                <li><a class="direction-card__link" href="#">Гинекология</a></li>
-                                <li><a class="direction-card__link" href="#">ЭКО и ВРТ</a></li>
-                        </ul>
-                        <a class="home-corner" href="#" aria-label="Подробнее: Гинекология  и акушерство"></a>
-                    </article>
-                    <article class="direction-card">
-                        <a class="direction-card__head" href="#">
-                            <span class="direction-card__icon direction-card__icon--surgery" aria-hidden="true"></span>
-                            <span class="direction-card__title">Хирургия</span>
-                        </a>
-                        <ul class="direction-card__list">
-                                <li><a class="direction-card__link" href="#">Абдоминальная хирургия</a></li>
-                                <li><a class="direction-card__link" href="#">Сосудистая хирургия</a></li>
-                                <li><a class="direction-card__link" href="#">Урология</a></li>
-                                <li><a class="direction-card__link" href="#">Колопроктология</a></li>
-                                <li><a class="direction-card__link" href="#">ЛОР-хирургия</a></li>
-                        </ul>
-                        <a class="home-corner" href="#" aria-label="Подробнее: Хирургия"></a>
-                    </article>
-                    <article class="direction-card">
-                        <a class="direction-card__head" href="#">
-                            <span class="direction-card__icon direction-card__icon--diagnostics" aria-hidden="true"></span>
-                            <span class="direction-card__title">Диагностика</span>
-                        </a>
-                        <ul class="direction-card__list">
-                                <li><a class="direction-card__link" href="#">КТ</a></li>
-                                <li><a class="direction-card__link" href="#">МРТ</a></li>
-                                <li><a class="direction-card__link" href="#">УЗИ</a></li>
-                                <li><a class="direction-card__link" href="#">ЭКГ и ЭхоКГ</a></li>
-                                <li><a class="direction-card__link" href="#">Эндоскопия</a></li>
-                        </ul>
-                        <a class="home-corner" href="#" aria-label="Подробнее: Диагностика"></a>
-                    </article>
-                    <article class="direction-card">
-                        <a class="direction-card__head" href="#">
-                            <span class="direction-card__icon direction-card__icon--cardio" aria-hidden="true"></span>
-                            <span class="direction-card__title">Кардиология</span>
-                        </a>
-                        <ul class="direction-card__list">
-                                <li><a class="direction-card__link" href="#">Лечение аритмий</a></li>
-                                <li><a class="direction-card__link" href="#">Ишемическая болезнь сердца</a></li>
-                                <li><a class="direction-card__link" href="#">Артериальная гипертензия</a></li>
-                                <li><a class="direction-card__link" href="#">Кардиореабилитация</a></li>
-                                <li><a class="direction-card__link" href="#">Диагностика сердца</a></li>
-                        </ul>
-                        <a class="home-corner" href="#" aria-label="Подробнее: Кардиология"></a>
-                    </article>
-                    <article class="direction-card">
-                        <a class="direction-card__head" href="#">
-                            <span class="direction-card__icon direction-card__icon--trauma" aria-hidden="true"></span>
-                            <span class="direction-card__title">Травматология</span>
-                        </a>
-                        <ul class="direction-card__list">
-                                <li><a class="direction-card__link" href="#">Эндопротезирование</a></li>
-                                <li><a class="direction-card__link" href="#">Артроскопия</a></li>
-                                <li><a class="direction-card__link" href="#">Хирургия позвоночника</a></li>
-                                <li><a class="direction-card__link" href="#">Лечение переломов</a></li>
-                                <li><a class="direction-card__link" href="#">Реабилитация</a></li>
-                        </ul>
-                        <a class="home-corner" href="#" aria-label="Подробнее: Травматология"></a>
-                    </article>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="home-directions__grid">
-                    <article class="direction-card direction-card--accent">
-                        <a class="direction-card__head" href="#">
-                            <span class="direction-card__icon direction-card__icon--gyn" aria-hidden="true"></span>
-                            <span class="direction-card__title">Гинекология <br>и акушерство</span>
-                        </a>
-                        <ul class="direction-card__list">
-                                <li><a class="direction-card__link" href="#">Ведение беременности</a></li>
-                                <li><a class="direction-card__link" href="#">Женская консультация</a></li>
-                                <li><a class="direction-card__link" href="#">Перинатальная диагностика</a></li>
-                                <li><a class="direction-card__link" href="#">Роды</a></li>
-                                <li><a class="direction-card__link" href="#">Партнерские роды</a></li>
-                                <li><a class="direction-card__link" href="#">Гинекология</a></li>
-                                <li><a class="direction-card__link" href="#">ЭКО и ВРТ</a></li>
-                        </ul>
-                        <a class="home-corner" href="#" aria-label="Подробнее: Гинекология  и акушерство"></a>
-                    </article>
-                    <article class="direction-card">
-                        <a class="direction-card__head" href="#">
-                            <span class="direction-card__icon direction-card__icon--surgery" aria-hidden="true"></span>
-                            <span class="direction-card__title">Хирургия</span>
-                        </a>
-                        <ul class="direction-card__list">
-                                <li><a class="direction-card__link" href="#">Абдоминальная хирургия</a></li>
-                                <li><a class="direction-card__link" href="#">Сосудистая хирургия</a></li>
-                                <li><a class="direction-card__link" href="#">Урология</a></li>
-                                <li><a class="direction-card__link" href="#">Колопроктология</a></li>
-                                <li><a class="direction-card__link" href="#">ЛОР-хирургия</a></li>
-                        </ul>
-                        <a class="home-corner" href="#" aria-label="Подробнее: Хирургия"></a>
-                    </article>
-                    <article class="direction-card">
-                        <a class="direction-card__head" href="#">
-                            <span class="direction-card__icon direction-card__icon--diagnostics" aria-hidden="true"></span>
-                            <span class="direction-card__title">Диагностика</span>
-                        </a>
-                        <ul class="direction-card__list">
-                                <li><a class="direction-card__link" href="#">КТ</a></li>
-                                <li><a class="direction-card__link" href="#">МРТ</a></li>
-                                <li><a class="direction-card__link" href="#">УЗИ</a></li>
-                                <li><a class="direction-card__link" href="#">ЭКГ и ЭхоКГ</a></li>
-                                <li><a class="direction-card__link" href="#">Эндоскопия</a></li>
-                        </ul>
-                        <a class="home-corner" href="#" aria-label="Подробнее: Диагностика"></a>
-                    </article>
-                    <article class="direction-card">
-                        <a class="direction-card__head" href="#">
-                            <span class="direction-card__icon direction-card__icon--cardio" aria-hidden="true"></span>
-                            <span class="direction-card__title">Кардиология</span>
-                        </a>
-                        <ul class="direction-card__list">
-                                <li><a class="direction-card__link" href="#">Лечение аритмий</a></li>
-                                <li><a class="direction-card__link" href="#">Ишемическая болезнь сердца</a></li>
-                                <li><a class="direction-card__link" href="#">Артериальная гипертензия</a></li>
-                                <li><a class="direction-card__link" href="#">Кардиореабилитация</a></li>
-                                <li><a class="direction-card__link" href="#">Диагностика сердца</a></li>
-                        </ul>
-                        <a class="home-corner" href="#" aria-label="Подробнее: Кардиология"></a>
-                    </article>
-                    <article class="direction-card">
-                        <a class="direction-card__head" href="#">
-                            <span class="direction-card__icon direction-card__icon--trauma" aria-hidden="true"></span>
-                            <span class="direction-card__title">Травматология</span>
-                        </a>
-                        <ul class="direction-card__list">
-                                <li><a class="direction-card__link" href="#">Эндопротезирование</a></li>
-                                <li><a class="direction-card__link" href="#">Артроскопия</a></li>
-                                <li><a class="direction-card__link" href="#">Хирургия позвоночника</a></li>
-                                <li><a class="direction-card__link" href="#">Лечение переломов</a></li>
-                                <li><a class="direction-card__link" href="#">Реабилитация</a></li>
-                        </ul>
-                        <a class="home-corner" href="#" aria-label="Подробнее: Травматология"></a>
-                    </article>
-                    </div>
-                </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <h3 class="review-card__name">Светлана</h3>
+    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
+    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+    </div>
+    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
+    <a class="review-card__more" href="#">Полный отзыв</a>
+</article>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <h3 class="review-card__name">Светлана</h3>
+    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
+    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+    </div>
+    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
+    <a class="review-card__more" href="#">Полный отзыв</a>
+</article>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <h3 class="review-card__name">Светлана</h3>
+    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
+    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+    </div>
+    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
+    <a class="review-card__more" href="#">Полный отзыв</a>
+</article>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <h3 class="review-card__name">Светлана</h3>
+    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
+    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+    </div>
+    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
+    <a class="review-card__more" href="#">Полный отзыв</a>
+</article>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <h3 class="review-card__name">Светлана</h3>
+    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
+    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+    </div>
+    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
+    <a class="review-card__more" href="#">Полный отзыв</a>
+</article>
+
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="review-card">
+    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <h3 class="review-card__name">Светлана</h3>
+    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
+    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+        <span class="review-card__star"></span>
+    </div>
+    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
+    <a class="review-card__more" href="#">Полный отзыв</a>
+</article>
+
+                            </div>
                     </div>
                 </div>
             </section>
 
-            <section class="home-section home-guide">
-                <h2 class="home-section__title">Гид пациента</h2>
-                <ul class="home-guide__list">
-                    <li><a class="guide-card" href="#"><span class="guide-card__icon guide-card__icon--hospital" aria-hidden="true"></span><span class="guide-card__title">Правила госпитализации</span></a></li>
-                    <li><a class="guide-card" href="#"><span class="guide-card__icon guide-card__icon--oms" aria-hidden="true"></span><span class="guide-card__title">Лечение по полису ОМС из региона</span></a></li>
-                    <li><a class="guide-card" href="#"><span class="guide-card__icon guide-card__icon--tourism" aria-hidden="true"></span><span class="guide-card__title">Медицинский туризм</span></a></li>
-                    <li><a class="guide-card" href="#"><span class="guide-card__icon guide-card__icon--info" aria-hidden="true"></span><span class="guide-card__title">Полезная информация для пациентов</span></a></li>
-                </ul>
+            <section class="doctor-page__section" id="services">
+                <div class="doctor-page__head">
+                    <h2 class="doctor-page__h2">Услуги</h2>
+                    <div class="doctor-page__actions">
+                        <div class="doctor-page__arrows">
+                            <button class="doctor-page__arrow doctor-page__arrow--prev" type="button" aria-label="Назад" data-services-prev><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
+                            <button class="doctor-page__arrow" type="button" aria-label="Вперёд" data-services-next><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper doctor-page__slider" data-services-slider>
+                    <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <ul class="doctor-page__services">
+                                    <li class="service-row">
+    <span class="service-row__code">B01.043.001.501</span>
+    <div class="service-row__body">
+        <span class="service-row__category">Консультации специалистов</span>
+        <h3 class="service-row__title">Прием (осмотр, консультация) кандидата медицинских наук, врача-сердечно-сосудистого хирурга, первичный</h3>
+    </div>
+    <span class="service-row__price">5000 руб.</span>
+</li>
+
+                                    <li class="service-row">
+    <span class="service-row__code">B01.043.001.501</span>
+    <div class="service-row__body">
+        <span class="service-row__category">Консультации специалистов</span>
+        <h3 class="service-row__title">Прием (осмотр, консультация) кандидата медицинских наук, врача-сердечно-сосудистого хирурга, первичный</h3>
+    </div>
+    <span class="service-row__price">5000 руб.</span>
+</li>
+
+                                    <li class="service-row">
+    <span class="service-row__code">B01.043.001.501</span>
+    <div class="service-row__body">
+        <span class="service-row__category">Консультации специалистов</span>
+        <h3 class="service-row__title">Прием (осмотр, консультация) кандидата медицинских наук, врача-сердечно-сосудистого хирурга, первичный</h3>
+    </div>
+    <span class="service-row__price">5000 руб.</span>
+</li>
+
+                                    <li class="service-row">
+    <span class="service-row__code">B01.043.001.501</span>
+    <div class="service-row__body">
+        <span class="service-row__category">Консультации специалистов</span>
+        <h3 class="service-row__title">Прием (осмотр, консультация) кандидата медицинских наук, врача-сердечно-сосудистого хирурга, первичный</h3>
+    </div>
+    <span class="service-row__price">5000 руб.</span>
+</li>
+
+                                    <li class="service-row">
+    <span class="service-row__code">B01.043.001.501</span>
+    <div class="service-row__body">
+        <span class="service-row__category">Консультации специалистов</span>
+        <h3 class="service-row__title">Прием (осмотр, консультация) кандидата медицинских наук, врача-сердечно-сосудистого хирурга, первичный</h3>
+    </div>
+    <span class="service-row__price">5000 руб.</span>
+</li>
+
+                                </ul>
+                            </div>
+                            <div class="swiper-slide">
+                                <ul class="doctor-page__services">
+                                    <li class="service-row">
+    <span class="service-row__code">B01.043.001.501</span>
+    <div class="service-row__body">
+        <span class="service-row__category">Консультации специалистов</span>
+        <h3 class="service-row__title">Прием (осмотр, консультация) кандидата медицинских наук, врача-сердечно-сосудистого хирурга, первичный</h3>
+    </div>
+    <span class="service-row__price">5000 руб.</span>
+</li>
+
+                                    <li class="service-row">
+    <span class="service-row__code">B01.043.001.501</span>
+    <div class="service-row__body">
+        <span class="service-row__category">Консультации специалистов</span>
+        <h3 class="service-row__title">Прием (осмотр, консультация) кандидата медицинских наук, врача-сердечно-сосудистого хирурга, первичный</h3>
+    </div>
+    <span class="service-row__price">5000 руб.</span>
+</li>
+
+                                    <li class="service-row">
+    <span class="service-row__code">B01.043.001.501</span>
+    <div class="service-row__body">
+        <span class="service-row__category">Консультации специалистов</span>
+        <h3 class="service-row__title">Прием (осмотр, консультация) кандидата медицинских наук, врача-сердечно-сосудистого хирурга, первичный</h3>
+    </div>
+    <span class="service-row__price">5000 руб.</span>
+</li>
+
+                                    <li class="service-row">
+    <span class="service-row__code">B01.043.001.501</span>
+    <div class="service-row__body">
+        <span class="service-row__category">Консультации специалистов</span>
+        <h3 class="service-row__title">Прием (осмотр, консультация) кандидата медицинских наук, врача-сердечно-сосудистого хирурга, первичный</h3>
+    </div>
+    <span class="service-row__price">5000 руб.</span>
+</li>
+
+                                    <li class="service-row">
+    <span class="service-row__code">B01.043.001.501</span>
+    <div class="service-row__body">
+        <span class="service-row__category">Консультации специалистов</span>
+        <h3 class="service-row__title">Прием (осмотр, консультация) кандидата медицинских наук, врача-сердечно-сосудистого хирурга, первичный</h3>
+    </div>
+    <span class="service-row__price">5000 руб.</span>
+</li>
+
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="doctor-page__more">
+                    <a class="doctor-page__btn doctor-page__btn--outline" href="#">Все услуги</a>
+                </div>
             </section>
 
-            <section class="home-section home-centers">
-                <h2 class="home-section__title">Специализированные центры</h2>
-                <ul class="home-centers__list">
-                    <li>
-                        <article class="center-card">
-                            <img class="center-card__img" src="./img/main/center-surgery.webp" width="420" height="427" alt="" loading="lazy">
-                            <p class="center-card__label">Хирургия высоких технологий</p>
-                            <h3 class="center-card__title">Центр хирургии</h3>
-                            <a class="center-card__btn" href="#">Подробнее</a>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="center-card">
-                            <img class="center-card__img" src="./img/main/center-perinatal.webp" width="420" height="427" alt="" loading="lazy">
-                            <p class="center-card__label">Здоровье мамы и малыша</p>
-                            <h3 class="center-card__title">Перинатальный центр</h3>
-                            <a class="center-card__btn" href="#">Подробнее</a>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="center-card">
-                            <img class="center-card__img" src="./img/main/center-spinal.webp" width="420" height="427" alt="" loading="lazy">
-                            <p class="center-card__label">Жизнь без боли</p>
-                            <h3 class="center-card__title">Спинальный центр</h3>
-                            <a class="center-card__btn" href="#">Подробнее</a>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="center-card">
-                            <img class="center-card__img" src="./img/main/center-women.webp" width="420" height="427" alt="" loading="lazy">
-                            <p class="center-card__label">Забота, которой можно доверять</p>
-                            <h3 class="center-card__title">Центры женского здоровья</h3>
-                            <a class="center-card__btn" href="#">Подробнее</a>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="center-card">
-                            <img class="center-card__img" src="./img/main/center-vascular.webp" width="420" height="427" alt="" loading="lazy">
-                            <p class="center-card__label">Возвращаем к активной жизни</p>
-                            <h3 class="center-card__title">Региональный сосудистый центр</h3>
-                            <a class="center-card__btn" href="#">Подробнее</a>
-                        </article>
-                    </li>
-                    <li>
-                        <article class="center-card">
-                            <img class="center-card__img" src="./img/main/center-manual.webp" width="420" height="427" alt="" loading="lazy">
-                            <p class="center-card__label">Естественное восстановление</p>
-                            <h3 class="center-card__title">Центр мануальной терапии</h3>
-                            <a class="center-card__btn" href="#">Подробнее</a>
-                        </article>
-                    </li>
-                </ul>
-            </section>
-
-            <section class="home-section home-section--compact">
-                <div class="home-section__head">
-                    <h2 class="home-section__title">Наши врачи</h2>
-                    <div class="home-section__actions">
-                        <a class="doctor-page__btn doctor-page__btn--outline" href="./doctors.html">Все специалисты</a>
+            <section class="doctor-page__section">
+                <div class="doctor-page__head">
+                    <h2 class="doctor-page__h2">Врачи этого направления</h2>
+                    <div class="doctor-page__actions">
                         <div class="doctor-page__arrows">
                             <button class="doctor-page__arrow doctor-page__arrow--prev" type="button" aria-label="Назад" data-doctors-prev><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
                             <button class="doctor-page__arrow" type="button" aria-label="Вперёд" data-doctors-next><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
@@ -818,332 +880,66 @@
 </a>
 
                             </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="home-section home-section--compact home-about">
-                <h2 class="home-section__title">Информация о больнице</h2>
-                <div class="home-about__grid">
-                    <img class="home-about__img" src="./img/main/about.webp" width="645" height="429" alt="Корпус больницы №67 на закате" loading="lazy">
-                    <div class="home-about__body">
-                        <h3 class="home-about__subtitle">Городская клиническая больница № 67 имени Л.А. Ворохобова</h3>
-                        <p class="home-about__text">Городская клиническая больница № 67 имени Л.А. Ворохобова — это одно из самых крупных лечебных учреждений столицы. В стенах современного многопрофильного комплекса заботятся о здоровье не только москвичей, но и жителей других регионов России.</p>
-                        <dl class="home-about__stats">
-                            <div class="home-about__stat home-about__stat--accent"><dt>73</dt><dd>Отделения</dd></div>
-                            <div class="home-about__stat"><dt>50<span>тыс.</span></dt><dd>ежегодно <br>операций</dd></div>
-                            <div class="home-about__stat"><dt>120<span>тыс.</span></dt><dd>ежегодно <br>пациентов</dd></div>
-                            <div class="home-about__stat home-about__stat--accent"><dt>3000</dt><dd>сотрудников</dd></div>
-                            <div class="home-about__stat"><dt>67<span>лет</span></dt><dd>опыта <br>с 1959 года</dd></div>
-                            <div class="home-about__stat"><dt>24<span>/7</span></dt><dd>круглосуточная <br>поддержка</dd></div>
-                        </dl>
-                    </div>
-                </div>
-            </section>
-
-            <section class="home-section home-section--compact">
-                <div class="home-section__head">
-                    <h2 class="home-section__title">Отзывы наших пациентов</h2>
-                    <div class="home-section__actions">
-                        <div class="home-section__btns">
-                            <button class="doctor-page__btn" type="button" onclick="openModal('modal-review')">Оставить отзыв</button>
-                            <a class="doctor-page__btn doctor-page__btn--outline" href="./reviews.html">Все отзывы</a>
-                        </div>
-                        <div class="doctor-page__arrows">
-                            <button class="doctor-page__arrow doctor-page__arrow--prev" type="button" aria-label="Назад" data-reviews-prev><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
-                            <button class="doctor-page__arrow" type="button" aria-label="Вперёд" data-reviews-next><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper doctor-page__slider" data-reviews-slider>
-                    <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <article class="review-card">
-    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-    <h3 class="review-card__name">Светлана</h3>
-    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
-    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-    </div>
-    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
-    <a class="review-card__more" href="./reviews.html">Полный отзыв</a>
-</article>
+                                <a class="doctor-card" href="./doctor-detail.html">
+    <span class="doctor-card__exp">Стаж 9 лет</span>
+
+    <span class="doctor-card__badges">
+        <span class="doctor-card__badge" title="Принимает детей">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" aria-hidden="true">
+                <path d="M4.29912 9.30763C2.5284 7.05513 2.03544 6.03124 1.89844 5.61801C2.0915 5.39188 2.34961 5.23078 2.63757 5.15669C2.92554 5.0826 3.22934 5.09912 3.50757 5.204L15.6681 9.67176C16.0486 9.81152 16.3941 10.0324 16.6807 10.319C16.9673 10.6056 17.1881 10.9511 17.3279 11.3315L21.7956 23.4921C21.9005 23.7703 21.917 24.0741 21.843 24.3621C21.7689 24.65 21.6078 24.9081 21.3816 25.1012C20.9706 24.9649 19.9445 24.4712 17.692 22.7005C15.5646 21.0281 13.0611 18.7756 10.6433 16.3578C8.22551 13.94 5.97159 11.435 4.29912 9.30763ZM9.79968 17.2007C7.18532 14.5863 4.70718 11.8089 3.00196 9.5809C2.76386 9.27068 2.53076 8.95666 2.30275 8.63896L4.82926 14.4314C5.70153 16.4316 5.78796 18.687 5.07131 20.7481L4.44208 22.5576L6.25155 21.9283C8.31262 21.2117 10.5681 21.2981 12.5682 22.1704L18.3607 24.6969C18.043 24.4689 17.729 24.2358 17.4187 23.9976C15.1916 22.291 12.4141 19.8128 9.79968 17.1985V17.2007ZM24.6476 2.35281C24.3567 2.0621 23.9623 1.8988 23.5511 1.8988C23.1399 1.8988 22.7455 2.0621 22.4546 2.35281L20.4256 4.38118L22.617 6.57261L24.6484 4.54128C24.9386 4.25049 25.1016 3.85642 25.1016 3.44557C25.1016 3.03472 24.9386 2.64065 24.6484 2.34985L24.6476 2.35281ZM17.8938 9.89889L21.0763 6.71637L20.2818 5.92482L17.0993 9.10434C17.4011 9.32947 17.6687 9.5971 17.8938 9.89889Z" fill="currentColor" />
+            </svg>
+            <span class="visually-hidden">Принимает детей</span>
+        </span>
+        <span class="doctor-card__badge" title="Принимает взрослых">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" aria-hidden="true">
+                <path d="M15.6938 19.5162C13.8375 19.0943 12.5719 17.4068 12.5719 15.5506C14.0906 14.7068 15.1031 13.0193 15.1031 11.1631C15.1031 10.235 15.8625 9.47558 16.7906 9.47558V7.53496C16.7906 5.17246 15.0188 2.97871 12.6563 2.72558C10.9688 2.55683 9.45 3.23183 8.52188 4.49746C7.84688 4.32871 7.17188 4.41308 6.32813 5.00371C5.48438 5.67871 4.97813 6.69121 4.97813 7.78808V8.63183V9.89746V10.9943C4.97813 12.8506 5.99063 14.6225 7.50938 15.5506C7.50938 17.4912 6.15938 19.0943 4.30313 19.6006C2.10938 20.1912 0.50625 21.9631 0 24.1568C0 24.41 0.16875 24.6631 0.50625 24.6631H19.6594C19.9969 24.6631 20.1656 24.41 20.0813 24.0725C19.575 21.8787 17.8875 20.1068 15.6938 19.5162Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="visually-hidden">Принимает взрослых</span>
+        </span>
+        <span class="doctor-card__badge doctor-card__badge--text" title="Принимает по ДМС">ДМС</span>
+    </span>
+
+    <span class="doctor-card__photo">
+        <img class="doctor-card__img" src="./img/doctor.webp" width="197" height="240" alt="Иванов Иван Иванович" loading="lazy">
+    </span>
+
+    <span class="doctor-card__name">Иванов Иван Иванович</span>
+    <span class="doctor-card__spec">Хирург, Флеболог, Эндоскопист</span>
+    <span class="doctor-card__degree">Кандидат медицинских наук</span>
+</a>
 
                             </div>
                             <div class="swiper-slide">
-                                <article class="review-card">
-    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-    <h3 class="review-card__name">Светлана</h3>
-    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
-    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-    </div>
-    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
-    <a class="review-card__more" href="./reviews.html">Полный отзыв</a>
-</article>
+                                <a class="doctor-card" href="./doctor-detail.html">
+    <span class="doctor-card__exp">Стаж 9 лет</span>
+
+    <span class="doctor-card__badges">
+        <span class="doctor-card__badge" title="Принимает детей">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" aria-hidden="true">
+                <path d="M4.29912 9.30763C2.5284 7.05513 2.03544 6.03124 1.89844 5.61801C2.0915 5.39188 2.34961 5.23078 2.63757 5.15669C2.92554 5.0826 3.22934 5.09912 3.50757 5.204L15.6681 9.67176C16.0486 9.81152 16.3941 10.0324 16.6807 10.319C16.9673 10.6056 17.1881 10.9511 17.3279 11.3315L21.7956 23.4921C21.9005 23.7703 21.917 24.0741 21.843 24.3621C21.7689 24.65 21.6078 24.9081 21.3816 25.1012C20.9706 24.9649 19.9445 24.4712 17.692 22.7005C15.5646 21.0281 13.0611 18.7756 10.6433 16.3578C8.22551 13.94 5.97159 11.435 4.29912 9.30763ZM9.79968 17.2007C7.18532 14.5863 4.70718 11.8089 3.00196 9.5809C2.76386 9.27068 2.53076 8.95666 2.30275 8.63896L4.82926 14.4314C5.70153 16.4316 5.78796 18.687 5.07131 20.7481L4.44208 22.5576L6.25155 21.9283C8.31262 21.2117 10.5681 21.2981 12.5682 22.1704L18.3607 24.6969C18.043 24.4689 17.729 24.2358 17.4187 23.9976C15.1916 22.291 12.4141 19.8128 9.79968 17.1985V17.2007ZM24.6476 2.35281C24.3567 2.0621 23.9623 1.8988 23.5511 1.8988C23.1399 1.8988 22.7455 2.0621 22.4546 2.35281L20.4256 4.38118L22.617 6.57261L24.6484 4.54128C24.9386 4.25049 25.1016 3.85642 25.1016 3.44557C25.1016 3.03472 24.9386 2.64065 24.6484 2.34985L24.6476 2.35281ZM17.8938 9.89889L21.0763 6.71637L20.2818 5.92482L17.0993 9.10434C17.4011 9.32947 17.6687 9.5971 17.8938 9.89889Z" fill="currentColor" />
+            </svg>
+            <span class="visually-hidden">Принимает детей</span>
+        </span>
+        <span class="doctor-card__badge" title="Принимает взрослых">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" aria-hidden="true">
+                <path d="M15.6938 19.5162C13.8375 19.0943 12.5719 17.4068 12.5719 15.5506C14.0906 14.7068 15.1031 13.0193 15.1031 11.1631C15.1031 10.235 15.8625 9.47558 16.7906 9.47558V7.53496C16.7906 5.17246 15.0188 2.97871 12.6563 2.72558C10.9688 2.55683 9.45 3.23183 8.52188 4.49746C7.84688 4.32871 7.17188 4.41308 6.32813 5.00371C5.48438 5.67871 4.97813 6.69121 4.97813 7.78808V8.63183V9.89746V10.9943C4.97813 12.8506 5.99063 14.6225 7.50938 15.5506C7.50938 17.4912 6.15938 19.0943 4.30313 19.6006C2.10938 20.1912 0.50625 21.9631 0 24.1568C0 24.41 0.16875 24.6631 0.50625 24.6631H19.6594C19.9969 24.6631 20.1656 24.41 20.0813 24.0725C19.575 21.8787 17.8875 20.1068 15.6938 19.5162Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="visually-hidden">Принимает взрослых</span>
+        </span>
+        <span class="doctor-card__badge doctor-card__badge--text" title="Принимает по ДМС">ДМС</span>
+    </span>
+
+    <span class="doctor-card__photo">
+        <img class="doctor-card__img" src="./img/doctor.webp" width="197" height="240" alt="Иванов Иван Иванович" loading="lazy">
+    </span>
+
+    <span class="doctor-card__name">Иванов Иван Иванович</span>
+    <span class="doctor-card__spec">Хирург, Флеболог, Эндоскопист</span>
+    <span class="doctor-card__degree">Кандидат медицинских наук</span>
+</a>
 
                             </div>
-                            <div class="swiper-slide">
-                                <article class="review-card">
-    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-    <h3 class="review-card__name">Светлана</h3>
-    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
-    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-    </div>
-    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
-    <a class="review-card__more" href="./reviews.html">Полный отзыв</a>
-</article>
-
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="review-card">
-    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-    <h3 class="review-card__name">Светлана</h3>
-    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
-    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-    </div>
-    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
-    <a class="review-card__more" href="./reviews.html">Полный отзыв</a>
-</article>
-
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="review-card">
-    <svg class="review-card__icon" width="80" height="80" viewBox="0 0 80 80" fill="none" aria-hidden="true">
-        <path d="M68.3333 40.6667C68.3333 54.3333 55.6667 65.3333 40 65.3333C36.7298 65.3655 33.4727 64.9162 30.3333 64L14 70L18.3333 58C16.0782 55.733 14.3206 53.0206 13.1728 50.0361C12.0249 47.0516 11.5119 43.8606 11.6667 40.6667C11.6667 27 24.3333 16 40 16C55.6667 16 68.3333 27 68.3333 40.6667Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M39.9997 54.3334C39.9997 54.3334 29.333 47.6667 29.333 39.6667C29.3865 38.4555 29.7866 37.2852 30.4856 36.2947C31.1846 35.3041 32.1532 34.535 33.2764 34.0788C34.3996 33.6225 35.6302 33.4981 36.822 33.7205C38.0137 33.9429 39.1166 34.5027 39.9997 35.3334C40.8827 34.5027 41.9856 33.9429 43.1774 33.7205C44.3691 33.4981 45.5997 33.6225 46.7229 34.0788C47.8461 34.535 48.8147 35.3041 49.5138 36.2947C50.2128 37.2852 50.6128 38.4555 50.6663 39.6667C50.6663 47.6667 39.9997 54.3334 39.9997 54.3334Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-    <h3 class="review-card__name">Светлана</h3>
-    <time class="review-card__date" datetime="2026-03-14"><span>14</span> марта 2026</time>
-    <div class="review-card__stars" role="img" aria-label="Оценка 4 из 5" data-rating="4">
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-        <span class="review-card__star"></span>
-    </div>
-    <p class="review-card__text">Хочу сказать спасибо клинике за внимательный подход и профессионализм. Врачи подробно объяснили всё о лечении, ответили на все мои вопросы. Отдельная благодарность за удобную запись и отсутствие очередей. Рекомендую всем знакомым и близким.</p>
-    <a class="review-card__more" href="./reviews.html">Полный отзыв</a>
-</article>
-
-                            </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="home-section home-logos">
-                <div class="home-section__head">
-                    <h2 class="home-section__title">Полезные ссылки</h2>
-                    <div class="home-section__actions">
-                        <div class="doctor-page__arrows">
-                            <button class="doctor-page__arrow doctor-page__arrow--prev" type="button" aria-label="Назад" data-links-prev><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
-                            <button class="doctor-page__arrow" type="button" aria-label="Вперёд" data-links-next><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper home-logos__slider" data-links-slider>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://mos.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-mos.webp" width="50" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Официальный сайт Мэра <br>и правительства Москвы</span>
-                                <span class="logo-link__domain">mos.ru</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://mos.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-mos.webp" width="50" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Официальный сайт Мэра <br>и правительства Москвы</span>
-                                <span class="logo-link__domain">mos.ru</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://mos.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-mos.webp" width="50" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Официальный сайт Мэра <br>и правительства Москвы</span>
-                                <span class="logo-link__domain">mos.ru</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://mos.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-mos.webp" width="50" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Официальный сайт Мэра <br>и правительства Москвы</span>
-                                <span class="logo-link__domain">mos.ru</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://mos.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-mos.webp" width="50" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Официальный сайт Мэра <br>и правительства Москвы</span>
-                                <span class="logo-link__domain">mos.ru</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://mos.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-mos.webp" width="50" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Официальный сайт Мэра <br>и правительства Москвы</span>
-                                <span class="logo-link__domain">mos.ru</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="home-section news">
-                <div class="home-section__head">
-                    <h2 class="home-section__title">Новости</h2>
-                    <div class="home-section__actions">
-                        <a class="doctor-page__btn doctor-page__btn--outline" href="./press.html">Все новости</a>
-                    </div>
-                </div>
-                <ul class="news__list">
-                    <li class="news__item">
-    <a class="news-card" href="./news-detail.html">
-        <img class="news-card__img" src="./img/news.webp" width="420" height="278" alt="Лаборант в защитной форме работает с микроскопом" loading="lazy">
-        <div class="news-card__body">
-            <h2 class="news-card__title">Вакцинация — самая эффективная защита от вирусов</h2>
-            <p class="news-card__text">Вирусный гепатит C — это серьёзное инфекционное заболевание печени, которое может привести к острым и хроническим формам. Он передается через кровь, и важно знать, как защитить себя и своих близких от этого вируса...</p>
-            <time class="news-card__date" datetime="2026-04-16">16 апреля 2026</time>
-        </div>
-        <span class="news-card__btn" aria-hidden="true"></span>
-    </a>
-</li>
-
-                    <li class="news__item">
-    <a class="news-card" href="./news-detail.html">
-        <img class="news-card__img" src="./img/news.webp" width="420" height="278" alt="Лаборант в защитной форме работает с микроскопом" loading="lazy">
-        <div class="news-card__body">
-            <h2 class="news-card__title">Вакцинация — самая эффективная защита от вирусов</h2>
-            <p class="news-card__text">Вирусный гепатит C — это серьёзное инфекционное заболевание печени, которое может привести к острым и хроническим формам. Он передается через кровь, и важно знать, как защитить себя и своих близких от этого вируса...</p>
-            <time class="news-card__date" datetime="2026-04-16">16 апреля 2026</time>
-        </div>
-        <span class="news-card__btn" aria-hidden="true"></span>
-    </a>
-</li>
-
-                    <li class="news__item">
-    <a class="news-card" href="./news-detail.html">
-        <img class="news-card__img" src="./img/news.webp" width="420" height="278" alt="Лаборант в защитной форме работает с микроскопом" loading="lazy">
-        <div class="news-card__body">
-            <h2 class="news-card__title">Вакцинация — самая эффективная защита от вирусов</h2>
-            <p class="news-card__text">Вирусный гепатит C — это серьёзное инфекционное заболевание печени, которое может привести к острым и хроническим формам. Он передается через кровь, и важно знать, как защитить себя и своих близких от этого вируса...</p>
-            <time class="news-card__date" datetime="2026-04-16">16 апреля 2026</time>
-        </div>
-        <span class="news-card__btn" aria-hidden="true"></span>
-    </a>
-</li>
-
-                </ul>
-            </section>
-
-            <section class="home-section home-mosnews">
-                <h2 class="visually-hidden">Новости московской медицины</h2>
-                <a class="home-mosnews__link" href="https://mosgorzdrav.ru/ru-RU/news.html" target="_blank" rel="noopener">
-                    <img class="home-mosnews__img" src="./img/main/mos-news.webp" width="1320" height="394" alt="Новости московской медицины" loading="lazy">
-                </a>
-            </section>
-        </div>
-
-        <section class="home-section home-map">
-            <div class="container">
-                <h2 class="home-section__title">Схема территории ГКБ №67</h2>
-            </div>
-            <div class="home-map__media">
-                <picture>
-                    <source media="(max-width: 768px)" srcset="./img/main/map-mobile.webp" width="700" height="599">
-                    <img class="home-map__img" src="./img/main/map.webp" width="1918" height="599" alt="Схема территории больницы с корпусами на карте" loading="lazy">
-                </picture>
-            </div>
-            <div class="container home-map__legend-wrap">
-                <img class="home-map__legend" src="./img/main/map-legend.webp" width="436" height="543" alt="Корпуса на карте: хирургический корпус А, корпус Б, травматологический корпус В, тренинг-центр В1, корпус Г, КДО, перинатальный центр, центр женского здоровья, приемное отделение, кафе №67" loading="lazy">
-            </div>
-        </section>
-
-        <div class="container">
-            <section class="home-section home-logos">
-                <div class="home-section__head">
-                    <h2 class="home-section__title">Наши партнеры</h2>
-                    <div class="home-section__actions">
-                        <div class="doctor-page__arrows">
-                            <button class="doctor-page__arrow doctor-page__arrow--prev" type="button" aria-label="Назад" data-partners-prev><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
-                            <button class="doctor-page__arrow" type="button" aria-label="Вперёд" data-partners-next><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.8431 7.43072L5.85093 12.422L4.85718 11.4282L8.84811 7.43635L4.85999 3.49885L5.84811 2.49854L10.8431 7.42979V7.43072Z" fill="currentColor" /></svg></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper home-logos__slider" data-partners-slider>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://reso.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-reso.webp" width="66" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Страховое акционерное общество «РЕСО-Гарантия»</span>
-                                <span class="logo-link__domain">reso.ru</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://reso.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-reso.webp" width="66" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Страховое акционерное общество «РЕСО-Гарантия»</span>
-                                <span class="logo-link__domain">reso.ru</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://reso.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-reso.webp" width="66" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Страховое акционерное общество «РЕСО-Гарантия»</span>
-                                <span class="logo-link__domain">reso.ru</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://reso.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-reso.webp" width="66" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Страховое акционерное общество «РЕСО-Гарантия»</span>
-                                <span class="logo-link__domain">reso.ru</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://reso.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-reso.webp" width="66" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Страховое акционерное общество «РЕСО-Гарантия»</span>
-                                <span class="logo-link__domain">reso.ru</span>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a class="logo-link" href="https://reso.ru" target="_blank" rel="noopener">
-                                <img class="logo-link__img" src="./img/main/logo-reso.webp" width="66" height="60" alt="" loading="lazy">
-                                <span class="logo-link__text">Страховое акционерное общество «РЕСО-Гарантия»</span>
-                                <span class="logo-link__domain">reso.ru</span>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -1368,56 +1164,6 @@
             </label>
 
             <button class="modal__submit" type="submit">Записаться</button>
-        </form>
-    </div>
-</dialog>
-
-    <dialog class="modal" id="modal-review" aria-labelledby="modal-review-title">
-    <div class="modal__card">
-        <button class="modal__close" type="button" aria-label="Закрыть" onclick="closeModal(this)">
-            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" aria-hidden="true">
-                <path d="M9 9l24 24M33 9L9 33" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-            </svg>
-        </button>
-
-        <h2 class="modal__title" id="modal-review-title">Добавить отзыв</h2>
-        <p class="modal__text">Ваше мнение помогает нам поддерживать высокий уровень заботы о каждом пациенте.</p>
-
-        <form class="modal__form" action="#" method="post">
-            <div class="modal__fields">
-                <label class="modal__field">
-                    <span class="visually-hidden">ФИО</span>
-                    <input class="modal__input" type="text" name="name" placeholder="ФИО *" autocomplete="name" required>
-                </label>
-                <label class="modal__field">
-                    <span class="visually-hidden">E-mail</span>
-                    <input class="modal__input" type="email" name="email" placeholder="E-mail *" autocomplete="email" required>
-                </label>
-                <label class="modal__field">
-                    <span class="visually-hidden">Номер телефона</span>
-                    <input class="modal__input" type="tel" name="phone" placeholder="Номер телефона *" autocomplete="tel" required>
-                </label>
-                <label class="modal__field modal__field--select">
-                    <span class="visually-hidden">Тип отзыва</span>
-                    <select class="modal__input modal__select" name="type" required>
-                        <option value="" disabled selected hidden>Тип отзыва *</option>
-                        <option value="thanks">Благодарность</option>
-                        <option value="suggestion">Предложение</option>
-                        <option value="complaint">Жалоба</option>
-                    </select>
-                </label>
-                <label class="modal__field modal__field--full">
-                    <span class="visually-hidden">Ваш отзыв</span>
-                    <textarea class="modal__input modal__textarea" name="review" placeholder="Ваш отзыв" required></textarea>
-                </label>
-            </div>
-
-            <label class="modal__consent">
-                <input class="modal__checkbox" type="checkbox" name="consent" required>
-                <span>Настоящим я выражаю согласие на обработку моих персональных данных на условиях, определенных <a href="#" target="_blank">Согласием пользователя на обработку персональных данных</a>.</span>
-            </label>
-
-            <button class="modal__submit" type="submit">Отправить</button>
         </form>
     </div>
 </dialog>
