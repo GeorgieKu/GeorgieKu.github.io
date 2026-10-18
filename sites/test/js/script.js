@@ -3,9 +3,6 @@
 // Swiper (js/libs/swiper-bundle.min.js) подгружается только когда слайдер
 // приближается к экрану — так он не мешает первой отрисовке страницы.
 (() => {
-    const sliders = document.querySelectorAll('[data-reviews-slider], [data-services-slider], [data-doctors-slider]');
-    if (!sliders.length) return;
-
     const scriptSrc = document.currentScript ? document.currentScript.src : '';
     const swiperSrc = scriptSrc ? new URL('libs/swiper-bundle.min.js', scriptSrc).href : './js/libs/swiper-bundle.min.js';
 
@@ -23,6 +20,12 @@
         }
         return swiperPromise;
     };
+
+    // общий загрузчик — им пользуются и другие блоки (например, главная)
+    window.loadSwiper = loadSwiper;
+
+    const sliders = document.querySelectorAll('[data-reviews-slider], [data-services-slider], [data-doctors-slider]');
+    if (!sliders.length) return;
 
     const options = {
         reviews: {
@@ -164,6 +167,118 @@
     // при открытии модалки из меню — закрываем меню
     header.querySelectorAll('.header__menu .header__cta').forEach((btn) => {
         btn.addEventListener('click', closeAll);
+    });
+})();
+
+// Главная: слайдеры первого экрана, направлений, полезных ссылок и партнёров + видео.
+// Swiper подгружается общим загрузчиком window.loadSwiper (blocks/doctor-page/doctor-page.js).
+(() => {
+    const load = () => (window.loadSwiper ? window.loadSwiper() : Promise.reject(new Error('loadSwiper не найден')));
+
+    const sliders = {
+        hero: {
+            loop: true,
+            speed: 700,
+            autoplay: { delay: 6000, disableOnInteraction: false, pauseOnMouseEnter: true },
+            pagination: { el: '[data-hero-dots]', clickable: true },
+        },
+        directions: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            autoHeight: true,
+        },
+        links: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            breakpoints: { 1025: { spaceBetween: 93 } },
+        },
+        partners: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            breakpoints: { 1025: { spaceBetween: 89 } },
+        },
+    };
+
+    const init = (el, name) => {
+        if (el.swiper) return;
+        new Swiper(el, {
+            speed: 500,
+            watchOverflow: true,
+            navigation: {
+                prevEl: `[data-${name}-prev]`,
+                nextEl: `[data-${name}-next]`,
+            },
+            ...sliders[name],
+        });
+    };
+
+    const items = Object.keys(sliders)
+        .map((name) => ({ name, el: document.querySelector(`[data-${name}-slider]`) }))
+        .filter((item) => item.el);
+
+    if (items.length) {
+        // первый экран — сразу, остальные — когда приблизятся к экрану
+        const start = ({ el, name }) => load().then(() => init(el, name)).catch(() => {});
+        const hero = items.find((item) => item.name === 'hero');
+        if (hero) start(hero);
+
+        const rest = items.filter((item) => item.name !== 'hero');
+        if (!('IntersectionObserver' in window)) {
+            rest.forEach(start);
+        } else {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    observer.unobserve(entry.target);
+                    start(rest.find((item) => item.el === entry.target));
+                });
+            }, { rootMargin: '300px 0px' });
+            rest.forEach((item) => observer.observe(item.el));
+        }
+    }
+
+    // ---------- видео на первом экране ----------
+    const box = document.querySelector('[data-hero-video]');
+    if (!box) return;
+
+    const video = box.querySelector('video');
+    const toggle = box.querySelector('[data-video-toggle]');
+    const label = box.querySelector('[data-video-label]');
+    const fullscreen = box.querySelector('[data-video-fullscreen]');
+    const hasSource = () => Boolean(video.currentSrc || video.querySelector('source'));
+
+    const setState = (paused) => {
+        box.classList.toggle('is-paused', paused);
+        label.textContent = paused ? 'Смотреть' : 'Пауза';
+    };
+
+    // состояние кнопки берём из событий самого видео — так оно не расходится с реальностью
+    video.addEventListener('play', () => setState(false));
+    video.addEventListener('pause', () => setState(true));
+
+    if (hasSource()) {
+        setState(video.paused && !video.autoplay);
+        const playing = video.play();
+        if (playing) playing.catch(() => setState(true));
+    } else {
+        // без файла видео показываем постер и кнопку «Смотреть»
+        setState(true);
+    }
+
+    toggle.addEventListener('click', () => {
+        if (!hasSource()) return;
+        if (video.paused) {
+            const playing = video.play();
+            if (playing) playing.catch(() => {});
+        } else {
+            video.pause();
+        }
+    });
+
+    fullscreen.addEventListener('click', () => {
+        const target = hasSource() ? video : box;
+        if (target.requestFullscreen) target.requestFullscreen();
+        else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
     });
 })();
 
